@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-08T18:32:22.728Z",
+  "lastUpdated": "2026-11-08T18:47:35.322Z",
   "allTime": {
     "total": 5,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 2,
-    "active": 3,
+    "stopped": 3,
+    "active": 2,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -36,7 +36,7 @@
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
+      "stopped": 1,
       "tp1Rate": 0
     }
   },
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T18:30:42.116Z",
+      "statusUpdatedAt": "2026-11-08T18:45:41.803Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T18:30:42.116Z",
+      "statusUpdatedAt": "2026-11-08T18:45:41.803Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -135,13 +135,14 @@
       "signalCandleTime": 1794160800000,
       "rr1": 2,
       "sentAt": "2026-11-08T18:17:38.611Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T18:30:42.116Z",
+      "statusUpdatedAt": "2026-11-08T18:45:45.487Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.10239999999999999
     }
   ],
   "processedSignals": {

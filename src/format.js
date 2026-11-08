@@ -65,7 +65,7 @@ export function formatAnalysis(result) {
   }
 
   lines.push("");
-  lines.push("<b>⚠️ خروجی بر اساس داده‌های کندل بسته‌شده است و تضمین سود نیست.</b>");
+  lines.push("<b>⚠️ این خروجی تحلیل الگوریتمی است و تضمین سود نیست.</b>");
 
   return lines.join("\n");
 }

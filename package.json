@@ -1,0 +1,14 @@
+{
+  "name": "crypto-trendline-scan",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Crypto 15m Trendline Breakout Scanner",
+  "main": "src/scan.js",
+  "scripts": {
+    "scan": "node src/scan.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

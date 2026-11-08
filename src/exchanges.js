@@ -78,7 +78,10 @@ async function genericFetch(baseUrl, path, params = {}, options = {}) {
           ? Math.min(retryAfter * 1000, 15000)
           : baseDelay * (attempt + 1);
 
-        if (attempt < maxAttempts - 1) await sleep(delay);
+        if (attempt < maxAttempts - 1) {
+          await sleep(delay);
+        }
+
         continue;
       }
 
@@ -117,7 +120,9 @@ async function genericFetch(baseUrl, path, params = {}, options = {}) {
         status === 0 ||
         e?.name === "AbortError";
 
-      if (!retryable || attempt === maxAttempts - 1) break;
+      if (!retryable || attempt === maxAttempts - 1) {
+        break;
+      }
 
       await sleep(baseDelay * (attempt + 1));
     } finally {
@@ -134,7 +139,9 @@ export function okxFetch(path, params = {}, options = {}) {
     label: "OKX"
   }).then((json) => {
     if (!json || json.code !== "0") {
-      throw new Error("OKX error: " + (json?.msg || json?.code || "unknown"));
+      throw new Error(
+        "OKX error: " + (json?.msg || json?.code || "unknown")
+      );
     }
 
     return json;
@@ -142,9 +149,9 @@ export function okxFetch(path, params = {}, options = {}) {
 }
 
 export function binanceFetch(path, params = {}, options = {}) {
-  return genericFetch(CONFIG.BINANCE_SPOT_URL, path, params, {
+  return genericFetch(CONFIG.BINANCE_FUTURES_URL, path, params, {
     ...options,
-    label: "Binance"
+    label: "Binance Futures"
   });
 }
 
@@ -167,7 +174,9 @@ export function mexcFetch(path, params = {}, options = {}) {
       json.code !== "0" &&
       json.code !== 200
     ) {
-      throw new Error("MEXC error: " + (json.message || json.code || "unknown"));
+      throw new Error(
+        "MEXC error: " + (json.message || json.code || "unknown")
+      );
     }
 
     return json;
@@ -194,6 +203,21 @@ function isAllowedBaseAsset(base) {
   return true;
 }
 
+function getExchangeOrder() {
+  return Object.keys(CONFIG.EXCHANGES)
+    .filter((key) => CONFIG.EXCHANGES[key].enabled)
+    .sort((a, b) => {
+      return CONFIG.EXCHANGES[a].priority - CONFIG.EXCHANGES[b].priority;
+    });
+}
+
+function getExchangeLimit(exchangeKey, requestedLimit) {
+  const exchangeConfig = CONFIG.EXCHANGES[exchangeKey];
+  const maximum = exchangeConfig?.maxCandles || requestedLimit;
+
+  return Math.max(1, Math.min(requestedLimit, maximum));
+}
+
 export async function getExchangeSymbols(force = false) {
   const now = Date.now() / 1000;
 
@@ -207,86 +231,105 @@ export async function getExchangeSymbols(force = false) {
 
   const allSymbols = new Map();
 
-  try {
-    const binanceJson = await binanceFetch("/api/v3/exchangeInfo");
+  const exchanges = getExchangeOrder();
 
-    if (Array.isArray(binanceJson?.symbols)) {
-      for (const item of binanceJson.symbols) {
-        if (item.status !== "TRADING") continue;
-        if (item.quoteAsset !== "USDT") continue;
+  for (const exchangeKey of exchanges) {
+    try {
+      if (exchangeKey === "binance") {
+        const json = await binanceFetch("/fapi/v1/exchangeInfo");
 
-        const base = String(item.baseAsset || "").toUpperCase();
+        if (!Array.isArray(json?.symbols)) continue;
 
-        if (!isAllowedBaseAsset(base)) continue;
+        for (const item of json.symbols) {
+          if (item.status !== "TRADING") continue;
+          if (item.quoteAsset !== "USDT") continue;
+          if (
+            item.contractType &&
+            item.contractType !== "PERPETUAL"
+          ) {
+            continue;
+          }
 
-        const symbol = base + "USDT";
+          const base = String(item.baseAsset || "").toUpperCase();
 
-        if (!allSymbols.has(symbol)) {
-          allSymbols.set(symbol, {
-            symbol,
-            base,
-            quote: "USDT",
-            exchange: "binance"
-          });
+          if (!isAllowedBaseAsset(base)) continue;
+
+          const symbol = base + "USDT";
+
+          if (!allSymbols.has(symbol)) {
+            allSymbols.set(symbol, {
+              symbol,
+              base,
+              quote: "USDT",
+              exchange: "binance"
+            });
+          }
         }
       }
-    }
-  } catch (e) {}
 
-  try {
-    const okxJson = await okxFetch("/api/v5/public/instruments", {
-      instType: "SWAP"
-    });
+      if (exchangeKey === "okx") {
+        const json = await okxFetch("/api/v5/public/instruments", {
+          instType: "SWAP"
+        });
 
-    if (Array.isArray(okxJson?.data)) {
-      for (const item of okxJson.data) {
-        if (item.state !== "live") continue;
-        if (item.settleCcy !== "USDT") continue;
-        if (!String(item.instId || "").endsWith("-USDT-SWAP")) continue;
+        if (!Array.isArray(json?.data)) continue;
 
-        const base = String(item.ctValCcy || item.baseCcy || "").toUpperCase();
+        for (const item of json.data) {
+          if (item.state !== "live") continue;
+          if (item.settleCcy !== "USDT") continue;
 
-        if (!isAllowedBaseAsset(base)) continue;
+          const instId = String(item.instId || "");
 
-        const symbol = base + "USDT";
+          if (!instId.endsWith("-USDT-SWAP")) continue;
 
-        if (!allSymbols.has(symbol)) {
-          allSymbols.set(symbol, {
-            symbol,
-            base,
-            quote: "USDT",
-            exchange: "okx"
-          });
+          const base = String(
+            item.baseCcy || instId.split("-")[0] || ""
+          ).toUpperCase();
+
+          if (!isAllowedBaseAsset(base)) continue;
+
+          const symbol = base + "USDT";
+
+          if (!allSymbols.has(symbol)) {
+            allSymbols.set(symbol, {
+              symbol,
+              base,
+              quote: "USDT",
+              exchange: "okx"
+            });
+          }
         }
       }
-    }
-  } catch (e) {}
 
-  try {
-    const mexcJson = await mexcFetch("/api/v1/contract/detail");
+      if (exchangeKey === "mexc") {
+        const json = await mexcFetch("/api/v1/contract/detail");
 
-    if (Array.isArray(mexcJson?.data)) {
-      for (const item of mexcJson.data) {
-        if (item.state !== 0) continue;
-        if (item.quoteCoin !== "USDT") continue;
+        if (!Array.isArray(json?.data)) continue;
 
-        const base = String(item.baseCoin || "").toUpperCase();
+        for (const item of json.data) {
+          if (item.state !== 0) continue;
+          if (item.quoteCoin !== "USDT") continue;
 
-        if (!isAllowedBaseAsset(base)) continue;
+          const base = String(item.baseCoin || "").toUpperCase();
 
-        const symbol = base + "USDT";
+          if (!isAllowedBaseAsset(base)) continue;
 
-        if (!allSymbols.has(symbol)) {
-          allSymbols.set(symbol, {
-            symbol,
-            base,
-            quote: "USDT",
-            exchange: "mexc"
-          });
+          const symbol = base + "USDT";
+
+          if (!allSymbols.has(symbol)) {
+            allSymbols.set(symbol, {
+              symbol,
+              base,
+              quote: "USDT",
+              exchange: "mexc"
+            });
+          }
         }
       }
+    } catch (e) {
+      continue;
     }
-  } catch (e) {}
+  }
 
   const result = Array.from(allSymbols.values());
 
@@ -311,128 +354,141 @@ export async function getTickers(force = false) {
 
   const validSymbols = await getExchangeSymbols();
   const validSet = new Set(validSymbols.map((s) => s.symbol));
+
   const result = [];
   const seen = new Set();
 
-  try {
-    const binanceJson = await binanceFetch("/api/v3/ticker/24hr");
+  const exchanges = getExchangeOrder();
 
-    if (Array.isArray(binanceJson)) {
-      for (const item of binanceJson) {
-        const raw = normalizeSymbol(item.symbol);
+  for (const exchangeKey of exchanges) {
+    try {
+      if (exchangeKey === "binance") {
+        const json = await binanceFetch("/fapi/v1/ticker/24hr");
 
-        if (!raw.endsWith("USDT")) continue;
+        if (!Array.isArray(json)) continue;
 
-        const base = raw.slice(0, -4);
-        const symbol = base + "USDT";
+        for (const item of json) {
+          const raw = normalizeSymbol(item.symbol);
 
-        if (!isAllowedBaseAsset(base)) continue;
-        if (!validSet.has(symbol) || seen.has(symbol)) continue;
+          if (!raw.endsWith("USDT")) continue;
 
-        const last = parseNumber(item.lastPrice);
-        const open24h = parseNumber(item.openPrice);
-        const quoteVolume = parseNumber(item.quoteVolume);
+          const base = raw.slice(0, -4);
+          const symbol = base + "USDT";
 
-        if (last <= 0 || quoteVolume < 0) continue;
+          if (!isAllowedBaseAsset(base)) continue;
+          if (!validSet.has(symbol) || seen.has(symbol)) continue;
 
-        const changePercent = open24h > 0
-          ? ((last - open24h) / open24h) * 100
-          : 0;
+          const last = parseNumber(item.lastPrice);
+          const open24h = parseNumber(item.openPrice);
+          const quoteVolume = parseNumber(item.quoteVolume);
 
-        result.push({
-          symbol,
-          base,
-          quote: "USDT",
-          price: last,
-          change: changePercent,
-          quote_volume: quoteVolume
-        });
+          if (last <= 0 || quoteVolume <= 0) continue;
 
-        seen.add(symbol);
-      }
-    }
-  } catch (e) {}
-
-  try {
-    const okxJson = await okxFetch("/api/v5/market/tickers", {
-      instType: "SWAP"
-    });
-
-    if (Array.isArray(okxJson?.data)) {
-      for (const item of okxJson.data) {
-        if (!String(item.instId || "").endsWith("-USDT-SWAP")) continue;
-
-        const base = String(item.instId.split("-")[0] || "").toUpperCase();
-        const symbol = base + "USDT";
-
-        if (!isAllowedBaseAsset(base)) continue;
-        if (!validSet.has(symbol) || seen.has(symbol)) continue;
-
-        const last = parseNumber(item.last);
-        const open24h = parseNumber(item.open24h);
-        const volCcy24h = parseNumber(item.volCcy24h);
-        const vol24h = parseNumber(item.vol24h);
-
-        if (last <= 0) continue;
-
-        const quoteVolume = volCcy24h > 0
-          ? volCcy24h
-          : vol24h > 0
-            ? vol24h * last
+          const changePercent = open24h > 0
+            ? ((last - open24h) / open24h) * 100
             : 0;
 
-        const changePercent = open24h > 0
-          ? ((last - open24h) / open24h) * 100
-          : 0;
+          result.push({
+            symbol,
+            base,
+            quote: "USDT",
+            price: last,
+            change: changePercent,
+            quote_volume: quoteVolume
+          });
 
-        result.push({
-          symbol,
-          base,
-          quote: "USDT",
-          price: last,
-          change: changePercent,
-          quote_volume: quoteVolume
+          seen.add(symbol);
+        }
+      }
+
+      if (exchangeKey === "okx") {
+        const json = await okxFetch("/api/v5/market/tickers", {
+          instType: "SWAP"
         });
 
-        seen.add(symbol);
+        if (!Array.isArray(json?.data)) continue;
+
+        for (const item of json.data) {
+          const instId = String(item.instId || "");
+
+          if (!instId.endsWith("-USDT-SWAP")) continue;
+
+          const base = String(instId.split("-")[0] || "").toUpperCase();
+          const symbol = base + "USDT";
+
+          if (!isAllowedBaseAsset(base)) continue;
+          if (!validSet.has(symbol) || seen.has(symbol)) continue;
+
+          const last = parseNumber(item.last);
+          const open24h = parseNumber(item.open24h);
+          const volCcy24h = parseNumber(item.volCcy24h);
+          const vol24h = parseNumber(item.vol24h);
+
+          if (last <= 0) continue;
+
+          const quoteVolume = volCcy24h > 0
+            ? volCcy24h
+            : vol24h > 0
+              ? vol24h * last
+              : 0;
+
+          const changePercent = open24h > 0
+            ? ((last - open24h) / open24h) * 100
+            : 0;
+
+          result.push({
+            symbol,
+            base,
+            quote: "USDT",
+            price: last,
+            change: changePercent,
+            quote_volume: quoteVolume
+          });
+
+          seen.add(symbol);
+        }
       }
-    }
-  } catch (e) {}
 
-  try {
-    const mexcJson = await mexcFetch("/api/v1/contract/ticker");
+      if (exchangeKey === "mexc") {
+        const json = await mexcFetch("/api/v1/contract/ticker");
 
-    if (Array.isArray(mexcJson?.data)) {
-      for (const item of mexcJson.data) {
-        const raw = normalizeSymbol(item.symbol);
+        if (!Array.isArray(json?.data)) continue;
 
-        if (!raw.endsWith("USDT")) continue;
+        for (const item of json.data) {
+          const raw = normalizeSymbol(item.symbol);
 
-        const base = raw.slice(0, -4);
-        const symbol = base + "USDT";
+          if (!raw.endsWith("USDT")) continue;
 
-        if (!isAllowedBaseAsset(base)) continue;
-        if (!validSet.has(symbol) || seen.has(symbol)) continue;
+          const base = raw.slice(0, -4);
+          const symbol = base + "USDT";
 
-        const last = parseNumber(item.lastPrice);
-        const quoteVolume = parseNumber(item.amount24 || item.volume24);
-        const riseFallRate = parseNumber(item.riseFallRate);
+          if (!isAllowedBaseAsset(base)) continue;
+          if (!validSet.has(symbol) || seen.has(symbol)) continue;
 
-        if (last <= 0) continue;
+          const last = parseNumber(item.lastPrice);
+          const quoteVolume = parseNumber(
+            item.amount24 || item.volume24
+          );
+          const riseFallRate = parseNumber(item.riseFallRate);
 
-        result.push({
-          symbol,
-          base,
-          quote: "USDT",
-          price: last,
-          change: riseFallRate * 100,
-          quote_volume: quoteVolume
-        });
+          if (last <= 0) continue;
 
-        seen.add(symbol);
+          result.push({
+            symbol,
+            base,
+            quote: "USDT",
+            price: last,
+            change: riseFallRate * 100,
+            quote_volume: quoteVolume
+          });
+
+          seen.add(symbol);
+        }
       }
+    } catch (e) {
+      continue;
     }
-  } catch (e) {}
+  }
 
   result.sort((a, b) => b.quote_volume - a.quote_volume);
 
@@ -479,13 +535,17 @@ export function normalizeCandles(rawCandles, interval) {
     const candleObj = {
       time: openTime,
       open_time: openTime,
-      close_time: intervalMs > 0 ? openTime + intervalMs - 1 : openTime,
+      close_time: intervalMs > 0
+        ? openTime + intervalMs - 1
+        : openTime,
       open: raw.open,
       high: raw.high,
       low: raw.low,
       close: raw.close,
       volume: Number.isFinite(raw.volume) ? raw.volume : 0,
-      quote_volume: Number.isFinite(raw.quoteVolume) ? raw.quoteVolume : 0,
+      quote_volume: Number.isFinite(raw.quoteVolume)
+        ? raw.quoteVolume
+        : 0,
       trades: 0,
       incomplete: raw.confirm === "0"
     };
@@ -541,14 +601,14 @@ async function getKlinesBinance(symbol, interval, limit) {
 
   const size = Math.min(limit, 1000);
 
-  const json = await binanceSpotFetch("/api/v3/klines", {
+  const json = await binanceFetch("/fapi/v1/klines", {
     symbol: binanceSymbol,
     interval: binanceInterval,
     limit: String(size)
   });
 
   if (!Array.isArray(json)) {
-    throw new Error("Binance klines پاسخ نامعتبر");
+    throw new Error("Binance Futures klines پاسخ نامعتبر");
   }
 
   const rawCandles = [];
@@ -594,12 +654,12 @@ async function getKlinesOKX(symbol, interval, limit) {
   }
 
   const barLimit = Math.min(limit, 300);
-  const swapInstId = base + "-USDT-SWAP";
+  const instId = base + "-USDT-SWAP";
 
-  const swapJson = await okxFetch(
+  const json = await okxFetch(
     "/api/v5/market/candles",
     {
-      instId: swapInstId,
+      instId,
       bar: okxInterval,
       limit: String(barLimit)
     },
@@ -609,50 +669,18 @@ async function getKlinesOKX(symbol, interval, limit) {
     }
   );
 
-  if (Array.isArray(swapJson.data) && swapJson.data.length > 0) {
-    const rawCandles = swapJson.data.map((row) => ({
-      time: parseInt(row[0], 10),
-      open: parseFloat(row[1]),
-      high: parseFloat(row[2]),
-      low: parseFloat(row[3]),
-      close: parseFloat(row[4]),
-      volume: parseFloat(row[5]),
-      quoteVolume: parseFloat(row[6]),
-      confirm: String(row[8] ?? "1")
-    })).reverse();
-
-    const candles = normalizeCandles(rawCandles, interval);
-
-    if (candles.length > 0) return candles;
+  if (!Array.isArray(json?.data) || json.data.length === 0) {
+    throw new Error("OKX Swap klines خالی یا نامعتبر است");
   }
 
-  const spotInstId = base + "-USDT";
-
-  const spotJson = await okxFetch(
-    "/api/v5/market/candles",
-    {
-      instId: spotInstId,
-      bar: okxInterval,
-      limit: String(barLimit)
-    },
-    {
-      maxAttempts: 3,
-      baseDelay: 400
-    }
-  );
-
-  if (!Array.isArray(spotJson.data)) {
-    throw new Error("OKX klines پاسخ نامعتبر");
-  }
-
-  const rawCandles = spotJson.data.map((row) => ({
+  const rawCandles = json.data.map((row) => ({
     time: parseInt(row[0], 10),
     open: parseFloat(row[1]),
     high: parseFloat(row[2]),
     low: parseFloat(row[3]),
     close: parseFloat(row[4]),
     volume: parseFloat(row[5]),
-    quoteVolume: parseFloat(row[6]),
+    quoteVolume: parseFloat(row[7] || "0"),
     confirm: String(row[8] ?? "1")
   })).reverse();
 
@@ -721,7 +749,12 @@ async function getKlinesMEXC(symbol, interval, limit) {
   return normalizeCandles(rawCandles, interval);
 }
 
-export async function getKlinesFromExchange(exchangeKey, symbol, interval, limit) {
+export async function getKlinesFromExchange(
+  exchangeKey,
+  symbol,
+  interval,
+  limit
+) {
   const aliases = resolveSymbolAliases(symbol);
   let lastError = null;
 
@@ -749,23 +782,25 @@ export async function getKlinesFromExchange(exchangeKey, symbol, interval, limit
       if (Array.isArray(candles) && candles.length > 0) {
         return candles;
       }
+
+      lastError = new Error(
+        "No candles for " + alias + " on " + exchangeKey
+      );
     } catch (e) {
       lastError = e;
     }
   }
 
-  throw lastError || new Error("No candles for " + symbol + " on " + exchangeKey);
+  throw lastError || new Error(
+    "No candles for " + symbol + " on " + exchangeKey
+  );
 }
 
-function getExchangeOrder() {
-  return Object.keys(CONFIG.EXCHANGES)
-    .filter((key) => CONFIG.EXCHANGES[key].enabled)
-    .sort((a, b) => {
-      return CONFIG.EXCHANGES[a].priority - CONFIG.EXCHANGES[b].priority;
-    });
-}
-
-export async function getKlines(symbol, interval, limit = CONFIG.KLINE_LIMIT) {
+export async function getKlines(
+  symbol,
+  interval,
+  limit = CONFIG.KLINE_LIMIT
+) {
   const normalizedSymbol = normalizeSymbol(symbol);
   const cacheKey = normalizedSymbol + ":" + interval + ":" + limit;
 
@@ -780,22 +815,27 @@ export async function getKlines(symbol, interval, limit = CONFIG.KLINE_LIMIT) {
 
   const exchanges = getExchangeOrder();
   const minimumCandles = Math.max(1, CONFIG.MIN_CANDLES || 100);
+
   let lastError = null;
 
   for (const exchangeKey of exchanges) {
     try {
+      const exchangeLimit = getExchangeLimit(exchangeKey, limit);
+
       const candles = await getKlinesFromExchange(
         exchangeKey,
         normalizedSymbol,
         interval,
-        limit
+        exchangeLimit
       );
 
       if (!Array.isArray(candles)) {
         throw new Error("Invalid candles response");
       }
 
-      const closedCandles = candles.filter((candle) => !candle.incomplete);
+      const closedCandles = candles.filter(
+        (candle) => !candle.incomplete
+      );
 
       if (closedCandles.length < minimumCandles) {
         throw new Error(

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08T18:02:22.554Z",
+  "lastUpdated": "2026-11-08T18:17:40.112Z",
   "signals": {
     "RLUSDUSDT:15m": {
       "sentAt": "2026-11-08T16:45:53.260Z",
@@ -48,6 +48,18 @@
       "zoneLow": 0.1401,
       "zoneHigh": 0.1408,
       "signalCandleTime": 1794150900000
+    },
+    "CAPUSDT:15m": {
+      "sentAt": "2026-11-08T18:17:38.611Z",
+      "symbol": "CAPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.10052,
+      "stop": 0.10239999999999999,
+      "tp1": 0.09676000000000001,
+      "zoneLow": 0.09958,
+      "zoneHigh": 0.10146,
+      "signalCandleTime": 1794160800000
     }
   }
 }

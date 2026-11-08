@@ -1,0 +1,69 @@
+export const CONFIG = {
+  OKX_BASE_URL: "https://www.okx.com",
+  BINANCE_FUTURES_URL: "https://fapi1.binance.com",
+  BINANCE_SPOT_URL: "https://data-api.binance.vision",
+  MEXC_BASE_URL: "https://contract.mexc.com",
+
+  TIMEFRAME: "15m",
+  SWING_LEFT: 2,
+  SWING_RIGHT: 2,
+  MIN_SWING_DISTANCE: 5,
+
+  BREAKOUT_CONFIRMATION_BARS: 20,
+  STOP_BUFFER_MULTIPLIER: 0.1,
+  RISK_REWARD_RATIO: 2,
+
+  MIN_CANDLES: 100,
+  KLINE_LIMIT: 300,
+  MARKET_TIMEOUT: 15000,
+  MARKET_TOP_LIMIT: 1000,
+  MIN_QUOTE_VOLUME_24H: 1000000,
+  SYMBOL_CACHE_SECONDS: 3600,
+  KLINE_CACHE_SECONDS: 15,
+
+  EXCHANGES: {
+    binance: { priority: 1, enabled: true, maxCandles: 1000, marketType: "futures" },
+    okx: { priority: 2, enabled: true, maxCandles: 300, marketType: "swap" },
+    mexc: { priority: 3, enabled: true, maxCandles: 1000, marketType: "swap" }
+  },
+
+  SYMBOL_ALIASES: {
+    "SHIBUSDT": ["1000SHIBUSDT", "SHIB1000USDT"],
+    "PEPEUSDT": ["1000PEPEUSDT", "PEPE1000USDT"],
+    "FLOKIUSDT": ["1000FLOKIUSDT", "FLOKI1000USDT"],
+    "BONKUSDT": ["1000BONKUSDT", "BONK1000USDT"],
+    "LUNCUSDT": ["1000LUNCUSDT", "LUNC1000USDT"],
+    "XECUSDT": ["1000XECUSDT", "XEC1000USDT"],
+    "SATSUSDT": ["1000SATSUSDT", "SATS1000USDT"],
+    "RATSUSDT": ["1000RATSUSDT", "RATS1000USDT"],
+    "MOGUSDT": ["1000MOGUSDT", "MOG1000USDT"],
+    "CATUSDT": ["1000CATUSDT", "CAT1000USDT"]
+  },
+
+  EXCLUDED_BASE_ASSETS: [
+    "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI",
+    "USDE", "USDS", "EUR", "TRY", "BRL", "GBP",
+    "AUD", "JPY", "RUB", "UAH", "PLN", "ARS",
+    "MXN", "ZAR"
+  ],
+
+  TIMEFRAMES: {
+    "15m": "15 دقیقه"
+  },
+
+  OKX_INTERVAL_MAP: {
+    "15m": "15m"
+  },
+
+  BINANCE_INTERVAL_MAP: {
+    "15m": "15m"
+  },
+
+  MEXC_INTERVAL_MAP: {
+    "15m": "Min15"
+  }
+};
+
+export const INTERVAL_MS = {
+  "15m": 15 * 60 * 1000
+};

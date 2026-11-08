@@ -1,22 +1,30 @@
 function fmtPrice(value) {
   if (value === null || value === undefined) return "-";
-  const v = parseFloat(value);
+
+  const v = Number(value);
+
   if (!Number.isFinite(v)) return "-";
   if (v >= 1000) return v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   if (v >= 1) return v.toFixed(4);
-  if (v >= 0.01) return v.toFixed(5);
-  return v.toFixed(8).replace(/0+$/, "").replace(/\.$/, "");
+  if (v >= 0.01) return v.toFixed(6);
+
+  return v.toFixed(10).replace(/0+$/, "").replace(/\.$/, "");
 }
 
-function statusIcon(s) {
-  if (s === "LONG") return "🟢";
-  if (s === "SHORT") return "🔴";
-  if (s === "WAIT") return "🟡";
+function statusIcon(status) {
+  if (status === "LONG") return "🟢";
+  if (status === "SHORT") return "🔴";
+  if (status === "WAIT") return "🟡";
   return "⚪";
 }
 
-function statusText(s) {
-  return { LONG: "خرید", SHORT: "فروش", WAIT: "صبر", NO_TRADE: "بدون معامله" }[s] || s;
+function statusText(status) {
+  return {
+    LONG: "خرید",
+    SHORT: "فروش",
+    WAIT: "صبر",
+    NO_TRADE: "بدون معامله"
+  }[status] || status;
 }
 
 function escapeHtml(value) {
@@ -27,61 +35,66 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
-export function formatAnalysis(r) {
+export function formatAnalysis(result) {
   const lines = [];
 
-  lines.push(statusIcon(r.status) + " <b>" + escapeHtml(r.symbol) + "</b>");
-  lines.push("⏱ تایم‌فریم: <b>" + escapeHtml(r.timeframe) + "</b>");
-  lines.push("📌 وضعیت: <b>" + statusText(r.status) + "</b>");
+  lines.push(statusIcon(result.status) + " <b>" + escapeHtml(result.symbol) + "</b>");
+  lines.push("⏱ تایم‌فریم: <b>" + escapeHtml(result.timeframe) + "</b>");
+  lines.push("📌 وضعیت: <b>" + statusText(result.status) + "</b>");
   lines.push("");
-  lines.push("💰 قیمت فعلی: <b>" + fmtPrice(r.current_price) + "</b>");
+  lines.push("💰 قیمت آخرین کندل بسته‌شده: <b>" + fmtPrice(result.current_price) + "</b>");
 
-  if (r.direction) {
+  if (result.direction) {
+    const isBullish = result.direction === "bullish";
+
     lines.push("");
-    lines.push("📌 جهت: <b>" + (r.direction === "bullish" ? "🟢 خرید (Long)" : "🔴 فروش (Short)") + "</b>");
-    lines.push("📊 محدوده شکست: <b>" + fmtPrice(r.zone_low) + " — " + fmtPrice(r.zone_high) + "</b>");
-    lines.push("🎯 ورود: <b>" + fmtPrice(r.entry) + "</b>");
-    lines.push("🛑 حد ضرر: <b>" + fmtPrice(r.stop_loss) + "</b>");
-    lines.push("🥇 حد سود: <b>" + fmtPrice(r.take_profit) + "</b> (1:" + r.rr + "R)");
+    lines.push("📌 جهت: <b>" + (isBullish ? "🟢 خرید (LONG)" : "🔴 فروش (SHORT)") + "</b>");
+    lines.push("📊 محدوده شکست: <b>" + fmtPrice(result.zone_low) + " — " + fmtPrice(result.zone_high) + "</b>");
+    lines.push("📏 عرض محدوده: <b>" + fmtPrice(result.zone_width) + "</b>");
+    lines.push("🎯 ورود: <b>" + fmtPrice(result.entry) + "</b>");
+    lines.push("🛑 حد ضرر: <b>" + fmtPrice(result.stop_loss) + "</b>");
+    lines.push("🥇 حد سود: <b>" + fmtPrice(result.take_profit) + "</b>");
+    lines.push("⚖️ نسبت سود به ریسک: <b>" + Number(result.rr).toFixed(2) + "R</b>");
   }
 
-  if (r.reasons && r.reasons.length > 0) {
+  if (Array.isArray(result.reasons) && result.reasons.length > 0) {
     lines.push("");
-    for (const reason of r.reasons) lines.push("• " + escapeHtml(reason));
+    for (const reason of result.reasons) {
+      lines.push("• " + escapeHtml(reason));
+    }
   }
 
   lines.push("");
-  lines.push("<b>⚠️ این خروجی تحلیل الگوریتمی است و تضمین سود نیست.</b>");
+  lines.push("<b>⚠️ خروجی بر اساس داده‌های کندل بسته‌شده است و تضمین سود نیست.</b>");
 
   return lines.join("\n");
 }
 
-export function formatSignalResult(sig, newStatus) {
-  const isBullish = sig.direction === "bullish";
+export function formatSignalResult(signal, newStatus) {
+  const isBullish = signal.direction === "bullish";
+  const directionText = isBullish ? "🟢 خرید (LONG)" : "🔴 فروش (SHORT)";
 
   if (newStatus === "stopped") {
-    return (
-      "🛑 <b>حد ضرر فعال شد</b>\n" +
-      "━━━━━━━━━━━━━━━━━━━━━━\n" +
-      "🔸 ارز: <b>" + escapeHtml(sig.symbol) + "</b>\n" +
-      "⏱ تایم‌فریم: <b>" + escapeHtml(sig.timeframe) + "</b>\n" +
-      "📌 جهت: " + (isBullish ? "🟢 خرید (Long)" : "🔴 فروش (Short)") + "\n\n" +
-      "💰 ضرر خالص (بدون اهرم): <b>-1R</b>\n\n" +
-      "💡 مدیریت سرمایه را رعایت کنید. بازار همیشه فرصت‌های جدیدی دارد."
-    );
+    return [
+      "🛑 <b>حد ضرر فعال شد</b>",
+      "━━━━━━━━━━━━━━━━━━━━━━",
+      "🔸 ارز: <b>" + escapeHtml(signal.symbol) + "</b>",
+      "⏱ تایم‌فریم: <b>" + escapeHtml(signal.timeframe) + "</b>",
+      "📌 جهت: " + directionText,
+      "💰 نتیجه معامله: <b>-1R</b>"
+    ].join("\n");
   }
 
   if (newStatus === "tp1_hit") {
-    return (
-      "✅ <b>معامله با موفقیت بسته شد</b>\n" +
-      "━━━━━━━━━━━━━━━━━━━━━━\n" +
-      "🔸 ارز: <b>" + escapeHtml(sig.symbol) + "</b>\n" +
-      "⏱ تایم‌فریم: <b>" + escapeHtml(sig.timeframe) + "</b>\n" +
-      "📌 جهت: " + (isBullish ? "🟢 خرید" : "🔴 فروش") + "\n\n" +
-      "🎯 تارگت زده شده: <b>TP1</b>\n" +
-      "💰 سود خالص (بدون اهرم): <b>+" + sig.rr1 + "R</b>\n\n" +
-      "💡 لطفاً حد ضرر خود را مدیریت کنید (حداقل به نقطه ورود)."
-    );
+    return [
+      "✅ <b>تارگت با موفقیت زده شد</b>",
+      "━━━━━━━━━━━━━━━━━━━━━━",
+      "🔸 ارز: <b>" + escapeHtml(signal.symbol) + "</b>",
+      "⏱ تایم‌فریم: <b>" + escapeHtml(signal.timeframe) + "</b>",
+      "📌 جهت: " + directionText,
+      "🎯 تارگت: <b>" + fmtPrice(signal.tp1) + "</b>",
+      "💰 سود معامله: <b>+" + Number(signal.rr1).toFixed(2) + "R</b>"
+    ].join("\n");
   }
 
   return "";

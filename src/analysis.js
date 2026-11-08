@@ -9,6 +9,20 @@ import {
   detectEngulfing
 } from "./indicators.js";
 
+function isStrongMomentum(candles, direction) {
+  if (!Array.isArray(candles) || candles.length < CONFIG.MOMENTUM_CANDLE_COUNT) return false;
+  
+  const recent = candles.slice(-CONFIG.MOMENTUM_CANDLE_COUNT);
+  
+  const strongBullish = recent.every(c => c.close > c.open && (c.close - c.open) > (c.high - c.low) * 0.5);
+  const strongBearish = recent.every(c => c.close < c.open && (c.open - c.close) > (c.high - c.low) * 0.5);
+
+  if (direction === "bullish" && strongBearish) return true;
+  if (direction === "bearish" && strongBullish) return true;
+  
+  return false;
+}
+
 export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
   const result = {
     symbol,
@@ -106,6 +120,11 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
+    if (isStrongMomentum(candles, breakout.direction)) {
+      result.reasons.push("مومنتوم شدید خلاف جهت ستاپ - سیگنال رد شد");
+      return result;
+    }
+
     const engulf = detectEngulfing(
       candles,
       breakout.direction,
@@ -137,8 +156,8 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       : zoneHigh + zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER;
 
     const takeProfit = isBullish
-      ? entry + 2 * zoneWidth
-      : entry - 2 * zoneWidth;
+      ? entry + CONFIG.RISK_REWARD_RATIO * Math.abs(entry - stopLoss)
+      : entry - CONFIG.RISK_REWARD_RATIO * Math.abs(entry - stopLoss);
 
     const risk = Math.abs(entry - stopLoss);
     const reward = Math.abs(takeProfit - entry);

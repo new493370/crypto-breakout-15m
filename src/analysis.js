@@ -9,10 +9,10 @@ import {
   detectEngulfing
 } from "./indicators.js";
 
-export async function analyze(symbol) {
+export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
   const result = {
     symbol,
-    timeframe: CONFIG.TIMEFRAME,
+    timeframe,
     status: "NO_TRADE",
     direction: null,
     current_price: null,
@@ -23,31 +23,36 @@ export async function analyze(symbol) {
     zone_high: null,
     zone_width: null,
     rr: 0,
+    signal_candle_time: null,
     reasons: []
   };
 
   try {
-    const snapshot = await getMarketSnapshot(symbol, CONFIG.TIMEFRAME);
-    const candles = snapshot && Array.isArray(snapshot.current) ? snapshot.current : [];
+    const snapshot = await getMarketSnapshot(symbol, timeframe);
+    const candles = Array.isArray(snapshot?.current)
+      ? snapshot.current.filter(c =>
+          c &&
+          c.incomplete !== true &&
+          Number.isFinite(c.time) &&
+          Number.isFinite(c.open) &&
+          Number.isFinite(c.high) &&
+          Number.isFinite(c.low) &&
+          Number.isFinite(c.close)
+        )
+      : [];
 
     if (candles.length < CONFIG.MIN_CANDLES) {
-      result.reasons.push("تعداد کندل کافی نیست");
+      result.reasons.push("تعداد کندل بسته‌شده کافی نیست");
       return result;
     }
 
     const lastCandle = candles[candles.length - 1];
-    if (!lastCandle || !Number.isFinite(lastCandle.close)) {
-      result.reasons.push("قیمت فعلی معتبر نیست");
-      return result;
-    }
-
     result.current_price = lastCandle.close;
 
     const swings = detectSwings(candles);
-
     const latest = getLatestMinorSwings(swings, 2);
 
-    if (!latest.highs || latest.highs.length < 2 || !latest.lows || latest.lows.length < 2) {
+    if (latest.highs.length < 2 || latest.lows.length < 2) {
       result.reasons.push("سقف و کف مینور کافی یافت نشد");
       return result;
     }
@@ -57,102 +62,110 @@ export async function analyze(symbol) {
     const lowA = latest.lows[0];
     const lowB = latest.lows[1];
 
-    const isBullStructure = isValidStructure(lowA, lowB, "bullish");
-    const isBearStructure = isValidStructure(highA, highB, "bearish");
+    const bearishStructure = isValidStructure(highA, highB, "bearish");
+    const bullishStructure = isValidStructure(lowA, lowB, "bullish");
 
+    let lineDirection = null;
     let trendline = null;
-    let direction = null;
-    let structureIndex = 0;
+    let structureConfirmedIndex = -1;
 
-    if (isBearStructure) {
+    if (bearishStructure && bullishStructure) {
+      if (highB.confirmed_index >= lowB.confirmed_index) {
+        lineDirection = "bearish";
+        trendline = calculateTrendline(highA, highB);
+        structureConfirmedIndex = highB.confirmed_index;
+      } else {
+        lineDirection = "bullish";
+        trendline = calculateTrendline(lowA, lowB);
+        structureConfirmedIndex = lowB.confirmed_index;
+      }
+    } else if (bearishStructure) {
+      lineDirection = "bearish";
       trendline = calculateTrendline(highA, highB);
-      direction = "bearish";
-      structureIndex = highB.index;
-    } else if (isBullStructure) {
+      structureConfirmedIndex = highB.confirmed_index;
+    } else if (bullishStructure) {
+      lineDirection = "bullish";
       trendline = calculateTrendline(lowA, lowB);
-      direction = "bullish";
-      structureIndex = lowB.index;
+      structureConfirmedIndex = lowB.confirmed_index;
     }
 
-    if (!trendline || !direction) {
-      result.reasons.push("ساختار قیمتی معتبری برای رسم خط روند یافت نشد");
+    if (!trendline || structureConfirmedIndex < 0) {
+      result.reasons.push("ساختار معتبر Lower High یا Higher Low یافت نشد");
       return result;
     }
 
-    const breakout = detectBreakout(candles, trendline, direction, structureIndex + 1);
+    const breakout = detectBreakout(
+      candles,
+      trendline,
+      lineDirection,
+      structureConfirmedIndex + 1
+    );
 
     if (!breakout) {
       result.reasons.push("شکست معتبر خط روند رخ نداده است");
       return result;
     }
 
-    result.zone_low = breakout.zoneLow;
-    result.zone_high = breakout.zoneHigh;
-    result.zone_width = breakout.zoneWidth;
-    result.direction = direction;
-
-    const maxWaitBars = CONFIG.BREAKOUT_CONFIRMATION_BARS;
     const engulf = detectEngulfing(
       candles,
-      direction,
+      breakout.direction,
       breakout.index,
-      maxWaitBars,
+      CONFIG.BREAKOUT_CONFIRMATION_BARS,
       breakout.zoneLow,
       breakout.zoneHigh
     );
 
     if (!engulf) {
-      result.reasons.push("کندل اینگولف در محدوده شکست یافت نشد");
+      result.reasons.push("Engulfing معتبر در محدوده شکست یافت نشد");
       return result;
     }
 
-    const entry = engulf.entryPrice;
+    const zoneLow = breakout.zoneLow;
+    const zoneHigh = breakout.zoneHigh;
+    const zoneWidth = zoneHigh - zoneLow;
+    const entry = (zoneHigh + zoneLow) / 2;
 
-    let stopLoss;
-
-    if (direction === "bullish") {
-      stopLoss = breakout.zoneLow - (breakout.zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
-    } else {
-      stopLoss = breakout.zoneHigh + (breakout.zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
+    if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) {
+      result.reasons.push("عرض محدوده شکست معتبر نیست");
+      return result;
     }
+
+    const isBullish = breakout.direction === "bullish";
+
+    const stopLoss = isBullish
+      ? zoneLow - zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER
+      : zoneHigh + zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER;
+
+    const takeProfit = isBullish
+      ? entry + 2 * zoneWidth
+      : entry - 2 * zoneWidth;
 
     const risk = Math.abs(entry - stopLoss);
-    if (!Number.isFinite(risk) || risk <= 0) {
-      result.reasons.push("فاصله ریسک معتبر نیست");
+    const reward = Math.abs(takeProfit - entry);
+
+    if (
+      !Number.isFinite(risk) ||
+      !Number.isFinite(reward) ||
+      risk <= 0 ||
+      reward <= 0
+    ) {
+      result.reasons.push("محاسبه ریسک یا تارگت معتبر نیست");
       return result;
     }
 
-    let takeProfit;
-    if (direction === "bullish") {
-      takeProfit = entry + risk * CONFIG.RISK_REWARD_RATIO;
-    } else {
-      takeProfit = entry - risk * CONFIG.RISK_REWARD_RATIO;
-    }
-
-    const currentPrice = result.current_price;
-    const priceInZone = currentPrice >= breakout.zoneLow && currentPrice <= breakout.zoneHigh;
-
+    result.direction = breakout.direction;
+    result.zone_low = zoneLow;
+    result.zone_high = zoneHigh;
+    result.zone_width = zoneWidth;
     result.entry = entry;
     result.stop_loss = stopLoss;
     result.take_profit = takeProfit;
-    result.rr = CONFIG.RISK_REWARD_RATIO;
-
-    if (priceInZone) {
-      result.status = direction === "bullish" ? "LONG" : "SHORT";
-      result.reasons.push("قیمت هم اکنون داخل محدوده ورود قرار دارد");
-    } else if (
-      (direction === "bullish" && currentPrice <= entry * 1.02) ||
-      (direction === "bearish" && currentPrice >= entry * 0.98)
-    ) {
-      result.status = "WAIT";
-      result.reasons.push("قیمت نزدیک محدوده ورود است");
-    } else {
-      result.status = "NO_TRADE";
-      result.reasons.push("قیمت از محدوده ورود فاصله دارد");
-    }
+    result.rr = reward / risk;
+    result.signal_candle_time = engulf.candle.time;
+    result.status = isBullish ? "LONG" : "SHORT";
+    result.reasons.push("شکست خط روند و اولین Engulfing معتبر در محدوده شکست تأیید شد");
 
     return result;
-
   } catch (e) {
     result.reasons.push("خطا در تحلیل: " + ((e && e.message) || "unknown"));
     return result;

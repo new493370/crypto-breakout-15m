@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-08T17:02:36.054Z",
+  "lastUpdated": "2026-11-08T17:17:41.966Z",
   "allTime": {
     "total": 4,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
-    "active": 4,
+    "stopped": 2,
+    "active": 2,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 100
   },
   "byTimeframe": {
     "15m": {
@@ -28,7 +28,7 @@
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
+      "stopped": 2,
       "tp1Rate": 0
     },
     "bearish": {
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T17:00:43.134Z",
+      "statusUpdatedAt": "2026-11-08T17:15:42.462Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T17:00:43.134Z",
+      "statusUpdatedAt": "2026-11-08T17:15:42.462Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -93,13 +93,14 @@
       "signalCandleTime": 1794150900000,
       "rr1": 3.3333333333333934,
       "sentAt": "2026-11-08T17:02:32.870Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T17:02:32.870Z",
+      "statusUpdatedAt": "2026-11-08T17:15:45.955Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.0012462
     },
     {
       "symbol": "THETAUSDT",
@@ -113,13 +114,14 @@
       "signalCandleTime": 1794150900000,
       "rr1": 3.333333333333113,
       "sentAt": "2026-11-08T17:02:34.552Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T17:02:34.552Z",
+      "statusUpdatedAt": "2026-11-08T17:15:47.673Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.14003
     }
   ],
   "processedSignals": {

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08T20:32:23.314Z",
+  "lastUpdated": "2026-11-08T20:47:26.677Z",
   "signals": {
     "RLUSDUSDT:15m": {
       "sentAt": "2026-11-08T16:45:53.260Z",
@@ -60,6 +60,18 @@
       "zoneLow": 0.09958,
       "zoneHigh": 0.10146,
       "signalCandleTime": 1794160800000
+    },
+    "MSTRSTOCKUSDT:15m": {
+      "sentAt": "2026-11-08T20:47:25.177Z",
+      "symbol": "MSTRSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 128,
+      "stop": 128.32,
+      "tp1": 127.36000000000001,
+      "zoneLow": 127.84,
+      "zoneHigh": 128.16,
+      "signalCandleTime": 1794169800000
     }
   }
 }

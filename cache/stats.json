@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-08T20:32:23.315Z",
+  "lastUpdated": "2026-11-08T20:47:26.679Z",
   "allTime": {
-    "total": 5,
+    "total": 6,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 2,
+      "total": 3,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T20:30:42.766Z",
+      "statusUpdatedAt": "2026-11-08T20:45:41.482Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T20:30:42.766Z",
+      "statusUpdatedAt": "2026-11-08T20:45:41.482Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -143,6 +143,26 @@
       "_tp1Notified": false,
       "_stoppedNotified": true,
       "exitPrice": 0.10239999999999999
+    },
+    {
+      "symbol": "MSTRSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 128,
+      "stop": 128.32,
+      "tp1": 127.36000000000001,
+      "zoneLow": 127.84,
+      "zoneHigh": 128.16,
+      "signalCandleTime": 1794169800000,
+      "rr1": 2,
+      "sentAt": "2026-11-08T20:47:25.177Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-08T20:47:25.177Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -180,6 +200,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-08T18:17:38.611Z"
+    },
+    "MSTRSTOCKUSDT:15m:2026-11-08T20:47:25.177Z": {
+      "symbol": "MSTRSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-08T20:47:25.177Z"
     }
   }
 }

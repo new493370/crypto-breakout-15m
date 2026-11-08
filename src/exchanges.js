@@ -7,107 +7,42 @@ const CACHE_TTL = {
   SNAPSHOT: 60
 };
 
-let symbolCache = {
-  timestamp: 0,
-  symbols: []
-};
-
-let tickersCache = {
-  timestamp: 0,
-  data: []
-};
-
-const klineCache = new Map();
-const snapshotCache = new Map();
+let symbolCache = { timestamp: 0, symbols: [] };
+let tickersCache = { timestamp: 0, data: [] };
+const klineCache = {};
+const snapshotCache = {};
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-function logWarning(label, error) {
-  const message = error?.message || String(error || "Unknown error");
-  console.warn(`[${label}] ${message}`);
+function normalizeSymbol(symbol) {
+  return String(symbol || "").toUpperCase().replace(/[-_/:\s]/g, "");
 }
 
-function toNumber(value, fallback = 0) {
+function parseNumber(value) {
   const number = Number(value);
-  return Number.isFinite(number) ? number : fallback;
+  return Number.isFinite(number) ? number : 0;
 }
 
-function isValidOHLC(open, high, low, close) {
+function isValidCandle(candle) {
   return (
-    Number.isFinite(open) &&
-    Number.isFinite(high) &&
-    Number.isFinite(low) &&
-    Number.isFinite(close) &&
-    open > 0 &&
-    high > 0 &&
-    low > 0 &&
-    close > 0 &&
-    high >= low &&
-    high >= open &&
-    high >= close &&
-    low <= open &&
-    low <= close
+    Number.isFinite(candle.time) &&
+    Number.isFinite(candle.open) &&
+    Number.isFinite(candle.high) &&
+    Number.isFinite(candle.low) &&
+    Number.isFinite(candle.close) &&
+    candle.open > 0 &&
+    candle.high > 0 &&
+    candle.low > 0 &&
+    candle.close > 0 &&
+    candle.high >= candle.low &&
+    candle.high >= Math.max(candle.open, candle.close) &&
+    candle.low <= Math.min(candle.open, candle.close)
   );
 }
 
-function normalizeBaseAsset(value) {
-  return String(value || "").trim().toUpperCase();
-}
-
-function isExcludedBase(base) {
-  if (!base) return true;
-
-  if (CONFIG.EXCLUDED_BASE_ASSETS.includes(base)) {
-    return true;
-  }
-
-  if (/^X[A-Z]{4,}$/.test(base)) {
-    return true;
-  }
-
-  if (base.includes("TEST")) {
-    return true;
-  }
-
-  return false;
-}
-
-function parseSymbol(rawSymbol) {
-  const raw = String(rawSymbol || "").trim().toUpperCase();
-
-  if (!raw) return null;
-
-  const base = raw
-    .replace(/[-_/:\s]/g, "")
-    .replace(/USDT$/, "");
-
-  if (!base || isExcludedBase(base)) {
-    return null;
-  }
-
-  return {
-    symbol: `${base}USDT`,
-    base,
-    quote: "USDT"
-  };
-}
-
-function getConfirmStatus(value) {
-  if (value === false || value === 0 || value === "0") {
-    return "0";
-  }
-
-  return "1";
-}
-
-async function genericFetch(
-  baseUrl,
-  path,
-  params = {},
-  options = {}
-) {
+async function genericFetch(baseUrl, path, params = {}, options = {}) {
   const url = new URL(baseUrl + path);
 
   for (const [key, value] of Object.entries(params)) {
@@ -116,148 +51,90 @@ async function genericFetch(
     }
   }
 
-  const maxAttempts = Math.max(
-    1,
-    Number(options.maxAttempts) || 3
-  );
-
-  const baseDelay = Math.max(
-    100,
-    Number(options.baseDelay) || 400
-  );
-
-  const timeoutMs =
-    Number(options.timeout) || CONFIG.MARKET_TIMEOUT;
-
+  const maxAttempts = options.maxAttempts || 3;
+  const baseDelay = options.baseDelay || 400;
+  const timeoutMs = options.timeout || CONFIG.MARKET_TIMEOUT;
   const label = options.label || "HTTP";
 
   let lastError = null;
 
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const controller = new AbortController();
-
-    const timeout = setTimeout(() => {
-      controller.abort();
-    }, timeoutMs);
+    const timeout = setTimeout(() => controller.abort(), timeoutMs);
 
     try {
       const response = await fetch(url.toString(), {
         method: "GET",
-        headers: {
-          Accept: "application/json"
-        },
+        headers: { Accept: "application/json" },
         signal: controller.signal,
         redirect: "follow"
       });
 
       if (response.status === 429) {
-        lastError = new Error(`${label} HTTP 429`);
+        lastError = new Error(label + " HTTP 429");
 
-        if (attempt === maxAttempts - 1) {
-          break;
-        }
+        const retryAfter = parseFloat(response.headers.get("Retry-After"));
+        const delay = Number.isFinite(retryAfter) && retryAfter > 0
+          ? Math.min(retryAfter * 1000, 15000)
+          : baseDelay * (attempt + 1);
 
-        const retryAfter = response.headers.get("Retry-After");
-        const retrySeconds = Number(retryAfter);
-
-        const delay =
-          Number.isFinite(retrySeconds) && retrySeconds > 0
-            ? Math.min(retrySeconds * 1000, 15000)
-            : baseDelay * (attempt + 1);
-
-        await sleep(delay);
+        if (attempt < maxAttempts - 1) await sleep(delay);
         continue;
       }
 
       if (response.status === 418) {
-        lastError = new Error(`${label} IP banned (418)`);
+        lastError = new Error(label + " IP banned (418)");
 
-        if (attempt === maxAttempts - 1) {
-          break;
+        if (attempt < maxAttempts - 1) {
+          await sleep(Math.min(5000 * (attempt + 1), 30000));
         }
-
-        await sleep(
-          Math.min(5000 * (attempt + 1), 30000)
-        );
 
         continue;
       }
 
       if (!response.ok) {
-        const error = new Error(
-          `${label} HTTP ${response.status}`
-        );
-
+        const error = new Error(label + " HTTP " + response.status);
         error.status = response.status;
 
-        const retryable = response.status >= 500;
-
-        if (!retryable || attempt === maxAttempts - 1) {
+        if (response.status < 500 || attempt === maxAttempts - 1) {
           throw error;
         }
 
         lastError = error;
-
         await sleep(baseDelay * (attempt + 1));
         continue;
       }
 
-      const json = await response.json();
+      return await response.json();
+    } catch (e) {
+      lastError = e;
 
-      if (json === null || json === undefined) {
-        throw new Error(`${label} پاسخ خالی دریافت کرد`);
-      }
-
-      return json;
-
-    } catch (error) {
-      lastError = error;
-
-      const status = Number(error?.status || 0);
-
+      const status = e?.status || 0;
       const retryable =
         status === 429 ||
         status === 418 ||
         status >= 500 ||
         status === 0 ||
-        error?.name === "AbortError";
+        e?.name === "AbortError";
 
-      if (!retryable || attempt === maxAttempts - 1) {
-        break;
-      }
+      if (!retryable || attempt === maxAttempts - 1) break;
 
       await sleep(baseDelay * (attempt + 1));
-
     } finally {
       clearTimeout(timeout);
     }
   }
 
-  throw lastError || new Error(`${label} خطای ناشناخته`);
+  throw lastError || new Error(label + " خطای ناشناخته");
 }
 
-// --------------------------------------------------
-// EXCHANGE FETCHERS
-// --------------------------------------------------
-
 export function okxFetch(path, params = {}, options = {}) {
-  return genericFetch(
-    CONFIG.OKX_BASE_URL,
-    path,
-    params,
-    {
-      ...options,
-      label: "OKX"
-    }
-  ).then((json) => {
-    if (
-      !json ||
-      json.code !== "0"
-    ) {
-      throw new Error(
-        "OKX error: " +
-        (json?.msg || json?.code || "unknown")
-      );
+  return genericFetch(CONFIG.OKX_BASE_URL, path, params, {
+    ...options,
+    label: "OKX"
+  }).then((json) => {
+    if (!json || json.code !== "0") {
+      throw new Error("OKX error: " + (json?.msg || json?.code || "unknown"));
     }
 
     return json;
@@ -265,39 +142,24 @@ export function okxFetch(path, params = {}, options = {}) {
 }
 
 export function binanceFetch(path, params = {}, options = {}) {
-  return genericFetch(
-    CONFIG.BINANCE_SPOT_URL,
-    path,
-    params,
-    {
-      ...options,
-      label: "Binance"
-    }
-  );
+  return genericFetch(CONFIG.BINANCE_SPOT_URL, path, params, {
+    ...options,
+    label: "Binance"
+  });
 }
 
 export function binanceSpotFetch(path, params = {}, options = {}) {
-  return genericFetch(
-    CONFIG.BINANCE_SPOT_URL,
-    path,
-    params,
-    {
-      ...options,
-      label: "BinanceSpot"
-    }
-  );
+  return genericFetch(CONFIG.BINANCE_SPOT_URL, path, params, {
+    ...options,
+    label: "BinanceSpot"
+  });
 }
 
 export function mexcFetch(path, params = {}, options = {}) {
-  return genericFetch(
-    CONFIG.MEXC_BASE_URL,
-    path,
-    params,
-    {
-      ...options,
-      label: "MEXC"
-    }
-  ).then((json) => {
+  return genericFetch(CONFIG.MEXC_BASE_URL, path, params, {
+    ...options,
+    label: "MEXC"
+  }).then((json) => {
     if (
       json &&
       json.code !== undefined &&
@@ -305,42 +167,32 @@ export function mexcFetch(path, params = {}, options = {}) {
       json.code !== "0" &&
       json.code !== 200
     ) {
-      throw new Error(
-        "MEXC error: " +
-        (json.message || json.msg || json.code || "unknown")
-      );
+      throw new Error("MEXC error: " + (json.message || json.code || "unknown"));
     }
 
     return json;
   });
 }
 
-// --------------------------------------------------
-// SYMBOL ALIASES
-// --------------------------------------------------
-
 export function resolveSymbolAliases(symbol) {
-  const normalized = String(symbol || "")
-    .toUpperCase()
-    .replace(/[-_/:\s]/g, "");
-
-  const aliases = CONFIG.SYMBOL_ALIASES?.[normalized];
+  const normalized = normalizeSymbol(symbol);
+  const aliases = CONFIG.SYMBOL_ALIASES[normalized];
 
   if (Array.isArray(aliases) && aliases.length > 0) {
-    return [
-      normalized,
-      ...aliases.map((item) =>
-        String(item).toUpperCase().replace(/[-_/:\s]/g, "")
-      )
-    ];
+    return [...new Set([normalized, ...aliases.map(normalizeSymbol)])];
   }
 
   return [normalized];
 }
 
-// --------------------------------------------------
-// EXCHANGE SYMBOLS
-// --------------------------------------------------
+function isAllowedBaseAsset(base) {
+  if (!base) return false;
+  if (CONFIG.EXCLUDED_BASE_ASSETS.includes(base)) return false;
+  if (/^X[A-Z]{4,}$/.test(base)) return false;
+  if (base.includes("TEST")) return false;
+
+  return true;
+}
 
 export async function getExchangeSymbols(force = false) {
   const now = Date.now() / 1000;
@@ -355,68 +207,48 @@ export async function getExchangeSymbols(force = false) {
 
   const allSymbols = new Map();
 
-  const errors = [];
-
-  // BINANCE
-
   try {
-    const json = await binanceFetch(
-      "/api/v3/exchangeInfo"
-    );
+    const binanceJson = await binanceFetch("/api/v3/exchangeInfo");
 
-    if (Array.isArray(json?.symbols)) {
-      for (const item of json.symbols) {
+    if (Array.isArray(binanceJson?.symbols)) {
+      for (const item of binanceJson.symbols) {
         if (item.status !== "TRADING") continue;
         if (item.quoteAsset !== "USDT") continue;
 
-        const base = normalizeBaseAsset(item.baseAsset);
+        const base = String(item.baseAsset || "").toUpperCase();
 
-        if (isExcludedBase(base)) continue;
+        if (!isAllowedBaseAsset(base)) continue;
 
-        const symbol = `${base}USDT`;
+        const symbol = base + "USDT";
 
-        allSymbols.set(symbol, {
-          symbol,
-          base,
-          quote: "USDT",
-          exchange: "binance"
-        });
+        if (!allSymbols.has(symbol)) {
+          allSymbols.set(symbol, {
+            symbol,
+            base,
+            quote: "USDT",
+            exchange: "binance"
+          });
+        }
       }
     }
-
-  } catch (error) {
-    errors.push(error);
-    logWarning("Binance Symbols", error);
-  }
-
-  // OKX SWAP
+  } catch (e) {}
 
   try {
-    const json = await okxFetch(
-      "/api/v5/public/instruments",
-      {
-        instType: "SWAP"
-      }
-    );
+    const okxJson = await okxFetch("/api/v5/public/instruments", {
+      instType: "SWAP"
+    });
 
-    if (Array.isArray(json?.data)) {
-      for (const item of json.data) {
+    if (Array.isArray(okxJson?.data)) {
+      for (const item of okxJson.data) {
         if (item.state !== "live") continue;
         if (item.settleCcy !== "USDT") continue;
+        if (!String(item.instId || "").endsWith("-USDT-SWAP")) continue;
 
-        const instId = String(item.instId || "");
+        const base = String(item.ctValCcy || item.baseCcy || "").toUpperCase();
 
-        if (!instId.endsWith("-USDT-SWAP")) {
-          continue;
-        }
+        if (!isAllowedBaseAsset(base)) continue;
 
-        const base = normalizeBaseAsset(
-          item.ctValCcy || item.baseCcy
-        );
-
-        if (isExcludedBase(base)) continue;
-
-        const symbol = `${base}USDT`;
+        const symbol = base + "USDT";
 
         if (!allSymbols.has(symbol)) {
           allSymbols.set(symbol, {
@@ -428,29 +260,21 @@ export async function getExchangeSymbols(force = false) {
         }
       }
     }
-
-  } catch (error) {
-    errors.push(error);
-    logWarning("OKX Symbols", error);
-  }
-
-  // MEXC CONTRACT
+  } catch (e) {}
 
   try {
-    const json = await mexcFetch(
-      "/api/v1/contract/detail"
-    );
+    const mexcJson = await mexcFetch("/api/v1/contract/detail");
 
-    if (Array.isArray(json?.data)) {
-      for (const item of json.data) {
+    if (Array.isArray(mexcJson?.data)) {
+      for (const item of mexcJson.data) {
         if (item.state !== 0) continue;
         if (item.quoteCoin !== "USDT") continue;
 
-        const base = normalizeBaseAsset(item.baseCoin);
+        const base = String(item.baseCoin || "").toUpperCase();
 
-        if (isExcludedBase(base)) continue;
+        if (!isAllowedBaseAsset(base)) continue;
 
-        const symbol = `${base}USDT`;
+        const symbol = base + "USDT";
 
         if (!allSymbols.has(symbol)) {
           allSymbols.set(symbol, {
@@ -462,35 +286,17 @@ export async function getExchangeSymbols(force = false) {
         }
       }
     }
-
-  } catch (error) {
-    errors.push(error);
-    logWarning("MEXC Symbols", error);
-  }
+  } catch (e) {}
 
   const result = Array.from(allSymbols.values());
 
-  result.sort((a, b) =>
-    a.symbol.localeCompare(b.symbol)
-  );
+  result.sort((a, b) => a.symbol.localeCompare(b.symbol));
 
-  if (result.length === 0 && errors.length > 0) {
-    throw new Error(
-      "دریافت لیست نمادها از تمام صرافی‌ها ناموفق بود"
-    );
-  }
-
-  symbolCache = {
-    timestamp: now,
-    symbols: result
-  };
+  symbolCache.symbols = result;
+  symbolCache.timestamp = now;
 
   return result;
 }
-
-// --------------------------------------------------
-// TICKERS
-// --------------------------------------------------
 
 export async function getTickers(force = false) {
   const now = Date.now() / 1000;
@@ -504,102 +310,34 @@ export async function getTickers(force = false) {
   }
 
   const validSymbols = await getExchangeSymbols();
-
-  const validSet = new Set(
-    validSymbols.map((item) => item.symbol)
-  );
-
+  const validSet = new Set(validSymbols.map((s) => s.symbol));
   const result = [];
   const seen = new Set();
 
-  // BINANCE
-
   try {
-    const json = await binanceFetch(
-      "/api/v3/ticker/24hr"
-    );
+    const binanceJson = await binanceFetch("/api/v3/ticker/24hr");
 
-    if (Array.isArray(json)) {
-      for (const item of json) {
-        const parsed = parseSymbol(item.symbol);
+    if (Array.isArray(binanceJson)) {
+      for (const item of binanceJson) {
+        const raw = normalizeSymbol(item.symbol);
 
-        if (!parsed) continue;
-        if (!validSet.has(parsed.symbol)) continue;
-        if (seen.has(parsed.symbol)) continue;
+        if (!raw.endsWith("USDT")) continue;
 
-        const last = toNumber(item.lastPrice);
-        const open24h = toNumber(item.openPrice);
-        const quoteVolume = toNumber(item.quoteVolume);
+        const base = raw.slice(0, -4);
+        const symbol = base + "USDT";
 
-        if (last <= 0) continue;
+        if (!isAllowedBaseAsset(base)) continue;
+        if (!validSet.has(symbol) || seen.has(symbol)) continue;
 
-        const changePercent =
-          open24h > 0
-            ? ((last - open24h) / open24h) * 100
-            : 0;
+        const last = parseNumber(item.lastPrice);
+        const open24h = parseNumber(item.openPrice);
+        const quoteVolume = parseNumber(item.quoteVolume);
 
-        result.push({
-          ...parsed,
-          price: last,
-          change: changePercent,
-          quote_volume: quoteVolume
-        });
+        if (last <= 0 || quoteVolume < 0) continue;
 
-        seen.add(parsed.symbol);
-      }
-    }
-
-  } catch (error) {
-    logWarning("Binance Tickers", error);
-  }
-
-  // OKX SWAP
-
-  try {
-    const json = await okxFetch(
-      "/api/v5/market/tickers",
-      {
-        instType: "SWAP"
-      }
-    );
-
-    if (Array.isArray(json?.data)) {
-      for (const item of json.data) {
-        const instId = String(item.instId || "");
-
-        if (!instId.endsWith("-USDT-SWAP")) {
-          continue;
-        }
-
-        const base = normalizeBaseAsset(
-          instId.split("-")[0]
-        );
-
-        if (isExcludedBase(base)) continue;
-
-        const symbol = `${base}USDT`;
-
-        if (!validSet.has(symbol)) continue;
-        if (seen.has(symbol)) continue;
-
-        const last = toNumber(item.last);
-        const open24h = toNumber(item.open24h);
-        const volCcy24h = toNumber(item.volCcy24h);
-        const vol24h = toNumber(item.vol24h);
-
-        if (last <= 0) continue;
-
-        const quoteVolume =
-          volCcy24h > 0
-            ? volCcy24h
-            : vol24h > 0
-              ? vol24h * last
-              : 0;
-
-        const changePercent =
-          open24h > 0
-            ? ((last - open24h) / open24h) * 100
-            : 0;
+        const changePercent = open24h > 0
+          ? ((last - open24h) / open24h) * 100
+          : 0;
 
         result.push({
           symbol,
@@ -613,94 +351,102 @@ export async function getTickers(force = false) {
         seen.add(symbol);
       }
     }
-
-  } catch (error) {
-    logWarning("OKX Tickers", error);
-  }
-
-  // MEXC CONTRACT
+  } catch (e) {}
 
   try {
-    const json = await mexcFetch(
-      "/api/v1/contract/ticker"
-    );
+    const okxJson = await okxFetch("/api/v5/market/tickers", {
+      instType: "SWAP"
+    });
 
-    if (Array.isArray(json?.data)) {
-      for (const item of json.data) {
-        const parsed = parseSymbol(item.symbol);
+    if (Array.isArray(okxJson?.data)) {
+      for (const item of okxJson.data) {
+        if (!String(item.instId || "").endsWith("-USDT-SWAP")) continue;
 
-        if (!parsed) continue;
-        if (!validSet.has(parsed.symbol)) continue;
-        if (seen.has(parsed.symbol)) continue;
+        const base = String(item.instId.split("-")[0] || "").toUpperCase();
+        const symbol = base + "USDT";
 
-        const last = toNumber(item.lastPrice);
+        if (!isAllowedBaseAsset(base)) continue;
+        if (!validSet.has(symbol) || seen.has(symbol)) continue;
+
+        const last = parseNumber(item.last);
+        const open24h = parseNumber(item.open24h);
+        const volCcy24h = parseNumber(item.volCcy24h);
+        const vol24h = parseNumber(item.vol24h);
 
         if (last <= 0) continue;
 
-        const amount24 = toNumber(item.amount24);
-        const volume24 = toNumber(item.volume24);
+        const quoteVolume = volCcy24h > 0
+          ? volCcy24h
+          : vol24h > 0
+            ? vol24h * last
+            : 0;
 
-        const quoteVolume =
-          amount24 > 0
-            ? amount24
-            : volume24 > 0
-              ? volume24 * last
-              : 0;
-
-        const riseFallRate = toNumber(
-          item.riseFallRate
-        );
-
-        const changePercent =
-          riseFallRate * 100;
+        const changePercent = open24h > 0
+          ? ((last - open24h) / open24h) * 100
+          : 0;
 
         result.push({
-          ...parsed,
+          symbol,
+          base,
+          quote: "USDT",
           price: last,
           change: changePercent,
           quote_volume: quoteVolume
         });
 
-        seen.add(parsed.symbol);
+        seen.add(symbol);
       }
     }
+  } catch (e) {}
 
-  } catch (error) {
-    logWarning("MEXC Tickers", error);
-  }
+  try {
+    const mexcJson = await mexcFetch("/api/v1/contract/ticker");
 
-  result.sort(
-    (a, b) => b.quote_volume - a.quote_volume
-  );
+    if (Array.isArray(mexcJson?.data)) {
+      for (const item of mexcJson.data) {
+        const raw = normalizeSymbol(item.symbol);
 
-  if (result.length === 0) {
-    console.warn(
-      "[Tickers] هیچ تیکر معتبری دریافت نشد"
-    );
-  }
+        if (!raw.endsWith("USDT")) continue;
 
-  tickersCache = {
-    timestamp: now,
-    data: result
-  };
+        const base = raw.slice(0, -4);
+        const symbol = base + "USDT";
+
+        if (!isAllowedBaseAsset(base)) continue;
+        if (!validSet.has(symbol) || seen.has(symbol)) continue;
+
+        const last = parseNumber(item.lastPrice);
+        const quoteVolume = parseNumber(item.amount24 || item.volume24);
+        const riseFallRate = parseNumber(item.riseFallRate);
+
+        if (last <= 0) continue;
+
+        result.push({
+          symbol,
+          base,
+          quote: "USDT",
+          price: last,
+          change: riseFallRate * 100,
+          quote_volume: quoteVolume
+        });
+
+        seen.add(symbol);
+      }
+    }
+  } catch (e) {}
+
+  result.sort((a, b) => b.quote_volume - a.quote_volume);
+
+  tickersCache.data = result;
+  tickersCache.timestamp = now;
 
   return result;
 }
 
-// --------------------------------------------------
-// TOP SYMBOLS
-// --------------------------------------------------
-
-export async function getTopSymbols(
-  limit = CONFIG.MARKET_TOP_LIMIT
-) {
+export async function getTopSymbols(limit = CONFIG.MARKET_TOP_LIMIT) {
   const symbols = await getExchangeSymbols();
   const tickers = await getTickers();
 
-  const allowed = new Set(
-    symbols.map((item) => item.symbol)
-  );
-
+  const allowed = new Set(symbols.map((s) => s.symbol));
   const ranked = [];
 
   for (const ticker of tickers) {
@@ -716,100 +462,48 @@ export async function getTopSymbols(
     ranked.push(ticker);
   }
 
-  ranked.sort(
-    (a, b) => b.quote_volume - a.quote_volume
-  );
+  ranked.sort((a, b) => b.quote_volume - a.quote_volume);
 
-  const safeLimit = Math.max(
-    0,
-    Math.min(
-      Number(limit) || CONFIG.MARKET_TOP_LIMIT,
-      1000
-    )
-  );
-
-  return ranked.slice(0, safeLimit);
+  return ranked.slice(0, Math.min(limit, 1000));
 }
 
-// --------------------------------------------------
-// CANDLE NORMALIZATION
-// --------------------------------------------------
-
 export function normalizeCandles(rawCandles, interval) {
-  if (!Array.isArray(rawCandles)) {
-    return [];
-  }
-
   const intervalMs = INTERVAL_MS[interval] || 0;
-
+  const now = Date.now();
   const normalized = [];
   const incompleteCandles = [];
 
-  const now = Date.now();
-
   for (const raw of rawCandles) {
-    const openTime = toNumber(raw.time, NaN);
+    const openTime = raw.time;
 
-    const open = toNumber(raw.open, NaN);
-    const high = toNumber(raw.high, NaN);
-    const low = toNumber(raw.low, NaN);
-    const close = toNumber(raw.close, NaN);
-
-    const volume = toNumber(raw.volume);
-    const quoteVolume = toNumber(raw.quoteVolume);
-
-    if (!Number.isFinite(openTime)) continue;
-
-    if (!isValidOHLC(open, high, low, close)) {
-      continue;
-    }
-
-    const closeTime =
-      intervalMs > 0
-        ? openTime + intervalMs - 1
-        : openTime;
-
-    const isIncomplete =
-      getConfirmStatus(raw.confirm) === "0";
-
-    const candle = {
+    const candleObj = {
       time: openTime,
       open_time: openTime,
-      close_time: closeTime,
-
-      open,
-      high,
-      low,
-      close,
-
-      volume,
-      quote_volume: quoteVolume,
-
+      close_time: intervalMs > 0 ? openTime + intervalMs - 1 : openTime,
+      open: raw.open,
+      high: raw.high,
+      low: raw.low,
+      close: raw.close,
+      volume: Number.isFinite(raw.volume) ? raw.volume : 0,
+      quote_volume: Number.isFinite(raw.quoteVolume) ? raw.quoteVolume : 0,
       trades: 0,
-      incomplete: isIncomplete
+      incomplete: raw.confirm === "0"
     };
 
-    if (isIncomplete) {
-      incompleteCandles.push(candle);
+    if (!isValidCandle(candleObj)) continue;
+
+    if (candleObj.incomplete) {
+      incompleteCandles.push(candleObj);
     } else {
-      normalized.push(candle);
+      normalized.push(candleObj);
     }
   }
 
-  normalized.sort(
-    (a, b) => a.time - b.time
-  );
-
-  // فقط آخرین کندل ناقص به خروجی اضافه می‌شود.
-  // این کندل برای نمایش قیمت جاری است، نه تحلیل ساختار.
+  normalized.sort((a, b) => a.time - b.time);
+  incompleteCandles.sort((a, b) => a.time - b.time);
 
   if (incompleteCandles.length > 0) {
-    incompleteCandles.sort(
-      (a, b) => a.time - b.time
-    );
-
-    const openCandle =
-      incompleteCandles[incompleteCandles.length - 1];
+    const openCandle = incompleteCandles[incompleteCandles.length - 1];
 
     if (
       normalized.length === 0 ||
@@ -822,8 +516,6 @@ export function normalizeCandles(rawCandles, interval) {
     }
   }
 
-  // حذف کندل‌های تکراری
-
   const unique = [];
   const seen = new Set();
 
@@ -834,86 +526,47 @@ export function normalizeCandles(rawCandles, interval) {
     unique.push(candle);
   }
 
-  unique.sort(
-    (a, b) => a.time - b.time
-  );
+  unique.sort((a, b) => a.time - b.time);
 
   return unique;
 }
 
-// --------------------------------------------------
-// BINANCE KLINES
-// --------------------------------------------------
-
-async function getKlinesBinance(
-  symbol,
-  interval,
-  limit
-) {
-  const binanceSymbol = symbol.toUpperCase();
-
-  const binanceInterval =
-    CONFIG.BINANCE_INTERVAL_MAP[interval];
+async function getKlinesBinance(symbol, interval, limit) {
+  const binanceSymbol = normalizeSymbol(symbol);
+  const binanceInterval = CONFIG.BINANCE_INTERVAL_MAP[interval];
 
   if (!binanceInterval) {
-    throw new Error(
-      "Binance interval unsupported: " + interval
-    );
+    throw new Error("Binance interval unsupported: " + interval);
   }
 
-  const size = Math.max(
-    1,
-    Math.min(Number(limit) || 300, 1000)
-  );
+  const size = Math.min(limit, 1000);
 
-  const json = await binanceSpotFetch(
-    "/api/v3/klines",
-    {
-      symbol: binanceSymbol,
-      interval: binanceInterval,
-      limit: String(size)
-    }
-  );
+  const json = await binanceSpotFetch("/api/v3/klines", {
+    symbol: binanceSymbol,
+    interval: binanceInterval,
+    limit: String(size)
+  });
 
   if (!Array.isArray(json)) {
-    throw new Error(
-      "Binance klines پاسخ نامعتبر"
-    );
+    throw new Error("Binance klines پاسخ نامعتبر");
   }
 
   const rawCandles = [];
-
-  const intervalMs =
-    INTERVAL_MS[interval] || 3600000;
-
-  const now = Date.now();
+  const intervalMs = INTERVAL_MS[interval] || 3600000;
 
   for (const row of json) {
-    if (!Array.isArray(row) || row.length < 6) {
-      continue;
-    }
+    if (!Array.isArray(row) || row.length < 6) continue;
 
     const openTime = parseInt(row[0], 10);
-
     const open = parseFloat(row[1]);
     const high = parseFloat(row[2]);
     const low = parseFloat(row[3]);
     const close = parseFloat(row[4]);
-
     const volume = parseFloat(row[5]);
     const turnover = parseFloat(row[7] || "0");
 
-    if (
-      !Number.isFinite(openTime) ||
-      !isValidOHLC(open, high, low, close)
-    ) {
-      continue;
-    }
-
-    const closeTime =
-      openTime + intervalMs - 1;
-
-    const isClosed = now > closeTime;
+    const closeTime = openTime + intervalMs - 1;
+    const isClosed = Date.now() > closeTime;
 
     rawCandles.push({
       time: openTime,
@@ -927,96 +580,53 @@ async function getKlinesBinance(
     });
   }
 
-  rawCandles.sort(
-    (a, b) => a.time - b.time
-  );
+  rawCandles.sort((a, b) => a.time - b.time);
 
-  return normalizeCandles(
-    rawCandles,
-    interval
-  );
+  return normalizeCandles(rawCandles, interval);
 }
 
-// --------------------------------------------------
-// OKX KLINES
-// --------------------------------------------------
-
-async function getKlinesOKX(
-  symbol,
-  interval,
-  limit
-) {
-  const base = symbol.replace(/USDT$/, "");
-
-  const okxInterval =
-    CONFIG.OKX_INTERVAL_MAP[interval];
+async function getKlinesOKX(symbol, interval, limit) {
+  const base = normalizeSymbol(symbol).replace(/USDT$/, "");
+  const okxInterval = CONFIG.OKX_INTERVAL_MAP[interval];
 
   if (!okxInterval) {
-    throw new Error(
-      "OKX interval unsupported: " + interval
-    );
+    throw new Error("OKX interval unsupported: " + interval);
   }
 
-  const barLimit = Math.max(
-    1,
-    Math.min(Number(limit) || 300, 300)
+  const barLimit = Math.min(limit, 300);
+  const swapInstId = base + "-USDT-SWAP";
+
+  const swapJson = await okxFetch(
+    "/api/v5/market/candles",
+    {
+      instId: swapInstId,
+      bar: okxInterval,
+      limit: String(barLimit)
+    },
+    {
+      maxAttempts: 3,
+      baseDelay: 400
+    }
   );
 
-  const swapInstId =
-    base + "-USDT-SWAP";
+  if (Array.isArray(swapJson.data) && swapJson.data.length > 0) {
+    const rawCandles = swapJson.data.map((row) => ({
+      time: parseInt(row[0], 10),
+      open: parseFloat(row[1]),
+      high: parseFloat(row[2]),
+      low: parseFloat(row[3]),
+      close: parseFloat(row[4]),
+      volume: parseFloat(row[5]),
+      quoteVolume: parseFloat(row[6]),
+      confirm: String(row[8] ?? "1")
+    })).reverse();
 
-  // ابتدا SWAP
+    const candles = normalizeCandles(rawCandles, interval);
 
-  try {
-    const swapJson = await okxFetch(
-      "/api/v5/market/candles",
-      {
-        instId: swapInstId,
-        bar: okxInterval,
-        limit: String(barLimit)
-      },
-      {
-        maxAttempts: 3,
-        baseDelay: 400
-      }
-    );
-
-    if (
-      Array.isArray(swapJson?.data) &&
-      swapJson.data.length > 0
-    ) {
-      const rawCandles = swapJson.data.map((row) => ({
-        time: parseInt(row[0], 10),
-
-        open: parseFloat(row[1]),
-        high: parseFloat(row[2]),
-        low: parseFloat(row[3]),
-        close: parseFloat(row[4]),
-
-        volume: parseFloat(row[5]),
-        quoteVolume: parseFloat(row[6]),
-
-        confirm: getConfirmStatus(row[8])
-      })).reverse();
-
-      const candles = normalizeCandles(
-        rawCandles,
-        interval
-      );
-
-      if (candles.length > 0) {
-        return candles;
-      }
-    }
-
-  } catch (error) {
-    logWarning("OKX SWAP Klines", error);
+    if (candles.length > 0) return candles;
   }
 
-  // در صورت نبود داده SWAP، Spot امتحان می‌شود.
-
-  const spotInstId =
-    base + "-USDT";
+  const spotInstId = base + "-USDT";
 
   const spotJson = await okxFetch(
     "/api/v5/market/candles",
@@ -1031,59 +641,34 @@ async function getKlinesOKX(
     }
   );
 
-  if (!Array.isArray(spotJson?.data)) {
-    throw new Error(
-      "OKX klines پاسخ نامعتبر"
-    );
+  if (!Array.isArray(spotJson.data)) {
+    throw new Error("OKX klines پاسخ نامعتبر");
   }
 
   const rawCandles = spotJson.data.map((row) => ({
     time: parseInt(row[0], 10),
-
     open: parseFloat(row[1]),
     high: parseFloat(row[2]),
     low: parseFloat(row[3]),
     close: parseFloat(row[4]),
-
     volume: parseFloat(row[5]),
     quoteVolume: parseFloat(row[6]),
-
-    confirm: getConfirmStatus(row[8])
+    confirm: String(row[8] ?? "1")
   })).reverse();
 
-  return normalizeCandles(
-    rawCandles,
-    interval
-  );
+  return normalizeCandles(rawCandles, interval);
 }
 
-// --------------------------------------------------
-// MEXC KLINES
-// --------------------------------------------------
-
-async function getKlinesMEXC(
-  symbol,
-  interval,
-  limit
-) {
-  const base = symbol.replace(/USDT$/, "");
-
-  const mexcSymbol =
-    base + "_USDT";
-
-  const mexcInterval =
-    CONFIG.MEXC_INTERVAL_MAP[interval];
+async function getKlinesMEXC(symbol, interval, limit) {
+  const base = normalizeSymbol(symbol).replace(/USDT$/, "");
+  const mexcSymbol = base + "_USDT";
+  const mexcInterval = CONFIG.MEXC_INTERVAL_MAP[interval];
 
   if (!mexcInterval) {
-    throw new Error(
-      "MEXC interval unsupported: " + interval
-    );
+    throw new Error("MEXC interval unsupported: " + interval);
   }
 
-  const size = Math.max(
-    1,
-    Math.min(Number(limit) || 300, 1000)
-  );
+  const size = Math.min(limit, 1000);
 
   const json = await mexcFetch(
     "/api/v1/contract/kline/" + mexcSymbol,
@@ -1094,64 +679,30 @@ async function getKlinesMEXC(
   );
 
   if (!json || !json.data) {
-    throw new Error(
-      "MEXC klines پاسخ نامعتبر"
-    );
+    throw new Error("MEXC klines پاسخ نامعتبر");
   }
 
   const data = json.data;
-
   const rawCandles = [];
+  const intervalMs = INTERVAL_MS[interval] || 3600000;
 
-  const intervalMs =
-    INTERVAL_MS[interval] || 3600000;
-
-  const times =
-    Array.isArray(data.time) ? data.time : [];
-
-  const opens =
-    Array.isArray(data.open) ? data.open : [];
-
-  const highs =
-    Array.isArray(data.high) ? data.high : [];
-
-  const lows =
-    Array.isArray(data.low) ? data.low : [];
-
-  const closes =
-    Array.isArray(data.close) ? data.close : [];
-
-  const volumes =
-    Array.isArray(data.vol) ? data.vol : [];
-
-  const now = Date.now();
+  const times = Array.isArray(data.time) ? data.time : [];
+  const opens = Array.isArray(data.open) ? data.open : [];
+  const highs = Array.isArray(data.high) ? data.high : [];
+  const lows = Array.isArray(data.low) ? data.low : [];
+  const closes = Array.isArray(data.close) ? data.close : [];
+  const volumes = Array.isArray(data.vol) ? data.vol : [];
 
   for (let i = 0; i < times.length; i++) {
-    let openTime = parseInt(times[i], 10);
-
-    if (!Number.isFinite(openTime)) continue;
-
-    // زمان MEXC ممکن است ثانیه یا میلی‌ثانیه باشد.
-
-    if (openTime < 1e12) {
-      openTime *= 1000;
-    }
-
+    const openTime = parseInt(times[i], 10) * 1000;
     const open = parseFloat(opens[i]);
     const high = parseFloat(highs[i]);
     const low = parseFloat(lows[i]);
     const close = parseFloat(closes[i]);
-
     const volume = parseFloat(volumes[i]);
 
-    if (!isValidOHLC(open, high, low, close)) {
-      continue;
-    }
-
-    const closeTime =
-      openTime + intervalMs - 1;
-
-    const isClosed = now > closeTime;
+    const closeTime = openTime + intervalMs - 1;
+    const isClosed = Date.now() > closeTime;
 
     rawCandles.push({
       time: openTime,
@@ -1165,28 +716,13 @@ async function getKlinesMEXC(
     });
   }
 
-  rawCandles.sort(
-    (a, b) => a.time - b.time
-  );
+  rawCandles.sort((a, b) => a.time - b.time);
 
-  return normalizeCandles(
-    rawCandles,
-    interval
-  );
+  return normalizeCandles(rawCandles, interval);
 }
 
-// --------------------------------------------------
-// FETCH FROM SPECIFIC EXCHANGE
-// --------------------------------------------------
-
-export async function getKlinesFromExchange(
-  exchangeKey,
-  symbol,
-  interval,
-  limit
-) {
+export async function getKlinesFromExchange(exchangeKey, symbol, interval, limit) {
   const aliases = resolveSymbolAliases(symbol);
-
   let lastError = null;
 
   for (const alias of aliases) {
@@ -1195,204 +731,125 @@ export async function getKlinesFromExchange(
 
       switch (exchangeKey) {
         case "binance":
-          candles = await getKlinesBinance(
-            alias,
-            interval,
-            limit
-          );
+          candles = await getKlinesBinance(alias, interval, limit);
           break;
 
         case "okx":
-          candles = await getKlinesOKX(
-            alias,
-            interval,
-            limit
-          );
+          candles = await getKlinesOKX(alias, interval, limit);
           break;
 
         case "mexc":
-          candles = await getKlinesMEXC(
-            alias,
-            interval,
-            limit
-          );
+          candles = await getKlinesMEXC(alias, interval, limit);
           break;
 
         default:
-          throw new Error(
-            "Unknown exchange: " + exchangeKey
-          );
+          throw new Error("Unknown exchange: " + exchangeKey);
       }
 
-      if (candles && candles.length > 0) {
+      if (Array.isArray(candles) && candles.length > 0) {
         return candles;
       }
-
-    } catch (error) {
-      lastError = error;
+    } catch (e) {
+      lastError = e;
     }
   }
 
-  throw (
-    lastError ||
-    new Error(
-      `No candles for ${symbol} on ${exchangeKey}`
-    )
-  );
+  throw lastError || new Error("No candles for " + symbol + " on " + exchangeKey);
 }
 
-// --------------------------------------------------
-// EXCHANGE PRIORITY
-// --------------------------------------------------
-
 function getExchangeOrder() {
-  const exchanges = CONFIG.EXCHANGES || {};
-
-  return Object.keys(exchanges)
-    .filter((key) => exchanges[key]?.enabled)
+  return Object.keys(CONFIG.EXCHANGES)
+    .filter((key) => CONFIG.EXCHANGES[key].enabled)
     .sort((a, b) => {
-      const priorityA =
-        Number(exchanges[a]?.priority ?? 999);
-
-      const priorityB =
-        Number(exchanges[b]?.priority ?? 999);
-
-      return priorityA - priorityB;
+      return CONFIG.EXCHANGES[a].priority - CONFIG.EXCHANGES[b].priority;
     });
 }
 
-// --------------------------------------------------
-// MAIN KLINES
-// --------------------------------------------------
+export async function getKlines(symbol, interval, limit = CONFIG.KLINE_LIMIT) {
+  const normalizedSymbol = normalizeSymbol(symbol);
+  const cacheKey = normalizedSymbol + ":" + interval + ":" + limit;
 
-export async function getKlines(
-  symbol,
-  interval,
-  limit = CONFIG.KLINE_LIMIT
-) {
-  const safeLimit = Math.max(
-    1,
-    Math.min(Number(limit) || CONFIG.KLINE_LIMIT, 1000)
-  );
-
-  const cacheKey =
-    `${symbol}:${interval}:${safeLimit}`;
-
-  const cached = klineCache.get(cacheKey);
+  const cached = klineCache[cacheKey];
 
   if (
     cached &&
-    Date.now() - cached.time <
-      CACHE_TTL.KLINES * 1000
+    Date.now() - cached.time < CACHE_TTL.KLINES * 1000
   ) {
     return cached.candles;
   }
 
   const exchanges = getExchangeOrder();
-
-  if (exchanges.length === 0) {
-    throw new Error(
-      "هیچ صرافی فعالی در CONFIG.EXCHANGES وجود ندارد"
-    );
-  }
-
-  const minCandles = Math.max(
-    1,
-    Number(CONFIG.MIN_CANDLES) || 100
-  );
-
-  const errors = [];
-
-  // اجرای ترتیبی بر اساس اولویت صرافی‌ها
+  const minimumCandles = Math.max(1, CONFIG.MIN_CANDLES || 100);
+  let lastError = null;
 
   for (const exchangeKey of exchanges) {
     try {
       const candles = await getKlinesFromExchange(
         exchangeKey,
-        symbol,
+        normalizedSymbol,
         interval,
-        safeLimit
+        limit
       );
 
-      const closedCandles = candles.filter(
-        (candle) => !candle.incomplete
-      );
+      if (!Array.isArray(candles)) {
+        throw new Error("Invalid candles response");
+      }
 
-      if (closedCandles.length < minCandles) {
+      const closedCandles = candles.filter((candle) => !candle.incomplete);
+
+      if (closedCandles.length < minimumCandles) {
         throw new Error(
-          `Not enough closed candles from ${exchangeKey}: ${closedCandles.length}`
+          "Not enough closed candles (" +
+          closedCandles.length +
+          "/" +
+          minimumCandles +
+          ")"
         );
       }
 
-      const result = candles.slice(-safeLimit);
-
-      klineCache.set(cacheKey, {
+      klineCache[cacheKey] = {
         time: Date.now(),
-        candles: result,
-        exchange: exchangeKey
-      });
+        candles
+      };
 
-      return result;
-
-    } catch (error) {
-      errors.push({
-        exchange: exchangeKey,
-        error
-      });
-
-      logWarning(
-        `${exchangeKey} Klines`,
-        error
-      );
+      return candles;
+    } catch (e) {
+      lastError = e;
     }
   }
 
-  const details = errors
-    .map((item) =>
-      `${item.exchange}: ${item.error?.message || "unknown"}`
-    )
-    .join(" | ");
-
   throw new Error(
-    `هیچ صرافی داده کندل معتبر برنگرداند. ${details}`
+    "هیچ صرافی داده معتبر و کافی برای " +
+    normalizedSymbol +
+    " برنگرداند" +
+    (lastError?.message ? ": " + lastError.message : "")
   );
 }
 
-// --------------------------------------------------
-// MARKET SNAPSHOT
-// --------------------------------------------------
+export async function getMarketSnapshot(symbol, timeframe) {
+  const normalizedSymbol = normalizeSymbol(symbol);
+  const snapshotKey = normalizedSymbol + ":" + timeframe;
 
-export async function getMarketSnapshot(
-  symbol,
-  timeframe
-) {
-  const snapshotKey =
-    `${symbol}:${timeframe}`;
-
-  const cached = snapshotCache.get(snapshotKey);
+  const cached = snapshotCache[snapshotKey];
 
   if (
     cached &&
-    Date.now() - cached.time <
-      CACHE_TTL.SNAPSHOT * 1000
+    Date.now() - cached.time < CACHE_TTL.SNAPSHOT * 1000
   ) {
     return cached.snapshot;
   }
 
-  const current = await getKlines(
-    symbol,
-    timeframe
-  );
+  const current = await getKlines(normalizedSymbol, timeframe);
 
   const snapshot = {
     current,
     timeframe
   };
 
-  snapshotCache.set(snapshotKey, {
+  snapshotCache[snapshotKey] = {
     time: Date.now(),
     snapshot
-  });
+  };
 
   return snapshot;
 }

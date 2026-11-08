@@ -14,62 +14,80 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
   const highs = [];
   const lows = [];
 
-  if (!candles || candles.length < left + right + 1) {
+  if (!Array.isArray(candles) || candles.length < left + right + 1) {
     return { highs, lows };
   }
 
   for (let i = left; i < candles.length - right; i++) {
-    const ch = cHigh(candles[i]);
-    const cl = cLow(candles[i]);
+    const high = cHigh(candles[i]);
+    const low = cLow(candles[i]);
 
     let isHigh = true;
     let isLow = true;
 
     for (let j = i - left; j < i; j++) {
-      if (cHigh(candles[j]) >= ch) isHigh = false;
-      if (cLow(candles[j]) <= cl) isLow = false;
+      if (cHigh(candles[j]) >= high) isHigh = false;
+      if (cLow(candles[j]) <= low) isLow = false;
     }
 
     for (let j = i + 1; j <= i + right; j++) {
-      if (cHigh(candles[j]) >= ch) isHigh = false;
-      if (cLow(candles[j]) <= cl) isLow = false;
+      if (cHigh(candles[j]) >= high) isHigh = false;
+      if (cLow(candles[j]) <= low) isLow = false;
     }
 
-    if (isHigh) highs.push({ index: i, price: ch, confirmed_index: i + right, type: "high" });
-    if (isLow) lows.push({ index: i, price: cl, confirmed_index: i + right, type: "low" });
+    if (isHigh) {
+      highs.push({
+        index: i,
+        price: high,
+        confirmed_index: i + right,
+        type: "high"
+      });
+    }
+
+    if (isLow) {
+      lows.push({
+        index: i,
+        price: low,
+        confirmed_index: i + right,
+        type: "low"
+      });
+    }
   }
 
   return { highs, lows };
 }
 
 export function getLatestMinorSwings(swings, count = 2) {
-  const h = (swings.highs || []).slice(-count);
-  const l = (swings.lows || []).slice(-count);
   return {
-    highs: h,
-    lows: l
+    highs: (swings.highs || []).slice(-count),
+    lows: (swings.lows || []).slice(-count)
   };
 }
 
 export function isValidStructure(swingA, swingB, direction) {
   if (!swingA || !swingB) return false;
+  if (swingA.type !== swingB.type) return false;
   if (Math.abs(swingB.index - swingA.index) < CONFIG.MIN_SWING_DISTANCE) return false;
 
-  if (direction === "bearish") {
-    if (swingA.type === "high" && swingB.type === "high") {
-      if (swingB.price <= swingA.price) return true;
-    }
-  } else if (direction === "bullish") {
-    if (swingA.type === "low" && swingB.type === "low") {
-      if (swingB.price >= swingA.price) return true;
-    }
+  if (direction === "bearish" && swingA.type === "high") {
+    return swingB.price < swingA.price;
   }
+
+  if (direction === "bullish" && swingA.type === "low") {
+    return swingB.price > swingA.price;
+  }
+
   return false;
 }
 
 export function calculateTrendline(swingA, swingB) {
+  if (!swingA || !swingB || swingB.index === swingA.index) return null;
+
   const slope = (swingB.price - swingA.price) / (swingB.index - swingA.index);
   const intercept = swingA.price - slope * swingA.index;
+
+  if (!Number.isFinite(slope) || !Number.isFinite(intercept)) return null;
+
   return { slope, intercept };
 }
 
@@ -77,93 +95,101 @@ export function getTrendlinePrice(trendline, index) {
   return trendline.slope * index + trendline.intercept;
 }
 
-export function detectBreakout(candles, trendline, direction, startIndex) {
-  if (!candles || !trendline) return null;
+export function detectBreakout(candles, trendline, lineDirection, startIndex) {
+  if (!Array.isArray(candles) || !trendline) return null;
 
-  for (let i = startIndex; i < candles.length; i++) {
+  const firstIndex = Math.max(1, startIndex);
+
+  for (let i = firstIndex; i < candles.length; i++) {
+    const previous = candles[i - 1];
     const candle = candles[i];
-    const linePrice = getTrendlinePrice(trendline, i);
 
-    if (direction === "bullish") {
-      if (isBull(candle) && cClose(candle) > linePrice && cOpen(candle) <= linePrice) {
-        const zoneHigh = cHigh(candle);
-        const zoneLow = cLow(candle);
-        const zoneWidth = zoneHigh - zoneLow;
-        if (zoneWidth <= 0) continue;
+    if (!previous || !candle || candle.incomplete || previous.incomplete) continue;
 
-        return {
-          index: i,
-          direction: "bullish",
-          candle,
-          zoneLow,
-          zoneHigh,
-          zoneWidth,
-          linePrice
-        };
+    const previousLine = getTrendlinePrice(trendline, i - 1);
+    const currentLine = getTrendlinePrice(trendline, i);
+
+    let tradeDirection = null;
+
+    if (lineDirection === "bearish") {
+      if (cClose(previous) <= previousLine && cClose(candle) > currentLine) {
+        tradeDirection = "bullish";
       }
-    } else {
-      if (isBear(candle) && cClose(candle) < linePrice && cOpen(candle) >= linePrice) {
-        const zoneHigh = cHigh(candle);
-        const zoneLow = cLow(candle);
-        const zoneWidth = zoneHigh - zoneLow;
-        if (zoneWidth <= 0) continue;
-
-        return {
-          index: i,
-          direction: "bearish",
-          candle,
-          zoneLow,
-          zoneHigh,
-          zoneWidth,
-          linePrice
-        };
+    } else if (lineDirection === "bullish") {
+      if (cClose(previous) >= previousLine && cClose(candle) < currentLine) {
+        tradeDirection = "bearish";
       }
     }
+
+    if (!tradeDirection) continue;
+
+    const zoneHigh = cHigh(candle);
+    const zoneLow = cLow(candle);
+    const zoneWidth = zoneHigh - zoneLow;
+
+    if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) continue;
+
+    return {
+      index: i,
+      direction: tradeDirection,
+      lineDirection,
+      candle,
+      zoneLow,
+      zoneHigh,
+      zoneWidth,
+      linePrice: currentLine
+    };
   }
 
   return null;
 }
 
 export function detectEngulfing(candles, direction, startIndex, maxBars, zoneLow, zoneHigh) {
-  if (!candles || startIndex < 1) return null;
+  if (!Array.isArray(candles) || startIndex < 0) return null;
 
   const endIndex = Math.min(candles.length - 1, startIndex + maxBars);
 
   for (let i = startIndex + 1; i <= endIndex; i++) {
-    const c = candles[i];
-    const prev = candles[i - 1];
+    const candle = candles[i];
+    const previous = candles[i - 1];
 
-    if (!prev || !c) continue;
+    if (!candle || !previous || candle.incomplete || previous.incomplete) continue;
 
-    const cRange = cRange(c);
-    const prevRange = cRange(prev);
-    if (cRange <= 0 || prevRange <= 0) continue;
+    const candleRange = cRange(candle);
+    const previousRange = cRange(previous);
 
-    const touchedZone = 
-      (cLow(c) <= zoneHigh && cHigh(c) >= zoneLow) || 
-      (cLow(c) >= zoneLow && cLow(c) <= zoneHigh) ||
-      (cHigh(c) >= zoneLow && cHigh(c) <= zoneHigh);
+    if (candleRange <= 0 || previousRange <= 0) continue;
+
+    const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
 
     if (!touchedZone) continue;
 
-    if (direction === "bullish") {
-      if (
-        isBull(c) &&
-        isBear(prev) &&
-        cClose(c) > cHigh(prev) &&
-        cOpen(c) <= cLow(prev)
-      ) {
-        return { index: i, candle: c, entryPrice: cClose(c) };
-      }
-    } else if (direction === "bearish") {
-      if (
-        isBear(c) &&
-        isBull(prev) &&
-        cClose(c) < cLow(prev) &&
-        cOpen(c) >= cHigh(prev)
-      ) {
-        return { index: i, candle: c, entryPrice: cClose(c) };
-      }
+    if (
+      direction === "bullish" &&
+      isBull(candle) &&
+      isBear(previous) &&
+      cClose(candle) > cHigh(previous) &&
+      cOpen(candle) <= cLow(previous)
+    ) {
+      return {
+        index: i,
+        candle,
+        entryPrice: (zoneHigh + zoneLow) / 2
+      };
+    }
+
+    if (
+      direction === "bearish" &&
+      isBear(candle) &&
+      isBull(previous) &&
+      cClose(candle) < cLow(previous) &&
+      cOpen(candle) >= cHigh(previous)
+    ) {
+      return {
+        index: i,
+        candle,
+        entryPrice: (zoneHigh + zoneLow) / 2
+      };
     }
   }
 

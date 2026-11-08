@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-08T16:45:56.406Z",
+  "lastUpdated": "2026-11-08T17:02:36.054Z",
   "allTime": {
-    "total": 2,
+    "total": 4,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 2,
+    "active": 4,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 1,
+      "total": 3,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T16:45:53.259Z",
+      "statusUpdatedAt": "2026-11-08T17:00:43.134Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,47 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-08T16:45:54.904Z",
+      "statusUpdatedAt": "2026-11-08T17:00:43.134Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "RVNUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.001251,
+      "stop": 0.0012462,
+      "tp1": 0.001267,
+      "zoneLow": 0.001247,
+      "zoneHigh": 0.001255,
+      "signalCandleTime": 1794150900000,
+      "rr1": 3.3333333333333934,
+      "sentAt": "2026-11-08T17:02:32.870Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-08T17:02:32.870Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "THETAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.14045000000000002,
+      "stop": 0.14003,
+      "tp1": 0.14185000000000003,
+      "zoneLow": 0.1401,
+      "zoneHigh": 0.1408,
+      "signalCandleTime": 1794150900000,
+      "rr1": 3.333333333333113,
+      "sentAt": "2026-11-08T17:02:34.552Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-08T17:02:34.552Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -96,6 +136,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-08T16:45:54.904Z"
+    },
+    "RVNUSDT:15m:2026-11-08T17:02:32.870Z": {
+      "symbol": "RVNUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-08T17:02:32.870Z"
+    },
+    "THETAUSDT:15m:2026-11-08T17:02:34.552Z": {
+      "symbol": "THETAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-08T17:02:34.552Z"
     }
   }
 }

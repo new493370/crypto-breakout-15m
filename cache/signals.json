@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T11:12:54.731Z",
+  "lastUpdated": "2026-11-09T11:22:50.506Z",
   "signals": {
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-09T01:47:42.385Z",
@@ -168,6 +168,30 @@
       "zoneLow": 0.6265,
       "zoneHigh": 0.628,
       "signalCandleTime": 1794222300000
+    },
+    "FUSDT:5m": {
+      "sentAt": "2026-11-09T11:22:47.328Z",
+      "symbol": "FUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.0023575000000000002,
+      "stop": 0.002348,
+      "tp1": 0.002376500000000001,
+      "zoneLow": 0.002355,
+      "zoneHigh": 0.00236,
+      "signalCandleTime": 1794222900000
+    },
+    "ZECUSDT:5m": {
+      "sentAt": "2026-11-09T11:22:49.005Z",
+      "symbol": "ZECUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 1199.705,
+      "stop": 1193.1,
+      "tp1": 1212.915,
+      "zoneLow": 1195.2,
+      "zoneHigh": 1204.21,
+      "signalCandleTime": 1794222900000
     }
   }
 }

@@ -5,8 +5,8 @@ export const CONFIG = {
   MEXC_BASE_URL: "https://contract.mexc.com",
 
   TIMEFRAME: "15m",
-  SWING_LEFT: 2,
-  SWING_RIGHT: 2,
+  SWING_LEFT: 1,
+  SWING_RIGHT: 1,
   MIN_SWING_DISTANCE: 5,
 
   BREAKOUT_CONFIRMATION_BARS: 20,

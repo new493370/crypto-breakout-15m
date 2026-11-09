@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T20:42:30.163Z",
+  "lastUpdated": "2026-11-09T20:52:32.735Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -756,6 +756,24 @@
       "score": null,
       "entry": 0.16205,
       "stop": 0.158
+    },
+    "ONEUSDT:15m": {
+      "sentAt": "2026-11-09T20:52:29.563Z",
+      "symbol": "ONEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00150125,
+      "stop": 0.0014123
+    },
+    "BANDUSDT:15m": {
+      "sentAt": "2026-11-09T20:52:31.233Z",
+      "symbol": "BANDUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.17720000000000002,
+      "stop": 0.1776
     }
   }
 }

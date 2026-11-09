@@ -47,45 +47,87 @@ function calculateLocalATR(candles, index, period = 14) {
   const ranges = [];
 
   for (let i = start; i <= index; i++) {
-    if (!isValidCandle(candles[i])) continue;
+    if (!isValidCandle(candles[i])) return null;
 
-    const previousClose = i > 0 && isValidCandle(candles[i - 1])
-      ? cClose(candles[i - 1])
-      : NaN;
+    const previousClose =
+      i > 0 && isValidCandle(candles[i - 1])
+        ? cClose(candles[i - 1])
+        : NaN;
 
     const trueRange = getTrueRange(candles[i], previousClose);
 
-    if (Number.isFinite(trueRange) && trueRange > 0) {
-      ranges.push(trueRange);
-    }
+    if (!Number.isFinite(trueRange)) return null;
+
+    ranges.push(trueRange);
   }
 
-  if (!ranges.length) return null;
+  if (ranges.length < period) return null;
 
-  return ranges.reduce((sum, value) => sum + value, 0) / ranges.length;
+  const atr = ranges.reduce((sum, value) => sum + value, 0) / ranges.length;
+
+  return Number.isFinite(atr) && atr > 0 ? atr : null;
 }
 
 function getSwingProminence(candles, index, left, right, type) {
-  const start = Math.max(0, index - left);
-  const end = Math.min(candles.length - 1, index + right);
+  const current = candles[index];
 
-  let prominence = type === "high" ? Infinity : -Infinity;
+  if (!isValidCandle(current)) return 0;
 
-  for (let i = start; i <= end; i++) {
-    if (i === index || !isValidCandle(candles[i])) continue;
+  if (type === "high") {
+    let leftLowest = Infinity;
+    let rightLowest = Infinity;
 
-    if (type === "high") {
-      prominence = Math.min(prominence, cLow(candles[i]));
-    } else {
-      prominence = Math.max(prominence, cHigh(candles[i]));
+    for (let i = index - left; i < index; i++) {
+      if (!isValidCandle(candles[i])) return 0;
+      leftLowest = Math.min(leftLowest, cLow(candles[i]));
     }
+
+    for (let i = index + 1; i <= index + right; i++) {
+      if (!isValidCandle(candles[i])) return 0;
+      rightLowest = Math.min(rightLowest, cLow(candles[i]));
+    }
+
+    if (
+      !Number.isFinite(leftLowest) ||
+      !Number.isFinite(rightLowest)
+    ) {
+      return 0;
+    }
+
+    const leftRetracement = cHigh(current) - leftLowest;
+    const rightRetracement = cHigh(current) - rightLowest;
+
+    return Math.min(leftRetracement, rightRetracement);
   }
 
-  if (!Number.isFinite(prominence)) return 0;
+  if (type === "low") {
+    let leftHighest = -Infinity;
+    let rightHighest = -Infinity;
 
-  return type === "high"
-    ? cHigh(candles[index]) - prominence
-    : prominence - cLow(candles[index]);
+    for (let i = index - left; i < index; i++) {
+      if (!isValidCandle(candles[i])) return 0;
+      leftHighest = Math.max(leftHighest, cHigh(candles[i]));
+    }
+
+    for (let i = index + 1; i <= index + right; i++) {
+      if (!isValidCandle(candles[i])) return 0;
+      rightHighest = Math.max(rightHighest, cHigh(candles[i]));
+    }
+
+    if (
+      !Number.isFinite(leftHighest) ||
+      !Number.isFinite(rightHighest)
+    ) {
+      return 0;
+    }
+
+    const leftRetracement = leftHighest - cLow(current);
+    const rightRetracement = rightHighest - cLow(current);
+
+    return Math.min(leftRetracement, rightRetracement);
+  }
+
+  return 0;
 }
 
 function isSignificantSwing(candles, index, left, right, type) {
@@ -95,9 +137,9 @@ function isSignificantSwing(candles, index, left, right, type) {
 
   if (minSwingAtr === 0) return true;
 
-  const atr = calculateLocalATR(candles, index);
+  const atr = calculateLocalATR(candles, index, 14);
 
-  if (!atr || atr <= 0) return true;
+  if (!atr) return false;
 
   const prominence = getSwingProminence(
     candles,
@@ -118,11 +160,8 @@ export function detectSwings(
   const highs = [];
   const lows = [];
 
-  if (!Array.isArray(candles)) {
-    return { highs, lows };
-  }
-
   if (
+    !Array.isArray(candles) ||
     !Number.isInteger(left) ||
     !Number.isInteger(right) ||
     left < 1 ||
@@ -252,15 +291,7 @@ export function isValidStructure(swingA, swingB, direction) {
 }
 
 export function calculateTrendline(swingA, swingB) {
-  if (
-    !swingA ||
-    !swingB ||
-    swingB.index === swingA.index ||
-    !Number.isFinite(swingA.price) ||
-    !Number.isFinite(swingB.price)
-  ) {
-    return null;
-  }
+  if (!swingA || !swingB || swingB.index === swingA.index) return null;
 
   const slope = (swingB.price - swingA.price) /
     (swingB.index - swingA.index);
@@ -275,61 +306,31 @@ export function calculateTrendline(swingA, swingB) {
 }
 
 export function getTrendlinePrice(trendline, index) {
-  if (
-    !trendline ||
-    !Number.isFinite(trendline.slope) ||
-    !Number.isFinite(trendline.intercept) ||
-    !Number.isFinite(index)
-  ) {
-    return null;
-  }
-
   return trendline.slope * index + trendline.intercept;
 }
 
 export function detectBreakout(candles, trendline, lineDirection, startIndex) {
-  if (
-    !Array.isArray(candles) ||
-    !trendline ||
-    !Number.isFinite(startIndex)
-  ) {
-    return null;
-  }
+  if (!Array.isArray(candles) || !trendline) return null;
 
-  const firstIndex = Math.max(1, Math.floor(startIndex));
+  const firstIndex = Math.max(1, startIndex);
 
   for (let i = firstIndex; i < candles.length; i++) {
     const previous = candles[i - 1];
     const candle = candles[i];
 
-    if (!isValidCandle(previous) || !isValidCandle(candle)) {
-      continue;
-    }
+    if (!previous || !candle || candle.incomplete || previous.incomplete) continue;
 
     const previousLine = getTrendlinePrice(trendline, i - 1);
     const currentLine = getTrendlinePrice(trendline, i);
 
-    if (
-      !Number.isFinite(previousLine) ||
-      !Number.isFinite(currentLine)
-    ) {
-      continue;
-    }
-
     let tradeDirection = null;
 
     if (lineDirection === "bearish") {
-      if (
-        cClose(previous) <= previousLine &&
-        cClose(candle) > currentLine
-      ) {
+      if (cClose(previous) <= previousLine && cClose(candle) > currentLine) {
         tradeDirection = "bullish";
       }
     } else if (lineDirection === "bullish") {
-      if (
-        cClose(previous) >= previousLine &&
-        cClose(candle) < currentLine
-      ) {
+      if (cClose(previous) >= previousLine && cClose(candle) < currentLine) {
         tradeDirection = "bearish";
       }
     }
@@ -343,9 +344,7 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
     const zoneLow = bodyBottom;
     const zoneWidth = zoneHigh - zoneLow;
 
-    if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) {
-      continue;
-    }
+    if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) continue;
 
     return {
       index: i,
@@ -370,32 +369,15 @@ export function detectFirstPullback(
   zoneLow,
   zoneHigh
 ) {
-  if (
-    !Array.isArray(candles) ||
-    !Number.isInteger(startIndex) ||
-    startIndex < 0 ||
-    !Number.isFinite(maxBars) ||
-    maxBars < 0 ||
-    !Number.isFinite(zoneLow) ||
-    !Number.isFinite(zoneHigh) ||
-    zoneLow > zoneHigh
-  ) {
-    return null;
-  }
+  if (!Array.isArray(candles) || startIndex < 0) return null;
 
-  const endIndex = Math.min(
-    candles.length - 1,
-    startIndex + Math.floor(maxBars)
-  );
+  const endIndex = Math.min(candles.length - 1, startIndex + maxBars);
 
   for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
+    if (!candle || candle.incomplete) continue;
 
-    if (!isValidCandle(candle)) continue;
-
-    const touchedZone =
-      cLow(candle) <= zoneHigh &&
-      cHigh(candle) >= zoneLow;
+    const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
 
     if (touchedZone) {
       return {
@@ -410,31 +392,16 @@ export function detectFirstPullback(
 }
 
 export function calculateEMA(candles, period = 50) {
-  if (
-    !Array.isArray(candles) ||
-    !Number.isInteger(period) ||
-    period < 1 ||
-    candles.length < period
-  ) {
-    return null;
-  }
+  if (!Array.isArray(candles) || candles.length < period) return null;
 
-  const closes = [];
-
-  for (const candle of candles) {
-    if (!isValidCandle(candle)) return null;
-    closes.push(cClose(candle));
-  }
-
+  const closes = candles.map(c => cClose(c));
   const multiplier = 2 / (period + 1);
 
-  let ema = closes
-    .slice(0, period)
-    .reduce((sum, value) => sum + value, 0) / period;
+  let ema = closes.slice(0, period).reduce((a, b) => a + b, 0) / period;
 
   for (let i = period; i < closes.length; i++) {
     ema = (closes[i] - ema) * multiplier + ema;
   }
 
-  return Number.isFinite(ema) ? ema : null;
+  return ema;
 }

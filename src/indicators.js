@@ -123,8 +123,11 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
 
     if (!tradeDirection) continue;
 
-    const zoneHigh = cHigh(candle);
-    const zoneLow = cLow(candle);
+    const bodyTop = Math.max(cOpen(candle), cClose(candle));
+    const bodyBottom = Math.min(cOpen(candle), cClose(candle));
+
+    const zoneHigh = bodyTop;
+    const zoneLow = bodyBottom;
     const zoneWidth = zoneHigh - zoneLow;
 
     if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) continue;
@@ -160,9 +163,9 @@ export function detectEngulfing(candles, direction, startIndex, maxBars, zoneLow
 
     if (candleRange <= 0 || previousRange <= 0) continue;
 
-    const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
+    const fullyInZone = cLow(candle) >= zoneLow && cHigh(candle) <= zoneHigh;
 
-    if (!touchedZone) continue;
+    if (!fullyInZone) continue;
 
     if (
       direction === "bullish" &&

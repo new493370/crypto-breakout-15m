@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T23:02:18.263Z",
+  "lastUpdated": "2026-11-09T23:17:36.493Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1143,6 +1143,51 @@
       "score": null,
       "entry": 3.197,
       "stop": 3.1750000000000003
+    },
+    "OLUSDT:15m": {
+      "sentAt": "2026-11-09T23:17:27.853Z",
+      "symbol": "OLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0051805,
+      "stop": 0.005358
+    },
+    "CAPUSDT:15m": {
+      "sentAt": "2026-11-09T23:17:29.499Z",
+      "symbol": "CAPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.099055,
+      "stop": 0.10094
+    },
+    "PARTIUSDT:15m": {
+      "sentAt": "2026-11-09T23:17:31.679Z",
+      "symbol": "PARTIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.04632,
+      "stop": 0.05460999999999999
+    },
+    "LAYERUSDT:15m": {
+      "sentAt": "2026-11-09T23:17:33.347Z",
+      "symbol": "LAYERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.050775,
+      "stop": 0.051579999999999994
+    },
+    "OPGUSDT:15m": {
+      "sentAt": "2026-11-09T23:17:34.991Z",
+      "symbol": "OPGUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1252,
+      "stop": 0.12613000000000002
     }
   }
 }

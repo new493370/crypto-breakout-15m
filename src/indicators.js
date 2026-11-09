@@ -147,58 +147,22 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
   return null;
 }
 
-export function detectEngulfing(candles, direction, startIndex, maxBars, zoneLow, zoneHigh) {
+export function detectFirstPullback(candles, direction, startIndex, maxBars, zoneLow, zoneHigh) {
   if (!Array.isArray(candles) || startIndex < 0) return null;
 
   const endIndex = Math.min(candles.length - 1, startIndex + maxBars);
 
   for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
-    const previous = candles[i - 1];
-
-    if (!candle || !previous || candle.incomplete || previous.incomplete) continue;
-
-    const candleRange = cRange(candle);
-    const previousRange = cRange(previous);
-
-    if (candleRange <= 0 || previousRange <= 0) continue;
+    if (!candle || candle.incomplete) continue;
 
     const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
-    if (!touchedZone) continue;
-
-    const newBodyTop = Math.max(cOpen(candle), cClose(candle));
-    const newBodyBottom = Math.min(cOpen(candle), cClose(candle));
-    const prevBodyTop = Math.max(cOpen(previous), cClose(previous));
-    const prevBodyBottom = Math.min(cOpen(previous), cClose(previous));
-
-    if (direction === "bullish") {
-      if (
-        isBull(candle) &&
-        isBear(previous) &&
-        newBodyTop > prevBodyTop &&
-        newBodyBottom < prevBodyBottom
-      ) {
-        return {
-          index: i,
-          candle,
-          entryPrice: (zoneHigh + zoneLow) / 2
-        };
-      }
-    }
-
-    if (direction === "bearish") {
-      if (
-        isBear(candle) &&
-        isBull(previous) &&
-        newBodyTop > prevBodyTop &&
-        newBodyBottom < prevBodyBottom
-      ) {
-        return {
-          index: i,
-          candle,
-          entryPrice: (zoneHigh + zoneLow) / 2
-        };
-      }
+    if (touchedZone) {
+      return {
+        index: i,
+        candle,
+        entryPrice: (zoneHigh + zoneLow) / 2
+      };
     }
   }
 

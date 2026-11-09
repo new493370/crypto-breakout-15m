@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T22:17:13.758Z",
+  "lastUpdated": "2026-11-09T22:32:12.495Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1026,6 +1026,42 @@
       "score": null,
       "entry": 0.0059025,
       "stop": 0.005437
+    },
+    "PENGUUSDT:15m": {
+      "sentAt": "2026-11-09T22:32:05.797Z",
+      "symbol": "PENGUUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.006324,
+      "stop": 0.006441
+    },
+    "NEARUSDT:15m": {
+      "sentAt": "2026-11-09T22:32:07.524Z",
+      "symbol": "NEARUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 3.6494999999999997,
+      "stop": 3.5860000000000003
+    },
+    "OPNUSDT:15m": {
+      "sentAt": "2026-11-09T22:32:09.241Z",
+      "symbol": "OPNUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.036865,
+      "stop": 0.03739
+    },
+    "ZKPUSDT:15m": {
+      "sentAt": "2026-11-09T22:32:10.993Z",
+      "symbol": "ZKPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.035305,
+      "stop": 0.036270000000000004
     }
   }
 }

@@ -163,9 +163,9 @@ export function detectEngulfing(candles, direction, startIndex, maxBars, zoneLow
 
     if (candleRange <= 0 || previousRange <= 0) continue;
 
-    const fullyInZone = cLow(candle) >= zoneLow && cHigh(candle) <= zoneHigh;
+    const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
 
-    if (!fullyInZone) continue;
+    if (!touchedZone) continue;
 
     if (
       direction === "bullish" &&

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T11:02:33.617Z",
+  "lastUpdated": "2026-11-09T11:12:54.731Z",
   "signals": {
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-09T01:47:42.385Z",
@@ -156,6 +156,18 @@
       "zoneLow": 2105.81,
       "zoneHigh": 2107.15,
       "signalCandleTime": 1794219000000
+    },
+    "ASTERUSDT:5m": {
+      "sentAt": "2026-11-09T11:12:53.230Z",
+      "symbol": "ASTERUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.62725,
+      "stop": 0.6249999999999999,
+      "tp1": 0.6317500000000001,
+      "zoneLow": 0.6265,
+      "zoneHigh": 0.628,
+      "signalCandleTime": 1794222300000
     }
   }
 }

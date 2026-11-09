@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T10:02:32.193Z",
+  "lastUpdated": "2026-11-09T10:17:53.398Z",
   "signals": {
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-09T01:47:42.385Z",
@@ -96,6 +96,66 @@
       "zoneLow": 0.01977,
       "zoneHigh": 0.01987,
       "signalCandleTime": 1794215700000
+    },
+    "AEONUSDT:5m": {
+      "sentAt": "2026-11-09T10:17:45.122Z",
+      "symbol": "AEONUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.024655,
+      "stop": 0.02432,
+      "tp1": 0.025324999999999997,
+      "zoneLow": 0.02461,
+      "zoneHigh": 0.0247,
+      "signalCandleTime": 1794218400000
+    },
+    "PARTIUSDT:5m": {
+      "sentAt": "2026-11-09T10:17:46.794Z",
+      "symbol": "PARTIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.048525,
+      "stop": 0.04859,
+      "tp1": 0.048394999999999994,
+      "zoneLow": 0.04848,
+      "zoneHigh": 0.04857,
+      "signalCandleTime": 1794218700000
+    },
+    "ACHUSDT:5m": {
+      "sentAt": "2026-11-09T10:17:48.468Z",
+      "symbol": "ACHUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0042380000000000004,
+      "stop": 0.004248999999999999,
+      "tp1": 0.004216000000000003,
+      "zoneLow": 0.004237,
+      "zoneHigh": 0.004239,
+      "signalCandleTime": 1794218700000
+    },
+    "MINAUSDT:5m": {
+      "sentAt": "2026-11-09T10:17:50.151Z",
+      "symbol": "MINAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.05068,
+      "stop": 0.05087,
+      "tp1": 0.05030000000000001,
+      "zoneLow": 0.05065,
+      "zoneHigh": 0.05071,
+      "signalCandleTime": 1794218100000
+    },
+    "ETHUSDT:5m": {
+      "sentAt": "2026-11-09T10:17:51.894Z",
+      "symbol": "ETHUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 2106.48,
+      "stop": 2114.05,
+      "tp1": 2091.3399999999997,
+      "zoneLow": 2105.81,
+      "zoneHigh": 2107.15,
+      "signalCandleTime": 1794219000000
     }
   }
 }

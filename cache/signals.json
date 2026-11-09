@@ -1,18 +1,6 @@
 {
-  "lastUpdated": "2026-11-09T06:07:22.205Z",
+  "lastUpdated": "2026-11-09T06:22:45.456Z",
   "signals": {
-    "CAPUSDT:15m": {
-      "sentAt": "2026-11-08T18:17:38.611Z",
-      "symbol": "CAPUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "entry": 0.10052,
-      "stop": 0.10239999999999999,
-      "tp1": 0.09676000000000001,
-      "zoneLow": 0.09958,
-      "zoneHigh": 0.10146,
-      "signalCandleTime": 1794160800000
-    },
     "MSTRSTOCKUSDT:15m": {
       "sentAt": "2026-11-08T20:47:25.177Z",
       "symbol": "MSTRSTOCKUSDT",

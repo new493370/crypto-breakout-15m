@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-09T02:21:50.337Z",
+  "lastUpdated": "2026-11-09T02:37:20.590Z",
   "allTime": {
     "total": 9,
-    "tp1Hit": 2,
+    "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 4,
-    "tp1Rate": 40,
+    "active": 3,
+    "tp1Rate": 50,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 60
+    "stopRate": 50
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 6,
-      "tp1Hit": 1,
+      "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 2,
-      "tp1Rate": 33.3
+      "tp1Rate": 50
     },
     "bearish": {
       "total": 3,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
+      "statusUpdatedAt": "2026-11-09T02:30:42.999Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
+      "statusUpdatedAt": "2026-11-09T02:30:43.000Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -177,13 +177,14 @@
       "signalCandleTime": 1794187800000,
       "rr1": 2,
       "sentAt": "2026-11-09T01:47:42.385Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
+      "statusUpdatedAt": "2026-11-09T02:30:46.589Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.003677500000000001
     },
     {
       "symbol": "AEVOUSDT",
@@ -199,7 +200,7 @@
       "sentAt": "2026-11-09T01:47:44.047Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
+      "statusUpdatedAt": "2026-11-09T02:30:46.589Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

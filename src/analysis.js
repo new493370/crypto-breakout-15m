@@ -6,7 +6,8 @@ import {
   isValidStructure,
   calculateTrendline,
   detectBreakout,
-  detectEngulfing
+  detectEngulfing,
+  calculateEMA
 } from "./indicators.js";
 
 function isStrongMomentum(candles, direction) {
@@ -62,6 +63,10 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
 
     const lastCandle = candles[candles.length - 1];
     result.current_price = lastCandle.close;
+
+    const ema50 = calculateEMA(candles, 50);
+    const isUptrend = ema50 !== null && lastCandle.close > ema50;
+    const isDowntrend = ema50 !== null && lastCandle.close < ema50;
 
     const swings = detectSwings(candles);
     const latest = getLatestMinorSwings(swings, 2);
@@ -120,14 +125,26 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    if (isStrongMomentum(candles, breakout.direction)) {
+    const tradeDirection = breakout.direction;
+
+    if (tradeDirection === "bearish" && isUptrend) {
+      result.reasons.push("مخالفت با روند اصلی (EMA50 صعودی) - شورت مجاز نیست");
+      return result;
+    }
+
+    if (tradeDirection === "bullish" && isDowntrend) {
+      result.reasons.push("مخالفت با روند اصلی (EMA50 نزولی) - لانگ مجاز نیست");
+      return result;
+    }
+
+    if (isStrongMomentum(candles, tradeDirection)) {
       result.reasons.push("مومنتوم شدید خلاف جهت ستاپ - سیگنال رد شد");
       return result;
     }
 
     const engulf = detectEngulfing(
       candles,
-      breakout.direction,
+      tradeDirection,
       breakout.index,
       CONFIG.BREAKOUT_CONFIRMATION_BARS,
       breakout.zoneLow,
@@ -149,7 +166,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const isBullish = breakout.direction === "bullish";
+    const isBullish = tradeDirection === "bullish";
 
     let structuralStop;
     if (isBullish) {
@@ -187,7 +204,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    result.direction = breakout.direction;
+    result.direction = tradeDirection;
     result.zone_low = zoneLow;
     result.zone_high = zoneHigh;
     result.zone_width = zoneWidth;

@@ -1,30 +1,6 @@
 {
-  "lastUpdated": "2026-11-09T04:36:45.587Z",
+  "lastUpdated": "2026-11-09T04:51:44.254Z",
   "signals": {
-    "RLUSDUSDT:15m": {
-      "sentAt": "2026-11-08T16:45:53.260Z",
-      "symbol": "RLUSDUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "entry": 1.00135,
-      "stop": 1.00129,
-      "tp1": 1.00155,
-      "zoneLow": 1.0013,
-      "zoneHigh": 1.0014,
-      "signalCandleTime": 1794107700000
-    },
-    "RWUSDUSDT:15m": {
-      "sentAt": "2026-11-08T16:45:54.904Z",
-      "symbol": "RWUSDUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "entry": 0.9995,
-      "stop": 0.9996200000000001,
-      "tp1": 0.9990999999999999,
-      "zoneLow": 0.9994,
-      "zoneHigh": 0.9996,
-      "signalCandleTime": 1793957400000
-    },
     "RVNUSDT:15m": {
       "sentAt": "2026-11-08T17:02:32.870Z",
       "symbol": "RVNUSDT",

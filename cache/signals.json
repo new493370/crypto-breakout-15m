@@ -1,4 +1,14 @@
 {
-  "lastUpdated": "2026-11-09T17:52:44.856Z",
-  "signals": {}
+  "lastUpdated": "2026-11-09T18:02:57.081Z",
+  "signals": {
+    "BRETTUSDT:15m": {
+      "sentAt": "2026-11-09T18:02:55.580Z",
+      "symbol": "BRETTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.003734,
+      "stop": 0.0037219999999999996
+    }
+  }
 }

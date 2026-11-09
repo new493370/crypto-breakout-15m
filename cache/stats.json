@@ -1,13 +1,42 @@
 {
-  "processedSignals": {},
-  "recentSignals": [],
+  "processedSignals": {
+    "BRETTUSDT:15m:2026-11-09T18:02:55.579Z": {
+      "symbol": "BRETTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-09T18:02:55.579Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "BRETTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.003734,
+      "stop": 0.0037219999999999996,
+      "tp1": 0.0037580000000000005,
+      "zoneLow": 0.00373,
+      "zoneHigh": 0.003738,
+      "signalCandleTime": 1794246300000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T18:02:55.579Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T18:02:55.579Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
   "allTime": {
-    "total": 0,
+    "total": 1,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -15,7 +44,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -31,5 +60,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-09T17:52:44.857Z"
+  "lastUpdated": "2026-11-09T18:02:57.082Z"
 }

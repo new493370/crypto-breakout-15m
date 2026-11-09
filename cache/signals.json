@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T21:22:32.889Z",
+  "lastUpdated": "2026-11-09T21:42:30.867Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -837,6 +837,33 @@
       "score": null,
       "entry": 3711.05,
       "stop": 3776.8099999999995
+    },
+    "XLMUSDT:15m": {
+      "sentAt": "2026-11-09T21:42:26.015Z",
+      "symbol": "XLMUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.14743499999999998,
+      "stop": 0.1459
+    },
+    "MOODENGUSDT:15m": {
+      "sentAt": "2026-11-09T21:42:27.683Z",
+      "symbol": "MOODENGUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.031259999999999996,
+      "stop": 0.03172
+    },
+    "FLOCKUSDT:15m": {
+      "sentAt": "2026-11-09T21:42:29.366Z",
+      "symbol": "FLOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.03919,
+      "stop": 0.03884
     }
   }
 }

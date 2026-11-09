@@ -100,7 +100,7 @@
       "sentAt": "2026-11-09T18:52:59.756Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T19:30:41.290Z",
+      "statusUpdatedAt": "2026-11-09T19:40:43.557Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -120,7 +120,7 @@
       "sentAt": "2026-11-09T18:53:01.523Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T19:30:41.290Z",
+      "statusUpdatedAt": "2026-11-09T19:40:43.557Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -140,7 +140,7 @@
       "sentAt": "2026-11-09T19:12:59.330Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T19:30:41.290Z",
+      "statusUpdatedAt": "2026-11-09T19:40:43.557Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -160,7 +160,7 @@
       "sentAt": "2026-11-09T19:32:56.866Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T19:32:56.866Z",
+      "statusUpdatedAt": "2026-11-09T19:40:43.557Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -197,5 +197,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-09T19:32:58.368Z"
+  "lastUpdated": "2026-11-09T19:43:19.907Z"
 }

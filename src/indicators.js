@@ -164,35 +164,44 @@ export function detectEngulfing(candles, direction, startIndex, maxBars, zoneLow
     if (candleRange <= 0 || previousRange <= 0) continue;
 
     const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
-
     if (!touchedZone) continue;
 
-    if (
-      direction === "bullish" &&
-      isBull(candle) &&
-      isBear(previous) &&
-      cClose(candle) > cHigh(previous) &&
-      cOpen(candle) <= cLow(previous)
-    ) {
-      return {
-        index: i,
-        candle,
-        entryPrice: (zoneHigh + zoneLow) / 2
-      };
+    const candleBodyRatio = cBody(candle) / candleRange;
+    if (candleBodyRatio < 0.5) continue;
+
+    const newBodyTop = Math.max(cOpen(candle), cClose(candle));
+    const newBodyBottom = Math.min(cOpen(candle), cClose(candle));
+    const prevBodyTop = Math.max(cOpen(previous), cClose(previous));
+    const prevBodyBottom = Math.min(cOpen(previous), cClose(previous));
+
+    if (direction === "bullish") {
+      if (
+        isBull(candle) &&
+        isBear(previous) &&
+        newBodyTop > prevBodyTop &&
+        newBodyBottom < prevBodyBottom
+      ) {
+        return {
+          index: i,
+          candle,
+          entryPrice: (zoneHigh + zoneLow) / 2
+        };
+      }
     }
 
-    if (
-      direction === "bearish" &&
-      isBear(candle) &&
-      isBull(previous) &&
-      cClose(candle) < cLow(previous) &&
-      cOpen(candle) >= cHigh(previous)
-    ) {
-      return {
-        index: i,
-        candle,
-        entryPrice: (zoneHigh + zoneLow) / 2
-      };
+    if (direction === "bearish") {
+      if (
+        isBear(candle) &&
+        isBull(previous) &&
+        newBodyTop > prevBodyTop &&
+        newBodyBottom < prevBodyBottom
+      ) {
+        return {
+          index: i,
+          candle,
+          entryPrice: (zoneHigh + zoneLow) / 2
+        };
+      }
     }
   }
 

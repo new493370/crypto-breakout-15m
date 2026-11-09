@@ -55,6 +55,20 @@ export function formatAnalysis(result) {
     lines.push("🛑 حد ضرر: <b>" + fmtPrice(result.stop_loss) + "</b>");
     lines.push("🥇 حد سود: <b>" + fmtPrice(result.take_profit) + "</b>");
     lines.push("⚖️ نسبت سود به ریسک: <b>" + Number(result.rr).toFixed(2) + "R</b>");
+
+    if (result.swing_high_a && result.swing_high_b) {
+      lines.push("");
+      lines.push("📈 <b>دو سقف آخر (مبنای خط روند):</b>");
+      lines.push("   سقف اول: <b>" + fmtPrice(result.swing_high_a.price) + "</b> (کندل " + result.swing_high_a.index + ")");
+      lines.push("   سقف دوم: <b>" + fmtPrice(result.swing_high_b.price) + "</b> (کندل " + result.swing_high_b.index + ")");
+    }
+
+    if (result.swing_low_a && result.swing_low_b) {
+      lines.push("");
+      lines.push("📉 <b>دو کف آخر (مبنای خط روند):</b>");
+      lines.push("   کف اول: <b>" + fmtPrice(result.swing_low_a.price) + "</b> (کندل " + result.swing_low_a.index + ")");
+      lines.push("   کف دوم: <b>" + fmtPrice(result.swing_low_b.price) + "</b> (کندل " + result.swing_low_b.index + ")");
+    }
   }
 
   if (Array.isArray(result.reasons) && result.reasons.length > 0) {

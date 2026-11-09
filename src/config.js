@@ -18,7 +18,7 @@ export const CONFIG = {
   KLINE_LIMIT: 300,
   MARKET_TIMEOUT: 15000,
   MARKET_TOP_LIMIT: 1000,
-  MIN_QUOTE_VOLUME_24H: 10000,
+  MIN_QUOTE_VOLUME_24H: 1000000,
   SYMBOL_CACHE_SECONDS: 3600,
   KLINE_CACHE_SECONDS: 15,
 
@@ -49,8 +49,8 @@ export const CONFIG = {
   ],
 
   TIMEFRAMES: {
-  "5m": "5 دقیقه"
-},
+    "5m": "5 دقیقه"
+  },
 
   OKX_INTERVAL_MAP: {
     "5m": "5m"
@@ -61,8 +61,9 @@ export const CONFIG = {
   },
 
   MEXC_INTERVAL_MAP: {
-  "5m": "Min5"
-},
+    "5m": "Min5"
+  }
+};
 
 export const INTERVAL_MS = {
   "5m": 5 * 60 * 1000

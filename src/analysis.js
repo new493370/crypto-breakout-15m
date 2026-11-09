@@ -6,7 +6,7 @@ import {
   isValidStructure,
   calculateTrendline,
   detectBreakout,
-  detectEngulfing,
+  detectFirstPullback,
   calculateEMA
 } from "./indicators.js";
 
@@ -76,36 +76,31 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const highA = latest.highs[0];
-    const highB = latest.highs[1];
-    const lowA = latest.lows[0];
-    const lowB = latest.lows[1];
-
-    const bearishStructure = isValidStructure(highA, highB, "bearish");
-    const bullishStructure = isValidStructure(lowA, lowB, "bullish");
+    const bearishStructure = isValidStructure(latest.highs[0], latest.highs[1], "bearish");
+    const bullishStructure = isValidStructure(latest.lows[0], latest.lows[1], "bullish");
 
     let lineDirection = null;
     let trendline = null;
     let structureConfirmedIndex = -1;
 
     if (bearishStructure && bullishStructure) {
-      if (highB.confirmed_index >= lowB.confirmed_index) {
+      if (latest.highs[1].confirmed_index >= latest.lows[1].confirmed_index) {
         lineDirection = "bearish";
-        trendline = calculateTrendline(highA, highB);
-        structureConfirmedIndex = highB.confirmed_index;
+        trendline = calculateTrendline(latest.highs[0], latest.highs[1]);
+        structureConfirmedIndex = latest.highs[1].confirmed_index;
       } else {
         lineDirection = "bullish";
-        trendline = calculateTrendline(lowA, lowB);
-        structureConfirmedIndex = lowB.confirmed_index;
+        trendline = calculateTrendline(latest.lows[0], latest.lows[1]);
+        structureConfirmedIndex = latest.lows[1].confirmed_index;
       }
     } else if (bearishStructure) {
       lineDirection = "bearish";
-      trendline = calculateTrendline(highA, highB);
-      structureConfirmedIndex = highB.confirmed_index;
+      trendline = calculateTrendline(latest.highs[0], latest.highs[1]);
+      structureConfirmedIndex = latest.highs[1].confirmed_index;
     } else if (bullishStructure) {
       lineDirection = "bullish";
-      trendline = calculateTrendline(lowA, lowB);
-      structureConfirmedIndex = lowB.confirmed_index;
+      trendline = calculateTrendline(latest.lows[0], latest.lows[1]);
+      structureConfirmedIndex = latest.lows[1].confirmed_index;
     }
 
     if (!trendline || structureConfirmedIndex < 0) {
@@ -142,7 +137,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const engulf = detectEngulfing(
+    const pullback = detectFirstPullback(
       candles,
       tradeDirection,
       breakout.index,
@@ -151,8 +146,8 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       breakout.zoneHigh
     );
 
-    if (!engulf) {
-      result.reasons.push("Engulfing معتبر در محدوده شکست یافت نشد");
+    if (!pullback) {
+      result.reasons.push("اولین پولبک در محدوده شکست یافت نشد");
       return result;
     }
 
@@ -212,9 +207,9 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     result.stop_loss = stopLoss;
     result.take_profit = takeProfit;
     result.rr = reward / risk;
-    result.signal_candle_time = engulf.candle.time;
+    result.signal_candle_time = pullback.candle.time;
     result.status = isBullish ? "LONG" : "SHORT";
-    result.reasons.push("شکست خط روند و اولین Engulfing معتبر در محدوده شکست تأیید شد");
+    result.reasons.push("شکست خط روند و اولین پولبک معتبر در محدوده شکست تأیید شد");
 
     return result;
   } catch (e) {

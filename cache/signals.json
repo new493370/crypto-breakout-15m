@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T23:32:30.385Z",
+  "lastUpdated": "2026-11-09T23:47:25.482Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1260,6 +1260,33 @@
       "score": null,
       "entry": 1168.545,
       "stop": 1190.94
+    },
+    "AKEUSDT:15m": {
+      "sentAt": "2026-11-09T23:47:20.648Z",
+      "symbol": "AKEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0043885,
+      "stop": 0.006494
+    },
+    "UNIUSDT:15m": {
+      "sentAt": "2026-11-09T23:47:22.321Z",
+      "symbol": "UNIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 7.042,
+      "stop": 7.128
+    },
+    "ARXUSDT:15m": {
+      "sentAt": "2026-11-09T23:47:23.980Z",
+      "symbol": "ARXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.2163,
+      "stop": 0.2169
     }
   }
 }

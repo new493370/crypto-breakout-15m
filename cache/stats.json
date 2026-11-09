@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-09T10:17:53.400Z",
+  "lastUpdated": "2026-11-09T10:32:54.035Z",
   "allTime": {
     "total": 5,
-    "tp1Hit": 0,
+    "tp1Hit": 1,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
-    "active": 5,
-    "tp1Rate": 0,
+    "stopped": 1,
+    "active": 3,
+    "tp1Rate": 50,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 50
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 4,
-      "tp1Hit": 0,
+      "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
-      "tp1Rate": 0
+      "stopped": 1,
+      "tp1Rate": 50
     }
   },
   "recentSignals": [
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-09T10:17:45.121Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T10:17:45.121Z",
+      "statusUpdatedAt": "2026-11-09T10:30:44.757Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -73,13 +73,14 @@
       "signalCandleTime": 1794218700000,
       "rr1": 2,
       "sentAt": "2026-11-09T10:17:46.793Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T10:17:46.793Z",
+      "statusUpdatedAt": "2026-11-09T10:30:48.464Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.048394999999999994
     },
     {
       "symbol": "ACHUSDT",
@@ -93,13 +94,14 @@
       "signalCandleTime": 1794218700000,
       "rr1": 2,
       "sentAt": "2026-11-09T10:17:48.468Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T10:17:48.468Z",
+      "statusUpdatedAt": "2026-11-09T10:30:50.224Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.004248999999999999
     },
     {
       "symbol": "MINAUSDT",
@@ -115,7 +117,7 @@
       "sentAt": "2026-11-09T10:17:50.151Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T10:17:50.151Z",
+      "statusUpdatedAt": "2026-11-09T10:30:50.224Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -135,7 +137,7 @@
       "sentAt": "2026-11-09T10:17:51.894Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T10:17:51.894Z",
+      "statusUpdatedAt": "2026-11-09T10:30:50.224Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

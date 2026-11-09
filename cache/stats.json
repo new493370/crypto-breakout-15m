@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-09T11:22:50.508Z",
+  "lastUpdated": "2026-11-09T11:32:31.654Z",
   "allTime": {
     "total": 8,
-    "tp1Hit": 3,
+    "tp1Hit": 5,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 2,
-    "active": 3,
-    "tp1Rate": 60,
+    "active": 1,
+    "tp1Rate": 71.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 40
+    "stopRate": 28.6
   },
   "byTimeframe": {
     "15m": {
@@ -25,7 +25,7 @@
   "byDirection": {
     "bullish": {
       "total": 4,
-      "tp1Hit": 1,
+      "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 0,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-09T10:17:45.121Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T11:20:32.158Z",
+      "statusUpdatedAt": "2026-11-09T11:30:33.104Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -178,13 +178,14 @@
       "signalCandleTime": 1794222900000,
       "rr1": 2,
       "sentAt": "2026-11-09T11:22:47.328Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T11:22:47.328Z",
+      "statusUpdatedAt": "2026-11-09T11:30:36.911Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.002376500000000001
     },
     {
       "symbol": "ZECUSDT",
@@ -198,13 +199,14 @@
       "signalCandleTime": 1794222900000,
       "rr1": 2,
       "sentAt": "2026-11-09T11:22:49.005Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T11:22:49.005Z",
+      "statusUpdatedAt": "2026-11-09T11:30:38.698Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 1212.915
     }
   ],
   "processedSignals": {

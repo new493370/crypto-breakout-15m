@@ -1,18 +1,6 @@
 {
-  "lastUpdated": "2026-11-09T08:37:16.547Z",
+  "lastUpdated": "2026-11-09T08:51:42.342Z",
   "signals": {
-    "MSTRSTOCKUSDT:15m": {
-      "sentAt": "2026-11-08T20:47:25.177Z",
-      "symbol": "MSTRSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "entry": 128,
-      "stop": 128.32,
-      "tp1": 127.36000000000001,
-      "zoneLow": 127.84,
-      "zoneHigh": 128.16,
-      "signalCandleTime": 1794169800000
-    },
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-09T01:47:42.385Z",
       "symbol": "BRETTUSDT",

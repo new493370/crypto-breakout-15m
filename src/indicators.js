@@ -207,3 +207,18 @@ export function detectEngulfing(candles, direction, startIndex, maxBars, zoneLow
 
   return null;
 }
+
+export function calculateEMA(candles, period = 50) {
+  if (!Array.isArray(candles) || candles.length < period) return null;
+  
+  const closes = candles.map(c => cClose(c));
+  const multiplier = 2 / (period + 1);
+  
+  let ema = closes.slice(0, period).reduce((a, b) => a + b, 0) / period;
+  
+  for (let i = period; i < closes.length; i++) {
+    ema = (closes[i] - ema) * multiplier + ema;
+  }
+  
+  return ema;
+}

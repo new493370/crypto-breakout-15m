@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T15:42:39.707Z",
+  "lastUpdated": "2026-11-09T15:52:53.912Z",
   "signals": {
     "SHELLUSDT:15m": {
       "sentAt": "2026-11-09T04:07:18.923Z",
@@ -204,6 +204,18 @@
       "zoneLow": 1.5507,
       "zoneHigh": 1.5553,
       "signalCandleTime": 1794232800000
+    },
+    "ENJUSDT:15m": {
+      "sentAt": "2026-11-09T15:52:52.411Z",
+      "symbol": "ENJUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.023705,
+      "stop": 0.023629999999999998,
+      "tp1": 0.023855000000000005,
+      "zoneLow": 0.02368,
+      "zoneHigh": 0.02373,
+      "signalCandleTime": 1794238200000
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T13:12:36.947Z",
+  "lastUpdated": "2026-11-09T13:22:53.229Z",
   "signals": {
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-09T01:47:42.385Z",
@@ -204,6 +204,18 @@
       "zoneLow": 0.00176,
       "zoneHigh": 0.00179,
       "signalCandleTime": 1794226500000
+    },
+    "API3USDT:15m": {
+      "sentAt": "2026-11-09T13:22:51.727Z",
+      "symbol": "API3USDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.23845,
+      "stop": 0.2411,
+      "tp1": 0.23314999999999997,
+      "zoneLow": 0.2378,
+      "zoneHigh": 0.2391,
+      "signalCandleTime": 1794229200000
     }
   }
 }

@@ -28,13 +28,14 @@
       "signalCandleTime": 1794246300000,
       "rr1": 2,
       "sentAt": "2026-11-09T18:02:55.579Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T18:24:10.283Z",
+      "statusUpdatedAt": "2026-11-09T18:31:13.259Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.0037219999999999996
     },
     {
       "symbol": "BRETTUSDT",
@@ -48,13 +49,14 @@
       "signalCandleTime": 1794246300000,
       "rr1": 2,
       "sentAt": "2026-11-09T18:26:25.301Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T18:26:25.301Z",
+      "statusUpdatedAt": "2026-11-09T18:31:14.959Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.0037219999999999996
     }
   ],
   "allTime": {
@@ -62,12 +64,12 @@
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
-    "active": 2,
+    "stopped": 2,
+    "active": 0,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 100
   },
   "byDirection": {
     "bullish": {
@@ -75,7 +77,7 @@
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
+      "stopped": 2,
       "tp1Rate": 0
     },
     "bearish": {
@@ -87,5 +89,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-09T18:26:26.804Z"
+  "lastUpdated": "2026-11-09T18:33:26.323Z"
 }

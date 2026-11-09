@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T21:52:29.847Z",
+  "lastUpdated": "2026-11-09T22:02:24.181Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -963,6 +963,42 @@
       "score": null,
       "entry": 0.20950000000000002,
       "stop": 0.202
+    },
+    "DOODUSDT:15m": {
+      "sentAt": "2026-11-09T22:02:17.671Z",
+      "symbol": "DOODUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0016475,
+      "stop": 0.001679
+    },
+    "ZROUSDT:15m": {
+      "sentAt": "2026-11-09T22:02:19.334Z",
+      "symbol": "ZROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.50295,
+      "stop": 1.547
+    },
+    "MMTUSDT:15m": {
+      "sentAt": "2026-11-09T22:02:20.978Z",
+      "symbol": "MMTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.12040000000000001,
+      "stop": 0.1229
+    },
+    "QUSDT:15m": {
+      "sentAt": "2026-11-09T22:02:22.679Z",
+      "symbol": "QUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.02515,
+      "stop": 0.026260000000000002
     }
   }
 }

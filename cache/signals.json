@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T21:12:21.334Z",
+  "lastUpdated": "2026-11-09T21:17:55.730Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -801,6 +801,42 @@
       "score": null,
       "entry": 141.89499999999998,
       "stop": 135.1
+    },
+    "FILECOINUSDT:15m": {
+      "sentAt": "2026-11-09T21:17:49.120Z",
+      "symbol": "FILECOINUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.7754000000000001,
+      "stop": 0.7772
+    },
+    "JASMYUSDT:15m": {
+      "sentAt": "2026-11-09T21:17:50.806Z",
+      "symbol": "JASMYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.003751,
+      "stop": 0.00383
+    },
+    "ALUMINUMUSDT:15m": {
+      "sentAt": "2026-11-09T21:17:52.512Z",
+      "symbol": "ALUMINUMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 3058.48,
+      "stop": 3081.3300000000004
+    },
+    "ZINCUSDT:15m": {
+      "sentAt": "2026-11-09T21:17:54.228Z",
+      "symbol": "ZINCUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 3711.05,
+      "stop": 3776.8099999999995
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T20:15:07.519Z",
+  "lastUpdated": "2026-11-09T20:19:54.795Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -666,6 +666,42 @@
       "score": null,
       "entry": 41.67,
       "stop": 41.129999999999995
+    },
+    "NVIDIAUSDT:15m": {
+      "sentAt": "2026-11-09T20:19:48.310Z",
+      "symbol": "NVIDIAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 177.29000000000002,
+      "stop": 175.71
+    },
+    "EDGEUSDT:15m": {
+      "sentAt": "2026-11-09T20:19:49.976Z",
+      "symbol": "EDGEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.4011,
+      "stop": 0.38999999999999996
+    },
+    "NBISSTOCKUSDT:15m": {
+      "sentAt": "2026-11-09T20:19:51.621Z",
+      "symbol": "NBISSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 140.355,
+      "stop": 137.53
+    },
+    "NVDAUSDT:15m": {
+      "sentAt": "2026-11-09T20:19:53.292Z",
+      "symbol": "NVDAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 177.285,
+      "stop": 175.74
     }
   }
 }

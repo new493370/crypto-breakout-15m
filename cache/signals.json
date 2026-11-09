@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T22:47:12.136Z",
+  "lastUpdated": "2026-11-09T23:02:18.263Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1071,6 +1071,78 @@
       "score": null,
       "entry": 0.104995,
       "stop": 0.10715999999999999
+    },
+    "SATSUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:04.613Z",
+      "symbol": "SATSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 8.522e-9,
+      "stop": 8.454e-9
+    },
+    "PLUMEUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:06.379Z",
+      "symbol": "PLUMEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0129385,
+      "stop": 0.012789
+    },
+    "SUIUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:08.103Z",
+      "symbol": "SUIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.8454999999999999,
+      "stop": 0.8426
+    },
+    "UBUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:09.826Z",
+      "symbol": "UBUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.10799500000000001,
+      "stop": 0.10629
+    },
+    "TRXUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:11.584Z",
+      "symbol": "TRXUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.31645,
+      "stop": 0.31623999999999997
+    },
+    "AVAXUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:13.322Z",
+      "symbol": "AVAXUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 8.645,
+      "stop": 8.439
+    },
+    "CELOUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:15.043Z",
+      "symbol": "CELOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.06541,
+      "stop": 0.06516
+    },
+    "ORDIUSDT:15m": {
+      "sentAt": "2026-11-09T23:02:16.761Z",
+      "symbol": "ORDIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 3.197,
+      "stop": 3.1750000000000003
     }
   }
 }

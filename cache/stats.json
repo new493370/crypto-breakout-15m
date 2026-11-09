@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-09T05:07:16.275Z",
+  "lastUpdated": "2026-11-09T05:22:55.210Z",
   "allTime": {
     "total": 11,
-    "tp1Hit": 3,
+    "tp1Hit": 4,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 5,
-    "tp1Rate": 50,
+    "active": 4,
+    "tp1Rate": 57.1,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 50
+    "stopRate": 42.9
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 5,
-      "tp1Hit": 1,
+      "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 1,
-      "tp1Rate": 50
+      "tp1Rate": 66.7
     }
   },
   "recentSignals": [
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:00:42.544Z",
+      "statusUpdatedAt": "2026-11-09T05:16:18.616Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:00:42.544Z",
+      "statusUpdatedAt": "2026-11-09T05:16:18.616Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -200,7 +200,7 @@
       "sentAt": "2026-11-09T01:47:44.047Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:00:42.544Z",
+      "statusUpdatedAt": "2026-11-09T05:16:18.616Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -241,7 +241,7 @@
       "sentAt": "2026-11-09T04:07:18.923Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:00:42.544Z",
+      "statusUpdatedAt": "2026-11-09T05:16:18.616Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -259,13 +259,14 @@
       "signalCandleTime": 1794195900000,
       "rr1": 2,
       "sentAt": "2026-11-09T04:07:20.578Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:00:42.544Z",
+      "statusUpdatedAt": "2026-11-09T05:16:22.179Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 1.0461500000000001
     }
   ],
   "processedSignals": {

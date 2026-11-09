@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T21:42:30.867Z",
+  "lastUpdated": "2026-11-09T21:49:38.357Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -864,6 +864,105 @@
       "score": null,
       "entry": 0.03919,
       "stop": 0.03884
+    },
+    "APRUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:19.453Z",
+      "symbol": "APRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.034820000000000004,
+      "stop": 0.03415
+    },
+    "TRIAUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:21.167Z",
+      "symbol": "TRIAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0024945,
+      "stop": 0.0024469999999999995
+    },
+    "WUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:22.886Z",
+      "symbol": "WUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0108895,
+      "stop": 0.010828
+    },
+    "CPUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:24.668Z",
+      "symbol": "CPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0070815,
+      "stop": 0.007155
+    },
+    "CTUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:26.417Z",
+      "symbol": "CTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.117985,
+      "stop": 0.11531000000000001
+    },
+    "GPSUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:28.143Z",
+      "symbol": "GPSUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.008039000000000001,
+      "stop": 0.008128000000000002
+    },
+    "LAUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:29.954Z",
+      "symbol": "LAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.053059999999999996,
+      "stop": 0.05365999999999999
+    },
+    "RAVEUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:31.700Z",
+      "symbol": "RAVEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1318,
+      "stop": 0.12819999999999998
+    },
+    "SHELLUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:33.409Z",
+      "symbol": "SHELLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.020105,
+      "stop": 0.01997
+    },
+    "GOOGLSTOCKUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:35.145Z",
+      "symbol": "GOOGLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 290.145,
+      "stop": 288.66
+    },
+    "ETHWUSDT:15m": {
+      "sentAt": "2026-11-09T21:49:36.856Z",
+      "symbol": "ETHWUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.20950000000000002,
+      "stop": 0.202
     }
   }
 }

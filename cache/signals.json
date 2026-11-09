@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T22:02:24.181Z",
+  "lastUpdated": "2026-11-09T22:17:13.758Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -999,6 +999,33 @@
       "score": null,
       "entry": 0.02515,
       "stop": 0.026260000000000002
+    },
+    "DNAUSDT:15m": {
+      "sentAt": "2026-11-09T22:17:08.840Z",
+      "symbol": "DNAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.16515000000000002,
+      "stop": 0.1689
+    },
+    "RAYUSDT:15m": {
+      "sentAt": "2026-11-09T22:17:10.546Z",
+      "symbol": "RAYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.7729,
+      "stop": 1.8183
+    },
+    "CLAUDIAUSDT:15m": {
+      "sentAt": "2026-11-09T22:17:12.256Z",
+      "symbol": "CLAUDIAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0059025,
+      "stop": 0.005437
     }
   }
 }

@@ -1,30 +1,6 @@
 {
-  "lastUpdated": "2026-11-09T04:51:44.254Z",
+  "lastUpdated": "2026-11-09T05:07:16.274Z",
   "signals": {
-    "RVNUSDT:15m": {
-      "sentAt": "2026-11-08T17:02:32.870Z",
-      "symbol": "RVNUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "entry": 0.001251,
-      "stop": 0.0012462,
-      "tp1": 0.001267,
-      "zoneLow": 0.001247,
-      "zoneHigh": 0.001255,
-      "signalCandleTime": 1794150900000
-    },
-    "THETAUSDT:15m": {
-      "sentAt": "2026-11-08T17:02:34.552Z",
-      "symbol": "THETAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "entry": 0.14045000000000002,
-      "stop": 0.14003,
-      "tp1": 0.14185000000000003,
-      "zoneLow": 0.1401,
-      "zoneHigh": 0.1408,
-      "signalCandleTime": 1794150900000
-    },
     "CAPUSDT:15m": {
       "sentAt": "2026-11-08T18:17:38.611Z",
       "symbol": "CAPUSDT",

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-09T16:22:51.485Z",
+  "lastUpdated": "2026-11-09T16:33:21.905Z",
   "allTime": {
     "total": 5,
-    "tp1Hit": 2,
+    "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 2,
-    "active": 1,
-    "tp1Rate": 50,
+    "active": 0,
+    "tp1Rate": 60,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 50
+    "stopRate": 40
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 4,
-      "tp1Hit": 1,
+      "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 2,
-      "tp1Rate": 33.3
+      "tp1Rate": 50
     }
   },
   "recentSignals": [
@@ -116,13 +116,14 @@
       "signalCandleTime": 1794232800000,
       "rr1": 2,
       "sentAt": "2026-11-09T14:52:54.867Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T16:20:41.670Z",
+      "statusUpdatedAt": "2026-11-09T16:31:10.241Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 1.4783999999999997
     },
     {
       "symbol": "ENJUSDT",

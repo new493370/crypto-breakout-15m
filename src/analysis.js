@@ -11,15 +11,15 @@ import {
 
 function isStrongMomentum(candles, direction) {
   if (!Array.isArray(candles) || candles.length < CONFIG.MOMENTUM_CANDLE_COUNT) return false;
-  
+
   const recent = candles.slice(-CONFIG.MOMENTUM_CANDLE_COUNT);
-  
+
   const strongBullish = recent.every(c => c.close > c.open && (c.close - c.open) > (c.high - c.low) * 0.5);
   const strongBearish = recent.every(c => c.close < c.open && (c.open - c.close) > (c.high - c.low) * 0.5);
 
   if (direction === "bullish" && strongBearish) return true;
   if (direction === "bearish" && strongBullish) return true;
-  
+
   return false;
 }
 
@@ -151,24 +151,39 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
 
     const isBullish = breakout.direction === "bullish";
 
-    const stopLoss = isBullish
-      ? zoneLow - zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER
-      : zoneHigh + zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER;
+    let structuralStop;
+    if (isBullish) {
+      const recentLow = latest.lows[0];
+      structuralStop = recentLow.price - (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
+    } else {
+      const recentHigh = latest.highs[0];
+      structuralStop = recentHigh.price + (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
+    }
 
-    const takeProfit = isBullish
-      ? entry + CONFIG.RISK_REWARD_RATIO * Math.abs(entry - stopLoss)
-      : entry - CONFIG.RISK_REWARD_RATIO * Math.abs(entry - stopLoss);
+    let stopLoss = structuralStop;
+
+    if (isBullish && stopLoss >= entry) {
+      stopLoss = zoneLow - (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
+    }
+    if (!isBullish && stopLoss <= entry) {
+      stopLoss = zoneHigh + (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
+    }
 
     const risk = Math.abs(entry - stopLoss);
+
+    if (!Number.isFinite(risk) || risk <= 0) {
+      result.reasons.push("محاسبه ریسک معتبر نیست");
+      return result;
+    }
+
+    const takeProfit = isBullish
+      ? entry + (CONFIG.RISK_REWARD_RATIO * risk)
+      : entry - (CONFIG.RISK_REWARD_RATIO * risk);
+
     const reward = Math.abs(takeProfit - entry);
 
-    if (
-      !Number.isFinite(risk) ||
-      !Number.isFinite(reward) ||
-      risk <= 0 ||
-      reward <= 0
-    ) {
-      result.reasons.push("محاسبه ریسک یا تارگت معتبر نیست");
+    if (!Number.isFinite(reward) || reward <= 0) {
+      result.reasons.push("محاسبه تارگت معتبر نیست");
       return result;
     }
 

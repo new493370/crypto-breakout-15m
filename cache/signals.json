@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T05:51:53.776Z",
+  "lastUpdated": "2026-11-09T06:07:22.205Z",
   "signals": {
     "CAPUSDT:15m": {
       "sentAt": "2026-11-08T18:17:38.611Z",
@@ -84,6 +84,18 @@
       "zoneLow": 1.0504,
       "zoneHigh": 1.0561,
       "signalCandleTime": 1794195900000
+    },
+    "VVVUSDT:15m": {
+      "sentAt": "2026-11-09T06:07:20.704Z",
+      "symbol": "VVVUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 20.6125,
+      "stop": 20.747,
+      "tp1": 20.343500000000002,
+      "zoneLow": 20.561,
+      "zoneHigh": 20.664,
+      "signalCandleTime": 1794203100000
     }
   }
 }

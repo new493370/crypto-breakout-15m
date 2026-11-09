@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-09T05:51:53.777Z",
+  "lastUpdated": "2026-11-09T06:07:22.206Z",
   "allTime": {
-    "total": 11,
+    "total": 12,
     "tp1Hit": 4,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 4,
+    "active": 5,
     "tp1Rate": 57.1,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 50
     },
     "bearish": {
-      "total": 5,
+      "total": 6,
       "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:45:53.616Z",
+      "statusUpdatedAt": "2026-11-09T06:01:18.185Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:45:53.616Z",
+      "statusUpdatedAt": "2026-11-09T06:01:18.186Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -200,7 +200,7 @@
       "sentAt": "2026-11-09T01:47:44.047Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:45:53.616Z",
+      "statusUpdatedAt": "2026-11-09T06:01:18.186Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -241,7 +241,7 @@
       "sentAt": "2026-11-09T04:07:18.923Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T05:45:53.616Z",
+      "statusUpdatedAt": "2026-11-09T06:01:18.186Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -267,6 +267,26 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 1.0461500000000001
+    },
+    {
+      "symbol": "VVVUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 20.6125,
+      "stop": 20.747,
+      "tp1": 20.343500000000002,
+      "zoneLow": 20.561,
+      "zoneHigh": 20.664,
+      "signalCandleTime": 1794203100000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T06:07:20.703Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T06:07:20.703Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -346,6 +366,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-09T04:07:20.578Z"
+    },
+    "VVVUSDT:15m:2026-11-09T06:07:20.703Z": {
+      "symbol": "VVVUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-09T06:07:20.703Z"
     }
   }
 }

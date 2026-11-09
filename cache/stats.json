@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-09T08:51:42.344Z",
+  "lastUpdated": "2026-11-09T09:06:42.311Z",
   "allTime": {
-    "total": 12,
+    "total": 13,
     "tp1Hit": 5,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 4,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 55.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 6,
+      "total": 7,
       "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T08:45:42.735Z",
+      "statusUpdatedAt": "2026-11-09T09:00:42.950Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T08:45:42.735Z",
+      "statusUpdatedAt": "2026-11-09T09:00:42.951Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -242,7 +242,7 @@
       "sentAt": "2026-11-09T04:07:18.923Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T08:45:42.735Z",
+      "statusUpdatedAt": "2026-11-09T09:00:42.951Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -289,6 +289,26 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 20.343500000000002
+    },
+    {
+      "symbol": "RAYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 1.6888999999999998,
+      "stop": 1.6709999999999998,
+      "tp1": 1.7247,
+      "zoneLow": 1.6804,
+      "zoneHigh": 1.6974,
+      "signalCandleTime": 1794213900000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T09:06:40.807Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T09:06:40.807Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -375,6 +395,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-09T06:07:20.703Z"
+    },
+    "RAYUSDT:15m:2026-11-09T09:06:40.807Z": {
+      "symbol": "RAYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-09T09:06:40.807Z"
     }
   }
 }

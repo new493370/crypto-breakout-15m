@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T08:51:42.342Z",
+  "lastUpdated": "2026-11-09T09:06:42.309Z",
   "signals": {
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-09T01:47:42.385Z",
@@ -72,6 +72,18 @@
       "zoneLow": 20.561,
       "zoneHigh": 20.664,
       "signalCandleTime": 1794203100000
+    },
+    "RAYUSDT:15m": {
+      "sentAt": "2026-11-09T09:06:40.807Z",
+      "symbol": "RAYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 1.6888999999999998,
+      "stop": 1.6709999999999998,
+      "tp1": 1.7247,
+      "zoneLow": 1.6804,
+      "zoneHigh": 1.6974,
+      "signalCandleTime": 1794213900000
     }
   }
 }

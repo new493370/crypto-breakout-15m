@@ -1,23 +1,14 @@
 {
-  "lastUpdated": "2026-11-09T19:03:11.632Z",
+  "lastUpdated": "2026-11-09T19:13:00.832Z",
   "signals": {
     "USELESSUSDT:15m": {
-      "sentAt": "2026-11-09T18:52:59.756Z",
+      "sentAt": "2026-11-09T19:12:59.331Z",
       "symbol": "USELESSUSDT",
       "timeframe": "15m",
       "direction": "bullish",
       "score": null,
       "entry": 0.135835,
       "stop": 0.13141
-    },
-    "POLUSDT:15m": {
-      "sentAt": "2026-11-09T18:53:01.523Z",
-      "symbol": "POLUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.089615,
-      "stop": 0.09009
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-09T09:06:42.311Z",
+  "lastUpdated": "2026-11-09T09:22:35.818Z",
   "allTime": {
     "total": 13,
-    "tp1Hit": 5,
+    "tp1Hit": 6,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 4,
-    "active": 4,
-    "tp1Rate": 55.6,
+    "active": 3,
+    "tp1Rate": 60,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 44.4
+    "stopRate": 40
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 7,
-      "tp1Hit": 2,
+      "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 3,
-      "tp1Rate": 40
+      "tp1Rate": 50
     },
     "bearish": {
       "total": 6,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T09:00:42.950Z",
+      "statusUpdatedAt": "2026-11-09T09:15:43.517Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T09:00:42.951Z",
+      "statusUpdatedAt": "2026-11-09T09:15:43.517Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -242,7 +242,7 @@
       "sentAt": "2026-11-09T04:07:18.923Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T09:00:42.951Z",
+      "statusUpdatedAt": "2026-11-09T09:15:43.517Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -302,13 +302,14 @@
       "signalCandleTime": 1794213900000,
       "rr1": 2,
       "sentAt": "2026-11-09T09:06:40.807Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T09:06:40.807Z",
+      "statusUpdatedAt": "2026-11-09T09:15:47.023Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 1.7247
     }
   ],
   "processedSignals": {

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-09T01:47:45.550Z",
+  "lastUpdated": "2026-11-09T02:06:02.538Z",
   "allTime": {
-    "total": 8,
+    "total": 9,
     "tp1Hit": 1,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 4,
+    "active": 5,
     "tp1Rate": 25,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 5,
+      "total": 6,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T01:45:41.359Z",
+      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T01:45:41.359Z",
+      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -179,7 +179,7 @@
       "sentAt": "2026-11-09T01:47:42.385Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T01:47:42.385Z",
+      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -199,7 +199,27 @@
       "sentAt": "2026-11-09T01:47:44.047Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T01:47:44.047Z",
+      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ALICEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.11624999999999999,
+      "stop": 0.11535000000000001,
+      "tp1": 0.11804999999999996,
+      "zoneLow": 0.1158,
+      "zoneHigh": 0.1167,
+      "signalCandleTime": 1794187800000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T02:06:01.034Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T02:06:01.034Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -262,6 +282,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-09T01:47:44.047Z"
+    },
+    "ALICEUSDT:15m:2026-11-09T02:06:01.034Z": {
+      "symbol": "ALICEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-09T02:06:01.034Z"
     }
   }
 }

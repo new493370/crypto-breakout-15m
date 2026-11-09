@@ -13,6 +13,20 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-09T18:26:25.301Z"
+    },
+    "USELESSUSDT:15m:2026-11-09T18:52:59.756Z": {
+      "symbol": "USELESSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-09T18:52:59.756Z"
+    },
+    "POLUSDT:15m:2026-11-09T18:53:01.523Z": {
+      "symbol": "POLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-09T18:53:01.523Z"
     }
   },
   "recentSignals": [
@@ -57,15 +71,55 @@
       "_tp1Notified": false,
       "_stoppedNotified": true,
       "exitPrice": 0.0037219999999999996
+    },
+    {
+      "symbol": "USELESSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.135835,
+      "stop": 0.13141,
+      "tp1": 0.14468500000000004,
+      "zoneLow": 0.13492,
+      "zoneHigh": 0.13675,
+      "signalCandleTime": 1794249000000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T18:52:59.756Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T18:52:59.756Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "POLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.089615,
+      "stop": 0.09009,
+      "tp1": 0.088665,
+      "zoneLow": 0.0896,
+      "zoneHigh": 0.08963,
+      "signalCandleTime": 1794247200000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T18:53:01.523Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T18:53:01.523Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "allTime": {
-    "total": 2,
+    "total": 4,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 2,
-    "active": 0,
+    "active": 2,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -73,7 +127,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 2,
+      "total": 3,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -81,7 +135,7 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -89,5 +143,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-09T18:42:47.992Z"
+  "lastUpdated": "2026-11-09T18:53:03.025Z"
 }

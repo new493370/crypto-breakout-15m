@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-09T03:51:32.937Z",
+  "lastUpdated": "2026-11-09T04:07:22.081Z",
   "allTime": {
-    "total": 9,
+    "total": 11,
     "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 3,
+    "active": 5,
     "tp1Rate": 50,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 50
     },
     "bearish": {
-      "total": 3,
+      "total": 5,
       "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T03:45:40.560Z",
+      "statusUpdatedAt": "2026-11-09T04:00:40.883Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T03:45:40.560Z",
+      "statusUpdatedAt": "2026-11-09T04:00:40.883Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -200,7 +200,7 @@
       "sentAt": "2026-11-09T01:47:44.047Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T03:45:40.560Z",
+      "statusUpdatedAt": "2026-11-09T04:00:40.883Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -226,6 +226,46 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.11804999999999996
+    },
+    {
+      "symbol": "SHELLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.019735000000000003,
+      "stop": 0.02012,
+      "tp1": 0.01896500000000001,
+      "zoneLow": 0.01964,
+      "zoneHigh": 0.01983,
+      "signalCandleTime": 1794195900000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T04:07:18.923Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T04:07:18.923Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "GASUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 1.05325,
+      "stop": 1.0568,
+      "tp1": 1.0461500000000001,
+      "zoneLow": 1.0504,
+      "zoneHigh": 1.0561,
+      "signalCandleTime": 1794195900000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T04:07:20.578Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T04:07:20.578Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -291,6 +331,20 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-09T02:06:01.034Z"
+    },
+    "SHELLUSDT:15m:2026-11-09T04:07:18.923Z": {
+      "symbol": "SHELLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-09T04:07:18.923Z"
+    },
+    "GASUSDT:15m:2026-11-09T04:07:20.578Z": {
+      "symbol": "GASUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-09T04:07:20.578Z"
     }
   }
 }

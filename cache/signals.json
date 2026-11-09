@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T03:51:32.936Z",
+  "lastUpdated": "2026-11-09T04:07:22.080Z",
   "signals": {
     "RLUSDUSDT:15m": {
       "sentAt": "2026-11-08T16:45:53.260Z",
@@ -108,6 +108,30 @@
       "zoneLow": 0.1158,
       "zoneHigh": 0.1167,
       "signalCandleTime": 1794187800000
+    },
+    "SHELLUSDT:15m": {
+      "sentAt": "2026-11-09T04:07:18.923Z",
+      "symbol": "SHELLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.019735000000000003,
+      "stop": 0.02012,
+      "tp1": 0.01896500000000001,
+      "zoneLow": 0.01964,
+      "zoneHigh": 0.01983,
+      "signalCandleTime": 1794195900000
+    },
+    "GASUSDT:15m": {
+      "sentAt": "2026-11-09T04:07:20.578Z",
+      "symbol": "GASUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 1.05325,
+      "stop": 1.0568,
+      "tp1": 1.0461500000000001,
+      "zoneLow": 1.0504,
+      "zoneHigh": 1.0561,
+      "signalCandleTime": 1794195900000
     }
   }
 }

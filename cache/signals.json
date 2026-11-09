@@ -1,18 +1,6 @@
 {
-  "lastUpdated": "2026-11-09T14:02:39.289Z",
+  "lastUpdated": "2026-11-09T14:12:52.570Z",
   "signals": {
-    "ALICEUSDT:15m": {
-      "sentAt": "2026-11-09T02:06:01.035Z",
-      "symbol": "ALICEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "entry": 0.11624999999999999,
-      "stop": 0.11535000000000001,
-      "tp1": 0.11804999999999996,
-      "zoneLow": 0.1158,
-      "zoneHigh": 0.1167,
-      "signalCandleTime": 1794187800000
-    },
     "SHELLUSDT:15m": {
       "sentAt": "2026-11-09T04:07:18.923Z",
       "symbol": "SHELLUSDT",

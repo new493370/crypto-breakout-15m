@@ -5,7 +5,7 @@ const CACHE_DIR = path.join(process.cwd(), "cache");
 const CACHE_FILE = path.join(CACHE_DIR, "signals.json");
 const STATS_FILE = path.join(CACHE_DIR, "stats.json");
 
-const MAX_AGE_MS = 15 * 60 * 1000;
+const MAX_AGE_MS = 6 * 60 * 60 * 1000;
 
 async function ensureCacheDir() {
   await fs.mkdir(CACHE_DIR, { recursive: true });

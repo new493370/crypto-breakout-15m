@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T14:42:48.369Z",
+  "lastUpdated": "2026-11-09T14:52:56.369Z",
   "signals": {
     "SHELLUSDT:15m": {
       "sentAt": "2026-11-09T04:07:18.923Z",
@@ -192,6 +192,18 @@
       "zoneLow": 0.12793,
       "zoneHigh": 0.12806,
       "signalCandleTime": 1794231000000
+    },
+    "ZROUSDT:15m": {
+      "sentAt": "2026-11-09T14:52:54.867Z",
+      "symbol": "ZROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 1.553,
+      "stop": 1.5903,
+      "tp1": 1.4783999999999997,
+      "zoneLow": 1.5507,
+      "zoneHigh": 1.5553,
+      "signalCandleTime": 1794232800000
     }
   }
 }

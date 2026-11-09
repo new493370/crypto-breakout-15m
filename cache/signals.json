@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T12:22:44.640Z",
+  "lastUpdated": "2026-11-09T12:32:41.890Z",
   "signals": {
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-09T01:47:42.385Z",
@@ -192,6 +192,18 @@
       "zoneLow": 1195.2,
       "zoneHigh": 1204.21,
       "signalCandleTime": 1794222900000
+    },
+    "RSRUSDT:15m": {
+      "sentAt": "2026-11-09T12:32:40.389Z",
+      "symbol": "RSRUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.001775,
+      "stop": 0.0017959999999999999,
+      "tp1": 0.0017330000000000006,
+      "zoneLow": 0.00176,
+      "zoneHigh": 0.00179,
+      "signalCandleTime": 1794226500000
     }
   }
 }

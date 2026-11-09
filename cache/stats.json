@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-09T12:22:44.641Z",
+  "lastUpdated": "2026-11-09T12:32:41.892Z",
   "allTime": {
-    "total": 0,
+    "total": 1,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -40,6 +40,35 @@
       "tp1Rate": 0
     }
   },
-  "recentSignals": [],
-  "processedSignals": {}
+  "recentSignals": [
+    {
+      "symbol": "RSRUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.001775,
+      "stop": 0.0017959999999999999,
+      "tp1": 0.0017330000000000006,
+      "zoneLow": 0.00176,
+      "zoneHigh": 0.00179,
+      "signalCandleTime": 1794226500000,
+      "rr1": 2,
+      "sentAt": "2026-11-09T12:32:40.389Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-09T12:32:40.389Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "processedSignals": {
+    "RSRUSDT:15m:2026-11-09T12:32:40.389Z": {
+      "symbol": "RSRUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-09T12:32:40.389Z"
+    }
+  }
 }

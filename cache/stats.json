@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "2026-11-09T12:42:34.222Z",
+  "lastUpdated": "2026-11-09T12:52:50.044Z",
   "allTime": {
     "total": 1,
-    "tp1Hit": 0,
+    "tp1Hit": 1,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 1,
-    "tp1Rate": 0,
+    "active": 0,
+    "tp1Rate": 100,
     "tp2Rate": 0,
     "tp3Rate": 0,
     "stopRate": 0
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 1,
-      "tp1Hit": 0,
+      "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 0,
-      "tp1Rate": 0
+      "tp1Rate": 100
     }
   },
   "recentSignals": [
@@ -53,13 +53,14 @@
       "signalCandleTime": 1794226500000,
       "rr1": 2,
       "sentAt": "2026-11-09T12:32:40.389Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T12:40:42.761Z",
+      "statusUpdatedAt": "2026-11-09T12:50:45.049Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.0017330000000000006
     }
   ],
   "processedSignals": {

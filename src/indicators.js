@@ -167,7 +167,7 @@ export function detectEngulfing(candles, direction, startIndex, maxBars, zoneLow
     if (!touchedZone) continue;
 
     const candleBodyRatio = cBody(candle) / candleRange;
-    if (candleBodyRatio < 0.5) continue;
+    if (candleBodyRatio < 0.4) continue;
 
     const newBodyTop = Math.max(cOpen(candle), cClose(candle));
     const newBodyBottom = Math.min(cOpen(candle), cClose(candle));

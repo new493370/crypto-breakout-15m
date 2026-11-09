@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T22:32:12.495Z",
+  "lastUpdated": "2026-11-09T22:47:12.136Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1062,6 +1062,15 @@
       "score": null,
       "entry": 0.035305,
       "stop": 0.036270000000000004
+    },
+    "AINUSDT:15m": {
+      "sentAt": "2026-11-09T22:47:10.635Z",
+      "symbol": "AINUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.104995,
+      "stop": 0.10715999999999999
     }
   }
 }

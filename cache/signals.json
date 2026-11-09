@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T19:23:10.455Z",
+  "lastUpdated": "2026-11-09T19:32:58.367Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -9,6 +9,15 @@
       "score": null,
       "entry": 0.135835,
       "stop": 0.13141
+    },
+    "RSRUSDT:15m": {
+      "sentAt": "2026-11-09T19:32:56.866Z",
+      "symbol": "RSRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0017360000000000001,
+      "stop": 0.0016769999999999999
     }
   }
 }

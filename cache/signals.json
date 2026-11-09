@@ -1,30 +1,6 @@
 {
-  "lastUpdated": "2026-11-09T13:42:45.533Z",
+  "lastUpdated": "2026-11-09T13:52:54.276Z",
   "signals": {
-    "BRETTUSDT:15m": {
-      "sentAt": "2026-11-09T01:47:42.385Z",
-      "symbol": "BRETTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "entry": 0.0036315,
-      "stop": 0.0036084999999999997,
-      "tp1": 0.003677500000000001,
-      "zoneLow": 0.00362,
-      "zoneHigh": 0.003643,
-      "signalCandleTime": 1794187800000
-    },
-    "AEVOUSDT:15m": {
-      "sentAt": "2026-11-09T01:47:44.047Z",
-      "symbol": "AEVOUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "entry": 0.018255,
-      "stop": 0.018125000000000002,
-      "tp1": 0.018514999999999997,
-      "zoneLow": 0.01819,
-      "zoneHigh": 0.01832,
-      "signalCandleTime": 1794187800000
-    },
     "ALICEUSDT:15m": {
       "sentAt": "2026-11-09T02:06:01.035Z",
       "symbol": "ALICEUSDT",
@@ -216,6 +192,18 @@
       "zoneLow": 0.2378,
       "zoneHigh": 0.2391,
       "signalCandleTime": 1794229200000
+    },
+    "BATUSDT:15m": {
+      "sentAt": "2026-11-09T13:52:52.776Z",
+      "symbol": "BATUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.127995,
+      "stop": 0.12819000000000003,
+      "tp1": 0.12760499999999994,
+      "zoneLow": 0.12793,
+      "zoneHigh": 0.12806,
+      "signalCandleTime": 1794231000000
     }
   }
 }

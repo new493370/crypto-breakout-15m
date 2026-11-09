@@ -4,7 +4,7 @@ export const CONFIG = {
   BINANCE_SPOT_URL: "https://data-api.binance.vision",
   MEXC_BASE_URL: "https://contract.mexc.com",
 
-  TIMEFRAME: "5m",
+  TIMEFRAME: "15m",
   SWING_LEFT: 2,
   SWING_RIGHT: 2,
   MIN_SWING_DISTANCE: 5,
@@ -49,22 +49,22 @@ export const CONFIG = {
   ],
 
   TIMEFRAMES: {
-    "5m": "5 دقیقه"
+    "15m": "15 دقیقه"
   },
 
   OKX_INTERVAL_MAP: {
-    "5m": "5m"
+    "15m": "15m"
   },
 
   BINANCE_INTERVAL_MAP: {
-    "5m": "5m"
+    "15m": "15m"
   },
 
   MEXC_INTERVAL_MAP: {
-    "5m": "Min5"
+    "15m": "Min15"
   }
 };
 
 export const INTERVAL_MS = {
-  "5m": 5 * 60 * 1000
+  "15m": 15 * 60 * 1000
 };

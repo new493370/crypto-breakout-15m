@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-09T02:06:02.538Z",
+  "lastUpdated": "2026-11-09T02:21:50.337Z",
   "allTime": {
     "total": 9,
-    "tp1Hit": 1,
+    "tp1Hit": 2,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 5,
-    "tp1Rate": 25,
+    "active": 4,
+    "tp1Rate": 40,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 75
+    "stopRate": 60
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 6,
-      "tp1Hit": 0,
+      "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 2,
-      "tp1Rate": 0
+      "tp1Rate": 33.3
     },
     "bearish": {
       "total": 3,
@@ -55,7 +55,7 @@
       "sentAt": "2026-11-08T16:45:53.259Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
+      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -75,7 +75,7 @@
       "sentAt": "2026-11-08T16:45:54.904Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
+      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -179,7 +179,7 @@
       "sentAt": "2026-11-09T01:47:42.385Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
+      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -199,7 +199,7 @@
       "sentAt": "2026-11-09T01:47:44.047Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:00:43.934Z",
+      "statusUpdatedAt": "2026-11-09T02:15:42.765Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -217,13 +217,14 @@
       "signalCandleTime": 1794187800000,
       "rr1": 2,
       "sentAt": "2026-11-09T02:06:01.034Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-09T02:06:01.034Z",
+      "statusUpdatedAt": "2026-11-09T02:15:46.437Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.11804999999999996
     }
   ],
   "processedSignals": {

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T20:23:00.029Z",
+  "lastUpdated": "2026-11-09T20:32:40.547Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -702,6 +702,60 @@
       "score": null,
       "entry": 177.285,
       "stop": 175.74
+    },
+    "WLFIUSDT:15m": {
+      "sentAt": "2026-11-09T20:32:30.664Z",
+      "symbol": "WLFIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.047905,
+      "stop": 0.04691
+    },
+    "HBARUSDT:15m": {
+      "sentAt": "2026-11-09T20:32:32.335Z",
+      "symbol": "HBARUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.06709000000000001,
+      "stop": 0.0663
+    },
+    "STABLEUSDT:15m": {
+      "sentAt": "2026-11-09T20:32:34.011Z",
+      "symbol": "STABLEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.02683,
+      "stop": 0.026130000000000004
+    },
+    "DGAIUSDT:15m": {
+      "sentAt": "2026-11-09T20:32:35.700Z",
+      "symbol": "DGAIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.7685500000000001,
+      "stop": 0.7636
+    },
+    "IMXUSDT:15m": {
+      "sentAt": "2026-11-09T20:32:37.369Z",
+      "symbol": "IMXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.12199499999999999,
+      "stop": 0.12326999999999999
+    },
+    "NESUSDT:15m": {
+      "sentAt": "2026-11-09T20:32:39.045Z",
+      "symbol": "NESUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.16205,
+      "stop": 0.158
     }
   }
 }

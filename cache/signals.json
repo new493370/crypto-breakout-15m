@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T23:17:36.493Z",
+  "lastUpdated": "2026-11-09T23:32:30.385Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1188,6 +1188,78 @@
       "score": null,
       "entry": 0.1252,
       "stop": 0.12613000000000002
+    },
+    "BILLUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:17.086Z",
+      "symbol": "BILLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0042935000000000004,
+      "stop": 0.004376
+    },
+    "SILVERUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:18.786Z",
+      "symbol": "SILVERUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 53.595,
+      "stop": 52.31999999999999
+    },
+    "MONUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:20.455Z",
+      "symbol": "MONUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.016645,
+      "stop": 0.01728
+    },
+    "PIEVERSEUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:22.131Z",
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 2.036,
+      "stop": 2.0237
+    },
+    "UAIUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:23.801Z",
+      "symbol": "UAIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.03975,
+      "stop": 0.047299999999999995
+    },
+    "AIOTUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:25.530Z",
+      "symbol": "AIOTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.162715,
+      "stop": 0.16834
+    },
+    "XAGUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:27.209Z",
+      "symbol": "XAGUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 53.585,
+      "stop": 52.33
+    },
+    "ZECUSDT:15m": {
+      "sentAt": "2026-11-09T23:32:28.883Z",
+      "symbol": "ZECUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1168.545,
+      "stop": 1190.94
     }
   }
 }

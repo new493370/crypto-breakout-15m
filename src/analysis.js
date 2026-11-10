@@ -1,3 +1,4 @@
+
 import { CONFIG } from "./config.js";
 import { getMarketSnapshot } from "./exchanges.js";
 import {
@@ -49,25 +50,7 @@ function isStrongMomentum(candles, direction) {
   return false;
 }
 
-function isBullishEngulfing(previous, current) {
-  return (
-    previous.close < previous.open &&
-    current.close > current.open &&
-    current.open <= previous.close &&
-    current.close >= previous.open
-  );
-}
-
-function isBearishEngulfing(previous, current) {
-  return (
-    previous.close > previous.open &&
-    current.close < current.open &&
-    current.open >= previous.close &&
-    current.close <= previous.open
-  );
-}
-
-function detectEngulfingTouchEntry(
+function detectRetestTouchEntry(
   candles,
   direction,
   breakoutIndex,
@@ -84,7 +67,8 @@ function detectEngulfingTouchEntry(
     maxBars < 1 ||
     !Number.isFinite(zoneLow) ||
     !Number.isFinite(zoneHigh) ||
-    zoneLow >= zoneHigh
+    zoneLow >= zoneHigh ||
+    breakoutIndex >= candles.length - 1
   ) {
     return null;
   }
@@ -94,6 +78,8 @@ function detectEngulfingTouchEntry(
     breakoutIndex + maxBars
   );
 
+  let hasMovedAway = false;
+
   for (let i = breakoutIndex + 1; i <= endIndex; i++) {
     const previous = candles[i - 1];
     const current = candles[i];
@@ -102,24 +88,60 @@ function detectEngulfingTouchEntry(
       continue;
     }
 
-    const isEngulfing = direction === "bullish"
-      ? isBullishEngulfing(previous, current)
-      : isBearishEngulfing(previous, current);
+    if (!hasMovedAway) {
+      const movedAway = direction === "bullish"
+        ? current.close > zoneHigh
+        : current.close < zoneLow;
 
-    if (!isEngulfing) continue;
+      if (movedAway) {
+        hasMovedAway = true;
+      }
 
-    const touchesBreakoutZone =
+      continue;
+    }
+
+    const previousWasOutside = direction === "bullish"
+      ? previous.close > zoneHigh
+      : previous.close < zoneLow;
+
+    if (!previousWasOutside) {
+      continue;
+    }
+
+    const touchesZone =
       current.low <= zoneHigh &&
       current.high >= zoneLow;
 
-    if (!touchesBreakoutZone) continue;
+    if (!touchesZone) {
+      continue;
+    }
+
+    const openInsideZone =
+      current.open >= zoneLow &&
+      current.open <= zoneHigh;
+
+    const gapThroughZone = direction === "bullish"
+      ? current.open < zoneLow
+      : current.open > zoneHigh;
+
+    if (gapThroughZone) {
+      continue;
+    }
+
+    const entryPrice = openInsideZone
+      ? current.open
+      : direction === "bullish"
+        ? zoneHigh
+        : zoneLow;
+
+    if (!Number.isFinite(entryPrice) || entryPrice <= 0) {
+      continue;
+    }
 
     return {
       index: i,
       candle: current,
-      entryPrice: current.close,
-      engulfingHigh: current.high,
-      engulfingLow: current.low
+      entryPrice
     };
   }
 
@@ -226,7 +248,9 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     }
 
     if (!trendline || structureConfirmedIndex < 0) {
-      result.reasons.push("ساختار معتبر Lower High یا Higher Low یافت نشد");
+      result.reasons.push(
+        "ساختار معتبر Lower High یا Higher Low یافت نشد"
+      );
       return result;
     }
 
@@ -264,7 +288,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const setup = detectEngulfingTouchEntry(
+    const setup = detectRetestTouchEntry(
       candles,
       tradeDirection,
       breakout.index,
@@ -275,7 +299,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
 
     if (!setup) {
       result.reasons.push(
-        "شکست ثبت شد؛ انگولف هم‌جهت با لمس محدوده شکست یافت نشد"
+        "شکست ثبت شد؛ قیمت هنوز فاصله‌گیری و بازگشت معتبر به محدوده شکست را تکمیل نکرده است"
       );
       return result;
     }
@@ -300,6 +324,8 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
 
     if (
       !Number.isFinite(entry) ||
+      !Number.isFinite(zoneLow) ||
+      !Number.isFinite(zoneHigh) ||
       !Number.isFinite(zoneWidth) ||
       zoneWidth <= 0
     ) {
@@ -337,11 +363,11 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     result.take_profit = takeProfit;
     result.rr = reward / risk;
     result.signal_candle_time = setup.candle.time;
-    result.engulfing_candle_time = setup.candle.time;
+    result.retest_candle_time = setup.candle.time;
     result.status = isBullish ? "LONG" : "SHORT";
 
     result.reasons.push(
-      "شکست خط روند و تشکیل انگولف هم‌جهت با لمس محدوده شکست تأیید شد"
+      "شکست خط روند، فاصله‌گیری قیمت و اولین بازگشت و لمس محدوده شکست تأیید شد"
     );
 
     return result;

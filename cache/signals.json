@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T13:02:31.364Z",
+  "lastUpdated": "2026-11-10T13:17:37.986Z",
   "signals": {
-    "FARTCOINUSDT:15m": {
-      "sentAt": "2026-11-10T07:17:12.639Z",
-      "symbol": "FARTCOINUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.11835,
-      "stop": 0.1176
-    },
     "EIGENUSDT:15m": {
       "sentAt": "2026-11-10T07:32:18.424Z",
       "symbol": "EIGENUSDT",
@@ -468,6 +459,15 @@
       "score": null,
       "entry": 0.5349999999999999,
       "stop": 0.5463999999999999
+    },
+    "SPACEUSDT:15m": {
+      "sentAt": "2026-11-10T13:17:36.485Z",
+      "symbol": "SPACEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0031985,
+      "stop": 0.0032149999999999995
     }
   }
 }

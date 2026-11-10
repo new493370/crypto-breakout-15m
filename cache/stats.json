@@ -237,6 +237,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-10T13:02:29.864Z"
+    },
+    "SPACEUSDT:15m:2026-11-10T13:17:36.484Z": {
+      "symbol": "SPACEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T13:17:36.484Z"
     }
   },
   "recentSignals": [
@@ -506,7 +513,7 @@
       "sentAt": "2026-11-10T10:32:24.377Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:00:29.319Z",
+      "statusUpdatedAt": "2026-11-10T13:15:37.446Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -631,7 +638,7 @@
       "sentAt": "2026-11-10T11:17:15.252Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:00:29.320Z",
+      "statusUpdatedAt": "2026-11-10T13:15:37.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -777,7 +784,7 @@
       "sentAt": "2026-11-10T12:17:27.947Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:00:29.320Z",
+      "statusUpdatedAt": "2026-11-10T13:15:37.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -797,7 +804,7 @@
       "sentAt": "2026-11-10T12:17:29.616Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:00:29.320Z",
+      "statusUpdatedAt": "2026-11-10T13:15:37.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -817,7 +824,7 @@
       "sentAt": "2026-11-10T12:32:14.600Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:00:29.320Z",
+      "statusUpdatedAt": "2026-11-10T13:15:37.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -837,7 +844,7 @@
       "sentAt": "2026-11-10T12:32:16.297Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:00:29.320Z",
+      "statusUpdatedAt": "2026-11-10T13:15:37.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -857,7 +864,7 @@
       "sentAt": "2026-11-10T12:47:14.060Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:00:29.320Z",
+      "statusUpdatedAt": "2026-11-10T13:15:37.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -896,13 +903,14 @@
       "signalCandleTime": 1794312000000,
       "rr1": 2,
       "sentAt": "2026-11-10T13:02:25.543Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:02:25.543Z",
+      "statusUpdatedAt": "2026-11-10T13:15:40.991Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.03586500000000001
     },
     {
       "symbol": "SUSHIUSDT",
@@ -916,13 +924,14 @@
       "signalCandleTime": 1794306600000,
       "rr1": 2,
       "sentAt": "2026-11-10T13:02:27.217Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:02:27.217Z",
+      "statusUpdatedAt": "2026-11-10T13:15:42.636Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.17680000000000007
     },
     {
       "symbol": "PROSUSDT",
@@ -938,7 +947,27 @@
       "sentAt": "2026-11-10T13:02:29.864Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T13:02:29.864Z",
+      "statusUpdatedAt": "2026-11-10T13:15:42.637Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SPACEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.0031985,
+      "stop": 0.0032149999999999995,
+      "tp1": 0.0031655000000000008,
+      "zoneLow": 0.003193,
+      "zoneHigh": 0.003204,
+      "signalCandleTime": 1794315600000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T13:17:36.484Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T13:17:36.484Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -946,34 +975,34 @@
     }
   ],
   "allTime": {
-    "total": 34,
-    "tp1Hit": 15,
+    "total": 35,
+    "tp1Hit": 17,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 9,
-    "active": 10,
-    "tp1Rate": 62.5,
+    "active": 9,
+    "tp1Rate": 65.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 37.5
+    "stopRate": 34.6
   },
   "byDirection": {
     "bullish": {
       "total": 13,
-      "tp1Hit": 5,
+      "tp1Hit": 6,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 6,
-      "tp1Rate": 45.5
+      "tp1Rate": 50
     },
     "bearish": {
-      "total": 21,
-      "tp1Hit": 10,
+      "total": 22,
+      "tp1Hit": 11,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 3,
-      "tp1Rate": 76.9
+      "tp1Rate": 78.6
     }
   },
-  "lastUpdated": "2026-11-10T13:02:31.366Z"
+  "lastUpdated": "2026-11-10T13:17:37.987Z"
 }

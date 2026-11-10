@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T03:02:42.423Z",
+  "lastUpdated": "2026-11-10T03:17:33.619Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -855,6 +855,24 @@
       "score": null,
       "entry": 0.12204999999999999,
       "stop": 0.11889999999999999
+    },
+    "SOPHUSDT:15m": {
+      "sentAt": "2026-11-10T03:17:30.425Z",
+      "symbol": "SOPHUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.001211,
+      "stop": 0.001195
+    },
+    "HOMEUSDT:15m": {
+      "sentAt": "2026-11-10T03:17:32.117Z",
+      "symbol": "HOMEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.005178,
+      "stop": 0.0051600000000000005
     }
   }
 }

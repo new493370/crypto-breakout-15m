@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T05:02:11.137Z",
+  "lastUpdated": "2026-11-10T05:17:09.308Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,42 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "TRXUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:11.584Z",
-      "symbol": "TRXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.31645,
-      "stop": 0.31623999999999997
-    },
-    "AVAXUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:13.322Z",
-      "symbol": "AVAXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 8.645,
-      "stop": 8.439
-    },
-    "CELOUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:15.043Z",
-      "symbol": "CELOUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.06541,
-      "stop": 0.06516
-    },
-    "ORDIUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:16.761Z",
-      "symbol": "ORDIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 3.197,
-      "stop": 3.1750000000000003
     },
     "OLUSDT:15m": {
       "sentAt": "2026-11-09T23:17:27.853Z",
@@ -765,6 +729,24 @@
       "score": null,
       "entry": 0.107805,
       "stop": 0.10701
+    },
+    "BATUSDT:15m": {
+      "sentAt": "2026-11-10T05:17:06.097Z",
+      "symbol": "BATUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.13002999999999998,
+      "stop": 0.12934
+    },
+    "METASTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T05:17:07.805Z",
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 643.8399999999999,
+      "stop": 642.55
     }
   }
 }

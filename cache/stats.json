@@ -1,1 +1,199 @@
-{}
+{
+  "processedSignals": {
+    "SHIBUSDT:15m:2026-11-10T04:01:56.410Z": {
+      "symbol": "SHIBUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T04:01:56.410Z"
+    },
+    "FLOKIUSDT:15m:2026-11-10T04:01:58.102Z": {
+      "symbol": "FLOKIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T04:01:58.102Z"
+    },
+    "PIUSDT:15m:2026-11-10T04:01:59.776Z": {
+      "symbol": "PIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T04:01:59.776Z"
+    },
+    "SEIUSDT:15m:2026-11-10T04:02:01.461Z": {
+      "symbol": "SEIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T04:02:01.461Z"
+    },
+    "SPKUSDT:15m:2026-11-10T04:02:03.214Z": {
+      "symbol": "SPKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T04:02:03.214Z"
+    },
+    "LAUSDT:15m:2026-11-10T04:02:04.894Z": {
+      "symbol": "LAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T04:02:04.894Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "SHIBUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.000004414,
+      "stop": 0.000004418,
+      "tp1": 0.000004405999999999999,
+      "zoneLow": 0.000004414,
+      "zoneHigh": 0.000004416,
+      "signalCandleTime": 1794282300000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T04:01:56.410Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T04:01:56.410Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "FLOKIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.00002083,
+      "stop": 0.00002079,
+      "tp1": 0.000020909999999999998,
+      "zoneLow": 0.00002081,
+      "zoneHigh": 0.00002083,
+      "signalCandleTime": 1794281400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T04:01:58.102Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T04:01:58.102Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "PIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.06703,
+      "stop": 0.06669,
+      "tp1": 0.06771000000000002,
+      "zoneLow": 0.06686,
+      "zoneHigh": 0.06703,
+      "signalCandleTime": 1794282300000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T04:01:59.776Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T04:01:59.776Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SEIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.0439,
+      "stop": 0.043820000000000005,
+      "tp1": 0.044059999999999995,
+      "zoneLow": 0.04386,
+      "zoneHigh": 0.0439,
+      "signalCandleTime": 1794281400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T04:02:01.461Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T04:02:01.461Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SPKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.01592,
+      "stop": 0.015860000000000003,
+      "tp1": 0.016039999999999995,
+      "zoneLow": 0.01589,
+      "zoneHigh": 0.01592,
+      "signalCandleTime": 1794281400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T04:02:03.214Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T04:02:03.214Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "LAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.05299,
+      "stop": 0.05326999999999999,
+      "tp1": 0.052430000000000025,
+      "zoneLow": 0.05299,
+      "zoneHigh": 0.05313,
+      "signalCandleTime": 1794260700000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T04:02:04.894Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T04:02:04.894Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "allTime": {
+    "total": 6,
+    "tp1Hit": 0,
+    "tp2Hit": 0,
+    "tp3Hit": 0,
+    "stopped": 0,
+    "active": 6,
+    "tp1Rate": 0,
+    "tp2Rate": 0,
+    "tp3Rate": 0,
+    "stopRate": 0
+  },
+  "byDirection": {
+    "bullish": {
+      "total": 4,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    },
+    "bearish": {
+      "total": 2,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    }
+  },
+  "lastUpdated": "2026-11-10T04:02:06.397Z"
+}

@@ -202,6 +202,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-10T12:32:16.297Z"
+    },
+    "STRKUSDT:15m:2026-11-10T12:47:14.060Z": {
+      "symbol": "STRKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T12:47:14.060Z"
+    },
+    "AMDSTOCKUSDT:15m:2026-11-10T12:47:15.794Z": {
+      "symbol": "AMDSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T12:47:15.794Z"
     }
   },
   "recentSignals": [
@@ -471,7 +485,7 @@
       "sentAt": "2026-11-10T10:32:24.377Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:30:27.153Z",
+      "statusUpdatedAt": "2026-11-10T12:45:29.171Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -596,7 +610,7 @@
       "sentAt": "2026-11-10T11:17:15.252Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:30:27.153Z",
+      "statusUpdatedAt": "2026-11-10T12:45:29.171Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -719,13 +733,14 @@
       "signalCandleTime": 1794311100000,
       "rr1": 2,
       "sentAt": "2026-11-10T12:02:16.295Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:30:27.153Z",
+      "statusUpdatedAt": "2026-11-10T12:45:32.991Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.02041
     },
     {
       "symbol": "ATHUSDT",
@@ -741,7 +756,7 @@
       "sentAt": "2026-11-10T12:17:27.947Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:30:27.153Z",
+      "statusUpdatedAt": "2026-11-10T12:45:32.991Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -761,7 +776,7 @@
       "sentAt": "2026-11-10T12:17:29.616Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:30:27.153Z",
+      "statusUpdatedAt": "2026-11-10T12:45:32.991Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -781,7 +796,7 @@
       "sentAt": "2026-11-10T12:32:14.600Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:32:14.600Z",
+      "statusUpdatedAt": "2026-11-10T12:45:32.991Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -801,7 +816,47 @@
       "sentAt": "2026-11-10T12:32:16.297Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:32:16.297Z",
+      "statusUpdatedAt": "2026-11-10T12:45:32.991Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "STRKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.038615,
+      "stop": 0.038840000000000006,
+      "tp1": 0.03816499999999998,
+      "zoneLow": 0.03854,
+      "zoneHigh": 0.03869,
+      "signalCandleTime": 1794312900000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T12:47:14.060Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T12:47:14.060Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AMDSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 512.085,
+      "stop": 515.52,
+      "tp1": 505.21500000000015,
+      "zoneLow": 510.94,
+      "zoneHigh": 513.23,
+      "signalCandleTime": 1794276000000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T12:47:15.794Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T12:47:15.794Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -809,16 +864,16 @@
     }
   ],
   "allTime": {
-    "total": 29,
+    "total": 31,
     "tp1Hit": 14,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 8,
-    "active": 7,
-    "tp1Rate": 63.6,
+    "stopped": 9,
+    "active": 8,
+    "tp1Rate": 60.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 36.4
+    "stopRate": 39.1
   },
   "byDirection": {
     "bullish": {
@@ -830,13 +885,13 @@
       "tp1Rate": 45.5
     },
     "bearish": {
-      "total": 17,
+      "total": 19,
       "tp1Hit": 9,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 2,
-      "tp1Rate": 81.8
+      "stopped": 3,
+      "tp1Rate": 75
     }
   },
-  "lastUpdated": "2026-11-10T12:32:17.800Z"
+  "lastUpdated": "2026-11-10T12:47:17.297Z"
 }

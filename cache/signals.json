@@ -1,60 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T12:32:17.799Z",
+  "lastUpdated": "2026-11-10T12:47:17.296Z",
   "signals": {
-    "SPXUSDT:15m": {
-      "sentAt": "2026-11-10T06:32:18.731Z",
-      "symbol": "SPXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.3539,
-      "stop": 0.3488
-    },
-    "MEUSDT:15m": {
-      "sentAt": "2026-11-10T06:32:20.399Z",
-      "symbol": "MEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.043905,
-      "stop": 0.043620000000000006
-    },
-    "RENDERUSDT:15m": {
-      "sentAt": "2026-11-10T06:32:22.061Z",
-      "symbol": "RENDERUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 1.5785,
-      "stop": 1.5710000000000002
-    },
-    "SNDKUSDT:15m": {
-      "sentAt": "2026-11-10T06:32:23.730Z",
-      "symbol": "SNDKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 885.55,
-      "stop": 883.0000000000001
-    },
-    "AXSUSDT:15m": {
-      "sentAt": "2026-11-10T06:32:25.399Z",
-      "symbol": "AXSUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.8070999999999999,
-      "stop": 0.8029
-    },
-    "CSOPSKHYNIX2LUSDT:15m": {
-      "sentAt": "2026-11-10T06:32:27.084Z",
-      "symbol": "CSOPSKHYNIX2LUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 2.014,
-      "stop": 1.9779999999999998
-    },
     "SNDKSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T06:47:18.387Z",
       "symbol": "SNDKSTOCKUSDT",
@@ -531,6 +477,24 @@
       "score": null,
       "entry": 0.1384,
       "stop": 0.1405
+    },
+    "STRKUSDT:15m": {
+      "sentAt": "2026-11-10T12:47:14.060Z",
+      "symbol": "STRKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.038615,
+      "stop": 0.038840000000000006
+    },
+    "AMDSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T12:47:15.794Z",
+      "symbol": "AMDSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 512.085,
+      "stop": 515.52
     }
   }
 }

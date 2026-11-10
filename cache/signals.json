@@ -1,105 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T16:32:10.358Z",
+  "lastUpdated": "2026-11-10T16:42:24.757Z",
   "signals": {
-    "BERAUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:12.153Z",
-      "symbol": "BERAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.10200000000000001,
-      "stop": 0.10079999999999999
-    },
-    "CCUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:13.940Z",
-      "symbol": "CCUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.09087,
-      "stop": 0.09066000000000002
-    },
-    "AVAXUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:15.659Z",
-      "symbol": "AVAXUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 8.650500000000001,
-      "stop": 8.775
-    },
-    "MMTUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:17.410Z",
-      "symbol": "MMTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.12055,
-      "stop": 0.1198
-    },
-    "LUNAUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:19.183Z",
-      "symbol": "LUNAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.037040000000000003,
-      "stop": 0.03710000000000001
-    },
-    "PUMPFUNUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:20.907Z",
-      "symbol": "PUMPFUNUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0036125000000000003,
-      "stop": 0.0036290000000000003
-    },
-    "SKYUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:22.634Z",
-      "symbol": "SKYUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.062705,
-      "stop": 0.06329
-    },
-    "SNOWSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:24.377Z",
-      "symbol": "SNOWSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 292.73,
-      "stop": 290.75
-    },
-    "MRVLSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:26.107Z",
-      "symbol": "MRVLSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 154.89999999999998,
-      "stop": 154
-    },
-    "ALUMINUMUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:27.834Z",
-      "symbol": "ALUMINUMUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 3064.94,
-      "stop": 3069.7999999999997
-    },
-    "SPCXUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:29.559Z",
-      "symbol": "SPCXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 142.005,
-      "stop": 141.06
-    },
     "INITUSDT:15m": {
       "sentAt": "2026-11-10T11:17:11.810Z",
       "symbol": "INITUSDT",
@@ -1116,6 +1017,15 @@
       "score": null,
       "entry": 2.0300000000000002,
       "stop": 2.036
+    },
+    "PIEVERSEUSDT:15m": {
+      "sentAt": "2026-11-10T16:42:23.255Z",
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 2.1383,
+      "stop": 2.3114000000000003
     }
   }
 }

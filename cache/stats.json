@@ -48,6 +48,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-10T16:32:08.857Z"
+    },
+    "PIEVERSEUSDT:15m:2026-11-10T16:42:23.255Z": {
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:42:23.255Z"
     }
   },
   "recentSignals": [
@@ -65,7 +72,7 @@
       "sentAt": "2026-11-10T16:31:58.675Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:31:58.675Z",
+      "statusUpdatedAt": "2026-11-10T16:40:39.851Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -83,13 +90,14 @@
       "signalCandleTime": 1794291300000,
       "rr1": 2,
       "sentAt": "2026-11-10T16:32:00.350Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:32:00.350Z",
+      "statusUpdatedAt": "2026-11-10T16:40:43.359Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.15200000000000002
     },
     {
       "symbol": "SEIUSDT",
@@ -103,13 +111,14 @@
       "signalCandleTime": 1794312900000,
       "rr1": 2,
       "sentAt": "2026-11-10T16:32:02.034Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:32:02.034Z",
+      "statusUpdatedAt": "2026-11-10T16:40:45.056Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.04451
     },
     {
       "symbol": "MSFTSTOCKUSDT",
@@ -123,13 +132,14 @@
       "signalCandleTime": 1794277800000,
       "rr1": 2,
       "sentAt": "2026-11-10T16:32:03.712Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:32:03.712Z",
+      "statusUpdatedAt": "2026-11-10T16:40:46.717Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 547.8199999999999
     },
     {
       "symbol": "PAXGUSDT",
@@ -143,13 +153,14 @@
       "signalCandleTime": 1794263400000,
       "rr1": 2,
       "sentAt": "2026-11-10T16:32:05.488Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:32:05.488Z",
+      "statusUpdatedAt": "2026-11-10T16:40:48.377Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 4098.83
     },
     {
       "symbol": "JASMYUSDT",
@@ -163,13 +174,14 @@
       "signalCandleTime": 1794255300000,
       "rr1": 2,
       "sentAt": "2026-11-10T16:32:07.185Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:32:07.185Z",
+      "statusUpdatedAt": "2026-11-10T16:40:50.085Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.003693
     },
     {
       "symbol": "CSOPSKHYNIX2LUSDT",
@@ -183,9 +195,30 @@
       "signalCandleTime": 1794267900000,
       "rr1": 2,
       "sentAt": "2026-11-10T16:32:08.857Z",
+      "status": "stopped",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:40:51.772Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": true,
+      "exitPrice": 2.036
+    },
+    {
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 2.1383,
+      "stop": 2.3114000000000003,
+      "tp1": 1.7920999999999996,
+      "zoneLow": 2.0806,
+      "zoneHigh": 2.196,
+      "signalCandleTime": 1794269700000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:42:23.255Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:32:08.857Z",
+      "statusUpdatedAt": "2026-11-10T16:42:23.255Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -193,16 +226,16 @@
     }
   ],
   "allTime": {
-    "total": 7,
-    "tp1Hit": 0,
+    "total": 8,
+    "tp1Hit": 2,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
-    "active": 7,
-    "tp1Rate": 0,
+    "stopped": 4,
+    "active": 2,
+    "tp1Rate": 33.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 66.7
   },
   "byDirection": {
     "bullish": {
@@ -214,13 +247,13 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 6,
-      "tp1Hit": 0,
+      "total": 7,
+      "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
-      "tp1Rate": 0
+      "stopped": 4,
+      "tp1Rate": 33.3
     }
   },
-  "lastUpdated": "2026-11-10T16:32:10.359Z"
+  "lastUpdated": "2026-11-10T16:42:24.758Z"
 }

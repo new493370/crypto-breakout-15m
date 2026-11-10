@@ -1,4 +1,3 @@
-
 import { CONFIG } from "./config.js";
 import { getMarketSnapshot } from "./exchanges.js";
 import {
@@ -166,6 +165,10 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     breakout_candle_time: null,
     retest_candle_time: null,
     engulfing_candle_time: null,
+    swing_high_a: null,
+    swing_high_b: null,
+    swing_low_a: null,
+    swing_low_b: null,
     reasons: []
   };
 
@@ -253,6 +256,11 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       );
       return result;
     }
+
+    result.swing_high_a = latest.highs[0] || null;
+    result.swing_high_b = latest.highs[1] || null;
+    result.swing_low_a = latest.lows[0] || null;
+    result.swing_low_b = latest.lows[1] || null;
 
     const breakout = detectBreakout(
       candles,

@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T09:32:25.389Z",
+  "lastUpdated": "2026-11-10T09:47:30.474Z",
   "signals": {
-    "CRCLSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T03:47:03.891Z",
-      "symbol": "CRCLSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 67.45,
-      "stop": 68.16000000000001
-    },
-    "NBISSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T03:47:05.526Z",
-      "symbol": "NBISSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 141.39,
-      "stop": 145.31
-    },
     "SHIBUSDT:15m": {
       "sentAt": "2026-11-10T04:01:56.410Z",
       "symbol": "SHIBUSDT",

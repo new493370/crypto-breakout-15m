@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T18:42:05.399Z",
+  "lastUpdated": "2026-11-10T18:52:13.476Z",
   "signals": {
-    "STRKUSDT:15m": {
-      "sentAt": "2026-11-10T12:47:14.060Z",
-      "symbol": "STRKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.038615,
-      "stop": 0.038840000000000006
-    },
-    "AMDSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T12:47:15.794Z",
-      "symbol": "AMDSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 512.085,
-      "stop": 515.52
-    },
     "APRUSDT:15m": {
       "sentAt": "2026-11-10T13:02:25.543Z",
       "symbol": "APRUSDT",
@@ -963,6 +945,15 @@
       "score": null,
       "entry": 0.033549999999999996,
       "stop": 0.03145000000000001
+    },
+    "ZROUSDT:15m": {
+      "sentAt": "2026-11-10T18:52:11.975Z",
+      "symbol": "ZROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.4983499999999998,
+      "stop": 1.6793000000000002
     }
   }
 }

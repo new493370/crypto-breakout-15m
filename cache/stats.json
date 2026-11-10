@@ -6,6 +6,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-10T18:32:10.916Z"
+    },
+    "ZROUSDT:15m:2026-11-10T18:52:11.975Z": {
+      "symbol": "ZROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T18:52:11.975Z"
     }
   },
   "recentSignals": [
@@ -23,7 +30,27 @@
       "sentAt": "2026-11-10T18:32:10.916Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T18:40:37.394Z",
+      "statusUpdatedAt": "2026-11-10T18:50:35.458Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ZROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 1.4983499999999998,
+      "stop": 1.6793000000000002,
+      "tp1": 1.136449999999999,
+      "zoneLow": 1.4725,
+      "zoneHigh": 1.5242,
+      "signalCandleTime": 1794335400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T18:52:11.975Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T18:52:11.975Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -31,12 +58,12 @@
     }
   ],
   "allTime": {
-    "total": 1,
+    "total": 2,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -52,7 +79,7 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -60,5 +87,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T18:42:05.400Z"
+  "lastUpdated": "2026-11-10T18:52:13.478Z"
 }

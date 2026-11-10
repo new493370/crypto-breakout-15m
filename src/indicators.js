@@ -509,11 +509,8 @@ export function getLatestMinorSwings(swings, count = 2) {
     return { highs: [], lows: [] };
   }
 
-  const minDistance = getConfigNumber(
-    "MIN_SWING_DISTANCE",
-    10,
-    1
-  );
+  const minDistance = getConfigNumber("MIN_SWING_DISTANCE", 10, 1);
+  const maxDistance = getConfigNumber("MAX_SWING_DISTANCE", 50, 1);
 
   const getValidSwings = (items, type) => {
     const valid = (Array.isArray(items) ? items : [])
@@ -540,7 +537,10 @@ export function getLatestMinorSwings(swings, count = 2) {
 
       const lastSelected = result[0];
 
-      if (lastSelected.index - valid[i].index >= minDistance) {
+      if (
+        lastSelected.index - valid[i].index >= minDistance &&
+        lastSelected.index - valid[i].index <= maxDistance
+      ) {
         result.unshift(valid[i]);
       }
 
@@ -571,14 +571,12 @@ export function isValidStructure(swingA, swingB, direction) {
     return false;
   }
 
-  const minDistance = getConfigNumber(
-    "MIN_SWING_DISTANCE",
-    10,
-    1
-  );
+  const minDistance = getConfigNumber("MIN_SWING_DISTANCE", 10, 1);
+  const maxDistance = getConfigNumber("MAX_SWING_DISTANCE", 50, 1);
 
   if (swingB.index <= swingA.index) return false;
   if (swingB.index - swingA.index < minDistance) return false;
+  if (swingB.index - swingA.index > maxDistance) return false;
   if (swingB.confirmed_index <= swingA.confirmed_index) return false;
 
   if (direction === "bearish" && swingA.type === "high") {
@@ -633,6 +631,7 @@ export function detectBreakout(
   }
 
   const firstIndex = Math.max(1, startIndex);
+  const minBodyRatio = getConfigNumber("BREAKOUT_MIN_BODY_RATIO", 0.5);
 
   for (let i = firstIndex; i < candles.length; i++) {
     const previous = candles[i - 1];
@@ -671,6 +670,13 @@ export function detectBreakout(
     }
 
     if (!tradeDirection) continue;
+
+    const candleRange = cRange(candle);
+    const candleBody = cBody(candle);
+
+    if (candleRange > 0 && (candleBody / candleRange) < minBodyRatio) {
+      continue;
+    }
 
     const zoneHigh = cHigh(candle);
     const zoneLow = cLow(candle);

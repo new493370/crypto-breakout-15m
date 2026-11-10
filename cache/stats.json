@@ -55,6 +55,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-10T16:42:23.255Z"
+    },
+    "QUSDT:15m:2026-11-10T16:52:07.159Z": {
+      "symbol": "QUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:52:07.159Z"
+    },
+    "METASTOCKUSDT:15m:2026-11-10T16:52:08.885Z": {
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:52:08.885Z"
     }
   },
   "recentSignals": [
@@ -72,7 +86,7 @@
       "sentAt": "2026-11-10T16:31:58.675Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:40:39.851Z",
+      "statusUpdatedAt": "2026-11-10T16:50:37.138Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -218,7 +232,47 @@
       "sentAt": "2026-11-10T16:42:23.255Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T16:42:23.255Z",
+      "statusUpdatedAt": "2026-11-10T16:50:37.138Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "QUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.024855000000000002,
+      "stop": 0.024510000000000004,
+      "tp1": 0.025544999999999998,
+      "zoneLow": 0.02474,
+      "zoneHigh": 0.02497,
+      "signalCandleTime": 1794311100000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:52:07.159Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:52:07.159Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 645.2049999999999,
+      "stop": 649.87,
+      "tp1": 635.8749999999998,
+      "zoneLow": 643.65,
+      "zoneHigh": 646.76,
+      "signalCandleTime": 1794325500000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:52:08.885Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:52:08.885Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -226,12 +280,12 @@
     }
   ],
   "allTime": {
-    "total": 8,
+    "total": 10,
     "tp1Hit": 2,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 4,
-    "active": 2,
+    "active": 4,
     "tp1Rate": 33.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -239,7 +293,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 1,
+      "total": 2,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -247,7 +301,7 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 7,
+      "total": 8,
       "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -255,5 +309,5 @@
       "tp1Rate": 33.3
     }
   },
-  "lastUpdated": "2026-11-10T16:42:24.758Z"
+  "lastUpdated": "2026-11-10T16:52:10.388Z"
 }

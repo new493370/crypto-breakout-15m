@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T16:42:24.757Z",
+  "lastUpdated": "2026-11-10T16:52:10.387Z",
   "signals": {
     "INITUSDT:15m": {
       "sentAt": "2026-11-10T11:17:11.810Z",
@@ -1026,6 +1026,24 @@
       "score": null,
       "entry": 2.1383,
       "stop": 2.3114000000000003
+    },
+    "QUSDT:15m": {
+      "sentAt": "2026-11-10T16:52:07.160Z",
+      "symbol": "QUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.024855000000000002,
+      "stop": 0.024510000000000004
+    },
+    "METASTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T16:52:08.885Z",
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 645.2049999999999,
+      "stop": 649.87
     }
   }
 }

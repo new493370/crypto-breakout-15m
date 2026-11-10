@@ -77,33 +77,35 @@ function detectRetestTouchEntry(
     breakoutIndex + maxBars
   );
 
+  const requiredAwayBars = Number.isFinite(CONFIG.REQUIRED_AWAY_BARS)
+    ? Math.max(1, Math.trunc(CONFIG.REQUIRED_AWAY_BARS))
+    : 2;
+
+  let consecutiveAway = 0;
   let hasMovedAway = false;
 
   for (let i = breakoutIndex + 1; i <= endIndex; i++) {
-    const previous = candles[i - 1];
     const current = candles[i];
 
-    if (!isValidCandle(previous) || !isValidCandle(current)) {
+    if (!isValidCandle(current)) {
       continue;
     }
+
+    const isOutsideZone = direction === "bullish"
+      ? current.close > zoneHigh
+      : current.close < zoneLow;
 
     if (!hasMovedAway) {
-      const movedAway = direction === "bullish"
-        ? current.close > zoneHigh
-        : current.close < zoneLow;
+      if (isOutsideZone) {
+        consecutiveAway++;
 
-      if (movedAway) {
-        hasMovedAway = true;
+        if (consecutiveAway >= requiredAwayBars) {
+          hasMovedAway = true;
+        }
+      } else {
+        consecutiveAway = 0;
       }
 
-      continue;
-    }
-
-    const previousWasOutside = direction === "bullish"
-      ? previous.close > zoneHigh
-      : previous.close < zoneLow;
-
-    if (!previousWasOutside) {
       continue;
     }
 

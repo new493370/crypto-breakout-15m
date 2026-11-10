@@ -1,1 +1,91 @@
-{}
+{
+  "processedSignals": {
+    "CNPYUSDT:15m:2026-11-10T14:32:09.691Z": {
+      "symbol": "CNPYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T14:32:09.691Z"
+    },
+    "AAPLSTOCKUSDT:15m:2026-11-10T14:32:11.355Z": {
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T14:32:11.355Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "CNPYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.12240000000000001,
+      "stop": 0.12119999999999999,
+      "tp1": 0.12480000000000005,
+      "zoneLow": 0.122,
+      "zoneHigh": 0.1228,
+      "signalCandleTime": 1794317400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T14:32:09.691Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T14:32:09.691Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 351.9,
+      "stop": 351.18000000000006,
+      "tp1": 353.3399999999998,
+      "zoneLow": 351.66,
+      "zoneHigh": 352.14,
+      "signalCandleTime": 1794317400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T14:32:11.355Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T14:32:11.355Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "allTime": {
+    "total": 2,
+    "tp1Hit": 0,
+    "tp2Hit": 0,
+    "tp3Hit": 0,
+    "stopped": 0,
+    "active": 2,
+    "tp1Rate": 0,
+    "tp2Rate": 0,
+    "tp3Rate": 0,
+    "stopRate": 0
+  },
+  "byDirection": {
+    "bullish": {
+      "total": 2,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    },
+    "bearish": {
+      "total": 0,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    }
+  },
+  "lastUpdated": "2026-11-10T14:32:12.858Z"
+}

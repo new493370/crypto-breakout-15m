@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T14:17:23.091Z",
+  "lastUpdated": "2026-11-10T14:32:12.857Z",
   "signals": {
     "CFXUSDT:15m": {
       "sentAt": "2026-11-10T08:47:09.292Z",
@@ -630,6 +630,24 @@
       "score": null,
       "entry": 0.1406,
       "stop": 0.13999999999999999
+    },
+    "CNPYUSDT:15m": {
+      "sentAt": "2026-11-10T14:32:09.692Z",
+      "symbol": "CNPYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.12240000000000001,
+      "stop": 0.12119999999999999
+    },
+    "AAPLSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T14:32:11.355Z",
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 351.9,
+      "stop": 351.18000000000006
     }
   }
 }

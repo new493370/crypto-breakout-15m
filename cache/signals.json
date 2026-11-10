@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T17:22:05.499Z",
+  "lastUpdated": "2026-11-10T17:31:56.095Z",
   "signals": {
     "TRUSTUSDT:15m": {
       "sentAt": "2026-11-10T11:32:24.454Z",
@@ -1035,6 +1035,15 @@
       "score": null,
       "entry": 0.011805,
       "stop": 0.011419999999999998
+    },
+    "IRYSUSDT:15m": {
+      "sentAt": "2026-11-10T17:31:54.594Z",
+      "symbol": "IRYSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.016905,
+      "stop": 0.016520000000000003
     }
   }
 }

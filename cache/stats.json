@@ -6,6 +6,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-10T17:22:03.998Z"
+    },
+    "IRYSUSDT:15m:2026-11-10T17:31:54.593Z": {
+      "symbol": "IRYSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T17:31:54.593Z"
     }
   },
   "recentSignals": [
@@ -23,7 +30,27 @@
       "sentAt": "2026-11-10T17:22:03.998Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T17:22:03.998Z",
+      "statusUpdatedAt": "2026-11-10T17:30:36.328Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.016905,
+      "stop": 0.016520000000000003,
+      "tp1": 0.017674999999999993,
+      "zoneLow": 0.01685,
+      "zoneHigh": 0.01696,
+      "signalCandleTime": 1794328200000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T17:31:54.593Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T17:31:54.593Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -31,12 +58,12 @@
     }
   ],
   "allTime": {
-    "total": 1,
+    "total": 2,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -44,7 +71,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 1,
+      "total": 2,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -60,5 +87,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T17:22:05.503Z"
+  "lastUpdated": "2026-11-10T17:31:56.096Z"
 }

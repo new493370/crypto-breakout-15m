@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T19:12:08.303Z",
+  "lastUpdated": "2026-11-10T19:22:03.748Z",
   "signals": {
-    "SPACEUSDT:15m": {
-      "sentAt": "2026-11-10T13:17:36.485Z",
-      "symbol": "SPACEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0031985,
-      "stop": 0.0032149999999999995
-    },
     "KATUSDT:15m": {
       "sentAt": "2026-11-10T13:32:16.177Z",
       "symbol": "KATUSDT",

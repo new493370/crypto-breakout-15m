@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T08:47:12.517Z",
+  "lastUpdated": "2026-11-10T09:02:10.834Z",
   "signals": {
-    "POLUSDT:15m": {
-      "sentAt": "2026-11-10T02:47:34.970Z",
-      "symbol": "POLUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.088575,
-      "stop": 0.08946
-    },
     "INITUSDT:15m": {
       "sentAt": "2026-11-10T03:02:39.255Z",
       "symbol": "INITUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T08:32:14.258Z",
+  "lastUpdated": "2026-11-10T08:47:12.517Z",
   "signals": {
-    "EDGEUSDT:15m": {
-      "sentAt": "2026-11-10T02:32:45.439Z",
-      "symbol": "EDGEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.41025,
-      "stop": 0.38970000000000005
-    },
     "POLUSDT:15m": {
       "sentAt": "2026-11-10T02:47:34.970Z",
       "symbol": "POLUSDT",
@@ -540,6 +531,24 @@
       "score": null,
       "entry": 0.15365,
       "stop": 0.1517
+    },
+    "CFXUSDT:15m": {
+      "sentAt": "2026-11-10T08:47:09.292Z",
+      "symbol": "CFXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.041405,
+      "stop": 0.04148
+    },
+    "VIRTUALUSDT:15m": {
+      "sentAt": "2026-11-10T08:47:11.015Z",
+      "symbol": "VIRTUALUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.54425,
+      "stop": 0.5468000000000001
     }
   }
 }

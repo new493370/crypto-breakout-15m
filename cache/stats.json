@@ -27,6 +27,34 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-10T06:02:05.074Z"
+    },
+    "DOGEUSDT:15m:2026-11-10T06:17:20.270Z": {
+      "symbol": "DOGEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:17:20.270Z"
+    },
+    "ENAUSDT:15m:2026-11-10T06:17:21.923Z": {
+      "symbol": "ENAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:17:21.923Z"
+    },
+    "AVGOSTOCKUSDT:15m:2026-11-10T06:17:23.586Z": {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:17:23.586Z"
+    },
+    "CBRSSTOCKUSDT:15m:2026-11-10T06:17:25.268Z": {
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:17:25.268Z"
     }
   },
   "recentSignals": [
@@ -42,13 +70,14 @@
       "signalCandleTime": 1794288600000,
       "rr1": 2,
       "sentAt": "2026-11-10T06:01:59.991Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T06:01:59.991Z",
+      "statusUpdatedAt": "2026-11-10T06:15:31.502Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.006052499999999999
     },
     {
       "symbol": "SUIUSDT",
@@ -64,7 +93,7 @@
       "sentAt": "2026-11-10T06:02:01.682Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T06:02:01.682Z",
+      "statusUpdatedAt": "2026-11-10T06:15:31.502Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -82,13 +111,14 @@
       "signalCandleTime": 1794283200000,
       "rr1": 2,
       "sentAt": "2026-11-10T06:02:03.380Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T06:02:03.380Z",
+      "statusUpdatedAt": "2026-11-10T06:15:33.174Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.07737
     },
     {
       "symbol": "SUSHIUSDT",
@@ -102,9 +132,90 @@
       "signalCandleTime": 1794287700000,
       "rr1": 2,
       "sentAt": "2026-11-10T06:02:05.074Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:15:34.833Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.17744999999999994
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.06988,
+      "stop": 0.06967,
+      "tp1": 0.0703,
+      "zoneLow": 0.06981,
+      "zoneHigh": 0.06995,
+      "signalCandleTime": 1794290400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:17:20.270Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T06:02:05.074Z",
+      "statusUpdatedAt": "2026-11-10T06:17:20.270Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ENAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.153,
+      "stop": 0.15141,
+      "tp1": 0.15618,
+      "zoneLow": 0.15247,
+      "zoneHigh": 0.15353,
+      "signalCandleTime": 1794290400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:17:21.923Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:17:21.923Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 318.81,
+      "stop": 317.43000000000006,
+      "tp1": 321.5699999999999,
+      "zoneLow": 318.35,
+      "zoneHigh": 319.27,
+      "signalCandleTime": 1794290400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:17:23.586Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:17:23.586Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 96.08500000000001,
+      "stop": 95.86000000000001,
+      "tp1": 96.535,
+      "zoneLow": 96.01,
+      "zoneHigh": 96.16,
+      "signalCandleTime": 1794290400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:17:25.268Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:17:25.268Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -112,25 +223,25 @@
     }
   ],
   "allTime": {
-    "total": 4,
-    "tp1Hit": 0,
+    "total": 8,
+    "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 4,
-    "tp1Rate": 0,
+    "active": 5,
+    "tp1Rate": 100,
     "tp2Rate": 0,
     "tp3Rate": 0,
     "stopRate": 0
   },
   "byDirection": {
     "bullish": {
-      "total": 4,
-      "tp1Hit": 0,
+      "total": 8,
+      "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 0,
-      "tp1Rate": 0
+      "tp1Rate": 100
     },
     "bearish": {
       "total": 0,
@@ -141,5 +252,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T06:02:06.578Z"
+  "lastUpdated": "2026-11-10T06:17:26.770Z"
 }

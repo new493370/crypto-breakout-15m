@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T02:47:36.471Z",
+  "lastUpdated": "2026-11-10T03:02:42.423Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,51 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "ONEUSDT:15m": {
-      "sentAt": "2026-11-09T20:52:29.563Z",
-      "symbol": "ONEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00150125,
-      "stop": 0.0014123
-    },
-    "BANDUSDT:15m": {
-      "sentAt": "2026-11-09T20:52:31.233Z",
-      "symbol": "BANDUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.17720000000000002,
-      "stop": 0.1776
-    },
-    "SPCXSTOCKUSDT:15m": {
-      "sentAt": "2026-11-09T21:02:37.678Z",
-      "symbol": "SPCXSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 141.935,
-      "stop": 135.12
-    },
-    "NICKELUSDT:15m": {
-      "sentAt": "2026-11-09T21:02:39.394Z",
-      "symbol": "NICKELUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 16248.869999999999,
-      "stop": 16451.75
-    },
-    "SPCXUSDT:15m": {
-      "sentAt": "2026-11-09T21:02:41.094Z",
-      "symbol": "SPCXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 141.89499999999998,
-      "stop": 135.1
     },
     "FILECOINUSDT:15m": {
       "sentAt": "2026-11-09T21:17:49.120Z",
@@ -882,6 +837,24 @@
       "score": null,
       "entry": 0.088575,
       "stop": 0.08946
+    },
+    "INITUSDT:15m": {
+      "sentAt": "2026-11-10T03:02:39.255Z",
+      "symbol": "INITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.193025,
+      "stop": 0.21176
+    },
+    "CNPYUSDT:15m": {
+      "sentAt": "2026-11-10T03:02:40.922Z",
+      "symbol": "CNPYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.12204999999999999,
+      "stop": 0.11889999999999999
     }
   }
 }

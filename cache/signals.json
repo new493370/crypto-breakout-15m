@@ -1,60 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T09:47:30.474Z",
+  "lastUpdated": "2026-11-10T10:02:35.359Z",
   "signals": {
-    "SHIBUSDT:15m": {
-      "sentAt": "2026-11-10T04:01:56.410Z",
-      "symbol": "SHIBUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.000004414,
-      "stop": 0.000004418
-    },
-    "FLOKIUSDT:15m": {
-      "sentAt": "2026-11-10T04:01:58.103Z",
-      "symbol": "FLOKIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00002083,
-      "stop": 0.00002079
-    },
-    "PIUSDT:15m": {
-      "sentAt": "2026-11-10T04:01:59.776Z",
-      "symbol": "PIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.06703,
-      "stop": 0.06669
-    },
-    "SEIUSDT:15m": {
-      "sentAt": "2026-11-10T04:02:01.461Z",
-      "symbol": "SEIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0439,
-      "stop": 0.043820000000000005
-    },
-    "SPKUSDT:15m": {
-      "sentAt": "2026-11-10T04:02:03.214Z",
-      "symbol": "SPKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.01592,
-      "stop": 0.015860000000000003
-    },
-    "LAUSDT:15m": {
-      "sentAt": "2026-11-10T04:02:04.894Z",
-      "symbol": "LAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.05299,
-      "stop": 0.05326999999999999
-    },
     "STXUSDT:15m": {
       "sentAt": "2026-11-10T04:16:56.645Z",
       "symbol": "STXUSDT",
@@ -558,6 +504,24 @@
       "score": null,
       "entry": 0.003743,
       "stop": 0.0037700000000000003
+    },
+    "PENGUUSDT:15m": {
+      "sentAt": "2026-11-10T10:02:32.210Z",
+      "symbol": "PENGUUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.006332,
+      "stop": 0.006346999999999999
+    },
+    "HOMEUSDT:15m": {
+      "sentAt": "2026-11-10T10:02:33.858Z",
+      "symbol": "HOMEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00526,
+      "stop": 0.005214999999999999
     }
   }
 }

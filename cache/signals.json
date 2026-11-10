@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T11:32:25.956Z",
+  "lastUpdated": "2026-11-10T11:47:22.003Z",
   "signals": {
-    "MAGICUSDT:15m": {
-      "sentAt": "2026-11-10T05:47:00.921Z",
-      "symbol": "MAGICUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.08327,
-      "stop": 0.0836
-    },
     "GMTUSDT:15m": {
       "sentAt": "2026-11-10T06:01:59.991Z",
       "symbol": "GMTUSDT",
@@ -558,6 +549,33 @@
       "score": null,
       "entry": 0.06019,
       "stop": 0.060309999999999996
+    },
+    "IOSTUSDT:15m": {
+      "sentAt": "2026-11-10T11:47:17.028Z",
+      "symbol": "IOSTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0006747000000000001,
+      "stop": 0.0006711000000000001
+    },
+    "ORDERUSDT:15m": {
+      "sentAt": "2026-11-10T11:47:18.718Z",
+      "symbol": "ORDERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0303,
+      "stop": 0.030449999999999998
+    },
+    "AZTECUSDT:15m": {
+      "sentAt": "2026-11-10T11:47:20.502Z",
+      "symbol": "AZTECUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.01289,
+      "stop": 0.01292
     }
   }
 }

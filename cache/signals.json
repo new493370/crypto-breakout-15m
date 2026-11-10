@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T07:02:18.789Z",
+  "lastUpdated": "2026-11-10T07:17:14.140Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -693,6 +693,15 @@
       "score": null,
       "entry": 902.385,
       "stop": 893.22
+    },
+    "FARTCOINUSDT:15m": {
+      "sentAt": "2026-11-10T07:17:12.639Z",
+      "symbol": "FARTCOINUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.11835,
+      "stop": 0.1176
     }
   }
 }

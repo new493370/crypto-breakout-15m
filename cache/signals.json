@@ -1,60 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T11:02:04.279Z",
+  "lastUpdated": "2026-11-10T11:17:16.754Z",
   "signals": {
-    "ZORAUSDT:15m": {
-      "sentAt": "2026-11-10T05:02:04.563Z",
-      "symbol": "ZORAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0048319999999999995,
-      "stop": 0.004826
-    },
-    "SUSDT:15m": {
-      "sentAt": "2026-11-10T05:02:06.243Z",
-      "symbol": "SUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.036695,
-      "stop": 0.03659
-    },
-    "WALUSDT:15m": {
-      "sentAt": "2026-11-10T05:02:07.959Z",
-      "symbol": "WALUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.027725,
-      "stop": 0.02759
-    },
-    "AINUSDT:15m": {
-      "sentAt": "2026-11-10T05:02:09.636Z",
-      "symbol": "AINUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.107805,
-      "stop": 0.10701
-    },
-    "BATUSDT:15m": {
-      "sentAt": "2026-11-10T05:17:06.097Z",
-      "symbol": "BATUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.13002999999999998,
-      "stop": 0.12934
-    },
-    "METASTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T05:17:07.805Z",
-      "symbol": "METASTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 643.8399999999999,
-      "stop": 642.55
-    },
     "TRUTHUSDT:15m": {
       "sentAt": "2026-11-10T05:32:02.202Z",
       "symbol": "TRUTHUSDT",
@@ -594,6 +540,33 @@
       "score": null,
       "entry": 142.005,
       "stop": 141.06
+    },
+    "INITUSDT:15m": {
+      "sentAt": "2026-11-10T11:17:11.810Z",
+      "symbol": "INITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.217545,
+      "stop": 0.22149
+    },
+    "FOGOUSDT:15m": {
+      "sentAt": "2026-11-10T11:17:13.525Z",
+      "symbol": "FOGOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0019,
+      "stop": 0.0018939999999999999
+    },
+    "IRYSUSDT:15m": {
+      "sentAt": "2026-11-10T11:17:15.252Z",
+      "symbol": "IRYSUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.016875,
+      "stop": 0.01704
     }
   }
 }

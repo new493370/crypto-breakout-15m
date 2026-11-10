@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T13:47:54.115Z",
+  "lastUpdated": "2026-11-10T14:02:33.935Z",
   "signals": {
     "PONSUSDT:15m": {
       "sentAt": "2026-11-10T08:17:17.103Z",
@@ -594,6 +594,42 @@
       "score": null,
       "entry": 0.03979,
       "stop": 0.040150000000000005
+    },
+    "ZILUSDT:15m": {
+      "sentAt": "2026-11-10T14:02:27.258Z",
+      "symbol": "ZILUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.001602,
+      "stop": 0.0015869999999999999
+    },
+    "TRIAUSDT:15m": {
+      "sentAt": "2026-11-10T14:02:28.979Z",
+      "symbol": "TRIAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0024974999999999997,
+      "stop": 0.0025050000000000003
+    },
+    "DOSUSDT:15m": {
+      "sentAt": "2026-11-10T14:02:30.701Z",
+      "symbol": "DOSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.15915,
+      "stop": 0.15480000000000002
+    },
+    "ZECUSDT:15m": {
+      "sentAt": "2026-11-10T14:02:32.433Z",
+      "symbol": "ZECUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1141.04,
+      "stop": 1129.73
     }
   }
 }

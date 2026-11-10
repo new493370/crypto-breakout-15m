@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T00:32:25.242Z",
+  "lastUpdated": "2026-11-10T00:47:10.675Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1377,6 +1377,33 @@
       "score": null,
       "entry": 0.45045,
       "stop": 0.4475
+    },
+    "FETUSDT:15m": {
+      "sentAt": "2026-11-10T00:47:05.807Z",
+      "symbol": "FETUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1436,
+      "stop": 0.14329999999999998
+    },
+    "SYRUPUSDT:15m": {
+      "sentAt": "2026-11-10T00:47:07.497Z",
+      "symbol": "SYRUPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1353,
+      "stop": 0.1338
+    },
+    "SAPIENUSDT:15m": {
+      "sentAt": "2026-11-10T00:47:09.173Z",
+      "symbol": "SAPIENUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.045485,
+      "stop": 0.04531
     }
   }
 }

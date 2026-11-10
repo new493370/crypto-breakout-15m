@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T23:47:25.482Z",
+  "lastUpdated": "2026-11-10T00:02:26.970Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1287,6 +1287,33 @@
       "score": null,
       "entry": 0.2163,
       "stop": 0.2169
+    },
+    "PUMPUSDT:15m": {
+      "sentAt": "2026-11-10T00:02:22.189Z",
+      "symbol": "PUMPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0036125000000000003,
+      "stop": 0.0036750000000000003
+    },
+    "TIAUSDT:15m": {
+      "sentAt": "2026-11-10T00:02:23.833Z",
+      "symbol": "TIAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.42674999999999996,
+      "stop": 0.426
+    },
+    "PUMPFUNUSDT:15m": {
+      "sentAt": "2026-11-10T00:02:25.468Z",
+      "symbol": "PUMPFUNUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0036125000000000003,
+      "stop": 0.0036720000000000004
     }
   }
 }

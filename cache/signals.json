@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T02:17:51.105Z",
+  "lastUpdated": "2026-11-10T02:32:46.940Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,96 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "NVIDIAUSDT:15m": {
-      "sentAt": "2026-11-09T20:19:48.310Z",
-      "symbol": "NVIDIAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 177.29000000000002,
-      "stop": 175.71
-    },
-    "EDGEUSDT:15m": {
-      "sentAt": "2026-11-09T20:19:49.976Z",
-      "symbol": "EDGEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.4011,
-      "stop": 0.38999999999999996
-    },
-    "NBISSTOCKUSDT:15m": {
-      "sentAt": "2026-11-09T20:19:51.621Z",
-      "symbol": "NBISSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 140.355,
-      "stop": 137.53
-    },
-    "NVDAUSDT:15m": {
-      "sentAt": "2026-11-09T20:19:53.292Z",
-      "symbol": "NVDAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 177.285,
-      "stop": 175.74
-    },
-    "WLFIUSDT:15m": {
-      "sentAt": "2026-11-09T20:32:30.664Z",
-      "symbol": "WLFIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.047905,
-      "stop": 0.04691
-    },
-    "HBARUSDT:15m": {
-      "sentAt": "2026-11-09T20:32:32.335Z",
-      "symbol": "HBARUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.06709000000000001,
-      "stop": 0.0663
-    },
-    "STABLEUSDT:15m": {
-      "sentAt": "2026-11-09T20:32:34.011Z",
-      "symbol": "STABLEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.02683,
-      "stop": 0.026130000000000004
-    },
-    "DGAIUSDT:15m": {
-      "sentAt": "2026-11-09T20:32:35.700Z",
-      "symbol": "DGAIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.7685500000000001,
-      "stop": 0.7636
-    },
-    "IMXUSDT:15m": {
-      "sentAt": "2026-11-09T20:32:37.369Z",
-      "symbol": "IMXUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.12199499999999999,
-      "stop": 0.12326999999999999
-    },
-    "NESUSDT:15m": {
-      "sentAt": "2026-11-09T20:32:39.045Z",
-      "symbol": "NESUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.16205,
-      "stop": 0.158
     },
     "ONEUSDT:15m": {
       "sentAt": "2026-11-09T20:52:29.563Z",
@@ -954,6 +864,15 @@
       "score": null,
       "entry": 0.29028,
       "stop": 0.28824000000000005
+    },
+    "EDGEUSDT:15m": {
+      "sentAt": "2026-11-10T02:32:45.439Z",
+      "symbol": "EDGEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.41025,
+      "stop": 0.38970000000000005
     }
   }
 }

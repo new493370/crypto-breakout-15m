@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T00:02:26.970Z",
+  "lastUpdated": "2026-11-10T00:17:27.749Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1314,6 +1314,42 @@
       "score": null,
       "entry": 0.0036125000000000003,
       "stop": 0.0036720000000000004
+    },
+    "PYTHUSDT:15m": {
+      "sentAt": "2026-11-10T00:17:21.299Z",
+      "symbol": "PYTHUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.06493,
+      "stop": 0.06439
+    },
+    "GRASSUSDT:15m": {
+      "sentAt": "2026-11-10T00:17:22.966Z",
+      "symbol": "GRASSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.49345,
+      "stop": 0.48070000000000007
+    },
+    "LDOUSDT:15m": {
+      "sentAt": "2026-11-10T00:17:24.606Z",
+      "symbol": "LDOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.32625,
+      "stop": 0.3235
+    },
+    "JTOUSDT:15m": {
+      "sentAt": "2026-11-10T00:17:26.246Z",
+      "symbol": "JTOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.33435000000000004,
+      "stop": 0.3329
     }
   }
 }

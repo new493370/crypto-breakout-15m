@@ -181,7 +181,8 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     const lastCandle = candles[candles.length - 1];
     result.current_price = lastCandle.close;
 
-    const ema50 = calculateEMA(candles, 50);
+    const emaPeriod = Number.isFinite(CONFIG.EMA_PERIOD) ? CONFIG.EMA_PERIOD : 50;
+    const ema50 = calculateEMA(candles, emaPeriod);
     const isUptrend = ema50 !== null && lastCandle.close > ema50;
     const isDowntrend = ema50 !== null && lastCandle.close < ema50;
 

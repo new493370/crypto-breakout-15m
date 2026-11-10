@@ -174,6 +174,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-10T12:02:16.295Z"
+    },
+    "ATHUSDT:15m:2026-11-10T12:17:27.947Z": {
+      "symbol": "ATHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T12:17:27.947Z"
+    },
+    "ASTERUSDT:15m:2026-11-10T12:17:29.616Z": {
+      "symbol": "ASTERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T12:17:29.616Z"
     }
   },
   "recentSignals": [
@@ -273,13 +287,14 @@
       "signalCandleTime": 1794305700000,
       "rr1": 2,
       "sentAt": "2026-11-10T10:32:10.270Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:00:33.145Z",
+      "statusUpdatedAt": "2026-11-10T12:15:34.403Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 141.10999999999999
     },
     {
       "symbol": "BERAUSDT",
@@ -293,13 +308,14 @@
       "signalCandleTime": 1794301200000,
       "rr1": 2,
       "sentAt": "2026-11-10T10:32:12.153Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:00:33.145Z",
+      "statusUpdatedAt": "2026-11-10T12:15:36.109Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.10440000000000005
     },
     {
       "symbol": "CCUSDT",
@@ -441,7 +457,7 @@
       "sentAt": "2026-11-10T10:32:24.377Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:00:33.145Z",
+      "statusUpdatedAt": "2026-11-10T12:15:36.109Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -501,13 +517,14 @@
       "signalCandleTime": 1794305700000,
       "rr1": 2,
       "sentAt": "2026-11-10T10:32:29.559Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:00:33.145Z",
+      "statusUpdatedAt": "2026-11-10T12:15:37.794Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 141.06
     },
     {
       "symbol": "INITUSDT",
@@ -565,7 +582,7 @@
       "sentAt": "2026-11-10T11:17:15.252Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:00:33.145Z",
+      "statusUpdatedAt": "2026-11-10T12:15:37.794Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -625,13 +642,14 @@
       "signalCandleTime": 1794310200000,
       "rr1": 2,
       "sentAt": "2026-11-10T11:47:18.718Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:00:36.977Z",
+      "statusUpdatedAt": "2026-11-10T12:15:39.465Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.030449999999999998
     },
     {
       "symbol": "AZTECUSDT",
@@ -666,13 +684,14 @@
       "signalCandleTime": 1794304800000,
       "rr1": 2,
       "sentAt": "2026-11-10T12:02:14.596Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:02:14.596Z",
+      "statusUpdatedAt": "2026-11-10T12:15:41.183Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.08453500000000003
     },
     {
       "symbol": "FLOWUSDT",
@@ -688,7 +707,47 @@
       "sentAt": "2026-11-10T12:02:16.295Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T12:02:16.295Z",
+      "statusUpdatedAt": "2026-11-10T12:15:41.184Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ATHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.0045535,
+      "stop": 0.004594,
+      "tp1": 0.004472500000000001,
+      "zoneLow": 0.00454,
+      "zoneHigh": 0.004567,
+      "signalCandleTime": 1794311100000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T12:17:27.947Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T12:17:27.947Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.65205,
+      "stop": 0.6579,
+      "tp1": 0.64035,
+      "zoneLow": 0.6501,
+      "zoneHigh": 0.654,
+      "signalCandleTime": 1794311100000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T12:17:29.616Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T12:17:29.616Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -696,34 +755,34 @@
     }
   ],
   "allTime": {
-    "total": 25,
-    "tp1Hit": 12,
+    "total": 27,
+    "tp1Hit": 14,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 5,
-    "active": 8,
-    "tp1Rate": 70.6,
+    "stopped": 8,
+    "active": 5,
+    "tp1Rate": 63.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 29.4
+    "stopRate": 36.4
   },
   "byDirection": {
     "bullish": {
       "total": 12,
-      "tp1Hit": 3,
+      "tp1Hit": 5,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 4,
-      "tp1Rate": 42.9
+      "stopped": 6,
+      "tp1Rate": 45.5
     },
     "bearish": {
-      "total": 13,
+      "total": 15,
       "tp1Hit": 9,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 1,
-      "tp1Rate": 90
+      "stopped": 2,
+      "tp1Rate": 81.8
     }
   },
-  "lastUpdated": "2026-11-10T12:02:17.797Z"
+  "lastUpdated": "2026-11-10T12:17:31.119Z"
 }

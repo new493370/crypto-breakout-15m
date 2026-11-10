@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T12:02:17.796Z",
+  "lastUpdated": "2026-11-10T12:17:31.117Z",
   "signals": {
-    "DOGEUSDT:15m": {
-      "sentAt": "2026-11-10T06:17:20.270Z",
-      "symbol": "DOGEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.06988,
-      "stop": 0.06967
-    },
-    "ENAUSDT:15m": {
-      "sentAt": "2026-11-10T06:17:21.923Z",
-      "symbol": "ENAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.153,
-      "stop": 0.15141
-    },
-    "AVGOSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T06:17:23.586Z",
-      "symbol": "AVGOSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 318.81,
-      "stop": 317.43000000000006
-    },
-    "CBRSSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T06:17:25.268Z",
-      "symbol": "CBRSSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 96.08500000000001,
-      "stop": 95.86000000000001
-    },
     "TURBOUSDT:15m": {
       "sentAt": "2026-11-10T06:32:13.736Z",
       "symbol": "TURBOUSDT",
@@ -558,6 +522,24 @@
       "score": null,
       "entry": 0.020319999999999998,
       "stop": 0.02041
+    },
+    "ATHUSDT:15m": {
+      "sentAt": "2026-11-10T12:17:27.947Z",
+      "symbol": "ATHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0045535,
+      "stop": 0.004594
+    },
+    "ASTERUSDT:15m": {
+      "sentAt": "2026-11-10T12:17:29.616Z",
+      "symbol": "ASTERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.65205,
+      "stop": 0.6579
     }
   }
 }

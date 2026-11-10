@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T07:47:19.455Z",
+  "lastUpdated": "2026-11-10T08:02:17.768Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,24 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "SPACEUSDT:15m": {
-      "sentAt": "2026-11-10T02:02:15.560Z",
-      "symbol": "SPACEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0032395,
-      "stop": 0.0033020000000000002
-    },
-    "AXISUSDT:15m": {
-      "sentAt": "2026-11-10T02:02:17.248Z",
-      "symbol": "AXISUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.11080000000000001,
-      "stop": 0.1119
     },
     "BERAUSDT:15m": {
       "sentAt": "2026-11-10T02:02:18.926Z",

@@ -15,6 +15,11 @@ function getConfigNumber(key, fallback, min = 0) {
   return Number.isFinite(value) ? Math.max(min, value) : fallback;
 }
 
+function getConfigBool(key, fallback) {
+  const value = CONFIG[key];
+  return typeof value === "boolean" ? value : fallback;
+}
+
 function isValidCandle(c) {
   if (!c || c.incomplete) return false;
   const high = cHigh(c);
@@ -135,9 +140,56 @@ function isSignificantSwing(candles, index, left, right, type) {
   return prominence >= atr * minSwingAtr;
 }
 
-function detectRawPivots(candles, left, right) {
+export function calculateEMA(candles, period) {
+  if (!Array.isArray(candles) || !Number.isInteger(period) || period < 1 || candles.length < period) {
+    return null;
+  }
+
+  const closes = [];
+  for (const candle of candles) {
+    if (!isValidCandle(candle)) return null;
+    closes.push(cClose(candle));
+  }
+
+  const multiplier = 2 / (period + 1);
+  let ema = closes.slice(0, period).reduce((sum, value) => sum + value, 0) / period;
+
+  for (let i = period; i < closes.length; i++) {
+    ema = (closes[i] - ema) * multiplier + ema;
+  }
+
+  return Number.isFinite(ema) ? ema : null;
+}
+
+function getEMAAt(candles, index, period) {
+  const startIndex = index - period + 1;
+  if (startIndex < 0) return null;
+  
+  const slice = candles.slice(startIndex, index + 1);
+  return calculateEMA(slice, period);
+}
+
+function isValidEMAAlignment(emaValue, candle, type) {
+  if (emaValue === null) return true;
+  
+  const isFilterEnabled = getConfigBool("USE_EMA_TREND_FILTER", true);
+  if (!isFilterEnabled) return true;
+
+  if (type === "high") {
+    return cHigh(candle) <= emaValue;
+  }
+  
+  if (type === "low") {
+    return cLow(candle) >= emaValue;
+  }
+
+  return true;
+}
+
+function detectRawPivots(candles, left, right, emaPeriod) {
   const highs = [];
   const lows = [];
+  const minGapRatio = getConfigNumber("MIN_SWING_PRICE_GAP_RATIO", 0.005);
 
   for (let i = left; i < candles.length - right; i++) {
     const current = candles[i];
@@ -173,15 +225,40 @@ function detectRawPivots(candles, left, right) {
     };
 
     if (isHigh && isSignificantSwing(candles, i, left, right, "high")) {
-      highs.push({ ...pivot, price: high, type: "high" });
+      const emaValue = getEMAAt(candles, i, emaPeriod);
+      if (isValidEMAAlignment(emaValue, current, "high")) {
+        highs.push({ ...pivot, price: high, type: "high" });
+      }
     }
 
     if (isLow && isSignificantSwing(candles, i, left, right, "low")) {
-      lows.push({ ...pivot, price: low, type: "low" });
+      const emaValue = getEMAAt(candles, i, emaPeriod);
+      if (isValidEMAAlignment(emaValue, current, "low")) {
+        lows.push({ ...pivot, price: low, type: "low" });
+      }
     }
   }
 
-  return { highs, lows };
+  const filterByGap = (items) => {
+    const filtered = [];
+    for (const item of items) {
+      if (filtered.length === 0) {
+        filtered.push(item);
+        continue;
+      }
+      const last = filtered[filtered.length - 1];
+      const gap = Math.abs(item.price - last.price) / last.price;
+      if (gap >= minGapRatio) {
+        filtered.push(item);
+      }
+    }
+    return filtered;
+  };
+
+  return {
+    highs: filterByGap(highs),
+    lows: filterByGap(lows)
+  };
 }
 
 function findStructureBreak(candles, candidate, reference, direction) {
@@ -343,7 +420,8 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
     return { highs: [], lows: [] };
   }
 
-  const raw = detectRawPivots(candles, left, right);
+  const emaPeriod = getConfigNumber("EMA_PERIOD", 50, 1);
+  const raw = detectRawPivots(candles, left, right, emaPeriod);
   return confirmMinorSwings(candles, raw.highs, raw.lows);
 }
 
@@ -538,25 +616,4 @@ export function isEngulfing(prevCandle, currCandle, direction) {
     return isBull(prevCandle) && isBull(currCandle) && 
            currTop >= prevTop && currBottom <= prevBottom;
   }
-}
-
-export function calculateEMA(candles, period = 50) {
-  if (!Array.isArray(candles) || !Number.isInteger(period) || period < 1 || candles.length < period) {
-    return null;
-  }
-
-  const closes = [];
-  for (const candle of candles) {
-    if (!isValidCandle(candle)) return null;
-    closes.push(cClose(candle));
-  }
-
-  const multiplier = 2 / (period + 1);
-  let ema = closes.slice(0, period).reduce((sum, value) => sum + value, 0) / period;
-
-  for (let i = period; i < closes.length; i++) {
-    ema = (closes[i] - ema) * multiplier + ema;
-  }
-
-  return Number.isFinite(ema) ? ema : null;
 }

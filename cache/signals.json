@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T13:32:28.092Z",
+  "lastUpdated": "2026-11-10T13:47:54.115Z",
   "signals": {
-    "ALGOUSDT:15m": {
-      "sentAt": "2026-11-10T07:47:17.953Z",
-      "symbol": "ALGOUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.092505,
-      "stop": 0.09282
-    },
     "PONSUSDT:15m": {
       "sentAt": "2026-11-10T08:17:17.103Z",
       "symbol": "PONSUSDT",
@@ -522,6 +513,87 @@
       "score": null,
       "entry": 2.411,
       "stop": 2.423
+    },
+    "SHIBUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:39.077Z",
+      "symbol": "SHIBUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0000044525,
+      "stop": 0.000004463
+    },
+    "BONKUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:40.800Z",
+      "symbol": "BONKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.000002818,
+      "stop": 0.0000028450000000000003
+    },
+    "FLOKIUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:42.499Z",
+      "symbol": "FLOKIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.000021115,
+      "stop": 0.000021190000000000002
+    },
+    "TURBOUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:44.184Z",
+      "symbol": "TURBOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0007057000000000001,
+      "stop": 0.0007078000000000001
+    },
+    "MEGAUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:45.864Z",
+      "symbol": "MEGAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.051320000000000005,
+      "stop": 0.05156
+    },
+    "2ZUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:47.552Z",
+      "symbol": "2ZUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.01944,
+      "stop": 0.019530000000000002
+    },
+    "RESOLVUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:49.243Z",
+      "symbol": "RESOLVUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.013850000000000001,
+      "stop": 0.013880000000000002
+    },
+    "AUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:50.928Z",
+      "symbol": "AUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.075735,
+      "stop": 0.07518000000000001
+    },
+    "JELLYJELLYUSDT:15m": {
+      "sentAt": "2026-11-10T13:47:52.613Z",
+      "symbol": "JELLYJELLYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.03979,
+      "stop": 0.040150000000000005
     }
   }
 }

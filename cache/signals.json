@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T05:47:02.423Z",
+  "lastUpdated": "2026-11-10T06:02:06.576Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,33 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "AKEUSDT:15m": {
-      "sentAt": "2026-11-09T23:47:20.648Z",
-      "symbol": "AKEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0043885,
-      "stop": 0.006494
-    },
-    "UNIUSDT:15m": {
-      "sentAt": "2026-11-09T23:47:22.321Z",
-      "symbol": "UNIUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 7.042,
-      "stop": 7.128
-    },
-    "ARXUSDT:15m": {
-      "sentAt": "2026-11-09T23:47:23.980Z",
-      "symbol": "ARXUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.2163,
-      "stop": 0.2169
     },
     "PUMPUSDT:15m": {
       "sentAt": "2026-11-10T00:02:22.189Z",
@@ -657,6 +630,42 @@
       "score": null,
       "entry": 0.08327,
       "stop": 0.0836
+    },
+    "GMTUSDT:15m": {
+      "sentAt": "2026-11-10T06:01:59.991Z",
+      "symbol": "GMTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0060015,
+      "stop": 0.005976
+    },
+    "SUIUSDT:15m": {
+      "sentAt": "2026-11-10T06:02:01.682Z",
+      "symbol": "SUIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.8429,
+      "stop": 0.8387
+    },
+    "ESPUSDT:15m": {
+      "sentAt": "2026-11-10T06:02:03.380Z",
+      "symbol": "ESPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.07713,
+      "stop": 0.07701000000000001
+    },
+    "SUSHIUSDT:15m": {
+      "sentAt": "2026-11-10T06:02:05.074Z",
+      "symbol": "SUSHIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.17654999999999998,
+      "stop": 0.1761
     }
   }
 }

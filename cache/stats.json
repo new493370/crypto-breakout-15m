@@ -1,1 +1,145 @@
-{}
+{
+  "processedSignals": {
+    "GMTUSDT:15m:2026-11-10T06:01:59.991Z": {
+      "symbol": "GMTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:01:59.991Z"
+    },
+    "SUIUSDT:15m:2026-11-10T06:02:01.682Z": {
+      "symbol": "SUIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:02:01.682Z"
+    },
+    "ESPUSDT:15m:2026-11-10T06:02:03.380Z": {
+      "symbol": "ESPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:02:03.380Z"
+    },
+    "SUSHIUSDT:15m:2026-11-10T06:02:05.074Z": {
+      "symbol": "SUSHIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T06:02:05.074Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "GMTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.0060015,
+      "stop": 0.005976,
+      "tp1": 0.006052499999999999,
+      "zoneLow": 0.005993,
+      "zoneHigh": 0.00601,
+      "signalCandleTime": 1794288600000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:01:59.991Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:01:59.991Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SUIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.8429,
+      "stop": 0.8387,
+      "tp1": 0.8513,
+      "zoneLow": 0.8415,
+      "zoneHigh": 0.8443,
+      "signalCandleTime": 1794287700000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:02:01.682Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:02:01.682Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ESPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.07713,
+      "stop": 0.07701000000000001,
+      "tp1": 0.07737,
+      "zoneLow": 0.07709,
+      "zoneHigh": 0.07717,
+      "signalCandleTime": 1794283200000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:02:03.380Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:02:03.380Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SUSHIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.17654999999999998,
+      "stop": 0.1761,
+      "tp1": 0.17744999999999994,
+      "zoneLow": 0.1764,
+      "zoneHigh": 0.1767,
+      "signalCandleTime": 1794287700000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T06:02:05.074Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T06:02:05.074Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "allTime": {
+    "total": 4,
+    "tp1Hit": 0,
+    "tp2Hit": 0,
+    "tp3Hit": 0,
+    "stopped": 0,
+    "active": 4,
+    "tp1Rate": 0,
+    "tp2Rate": 0,
+    "tp3Rate": 0,
+    "stopRate": 0
+  },
+  "byDirection": {
+    "bullish": {
+      "total": 4,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    },
+    "bearish": {
+      "total": 0,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    }
+  },
+  "lastUpdated": "2026-11-10T06:02:06.578Z"
+}

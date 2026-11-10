@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T14:32:12.857Z",
+  "lastUpdated": "2026-11-10T14:47:23.577Z",
   "signals": {
-    "CFXUSDT:15m": {
-      "sentAt": "2026-11-10T08:47:09.292Z",
-      "symbol": "CFXUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.041405,
-      "stop": 0.04148
-    },
-    "VIRTUALUSDT:15m": {
-      "sentAt": "2026-11-10T08:47:11.015Z",
-      "symbol": "VIRTUALUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.54425,
-      "stop": 0.5468000000000001
-    },
     "NVIDIAUSDT:15m": {
       "sentAt": "2026-11-10T09:17:22.330Z",
       "symbol": "NVIDIAUSDT",
@@ -648,6 +630,33 @@
       "score": null,
       "entry": 351.9,
       "stop": 351.18000000000006
+    },
+    "RSRUSDT:15m": {
+      "sentAt": "2026-11-10T14:47:18.756Z",
+      "symbol": "RSRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0016395,
+      "stop": 0.001623
+    },
+    "LABUSDT:15m": {
+      "sentAt": "2026-11-10T14:47:20.409Z",
+      "symbol": "LABUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.040959999999999996,
+      "stop": 0.04078
+    },
+    "LAYERUSDT:15m": {
+      "sentAt": "2026-11-10T14:47:22.076Z",
+      "symbol": "LAYERUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.051325,
+      "stop": 0.05122
     }
   }
 }

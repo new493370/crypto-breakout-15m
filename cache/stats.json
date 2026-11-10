@@ -28,13 +28,14 @@
       "signalCandleTime": 1794196800000,
       "rr1": 2,
       "sentAt": "2026-11-10T21:22:49.310Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T21:22:49.310Z",
+      "statusUpdatedAt": "2026-11-10T21:30:38.683Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.13850000000000004
     },
     {
       "symbol": "PROSUSDT",
@@ -48,13 +49,14 @@
       "signalCandleTime": 1794198600000,
       "rr1": 2,
       "sentAt": "2026-11-10T21:22:50.991Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T21:22:50.991Z",
+      "statusUpdatedAt": "2026-11-10T21:30:40.361Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.4850000000000001
     }
   ],
   "allTime": {
@@ -62,12 +64,12 @@
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
-    "active": 2,
+    "stopped": 2,
+    "active": 0,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 100
   },
   "byDirection": {
     "bullish": {
@@ -75,7 +77,7 @@
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
+      "stopped": 2,
       "tp1Rate": 0
     },
     "bearish": {
@@ -87,5 +89,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T21:22:52.493Z"
+  "lastUpdated": "2026-11-10T21:32:50.085Z"
 }

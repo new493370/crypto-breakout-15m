@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T09:02:10.834Z",
+  "lastUpdated": "2026-11-10T09:17:30.744Z",
   "signals": {
-    "INITUSDT:15m": {
-      "sentAt": "2026-11-10T03:02:39.255Z",
-      "symbol": "INITUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.193025,
-      "stop": 0.21176
-    },
-    "CNPYUSDT:15m": {
-      "sentAt": "2026-11-10T03:02:40.922Z",
-      "symbol": "CNPYUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.12204999999999999,
-      "stop": 0.11889999999999999
-    },
-    "SOPHUSDT:15m": {
-      "sentAt": "2026-11-10T03:17:30.425Z",
-      "symbol": "SOPHUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.001211,
-      "stop": 0.001195
-    },
     "HOMEUSDT:15m": {
       "sentAt": "2026-11-10T03:17:32.117Z",
       "symbol": "HOMEUSDT",
@@ -540,6 +513,51 @@
       "score": null,
       "entry": 0.54425,
       "stop": 0.5468000000000001
+    },
+    "NVIDIAUSDT:15m": {
+      "sentAt": "2026-11-10T09:17:22.330Z",
+      "symbol": "NVIDIAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 182.095,
+      "stop": 180.58
+    },
+    "JUPUSDT:15m": {
+      "sentAt": "2026-11-10T09:17:24.048Z",
+      "symbol": "JUPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.25439999999999996,
+      "stop": 0.2568
+    },
+    "BRUSDT:15m": {
+      "sentAt": "2026-11-10T09:17:25.776Z",
+      "symbol": "BRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.4738,
+      "stop": 0.46720000000000006
+    },
+    "NVDAUSDT:15m": {
+      "sentAt": "2026-11-10T09:17:27.524Z",
+      "symbol": "NVDAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 182.075,
+      "stop": 180.55999999999997
+    },
+    "LIGHTUSDT:15m": {
+      "sentAt": "2026-11-10T09:17:29.244Z",
+      "symbol": "LIGHTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.2348,
+      "stop": 0.2336
     }
   }
 }

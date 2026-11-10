@@ -35,14 +35,12 @@ function isStrongMomentum(candles, direction) {
 
   const recent = candles.slice(-CONFIG.MOMENTUM_CANDLE_COUNT);
 
-  const strongBullish = recent.every(c =>
-    c.close > c.open &&
-    c.close - c.open > (c.high - c.low) * 0.5
+  const strongBullish = recent.every(
+    c => c.close > c.open && c.close - c.open > (c.high - c.low) * 0.5
   );
 
-  const strongBearish = recent.every(c =>
-    c.close < c.open &&
-    c.open - c.close > (c.high - c.low) * 0.5
+  const strongBearish = recent.every(
+    c => c.close < c.open && c.open - c.close > (c.high - c.low) * 0.5
   );
 
   if (direction === "bullish" && strongBearish) return true;
@@ -181,7 +179,10 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     const lastCandle = candles[candles.length - 1];
     result.current_price = lastCandle.close;
 
-    const emaPeriod = Number.isFinite(CONFIG.EMA_PERIOD) ? CONFIG.EMA_PERIOD : 50;
+    const emaPeriod = Number.isFinite(CONFIG.EMA_PERIOD)
+      ? CONFIG.EMA_PERIOD
+      : 50;
+
     const ema50 = calculateEMA(candles, emaPeriod);
     const isUptrend = ema50 !== null && lastCandle.close > ema50;
     const isDowntrend = ema50 !== null && lastCandle.close < ema50;

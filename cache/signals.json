@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T05:17:09.308Z",
+  "lastUpdated": "2026-11-10T05:32:05.432Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,51 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "OLUSDT:15m": {
-      "sentAt": "2026-11-09T23:17:27.853Z",
-      "symbol": "OLUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0051805,
-      "stop": 0.005358
-    },
-    "CAPUSDT:15m": {
-      "sentAt": "2026-11-09T23:17:29.499Z",
-      "symbol": "CAPUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.099055,
-      "stop": 0.10094
-    },
-    "PARTIUSDT:15m": {
-      "sentAt": "2026-11-09T23:17:31.679Z",
-      "symbol": "PARTIUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.04632,
-      "stop": 0.05460999999999999
-    },
-    "LAYERUSDT:15m": {
-      "sentAt": "2026-11-09T23:17:33.347Z",
-      "symbol": "LAYERUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.050775,
-      "stop": 0.051579999999999994
-    },
-    "OPGUSDT:15m": {
-      "sentAt": "2026-11-09T23:17:34.991Z",
-      "symbol": "OPGUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.1252,
-      "stop": 0.12613000000000002
     },
     "BILLUSDT:15m": {
       "sentAt": "2026-11-09T23:32:17.086Z",
@@ -747,6 +702,24 @@
       "score": null,
       "entry": 643.8399999999999,
       "stop": 642.55
+    },
+    "TRUTHUSDT:15m": {
+      "sentAt": "2026-11-10T05:32:02.202Z",
+      "symbol": "TRUTHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0167225,
+      "stop": 0.016982
+    },
+    "ALLOUSDT:15m": {
+      "sentAt": "2026-11-10T05:32:03.930Z",
+      "symbol": "ALLOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.148395,
+      "stop": 0.14777999999999997
     }
   }
 }

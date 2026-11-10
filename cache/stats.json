@@ -55,6 +55,20 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-10T05:17:07.805Z"
+    },
+    "TRUTHUSDT:15m:2026-11-10T05:32:02.202Z": {
+      "symbol": "TRUTHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:32:02.202Z"
+    },
+    "ALLOUSDT:15m:2026-11-10T05:32:03.930Z": {
+      "symbol": "ALLOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:32:03.930Z"
     }
   },
   "recentSignals": [
@@ -72,7 +86,7 @@
       "sentAt": "2026-11-10T05:02:01.225Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T05:15:29.122Z",
+      "statusUpdatedAt": "2026-11-10T05:30:28.402Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -92,7 +106,7 @@
       "sentAt": "2026-11-10T05:02:02.898Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T05:15:29.122Z",
+      "statusUpdatedAt": "2026-11-10T05:30:28.402Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -154,7 +168,7 @@
       "sentAt": "2026-11-10T05:02:07.959Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T05:15:34.542Z",
+      "statusUpdatedAt": "2026-11-10T05:30:28.402Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -193,13 +207,14 @@
       "signalCandleTime": 1794286800000,
       "rr1": 2,
       "sentAt": "2026-11-10T05:17:06.096Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T05:17:06.096Z",
+      "statusUpdatedAt": "2026-11-10T05:30:32.693Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.12934
     },
     {
       "symbol": "METASTOCKUSDT",
@@ -215,7 +230,47 @@
       "sentAt": "2026-11-10T05:17:07.805Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T05:17:07.805Z",
+      "statusUpdatedAt": "2026-11-10T05:30:32.693Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "TRUTHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.0167225,
+      "stop": 0.016982,
+      "tp1": 0.016203500000000003,
+      "zoneLow": 0.016636,
+      "zoneHigh": 0.016809,
+      "signalCandleTime": 1794287700000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:32:02.202Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:32:02.202Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.148395,
+      "stop": 0.14777999999999997,
+      "tp1": 0.14962500000000006,
+      "zoneLow": 0.14819,
+      "zoneHigh": 0.1486,
+      "signalCandleTime": 1794287700000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:32:03.930Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:32:03.930Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -223,28 +278,28 @@
     }
   ],
   "allTime": {
-    "total": 8,
+    "total": 10,
     "tp1Hit": 2,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 1,
-    "active": 5,
-    "tp1Rate": 66.7,
+    "stopped": 2,
+    "active": 6,
+    "tp1Rate": 50,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33.3
+    "stopRate": 50
   },
   "byDirection": {
     "bullish": {
-      "total": 8,
+      "total": 9,
       "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 1,
-      "tp1Rate": 66.7
+      "stopped": 2,
+      "tp1Rate": 50
     },
     "bearish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -252,5 +307,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T05:17:09.309Z"
+  "lastUpdated": "2026-11-10T05:32:05.433Z"
 }

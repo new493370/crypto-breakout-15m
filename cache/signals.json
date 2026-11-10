@@ -1,78 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T15:15:35.631Z",
+  "lastUpdated": "2026-11-10T15:32:43.387Z",
   "signals": {
-    "NVIDIAUSDT:15m": {
-      "sentAt": "2026-11-10T09:17:22.330Z",
-      "symbol": "NVIDIAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 182.095,
-      "stop": 180.58
-    },
-    "JUPUSDT:15m": {
-      "sentAt": "2026-11-10T09:17:24.048Z",
-      "symbol": "JUPUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.25439999999999996,
-      "stop": 0.2568
-    },
-    "BRUSDT:15m": {
-      "sentAt": "2026-11-10T09:17:25.776Z",
-      "symbol": "BRUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.4738,
-      "stop": 0.46720000000000006
-    },
-    "NVDAUSDT:15m": {
-      "sentAt": "2026-11-10T09:17:27.524Z",
-      "symbol": "NVDAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 182.075,
-      "stop": 180.55999999999997
-    },
-    "LIGHTUSDT:15m": {
-      "sentAt": "2026-11-10T09:17:29.244Z",
-      "symbol": "LIGHTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.2348,
-      "stop": 0.2336
-    },
-    "RVNUSDT:15m": {
-      "sentAt": "2026-11-10T09:32:20.485Z",
-      "symbol": "RVNUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0012295000000000001,
-      "stop": 0.0012249999999999997
-    },
-    "ACHUSDT:15m": {
-      "sentAt": "2026-11-10T09:32:22.182Z",
-      "symbol": "ACHUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00425,
-      "stop": 0.004223
-    },
-    "JASMYUSDT:15m": {
-      "sentAt": "2026-11-10T09:32:23.887Z",
-      "symbol": "JASMYUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.003743,
-      "stop": 0.0037700000000000003
-    },
     "PENGUUSDT:15m": {
       "sentAt": "2026-11-10T10:02:32.210Z",
       "symbol": "PENGUUSDT",
@@ -819,6 +747,33 @@
       "score": null,
       "entry": 0.10049,
       "stop": 0.10010000000000001
+    },
+    "PUMPUSDT:15m": {
+      "sentAt": "2026-11-10T15:32:38.465Z",
+      "symbol": "PUMPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0036125000000000003,
+      "stop": 0.0036349999999999998
+    },
+    "GALAUSDT:15m": {
+      "sentAt": "2026-11-10T15:32:40.189Z",
+      "symbol": "GALAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0015285,
+      "stop": 0.001545
+    },
+    "CHZUSDT:15m": {
+      "sentAt": "2026-11-10T15:32:41.885Z",
+      "symbol": "CHZUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.01105,
+      "stop": 0.01111
     }
   }
 }

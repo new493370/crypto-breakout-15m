@@ -6,7 +6,9 @@ import {
   isValidStructure,
   calculateTrendline,
   detectBreakout,
-  calculateEMA
+  calculateEMA,
+  isPinBar,
+  isEngulfing
 } from "./indicators.js";
 
 function isValidCandle(candle) {
@@ -49,7 +51,7 @@ function isStrongMomentum(candles, direction) {
   return false;
 }
 
-function detectRetestTouchEntry(
+function detectValidRetestEntry(
   candles,
   direction,
   breakoutIndex,
@@ -79,24 +81,16 @@ function detectRetestTouchEntry(
 
   const requiredAwayBars = Number.isFinite(CONFIG.REQUIRED_AWAY_BARS)
     ? Math.max(1, Math.trunc(CONFIG.REQUIRED_AWAY_BARS))
-    : 2;
-
-  const minMoveAwayRatio = Number.isFinite(CONFIG.MIN_MOVE_AWAY_RATIO)
-    ? Math.max(0, CONFIG.MIN_MOVE_AWAY_RATIO)
-    : 0.5;
-
-  const zoneWidth = zoneHigh - zoneLow;
-  const minMoveAway = zoneWidth * minMoveAwayRatio;
+    : 1;
 
   let consecutiveAway = 0;
   let hasMovedAway = false;
-  let legHigh = -Infinity;
-  let legLow = Infinity;
 
   for (let i = breakoutIndex + 1; i <= endIndex; i++) {
     const current = candles[i];
+    const previous = candles[i - 1];
 
-    if (!isValidCandle(current)) {
+    if (!isValidCandle(current) || !isValidCandle(previous)) {
       continue;
     }
 
@@ -107,29 +101,14 @@ function detectRetestTouchEntry(
     if (!hasMovedAway) {
       if (isOutsideZone) {
         consecutiveAway++;
-
         if (consecutiveAway >= requiredAwayBars) {
-          const farEnough = direction === "bullish"
-            ? current.close - zoneHigh >= minMoveAway
-            : zoneLow - current.close >= minMoveAway;
-
-          if (farEnough) {
-            hasMovedAway = true;
-            legHigh = -Infinity;
-            legLow = Infinity;
-          } else {
-            consecutiveAway = 0;
-          }
+          hasMovedAway = true;
         }
       } else {
         consecutiveAway = 0;
       }
-
       continue;
     }
-
-    legHigh = Math.max(legHigh, current.high);
-    legLow = Math.min(legLow, current.low);
 
     const touchesZone =
       current.low <= zoneHigh &&
@@ -139,55 +118,16 @@ function detectRetestTouchEntry(
       continue;
     }
 
-    const pullbackBars = i - breakoutIndex;
-    const maxAge = Number.isFinite(CONFIG.PULLBACK_MAX_AGE_BARS)
-      ? CONFIG.PULLBACK_MAX_AGE_BARS
-      : 3;
-
-    if (candles.length - 1 - i > maxAge) {
-      continue;
-    }
-
     const entryPrice = (zoneHigh + zoneLow) / 2;
 
     if (!Number.isFinite(entryPrice) || entryPrice <= 0) {
       continue;
     }
 
-    const legSize = direction === "bullish"
-      ? legHigh - zoneHigh
-      : zoneLow - legLow;
+    const pinBarValid = isPinBar(current, direction);
+    const engulfingValid = isEngulfing(previous, current, direction);
 
-    const minLegAtr = Number.isFinite(CONFIG.PULLBACK_MIN_LEG_ATR)
-      ? CONFIG.PULLBACK_MIN_LEG_ATR
-      : 0.5;
-
-    const rangeSize = Math.abs(current.high - current.low);
-    const allowedNoise = Number.isFinite(CONFIG.PULLBACK_ALLOWED_NOISE)
-      ? CONFIG.PULLBACK_ALLOWED_NOISE
-      : 2;
-
-    if (legSize <= 0) {
-      continue;
-    }
-
-    const startLegIndex = breakoutIndex + 1;
-    let smallCandleCount = 0;
-
-    for (let j = startLegIndex; j < i; j++) {
-      if (!isValidCandle(candles[j])) continue;
-      const body = Math.abs(candles[j].close - candles[j].open);
-      const range = candles[j].high - candles[j].low;
-      if (range > 0 && body < range * 0.3) {
-        smallCandleCount++;
-      }
-    }
-
-    if (smallCandleCount > allowedNoise && (legHigh - legLow) < rangeSize * 10) {
-      continue;
-    }
-
-    if (legSize < rangeSize * minLegAtr) {
+    if (!pinBarValid && !engulfingValid) {
       continue;
     }
 
@@ -361,7 +301,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const setup = detectRetestTouchEntry(
+    const setup = detectValidRetestEntry(
       candles,
       tradeDirection,
       breakout.index,
@@ -440,7 +380,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     result.status = isBullish ? "LONG" : "SHORT";
 
     result.reasons.push(
-      "شکست خط روند، فاصله‌گیری قیمت و اولین بازگشت و لمس محدوده شکست تأیید شد"
+      "شکست خط روند، فاصله‌گیری قیمت و بازگشت معتبر با تأیید پین‌بار/اینگولف تأیید شد"
     );
 
     return result;

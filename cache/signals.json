@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T16:12:48.000Z",
+  "lastUpdated": "2026-11-10T16:22:13.439Z",
   "signals": {
-    "MEMEUSDT:15m": {
-      "sentAt": "2026-11-10T10:17:29.759Z",
-      "symbol": "MEMEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00037509999999999996,
-      "stop": 0.0003715
-    },
-    "XLMUSDT:15m": {
-      "sentAt": "2026-11-10T10:17:31.422Z",
-      "symbol": "XLMUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.14826,
-      "stop": 0.14922
-    },
     "MEWUSDT:15m": {
       "sentAt": "2026-11-10T10:32:03.219Z",
       "symbol": "MEWUSDT",
@@ -1107,6 +1089,15 @@
       "score": null,
       "entry": 0.0063184999999999995,
       "stop": 0.0063620000000000005
+    },
+    "AIOTUSDT:15m": {
+      "sentAt": "2026-11-10T16:22:11.937Z",
+      "symbol": "AIOTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.16528,
+      "stop": 0.16861
     }
   }
 }

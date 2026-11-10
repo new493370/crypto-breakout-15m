@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T18:21:55.444Z",
+  "lastUpdated": "2026-11-10T18:32:12.418Z",
   "signals": {
     "ROBOUSDT:15m": {
       "sentAt": "2026-11-10T12:32:14.600Z",
@@ -972,6 +972,15 @@
       "score": null,
       "entry": 0.016905,
       "stop": 0.016520000000000003
+    },
+    "ZETAUSDT:15m": {
+      "sentAt": "2026-11-10T18:32:10.916Z",
+      "symbol": "ZETAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.033549999999999996,
+      "stop": 0.03145000000000001
     }
   }
 }

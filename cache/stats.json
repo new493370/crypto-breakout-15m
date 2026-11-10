@@ -1,13 +1,42 @@
 {
-  "processedSignals": {},
-  "recentSignals": [],
+  "processedSignals": {
+    "ZETAUSDT:15m:2026-11-10T18:32:10.916Z": {
+      "symbol": "ZETAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T18:32:10.916Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "ZETAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.033549999999999996,
+      "stop": 0.03145000000000001,
+      "tp1": 0.037749999999999964,
+      "zoneLow": 0.03325,
+      "zoneHigh": 0.03385,
+      "signalCandleTime": 1794326400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T18:32:10.916Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T18:32:10.916Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
   "allTime": {
-    "total": 0,
+    "total": 1,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -15,7 +44,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -31,5 +60,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T18:21:55.445Z"
+  "lastUpdated": "2026-11-10T18:32:12.419Z"
 }

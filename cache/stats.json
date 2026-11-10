@@ -1,13 +1,69 @@
 {
-  "processedSignals": {},
-  "recentSignals": [],
+  "processedSignals": {
+    "CRCLSTOCKUSDT:15m:2026-11-10T03:47:03.891Z": {
+      "symbol": "CRCLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T03:47:03.891Z"
+    },
+    "NBISSTOCKUSDT:15m:2026-11-10T03:47:05.526Z": {
+      "symbol": "NBISSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T03:47:05.526Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "CRCLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 67.45,
+      "stop": 68.16000000000001,
+      "tp1": 66.02999999999999,
+      "zoneLow": 67.74,
+      "zoneHigh": 67.95,
+      "signalCandleTime": 1794281400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T03:47:03.891Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T03:47:03.891Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "NBISSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 141.39,
+      "stop": 145.31,
+      "tp1": 133.54999999999995,
+      "zoneLow": 142.19,
+      "zoneHigh": 143.75,
+      "signalCandleTime": 1794279600000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T03:47:05.526Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T03:47:05.526Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
   "allTime": {
-    "total": 0,
+    "total": 2,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 2,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -23,7 +79,7 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 0,
+      "total": 2,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -31,5 +87,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T03:32:01.019Z"
+  "lastUpdated": "2026-11-10T03:47:07.028Z"
 }

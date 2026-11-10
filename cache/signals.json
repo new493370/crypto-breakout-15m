@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T03:32:01.018Z",
+  "lastUpdated": "2026-11-10T03:47:07.027Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,33 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "XLMUSDT:15m": {
-      "sentAt": "2026-11-09T21:42:26.015Z",
-      "symbol": "XLMUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.14743499999999998,
-      "stop": 0.1459
-    },
-    "MOODENGUSDT:15m": {
-      "sentAt": "2026-11-09T21:42:27.683Z",
-      "symbol": "MOODENGUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.031259999999999996,
-      "stop": 0.03172
-    },
-    "FLOCKUSDT:15m": {
-      "sentAt": "2026-11-09T21:42:29.366Z",
-      "symbol": "FLOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.03919,
-      "stop": 0.03884
     },
     "APRUSDT:15m": {
       "sentAt": "2026-11-09T21:49:19.453Z",
@@ -837,6 +810,24 @@
       "score": null,
       "entry": 0.005178,
       "stop": 0.0051600000000000005
+    },
+    "CRCLSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T03:47:03.891Z",
+      "symbol": "CRCLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 67.45,
+      "stop": 68.16000000000001
+    },
+    "NBISSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T03:47:05.526Z",
+      "symbol": "NBISSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 141.39,
+      "stop": 145.31
     }
   }
 }

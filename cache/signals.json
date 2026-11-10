@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T09:17:30.744Z",
+  "lastUpdated": "2026-11-10T09:32:25.389Z",
   "signals": {
-    "HOMEUSDT:15m": {
-      "sentAt": "2026-11-10T03:17:32.117Z",
-      "symbol": "HOMEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.005178,
-      "stop": 0.0051600000000000005
-    },
     "CRCLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T03:47:03.891Z",
       "symbol": "CRCLSTOCKUSDT",
@@ -558,6 +549,33 @@
       "score": null,
       "entry": 0.2348,
       "stop": 0.2336
+    },
+    "RVNUSDT:15m": {
+      "sentAt": "2026-11-10T09:32:20.485Z",
+      "symbol": "RVNUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0012295000000000001,
+      "stop": 0.0012249999999999997
+    },
+    "ACHUSDT:15m": {
+      "sentAt": "2026-11-10T09:32:22.182Z",
+      "symbol": "ACHUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00425,
+      "stop": 0.004223
+    },
+    "JASMYUSDT:15m": {
+      "sentAt": "2026-11-10T09:32:23.887Z",
+      "symbol": "JASMYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.003743,
+      "stop": 0.0037700000000000003
     }
   }
 }

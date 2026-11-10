@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T10:02:35.359Z",
+  "lastUpdated": "2026-11-10T10:17:32.922Z",
   "signals": {
-    "STXUSDT:15m": {
-      "sentAt": "2026-11-10T04:16:56.645Z",
-      "symbol": "STXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.3102,
-      "stop": 0.30660000000000004
-    },
-    "PROSUSDT:15m": {
-      "sentAt": "2026-11-10T04:16:58.361Z",
-      "symbol": "PROSUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.5257,
-      "stop": 0.5381000000000001
-    },
     "ADAUSDT:15m": {
       "sentAt": "2026-11-10T04:32:16.454Z",
       "symbol": "ADAUSDT",
@@ -522,6 +504,24 @@
       "score": null,
       "entry": 0.00526,
       "stop": 0.005214999999999999
+    },
+    "MEMEUSDT:15m": {
+      "sentAt": "2026-11-10T10:17:29.759Z",
+      "symbol": "MEMEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00037509999999999996,
+      "stop": 0.0003715
+    },
+    "XLMUSDT:15m": {
+      "sentAt": "2026-11-10T10:17:31.422Z",
+      "symbol": "XLMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.14826,
+      "stop": 0.14922
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T00:17:27.749Z",
+  "lastUpdated": "2026-11-10T00:32:25.242Z",
   "signals": {
     "USELESSUSDT:15m": {
       "sentAt": "2026-11-09T19:12:59.331Z",
@@ -1350,6 +1350,33 @@
       "score": null,
       "entry": 0.33435000000000004,
       "stop": 0.3329
+    },
+    "CCUSDT:15m": {
+      "sentAt": "2026-11-10T00:32:20.410Z",
+      "symbol": "CCUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.091675,
+      "stop": 0.09232000000000001
+    },
+    "MSFTSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T00:32:22.078Z",
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 545.3900000000001,
+      "stop": 543.1
+    },
+    "OUSDT:15m": {
+      "sentAt": "2026-11-10T00:32:23.741Z",
+      "symbol": "OUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.45045,
+      "stop": 0.4475
     }
   }
 }

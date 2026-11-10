@@ -93,7 +93,7 @@
       "sentAt": "2026-11-10T04:16:58.360Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T04:30:39.021Z",
+      "statusUpdatedAt": "2026-11-10T04:45:29.053Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -111,13 +111,14 @@
       "signalCandleTime": 1794281400000,
       "rr1": 2,
       "sentAt": "2026-11-10T04:32:16.453Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T04:32:16.453Z",
+      "statusUpdatedAt": "2026-11-10T04:45:32.752Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.1769
     },
     {
       "symbol": "AEONUSDT",
@@ -131,13 +132,14 @@
       "signalCandleTime": 1794283200000,
       "rr1": 2,
       "sentAt": "2026-11-10T04:32:18.117Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T04:32:18.117Z",
+      "statusUpdatedAt": "2026-11-10T04:45:34.430Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.024840000000000004
     },
     {
       "symbol": "PIPPINUSDT",
@@ -151,13 +153,14 @@
       "signalCandleTime": 1794277800000,
       "rr1": 2,
       "sentAt": "2026-11-10T04:32:19.783Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T04:32:19.783Z",
+      "statusUpdatedAt": "2026-11-10T04:45:36.113Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.012829999999999996
     },
     {
       "symbol": "DYDXUSDT",
@@ -173,7 +176,7 @@
       "sentAt": "2026-11-10T04:32:21.447Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T04:32:21.447Z",
+      "statusUpdatedAt": "2026-11-10T04:45:36.113Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -191,13 +194,14 @@
       "signalCandleTime": 1794280500000,
       "rr1": 2,
       "sentAt": "2026-11-10T04:32:23.106Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T04:32:23.106Z",
+      "statusUpdatedAt": "2026-11-10T04:45:37.799Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.08161
     },
     {
       "symbol": "THETAUSDT",
@@ -211,35 +215,36 @@
       "signalCandleTime": 1794280500000,
       "rr1": 2,
       "sentAt": "2026-11-10T04:32:24.756Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T04:32:24.756Z",
+      "statusUpdatedAt": "2026-11-10T04:45:39.483Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.1408
     }
   ],
   "allTime": {
     "total": 8,
-    "tp1Hit": 1,
+    "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
-    "active": 7,
-    "tp1Rate": 100,
+    "stopped": 3,
+    "active": 2,
+    "tp1Rate": 50,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 50
   },
   "byDirection": {
     "bullish": {
       "total": 7,
-      "tp1Hit": 1,
+      "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
-      "tp1Rate": 100
+      "stopped": 3,
+      "tp1Rate": 50
     },
     "bearish": {
       "total": 1,
@@ -250,5 +255,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-10T04:32:26.260Z"
+  "lastUpdated": "2026-11-10T04:47:07.193Z"
 }

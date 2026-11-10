@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T02:32:46.940Z",
+  "lastUpdated": "2026-11-10T02:47:36.471Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -873,6 +873,15 @@
       "score": null,
       "entry": 0.41025,
       "stop": 0.38970000000000005
+    },
+    "POLUSDT:15m": {
+      "sentAt": "2026-11-10T02:47:34.970Z",
+      "symbol": "POLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.088575,
+      "stop": 0.08946
     }
   }
 }

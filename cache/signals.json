@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T01:32:33.192Z",
+  "lastUpdated": "2026-11-10T01:47:13.943Z",
   "signals": {
-    "RSRUSDT:15m": {
-      "sentAt": "2026-11-09T19:32:56.866Z",
-      "symbol": "RSRUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0017360000000000001,
-      "stop": 0.0016769999999999999
-    },
     "NOTUSDT:15m": {
       "sentAt": "2026-11-09T19:59:50.608Z",
       "symbol": "NOTUSDT",
@@ -1512,6 +1503,15 @@
       "score": null,
       "entry": 18.67,
       "stop": 18.520000000000003
+    },
+    "ACUUSDT:15m": {
+      "sentAt": "2026-11-10T01:47:12.441Z",
+      "symbol": "ACUUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.12087,
+      "stop": 0.12027
     }
   }
 }

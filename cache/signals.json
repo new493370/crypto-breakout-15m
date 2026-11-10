@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T17:12:13.551Z",
+  "lastUpdated": "2026-11-10T17:22:05.499Z",
   "signals": {
-    "INITUSDT:15m": {
-      "sentAt": "2026-11-10T11:17:11.810Z",
-      "symbol": "INITUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.217545,
-      "stop": 0.22149
-    },
-    "FOGOUSDT:15m": {
-      "sentAt": "2026-11-10T11:17:13.525Z",
-      "symbol": "FOGOUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0019,
-      "stop": 0.0018939999999999999
-    },
-    "IRYSUSDT:15m": {
-      "sentAt": "2026-11-10T11:17:15.252Z",
-      "symbol": "IRYSUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.016875,
-      "stop": 0.01704
-    },
     "TRUSTUSDT:15m": {
       "sentAt": "2026-11-10T11:32:24.454Z",
       "symbol": "TRUSTUSDT",
@@ -1053,6 +1026,15 @@
       "score": null,
       "entry": 0.36635,
       "stop": 0.36979999999999996
+    },
+    "COREUSDT:15m": {
+      "sentAt": "2026-11-10T17:22:03.998Z",
+      "symbol": "COREUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.011805,
+      "stop": 0.011419999999999998
     }
   }
 }

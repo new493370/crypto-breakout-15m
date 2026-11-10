@@ -132,6 +132,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-10T11:17:15.252Z"
+    },
+    "TRUSTUSDT:15m:2026-11-10T11:32:24.454Z": {
+      "symbol": "TRUSTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T11:32:24.454Z"
     }
   },
   "recentSignals": [
@@ -233,7 +240,7 @@
       "sentAt": "2026-11-10T10:32:10.270Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T11:15:27.713Z",
+      "statusUpdatedAt": "2026-11-10T11:30:29.020Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -253,7 +260,7 @@
       "sentAt": "2026-11-10T10:32:12.153Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T11:15:27.713Z",
+      "statusUpdatedAt": "2026-11-10T11:30:29.020Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -399,7 +406,7 @@
       "sentAt": "2026-11-10T10:32:24.377Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T11:15:27.713Z",
+      "statusUpdatedAt": "2026-11-10T11:30:29.020Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -461,7 +468,7 @@
       "sentAt": "2026-11-10T10:32:29.559Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T11:15:27.713Z",
+      "statusUpdatedAt": "2026-11-10T11:30:29.020Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -479,13 +486,14 @@
       "signalCandleTime": 1794302100000,
       "rr1": 2,
       "sentAt": "2026-11-10T11:17:11.809Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T11:17:11.809Z",
+      "statusUpdatedAt": "2026-11-10T11:30:32.494Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.20965499999999998
     },
     {
       "symbol": "FOGOUSDT",
@@ -499,13 +507,14 @@
       "signalCandleTime": 1794303900000,
       "rr1": 2,
       "sentAt": "2026-11-10T11:17:13.525Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T11:17:13.525Z",
+      "statusUpdatedAt": "2026-11-10T11:30:34.433Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.0018939999999999999
     },
     {
       "symbol": "IRYSUSDT",
@@ -521,7 +530,27 @@
       "sentAt": "2026-11-10T11:17:15.252Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T11:17:15.252Z",
+      "statusUpdatedAt": "2026-11-10T11:30:34.433Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "TRUSTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.06019,
+      "stop": 0.060309999999999996,
+      "tp1": 0.05995000000000001,
+      "zoneLow": 0.06015,
+      "zoneHigh": 0.06023,
+      "signalCandleTime": 1794241800000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T11:32:24.454Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T11:32:24.454Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -529,16 +558,16 @@
     }
   ],
   "allTime": {
-    "total": 19,
-    "tp1Hit": 9,
+    "total": 20,
+    "tp1Hit": 10,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 3,
-    "active": 7,
-    "tp1Rate": 75,
+    "stopped": 4,
+    "active": 6,
+    "tp1Rate": 71.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 25
+    "stopRate": 28.6
   },
   "byDirection": {
     "bullish": {
@@ -546,17 +575,17 @@
       "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 3,
-      "tp1Rate": 40
+      "stopped": 4,
+      "tp1Rate": 33.3
     },
     "bearish": {
-      "total": 9,
-      "tp1Hit": 7,
+      "total": 10,
+      "tp1Hit": 8,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 0,
       "tp1Rate": 100
     }
   },
-  "lastUpdated": "2026-11-10T11:17:16.755Z"
+  "lastUpdated": "2026-11-10T11:32:25.957Z"
 }

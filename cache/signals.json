@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T11:17:16.754Z",
+  "lastUpdated": "2026-11-10T11:32:25.956Z",
   "signals": {
-    "TRUTHUSDT:15m": {
-      "sentAt": "2026-11-10T05:32:02.202Z",
-      "symbol": "TRUTHUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0167225,
-      "stop": 0.016982
-    },
-    "ALLOUSDT:15m": {
-      "sentAt": "2026-11-10T05:32:03.930Z",
-      "symbol": "ALLOUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.148395,
-      "stop": 0.14777999999999997
-    },
     "MAGICUSDT:15m": {
       "sentAt": "2026-11-10T05:47:00.921Z",
       "symbol": "MAGICUSDT",
@@ -567,6 +549,15 @@
       "score": null,
       "entry": 0.016875,
       "stop": 0.01704
+    },
+    "TRUSTUSDT:15m": {
+      "sentAt": "2026-11-10T11:32:24.454Z",
+      "symbol": "TRUSTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.06019,
+      "stop": 0.060309999999999996
     }
   }
 }

@@ -90,6 +90,8 @@ function detectRetestTouchEntry(
 
   let consecutiveAway = 0;
   let hasMovedAway = false;
+  let legHigh = -Infinity;
+  let legLow = Infinity;
 
   for (let i = breakoutIndex + 1; i <= endIndex; i++) {
     const current = candles[i];
@@ -113,6 +115,8 @@ function detectRetestTouchEntry(
 
           if (farEnough) {
             hasMovedAway = true;
+            legHigh = -Infinity;
+            legLow = Infinity;
           } else {
             consecutiveAway = 0;
           }
@@ -124,6 +128,9 @@ function detectRetestTouchEntry(
       continue;
     }
 
+    legHigh = Math.max(legHigh, current.high);
+    legLow = Math.min(legLow, current.low);
+
     const touchesZone =
       current.low <= zoneHigh &&
       current.high >= zoneLow;
@@ -132,9 +139,55 @@ function detectRetestTouchEntry(
       continue;
     }
 
+    const pullbackBars = i - breakoutIndex;
+    const maxAge = Number.isFinite(CONFIG.PULLBACK_MAX_AGE_BARS)
+      ? CONFIG.PULLBACK_MAX_AGE_BARS
+      : 3;
+
+    if (candles.length - 1 - i > maxAge) {
+      continue;
+    }
+
     const entryPrice = (zoneHigh + zoneLow) / 2;
 
     if (!Number.isFinite(entryPrice) || entryPrice <= 0) {
+      continue;
+    }
+
+    const legSize = direction === "bullish"
+      ? legHigh - zoneHigh
+      : zoneLow - legLow;
+
+    const minLegAtr = Number.isFinite(CONFIG.PULLBACK_MIN_LEG_ATR)
+      ? CONFIG.PULLBACK_MIN_LEG_ATR
+      : 0.5;
+
+    const rangeSize = Math.abs(current.high - current.low);
+    const allowedNoise = Number.isFinite(CONFIG.PULLBACK_ALLOWED_NOISE)
+      ? CONFIG.PULLBACK_ALLOWED_NOISE
+      : 2;
+
+    if (legSize <= 0) {
+      continue;
+    }
+
+    const startLegIndex = breakoutIndex + 1;
+    let smallCandleCount = 0;
+
+    for (let j = startLegIndex; j < i; j++) {
+      if (!isValidCandle(candles[j])) continue;
+      const body = Math.abs(candles[j].close - candles[j].open);
+      const range = candles[j].high - candles[j].low;
+      if (range > 0 && body < range * 0.3) {
+        smallCandleCount++;
+      }
+    }
+
+    if (smallCandleCount > allowedNoise && (legHigh - legLow) < rangeSize * 10) {
+      continue;
+    }
+
+    if (legSize < rangeSize * minLegAtr) {
       continue;
     }
 

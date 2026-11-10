@@ -81,6 +81,13 @@ function detectRetestTouchEntry(
     ? Math.max(1, Math.trunc(CONFIG.REQUIRED_AWAY_BARS))
     : 2;
 
+  const minMoveAwayRatio = Number.isFinite(CONFIG.MIN_MOVE_AWAY_RATIO)
+    ? Math.max(0, CONFIG.MIN_MOVE_AWAY_RATIO)
+    : 0.5;
+
+  const zoneWidth = zoneHigh - zoneLow;
+  const minMoveAway = zoneWidth * minMoveAwayRatio;
+
   let consecutiveAway = 0;
   let hasMovedAway = false;
 
@@ -100,7 +107,15 @@ function detectRetestTouchEntry(
         consecutiveAway++;
 
         if (consecutiveAway >= requiredAwayBars) {
-          hasMovedAway = true;
+          const farEnough = direction === "bullish"
+            ? current.close - zoneHigh >= minMoveAway
+            : zoneLow - current.close >= minMoveAway;
+
+          if (farEnough) {
+            hasMovedAway = true;
+          } else {
+            consecutiveAway = 0;
+          }
         }
       } else {
         consecutiveAway = 0;
@@ -279,6 +294,17 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       result.reasons.push(
         "مخالفت با روند اصلی (EMA50 نزولی) - لانگ مجاز نیست"
       );
+      return result;
+    }
+
+    const minZoneWidthRatio = Number.isFinite(CONFIG.MIN_ZONE_WIDTH_RATIO)
+      ? Math.max(0, CONFIG.MIN_ZONE_WIDTH_RATIO)
+      : 0.001;
+
+    const minZoneWidth = result.zone_low * minZoneWidthRatio;
+
+    if (result.zone_width < minZoneWidth) {
+      result.reasons.push("عرض محدوده شکست خیلی کوچیکه");
       return result;
     }
 

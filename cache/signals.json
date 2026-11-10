@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T15:32:43.387Z",
+  "lastUpdated": "2026-11-10T15:46:02.045Z",
   "signals": {
     "PENGUUSDT:15m": {
       "sentAt": "2026-11-10T10:02:32.210Z",
@@ -774,6 +774,177 @@
       "score": null,
       "entry": 0.01105,
       "stop": 0.01111
+    },
+    "RLSUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:23.173Z",
+      "symbol": "RLSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0017845,
+      "stop": 0.0017469999999999999
+    },
+    "SKHYNIXSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:24.915Z",
+      "symbol": "SKHYNIXSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 910.835,
+      "stop": 916.85
+    },
+    "XPLUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:26.623Z",
+      "symbol": "XPLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.05194,
+      "stop": 0.05161
+    },
+    "ANIMEUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:28.327Z",
+      "symbol": "ANIMEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0023785,
+      "stop": 0.002368
+    },
+    "PONSUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:30.028Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1542,
+      "stop": 0.1515
+    },
+    "SKHYSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:31.709Z",
+      "symbol": "SKHYSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 135.24,
+      "stop": 136.74
+    },
+    "BATUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:33.458Z",
+      "symbol": "BATUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.13026,
+      "stop": 0.13125000000000003
+    },
+    "FARTCOINUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:35.157Z",
+      "symbol": "FARTCOINUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.11829999999999999,
+      "stop": 0.1192
+    },
+    "SNXXUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:36.849Z",
+      "symbol": "SNXXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 3.7225,
+      "stop": 3.796
+    },
+    "WOOUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:38.543Z",
+      "symbol": "WOOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0109815,
+      "stop": 0.010926000000000002
+    },
+    "FETUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:40.234Z",
+      "symbol": "FETUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1447,
+      "stop": 0.1462
+    },
+    "DOTUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:41.950Z",
+      "symbol": "DOTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.8569,
+      "stop": 0.8500000000000001
+    },
+    "STXUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:43.704Z",
+      "symbol": "STXUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.31074999999999997,
+      "stop": 0.30820000000000003
+    },
+    "BTWUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:45.391Z",
+      "symbol": "BTWUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.9955,
+      "stop": 0.976
+    },
+    "SPXUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:47.113Z",
+      "symbol": "SPXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.3629,
+      "stop": 0.36560000000000004
+    },
+    "RIVERUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:48.816Z",
+      "symbol": "RIVERUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.7437,
+      "stop": 0.7299
+    },
+    "ACUUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:50.518Z",
+      "symbol": "ACUUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.122645,
+      "stop": 0.12584
+    },
+    "ATOMUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:52.209Z",
+      "symbol": "ATOMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.3835,
+      "stop": 1.4000000000000001
+    },
+    "RKLBSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T15:45:53.899Z",
+      "symbol": "RKLBSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 54.730000000000004,
+      "stop": 53.71
     }
   }
 }

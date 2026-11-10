@@ -42,7 +42,9 @@ function getTrueRange(candle, previousClose) {
   );
 }
 
-function calculateLocalATR(candles, index, period = 14) {
+function calculateLocalATR(candles, index) {
+  const period = getConfigNumber("ATR_PERIOD", 14, 1);
+
   if (
     !Array.isArray(candles) ||
     !Number.isInteger(index) ||
@@ -126,7 +128,7 @@ function isSignificantSwing(candles, index, left, right, type) {
   const minSwingAtr = getConfigNumber("MIN_SWING_ATR", 0.35);
   if (minSwingAtr === 0) return true;
 
-  const atr = calculateLocalATR(candles, index, 14);
+  const atr = calculateLocalATR(candles, index);
   if (!atr) return false;
 
   const prominence = getSwingProminence(candles, index, left, right, type);
@@ -186,6 +188,7 @@ function findStructureBreak(candles, candidate, reference, direction) {
   if (!candidate || !reference) return null;
 
   const startIndex = candidate.confirmed_index + 1;
+  const minBodyAtr = getConfigNumber("IMPULSE_MIN_BODY_ATR", 0.8);
 
   for (let i = startIndex; i < candles.length; i++) {
     const candle = candles[i];
@@ -197,6 +200,12 @@ function findStructureBreak(candles, candidate, reference, direction) {
       : close > reference.price;
 
     if (!broken) continue;
+
+    const atr = calculateLocalATR(candles, i);
+    if (atr) {
+      const bodyAtr = cBody(candle) / atr;
+      if (bodyAtr < minBodyAtr) continue;
+    }
 
     return { index: i, candle, level: reference.price };
   }
@@ -210,7 +219,7 @@ function calculateDisplacementScore(candles, breakIndex, direction) {
     return { displacement: false, displacement_atr: 0, score: 70 };
   }
 
-  const atr = calculateLocalATR(candles, breakIndex, 14);
+  const atr = calculateLocalATR(candles, breakIndex);
   if (!atr) {
     return { displacement: false, displacement_atr: 0, score: 70 };
   }
@@ -343,8 +352,10 @@ export function getLatestMinorSwings(swings, count = 2) {
     return { highs: [], lows: [] };
   }
 
+  const minDistance = getConfigNumber("MIN_SWING_DISTANCE", 10, 1);
+
   const getValidSwings = (items, type) => {
-    return (Array.isArray(items) ? items : [])
+    const valid = (Array.isArray(items) ? items : [])
       .filter(swing =>
         swing &&
         swing.type === type &&
@@ -356,8 +367,21 @@ export function getLatestMinorSwings(swings, count = 2) {
         swing.break_index === swing.confirmed_index &&
         Number.isFinite(swing.score)
       )
-      .sort((a, b) => a.index - b.index)
-      .slice(-count);
+      .sort((a, b) => a.index - b.index);
+
+    const result = [];
+    for (let i = valid.length - 1; i >= 0; i--) {
+      if (result.length === 0) {
+        result.unshift(valid[i]);
+        continue;
+      }
+      const lastSelected = result[0];
+      if (lastSelected.index - valid[i].index >= minDistance) {
+        result.unshift(valid[i]);
+      }
+      if (result.length === count) break;
+    }
+    return result;
   };
 
   return {
@@ -381,8 +405,10 @@ export function isValidStructure(swingA, swingB, direction) {
     return false;
   }
 
+  const minDistance = getConfigNumber("MIN_SWING_DISTANCE", 10, 1);
+
   if (swingB.index <= swingA.index) return false;
-  if (swingB.index - swingA.index < CONFIG.MIN_SWING_DISTANCE) return false;
+  if (swingB.index - swingA.index < minDistance) return false;
   if (swingB.confirmed_index <= swingA.confirmed_index) return false;
 
   if (direction === "bearish" && swingA.type === "high") {

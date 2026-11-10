@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T08:17:18.604Z",
+  "lastUpdated": "2026-11-10T08:32:14.258Z",
   "signals": {
-    "PEPEUSDT:15m": {
-      "sentAt": "2026-11-10T02:17:44.601Z",
-      "symbol": "PEPEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0000051338,
-      "stop": 0.0000051911
-    },
-    "ZBTUSDT:15m": {
-      "sentAt": "2026-11-10T02:17:46.278Z",
-      "symbol": "ZBTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.05858,
-      "stop": 0.05836000000000001
-    },
-    "TRUMPOFFICIALUSDT:15m": {
-      "sentAt": "2026-11-10T02:17:47.937Z",
-      "symbol": "TRUMPOFFICIALUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.1095000000000002,
-      "stop": 1.153
-    },
-    "REUSDT:15m": {
-      "sentAt": "2026-11-10T02:17:49.604Z",
-      "symbol": "REUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.29028,
-      "stop": 0.28824000000000005
-    },
     "EDGEUSDT:15m": {
       "sentAt": "2026-11-10T02:32:45.439Z",
       "symbol": "EDGEUSDT",

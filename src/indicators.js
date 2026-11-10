@@ -15,17 +15,14 @@ function getConfigNumber(key, fallback, min = 0) {
   return Number.isFinite(value) ? Math.max(min, value) : fallback;
 }
 
-function getConfigBool(key, fallback) {
-  const value = CONFIG[key];
-  return typeof value === "boolean" ? value : fallback;
-}
-
 function isValidCandle(c) {
   if (!c || c.incomplete) return false;
+
   const high = cHigh(c);
   const low = cLow(c);
   const open = cOpen(c);
   const close = cClose(c);
+
   return (
     Number.isFinite(high) &&
     Number.isFinite(low) &&
@@ -39,7 +36,9 @@ function isValidCandle(c) {
 
 function getTrueRange(candle, previousClose) {
   const range = cRange(candle);
+
   if (!Number.isFinite(previousClose)) return range;
+
   return Math.max(
     range,
     Math.abs(cHigh(candle) - previousClose),
@@ -130,29 +129,44 @@ function getSwingProminence(candles, index, left, right, type) {
 }
 
 function isSignificantSwing(candles, index, left, right, type) {
-  const minSwingAtr = getConfigNumber("MIN_SWING_ATR", 0.35);
-  if (minSwingAtr === 0) return true;
+  const minSwingAtr = getConfigNumber("MAJOR_SWING_MIN_ATR", 1.5);
 
   const atr = calculateLocalATR(candles, index);
   if (!atr) return false;
 
-  const prominence = getSwingProminence(candles, index, left, right, type);
+  const prominence = getSwingProminence(
+    candles,
+    index,
+    left,
+    right,
+    type
+  );
+
   return prominence >= atr * minSwingAtr;
 }
 
 export function calculateEMA(candles, period) {
-  if (!Array.isArray(candles) || !Number.isInteger(period) || period < 1 || candles.length < period) {
+  if (
+    !Array.isArray(candles) ||
+    !Number.isInteger(period) ||
+    period < 1 ||
+    candles.length < period
+  ) {
     return null;
   }
 
   const closes = [];
+
   for (const candle of candles) {
     if (!isValidCandle(candle)) return null;
     closes.push(cClose(candle));
   }
 
   const multiplier = 2 / (period + 1);
-  let ema = closes.slice(0, period).reduce((sum, value) => sum + value, 0) / period;
+
+  let ema = closes
+    .slice(0, period)
+    .reduce((sum, value) => sum + value, 0) / period;
 
   for (let i = period; i < closes.length; i++) {
     ema = (closes[i] - ema) * multiplier + ema;
@@ -161,35 +175,9 @@ export function calculateEMA(candles, period) {
   return Number.isFinite(ema) ? ema : null;
 }
 
-function getEMAAt(candles, index, period) {
-  const startIndex = index - period + 1;
-  if (startIndex < 0) return null;
-  
-  const slice = candles.slice(startIndex, index + 1);
-  return calculateEMA(slice, period);
-}
-
-function isValidEMAAlignment(emaValue, candle, type) {
-  if (emaValue === null) return true;
-  
-  const isFilterEnabled = getConfigBool("USE_EMA_TREND_FILTER", true);
-  if (!isFilterEnabled) return true;
-
-  if (type === "high") {
-    return cHigh(candle) <= emaValue;
-  }
-  
-  if (type === "low") {
-    return cLow(candle) >= emaValue;
-  }
-
-  return true;
-}
-
-function detectRawPivots(candles, left, right, emaPeriod) {
+function detectRawPivots(candles, left, right) {
   const highs = [];
   const lows = [];
-  const minGapRatio = getConfigNumber("MIN_SWING_PRICE_GAP_RATIO", 0.005);
 
   for (let i = left; i < candles.length - right; i++) {
     const current = candles[i];
@@ -212,6 +200,7 @@ function detectRawPivots(candles, left, right, emaPeriod) {
 
       if (cHigh(candles[j]) >= high) isHigh = false;
       if (cLow(candles[j]) <= low) isLow = false;
+
       if (!isHigh && !isLow) break;
     }
 
@@ -224,67 +213,120 @@ function detectRawPivots(candles, left, right, emaPeriod) {
       type: null
     };
 
-    if (isHigh && isSignificantSwing(candles, i, left, right, "high")) {
-      const emaValue = getEMAAt(candles, i, emaPeriod);
-      if (isValidEMAAlignment(emaValue, current, "high")) {
-        highs.push({ ...pivot, price: high, type: "high" });
-      }
+    if (
+      isHigh &&
+      isSignificantSwing(candles, i, left, right, "high")
+    ) {
+      highs.push({
+        ...pivot,
+        price: high,
+        type: "high"
+      });
     }
 
-    if (isLow && isSignificantSwing(candles, i, left, right, "low")) {
-      const emaValue = getEMAAt(candles, i, emaPeriod);
-      if (isValidEMAAlignment(emaValue, current, "low")) {
-        lows.push({ ...pivot, price: low, type: "low" });
-      }
+    if (
+      isLow &&
+      isSignificantSwing(candles, i, left, right, "low")
+    ) {
+      lows.push({
+        ...pivot,
+        price: low,
+        type: "low"
+      });
     }
   }
 
-  const filterByGap = (items) => {
-    const filtered = [];
-    for (const item of items) {
-      if (filtered.length === 0) {
-        filtered.push(item);
-        continue;
-      }
-      const last = filtered[filtered.length - 1];
-      const gap = Math.abs(item.price - last.price) / last.price;
-      if (gap >= minGapRatio) {
-        filtered.push(item);
-      }
-    }
-    return filtered;
-  };
+  return { highs, lows };
+}
 
-  return {
-    highs: filterByGap(highs),
-    lows: filterByGap(lows)
-  };
+function mergeSameDirectionPivots(pivots) {
+  if (!Array.isArray(pivots) || pivots.length === 0) return [];
+
+  const sorted = [...pivots].sort((a, b) => a.index - b.index);
+  const merged = [];
+
+  for (const pivot of sorted) {
+    const last = merged[merged.length - 1];
+
+    if (!last) {
+      merged.push(pivot);
+      continue;
+    }
+
+    if (last.type !== pivot.type) {
+      merged.push(pivot);
+      continue;
+    }
+
+    const moreExtreme = pivot.type === "high"
+      ? pivot.price > last.price
+      : pivot.price < last.price;
+
+    if (moreExtreme) {
+      merged[merged.length - 1] = pivot;
+    }
+  }
+
+  return merged;
+}
+
+function filterMajorLegs(candles, pivots) {
+  const minLegAtr = getConfigNumber("MAJOR_SWING_MIN_LEG_ATR", 1.5);
+  const filtered = [];
+
+  for (const pivot of pivots) {
+    const previous = filtered[filtered.length - 1];
+
+    if (!previous) {
+      filtered.push(pivot);
+      continue;
+    }
+
+    const distance = Math.abs(pivot.price - previous.price);
+    const atr = calculateLocalATR(candles, pivot.index);
+
+    if (!atr) continue;
+
+    if (distance < atr * minLegAtr) {
+      continue;
+    }
+
+    filtered.push(pivot);
+  }
+
+  return filtered;
 }
 
 function findStructureBreak(candles, candidate, reference, direction) {
   if (!candidate || !reference) return null;
 
   const startIndex = candidate.confirmed_index + 1;
-  const minBodyAtr = getConfigNumber("IMPULSE_MIN_BODY_ATR", 0.8);
+  const breakBufferAtr = getConfigNumber(
+    "STRUCTURE_BREAK_BUFFER_ATR",
+    0.1
+  );
 
   for (let i = startIndex; i < candles.length; i++) {
     const candle = candles[i];
     if (!isValidCandle(candle)) continue;
 
+    const atr = calculateLocalATR(candles, i);
+    if (!atr) continue;
+
+    const buffer = atr * breakBufferAtr;
     const close = cClose(candle);
+
     const broken = direction === "bearish"
-      ? close < reference.price
-      : close > reference.price;
+      ? close < reference.price - buffer
+      : close > reference.price + buffer;
 
     if (!broken) continue;
 
-    const atr = calculateLocalATR(candles, i);
-    if (atr) {
-      const bodyAtr = cBody(candle) / atr;
-      if (bodyAtr < minBodyAtr) continue;
-    }
-
-    return { index: i, candle, level: reference.price };
+    return {
+      index: i,
+      candle,
+      level: reference.price
+    };
   }
 
   return null;
@@ -292,13 +334,23 @@ function findStructureBreak(candles, candidate, reference, direction) {
 
 function calculateDisplacementScore(candles, breakIndex, direction) {
   const candle = candles[breakIndex];
+
   if (!isValidCandle(candle)) {
-    return { displacement: false, displacement_atr: 0, score: 70 };
+    return {
+      displacement: false,
+      displacement_atr: 0,
+      score: 70
+    };
   }
 
   const atr = calculateLocalATR(candles, breakIndex);
+
   if (!atr) {
-    return { displacement: false, displacement_atr: 0, score: 70 };
+    return {
+      displacement: false,
+      displacement_atr: 0,
+      score: 70
+    };
   }
 
   const body = cBody(candle);
@@ -311,17 +363,35 @@ function calculateDisplacementScore(candles, breakIndex, direction) {
       : (cClose(candle) - cLow(candle)) / range
     : 0;
 
-  const minBodyAtr = getConfigNumber("DISPLACEMENT_MIN_BODY_ATR", 0.8);
-  const minClosePosition = getConfigNumber("DISPLACEMENT_CLOSE_POSITION", 0.65, 0.5);
+  const minBodyAtr = getConfigNumber(
+    "DISPLACEMENT_MIN_BODY_ATR",
+    0.8
+  );
+
+  const minClosePosition = getConfigNumber(
+    "DISPLACEMENT_CLOSE_POSITION",
+    0.65,
+    0.5
+  );
 
   const hasDisplacement =
     bodyAtr >= minBodyAtr &&
     closePosition >= minClosePosition &&
     (direction === "bearish" ? isBear(candle) : isBull(candle));
 
-  const bodyScore = Math.min(bodyAtr / Math.max(minBodyAtr, 0.01), 1);
-  const closeScore = Math.min(closePosition / Math.max(minClosePosition, 0.01), 1);
-  const score = Math.round(70 + (bodyScore * 15) + (closeScore * 15));
+  const bodyScore = Math.min(
+    bodyAtr / Math.max(minBodyAtr, 0.01),
+    1
+  );
+
+  const closeScore = Math.min(
+    closePosition / Math.max(minClosePosition, 0.01),
+    1
+  );
+
+  const score = Math.round(
+    70 + bodyScore * 15 + closeScore * 15
+  );
 
   return {
     displacement: hasDisplacement,
@@ -330,85 +400,86 @@ function calculateDisplacementScore(candles, breakIndex, direction) {
   };
 }
 
-function confirmMinorSwings(candles, rawHighs, rawLows) {
+function confirmMajorSwings(candles, pivots) {
   const confirmedHighs = [];
   const confirmedLows = [];
 
-  for (const candidate of rawHighs) {
-    const previousLows = rawLows.filter(swing => swing.index < candidate.index);
-    if (previousLows.length === 0) continue;
+  for (let i = 1; i < pivots.length; i++) {
+    const candidate = pivots[i];
+    const reference = pivots[i - 1];
 
-    const reference = previousLows[previousLows.length - 1];
-    const structureBreak = findStructureBreak(candles, candidate, reference, "bearish");
-    if (!structureBreak) continue;
+    if (candidate.type === reference.type) continue;
 
-    const quality = calculateDisplacementScore(candles, structureBreak.index, "bearish");
+    if (candidate.type === "high") {
+      const structureBreak = findStructureBreak(
+        candles,
+        candidate,
+        reference,
+        "bearish"
+      );
 
-    confirmedHighs.push({
-      ...candidate,
-      confirmed_index: structureBreak.index,
-      pivot_confirmed_index: candidate.confirmed_index,
-      break_index: structureBreak.index,
-      break_level: structureBreak.level,
-      reference_index: reference.index,
-      displacement: quality.displacement,
-      displacement_atr: quality.displacement_atr,
-      score: quality.score
-    });
-  }
+      if (!structureBreak) continue;
 
-  for (const candidate of rawLows) {
-    const previousHighs = rawHighs.filter(swing => swing.index < candidate.index);
-    if (previousHighs.length === 0) continue;
+      const quality = calculateDisplacementScore(
+        candles,
+        structureBreak.index,
+        "bearish"
+      );
 
-    const reference = previousHighs[previousHighs.length - 1];
-    const structureBreak = findStructureBreak(candles, candidate, reference, "bullish");
-    if (!structureBreak) continue;
-
-    const quality = calculateDisplacementScore(candles, structureBreak.index, "bullish");
-
-    confirmedLows.push({
-      ...candidate,
-      confirmed_index: structureBreak.index,
-      pivot_confirmed_index: candidate.confirmed_index,
-      break_index: structureBreak.index,
-      break_level: structureBreak.level,
-      reference_index: reference.index,
-      displacement: quality.displacement,
-      displacement_atr: quality.displacement_atr,
-      score: quality.score
-    });
-  }
-
-  function deduplicate(items, type) {
-    const groups = new Map();
-
-    for (const item of items) {
-      const key = item.break_index;
-
-      if (!groups.has(key)) {
-        groups.set(key, item);
-        continue;
-      }
-
-      const existing = groups.get(key);
-      const isMoreExtreme = type === "high"
-        ? item.price > existing.price
-        : item.price < existing.price;
-
-      if (isMoreExtreme) groups.set(key, item);
+      confirmedHighs.push({
+        ...candidate,
+        confirmed_index: structureBreak.index,
+        pivot_confirmed_index: candidate.confirmed_index,
+        break_index: structureBreak.index,
+        break_level: structureBreak.level,
+        reference_index: reference.index,
+        displacement: quality.displacement,
+        displacement_atr: quality.displacement_atr,
+        score: quality.score
+      });
     }
 
-    return [...groups.values()].sort((a, b) => a.index - b.index);
+    if (candidate.type === "low") {
+      const structureBreak = findStructureBreak(
+        candles,
+        candidate,
+        reference,
+        "bullish"
+      );
+
+      if (!structureBreak) continue;
+
+      const quality = calculateDisplacementScore(
+        candles,
+        structureBreak.index,
+        "bullish"
+      );
+
+      confirmedLows.push({
+        ...candidate,
+        confirmed_index: structureBreak.index,
+        pivot_confirmed_index: candidate.confirmed_index,
+        break_index: structureBreak.index,
+        break_level: structureBreak.level,
+        reference_index: reference.index,
+        displacement: quality.displacement,
+        displacement_atr: quality.displacement_atr,
+        score: quality.score
+      });
+    }
   }
 
   return {
-    highs: deduplicate(confirmedHighs, "high"),
-    lows: deduplicate(confirmedLows, "low")
+    highs: confirmedHighs,
+    lows: confirmedLows
   };
 }
 
-export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.SWING_RIGHT) {
+export function detectSwings(
+  candles,
+  left = CONFIG.SWING_LEFT,
+  right = CONFIG.SWING_RIGHT
+) {
   if (
     !Array.isArray(candles) ||
     !Number.isInteger(left) ||
@@ -420,9 +491,17 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
     return { highs: [], lows: [] };
   }
 
-  const emaPeriod = getConfigNumber("EMA_PERIOD", 50, 1);
-  const raw = detectRawPivots(candles, left, right, emaPeriod);
-  return confirmMinorSwings(candles, raw.highs, raw.lows);
+  const raw = detectRawPivots(candles, left, right);
+
+  const combined = [
+    ...raw.highs,
+    ...raw.lows
+  ].sort((a, b) => a.index - b.index);
+
+  const alternating = mergeSameDirectionPivots(combined);
+  const majorPivots = filterMajorLegs(candles, alternating);
+
+  return confirmMajorSwings(candles, majorPivots);
 }
 
 export function getLatestMinorSwings(swings, count = 2) {
@@ -430,7 +509,11 @@ export function getLatestMinorSwings(swings, count = 2) {
     return { highs: [], lows: [] };
   }
 
-  const minDistance = getConfigNumber("MIN_SWING_DISTANCE", 10, 1);
+  const minDistance = getConfigNumber(
+    "MIN_SWING_DISTANCE",
+    10,
+    1
+  );
 
   const getValidSwings = (items, type) => {
     const valid = (Array.isArray(items) ? items : [])
@@ -448,17 +531,22 @@ export function getLatestMinorSwings(swings, count = 2) {
       .sort((a, b) => a.index - b.index);
 
     const result = [];
+
     for (let i = valid.length - 1; i >= 0; i--) {
       if (result.length === 0) {
         result.unshift(valid[i]);
         continue;
       }
+
       const lastSelected = result[0];
+
       if (lastSelected.index - valid[i].index >= minDistance) {
         result.unshift(valid[i]);
       }
+
       if (result.length === count) break;
     }
+
     return result;
   };
 
@@ -483,7 +571,11 @@ export function isValidStructure(swingA, swingB, direction) {
     return false;
   }
 
-  const minDistance = getConfigNumber("MIN_SWING_DISTANCE", 10, 1);
+  const minDistance = getConfigNumber(
+    "MIN_SWING_DISTANCE",
+    10,
+    1
+  );
 
   if (swingB.index <= swingA.index) return false;
   if (swingB.index - swingA.index < minDistance) return false;
@@ -501,24 +593,42 @@ export function isValidStructure(swingA, swingB, direction) {
 }
 
 export function calculateTrendline(swingA, swingB) {
-  if (!swingA || !swingB || swingB.index === swingA.index) return null;
+  if (!swingA || !swingB || swingB.index === swingA.index) {
+    return null;
+  }
 
-  const slope = (swingB.price - swingA.price) / (swingB.index - swingA.index);
+  const slope =
+    (swingB.price - swingA.price) /
+    (swingB.index - swingA.index);
+
   const intercept = swingA.price - slope * swingA.index;
 
-  if (!Number.isFinite(slope) || !Number.isFinite(intercept)) return null;
+  if (!Number.isFinite(slope) || !Number.isFinite(intercept)) {
+    return null;
+  }
 
   return { slope, intercept };
 }
 
 export function getTrendlinePrice(trendline, index) {
   if (!trendline || !Number.isFinite(index)) return null;
+
   const price = trendline.slope * index + trendline.intercept;
+
   return Number.isFinite(price) ? price : null;
 }
 
-export function detectBreakout(candles, trendline, lineDirection, startIndex) {
-  if (!Array.isArray(candles) || !trendline || !Number.isInteger(startIndex)) {
+export function detectBreakout(
+  candles,
+  trendline,
+  lineDirection,
+  startIndex
+) {
+  if (
+    !Array.isArray(candles) ||
+    !trendline ||
+    !Number.isInteger(startIndex)
+  ) {
     return null;
   }
 
@@ -528,21 +638,34 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
     const previous = candles[i - 1];
     const candle = candles[i];
 
-    if (!isValidCandle(previous) || !isValidCandle(candle)) continue;
+    if (!isValidCandle(previous) || !isValidCandle(candle)) {
+      continue;
+    }
 
     const previousLine = getTrendlinePrice(trendline, i - 1);
     const currentLine = getTrendlinePrice(trendline, i);
 
-    if (!Number.isFinite(previousLine) || !Number.isFinite(currentLine)) continue;
+    if (
+      !Number.isFinite(previousLine) ||
+      !Number.isFinite(currentLine)
+    ) {
+      continue;
+    }
 
     let tradeDirection = null;
 
     if (lineDirection === "bearish") {
-      if (cClose(previous) <= previousLine && cClose(candle) > currentLine) {
+      if (
+        cClose(previous) <= previousLine &&
+        cClose(candle) > currentLine
+      ) {
         tradeDirection = "bullish";
       }
     } else if (lineDirection === "bullish") {
-      if (cClose(previous) >= previousLine && cClose(candle) < currentLine) {
+      if (
+        cClose(previous) >= previousLine &&
+        cClose(candle) < currentLine
+      ) {
         tradeDirection = "bearish";
       }
     }
@@ -553,7 +676,9 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
     const zoneLow = cLow(candle);
     const zoneWidth = zoneHigh - zoneLow;
 
-    if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) continue;
+    if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) {
+      continue;
+    }
 
     return {
       index: i,
@@ -572,48 +697,89 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
 
 export function isPinBar(candle, direction) {
   if (!isValidCandle(candle)) return false;
-  
+
   const range = cRange(candle);
   if (range <= 0) return false;
-  
+
   const body = cBody(candle);
   const bodyRatio = getConfigNumber("PINBAR_BODY_RATIO", 0.3);
-  
+
   if (body / range > bodyRatio) return false;
 
-  const upperWick = cHigh(candle) - Math.max(cOpen(candle), cClose(candle));
-  const lowerWick = Math.min(cOpen(candle), cClose(candle)) - cLow(candle);
+  const upperWick =
+    cHigh(candle) - Math.max(cOpen(candle), cClose(candle));
+
+  const lowerWick =
+    Math.min(cOpen(candle), cClose(candle)) - cLow(candle);
 
   if (direction === "bearish") {
     return upperWick > body * 2;
-  } else {
+  }
+
+  if (direction === "bullish") {
     return lowerWick > body * 2;
   }
+
+  return false;
 }
 
 export function isEngulfing(prevCandle, currCandle, direction) {
-  if (!isValidCandle(prevCandle) || !isValidCandle(currCandle)) return false;
+  if (
+    !isValidCandle(prevCandle) ||
+    !isValidCandle(currCandle)
+  ) {
+    return false;
+  }
 
-  const prevBody = cBody(prevCandle);
   const currBody = cBody(currCandle);
   const currRange = cRange(currCandle);
 
   if (currRange <= 0) return false;
 
-  const bodyRatio = getConfigNumber("ENGULFING_BODY_RATIO", 0.95);
-  
+  const bodyRatio = getConfigNumber(
+    "ENGULFING_BODY_RATIO",
+    0.95
+  );
+
   if (currBody / currRange < bodyRatio) return false;
 
-  const prevTop = Math.max(cOpen(prevCandle), cClose(prevCandle));
-  const prevBottom = Math.min(cOpen(prevCandle), cClose(prevCandle));
-  const currTop = Math.max(cOpen(currCandle), cClose(currCandle));
-  const currBottom = Math.min(cOpen(currCandle), cClose(currCandle));
+  const prevTop = Math.max(
+    cOpen(prevCandle),
+    cClose(prevCandle)
+  );
+
+  const prevBottom = Math.min(
+    cOpen(prevCandle),
+    cClose(prevCandle)
+  );
+
+  const currTop = Math.max(
+    cOpen(currCandle),
+    cClose(currCandle)
+  );
+
+  const currBottom = Math.min(
+    cOpen(currCandle),
+    cClose(currCandle)
+  );
 
   if (direction === "bearish") {
-    return isBear(prevCandle) && isBear(currCandle) && 
-           currTop >= prevTop && currBottom <= prevBottom;
-  } else {
-    return isBull(prevCandle) && isBull(currCandle) && 
-           currTop >= prevTop && currBottom <= prevBottom;
+    return (
+      isBear(prevCandle) &&
+      isBear(currCandle) &&
+      currTop >= prevTop &&
+      currBottom <= prevBottom
+    );
   }
+
+  if (direction === "bullish") {
+    return (
+      isBull(prevCandle) &&
+      isBull(currCandle) &&
+      currTop >= prevTop &&
+      currBottom <= prevBottom
+    );
+  }
+
+  return false;
 }

@@ -1,1 +1,226 @@
-{}
+{
+  "processedSignals": {
+    "UKOILUSDT:15m:2026-11-10T16:31:58.675Z": {
+      "symbol": "UKOILUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:31:58.675Z"
+    },
+    "UPUSDT:15m:2026-11-10T16:32:00.350Z": {
+      "symbol": "UPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:32:00.350Z"
+    },
+    "SEIUSDT:15m:2026-11-10T16:32:02.034Z": {
+      "symbol": "SEIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:32:02.034Z"
+    },
+    "MSFTSTOCKUSDT:15m:2026-11-10T16:32:03.712Z": {
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:32:03.712Z"
+    },
+    "PAXGUSDT:15m:2026-11-10T16:32:05.488Z": {
+      "symbol": "PAXGUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:32:05.488Z"
+    },
+    "JASMYUSDT:15m:2026-11-10T16:32:07.185Z": {
+      "symbol": "JASMYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:32:07.185Z"
+    },
+    "CSOPSKHYNIX2LUSDT:15m:2026-11-10T16:32:08.857Z": {
+      "symbol": "CSOPSKHYNIX2LUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T16:32:08.857Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "UKOILUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 89.845,
+      "stop": 89.19999999999999,
+      "tp1": 91.13500000000002,
+      "zoneLow": 89.63,
+      "zoneHigh": 90.06,
+      "signalCandleTime": 1794326400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:31:58.675Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:31:58.675Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "UPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.14765,
+      "stop": 0.15200000000000002,
+      "tp1": 0.13894999999999996,
+      "zoneLow": 0.1462,
+      "zoneHigh": 0.1491,
+      "signalCandleTime": 1794291300000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:32:00.350Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:32:00.350Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SEIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.044345,
+      "stop": 0.04451,
+      "tp1": 0.044015000000000006,
+      "zoneLow": 0.04429,
+      "zoneHigh": 0.0444,
+      "signalCandleTime": 1794312900000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:32:02.034Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:32:02.034Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 545.54,
+      "stop": 547.8199999999999,
+      "tp1": 540.98,
+      "zoneLow": 544.78,
+      "zoneHigh": 546.3,
+      "signalCandleTime": 1794277800000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:32:03.712Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:32:03.712Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 4127.389999999999,
+      "stop": 4141.669999999999,
+      "tp1": 4098.83,
+      "zoneLow": 4122.63,
+      "zoneHigh": 4132.15,
+      "signalCandleTime": 1794263400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:32:05.488Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:32:05.488Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "JASMYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.0037949999999999998,
+      "stop": 0.0038459999999999996,
+      "tp1": 0.003693,
+      "zoneLow": 0.003778,
+      "zoneHigh": 0.003812,
+      "signalCandleTime": 1794255300000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:32:07.185Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:32:07.185Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "CSOPSKHYNIX2LUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 2.0300000000000002,
+      "stop": 2.036,
+      "tp1": 2.0180000000000007,
+      "zoneLow": 2.028,
+      "zoneHigh": 2.032,
+      "signalCandleTime": 1794267900000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T16:32:08.857Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T16:32:08.857Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "allTime": {
+    "total": 7,
+    "tp1Hit": 0,
+    "tp2Hit": 0,
+    "tp3Hit": 0,
+    "stopped": 0,
+    "active": 7,
+    "tp1Rate": 0,
+    "tp2Rate": 0,
+    "tp3Rate": 0,
+    "stopRate": 0
+  },
+  "byDirection": {
+    "bullish": {
+      "total": 1,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    },
+    "bearish": {
+      "total": 6,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    }
+  },
+  "lastUpdated": "2026-11-10T16:32:10.359Z"
+}

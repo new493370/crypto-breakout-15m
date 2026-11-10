@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T16:22:13.439Z",
+  "lastUpdated": "2026-11-10T16:32:10.358Z",
   "signals": {
-    "MEWUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:03.219Z",
-      "symbol": "MEWUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0003501,
-      "stop": 0.00035280000000000006
-    },
-    "WUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:04.973Z",
-      "symbol": "WUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.010734500000000001,
-      "stop": 0.010691
-    },
-    "PIEVERSEUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:06.760Z",
-      "symbol": "PIEVERSEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 2.0574500000000002,
-      "stop": 1.9555999999999996
-    },
-    "CHIPUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:08.546Z",
-      "symbol": "CHIPUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.034585,
-      "stop": 0.035019999999999996
-    },
-    "SPCXSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T10:32:10.270Z",
-      "symbol": "SPCXSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 142.04,
-      "stop": 141.10999999999999
-    },
     "BERAUSDT:15m": {
       "sentAt": "2026-11-10T10:32:12.153Z",
       "symbol": "BERAUSDT",
@@ -1098,6 +1053,69 @@
       "score": null,
       "entry": 0.16528,
       "stop": 0.16861
+    },
+    "UKOILUSDT:15m": {
+      "sentAt": "2026-11-10T16:31:58.675Z",
+      "symbol": "UKOILUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 89.845,
+      "stop": 89.19999999999999
+    },
+    "UPUSDT:15m": {
+      "sentAt": "2026-11-10T16:32:00.351Z",
+      "symbol": "UPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.14765,
+      "stop": 0.15200000000000002
+    },
+    "SEIUSDT:15m": {
+      "sentAt": "2026-11-10T16:32:02.034Z",
+      "symbol": "SEIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.044345,
+      "stop": 0.04451
+    },
+    "MSFTSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T16:32:03.712Z",
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 545.54,
+      "stop": 547.8199999999999
+    },
+    "PAXGUSDT:15m": {
+      "sentAt": "2026-11-10T16:32:05.488Z",
+      "symbol": "PAXGUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 4127.389999999999,
+      "stop": 4141.669999999999
+    },
+    "JASMYUSDT:15m": {
+      "sentAt": "2026-11-10T16:32:07.185Z",
+      "symbol": "JASMYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0037949999999999998,
+      "stop": 0.0038459999999999996
+    },
+    "CSOPSKHYNIX2LUSDT:15m": {
+      "sentAt": "2026-11-10T16:32:08.857Z",
+      "symbol": "CSOPSKHYNIX2LUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 2.0300000000000002,
+      "stop": 2.036
     }
   }
 }

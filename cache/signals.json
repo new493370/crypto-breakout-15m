@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T08:02:17.768Z",
+  "lastUpdated": "2026-11-10T08:17:18.604Z",
   "signals": {
-    "AAPLSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T02:02:22.288Z",
-      "symbol": "AAPLSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 351.17,
-      "stop": 350.44
-    },
-    "BERAUSDT:15m": {
-      "sentAt": "2026-11-10T02:02:18.926Z",
-      "symbol": "BERAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.10335,
-      "stop": 0.10460000000000001
-    },
-    "SOLUSDT:15m": {
-      "sentAt": "2026-11-10T02:02:20.606Z",
-      "symbol": "SOLUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 86.47,
-      "stop": 87.02000000000001
-    },
-    "MRNASTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T02:02:23.964Z",
-      "symbol": "MRNASTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 272.57000000000005,
-      "stop": 269.32
-    },
     "PEPEUSDT:15m": {
       "sentAt": "2026-11-10T02:17:44.601Z",
       "symbol": "PEPEUSDT",
@@ -603,6 +567,15 @@
       "score": null,
       "entry": 0.092505,
       "stop": 0.09282
+    },
+    "PONSUSDT:15m": {
+      "sentAt": "2026-11-10T08:17:17.103Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.15365,
+      "stop": 0.1517
     }
   }
 }

@@ -1,1 +1,199 @@
-{}
+{
+  "processedSignals": {
+    "XDPUSDT:15m:2026-11-10T05:02:01.225Z": {
+      "symbol": "XDPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:02:01.225Z"
+    },
+    "BICOUSDT:15m:2026-11-10T05:02:02.898Z": {
+      "symbol": "BICOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:02:02.898Z"
+    },
+    "ZORAUSDT:15m:2026-11-10T05:02:04.563Z": {
+      "symbol": "ZORAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:02:04.563Z"
+    },
+    "SUSDT:15m:2026-11-10T05:02:06.242Z": {
+      "symbol": "SUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:02:06.242Z"
+    },
+    "WALUSDT:15m:2026-11-10T05:02:07.959Z": {
+      "symbol": "WALUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:02:07.959Z"
+    },
+    "AINUSDT:15m:2026-11-10T05:02:09.636Z": {
+      "symbol": "AINUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:02:09.636Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "XDPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.015671499999999998,
+      "stop": 0.015532,
+      "tp1": 0.015950499999999992,
+      "zoneLow": 0.015625,
+      "zoneHigh": 0.015718,
+      "signalCandleTime": 1794285900000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:02:01.225Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:02:01.225Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "BICOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.013444999999999999,
+      "stop": 0.013399999999999999,
+      "tp1": 0.013534999999999998,
+      "zoneLow": 0.01343,
+      "zoneHigh": 0.01346,
+      "signalCandleTime": 1794285900000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:02:02.898Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:02:02.898Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ZORAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.0048319999999999995,
+      "stop": 0.004826,
+      "tp1": 0.004843999999999998,
+      "zoneLow": 0.00483,
+      "zoneHigh": 0.004834,
+      "signalCandleTime": 1794280500000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:02:04.563Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:02:04.563Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.036695,
+      "stop": 0.03659,
+      "tp1": 0.036905,
+      "zoneLow": 0.03666,
+      "zoneHigh": 0.03673,
+      "signalCandleTime": 1794281400000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:02:06.242Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:02:06.242Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "WALUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.027725,
+      "stop": 0.02759,
+      "tp1": 0.027995,
+      "zoneLow": 0.02768,
+      "zoneHigh": 0.02777,
+      "signalCandleTime": 1794285000000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:02:07.959Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:02:07.959Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AINUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.107805,
+      "stop": 0.10701,
+      "tp1": 0.109395,
+      "zoneLow": 0.10754,
+      "zoneHigh": 0.10807,
+      "signalCandleTime": 1794284100000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:02:09.636Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:02:09.636Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "allTime": {
+    "total": 6,
+    "tp1Hit": 0,
+    "tp2Hit": 0,
+    "tp3Hit": 0,
+    "stopped": 0,
+    "active": 6,
+    "tp1Rate": 0,
+    "tp2Rate": 0,
+    "tp3Rate": 0,
+    "stopRate": 0
+  },
+  "byDirection": {
+    "bullish": {
+      "total": 6,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    },
+    "bearish": {
+      "total": 0,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    }
+  },
+  "lastUpdated": "2026-11-10T05:02:11.138Z"
+}

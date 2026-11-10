@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T04:47:07.192Z",
+  "lastUpdated": "2026-11-10T05:02:11.137Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,51 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "AINUSDT:15m": {
-      "sentAt": "2026-11-09T22:47:10.635Z",
-      "symbol": "AINUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.104995,
-      "stop": 0.10715999999999999
-    },
-    "SATSUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:04.613Z",
-      "symbol": "SATSUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 8.522e-9,
-      "stop": 8.454e-9
-    },
-    "PLUMEUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:06.379Z",
-      "symbol": "PLUMEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0129385,
-      "stop": 0.012789
-    },
-    "SUIUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:08.103Z",
-      "symbol": "SUIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.8454999999999999,
-      "stop": 0.8426
-    },
-    "UBUSDT:15m": {
-      "sentAt": "2026-11-09T23:02:09.826Z",
-      "symbol": "UBUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.10799500000000001,
-      "stop": 0.10629
     },
     "TRXUSDT:15m": {
       "sentAt": "2026-11-09T23:02:11.584Z",
@@ -756,6 +711,60 @@
       "score": null,
       "entry": 0.141,
       "stop": 0.1408
+    },
+    "XDPUSDT:15m": {
+      "sentAt": "2026-11-10T05:02:01.226Z",
+      "symbol": "XDPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.015671499999999998,
+      "stop": 0.015532
+    },
+    "BICOUSDT:15m": {
+      "sentAt": "2026-11-10T05:02:02.898Z",
+      "symbol": "BICOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.013444999999999999,
+      "stop": 0.013399999999999999
+    },
+    "ZORAUSDT:15m": {
+      "sentAt": "2026-11-10T05:02:04.563Z",
+      "symbol": "ZORAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0048319999999999995,
+      "stop": 0.004826
+    },
+    "SUSDT:15m": {
+      "sentAt": "2026-11-10T05:02:06.243Z",
+      "symbol": "SUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.036695,
+      "stop": 0.03659
+    },
+    "WALUSDT:15m": {
+      "sentAt": "2026-11-10T05:02:07.959Z",
+      "symbol": "WALUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.027725,
+      "stop": 0.02759
+    },
+    "AINUSDT:15m": {
+      "sentAt": "2026-11-10T05:02:09.636Z",
+      "symbol": "AINUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.107805,
+      "stop": 0.10701
     }
   }
 }

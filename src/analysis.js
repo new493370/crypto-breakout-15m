@@ -117,23 +117,7 @@ function detectRetestTouchEntry(
       continue;
     }
 
-    const openInsideZone =
-      current.open >= zoneLow &&
-      current.open <= zoneHigh;
-
-    const gapThroughZone = direction === "bullish"
-      ? current.open < zoneLow
-      : current.open > zoneHigh;
-
-    if (gapThroughZone) {
-      continue;
-    }
-
-    const entryPrice = openInsideZone
-      ? current.open
-      : direction === "bullish"
-        ? zoneHigh
-        : zoneLow;
+    const entryPrice = (zoneHigh + zoneLow) / 2;
 
     if (!Number.isFinite(entryPrice) || entryPrice <= 0) {
       continue;

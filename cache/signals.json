@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T07:32:19.926Z",
+  "lastUpdated": "2026-11-10T07:47:19.455Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,51 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "OPUSDT:15m": {
-      "sentAt": "2026-11-10T01:32:26.666Z",
-      "symbol": "OPUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.10086,
-      "stop": 0.09999
-    },
-    "ETHFIUSDT:15m": {
-      "sentAt": "2026-11-10T01:32:28.310Z",
-      "symbol": "ETHFIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.6309499999999999,
-      "stop": 0.6209
-    },
-    "RKLBSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T01:32:30.054Z",
-      "symbol": "RKLBSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 55.08,
-      "stop": 59.78
-    },
-    "BMNRSTOCKUSDT:15m": {
-      "sentAt": "2026-11-10T01:32:31.690Z",
-      "symbol": "BMNRSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 18.67,
-      "stop": 18.520000000000003
-    },
-    "ACUUSDT:15m": {
-      "sentAt": "2026-11-10T01:47:12.441Z",
-      "symbol": "ACUUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.12087,
-      "stop": 0.12027
     },
     "SPACEUSDT:15m": {
       "sentAt": "2026-11-10T02:02:15.560Z",
@@ -657,6 +612,15 @@
       "score": null,
       "entry": 0.1594,
       "stop": 0.15849999999999997
+    },
+    "ALGOUSDT:15m": {
+      "sentAt": "2026-11-10T07:47:17.953Z",
+      "symbol": "ALGOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.092505,
+      "stop": 0.09282
     }
   }
 }

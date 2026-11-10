@@ -168,13 +168,14 @@
       "signalCandleTime": 1794303900000,
       "rr1": 2,
       "sentAt": "2026-11-10T10:32:06.760Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T10:45:39.998Z",
+      "statusUpdatedAt": "2026-11-10T11:00:32.405Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 1.9555999999999996
     },
     {
       "symbol": "CHIPUSDT",
@@ -211,7 +212,7 @@
       "sentAt": "2026-11-10T10:32:10.270Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T10:45:41.665Z",
+      "statusUpdatedAt": "2026-11-10T11:00:32.405Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -231,7 +232,7 @@
       "sentAt": "2026-11-10T10:32:12.153Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T10:45:41.665Z",
+      "statusUpdatedAt": "2026-11-10T11:00:32.405Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -377,7 +378,7 @@
       "sentAt": "2026-11-10T10:32:24.377Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T10:45:51.685Z",
+      "statusUpdatedAt": "2026-11-10T11:00:32.405Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -439,7 +440,7 @@
       "sentAt": "2026-11-10T10:32:29.559Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-10T10:45:55.026Z",
+      "statusUpdatedAt": "2026-11-10T11:00:32.405Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -451,12 +452,12 @@
     "tp1Hit": 9,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 2,
-    "active": 5,
-    "tp1Rate": 81.8,
+    "stopped": 3,
+    "active": 4,
+    "tp1Rate": 75,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 18.2
+    "stopRate": 25
   },
   "byDirection": {
     "bullish": {
@@ -464,8 +465,8 @@
       "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 2,
-      "tp1Rate": 50
+      "stopped": 3,
+      "tp1Rate": 40
     },
     "bearish": {
       "total": 7,
@@ -476,5 +477,5 @@
       "tp1Rate": 100
     }
   },
-  "lastUpdated": "2026-11-10T10:47:37.143Z"
+  "lastUpdated": "2026-11-10T11:02:04.280Z"
 }

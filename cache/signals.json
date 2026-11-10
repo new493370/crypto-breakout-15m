@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T10:47:37.142Z",
+  "lastUpdated": "2026-11-10T11:02:04.279Z",
   "signals": {
-    "XDPUSDT:15m": {
-      "sentAt": "2026-11-10T05:02:01.226Z",
-      "symbol": "XDPUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.015671499999999998,
-      "stop": 0.015532
-    },
-    "BICOUSDT:15m": {
-      "sentAt": "2026-11-10T05:02:02.898Z",
-      "symbol": "BICOUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.013444999999999999,
-      "stop": 0.013399999999999999
-    },
     "ZORAUSDT:15m": {
       "sentAt": "2026-11-10T05:02:04.563Z",
       "symbol": "ZORAUSDT",

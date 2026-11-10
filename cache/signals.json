@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T06:32:28.586Z",
+  "lastUpdated": "2026-11-10T06:47:26.554Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,33 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "FETUSDT:15m": {
-      "sentAt": "2026-11-10T00:47:05.807Z",
-      "symbol": "FETUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.1436,
-      "stop": 0.14329999999999998
-    },
-    "SYRUPUSDT:15m": {
-      "sentAt": "2026-11-10T00:47:07.497Z",
-      "symbol": "SYRUPUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.1353,
-      "stop": 0.1338
-    },
-    "SAPIENUSDT:15m": {
-      "sentAt": "2026-11-10T00:47:09.173Z",
-      "symbol": "SAPIENUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.045485,
-      "stop": 0.04531
     },
     "MSTRSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T01:02:11.397Z",
@@ -693,6 +666,51 @@
       "score": null,
       "entry": 2.014,
       "stop": 1.9779999999999998
+    },
+    "SNDKSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T06:47:18.387Z",
+      "symbol": "SNDKSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 883.6949999999999,
+      "stop": 879.2700000000001
+    },
+    "MUSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T06:47:20.055Z",
+      "symbol": "MUSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 732.16,
+      "stop": 729.2199999999999
+    },
+    "SKHYSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T06:47:21.724Z",
+      "symbol": "SKHYSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 133.64999999999998,
+      "stop": 132.84
+    },
+    "SNXXUSDT:15m": {
+      "sentAt": "2026-11-10T06:47:23.380Z",
+      "symbol": "SNXXUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 3.6385,
+      "stop": 3.595
+    },
+    "ZKPUSDT:15m": {
+      "sentAt": "2026-11-10T06:47:25.052Z",
+      "symbol": "ZKPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.034995,
+      "stop": 0.034800000000000005
     }
   }
 }

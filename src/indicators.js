@@ -471,11 +471,8 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
 
     if (!tradeDirection) continue;
 
-    const bodyTop = Math.max(cOpen(candle), cClose(candle));
-    const bodyBottom = Math.min(cOpen(candle), cClose(candle));
-
-    const zoneHigh = bodyTop;
-    const zoneLow = bodyBottom;
+    const zoneHigh = cHigh(candle);
+    const zoneLow = cLow(candle);
     const zoneWidth = zoneHigh - zoneLow;
 
     if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) continue;
@@ -495,37 +492,52 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
   return null;
 }
 
-export function detectFirstPullback(candles, direction, startIndex, maxBars, zoneLow, zoneHigh) {
-  if (
-    !Array.isArray(candles) ||
-    !Number.isInteger(startIndex) ||
-    startIndex < 0 ||
-    !Number.isInteger(maxBars) ||
-    maxBars < 1 ||
-    !Number.isFinite(zoneLow) ||
-    !Number.isFinite(zoneHigh) ||
-    zoneLow > zoneHigh
-  ) {
-    return null;
+export function isPinBar(candle, direction) {
+  if (!isValidCandle(candle)) return false;
+  
+  const range = cRange(candle);
+  if (range <= 0) return false;
+  
+  const body = cBody(candle);
+  const bodyRatio = getConfigNumber("PINBAR_BODY_RATIO", 0.3);
+  
+  if (body / range > bodyRatio) return false;
+
+  const upperWick = cHigh(candle) - Math.max(cOpen(candle), cClose(candle));
+  const lowerWick = Math.min(cOpen(candle), cClose(candle)) - cLow(candle);
+
+  if (direction === "bearish") {
+    return upperWick > body * 2;
+  } else {
+    return lowerWick > body * 2;
   }
+}
 
-  const endIndex = Math.min(candles.length - 1, startIndex + maxBars);
+export function isEngulfing(prevCandle, currCandle, direction) {
+  if (!isValidCandle(prevCandle) || !isValidCandle(currCandle)) return false;
 
-  for (let i = startIndex + 1; i <= endIndex; i++) {
-    const candle = candles[i];
-    if (!isValidCandle(candle)) continue;
+  const prevBody = cBody(prevCandle);
+  const currBody = cBody(currCandle);
+  const currRange = cRange(currCandle);
 
-    const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
-    if (!touchedZone) continue;
+  if (currRange <= 0) return false;
 
-    return {
-      index: i,
-      candle,
-      entryPrice: (zoneHigh + zoneLow) / 2
-    };
+  const bodyRatio = getConfigNumber("ENGULFING_BODY_RATIO", 0.95);
+  
+  if (currBody / currRange < bodyRatio) return false;
+
+  const prevTop = Math.max(cOpen(prevCandle), cClose(prevCandle));
+  const prevBottom = Math.min(cOpen(prevCandle), cClose(prevCandle));
+  const currTop = Math.max(cOpen(currCandle), cClose(currCandle));
+  const currBottom = Math.min(cOpen(currCandle), cClose(currCandle));
+
+  if (direction === "bearish") {
+    return isBear(prevCandle) && isBear(currCandle) && 
+           currTop >= prevTop && currBottom <= prevBottom;
+  } else {
+    return isBull(prevCandle) && isBull(currCandle) && 
+           currTop >= prevTop && currBottom <= prevBottom;
   }
-
-  return null;
 }
 
 export function calculateEMA(candles, period = 50) {

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T04:02:06.395Z",
+  "lastUpdated": "2026-11-10T04:16:59.862Z",
   "signals": {
     "AAPLSTOCKUSDT:15m": {
       "sentAt": "2026-11-10T02:02:22.288Z",
@@ -9,42 +9,6 @@
       "score": null,
       "entry": 351.17,
       "stop": 350.44
-    },
-    "DOODUSDT:15m": {
-      "sentAt": "2026-11-09T22:02:17.671Z",
-      "symbol": "DOODUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0016475,
-      "stop": 0.001679
-    },
-    "ZROUSDT:15m": {
-      "sentAt": "2026-11-09T22:02:19.334Z",
-      "symbol": "ZROUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.50295,
-      "stop": 1.547
-    },
-    "MMTUSDT:15m": {
-      "sentAt": "2026-11-09T22:02:20.978Z",
-      "symbol": "MMTUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.12040000000000001,
-      "stop": 0.1229
-    },
-    "QUSDT:15m": {
-      "sentAt": "2026-11-09T22:02:22.679Z",
-      "symbol": "QUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.02515,
-      "stop": 0.026260000000000002
     },
     "DNAUSDT:15m": {
       "sentAt": "2026-11-09T22:17:08.840Z",
@@ -783,6 +747,24 @@
       "score": null,
       "entry": 0.05299,
       "stop": 0.05326999999999999
+    },
+    "STXUSDT:15m": {
+      "sentAt": "2026-11-10T04:16:56.645Z",
+      "symbol": "STXUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.3102,
+      "stop": 0.30660000000000004
+    },
+    "PROSUSDT:15m": {
+      "sentAt": "2026-11-10T04:16:58.361Z",
+      "symbol": "PROSUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.5257,
+      "stop": 0.5381000000000001
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-10T01:02:16.257Z",
+  "lastUpdated": "2026-11-10T01:17:29.664Z",
   "signals": {
-    "USELESSUSDT:15m": {
-      "sentAt": "2026-11-09T19:12:59.331Z",
-      "symbol": "USELESSUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.135835,
-      "stop": 0.13141
-    },
     "RSRUSDT:15m": {
       "sentAt": "2026-11-09T19:32:56.866Z",
       "symbol": "RSRUSDT",
@@ -1431,6 +1422,60 @@
       "score": null,
       "entry": 0.070655,
       "stop": 0.07139999999999999
+    },
+    "BONKUSDT:15m": {
+      "sentAt": "2026-11-10T01:17:19.855Z",
+      "symbol": "BONKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.000002793,
+      "stop": 0.0000027809999999999997
+    },
+    "HMSTRUSDT:15m": {
+      "sentAt": "2026-11-10T01:17:21.517Z",
+      "symbol": "HMSTRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00012955,
+      "stop": 0.0001293
+    },
+    "IOTAUSDT:15m": {
+      "sentAt": "2026-11-10T01:17:23.178Z",
+      "symbol": "IOTAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.034409999999999996,
+      "stop": 0.034230000000000003
+    },
+    "US30USDT:15m": {
+      "sentAt": "2026-11-10T01:17:24.841Z",
+      "symbol": "US30USDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 52406.84,
+      "stop": 52403.99
+    },
+    "1000BONKUSDT:15m": {
+      "sentAt": "2026-11-10T01:17:26.499Z",
+      "symbol": "1000BONKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.002794,
+      "stop": 0.0027819999999999998
+    },
+    "LEADUSDT:15m": {
+      "sentAt": "2026-11-10T01:17:28.162Z",
+      "symbol": "LEADUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1874.42,
+      "stop": 1873.8200000000002
     }
   }
 }

@@ -1,1 +1,64 @@
-{}
+{
+  "processedSignals": {
+    "MAGICUSDT:15m:2026-11-10T05:47:00.920Z": {
+      "symbol": "MAGICUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-10T05:47:00.920Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "MAGICUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.08327,
+      "stop": 0.0836,
+      "tp1": 0.08261,
+      "zoneLow": 0.08316,
+      "zoneHigh": 0.08338,
+      "signalCandleTime": 1794288600000,
+      "rr1": 2,
+      "sentAt": "2026-11-10T05:47:00.920Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-10T05:47:00.920Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "allTime": {
+    "total": 1,
+    "tp1Hit": 0,
+    "tp2Hit": 0,
+    "tp3Hit": 0,
+    "stopped": 0,
+    "active": 1,
+    "tp1Rate": 0,
+    "tp2Rate": 0,
+    "tp3Rate": 0,
+    "stopRate": 0
+  },
+  "byDirection": {
+    "bullish": {
+      "total": 0,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    },
+    "bearish": {
+      "total": 1,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    }
+  },
+  "lastUpdated": "2026-11-10T05:47:02.424Z"
+}

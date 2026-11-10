@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-10T01:17:29.664Z",
+  "lastUpdated": "2026-11-10T01:32:33.192Z",
   "signals": {
     "RSRUSDT:15m": {
       "sentAt": "2026-11-09T19:32:56.866Z",
@@ -1476,6 +1476,42 @@
       "score": null,
       "entry": 1874.42,
       "stop": 1873.8200000000002
+    },
+    "OPUSDT:15m": {
+      "sentAt": "2026-11-10T01:32:26.666Z",
+      "symbol": "OPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.10086,
+      "stop": 0.09999
+    },
+    "ETHFIUSDT:15m": {
+      "sentAt": "2026-11-10T01:32:28.310Z",
+      "symbol": "ETHFIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.6309499999999999,
+      "stop": 0.6209
+    },
+    "RKLBSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T01:32:30.054Z",
+      "symbol": "RKLBSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 55.08,
+      "stop": 59.78
+    },
+    "BMNRSTOCKUSDT:15m": {
+      "sentAt": "2026-11-10T01:32:31.690Z",
+      "symbol": "BMNRSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 18.67,
+      "stop": 18.520000000000003
     }
   }
 }

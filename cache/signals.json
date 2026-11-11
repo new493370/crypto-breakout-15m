@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T19:07:43.086Z",
+  "lastUpdated": "2026-11-11T19:12:36.357Z",
   "signals": {
-    "MONUSDT:5m": {
-      "sentAt": "2026-11-11T13:12:04.692Z",
-      "symbol": "MONUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.016390000000000002,
-      "stop": 0.01634
-    },
-    "MOVEUSDT:5m": {
-      "sentAt": "2026-11-11T13:12:06.363Z",
-      "symbol": "MOVEUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.00566,
-      "stop": 0.0056700000000000006
-    },
     "SNXUSDT:5m": {
       "sentAt": "2026-11-11T13:17:01.524Z",
       "symbol": "SNXUSDT",
@@ -720,6 +702,42 @@
       "score": null,
       "entry": 416.78999999999996,
       "stop": 417.08
+    },
+    "NVIDIAUSDT:5m": {
+      "sentAt": "2026-11-11T19:12:29.576Z",
+      "symbol": "NVIDIAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 176.925,
+      "stop": 177.16
+    },
+    "GOOGLSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T19:12:31.372Z",
+      "symbol": "GOOGLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 295.45000000000005,
+      "stop": 295.7
+    },
+    "AAPLSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T19:12:33.152Z",
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 355.24,
+      "stop": 355.38
+    },
+    "NGASUSDT:5m": {
+      "sentAt": "2026-11-11T19:12:34.856Z",
+      "symbol": "NGASUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 3.559,
+      "stop": 3.55
     }
   }
 }

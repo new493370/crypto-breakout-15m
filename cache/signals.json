@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T14:21:42.196Z",
+  "lastUpdated": "2026-11-11T14:26:49.365Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2043,6 +2043,15 @@
       "score": null,
       "entry": 1.595,
       "stop": 1.5999999999999999
+    },
+    "KAITOUSDT:5m": {
+      "sentAt": "2026-11-11T14:26:47.864Z",
+      "symbol": "KAITOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.2069,
+      "stop": 0.20729999999999998
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T15:01:29.246Z",
+  "lastUpdated": "2026-11-11T15:06:31.911Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2214,6 +2214,24 @@
       "score": null,
       "entry": 0.02002,
       "stop": 0.020079999999999997
+    },
+    "KGENUSDT:5m": {
+      "sentAt": "2026-11-11T15:06:28.713Z",
+      "symbol": "KGENUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.069935,
+      "stop": 0.06956
+    },
+    "ATUSDT:5m": {
+      "sentAt": "2026-11-11T15:06:30.405Z",
+      "symbol": "ATUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.09065000000000001,
+      "stop": 0.0911
     }
   }
 }

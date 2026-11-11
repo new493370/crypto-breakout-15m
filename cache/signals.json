@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T19:37:27.043Z",
+  "lastUpdated": "2026-11-11T19:42:21.660Z",
   "signals": {
-    "SANDUSDT:5m": {
-      "sentAt": "2026-11-11T13:42:02.122Z",
-      "symbol": "SANDUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.042785000000000004,
-      "stop": 0.042870000000000005
-    },
-    "TIAUSDT:5m": {
-      "sentAt": "2026-11-11T13:42:03.785Z",
-      "symbol": "TIAUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.4363,
-      "stop": 0.4397
-    },
     "BTWUSDT:5m": {
       "sentAt": "2026-11-11T13:46:55.995Z",
       "symbol": "BTWUSDT",

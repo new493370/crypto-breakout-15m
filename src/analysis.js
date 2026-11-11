@@ -6,22 +6,18 @@ import {
   isValidStructure,
   calculateTrendline,
   detectBreakout,
-  detectFirstPullback,
-  calculateEMA
+  detectFirstPullback
 } from "./indicators.js";
 
-function isStrongMomentum(candles, direction) {
-  if (!Array.isArray(candles) || candles.length < CONFIG.MOMENTUM_CANDLE_COUNT) return false;
-
-  const recent = candles.slice(-CONFIG.MOMENTUM_CANDLE_COUNT);
-
-  const strongBullish = recent.every(c => c.close > c.open && (c.close - c.open) > (c.high - c.low) * 0.5);
-  const strongBearish = recent.every(c => c.close < c.open && (c.open - c.close) > (c.high - c.low) * 0.5);
-
-  if (direction === "bullish" && strongBearish) return true;
-  if (direction === "bearish" && strongBullish) return true;
-
-  return false;
+function getPriceDecimals(price) {
+  if (!Number.isFinite(price) || price <= 0) return 8;
+  const str = price.toString();
+  if (str.includes("e-")) {
+    const parts = str.split("e-");
+    return parseInt(parts[1], 10);
+  }
+  const parts = str.split(".");
+  return parts.length > 1 ? parts[1].length : 0;
 }
 
 export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
@@ -39,6 +35,8 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     zone_width: null,
     rr: 0,
     signal_candle_time: null,
+    highs: null,
+    lows: null,
     reasons: []
   };
 
@@ -64,10 +62,6 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     const lastCandle = candles[candles.length - 1];
     result.current_price = lastCandle.close;
 
-    const ema50 = calculateEMA(candles, 50);
-    const isUptrend = ema50 !== null && lastCandle.close > ema50;
-    const isDowntrend = ema50 !== null && lastCandle.close < ema50;
-
     const swings = detectSwings(candles);
     const latest = getLatestMinorSwings(swings, 2);
 
@@ -88,19 +82,23 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
         lineDirection = "bearish";
         trendline = calculateTrendline(latest.highs[0], latest.highs[1]);
         structureConfirmedIndex = latest.highs[1].confirmed_index;
+        result.highs = [latest.highs[0].price, latest.highs[1].price];
       } else {
         lineDirection = "bullish";
         trendline = calculateTrendline(latest.lows[0], latest.lows[1]);
         structureConfirmedIndex = latest.lows[1].confirmed_index;
+        result.lows = [latest.lows[0].price, latest.lows[1].price];
       }
     } else if (bearishStructure) {
       lineDirection = "bearish";
       trendline = calculateTrendline(latest.highs[0], latest.highs[1]);
       structureConfirmedIndex = latest.highs[1].confirmed_index;
+      result.highs = [latest.highs[0].price, latest.highs[1].price];
     } else if (bullishStructure) {
       lineDirection = "bullish";
       trendline = calculateTrendline(latest.lows[0], latest.lows[1]);
       structureConfirmedIndex = latest.lows[1].confirmed_index;
+      result.lows = [latest.lows[0].price, latest.lows[1].price];
     }
 
     if (!trendline || structureConfirmedIndex < 0) {
@@ -122,21 +120,6 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
 
     const tradeDirection = breakout.direction;
 
-    if (tradeDirection === "bearish" && isUptrend) {
-      result.reasons.push("مخالفت با روند اصلی (EMA50 صعودی) - شورت مجاز نیست");
-      return result;
-    }
-
-    if (tradeDirection === "bullish" && isDowntrend) {
-      result.reasons.push("مخالفت با روند اصلی (EMA50 نزولی) - لانگ مجاز نیست");
-      return result;
-    }
-
-    if (isStrongMomentum(candles, tradeDirection)) {
-      result.reasons.push("مومنتوم شدید خلاف جهت ستاپ - سیگنال رد شد");
-      return result;
-    }
-
     const pullback = detectFirstPullback(
       candles,
       tradeDirection,
@@ -154,7 +137,6 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     const zoneLow = breakout.zoneLow;
     const zoneHigh = breakout.zoneHigh;
     const zoneWidth = zoneHigh - zoneLow;
-    const entry = (zoneHigh + zoneLow) / 2;
 
     if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) {
       result.reasons.push("عرض محدوده شکست معتبر نیست");
@@ -162,23 +144,17 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     }
 
     const isBullish = tradeDirection === "bullish";
+    const entry = (zoneHigh + zoneLow) / 2;
+    
+    const priceDecimals = getPriceDecimals(result.current_price);
+    const tickSize = 10 ** -priceDecimals;
+    const pipOffset = CONFIG.STOP_PIPS_OFFSET * tickSize;
 
-    let structuralStop;
+    let stopLoss;
     if (isBullish) {
-      const recentLow = latest.lows[0];
-      structuralStop = recentLow.price - (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
+      stopLoss = zoneLow - pipOffset;
     } else {
-      const recentHigh = latest.highs[0];
-      structuralStop = recentHigh.price + (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
-    }
-
-    let stopLoss = structuralStop;
-
-    if (isBullish && stopLoss >= entry) {
-      stopLoss = zoneLow - (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
-    }
-    if (!isBullish && stopLoss <= entry) {
-      stopLoss = zoneHigh + (zoneWidth * CONFIG.STOP_BUFFER_MULTIPLIER);
+      stopLoss = zoneHigh + pipOffset;
     }
 
     const risk = Math.abs(entry - stopLoss);
@@ -188,9 +164,13 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const takeProfit = isBullish
-      ? entry + (CONFIG.RISK_REWARD_RATIO * risk)
-      : entry - (CONFIG.RISK_REWARD_RATIO * risk);
+    const targetDistance = zoneWidth * CONFIG.TARGET_ZONE_MULTIPLIER;
+    let takeProfit;
+    if (isBullish) {
+      takeProfit = zoneHigh + targetDistance;
+    } else {
+      takeProfit = zoneLow - targetDistance;
+    }
 
     const reward = Math.abs(takeProfit - entry);
 
@@ -209,7 +189,6 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     result.rr = reward / risk;
     result.signal_candle_time = pullback.candle.time;
     result.status = isBullish ? "LONG" : "SHORT";
-    result.reasons.push("شکست خط روند و اولین پولبک معتبر در محدوده شکست تأیید شد");
 
     return result;
   } catch (e) {

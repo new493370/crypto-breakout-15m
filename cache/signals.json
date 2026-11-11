@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T11:53:05.437Z",
+  "lastUpdated": "2026-11-11T11:57:54.795Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1134,6 +1134,78 @@
       "score": null,
       "entry": 176.785,
       "stop": 177.12
+    },
+    "MERLUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:41.610Z",
+      "symbol": "MERLUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.030504999999999997,
+      "stop": 0.030539999999999998
+    },
+    "IOTAUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:43.254Z",
+      "symbol": "IOTAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.034235,
+      "stop": 0.034179999999999995
+    },
+    "AZTECUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:44.999Z",
+      "symbol": "AZTECUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.012685,
+      "stop": 0.01264
+    },
+    "OUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:46.643Z",
+      "symbol": "OUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.4727,
+      "stop": 0.4723
+    },
+    "AGLDUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:48.311Z",
+      "symbol": "AGLDUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.15415,
+      "stop": 0.1537
+    },
+    "XTZUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:49.955Z",
+      "symbol": "XTZUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.24365,
+      "stop": 0.2431
+    },
+    "SUMIELECSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:51.631Z",
+      "symbol": "SUMIELECSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 9.95,
+      "stop": 9.99
+    },
+    "IRENSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T11:57:53.293Z",
+      "symbol": "IRENSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 21.125,
+      "stop": 21.09
     }
   }
 }

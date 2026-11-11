@@ -6,7 +6,8 @@ import {
   isValidStructure,
   calculateTrendline,
   detectBreakout,
-  detectFirstPullback
+  detectFirstPullback,
+  calculateEMA
 } from "./indicators.js";
 
 function getPriceDecimals(price) {
@@ -61,6 +62,10 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
 
     const lastCandle = candles[candles.length - 1];
     result.current_price = lastCandle.close;
+
+    const ema50 = calculateEMA(candles, 50);
+    const isUptrend = ema50 !== null && lastCandle.close > ema50;
+    const isDowntrend = ema50 !== null && lastCandle.close < ema50;
 
     const swings = detectSwings(candles);
     const latest = getLatestMinorSwings(swings, 2);
@@ -119,6 +124,16 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     }
 
     const tradeDirection = breakout.direction;
+
+    if (tradeDirection === "bearish" && isUptrend) {
+      result.reasons.push("مخالفت با روند اصلی (EMA50 صعودی) - شورت مجاز نیست");
+      return result;
+    }
+
+    if (tradeDirection === "bullish" && isDowntrend) {
+      result.reasons.push("مخالفت با روند اصلی (EMA50 نزولی) - لانگ مجاز نیست");
+      return result;
+    }
 
     const pullback = detectFirstPullback(
       candles,

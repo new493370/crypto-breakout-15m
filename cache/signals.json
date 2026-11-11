@@ -1,8 +1,8 @@
 {
-  "lastUpdated": "2026-11-11T03:22:33.626Z",
+  "lastUpdated": "2026-11-11T03:32:39.307Z",
   "signals": {
     "FETUSDT:15m": {
-      "sentAt": "2026-11-10T21:22:49.310Z",
+      "sentAt": "2026-11-11T03:32:36.117Z",
       "symbol": "FETUSDT",
       "timeframe": "15m",
       "direction": "bullish",
@@ -11,7 +11,7 @@
       "stop": 0.13850000000000004
     },
     "PROSUSDT:15m": {
-      "sentAt": "2026-11-10T21:22:50.991Z",
+      "sentAt": "2026-11-11T03:32:37.804Z",
       "symbol": "PROSUSDT",
       "timeframe": "15m",
       "direction": "bullish",

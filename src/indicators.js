@@ -64,7 +64,7 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
     }
 
     const priceDiffPercent = (Math.abs(current.price - last.price) / last.price) * 100;
-    const isTimeValid = Math.abs(current.index - last.index) >= CONFIG.MIN_SWING_DISTANCE;
+    const isTimeValid = Math.abs(current.index - last.index) >= CONFIG.MIN_CANDLES_BETWEEN_PIVOTS;
     const isPriceValid = priceDiffPercent >= CONFIG.MIN_SWING_PRICE_DIFF_PERCENT;
 
     if (isTimeValid && isPriceValid) {

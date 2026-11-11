@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T19:02:40.413Z",
+  "lastUpdated": "2026-11-11T19:07:43.086Z",
   "signals": {
-    "BLURUSDT:5m": {
-      "sentAt": "2026-11-11T13:07:07.832Z",
-      "symbol": "BLURUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.006654,
-      "stop": 0.0066419999999999995
-    },
-    "PNUTUSDT:5m": {
-      "sentAt": "2026-11-11T13:07:09.528Z",
-      "symbol": "PNUTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.033105,
-      "stop": 0.033170000000000005
-    },
-    "METUSDT:5m": {
-      "sentAt": "2026-11-11T13:07:11.210Z",
-      "symbol": "METUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.29635,
-      "stop": 0.296
-    },
     "MONUSDT:5m": {
       "sentAt": "2026-11-11T13:12:04.692Z",
       "symbol": "MONUSDT",
@@ -738,6 +711,15 @@
       "score": null,
       "entry": 61.605000000000004,
       "stop": 61.77
+    },
+    "TSMSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T19:07:41.585Z",
+      "symbol": "TSMSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 416.78999999999996,
+      "stop": 417.08
     }
   }
 }

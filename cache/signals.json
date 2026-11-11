@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T18:57:41.421Z",
+  "lastUpdated": "2026-11-11T19:02:40.413Z",
   "signals": {
     "BLURUSDT:5m": {
       "sentAt": "2026-11-11T13:07:07.832Z",
@@ -729,6 +729,15 @@
       "score": null,
       "entry": 57.635000000000005,
       "stop": 57.78
+    },
+    "CRWVSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T19:02:38.912Z",
+      "symbol": "CRWVSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 61.605000000000004,
+      "stop": 61.77
     }
   }
 }

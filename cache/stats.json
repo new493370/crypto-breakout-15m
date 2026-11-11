@@ -83,6 +83,34 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-11T18:52:31.863Z"
+    },
+    "UKOILUSDT:5m:2026-11-11T18:57:34.701Z": {
+      "symbol": "UKOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:57:34.701Z"
+    },
+    "USOILUSDT:5m:2026-11-11T18:57:36.404Z": {
+      "symbol": "USOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:57:36.404Z"
+    },
+    "QQQSTOCKUSDT:5m:2026-11-11T18:57:38.167Z": {
+      "symbol": "QQQSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:57:38.167Z"
+    },
+    "AAOISTOCKUSDT:5m:2026-11-11T18:57:39.919Z": {
+      "symbol": "AAOISTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:57:39.919Z"
     }
   },
   "recentSignals": [
@@ -209,7 +237,7 @@
       "sentAt": "2026-11-11T17:51:57.498Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:50:44.235Z",
+      "statusUpdatedAt": "2026-11-11T18:55:46.408Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -234,7 +262,7 @@
       "sentAt": "2026-11-11T18:07:11.210Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:50:44.235Z",
+      "statusUpdatedAt": "2026-11-11T18:55:46.408Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -363,7 +391,7 @@
       "sentAt": "2026-11-11T18:52:30.190Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:52:30.190Z",
+      "statusUpdatedAt": "2026-11-11T18:55:46.408Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -386,9 +414,110 @@
       ],
       "lows": null,
       "sentAt": "2026-11-11T18:52:31.863Z",
+      "status": "stopped",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:55:50.086Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": true,
+      "exitPrice": 122.91
+    },
+    {
+      "symbol": "UKOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 91.66499999999999,
+      "stop": 91.53,
+      "tp1": 92.18999999999998,
+      "zoneLow": 91.56,
+      "zoneHigh": 91.77,
+      "signalCandleTime": 1794423000000,
+      "rr1": 3.888888888889088,
+      "highs": [
+        92.61,
+        91.96
+      ],
+      "lows": null,
+      "sentAt": "2026-11-11T18:57:34.701Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:52:31.863Z",
+      "statusUpdatedAt": "2026-11-11T18:57:34.701Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "USOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 86.16499999999999,
+      "stop": 86.03999999999999,
+      "tp1": 86.64000000000003,
+      "zoneLow": 86.07,
+      "zoneHigh": 86.26,
+      "signalCandleTime": 1794423000000,
+      "rr1": 3.8000000000002956,
+      "highs": [
+        87.41,
+        86.54
+      ],
+      "lows": null,
+      "sentAt": "2026-11-11T18:57:36.404Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:57:36.404Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "QQQSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 696.115,
+      "stop": 696.3199999999999,
+      "tp1": 695.2400000000002,
+      "zoneLow": 695.94,
+      "zoneHigh": 696.29,
+      "signalCandleTime": 1794423000000,
+      "rr1": 4.268292682927235,
+      "highs": null,
+      "lows": [
+        684.71,
+        694.18
+      ],
+      "sentAt": "2026-11-11T18:57:38.167Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:57:38.167Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AAOISTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 57.635000000000005,
+      "stop": 57.78,
+      "tp1": 57.06000000000001,
+      "zoneLow": 57.52,
+      "zoneHigh": 57.75,
+      "signalCandleTime": 1794418800000,
+      "rr1": 3.9655172413793895,
+      "highs": null,
+      "lows": [
+        51.52,
+        56.86
+      ],
+      "sentAt": "2026-11-11T18:57:39.919Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:57:39.919Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -396,28 +525,28 @@
     }
   ],
   "allTime": {
-    "total": 12,
+    "total": 16,
     "tp1Hit": 6,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 2,
-    "active": 4,
-    "tp1Rate": 75,
+    "stopped": 3,
+    "active": 7,
+    "tp1Rate": 66.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 25
+    "stopRate": 33.3
   },
   "byDirection": {
     "bullish": {
-      "total": 8,
+      "total": 10,
       "tp1Hit": 6,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
-      "tp1Rate": 100
+      "stopped": 1,
+      "tp1Rate": 85.7
     },
     "bearish": {
-      "total": 4,
+      "total": 6,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -425,5 +554,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T18:52:33.367Z"
+  "lastUpdated": "2026-11-11T18:57:41.423Z"
 }

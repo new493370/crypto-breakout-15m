@@ -1,60 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T18:52:33.365Z",
+  "lastUpdated": "2026-11-11T18:57:41.421Z",
   "signals": {
-    "BONKUSDT:5m": {
-      "sentAt": "2026-11-11T12:57:13.155Z",
-      "symbol": "BONKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.000002837,
-      "stop": 0.0000028290000000000004
-    },
-    "BOMEUSDT:5m": {
-      "sentAt": "2026-11-11T12:57:14.881Z",
-      "symbol": "BOMEUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00060955,
-      "stop": 0.0006079000000000001
-    },
-    "DOGEUSDT:5m": {
-      "sentAt": "2026-11-11T12:57:16.679Z",
-      "symbol": "DOGEUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.06814,
-      "stop": 0.06799999999999999
-    },
-    "MEWUSDT:5m": {
-      "sentAt": "2026-11-11T12:57:18.380Z",
-      "symbol": "MEWUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00034225,
-      "stop": 0.0003387
-    },
-    "SIGNUSDT:5m": {
-      "sentAt": "2026-11-11T12:57:20.089Z",
-      "symbol": "SIGNUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.009177999999999999,
-      "stop": 0.009148
-    },
-    "REUSDT:5m": {
-      "sentAt": "2026-11-11T12:57:21.783Z",
-      "symbol": "REUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.28456,
-      "stop": 0.28409
-    },
     "BLURUSDT:5m": {
       "sentAt": "2026-11-11T13:07:07.832Z",
       "symbol": "BLURUSDT",
@@ -747,6 +693,42 @@
       "score": null,
       "entry": 123.055,
       "stop": 122.91
+    },
+    "UKOILUSDT:5m": {
+      "sentAt": "2026-11-11T18:57:34.701Z",
+      "symbol": "UKOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 91.66499999999999,
+      "stop": 91.53
+    },
+    "USOILUSDT:5m": {
+      "sentAt": "2026-11-11T18:57:36.404Z",
+      "symbol": "USOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 86.16499999999999,
+      "stop": 86.03999999999999
+    },
+    "QQQSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T18:57:38.167Z",
+      "symbol": "QQQSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 696.115,
+      "stop": 696.3199999999999
+    },
+    "AAOISTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T18:57:39.919Z",
+      "symbol": "AAOISTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 57.635000000000005,
+      "stop": 57.78
     }
   }
 }

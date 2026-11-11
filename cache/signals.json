@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T17:16:50.566Z",
+  "lastUpdated": "2026-11-11T17:21:52.102Z",
   "signals": {
-    "ANIMEUSDT:5m": {
-      "sentAt": "2026-11-11T11:17:38.362Z",
-      "symbol": "ANIMEUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0023705,
-      "stop": 0.002376
-    },
-    "ONDOUSDT:5m": {
-      "sentAt": "2026-11-11T11:17:40.059Z",
-      "symbol": "ONDOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.36805,
-      "stop": 0.3688
-    },
-    "SPCXSTOCKUSDT:5m": {
-      "sentAt": "2026-11-11T11:17:41.744Z",
-      "symbol": "SPCXSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 146.56,
-      "stop": 146.39
-    },
-    "TRUMPOFFICIALUSDT:5m": {
-      "sentAt": "2026-11-11T11:17:43.473Z",
-      "symbol": "TRUMPOFFICIALUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 1.1255000000000002,
-      "stop": 1.1190000000000002
-    },
-    "SPCXUSDT:5m": {
-      "sentAt": "2026-11-11T11:17:45.173Z",
-      "symbol": "SPCXUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 146.51999999999998,
-      "stop": 146.35
-    },
     "NEIROUSDT:5m": {
       "sentAt": "2026-11-11T11:22:45.853Z",
       "symbol": "NEIROUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T14:17:07.509Z",
+  "lastUpdated": "2026-11-11T14:21:42.196Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2025,6 +2025,24 @@
       "score": null,
       "entry": 3734.6549999999997,
       "stop": 3736.5
+    },
+    "PEPEUSDT:5m": {
+      "sentAt": "2026-11-11T14:21:38.951Z",
+      "symbol": "PEPEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0000049757000000000005,
+      "stop": 0.0000049885
+    },
+    "RENDERUSDT:5m": {
+      "sentAt": "2026-11-11T14:21:40.694Z",
+      "symbol": "RENDERUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.595,
+      "stop": 1.5999999999999999
     }
   }
 }

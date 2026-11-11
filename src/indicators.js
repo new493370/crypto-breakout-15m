@@ -1,4 +1,4 @@
-mport { CONFIG } from "./config.js";
+import { CONFIG } from "./config.js";
 
 export function cHigh(c) { return c.high; }
 export function cLow(c) { return c.low; }

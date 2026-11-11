@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T06:44:19.211Z",
+  "lastUpdated": "2026-11-11T06:53:48.881Z",
   "signals": {
     "SATSUSDT:15m": {
       "sentAt": "2026-11-11T06:42:41.636Z",
@@ -351,6 +351,177 @@
       "score": null,
       "entry": 0.7585,
       "stop": 0.7692999999999999
+    },
+    "WLDUSDT:15m": {
+      "sentAt": "2026-11-11T06:52:58.604Z",
+      "symbol": "WLDUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.3101,
+      "stop": 0.3152
+    },
+    "ADAUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:00.307Z",
+      "symbol": "ADAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.17504999999999998,
+      "stop": 0.1765
+    },
+    "NEARUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:01.995Z",
+      "symbol": "NEARUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 3.6784999999999997,
+      "stop": 3.73
+    },
+    "SEIUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:03.681Z",
+      "symbol": "SEIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.043840000000000004,
+      "stop": 0.04471000000000001
+    },
+    "SENTUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:05.365Z",
+      "symbol": "SENTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.01643,
+      "stop": 0.01649
+    },
+    "FARTCOINUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:07.031Z",
+      "symbol": "FARTCOINUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.11545,
+      "stop": 0.1173
+    },
+    "CRVUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:08.706Z",
+      "symbol": "CRVUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.24785000000000001,
+      "stop": 0.25240000000000007
+    },
+    "FLOWUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:10.370Z",
+      "symbol": "FLOWUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.020405,
+      "stop": 0.02072
+    },
+    "MOODENGUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:12.041Z",
+      "symbol": "MOODENGUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.030754999999999998,
+      "stop": 0.03132
+    },
+    "AXISUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:13.706Z",
+      "symbol": "AXISUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.10464999999999999,
+      "stop": 0.1072
+    },
+    "WIFUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:15.381Z",
+      "symbol": "WIFUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.15760000000000002,
+      "stop": 0.15969999999999998
+    },
+    "TIAUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:17.049Z",
+      "symbol": "TIAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.428,
+      "stop": 0.4325
+    },
+    "CCUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:18.727Z",
+      "symbol": "CCUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.09001999999999999,
+      "stop": 0.09092
+    },
+    "LITUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:20.414Z",
+      "symbol": "LITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 3.45385,
+      "stop": 3.5533
+    },
+    "WOOUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:22.081Z",
+      "symbol": "WOOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.010794000000000002,
+      "stop": 0.010858
+    },
+    "GRAMUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:23.752Z",
+      "symbol": "GRAMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.1364999999999998,
+      "stop": 1.1549999999999998
+    },
+    "LAUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:25.416Z",
+      "symbol": "LAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.05062,
+      "stop": 0.051410000000000004
+    },
+    "AEROUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:27.085Z",
+      "symbol": "AEROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.54295,
+      "stop": 0.5475
+    },
+    "ESPUSDT:15m": {
+      "sentAt": "2026-11-11T06:53:28.763Z",
+      "symbol": "ESPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.07862,
+      "stop": 0.07978999999999999
     }
   }
 }

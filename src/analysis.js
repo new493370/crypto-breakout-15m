@@ -81,6 +81,10 @@ function detectValidRetestEntry(
     ? Math.max(1, Math.trunc(CONFIG.REQUIRED_AWAY_BARS))
     : 1;
 
+  const maxAgeBars = Number.isFinite(CONFIG.PULLBACK_MAX_AGE_BARS)
+    ? CONFIG.PULLBACK_MAX_AGE_BARS
+    : 3;
+
   let consecutiveAway = 0;
   let hasMovedAway = false;
 
@@ -126,6 +130,10 @@ function detectValidRetestEntry(
     const engulfingValid = isEngulfing(previous, current, direction);
 
     if (!pinBarValid && !engulfingValid) {
+      continue;
+    }
+
+    if (candles.length - 1 - i > maxAgeBars) {
       continue;
     }
 

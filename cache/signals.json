@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:21:58.406Z",
+  "lastUpdated": "2026-11-11T13:27:03.757Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1755,6 +1755,42 @@
       "score": null,
       "entry": 6.339,
       "stop": 6.332
+    },
+    "INTCSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T13:26:57.099Z",
+      "symbol": "INTCSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 61.94,
+      "stop": 61.87
+    },
+    "AVAXUSDT:5m": {
+      "sentAt": "2026-11-11T13:26:58.781Z",
+      "symbol": "AVAXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 8.538,
+      "stop": 8.518
+    },
+    "LINKUSDT:5m": {
+      "sentAt": "2026-11-11T13:27:00.508Z",
+      "symbol": "LINKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 10.3315,
+      "stop": 10.31
+    },
+    "LIGHTUSDT:5m": {
+      "sentAt": "2026-11-11T13:27:02.254Z",
+      "symbol": "LIGHTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.23035,
+      "stop": 0.2268
     }
   }
 }

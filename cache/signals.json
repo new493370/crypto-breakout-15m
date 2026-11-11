@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T07:53:21.647Z",
+  "lastUpdated": "2026-11-11T08:03:13.876Z",
   "signals": {
     "SATSUSDT:15m": {
       "sentAt": "2026-11-11T06:42:41.636Z",
@@ -819,6 +819,60 @@
       "score": null,
       "entry": 8.4665,
       "stop": 8.343
+    },
+    "ENAUSDT:15m": {
+      "sentAt": "2026-11-11T08:03:03.946Z",
+      "symbol": "ENAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.151665,
+      "stop": 0.14912999999999998
+    },
+    "USELESSUSDT:15m": {
+      "sentAt": "2026-11-11T08:03:05.621Z",
+      "symbol": "USELESSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.136915,
+      "stop": 0.13319
+    },
+    "CASHCATUSDT:15m": {
+      "sentAt": "2026-11-11T08:03:07.298Z",
+      "symbol": "CASHCATUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.060520000000000004,
+      "stop": 0.0628
+    },
+    "DNAUSDT:15m": {
+      "sentAt": "2026-11-11T08:03:08.963Z",
+      "symbol": "DNAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.14984999999999998,
+      "stop": 0.14519999999999997
+    },
+    "MSFTSTOCKUSDT:15m": {
+      "sentAt": "2026-11-11T08:03:10.681Z",
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 535.25,
+      "stop": 535.54
+    },
+    "CLUSDT:15m": {
+      "sentAt": "2026-11-11T08:03:12.375Z",
+      "symbol": "CLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 85.56,
+      "stop": 86.17
     }
   }
 }

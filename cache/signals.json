@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T18:32:21.891Z",
+  "lastUpdated": "2026-11-11T18:37:21.612Z",
   "signals": {
-    "HUSDT:5m": {
-      "sentAt": "2026-11-11T12:32:23.448Z",
-      "symbol": "HUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.03099,
-      "stop": 0.0311
-    },
-    "SOONUSDT:5m": {
-      "sentAt": "2026-11-11T12:32:25.123Z",
-      "symbol": "SOONUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.23504999999999998,
-      "stop": 0.2347
-    },
-    "WLFIUSDT:5m": {
-      "sentAt": "2026-11-11T12:37:17.165Z",
-      "symbol": "WLFIUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.047605,
-      "stop": 0.04756
-    },
-    "ADAUSDT:5m": {
-      "sentAt": "2026-11-11T12:37:18.830Z",
-      "symbol": "ADAUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.17635,
-      "stop": 0.177
-    },
-    "FLOCKUSDT:5m": {
-      "sentAt": "2026-11-11T12:37:20.482Z",
-      "symbol": "FLOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.038114999999999996,
-      "stop": 0.03823
-    },
     "DNAUSDT:5m": {
       "sentAt": "2026-11-11T12:37:22.121Z",
       "symbol": "DNAUSDT",

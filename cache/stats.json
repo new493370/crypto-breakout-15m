@@ -1,1 +1,101 @@
-{}
+{
+  "processedSignals": {
+    "SOXLUSDT:5m:2026-11-11T15:52:10.144Z": {
+      "symbol": "SOXLUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-11T15:52:10.144Z"
+    },
+    "CSOPSKHYNIX2LUSDT:5m:2026-11-11T15:52:11.945Z": {
+      "symbol": "CSOPSKHYNIX2LUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-11T15:52:11.945Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "SOXLUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 64.34,
+      "stop": 63.55,
+      "tp1": 68.13999999999999,
+      "zoneLow": 63.58,
+      "zoneHigh": 65.1,
+      "signalCandleTime": 1794411000000,
+      "rr1": 4.810126582278421,
+      "highs": [
+        64.81,
+        64.38
+      ],
+      "lows": null,
+      "sentAt": "2026-11-11T15:52:10.144Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T15:52:10.144Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "CSOPSKHYNIX2LUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 2.281,
+      "stop": 2.266,
+      "tp1": 2.341,
+      "zoneLow": 2.269,
+      "zoneHigh": 2.293,
+      "signalCandleTime": 1794409500000,
+      "rr1": 3.9999999999999702,
+      "highs": [
+        2.31,
+        2.297
+      ],
+      "lows": null,
+      "sentAt": "2026-11-11T15:52:11.945Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T15:52:11.945Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
+  "allTime": {
+    "total": 2,
+    "tp1Hit": 0,
+    "tp2Hit": 0,
+    "tp3Hit": 0,
+    "stopped": 0,
+    "active": 2,
+    "tp1Rate": 0,
+    "tp2Rate": 0,
+    "tp3Rate": 0,
+    "stopRate": 0
+  },
+  "byDirection": {
+    "bullish": {
+      "total": 2,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    },
+    "bearish": {
+      "total": 0,
+      "tp1Hit": 0,
+      "tp2Hit": 0,
+      "tp3Hit": 0,
+      "stopped": 0,
+      "tp1Rate": 0
+    }
+  },
+  "lastUpdated": "2026-11-11T15:52:13.449Z"
+}

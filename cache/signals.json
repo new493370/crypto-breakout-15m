@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T15:26:26.731Z",
+  "lastUpdated": "2026-11-11T15:52:13.448Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2268,6 +2268,24 @@
       "score": null,
       "entry": 0.010929999999999999,
       "stop": 0.01097
+    },
+    "SOXLUSDT:5m": {
+      "sentAt": "2026-11-11T15:52:10.145Z",
+      "symbol": "SOXLUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 64.34,
+      "stop": 63.55
+    },
+    "CSOPSKHYNIX2LUSDT:5m": {
+      "sentAt": "2026-11-11T15:52:11.945Z",
+      "symbol": "CSOPSKHYNIX2LUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 2.281,
+      "stop": 2.266
     }
   }
 }

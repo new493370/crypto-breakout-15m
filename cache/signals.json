@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:07:12.711Z",
+  "lastUpdated": "2026-11-11T13:12:07.865Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1710,6 +1710,24 @@
       "score": null,
       "entry": 0.29635,
       "stop": 0.296
+    },
+    "MONUSDT:5m": {
+      "sentAt": "2026-11-11T13:12:04.692Z",
+      "symbol": "MONUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.016390000000000002,
+      "stop": 0.01634
+    },
+    "MOVEUSDT:5m": {
+      "sentAt": "2026-11-11T13:12:06.363Z",
+      "symbol": "MOVEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.00566,
+      "stop": 0.0056700000000000006
     }
   }
 }

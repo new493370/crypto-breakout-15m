@@ -1,69 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T18:02:14.957Z",
+  "lastUpdated": "2026-11-11T18:07:17.961Z",
   "signals": {
-    "PIPPINUSDT:5m": {
-      "sentAt": "2026-11-11T12:02:35.320Z",
-      "symbol": "PIPPINUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.01255,
-      "stop": 0.01251
-    },
-    "OPNUSDT:5m": {
-      "sentAt": "2026-11-11T12:02:37.098Z",
-      "symbol": "OPNUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.035665,
-      "stop": 0.03562
-    },
-    "IMXUSDT:5m": {
-      "sentAt": "2026-11-11T12:02:38.788Z",
-      "symbol": "IMXUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.115435,
-      "stop": 0.11520999999999999
-    },
-    "ZRXUSDT:5m": {
-      "sentAt": "2026-11-11T12:02:40.538Z",
-      "symbol": "ZRXUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.087835,
-      "stop": 0.08773
-    },
-    "MRNASTOCKUSDT:5m": {
-      "sentAt": "2026-11-11T12:02:42.191Z",
-      "symbol": "MRNASTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 258.08500000000004,
-      "stop": 258.32
-    },
-    "GMTUSDT:5m": {
-      "sentAt": "2026-11-11T12:07:10.673Z",
-      "symbol": "GMTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0060905,
-      "stop": 0.006134
-    },
-    "MSTRSTOCKUSDT:5m": {
-      "sentAt": "2026-11-11T12:07:12.405Z",
-      "symbol": "MSTRSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 123.08500000000001,
-      "stop": 123.44
-    },
     "SNDKSTOCKUSDT:5m": {
       "sentAt": "2026-11-11T12:12:12.928Z",
       "symbol": "SNDKSTOCKUSDT",
@@ -1107,6 +1044,42 @@
       "score": null,
       "entry": 143.495,
       "stop": 144.49
+    },
+    "MSFTSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T18:07:11.210Z",
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 521.6600000000001,
+      "stop": 524.97
+    },
+    "MRNASTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T18:07:12.998Z",
+      "symbol": "MRNASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 245.805,
+      "stop": 245.16
+    },
+    "PLTRSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T18:07:14.754Z",
+      "symbol": "PLTRSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 172.945,
+      "stop": 173.13
+    },
+    "METASTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T18:07:16.460Z",
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 643.25,
+      "stop": 643.76
     }
   }
 }

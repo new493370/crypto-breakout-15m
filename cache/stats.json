@@ -34,6 +34,34 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-11T17:51:57.498Z"
+    },
+    "MSFTSTOCKUSDT:5m:2026-11-11T18:07:11.210Z": {
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:07:11.210Z"
+    },
+    "MRNASTOCKUSDT:5m:2026-11-11T18:07:12.998Z": {
+      "symbol": "MRNASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:07:12.998Z"
+    },
+    "PLTRSTOCKUSDT:5m:2026-11-11T18:07:14.754Z": {
+      "symbol": "PLTRSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:07:14.754Z"
+    },
+    "METASTOCKUSDT:5m:2026-11-11T18:07:16.460Z": {
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T18:07:16.460Z"
     }
   },
   "recentSignals": [
@@ -160,7 +188,107 @@
       "sentAt": "2026-11-11T17:51:57.498Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:00:44.970Z",
+      "statusUpdatedAt": "2026-11-11T18:05:48.563Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 521.6600000000001,
+      "stop": 524.97,
+      "tp1": 520.11,
+      "zoneLow": 521.35,
+      "zoneHigh": 521.97,
+      "signalCandleTime": 1794420000000,
+      "rr1": 0.4682779456193637,
+      "highs": null,
+      "lows": [
+        520.47,
+        521.46
+      ],
+      "sentAt": "2026-11-11T18:07:11.210Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:07:11.210Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "MRNASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 245.805,
+      "stop": 245.16,
+      "tp1": 248.87999999999997,
+      "zoneLow": 245.19,
+      "zoneHigh": 246.42,
+      "signalCandleTime": 1794418200000,
+      "rr1": 4.767441860464979,
+      "highs": [
+        255.26,
+        248.91
+      ],
+      "lows": null,
+      "sentAt": "2026-11-11T18:07:12.998Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:07:12.998Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "PLTRSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 172.945,
+      "stop": 173.13,
+      "tp1": 172.17,
+      "zoneLow": 172.79,
+      "zoneHigh": 173.1,
+      "signalCandleTime": 1794417000000,
+      "rr1": 4.189189189189168,
+      "highs": null,
+      "lows": [
+        171.12,
+        172.7
+      ],
+      "sentAt": "2026-11-11T18:07:14.754Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:07:14.754Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 643.25,
+      "stop": 643.76,
+      "tp1": 640.8499999999999,
+      "zoneLow": 642.77,
+      "zoneHigh": 643.73,
+      "signalCandleTime": 1794418200000,
+      "rr1": 4.705882352941439,
+      "highs": null,
+      "lows": [
+        634.96,
+        641.79
+      ],
+      "sentAt": "2026-11-11T18:07:16.460Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T18:07:16.460Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -168,12 +296,12 @@
     }
   ],
   "allTime": {
-    "total": 5,
+    "total": 9,
     "tp1Hit": 4,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 1,
+    "active": 5,
     "tp1Rate": 100,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -181,7 +309,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 4,
+      "total": 5,
       "tp1Hit": 4,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -189,7 +317,7 @@
       "tp1Rate": 100
     },
     "bearish": {
-      "total": 1,
+      "total": 4,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -197,5 +325,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T18:02:14.958Z"
+  "lastUpdated": "2026-11-11T18:07:17.963Z"
 }

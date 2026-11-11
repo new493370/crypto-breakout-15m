@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T07:23:26.442Z",
+  "lastUpdated": "2026-11-11T07:33:20.128Z",
   "signals": {
     "SATSUSDT:15m": {
       "sentAt": "2026-11-11T06:42:41.636Z",
@@ -738,6 +738,33 @@
       "score": null,
       "entry": 18.36,
       "stop": 18.57
+    },
+    "UKOILUSDT:15m": {
+      "sentAt": "2026-11-11T07:33:15.265Z",
+      "symbol": "UKOILUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 90.92,
+      "stop": 91.34
+    },
+    "CNPYUSDT:15m": {
+      "sentAt": "2026-11-11T07:33:16.939Z",
+      "symbol": "CNPYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.11995,
+      "stop": 0.1282
+    },
+    "MRNASTOCKUSDT:15m": {
+      "sentAt": "2026-11-11T07:33:18.627Z",
+      "symbol": "MRNASTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 254.89499999999998,
+      "stop": 256.53999999999996
     }
   }
 }

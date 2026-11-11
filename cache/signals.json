@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T06:53:48.881Z",
+  "lastUpdated": "2026-11-11T07:03:11.587Z",
   "signals": {
     "SATSUSDT:15m": {
       "sentAt": "2026-11-11T06:42:41.636Z",
@@ -522,6 +522,150 @@
       "score": null,
       "entry": 0.07862,
       "stop": 0.07978999999999999
+    },
+    "CHIPUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:44.011Z",
+      "symbol": "CHIPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.032165,
+      "stop": 0.03295
+    },
+    "BEATUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:45.738Z",
+      "symbol": "BEATUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.075815,
+      "stop": 0.07382
+    },
+    "XLMUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:47.455Z",
+      "symbol": "XLMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.144685,
+      "stop": 0.14597000000000002
+    },
+    "TRUMPUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:49.171Z",
+      "symbol": "TRUMPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.1244999999999998,
+      "stop": 1.146
+    },
+    "POLUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:50.886Z",
+      "symbol": "POLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.087675,
+      "stop": 0.08954000000000001
+    },
+    "UBUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:52.612Z",
+      "symbol": "UBUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.106545,
+      "stop": 0.10783
+    },
+    "JTOUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:54.374Z",
+      "symbol": "JTOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.33130000000000004,
+      "stop": 0.33840000000000003
+    },
+    "WETUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:56.179Z",
+      "symbol": "WETUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.047045000000000003,
+      "stop": 0.047270000000000006
+    },
+    "TRUMPOFFICIALUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:58.034Z",
+      "symbol": "TRUMPOFFICIALUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.1255000000000002,
+      "stop": 1.1449999999999998
+    },
+    "OPGUSDT:15m": {
+      "sentAt": "2026-11-11T07:02:59.751Z",
+      "symbol": "OPGUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.12795,
+      "stop": 0.12897
+    },
+    "NGUSDT:15m": {
+      "sentAt": "2026-11-11T07:03:01.470Z",
+      "symbol": "NGUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 3.5220000000000002,
+      "stop": 3.504
+    },
+    "ETHUSDT:15m": {
+      "sentAt": "2026-11-11T07:03:03.205Z",
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 2065.555,
+      "stop": 2074.03
+    },
+    "HYPEUSDT:15m": {
+      "sentAt": "2026-11-11T07:03:04.927Z",
+      "symbol": "HYPEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 71.971,
+      "stop": 72.346
+    },
+    "1000BONKUSDT:15m": {
+      "sentAt": "2026-11-11T07:03:06.651Z",
+      "symbol": "1000BONKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0028275,
+      "stop": 0.0028650000000000004
+    },
+    "METASTOCKUSDT:15m": {
+      "sentAt": "2026-11-11T07:03:08.370Z",
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 650.0150000000001,
+      "stop": 650.36
+    },
+    "QUSDT:15m": {
+      "sentAt": "2026-11-11T07:03:10.086Z",
+      "symbol": "QUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.024695,
+      "stop": 0.025160000000000002
     }
   }
 }

@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T19:42:21.660Z",
+  "lastUpdated": "2026-11-11T19:47:24.136Z",
   "signals": {
-    "BTWUSDT:5m": {
-      "sentAt": "2026-11-11T13:46:55.995Z",
-      "symbol": "BTWUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.07575,
-      "stop": 1.0777999999999999
-    },
-    "TRUSTUSDT:5m": {
-      "sentAt": "2026-11-11T13:46:57.682Z",
-      "symbol": "TRUSTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.052169999999999994,
-      "stop": 0.05226
-    },
     "SPKUSDT:5m": {
       "sentAt": "2026-11-11T13:56:54.631Z",
       "symbol": "SPKUSDT",

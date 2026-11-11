@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T14:31:53.254Z",
+  "lastUpdated": "2026-11-11T14:37:00.852Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2097,6 +2097,33 @@
       "score": null,
       "entry": 0.033705,
       "stop": 0.033760000000000005
+    },
+    "NAS100USDT:5m": {
+      "sentAt": "2026-11-11T14:36:55.988Z",
+      "symbol": "NAS100USDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 28255,
+      "stop": 28268
+    },
+    "SPXUSDT:5m": {
+      "sentAt": "2026-11-11T14:36:57.672Z",
+      "symbol": "SPXUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.37315,
+      "stop": 0.3738
+    },
+    "CRWVUSDT:5m": {
+      "sentAt": "2026-11-11T14:36:59.350Z",
+      "symbol": "CRWVUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 55.97,
+      "stop": 56.36
     }
   }
 }

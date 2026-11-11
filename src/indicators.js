@@ -11,11 +11,11 @@ export function isBull(c) { return cClose(c) > cOpen(c); }
 export function isBear(c) { return cClose(c) < cOpen(c); }
 
 export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.SWING_RIGHT) {
-  const highs = [];
-  const lows = [];
+  const rawHighs = [];
+  const rawLows = [];
 
   if (!Array.isArray(candles) || candles.length < left + right + 1) {
-    return { highs, lows };
+    return { highs: [], lows: [] };
   }
 
   for (let i = left; i < candles.length - right; i++) {
@@ -36,25 +36,50 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
     }
 
     if (isHigh) {
-      highs.push({
-        index: i,
-        price: high,
-        confirmed_index: i + right,
-        type: "high"
-      });
+      rawHighs.push({ index: i, price: high, confirmed_index: i + right, type: "high" });
     }
-
     if (isLow) {
-      lows.push({
-        index: i,
-        price: low,
-        confirmed_index: i + right,
-        type: "low"
-      });
+      rawLows.push({ index: i, price: low, confirmed_index: i + right, type: "low" });
     }
   }
 
-  return { highs, lows };
+  const merged = [...rawHighs, ...rawLows].sort((a, b) => a.index - b.index);
+  const filtered = [];
+
+  for (const current of merged) {
+    if (filtered.length === 0) {
+      filtered.push(current);
+      continue;
+    }
+
+    const last = filtered[filtered.length - 1];
+
+    if (last.type === current.type) {
+      if (current.type === "high" && current.price > last.price) {
+        filtered[filtered.length - 1] = current;
+      } else if (current.type === "low" && current.price < last.price) {
+        filtered[filtered.length - 1] = current;
+      }
+      continue;
+    }
+
+    const priceDiffPercent = (Math.abs(current.price - last.price) / last.price) * 100;
+    const isTimeValid = Math.abs(current.index - last.index) >= CONFIG.MIN_SWING_DISTANCE;
+    const isPriceValid = priceDiffPercent >= CONFIG.MIN_SWING_PRICE_DIFF_PERCENT;
+
+    if (isTimeValid && isPriceValid) {
+      filtered.push(current);
+    } else if (last.type === "high" && current.type === "low" && current.price < last.price) {
+      filtered[filtered.length - 1] = current;
+    } else if (last.type === "low" && current.type === "high" && current.price > last.price) {
+      filtered[filtered.length - 1] = current;
+    }
+  }
+
+  return {
+    highs: filtered.filter(s => s.type === "high"),
+    lows: filtered.filter(s => s.type === "low")
+  };
 }
 
 export function getLatestMinorSwings(swings, count = 2) {
@@ -126,11 +151,8 @@ export function detectBreakout(candles, trendline, lineDirection, startIndex) {
 
     if (!tradeDirection) continue;
 
-    const bodyTop = Math.max(cOpen(candle), cClose(candle));
-    const bodyBottom = Math.min(cOpen(candle), cClose(candle));
-
-    const zoneHigh = bodyTop;
-    const zoneLow = bodyBottom;
+    const zoneHigh = cHigh(candle);
+    const zoneLow = cLow(candle);
     const zoneWidth = zoneHigh - zoneLow;
 
     if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) continue;

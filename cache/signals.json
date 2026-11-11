@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T11:37:49.382Z",
+  "lastUpdated": "2026-11-11T11:42:42.964Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -936,6 +936,51 @@
       "score": null,
       "entry": 0.46455,
       "stop": 0.46640000000000004
+    },
+    "SATSUSDT:5m": {
+      "sentAt": "2026-11-11T11:42:34.540Z",
+      "symbol": "SATSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 8.477e-9,
+      "stop": 1.1489000000000001e-8
+    },
+    "NOTUSDT:5m": {
+      "sentAt": "2026-11-11T11:42:36.265Z",
+      "symbol": "NOTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.00032994999999999997,
+      "stop": 0.0003311
+    },
+    "RESOLVUSDT:5m": {
+      "sentAt": "2026-11-11T11:42:38.000Z",
+      "symbol": "RESOLVUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.013940000000000001,
+      "stop": 0.013980000000000001
+    },
+    "ENSOUSDT:5m": {
+      "sentAt": "2026-11-11T11:42:39.712Z",
+      "symbol": "ENSOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.44215,
+      "stop": 0.4425
+    },
+    "KASUSDT:5m": {
+      "sentAt": "2026-11-11T11:42:41.463Z",
+      "symbol": "KASUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.02896,
+      "stop": 0.029019999999999997
     }
   }
 }

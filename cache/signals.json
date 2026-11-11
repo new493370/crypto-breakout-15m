@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T07:13:00.151Z",
+  "lastUpdated": "2026-11-11T07:23:26.442Z",
   "signals": {
     "SATSUSDT:15m": {
       "sentAt": "2026-11-11T06:42:41.636Z",
@@ -666,6 +666,78 @@
       "score": null,
       "entry": 0.024695,
       "stop": 0.025160000000000002
+    },
+    "RLSUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:13.370Z",
+      "symbol": "RLSUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0018065,
+      "stop": 0.001818
+    },
+    "NVIDIAUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:15.005Z",
+      "symbol": "NVIDIAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 173.13,
+      "stop": 173.84
+    },
+    "JUPUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:16.647Z",
+      "symbol": "JUPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.262,
+      "stop": 0.2647
+    },
+    "MSTRSTOCKUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:18.292Z",
+      "symbol": "MSTRSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 122.775,
+      "stop": 122.91
+    },
+    "KGENUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:19.973Z",
+      "symbol": "KGENUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.06689500000000001,
+      "stop": 0.06776
+    },
+    "ALUMINUMUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:21.653Z",
+      "symbol": "ALUMINUMUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 3024.44,
+      "stop": 3013.5499999999997
+    },
+    "NVDAUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:23.298Z",
+      "symbol": "NVDAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 173.145,
+      "stop": 173.85
+    },
+    "BMNRSTOCKUSDT:15m": {
+      "sentAt": "2026-11-11T07:23:24.941Z",
+      "symbol": "BMNRSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 18.36,
+      "stop": 18.57
     }
   }
 }

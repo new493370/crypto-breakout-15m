@@ -43,7 +43,6 @@ async function telegramRequest(token, method, payload) {
     );
 
     const responseText = await response.text();
-
     let data = null;
 
     try {
@@ -85,7 +84,6 @@ async function runWithConcurrency(items, concurrency, worker) {
   async function runner() {
     while (true) {
       const currentIndex = nextIndex++;
-
       if (currentIndex >= items.length) return;
 
       try {
@@ -97,13 +95,11 @@ async function runWithConcurrency(items, concurrency, worker) {
   }
 
   const runners = [];
-
   for (let i = 0; i < Math.min(concurrency, items.length); i++) {
     runners.push(runner());
   }
 
   await Promise.all(runners);
-
   return results;
 }
 
@@ -128,16 +124,7 @@ async function main() {
   }
 
   const summary = {
-    total: 0,
-    skipped: 0,
-    analyzed: 0,
-    signals: 0,
-    sent: 0,
-    tracked: 0,
-    missed: 0,
-    cleaned: 0,
-    cacheEntries: 0,
-    elapsedMs: 0
+    total: 0, skipped: 0, analyzed: 0, signals: 0, sent: 0, tracked: 0, missed: 0, cleaned: 0, cacheEntries: 0, elapsedMs: 0
   };
 
   console.log("");
@@ -161,8 +148,7 @@ async function main() {
   const trackingTasks = stats.recentSignals
     .map((signal, index) => ({ signal, index }))
     .filter(({ signal }) =>
-      signal &&
-      (signal.status === "active" || signal.status === "pending")
+      signal && (signal.status === "active" || signal.status === "pending")
     );
 
   const trackedResults = await runWithConcurrency(
@@ -170,17 +156,9 @@ async function main() {
     3,
     async ({ signal, index }) => {
       if (Date.now() - startTime > TOTAL_TIMEOUT_MS) {
-        return {
-          index,
-          skipped: true,
-          status: signal.status,
-          events: [],
-          exitPrice: null
-        };
+        return { index, skipped: true, status: signal.status, events: [], exitPrice: null };
       }
-
       const result = await updateSignalStatus(signal);
-
       return { index, ...result };
     }
   );
@@ -191,7 +169,6 @@ async function main() {
     if (!result || result.skipped) continue;
 
     const signal = stats.recentSignals[result.index];
-
     if (!signal) continue;
 
     if (Number.isFinite(result.exitPrice)) {
@@ -221,25 +198,19 @@ async function main() {
 
       try {
         const message = formatSignalResult(signal, event.type);
-
         if (message) {
           await sendTelegramMessage(token, chatId, message);
           markNotified(signal, event.type);
           await sleep(MESSAGE_DELAY_MS);
         }
       } catch (e) {
-        console.error(
-          "Failed to send result for " + signal.symbol + ":",
-          e.message || e
-        );
+        console.error("Failed to send result for " + signal.symbol + ":", e.message || e);
       }
     }
 
     if (signal.status !== result.status) {
       summary.tracked++;
-      console.log(
-        signal.symbol + " [" + signal.timeframe + "] -> " + result.status
-      );
+      console.log(signal.symbol + " [" + signal.timeframe + "] -> " + result.status);
     }
 
     signal.status = result.status;
@@ -258,11 +229,7 @@ async function main() {
 
   summary.total = symbols.length * SCAN_TIMEFRAMES.length;
 
-  console.log(
-    "Fetched " + symbols.length +
-    " symbols x " + SCAN_TIMEFRAMES.length +
-    " timeframes = " + summary.total + " tasks"
-  );
+  console.log("Fetched " + symbols.length + " symbols x " + SCAN_TIMEFRAMES.length + " timeframes = " + summary.total + " tasks");
 
   const tasks = [];
 
@@ -291,12 +258,7 @@ async function main() {
       try {
         analysis = await analyze(symbol, timeframe);
       } catch (e) {
-        return {
-          symbol,
-          timeframe,
-          status: "error",
-          error: e.message || "unknown"
-        };
+        return { symbol, timeframe, status: "error", error: e.message || "unknown" };
       }
 
       if (!analysis || analysis.status === "NO_TRADE") {
@@ -318,17 +280,10 @@ async function main() {
 
     if (result.status === "skipped") {
       summary.skipped++;
-    } else if (
-      result.status === "no_signal" ||
-      result.status === "error" ||
-      result.status === "timeout"
-    ) {
+    } else if (result.status === "no_signal" || result.status === "error" || result.status === "timeout") {
       summary.analyzed++;
-
       if (result.error) {
-        console.error(
-          "Analysis error for " + result.symbol + ": " + result.error
-        );
+        console.error("Analysis error for " + result.symbol + ": " + result.error);
       }
     } else if (result.status === "signal") {
       summary.analyzed++;
@@ -337,12 +292,7 @@ async function main() {
     }
   }
 
-  console.log(
-    "Scan complete: " +
-    summary.analyzed + " analyzed, " +
-    summary.skipped + " skipped, " +
-    summary.signals + " signals"
-  );
+  console.log("Scan complete: " + summary.analyzed + " analyzed, " + summary.skipped + " skipped, " + summary.signals + " signals");
 
   let signalStickerSent = false;
 
@@ -378,6 +328,8 @@ async function main() {
         zoneHigh: analysis.zone_high,
         signalCandleTime: analysis.signal_candle_time,
         rr1: analysis.rr,
+        highs: analysis.highs,
+        lows: analysis.lows,
         sentAt,
         status: "active",
         activated: true,
@@ -388,31 +340,12 @@ async function main() {
         _stoppedNotified: false
       };
 
-      cache.signals = addSignal(
-        cache.signals,
-        symbol,
-        timeframe,
-        signalData
-      );
-
-      stats.processedSignals[signalKey] = {
-        symbol,
-        timeframe,
-        direction: analysis.direction,
-        status: "active",
-        sentAt
-      };
-
+      cache.signals = addSignal(cache.signals, symbol, timeframe, signalData);
+      stats.processedSignals[signalKey] = { symbol, timeframe, direction: analysis.direction, status: "active", sentAt };
       stats.recentSignals.push(signalData);
 
       summary.sent++;
-
-      console.log(
-        "Sent: " + symbol +
-        " (" + analysis.direction +
-        ", entry " + analysis.entry +
-        ", RR " + analysis.rr.toFixed(2) + ")"
-      );
+      console.log("Sent: " + symbol + " (" + analysis.direction + ", entry " + analysis.entry + ", RR " + analysis.rr.toFixed(2) + ")");
     } catch (e) {
       console.error("Failed to send " + symbol + ":", e.message || e);
     }
@@ -427,7 +360,6 @@ async function main() {
   }
 
   const computed = computeStats(stats.recentSignals);
-
   stats.allTime = computed.allTime;
   stats.byDirection = computed.byDirection;
 

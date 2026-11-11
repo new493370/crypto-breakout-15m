@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T19:27:29.315Z",
+  "lastUpdated": "2026-11-11T19:32:48.518Z",
   "signals": {
-    "SKHYNIXSTOCKUSDT:5m": {
-      "sentAt": "2026-11-11T13:31:58.594Z",
-      "symbol": "SKHYNIXSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 969.855,
-      "stop": 968.4300000000001
-    },
-    "XLMUSDT:5m": {
-      "sentAt": "2026-11-11T13:32:00.258Z",
-      "symbol": "XLMUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.148695,
-      "stop": 0.14841
-    },
-    "JTOUSDT:5m": {
-      "sentAt": "2026-11-11T13:32:01.922Z",
-      "symbol": "JTOUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.33465,
-      "stop": 0.3337
-    },
-    "AXSUSDT:5m": {
-      "sentAt": "2026-11-11T13:32:03.587Z",
-      "symbol": "AXSUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.8000499999999999,
-      "stop": 0.7985
-    },
     "SANDUSDT:5m": {
       "sentAt": "2026-11-11T13:42:02.122Z",
       "symbol": "SANDUSDT",
@@ -684,6 +648,15 @@
       "score": null,
       "entry": 102.305,
       "stop": 102.64
+    },
+    "INTCSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T19:32:47.016Z",
+      "symbol": "INTCSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 63.51,
+      "stop": 63.339999999999996
     }
   }
 }

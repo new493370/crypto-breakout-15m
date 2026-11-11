@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:51:47.334Z",
+  "lastUpdated": "2026-11-11T13:56:59.481Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1863,6 +1863,33 @@
       "score": null,
       "entry": 0.052169999999999994,
       "stop": 0.05226
+    },
+    "SPKUSDT:5m": {
+      "sentAt": "2026-11-11T13:56:54.631Z",
+      "symbol": "SPKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.015875,
+      "stop": 0.015569999999999999
+    },
+    "SAMSUNGSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T13:56:56.302Z",
+      "symbol": "SAMSUNGSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 155.9,
+      "stop": 156.02
+    },
+    "ETHFIUSDT:5m": {
+      "sentAt": "2026-11-11T13:56:57.979Z",
+      "symbol": "ETHFIUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.6393,
+      "stop": 0.638
     }
   }
 }

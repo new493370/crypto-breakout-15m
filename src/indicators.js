@@ -69,6 +69,9 @@ export function isValidStructure(swingA, swingB, direction) {
   if (swingA.type !== swingB.type) return false;
   if (Math.abs(swingB.index - swingA.index) < CONFIG.MIN_SWING_DISTANCE) return false;
 
+  const priceDiffPercent = (Math.abs(swingB.price - swingA.price) / swingA.price) * 100;
+  if (priceDiffPercent < CONFIG.MIN_SWING_PRICE_DIFF_PERCENT) return false;
+
   if (direction === "bearish" && swingA.type === "high") {
     return swingB.price < swingA.price;
   }

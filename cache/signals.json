@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T12:17:22.419Z",
+  "lastUpdated": "2026-11-11T12:22:17.006Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1341,6 +1341,15 @@
       "score": null,
       "entry": 6.4635,
       "stop": 6.472
+    },
+    "US30USDT:5m": {
+      "sentAt": "2026-11-11T12:22:15.504Z",
+      "symbol": "US30USDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 52312.399999999994,
+      "stop": 52330.619999999995
     }
   }
 }

@@ -195,7 +195,7 @@
       "sentAt": "2026-11-11T17:51:57.498Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:40:45.643Z",
+      "statusUpdatedAt": "2026-11-11T18:46:17.754Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -220,7 +220,7 @@
       "sentAt": "2026-11-11T18:07:11.210Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:40:45.643Z",
+      "statusUpdatedAt": "2026-11-11T18:46:17.754Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -361,5 +361,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T18:42:12.938Z"
+  "lastUpdated": "2026-11-11T18:47:55.785Z"
 }

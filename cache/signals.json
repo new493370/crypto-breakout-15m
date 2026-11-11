@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T18:42:12.937Z",
+  "lastUpdated": "2026-11-11T18:47:55.783Z",
   "signals": {
-    "SENTUSDT:5m": {
-      "sentAt": "2026-11-11T12:47:11.318Z",
-      "symbol": "SENTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.016370000000000003,
-      "stop": 0.01602
-    },
-    "STABLEUSDT:5m": {
-      "sentAt": "2026-11-11T12:47:12.990Z",
-      "symbol": "STABLEUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.02819,
-      "stop": 0.02827
-    },
-    "RIVERUSDT:5m": {
-      "sentAt": "2026-11-11T12:47:14.648Z",
-      "symbol": "RIVERUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.77215,
-      "stop": 0.7674
-    },
     "COREUSDT:5m": {
       "sentAt": "2026-11-11T12:52:00.211Z",
       "symbol": "COREUSDT",

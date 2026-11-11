@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T14:26:49.365Z",
+  "lastUpdated": "2026-11-11T14:31:53.254Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2052,6 +2052,51 @@
       "score": null,
       "entry": 0.2069,
       "stop": 0.20729999999999998
+    },
+    "SHIBUSDT:5m": {
+      "sentAt": "2026-11-11T14:31:44.862Z",
+      "symbol": "SHIBUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0000044515,
+      "stop": 0.000004457
+    },
+    "GALAUSDT:5m": {
+      "sentAt": "2026-11-11T14:31:46.688Z",
+      "symbol": "GALAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0015035,
+      "stop": 0.001508
+    },
+    "BICOUSDT:5m": {
+      "sentAt": "2026-11-11T14:31:48.374Z",
+      "symbol": "BICOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.013645000000000001,
+      "stop": 0.01369
+    },
+    "WIFUSDT:5m": {
+      "sentAt": "2026-11-11T14:31:50.044Z",
+      "symbol": "WIFUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.15855000000000002,
+      "stop": 0.159
+    },
+    "ZETAUSDT:5m": {
+      "sentAt": "2026-11-11T14:31:51.752Z",
+      "symbol": "ZETAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.033705,
+      "stop": 0.033760000000000005
     }
   }
 }

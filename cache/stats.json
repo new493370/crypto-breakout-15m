@@ -1,13 +1,69 @@
 {
-  "processedSignals": {},
-  "recentSignals": [],
+  "processedSignals": {
+    "PEPEUSDT:15m:2026-11-11T05:52:47.140Z": {
+      "symbol": "PEPEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T05:52:47.140Z"
+    },
+    "XLMUSDT:15m:2026-11-11T05:52:48.792Z": {
+      "symbol": "XLMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T05:52:48.792Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "PEPEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.0000054477,
+      "stop": 0.0000057101999999999974,
+      "tp1": 0.000004922700000000006,
+      "zoneLow": 0.0000054102,
+      "zoneHigh": 0.0000054852,
+      "signalCandleTime": 1794371400000,
+      "rr1": 2,
+      "sentAt": "2026-11-11T05:52:47.140Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T05:52:47.140Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "XLMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.14535,
+      "stop": 0.14821999999999996,
+      "tp1": 0.1396100000000001,
+      "zoneLow": 0.14494,
+      "zoneHigh": 0.14576,
+      "signalCandleTime": 1794374100000,
+      "rr1": 2,
+      "sentAt": "2026-11-11T05:52:48.792Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T05:52:48.792Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
   "allTime": {
-    "total": 0,
+    "total": 2,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 2,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -23,7 +79,7 @@
       "tp1Rate": 0
     },
     "bearish": {
-      "total": 0,
+      "total": 2,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -31,5 +87,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T05:42:41.446Z"
+  "lastUpdated": "2026-11-11T05:52:50.295Z"
 }

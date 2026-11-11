@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T18:17:05.266Z",
+  "lastUpdated": "2026-11-11T18:22:06.782Z",
   "signals": {
-    "UNIUSDT:5m": {
-      "sentAt": "2026-11-11T12:17:20.917Z",
-      "symbol": "UNIUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 6.4635,
-      "stop": 6.472
-    },
     "US30USDT:5m": {
       "sentAt": "2026-11-11T12:22:15.504Z",
       "symbol": "US30USDT",

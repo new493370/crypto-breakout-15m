@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T11:27:26.094Z",
+  "lastUpdated": "2026-11-11T11:32:39.764Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -792,6 +792,33 @@
       "score": null,
       "entry": 4041.0550000000003,
       "stop": 4039.79
+    },
+    "DOODUSDT:5m": {
+      "sentAt": "2026-11-11T11:32:34.822Z",
+      "symbol": "DOODUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0015899999999999998,
+      "stop": 0.001594
+    },
+    "WALUSDT:5m": {
+      "sentAt": "2026-11-11T11:32:36.512Z",
+      "symbol": "WALUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.027805,
+      "stop": 0.028120000000000003
+    },
+    "AIXBTUSDT:5m": {
+      "sentAt": "2026-11-11T11:32:38.262Z",
+      "symbol": "AIXBTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.01448,
+      "stop": 0.01452
     }
   }
 }

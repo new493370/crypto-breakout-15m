@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T14:41:37.612Z",
+  "lastUpdated": "2026-11-11T14:46:25.785Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2133,6 +2133,42 @@
       "score": null,
       "entry": 166.505,
       "stop": 167.49
+    },
+    "ONEUSDT:5m": {
+      "sentAt": "2026-11-11T14:46:19.153Z",
+      "symbol": "ONEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0015397,
+      "stop": 0.0015299
+    },
+    "TRIAUSDT:5m": {
+      "sentAt": "2026-11-11T14:46:20.853Z",
+      "symbol": "TRIAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0024995,
+      "stop": 0.002483
+    },
+    "SPX500USDT:5m": {
+      "sentAt": "2026-11-11T14:46:22.554Z",
+      "symbol": "SPX500USDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 7593.35,
+      "stop": 7594.2
+    },
+    "SOXSUSDT:5m": {
+      "sentAt": "2026-11-11T14:46:24.282Z",
+      "symbol": "SOXSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 47.245000000000005,
+      "stop": 47.11
     }
   }
 }

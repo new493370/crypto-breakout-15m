@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:17:03.026Z",
+  "lastUpdated": "2026-11-11T13:21:58.406Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1737,6 +1737,24 @@
       "score": null,
       "entry": 0.1617,
       "stop": 0.1613
+    },
+    "ATOMUSDT:5m": {
+      "sentAt": "2026-11-11T13:21:55.184Z",
+      "symbol": "ATOMUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.4245,
+      "stop": 1.432
+    },
+    "CXMTUSDT:5m": {
+      "sentAt": "2026-11-11T13:21:56.905Z",
+      "symbol": "CXMTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 6.339,
+      "stop": 6.332
     }
   }
 }

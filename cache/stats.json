@@ -188,7 +188,7 @@
       "sentAt": "2026-11-11T17:51:57.498Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:05:48.563Z",
+      "statusUpdatedAt": "2026-11-11T18:10:46.573Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -213,7 +213,7 @@
       "sentAt": "2026-11-11T18:07:11.210Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:07:11.210Z",
+      "statusUpdatedAt": "2026-11-11T18:10:46.573Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -236,13 +236,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-11T18:07:12.998Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:07:12.998Z",
+      "statusUpdatedAt": "2026-11-11T18:10:48.764Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 248.87999999999997
     },
     {
       "symbol": "PLTRSTOCKUSDT",
@@ -261,13 +262,14 @@
         172.7
       ],
       "sentAt": "2026-11-11T18:07:14.754Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:07:14.754Z",
+      "statusUpdatedAt": "2026-11-11T18:10:52.075Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 173.13
     },
     {
       "symbol": "METASTOCKUSDT",
@@ -286,31 +288,32 @@
         641.79
       ],
       "sentAt": "2026-11-11T18:07:16.460Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T18:07:16.460Z",
+      "statusUpdatedAt": "2026-11-11T18:10:53.745Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 643.76
     }
   ],
   "allTime": {
     "total": 9,
-    "tp1Hit": 4,
+    "tp1Hit": 5,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
-    "active": 5,
-    "tp1Rate": 100,
+    "stopped": 2,
+    "active": 2,
+    "tp1Rate": 71.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 28.6
   },
   "byDirection": {
     "bullish": {
       "total": 5,
-      "tp1Hit": 4,
+      "tp1Hit": 5,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 0,
@@ -321,9 +324,9 @@
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
+      "stopped": 2,
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T18:07:17.963Z"
+  "lastUpdated": "2026-11-11T18:12:21.265Z"
 }

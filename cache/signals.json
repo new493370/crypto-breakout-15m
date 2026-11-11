@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T15:06:31.911Z",
+  "lastUpdated": "2026-11-11T15:11:37.388Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2232,6 +2232,33 @@
       "score": null,
       "entry": 0.09065000000000001,
       "stop": 0.0911
+    },
+    "PONSUSDT:5m": {
+      "sentAt": "2026-11-11T15:11:32.444Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.15245,
+      "stop": 0.1528
+    },
+    "KORUUSDT:5m": {
+      "sentAt": "2026-11-11T15:11:34.191Z",
+      "symbol": "KORUUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 8.412,
+      "stop": 8.377
+    },
+    "1000BONKUSDT:5m": {
+      "sentAt": "2026-11-11T15:11:35.886Z",
+      "symbol": "1000BONKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0028315,
+      "stop": 0.002835
     }
   }
 }

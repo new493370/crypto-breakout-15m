@@ -179,13 +179,6 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const rr = reward / risk;
-
-    if (rr < CONFIG.MIN_RR_RATIO) {
-      result.reasons.push("نسبت ریسک به ریوارد کمتر از حد مجاز است");
-      return result;
-    }
-
     result.direction = tradeDirection;
     result.zone_low = zoneLow;
     result.zone_high = zoneHigh;
@@ -193,7 +186,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     result.entry = entry;
     result.stop_loss = stopLoss;
     result.take_profit = takeProfit;
-    result.rr = rr;
+    result.rr = reward / risk;
     result.signal_candle_time = pullback.candle.time;
     result.status = isBullish ? "LONG" : "SHORT";
 

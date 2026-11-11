@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T17:06:43.230Z",
+  "lastUpdated": "2026-11-11T17:11:47.818Z",
   "signals": {
-    "CAPUSDT:5m": {
-      "sentAt": "2026-11-11T11:07:46.456Z",
-      "symbol": "CAPUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.10117999999999999,
-      "stop": 0.10127
-    },
-    "CTUSDT:5m": {
-      "sentAt": "2026-11-11T11:07:49.837Z",
-      "symbol": "CTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.10202,
-      "stop": 0.10183
-    },
-    "POPCATUSDT:5m": {
-      "sentAt": "2026-11-11T11:07:51.524Z",
-      "symbol": "POPCATUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.033854999999999996,
-      "stop": 0.03393
-    },
-    "CELOUSDT:5m": {
-      "sentAt": "2026-11-11T11:07:53.210Z",
-      "symbol": "CELOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.06625500000000001,
-      "stop": 0.06635
-    },
-    "PROSUSDT:5m": {
-      "sentAt": "2026-11-11T11:07:54.966Z",
-      "symbol": "PROSUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.51945,
-      "stop": 0.5228
-    },
     "WLDUSDT:5m": {
       "sentAt": "2026-11-11T11:12:49.034Z",
       "symbol": "WLDUSDT",

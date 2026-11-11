@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T11:17:46.675Z",
+  "lastUpdated": "2026-11-11T11:22:52.353Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -756,6 +756,42 @@
       "score": null,
       "entry": 146.51999999999998,
       "stop": 146.35
+    },
+    "NEIROUSDT:5m": {
+      "sentAt": "2026-11-11T11:22:45.853Z",
+      "symbol": "NEIROUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.000058455,
+      "stop": 0.00005854
+    },
+    "ARBUSDT:5m": {
+      "sentAt": "2026-11-11T11:22:47.549Z",
+      "symbol": "ARBUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.158415,
+      "stop": 0.15858
+    },
+    "TESLAUSDT:5m": {
+      "sentAt": "2026-11-11T11:22:49.189Z",
+      "symbol": "TESLAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 387.47,
+      "stop": 387.37
+    },
+    "PAXGUSDT:5m": {
+      "sentAt": "2026-11-11T11:22:50.851Z",
+      "symbol": "PAXGUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 4041.0550000000003,
+      "stop": 4039.79
     }
   }
 }

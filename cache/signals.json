@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:36:58.317Z",
+  "lastUpdated": "2026-11-11T13:42:05.286Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1827,6 +1827,24 @@
       "score": null,
       "entry": 0.8000499999999999,
       "stop": 0.7985
+    },
+    "SANDUSDT:5m": {
+      "sentAt": "2026-11-11T13:42:02.122Z",
+      "symbol": "SANDUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.042785000000000004,
+      "stop": 0.042870000000000005
+    },
+    "TIAUSDT:5m": {
+      "sentAt": "2026-11-11T13:42:03.785Z",
+      "symbol": "TIAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.4363,
+      "stop": 0.4397
     }
   }
 }

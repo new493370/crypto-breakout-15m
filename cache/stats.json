@@ -35,7 +35,7 @@
       "sentAt": "2026-11-11T15:52:10.144Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T15:52:10.144Z",
+      "statusUpdatedAt": "2026-11-11T16:16:42.515Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -58,23 +58,24 @@
       ],
       "lows": null,
       "sentAt": "2026-11-11T15:52:11.945Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T15:52:11.945Z",
+      "statusUpdatedAt": "2026-11-11T16:16:46.128Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 2.341
     }
   ],
   "allTime": {
     "total": 2,
-    "tp1Hit": 0,
+    "tp1Hit": 1,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 2,
-    "tp1Rate": 0,
+    "active": 1,
+    "tp1Rate": 100,
     "tp2Rate": 0,
     "tp3Rate": 0,
     "stopRate": 0
@@ -82,11 +83,11 @@
   "byDirection": {
     "bullish": {
       "total": 2,
-      "tp1Hit": 0,
+      "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 0,
-      "tp1Rate": 0
+      "tp1Rate": 100
     },
     "bearish": {
       "total": 0,
@@ -97,5 +98,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T15:52:13.449Z"
+  "lastUpdated": "2026-11-11T16:17:19.893Z"
 }

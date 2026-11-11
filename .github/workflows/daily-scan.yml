@@ -24,10 +24,7 @@ jobs:
           node-version: "20"
 
       - name: Run scan
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: npm run scan
+        en
 
       - name: Commit cache
         run: |

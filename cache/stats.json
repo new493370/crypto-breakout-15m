@@ -33,13 +33,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-11T15:52:10.144Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T16:40:46.333Z",
+      "statusUpdatedAt": "2026-11-11T16:45:49.335Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 68.13999999999999
     },
     {
       "symbol": "CSOPSKHYNIX2LUSDT",
@@ -70,11 +71,11 @@
   ],
   "allTime": {
     "total": 2,
-    "tp1Hit": 1,
+    "tp1Hit": 2,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 1,
+    "active": 0,
     "tp1Rate": 100,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -83,7 +84,7 @@
   "byDirection": {
     "bullish": {
       "total": 2,
-      "tp1Hit": 1,
+      "tp1Hit": 2,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 0,
@@ -98,5 +99,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T16:41:31.078Z"
+  "lastUpdated": "2026-11-11T16:46:30.836Z"
 }

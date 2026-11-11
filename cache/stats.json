@@ -84,13 +84,14 @@
       "signalCandleTime": 1794196800000,
       "rr1": 2,
       "sentAt": "2026-11-11T03:32:36.117Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T03:32:36.117Z",
+      "statusUpdatedAt": "2026-11-11T03:40:38.390Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.13850000000000004
     },
     {
       "symbol": "PROSUSDT",
@@ -104,13 +105,14 @@
       "signalCandleTime": 1794198600000,
       "rr1": 2,
       "sentAt": "2026-11-11T03:32:37.804Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T03:32:37.804Z",
+      "statusUpdatedAt": "2026-11-11T03:40:40.057Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.4850000000000001
     }
   ],
   "allTime": {
@@ -118,8 +120,8 @@
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 2,
-    "active": 2,
+    "stopped": 4,
+    "active": 0,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -131,7 +133,7 @@
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 2,
+      "stopped": 4,
       "tp1Rate": 0
     },
     "bearish": {
@@ -143,5 +145,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T03:32:39.308Z"
+  "lastUpdated": "2026-11-11T03:42:49.753Z"
 }

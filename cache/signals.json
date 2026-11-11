@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T14:11:44.376Z",
+  "lastUpdated": "2026-11-11T14:17:07.509Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1962,6 +1962,69 @@
       "score": null,
       "entry": 0.36565000000000003,
       "stop": 0.3609
+    },
+    "SKHYSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T14:16:55.785Z",
+      "symbol": "SKHYSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 140.265,
+      "stop": 140.42
+    },
+    "ALGOUSDT:5m": {
+      "sentAt": "2026-11-11T14:16:57.507Z",
+      "symbol": "ALGOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.09086,
+      "stop": 0.09099
+    },
+    "ZROUSDT:5m": {
+      "sentAt": "2026-11-11T14:16:59.205Z",
+      "symbol": "ZROUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.5724,
+      "stop": 1.5771
+    },
+    "GLMUSDT:5m": {
+      "sentAt": "2026-11-11T14:17:00.914Z",
+      "symbol": "GLMUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.10227,
+      "stop": 0.10246
+    },
+    "BREVUSDT:5m": {
+      "sentAt": "2026-11-11T14:17:02.610Z",
+      "symbol": "BREVUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.06694,
+      "stop": 0.06715
+    },
+    "AXTISTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T14:17:04.314Z",
+      "symbol": "AXTISTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 43.155,
+      "stop": 43.31
+    },
+    "ZINCUSDT:5m": {
+      "sentAt": "2026-11-11T14:17:06.007Z",
+      "symbol": "ZINCUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 3734.6549999999997,
+      "stop": 3736.5
     }
   }
 }

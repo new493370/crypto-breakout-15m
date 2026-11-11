@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:12:07.865Z",
+  "lastUpdated": "2026-11-11T13:17:03.026Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1728,6 +1728,15 @@
       "score": null,
       "entry": 0.00566,
       "stop": 0.0056700000000000006
+    },
+    "SNXUSDT:5m": {
+      "sentAt": "2026-11-11T13:17:01.524Z",
+      "symbol": "SNXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1617,
+      "stop": 0.1613
     }
   }
 }

@@ -1,60 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T17:01:42.009Z",
+  "lastUpdated": "2026-11-11T17:06:43.230Z",
   "signals": {
-    "ZKUSDT:5m": {
-      "sentAt": "2026-11-11T11:02:49.844Z",
-      "symbol": "ZKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.009232,
-      "stop": 0.009243
-    },
-    "SPACEUSDT:5m": {
-      "sentAt": "2026-11-11T11:02:51.517Z",
-      "symbol": "SPACEUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0031964999999999997,
-      "stop": 0.003201
-    },
-    "JCTUSDT:5m": {
-      "sentAt": "2026-11-11T11:02:53.176Z",
-      "symbol": "JCTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.005862,
-      "stop": 0.00591
-    },
-    "SKYUSDT:5m": {
-      "sentAt": "2026-11-11T11:02:54.859Z",
-      "symbol": "SKYUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.059495000000000006,
-      "stop": 0.059570000000000005
-    },
-    "SYRUPUSDT:5m": {
-      "sentAt": "2026-11-11T11:02:56.527Z",
-      "symbol": "SYRUPUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.1344,
-      "stop": 0.13499999999999998
-    },
-    "ZKSYNCUSDT:5m": {
-      "sentAt": "2026-11-11T11:02:58.294Z",
-      "symbol": "ZKSYNCUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.009222999999999999,
-      "stop": 0.009236999999999999
-    },
     "CAPUSDT:5m": {
       "sentAt": "2026-11-11T11:07:46.456Z",
       "symbol": "CAPUSDT",

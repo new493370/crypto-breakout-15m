@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T07:42:54.963Z",
+  "lastUpdated": "2026-11-11T07:53:21.647Z",
   "signals": {
     "SATSUSDT:15m": {
       "sentAt": "2026-11-11T06:42:41.636Z",
@@ -765,6 +765,60 @@
       "score": null,
       "entry": 254.89499999999998,
       "stop": 256.53999999999996
+    },
+    "USOILUSDT:15m": {
+      "sentAt": "2026-11-11T07:53:11.798Z",
+      "symbol": "USOILUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 85.605,
+      "stop": 86.24000000000001
+    },
+    "FILUSDT:15m": {
+      "sentAt": "2026-11-11T07:53:13.474Z",
+      "symbol": "FILUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.7556499999999999,
+      "stop": 0.7434999999999999
+    },
+    "YBUSDT:15m": {
+      "sentAt": "2026-11-11T07:53:15.231Z",
+      "symbol": "YBUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.04847,
+      "stop": 0.04807000000000001
+    },
+    "ZROUSDT:15m": {
+      "sentAt": "2026-11-11T07:53:16.875Z",
+      "symbol": "ZROUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.5509499999999998,
+      "stop": 1.5043
+    },
+    "KITEUSDT:15m": {
+      "sentAt": "2026-11-11T07:53:18.510Z",
+      "symbol": "KITEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1207,
+      "stop": 0.11968
+    },
+    "AVAXUSDT:15m": {
+      "sentAt": "2026-11-11T07:53:20.145Z",
+      "symbol": "AVAXUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 8.4665,
+      "stop": 8.343
     }
   }
 }

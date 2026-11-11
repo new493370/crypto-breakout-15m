@@ -19,27 +19,31 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
   }
 
   for (let i = left; i < candles.length - right; i++) {
-    const high = cHigh(candles[i]);
-    const low = cLow(candles[i]);
+    const bodyHigh = Math.max(cOpen(candles[i]), cClose(candles[i]));
+    const bodyLow = Math.min(cOpen(candles[i]), cClose(candles[i]));
 
     let isHigh = true;
     let isLow = true;
 
     for (let j = i - left; j < i; j++) {
-      if (cHigh(candles[j]) >= high) isHigh = false;
-      if (cLow(candles[j]) <= low) isLow = false;
+      const prevBodyHigh = Math.max(cOpen(candles[j]), cClose(candles[j]));
+      const prevBodyLow = Math.min(cOpen(candles[j]), cClose(candles[j]));
+      if (prevBodyHigh >= bodyHigh) isHigh = false;
+      if (prevBodyLow <= bodyLow) isLow = false;
     }
 
     for (let j = i + 1; j <= i + right; j++) {
-      if (cHigh(candles[j]) >= high) isHigh = false;
-      if (cLow(candles[j]) <= low) isLow = false;
+      const nextBodyHigh = Math.max(cOpen(candles[j]), cClose(candles[j]));
+      const nextBodyLow = Math.min(cOpen(candles[j]), cClose(candles[j]));
+      if (nextBodyHigh >= bodyHigh) isHigh = false;
+      if (nextBodyLow <= bodyLow) isLow = false;
     }
 
     if (isHigh) {
-      rawHighs.push({ index: i, price: high, confirmed_index: i + right, type: "high" });
+      rawHighs.push({ index: i, price: bodyHigh, confirmed_index: i + right, type: "high" });
     }
     if (isLow) {
-      rawLows.push({ index: i, price: low, confirmed_index: i + right, type: "low" });
+      rawLows.push({ index: i, price: bodyLow, confirmed_index: i + right, type: "low" });
     }
   }
 
@@ -65,7 +69,7 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
 
     const priceDiffPercent = (Math.abs(current.price - last.price) / last.price) * 100;
     const isTimeValid = Math.abs(current.index - last.index) >= CONFIG.MIN_CANDLES_BETWEEN_PIVOTS;
-    const isPriceValid = priceDiffPercent >= CONFIG.MIN_SWING_PRICE_DIFF_PERCENT;
+    const isPriceValid = priceDiffPercent >= CONFIG.MIN_LEVEL_DIFF_PERCENT;
 
     if (isTimeValid && isPriceValid) {
       filtered.push(current);
@@ -95,7 +99,7 @@ export function isValidStructure(swingA, swingB, direction) {
   if (Math.abs(swingB.index - swingA.index) < CONFIG.MIN_SWING_DISTANCE) return false;
 
   const priceDiffPercent = (Math.abs(swingB.price - swingA.price) / swingA.price) * 100;
-  if (priceDiffPercent < CONFIG.MIN_SWING_PRICE_DIFF_PERCENT) return false;
+  if (priceDiffPercent < CONFIG.MIN_LEVEL_DIFF_PERCENT) return false;
 
   if (direction === "bearish" && swingA.type === "high") {
     return swingB.price < swingA.price;

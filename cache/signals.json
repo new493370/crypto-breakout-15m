@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T18:27:18.905Z",
+  "lastUpdated": "2026-11-11T18:32:21.891Z",
   "signals": {
-    "DOTUSDT:5m": {
-      "sentAt": "2026-11-11T12:27:19.883Z",
-      "symbol": "DOTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.84985,
-      "stop": 0.8487
-    },
-    "GRASSUSDT:5m": {
-      "sentAt": "2026-11-11T12:27:21.539Z",
-      "symbol": "GRASSUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.4586,
-      "stop": 0.45980000000000004
-    },
-    "AVNTUSDT:5m": {
-      "sentAt": "2026-11-11T12:27:23.196Z",
-      "symbol": "AVNTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.08108499999999999,
-      "stop": 0.08102
-    },
-    "RAYUSDT:5m": {
-      "sentAt": "2026-11-11T12:27:24.840Z",
-      "symbol": "RAYUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.6404,
-      "stop": 1.6421
-    },
     "HUSDT:5m": {
       "sentAt": "2026-11-11T12:32:23.448Z",
       "symbol": "HUSDT",

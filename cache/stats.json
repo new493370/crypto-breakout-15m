@@ -20,6 +20,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-11T16:56:39.063Z"
+    },
+    "TESLAUSDT:5m:2026-11-11T17:26:51.568Z": {
+      "symbol": "TESLAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-11T17:26:51.568Z"
     }
   },
   "recentSignals": [
@@ -100,15 +107,40 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 1879.7799999999997
+    },
+    {
+      "symbol": "TESLAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 392.94,
+      "stop": 392.73,
+      "tp1": 393.84000000000003,
+      "zoneLow": 392.76,
+      "zoneHigh": 393.12,
+      "signalCandleTime": 1794417600000,
+      "rr1": 4.285714285714866,
+      "highs": [
+        395.92,
+        393.78
+      ],
+      "lows": null,
+      "sentAt": "2026-11-11T17:26:51.568Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T17:26:51.568Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "allTime": {
-    "total": 3,
+    "total": 4,
     "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 100,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -116,7 +148,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 3,
+      "total": 4,
       "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -132,5 +164,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T17:21:52.104Z"
+  "lastUpdated": "2026-11-11T17:26:53.071Z"
 }

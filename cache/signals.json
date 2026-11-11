@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T17:21:52.102Z",
+  "lastUpdated": "2026-11-11T17:26:53.070Z",
   "signals": {
-    "NEIROUSDT:5m": {
-      "sentAt": "2026-11-11T11:22:45.853Z",
-      "symbol": "NEIROUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.000058455,
-      "stop": 0.00005854
-    },
-    "ARBUSDT:5m": {
-      "sentAt": "2026-11-11T11:22:47.549Z",
-      "symbol": "ARBUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.158415,
-      "stop": 0.15858
-    },
-    "TESLAUSDT:5m": {
-      "sentAt": "2026-11-11T11:22:49.189Z",
-      "symbol": "TESLAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 387.47,
-      "stop": 387.37
-    },
-    "PAXGUSDT:5m": {
-      "sentAt": "2026-11-11T11:22:50.851Z",
-      "symbol": "PAXGUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 4041.0550000000003,
-      "stop": 4039.79
-    },
     "DOODUSDT:5m": {
       "sentAt": "2026-11-11T11:32:34.822Z",
       "symbol": "DOODUSDT",
@@ -1539,6 +1503,15 @@
       "score": null,
       "entry": 1872.005,
       "stop": 1870.42
+    },
+    "TESLAUSDT:5m": {
+      "sentAt": "2026-11-11T17:26:51.569Z",
+      "symbol": "TESLAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 392.94,
+      "stop": 392.73
     }
   }
 }

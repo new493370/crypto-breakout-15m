@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T11:42:42.964Z",
+  "lastUpdated": "2026-11-11T11:47:33.659Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -981,6 +981,69 @@
       "score": null,
       "entry": 0.02896,
       "stop": 0.029019999999999997
+    },
+    "BEATUSDT:5m": {
+      "sentAt": "2026-11-11T11:47:21.642Z",
+      "symbol": "BEATUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.075965,
+      "stop": 0.07576
+    },
+    "BARDUSDT:5m": {
+      "sentAt": "2026-11-11T11:47:23.468Z",
+      "symbol": "BARDUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.08560000000000001,
+      "stop": 0.0861
+    },
+    "BSBUSDT:5m": {
+      "sentAt": "2026-11-11T11:47:25.168Z",
+      "symbol": "BSBUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.085245,
+      "stop": 0.0853
+    },
+    "RAVEUSDT:5m": {
+      "sentAt": "2026-11-11T11:47:26.930Z",
+      "symbol": "RAVEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.12815,
+      "stop": 0.1285
+    },
+    "TSMSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T11:47:28.647Z",
+      "symbol": "TSMSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 415.71500000000003,
+      "stop": 415.9
+    },
+    "AAPLSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T11:47:30.360Z",
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 346.29499999999996,
+      "stop": 346.17
+    },
+    "JASMYUSDT:5m": {
+      "sentAt": "2026-11-11T11:47:32.158Z",
+      "symbol": "JASMYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0036005000000000004,
+      "stop": 0.003605
     }
   }
 }

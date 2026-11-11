@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T12:22:17.006Z",
+  "lastUpdated": "2026-11-11T12:27:26.342Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1350,6 +1350,78 @@
       "score": null,
       "entry": 52312.399999999994,
       "stop": 52330.619999999995
+    },
+    "FOGOUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:13.178Z",
+      "symbol": "FOGOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0019255000000000001,
+      "stop": 0.001922
+    },
+    "USELESSUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:14.824Z",
+      "symbol": "USELESSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.141145,
+      "stop": 0.14075
+    },
+    "MINAUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:16.468Z",
+      "symbol": "MINAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.052635,
+      "stop": 0.05282
+    },
+    "GRAMUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:18.237Z",
+      "symbol": "GRAMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.1835,
+      "stop": 1.153
+    },
+    "DOTUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:19.883Z",
+      "symbol": "DOTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.84985,
+      "stop": 0.8487
+    },
+    "GRASSUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:21.539Z",
+      "symbol": "GRASSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.4586,
+      "stop": 0.45980000000000004
+    },
+    "AVNTUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:23.196Z",
+      "symbol": "AVNTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.08108499999999999,
+      "stop": 0.08102
+    },
+    "RAYUSDT:5m": {
+      "sentAt": "2026-11-11T12:27:24.840Z",
+      "symbol": "RAYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.6404,
+      "stop": 1.6421
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:42:05.286Z",
+  "lastUpdated": "2026-11-11T13:46:59.184Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1845,6 +1845,24 @@
       "score": null,
       "entry": 0.4363,
       "stop": 0.4397
+    },
+    "BTWUSDT:5m": {
+      "sentAt": "2026-11-11T13:46:55.995Z",
+      "symbol": "BTWUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.07575,
+      "stop": 1.0777999999999999
+    },
+    "TRUSTUSDT:5m": {
+      "sentAt": "2026-11-11T13:46:57.682Z",
+      "symbol": "TRUSTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.052169999999999994,
+      "stop": 0.05226
     }
   }
 }

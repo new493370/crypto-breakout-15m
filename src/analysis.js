@@ -6,9 +6,7 @@ import {
   isValidStructure,
   calculateTrendline,
   detectBreakout,
-  calculateEMA,
-  isPinBar,
-  isEngulfing
+  calculateEMA
 } from "./indicators.js";
 
 function isValidCandle(candle) {
@@ -35,12 +33,14 @@ function isStrongMomentum(candles, direction) {
 
   const recent = candles.slice(-CONFIG.MOMENTUM_CANDLE_COUNT);
 
-  const strongBullish = recent.every(
-    c => c.close > c.open && c.close - c.open > (c.high - c.low) * 0.5
+  const strongBullish = recent.every(c =>
+    c.close > c.open &&
+    c.close - c.open > (c.high - c.low) * 0.5
   );
 
-  const strongBearish = recent.every(
-    c => c.close < c.open && c.open - c.close > (c.high - c.low) * 0.5
+  const strongBearish = recent.every(c =>
+    c.close < c.open &&
+    c.open - c.close > (c.high - c.low) * 0.5
   );
 
   if (direction === "bullish" && strongBearish) return true;
@@ -49,7 +49,7 @@ function isStrongMomentum(candles, direction) {
   return false;
 }
 
-function detectValidRetestEntry(
+function detectRetestTouchEntry(
   candles,
   direction,
   breakoutIndex,
@@ -79,20 +79,22 @@ function detectValidRetestEntry(
 
   const requiredAwayBars = Number.isFinite(CONFIG.REQUIRED_AWAY_BARS)
     ? Math.max(1, Math.trunc(CONFIG.REQUIRED_AWAY_BARS))
-    : 1;
+    : 2;
 
-  const maxAgeBars = Number.isFinite(CONFIG.PULLBACK_MAX_AGE_BARS)
-    ? CONFIG.PULLBACK_MAX_AGE_BARS
-    : 3;
+  const minMoveAwayRatio = Number.isFinite(CONFIG.MIN_MOVE_AWAY_RATIO)
+    ? Math.max(0, CONFIG.MIN_MOVE_AWAY_RATIO)
+    : 0.5;
+
+  const zoneWidth = zoneHigh - zoneLow;
+  const minMoveAway = zoneWidth * minMoveAwayRatio;
 
   let consecutiveAway = 0;
   let hasMovedAway = false;
 
   for (let i = breakoutIndex + 1; i <= endIndex; i++) {
     const current = candles[i];
-    const previous = candles[i - 1];
 
-    if (!isValidCandle(current) || !isValidCandle(previous)) {
+    if (!isValidCandle(current)) {
       continue;
     }
 
@@ -103,12 +105,22 @@ function detectValidRetestEntry(
     if (!hasMovedAway) {
       if (isOutsideZone) {
         consecutiveAway++;
+
         if (consecutiveAway >= requiredAwayBars) {
-          hasMovedAway = true;
+          const farEnough = direction === "bullish"
+            ? current.close - zoneHigh >= minMoveAway
+            : zoneLow - current.close >= minMoveAway;
+
+          if (farEnough) {
+            hasMovedAway = true;
+          } else {
+            consecutiveAway = 0;
+          }
         }
       } else {
         consecutiveAway = 0;
       }
+
       continue;
     }
 
@@ -123,17 +135,6 @@ function detectValidRetestEntry(
     const entryPrice = (zoneHigh + zoneLow) / 2;
 
     if (!Number.isFinite(entryPrice) || entryPrice <= 0) {
-      continue;
-    }
-
-    const pinBarValid = isPinBar(current, direction);
-    const engulfingValid = isEngulfing(previous, current, direction);
-
-    if (!pinBarValid && !engulfingValid) {
-      continue;
-    }
-
-    if (candles.length - 1 - i > maxAgeBars) {
       continue;
     }
 
@@ -187,11 +188,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     const lastCandle = candles[candles.length - 1];
     result.current_price = lastCandle.close;
 
-    const emaPeriod = Number.isFinite(CONFIG.EMA_PERIOD)
-      ? CONFIG.EMA_PERIOD
-      : 50;
-
-    const ema50 = calculateEMA(candles, emaPeriod);
+    const ema50 = calculateEMA(candles, 50);
     const isUptrend = ema50 !== null && lastCandle.close > ema50;
     const isDowntrend = ema50 !== null && lastCandle.close < ema50;
 
@@ -311,7 +308,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const setup = detectValidRetestEntry(
+    const setup = detectRetestTouchEntry(
       candles,
       tradeDirection,
       breakout.index,
@@ -390,7 +387,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     result.status = isBullish ? "LONG" : "SHORT";
 
     result.reasons.push(
-      "شکست خط روند، فاصله‌گیری قیمت و بازگشت معتبر با تأیید پین‌بار/اینگولف تأیید شد"
+      "شکست خط روند، فاصله‌گیری قیمت و اولین بازگشت و لمس محدوده شکست تأیید شد"
     );
 
     return result;

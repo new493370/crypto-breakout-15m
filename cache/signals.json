@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T17:11:47.818Z",
+  "lastUpdated": "2026-11-11T17:16:50.566Z",
   "signals": {
-    "WLDUSDT:5m": {
-      "sentAt": "2026-11-11T11:12:49.034Z",
-      "symbol": "WLDUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.3123,
-      "stop": 0.313
-    },
-    "ORDERUSDT:5m": {
-      "sentAt": "2026-11-11T11:12:50.679Z",
-      "symbol": "ORDERUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.02996,
-      "stop": 0.02989
-    },
-    "NGUSDT:5m": {
-      "sentAt": "2026-11-11T11:12:52.322Z",
-      "symbol": "NGUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 3.558,
-      "stop": 3.554
-    },
-    "NGASUSDT:5m": {
-      "sentAt": "2026-11-11T11:12:53.963Z",
-      "symbol": "NGASUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 3.5625,
-      "stop": 3.557
-    },
     "ANIMEUSDT:5m": {
       "sentAt": "2026-11-11T11:17:38.362Z",
       "symbol": "ANIMEUSDT",

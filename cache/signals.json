@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T18:12:21.264Z",
+  "lastUpdated": "2026-11-11T18:17:05.266Z",
   "signals": {
-    "API3USDT:5m": {
-      "sentAt": "2026-11-11T12:12:21.527Z",
-      "symbol": "API3USDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.22375,
-      "stop": 0.2244
-    },
-    "SNDKUSDT:5m": {
-      "sentAt": "2026-11-11T12:12:23.227Z",
-      "symbol": "SNDKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 932.4,
-      "stop": 929
-    },
     "UNIUSDT:5m": {
       "sentAt": "2026-11-11T12:17:20.917Z",
       "symbol": "UNIUSDT",

@@ -153,6 +153,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-11T19:12:34.855Z"
+    },
+    "CBRSSTOCKUSDT:5m:2026-11-11T19:17:30.817Z": {
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-11T19:17:30.817Z"
     }
   },
   "recentSignals": [
@@ -279,7 +286,7 @@
       "sentAt": "2026-11-11T17:51:57.498Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:10:46.648Z",
+      "statusUpdatedAt": "2026-11-11T19:15:50.014Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -304,7 +311,7 @@
       "sentAt": "2026-11-11T18:07:11.210Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:10:46.648Z",
+      "statusUpdatedAt": "2026-11-11T19:15:50.014Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -485,7 +492,7 @@
       "sentAt": "2026-11-11T18:57:34.701Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:10:46.648Z",
+      "statusUpdatedAt": "2026-11-11T19:15:50.014Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -510,7 +517,7 @@
       "sentAt": "2026-11-11T18:57:36.404Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:10:46.648Z",
+      "statusUpdatedAt": "2026-11-11T19:15:50.014Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -639,7 +646,7 @@
       "sentAt": "2026-11-11T19:12:29.576Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:12:29.576Z",
+      "statusUpdatedAt": "2026-11-11T19:15:50.014Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -662,13 +669,14 @@
         294.17
       ],
       "sentAt": "2026-11-11T19:12:31.372Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:12:31.372Z",
+      "statusUpdatedAt": "2026-11-11T19:15:53.741Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 294.35
     },
     {
       "symbol": "AAPLSTOCKUSDT",
@@ -689,7 +697,7 @@
       "sentAt": "2026-11-11T19:12:33.152Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:12:33.152Z",
+      "statusUpdatedAt": "2026-11-11T19:15:53.741Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -714,7 +722,32 @@
       "sentAt": "2026-11-11T19:12:34.855Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-11T19:12:34.855Z",
+      "statusUpdatedAt": "2026-11-11T19:15:53.741Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 102.305,
+      "stop": 102.64,
+      "tp1": 100.78,
+      "zoneLow": 102,
+      "zoneHigh": 102.61,
+      "signalCandleTime": 1794424200000,
+      "rr1": 4.552238805970251,
+      "highs": null,
+      "lows": [
+        101.9,
+        102.25
+      ],
+      "sentAt": "2026-11-11T19:17:30.817Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-11T19:17:30.817Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -722,16 +755,16 @@
     }
   ],
   "allTime": {
-    "total": 22,
-    "tp1Hit": 9,
+    "total": 23,
+    "tp1Hit": 10,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 5,
     "active": 8,
-    "tp1Rate": 64.3,
+    "tp1Rate": 66.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 35.7
+    "stopRate": 33.3
   },
   "byDirection": {
     "bullish": {
@@ -743,13 +776,13 @@
       "tp1Rate": 75
     },
     "bearish": {
-      "total": 11,
-      "tp1Hit": 3,
+      "total": 12,
+      "tp1Hit": 4,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 3,
-      "tp1Rate": 50
+      "tp1Rate": 57.1
     }
   },
-  "lastUpdated": "2026-11-11T19:12:36.359Z"
+  "lastUpdated": "2026-11-11T19:17:32.358Z"
 }

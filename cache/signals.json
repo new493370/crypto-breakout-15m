@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-11T19:12:36.357Z",
+  "lastUpdated": "2026-11-11T19:17:32.319Z",
   "signals": {
-    "SNXUSDT:5m": {
-      "sentAt": "2026-11-11T13:17:01.524Z",
-      "symbol": "SNXUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.1617,
-      "stop": 0.1613
-    },
     "ATOMUSDT:5m": {
       "sentAt": "2026-11-11T13:21:55.184Z",
       "symbol": "ATOMUSDT",
@@ -738,6 +729,15 @@
       "score": null,
       "entry": 3.559,
       "stop": 3.55
+    },
+    "CBRSSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T19:17:30.817Z",
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 102.305,
+      "stop": 102.64
     }
   }
 }

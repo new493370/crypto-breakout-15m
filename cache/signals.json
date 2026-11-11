@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T13:27:03.757Z",
+  "lastUpdated": "2026-11-11T13:32:05.088Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1791,6 +1791,42 @@
       "score": null,
       "entry": 0.23035,
       "stop": 0.2268
+    },
+    "SKHYNIXSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T13:31:58.594Z",
+      "symbol": "SKHYNIXSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 969.855,
+      "stop": 968.4300000000001
+    },
+    "XLMUSDT:5m": {
+      "sentAt": "2026-11-11T13:32:00.258Z",
+      "symbol": "XLMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.148695,
+      "stop": 0.14841
+    },
+    "JTOUSDT:5m": {
+      "sentAt": "2026-11-11T13:32:01.922Z",
+      "symbol": "JTOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.33465,
+      "stop": 0.3337
+    },
+    "AXSUSDT:5m": {
+      "sentAt": "2026-11-11T13:32:03.587Z",
+      "symbol": "AXSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.8000499999999999,
+      "stop": 0.7985
     }
   }
 }

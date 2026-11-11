@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T08:23:31.670Z",
+  "lastUpdated": "2026-11-11T08:32:59.816Z",
   "signals": {
     "SATSUSDT:15m": {
       "sentAt": "2026-11-11T06:42:41.636Z",
@@ -1008,6 +1008,24 @@
       "score": null,
       "entry": 0.1094,
       "stop": 0.1075
+    },
+    "AVGOSTOCKUSDT:15m": {
+      "sentAt": "2026-11-11T08:32:56.587Z",
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 342.875,
+      "stop": 340.76
+    },
+    "ASTERUSDT:15m": {
+      "sentAt": "2026-11-11T08:32:58.315Z",
+      "symbol": "ASTERUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.6423,
+      "stop": 0.6350999999999999
     }
   }
 }

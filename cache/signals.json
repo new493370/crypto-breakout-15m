@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T14:37:00.852Z",
+  "lastUpdated": "2026-11-11T14:41:37.612Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -2124,6 +2124,15 @@
       "score": null,
       "entry": 55.97,
       "stop": 56.36
+    },
+    "MRVLSTOCKUSDT:5m": {
+      "sentAt": "2026-11-11T14:41:36.110Z",
+      "symbol": "MRVLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 166.505,
+      "stop": 167.49
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-11T12:47:16.150Z",
+  "lastUpdated": "2026-11-11T12:52:17.137Z",
   "signals": {
     "PUMPUSDT:5m": {
       "sentAt": "2026-11-11T10:36:34.896Z",
@@ -1539,6 +1539,96 @@
       "score": null,
       "entry": 0.77215,
       "stop": 0.7674
+    },
+    "COREUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:00.211Z",
+      "symbol": "COREUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.012285,
+      "stop": 0.01218
+    },
+    "XRPUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:01.924Z",
+      "symbol": "XRPUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.0550000000000002,
+      "stop": 1.0521
+    },
+    "RLSUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:03.660Z",
+      "symbol": "RLSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0018145000000000001,
+      "stop": 0.001809
+    },
+    "CASHCATUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:05.350Z",
+      "symbol": "CASHCATUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.060535,
+      "stop": 0.06043
+    },
+    "FETUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:07.038Z",
+      "symbol": "FETUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1488,
+      "stop": 0.1482
+    },
+    "APEUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:08.731Z",
+      "symbol": "APEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.097475,
+      "stop": 0.09725
+    },
+    "AEROUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:10.550Z",
+      "symbol": "AEROUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.53765,
+      "stop": 0.5354
+    },
+    "ESPUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:12.241Z",
+      "symbol": "ESPUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.079135,
+      "stop": 0.07909
+    },
+    "HYPEUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:13.938Z",
+      "symbol": "HYPEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 72.407,
+      "stop": 72.347
+    },
+    "FLOATUSDT:5m": {
+      "sentAt": "2026-11-11T12:52:15.635Z",
+      "symbol": "FLOATUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00799,
+      "stop": 0.00794
     }
   }
 }

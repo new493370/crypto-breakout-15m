@@ -43,12 +43,6 @@ export async function updateSignalStatus(signal) {
       return { status: currentStatus, events: [], exitPrice: null };
     }
 
-    const risk = Math.abs(entry - stop);
-
-    if (!Number.isFinite(risk) || risk <= 0) {
-      return { status: currentStatus, events: [], exitPrice: null };
-    }
-
     const signalCandles = candles.filter(c =>
       c &&
       c.incomplete !== true &&
@@ -113,22 +107,8 @@ export function computeStats(recentSignals) {
   };
 
   const byDirection = {
-    bullish: {
-      total: 0,
-      tp1Hit: 0,
-      tp2Hit: 0,
-      tp3Hit: 0,
-      stopped: 0,
-      tp1Rate: 0
-    },
-    bearish: {
-      total: 0,
-      tp1Hit: 0,
-      tp2Hit: 0,
-      tp3Hit: 0,
-      stopped: 0,
-      tp1Rate: 0
-    }
+    bullish: { total: 0, tp1Hit: 0, tp2Hit: 0, tp3Hit: 0, stopped: 0, tp1Rate: 0 },
+    bearish: { total: 0, tp1Hit: 0, tp2Hit: 0, tp3Hit: 0, stopped: 0, tp1Rate: 0 }
   };
 
   for (const signal of recentSignals || []) {

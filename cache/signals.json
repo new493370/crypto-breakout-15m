@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T14:53:14.069Z",
+  "lastUpdated": "2026-11-12T14:58:18.881Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T14:44:04.469Z",
@@ -45,6 +45,15 @@
       "score": null,
       "entry": 0.03666,
       "stop": 0.036492
+    },
+    "NIGHTUSDT:5m": {
+      "sentAt": "2026-11-12T14:58:17.380Z",
+      "symbol": "NIGHTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.046228,
+      "stop": 0.045884799999999996
     }
   }
 }

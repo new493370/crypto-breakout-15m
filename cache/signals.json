@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-12T21:43:05.313Z",
+  "lastUpdated": "2026-11-12T21:48:15.502Z",
   "signals": {
-    "USOILUSDT:5m": {
-      "sentAt": "2026-11-12T15:43:21.548Z",
-      "symbol": "USOILUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 84.97,
-      "stop": 84.92200000000001
-    },
-    "PIPPINUSDT:5m": {
-      "sentAt": "2026-11-12T15:43:23.195Z",
-      "symbol": "PIPPINUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.01171,
-      "stop": 0.011673999999999999
-    },
-    "PNUTUSDT:5m": {
-      "sentAt": "2026-11-12T15:43:24.849Z",
-      "symbol": "PNUTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.031595,
-      "stop": 0.031529
-    },
-    "CFXUSDT:5m": {
-      "sentAt": "2026-11-12T15:43:26.498Z",
-      "symbol": "CFXUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.039330000000000004,
-      "stop": 0.039186
-    },
-    "DNAUSDT:5m": {
-      "sentAt": "2026-11-12T15:43:28.143Z",
-      "symbol": "DNAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.15335,
-      "stop": 0.15293
-    },
     "TRUMPUSDT:5m": {
       "sentAt": "2026-11-12T16:03:12.566Z",
       "symbol": "TRUMPUSDT",

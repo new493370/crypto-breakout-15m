@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T19:03:17.506Z",
+  "lastUpdated": "2026-11-12T19:08:21.778Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T15:43:21.548Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.11555,
       "stop": 0.11537
+    },
+    "DOTUSDT:5m": {
+      "sentAt": "2026-11-12T19:08:20.278Z",
+      "symbol": "DOTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.8301,
+      "stop": 0.8312999999999999
     }
   }
 }

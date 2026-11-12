@@ -23,6 +23,8 @@ const TELEGRAM_TIMEOUT_MS = 15000;
 const STICKER_SIGNAL = "CAACAgQAAxkBAAFWjQ1q2xyIAAF8RW6SvzA1h0AiPVmvNMIAAtYmAAJDOdlS8xWIfVV7lSo9BA";
 const STICKER_UPDATE = "CAACAgQAAxkBAAFWjMVq2xZDZ25oGXqwmgaGPxZHzvL-AAPuHwACUaTYUjhywde8jk-nPQQ";
 
+const DEBUG_SYMBOLS = ["BTCUSDT", "DOGEUSDT", "ETHUSDT", "XRPUSDT"];
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -262,10 +264,17 @@ async function main() {
       }
 
       if (!analysis || analysis.status === "NO_TRADE") {
+        if (DEBUG_SYMBOLS.includes(symbol)) {
+          const reasons = (analysis && analysis.reasons) ? analysis.reasons.join(" | ") : "Unknown";
+          console.log("[DEBUG] " + symbol + " -> NO_SIGNAL | Reason: " + reasons);
+        }
         return { symbol, timeframe, status: "no_signal" };
       }
 
       if (analysis.status !== "LONG" && analysis.status !== "SHORT") {
+        if (DEBUG_SYMBOLS.includes(symbol)) {
+          console.log("[DEBUG] " + symbol + " -> INVALID_STATUS: " + analysis.status);
+        }
         return { symbol, timeframe, status: "no_signal" };
       }
 

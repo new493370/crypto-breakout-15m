@@ -1,18 +1,27 @@
-
 import { CONFIG } from "./config.js";
 
-export function cHigh(c) { return c.high; }
-export function cLow(c) { return c.low; }
-export function cOpen(c) { return c.open; }
-export function cClose(c) { return c.close; }
-export function cVol(c) { return Number.isFinite(c?.volume) ? c.volume : 0; }
-export function cRange(c) { return Math.max(cHigh(c) - cLow(c), 0); }
-export function cBody(c) { return Math.abs(cClose(c) - cOpen(c)); }
-export function isBull(c) { return cClose(c) > cOpen(c); }
-export function isBear(c) { return cClose(c) < cOpen(c); }
+export function cHigh(c) { return c?.high; }
+export function cLow(c) { return c?.low; }
+export function cOpen(c) { return c?.open; }
+export function cClose(c) { return c?.close; }
+export function cVol(c) {
+  return Number.isFinite(c?.volume) && c.volume >= 0 ? c.volume : 0;
+}
+export function cRange(c) {
+  return isValidCandle(c) ? c.high - c.low : 0;
+}
+export function cBody(c) {
+  return isValidCandle(c) ? Math.abs(c.close - c.open) : 0;
+}
+export function isBull(c) {
+  return isValidCandle(c) && c.close > c.open;
+}
+export function isBear(c) {
+  return isValidCandle(c) && c.close < c.open;
+}
 
 function isValidCandle(c) {
-  return (
+  return Boolean(
     c &&
     c.incomplete !== true &&
     Number.isFinite(c.time) &&
@@ -33,11 +42,36 @@ function clamp(value, min, max) {
 }
 
 function getPercentDifference(a, b) {
-  if (!Number.isFinite(a) || !Number.isFinite(b) || a === 0) {
+  if (
+    !Number.isFinite(a) ||
+    !Number.isFinite(b) ||
+    a <= 0 ||
+    b <= 0
+  ) {
     return 0;
   }
 
-  return Math.abs((b - a) / a) * 100;
+  const midpoint = (a + b) / 2;
+
+  return midpoint > 0
+    ? Math.abs(a - b) / midpoint * 100
+    : 0;
+}
+
+function getTrueRange(current, previous) {
+  if (!isValidCandle(current) || !isValidCandle(previous)) {
+    return null;
+  }
+
+  const trueRange = Math.max(
+    current.high - current.low,
+    Math.abs(current.high - previous.close),
+    Math.abs(current.low - previous.close)
+  );
+
+  return Number.isFinite(trueRange) && trueRange > 0
+    ? trueRange
+    : null;
 }
 
 export function calculateATR(candles, period = 14) {
@@ -50,35 +84,32 @@ export function calculateATR(candles, period = 14) {
     return null;
   }
 
-  const trueRanges = [];
+  let atr = null;
+  let seedSum = 0;
+  let seedCount = 0;
 
   for (let i = 1; i < candles.length; i++) {
-    const current = candles[i];
-    const previous = candles[i - 1];
+    const trueRange = getTrueRange(candles[i], candles[i - 1]);
 
-    if (!isValidCandle(current) || !isValidCandle(previous)) {
+    if (trueRange === null) {
+      atr = null;
+      seedSum = 0;
+      seedCount = 0;
       continue;
     }
 
-    const trueRange = Math.max(
-      cHigh(current) - cLow(current),
-      Math.abs(cHigh(current) - cClose(previous)),
-      Math.abs(cLow(current) - cClose(previous))
-    );
+    if (atr === null) {
+      seedSum += trueRange;
+      seedCount++;
 
-    if (Number.isFinite(trueRange)) {
-      trueRanges.push(trueRange);
+      if (seedCount === period) {
+        atr = seedSum / period;
+      }
+
+      continue;
     }
-  }
 
-  if (trueRanges.length < period) return null;
-
-  let atr = trueRanges
-    .slice(0, period)
-    .reduce((sum, value) => sum + value, 0) / period;
-
-  for (let i = period; i < trueRanges.length; i++) {
-    atr = ((atr * (period - 1)) + trueRanges[i]) / period;
+    atr = ((atr * (period - 1)) + trueRange) / period;
   }
 
   return Number.isFinite(atr) && atr > 0 ? atr : null;
@@ -89,9 +120,6 @@ export function detectSwings(
   left = CONFIG.SWING_LEFT,
   right = CONFIG.SWING_RIGHT
 ) {
-  const rawHighs = [];
-  const rawLows = [];
-
   if (
     !Array.isArray(candles) ||
     !Number.isInteger(left) ||
@@ -103,18 +131,19 @@ export function detectSwings(
     return { highs: [], lows: [] };
   }
 
+  const rawSwings = [];
+
   for (let i = left; i < candles.length - right; i++) {
     const current = candles[i];
 
     if (!isValidCandle(current)) continue;
 
-    const high = cHigh(current);
-    const low = cLow(current);
-
     let isHigh = true;
     let isLow = true;
 
-    for (let j = i - left; j < i; j++) {
+    for (let j = i - left; j <= i + right; j++) {
+      if (j === i) continue;
+
       const candle = candles[j];
 
       if (!isValidCandle(candle)) {
@@ -123,39 +152,26 @@ export function detectSwings(
         break;
       }
 
-      if (cHigh(candle) >= high) isHigh = false;
-      if (cLow(candle) <= low) isLow = false;
+      if (candle.high >= current.high) isHigh = false;
+      if (candle.low <= current.low) isLow = false;
+
+      if (!isHigh && !isLow) break;
     }
 
-    if (!isHigh && !isLow) continue;
-
-    for (let j = i + 1; j <= i + right; j++) {
-      const candle = candles[j];
-
-      if (!isValidCandle(candle)) {
-        isHigh = false;
-        isLow = false;
-        break;
-      }
-
-      if (cHigh(candle) >= high) isHigh = false;
-      if (cLow(candle) <= low) isLow = false;
-    }
+    if (isHigh && isLow) continue;
 
     if (isHigh) {
-      rawHighs.push({
+      rawSwings.push({
         index: i,
-        price: high,
+        price: current.high,
         confirmed_index: i + right,
         confirmed_time: candles[i + right].time,
         type: "high"
       });
-    }
-
-    if (isLow) {
-      rawLows.push({
+    } else if (isLow) {
+      rawSwings.push({
         index: i,
-        price: low,
+        price: current.low,
         confirmed_index: i + right,
         confirmed_time: candles[i + right].time,
         type: "low"
@@ -163,13 +179,21 @@ export function detectSwings(
     }
   }
 
-  const merged = [...rawHighs, ...rawLows].sort(
-    (a, b) => a.index - b.index || a.type.localeCompare(b.type)
-  );
+  rawSwings.sort((a, b) => a.index - b.index);
 
   const filtered = [];
 
-  for (const current of merged) {
+  const minDistance = Math.max(
+    1,
+    CONFIG.MIN_CANDLES_BETWEEN_PIVOTS ?? 3
+  );
+
+  const minDifference = Math.max(
+    0,
+    CONFIG.MIN_LEVEL_DIFF_PERCENT ?? 0.1
+  );
+
+  for (const current of rawSwings) {
     if (filtered.length === 0) {
       filtered.push(current);
       continue;
@@ -177,47 +201,30 @@ export function detectSwings(
 
     const last = filtered[filtered.length - 1];
 
-    if (last.type === current.type) {
-      const isMoreExtreme =
-        current.type === "high"
-          ? current.price > last.price
-          : current.price < last.price;
+    if (current.type === last.type) {
+      const moreExtreme = current.type === "high"
+        ? current.price > last.price
+        : current.price < last.price;
 
-      if (isMoreExtreme) {
+      if (moreExtreme) {
         filtered[filtered.length - 1] = current;
       }
 
       continue;
     }
 
-    const priceDiffPercent = getPercentDifference(
+    const distance = current.index - last.index;
+
+    const priceDifference = getPercentDifference(
       last.price,
       current.price
     );
 
-    const minDistance = CONFIG.MIN_CANDLES_BETWEEN_PIVOTS ?? 3;
-    const minDifference = CONFIG.MIN_LEVEL_DIFF_PERCENT ?? 0.1;
-
-    const isTimeValid =
-      current.index - last.index >= minDistance;
-
-    const isPriceValid =
-      priceDiffPercent >= minDifference;
-
-    if (isTimeValid && isPriceValid) {
+    if (
+      distance >= minDistance &&
+      priceDifference >= minDifference
+    ) {
       filtered.push(current);
-    } else if (
-      last.type === "high" &&
-      current.type === "low" &&
-      current.price < last.price
-    ) {
-      filtered[filtered.length - 1] = current;
-    } else if (
-      last.type === "low" &&
-      current.type === "high" &&
-      current.price > last.price
-    ) {
-      filtered[filtered.length - 1] = current;
     }
   }
 
@@ -228,49 +235,83 @@ export function detectSwings(
 }
 
 export function getLatestMinorSwings(swings, count = 2) {
-  const safeCount = Number.isInteger(count) && count > 0 ? count : 2;
+  const safeCount = Number.isInteger(count) && count > 0
+    ? count
+    : 2;
 
   return {
-    highs: (swings?.highs || []).slice(-safeCount),
-    lows: (swings?.lows || []).slice(-safeCount)
+    highs: Array.isArray(swings?.highs)
+      ? swings.highs.slice(-safeCount)
+      : [],
+    lows: Array.isArray(swings?.lows)
+      ? swings.lows.slice(-safeCount)
+      : []
   };
 }
 
 export function getConfirmedSwings(swings, currentIndex) {
-  if (!swings || !Number.isInteger(currentIndex)) {
+  if (
+    !swings ||
+    !Number.isInteger(currentIndex) ||
+    currentIndex < 0
+  ) {
     return { highs: [], lows: [] };
   }
 
+  const filterConfirmed = list => {
+    if (!Array.isArray(list)) return [];
+
+    return list.filter(swing =>
+      swing &&
+      Number.isInteger(swing.index) &&
+      Number.isInteger(swing.confirmed_index) &&
+      Number.isFinite(swing.price) &&
+      swing.price > 0 &&
+      swing.confirmed_index >= swing.index &&
+      swing.confirmed_index <= currentIndex
+    );
+  };
+
   return {
-    highs: (swings.highs || []).filter(
-      swing => swing.confirmed_index <= currentIndex
-    ),
-    lows: (swings.lows || []).filter(
-      swing => swing.confirmed_index <= currentIndex
-    )
+    highs: filterConfirmed(swings.highs),
+    lows: filterConfirmed(swings.lows)
   };
 }
 
 export function isValidStructure(swingA, swingB, direction) {
-  if (!swingA || !swingB) return false;
-  if (swingA.type !== swingB.type) return false;
-  if (swingB.index <= swingA.index) return false;
-
   if (
-    swingB.index - swingA.index <
-    (CONFIG.MIN_SWING_DISTANCE ?? 8)
+    !swingA ||
+    !swingB ||
+    !Number.isFinite(swingA.price) ||
+    !Number.isFinite(swingB.price) ||
+    swingA.price <= 0 ||
+    swingB.price <= 0 ||
+    !Number.isInteger(swingA.index) ||
+    !Number.isInteger(swingB.index) ||
+    swingA.index < 0 ||
+    swingB.index <= swingA.index ||
+    swingA.type !== swingB.type
   ) {
     return false;
   }
 
-  const priceDiffPercent = getPercentDifference(
+  const minDistance = Math.max(
+    1,
+    CONFIG.MIN_SWING_DISTANCE ?? 8
+  );
+
+  if (swingB.index - swingA.index < minDistance) {
+    return false;
+  }
+
+  const priceDifference = getPercentDifference(
     swingA.price,
     swingB.price
   );
 
   if (
-    priceDiffPercent <
-    (CONFIG.MIN_LEVEL_DIFF_PERCENT ?? 0.1)
+    priceDifference <
+    Math.max(0, CONFIG.MIN_LEVEL_DIFF_PERCENT ?? 0.1)
   ) {
     return false;
   }
@@ -292,8 +333,11 @@ export function calculateTrendline(swingA, swingB) {
     !swingB ||
     !Number.isFinite(swingA.price) ||
     !Number.isFinite(swingB.price) ||
+    swingA.price <= 0 ||
+    swingB.price <= 0 ||
     !Number.isInteger(swingA.index) ||
     !Number.isInteger(swingB.index) ||
+    swingA.index < 0 ||
     swingB.index <= swingA.index
   ) {
     return null;
@@ -324,29 +368,49 @@ export function getTrendlinePrice(trendline, index) {
 
   const price = trendline.slope * index + trendline.intercept;
 
-  return Number.isFinite(price) ? price : null;
+  return Number.isFinite(price) && price > 0
+    ? price
+    : null;
 }
 
 export function detectBreakout(
   candles,
   trendline,
   lineDirection,
-  startIndex
+  startIndex,
+  options = {}
 ) {
   if (
     !Array.isArray(candles) ||
-    candles.length < 2 ||
+    candles.length < 16 ||
     !trendline ||
     !Number.isInteger(startIndex) ||
+    startIndex < 1 ||
     !["bullish", "bearish"].includes(lineDirection)
   ) {
     return null;
   }
 
-  const firstIndex = Math.max(1, startIndex);
+  const atrPeriod = options.atrPeriod ?? 14;
+  const minBodyRatio = options.minBodyRatio ?? 0.5;
+  const minClosePosition = options.minClosePosition ?? 0.7;
+  const breakoutBufferAtr = options.breakoutBufferAtr ?? 0.05;
+
+  if (
+    !Number.isInteger(atrPeriod) ||
+    atrPeriod < 1 ||
+    minBodyRatio < 0 ||
+    minBodyRatio > 1 ||
+    minClosePosition < 0.5 ||
+    minClosePosition > 1 ||
+    breakoutBufferAtr < 0
+  ) {
+    return null;
+  }
+
   let latestBreakout = null;
 
-  for (let i = firstIndex; i < candles.length; i++) {
+  for (let i = Math.max(1, startIndex); i < candles.length; i++) {
     const previous = candles[i - 1];
     const candle = candles[i];
 
@@ -358,18 +422,33 @@ export function detectBreakout(
     const currentLine = getTrendlinePrice(trendline, i);
 
     if (
-      !Number.isFinite(previousLine) ||
-      !Number.isFinite(currentLine)
+      previousLine === null ||
+      currentLine === null
     ) {
       continue;
     }
+
+    const atr = calculateATR(
+      candles.slice(0, i + 1),
+      atrPeriod
+    );
+
+    if (!Number.isFinite(atr) || atr <= 0) continue;
+
+    const range = cRange(candle);
+    const bodyRatio = cBody(candle) / range;
+    const closePosition = (cClose(candle) - cLow(candle)) / range;
+    const buffer = atr * breakoutBufferAtr;
 
     let tradeDirection = null;
 
     if (
       lineDirection === "bearish" &&
       cClose(previous) <= previousLine &&
-      cClose(candle) > currentLine
+      cClose(candle) > currentLine + buffer &&
+      isBull(candle) &&
+      bodyRatio >= minBodyRatio &&
+      closePosition >= minClosePosition
     ) {
       tradeDirection = "bullish";
     }
@@ -377,7 +456,10 @@ export function detectBreakout(
     if (
       lineDirection === "bullish" &&
       cClose(previous) >= previousLine &&
-      cClose(candle) < currentLine
+      cClose(candle) < currentLine - buffer &&
+      isBear(candle) &&
+      bodyRatio >= minBodyRatio &&
+      closePosition <= 1 - minClosePosition
     ) {
       tradeDirection = "bearish";
     }
@@ -388,9 +470,7 @@ export function detectBreakout(
     const zoneLow = cLow(candle);
     const zoneWidth = zoneHigh - zoneLow;
 
-    if (!Number.isFinite(zoneWidth) || zoneWidth <= 0) {
-      continue;
-    }
+    if (zoneWidth <= 0) continue;
 
     latestBreakout = {
       index: i,
@@ -401,6 +481,13 @@ export function detectBreakout(
       zoneHigh,
       zoneWidth,
       linePrice: currentLine,
+      atr,
+      strength: clamp(
+        bodyRatio * 50 +
+        Math.min(cBody(candle) / atr, 2) * 25,
+        0,
+        100
+      ),
       confirmed: true,
       candleTime: candle.time
     };
@@ -410,6 +497,8 @@ export function detectBreakout(
 }
 
 function getCandleRejection(candle, direction) {
+  if (!isValidCandle(candle)) return false;
+
   const range = cRange(candle);
 
   if (range <= 0) return false;
@@ -424,28 +513,24 @@ function getCandleRejection(candle, direction) {
     cClose(candle)
   ) - cLow(candle);
 
-  const body = cBody(candle);
+  const bodyRatio = cBody(candle) / range;
   const closePosition = (cClose(candle) - cLow(candle)) / range;
 
   if (direction === "bullish") {
     return (
       isBull(candle) &&
-      (
-        closePosition >= 0.6 ||
-        lowerWick / range >= 0.35
-      ) &&
-      body / range >= 0.15
+      bodyRatio >= 0.2 &&
+      closePosition >= 0.6 &&
+      lowerWick / range >= 0.2
     );
   }
 
   if (direction === "bearish") {
     return (
       isBear(candle) &&
-      (
-        closePosition <= 0.4 ||
-        upperWick / range >= 0.35
-      ) &&
-      body / range >= 0.15
+      bodyRatio >= 0.2 &&
+      closePosition <= 0.4 &&
+      upperWick / range >= 0.2
     );
   }
 
@@ -458,7 +543,8 @@ export function detectFirstPullback(
   startIndex,
   maxBars,
   zoneLow,
-  zoneHigh
+  zoneHigh,
+  options = {}
 ) {
   if (
     !Array.isArray(candles) ||
@@ -469,20 +555,51 @@ export function detectFirstPullback(
     maxBars < 1 ||
     !Number.isFinite(zoneLow) ||
     !Number.isFinite(zoneHigh) ||
-    zoneLow >= zoneHigh
+    zoneLow <= 0 ||
+    zoneLow >= zoneHigh ||
+    startIndex >= candles.length - 1
   ) {
     return null;
   }
+
+  const minMoveAwayZone = options.minMoveAwayZone ?? 0.5;
+  const minMoveAwayAtr = options.minMoveAwayAtr ?? 0.25;
+
+  if (minMoveAwayZone < 0 || minMoveAwayAtr < 0) {
+    return null;
+  }
+
+  const atr = calculateATR(
+    candles.slice(0, startIndex + 1),
+    options.atrPeriod ?? 14
+  );
+
+  const minimumMove = Math.max(
+    (zoneHigh - zoneLow) * minMoveAwayZone,
+    Number.isFinite(atr) ? atr * minMoveAwayAtr : 0
+  );
 
   const endIndex = Math.min(
     candles.length - 1,
     startIndex + maxBars
   );
 
+  let movedAway = false;
+
   for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
 
     if (!isValidCandle(candle)) continue;
+
+    if (!movedAway) {
+      movedAway = direction === "bullish"
+        ? cClose(candle) >= zoneHigh + minimumMove
+        : cClose(candle) <= zoneLow - minimumMove;
+
+      if (!movedAway) continue;
+
+      continue;
+    }
 
     const touchedZone =
       cLow(candle) <= zoneHigh &&
@@ -490,9 +607,13 @@ export function detectFirstPullback(
 
     if (!touchedZone) continue;
 
-    const rejected = getCandleRejection(candle, direction);
+    const invalidated = direction === "bullish"
+      ? cClose(candle) < zoneLow
+      : cClose(candle) > zoneHigh;
 
-    if (!rejected) continue;
+    if (invalidated) return null;
+
+    if (!getCandleRejection(candle, direction)) continue;
 
     return {
       index: i,
@@ -502,7 +623,8 @@ export function detectFirstPullback(
       zoneHigh,
       direction,
       confirmed: true,
-      rejection: true
+      rejection: true,
+      movedAway: true
     };
   }
 
@@ -510,7 +632,11 @@ export function detectFirstPullback(
 }
 
 function detectDisplacement(candle, atr, direction, options = {}) {
-  if (!isValidCandle(candle) || !Number.isFinite(atr) || atr <= 0) {
+  if (
+    !isValidCandle(candle) ||
+    !Number.isFinite(atr) ||
+    atr <= 0
+  ) {
     return false;
   }
 
@@ -523,11 +649,23 @@ function detectDisplacement(candle, atr, direction, options = {}) {
   const minBodyRatio = options.minBodyRatio ?? 0.55;
   const minClosePosition = options.minClosePosition ?? 0.7;
 
-  const bodyRatio = body / range;
+  if (
+    minBodyAtr <= 0 ||
+    minBodyRatio < 0 ||
+    minBodyRatio > 1 ||
+    minClosePosition < 0.5 ||
+    minClosePosition > 1
+  ) {
+    return false;
+  }
 
+  const bodyRatio = body / range;
   const closePosition = (cClose(candle) - cLow(candle)) / range;
 
-  if (body < atr * minBodyAtr || bodyRatio < minBodyRatio) {
+  if (
+    body < atr * minBodyAtr ||
+    bodyRatio < minBodyRatio
+  ) {
     return false;
   }
 
@@ -549,10 +687,32 @@ function detectDisplacement(candle, atr, direction, options = {}) {
 }
 
 function detectBase(candles, endIndex, atr, options = {}) {
+  if (
+    !Array.isArray(candles) ||
+    !Number.isInteger(endIndex) ||
+    endIndex < 0 ||
+    endIndex >= candles.length ||
+    !Number.isFinite(atr) ||
+    atr <= 0
+  ) {
+    return null;
+  }
+
   const maxBaseCandles = options.maxBaseCandles ?? 4;
   const minBaseCandles = options.minBaseCandles ?? 1;
   const maxRangeAtr = options.maxBaseRangeAtr ?? 1.2;
   const maxBodyAtr = options.maxBaseBodyAtr ?? 0.65;
+
+  if (
+    !Number.isInteger(maxBaseCandles) ||
+    !Number.isInteger(minBaseCandles) ||
+    minBaseCandles < 1 ||
+    maxBaseCandles < minBaseCandles ||
+    maxRangeAtr <= 0 ||
+    maxBodyAtr < 0
+  ) {
+    return null;
+  }
 
   const base = [];
 
@@ -582,12 +742,13 @@ function detectBase(candles, endIndex, atr, options = {}) {
 
   const candlesInBase = base.map(item => item.candle);
 
-  const low = Math.min(...candlesInBase.map(c => cLow(c)));
-  const high = Math.max(...candlesInBase.map(c => cHigh(c)));
+  const low = Math.min(...candlesInBase.map(c => c.low));
+  const high = Math.max(...candlesInBase.map(c => c.high));
 
   if (
     !Number.isFinite(low) ||
     !Number.isFinite(high) ||
+    low <= 0 ||
     high <= low
   ) {
     return null;
@@ -614,21 +775,41 @@ export function detectSupplyDemandZones(candles, direction, options = {}) {
   }
 
   const atrPeriod = options.atrPeriod ?? 14;
-  const atr = calculateATR(candles, atrPeriod);
-
-  if (!Number.isFinite(atr) || atr <= 0) return [];
-
   const maxAge = options.maxAge ?? 100;
   const maxResults = options.maxResults ?? 10;
-  const zones = [];
+  const maxZoneAtr = options.maxZoneAtr ?? 2.5;
 
-  const startIndex = Math.max(
-    1,
-    candles.length - maxAge
-  );
+  if (
+    !Number.isInteger(atrPeriod) ||
+    atrPeriod < 1 ||
+    !Number.isInteger(maxAge) ||
+    maxAge < 1 ||
+    !Number.isInteger(maxResults) ||
+    maxResults < 1 ||
+    maxZoneAtr <= 0
+  ) {
+    return [];
+  }
+
+  const zones = [];
+  const startIndex = Math.max(1, candles.length - maxAge);
+  const currentPrice = cClose(candles[candles.length - 1]);
+
+  if (!isValidCandle(candles[candles.length - 1])) {
+    return [];
+  }
 
   for (let i = startIndex; i < candles.length; i++) {
     const displacement = candles[i];
+
+    if (!isValidCandle(displacement)) continue;
+
+    const atr = calculateATR(
+      candles.slice(0, i + 1),
+      atrPeriod
+    );
+
+    if (!Number.isFinite(atr) || atr <= 0) continue;
 
     if (!detectDisplacement(displacement, atr, direction, options)) {
       continue;
@@ -641,18 +822,22 @@ export function detectSupplyDemandZones(candles, direction, options = {}) {
       options
     );
 
-    if (!base) continue;
+    if (!base || base.endIndex >= i) continue;
+
+    const bullishBaseHigh = Math.max(
+      ...base.candles.map(c => Math.max(c.open, c.close))
+    );
+
+    const bearishBaseLow = Math.min(
+      ...base.candles.map(c => Math.min(c.open, c.close))
+    );
 
     const zoneLow = direction === "bullish"
       ? base.low
-      : Math.min(...base.candles.map(c =>
-          Math.min(cOpen(c), cClose(c))
-        ));
+      : bearishBaseLow;
 
     const zoneHigh = direction === "bullish"
-      ? Math.max(...base.candles.map(c =>
-          Math.max(cOpen(c), cClose(c))
-        ))
+      ? bullishBaseHigh
       : base.high;
 
     const zoneWidth = zoneHigh - zoneLow;
@@ -660,38 +845,42 @@ export function detectSupplyDemandZones(candles, direction, options = {}) {
     if (
       !Number.isFinite(zoneWidth) ||
       zoneWidth <= 0 ||
-      zoneWidth > atr * (options.maxZoneAtr ?? 2.5)
+      zoneWidth > atr * maxZoneAtr
     ) {
       continue;
     }
 
-    const currentPrice = cClose(candles[candles.length - 1]);
+    const displacementIsValid = direction === "bullish"
+      ? cClose(displacement) > base.high
+      : cClose(displacement) < base.low;
+
+    if (!displacementIsValid) continue;
 
     const isCorrectSide = direction === "bullish"
-      ? currentPrice >= zoneLow
-      : currentPrice <= zoneHigh;
+      ? currentPrice > zoneHigh
+      : currentPrice < zoneLow;
 
     if (!isCorrectSide) continue;
 
-    const isBroken = direction === "bullish"
-      ? candles.slice(i + 1).some(c =>
-          isValidCandle(c) && cClose(c) < zoneLow
-        )
-      : candles.slice(i + 1).some(c =>
-          isValidCandle(c) && cClose(c) > zoneHigh
-        );
+    const laterCandles = candles.slice(i + 1);
+
+    const isBroken = laterCandles.some(c => {
+      if (!isValidCandle(c)) return false;
+
+      return direction === "bullish"
+        ? c.close < zoneLow
+        : c.close > zoneHigh;
+    });
 
     if (isBroken) continue;
 
-    const distance = direction === "bullish"
-      ? currentPrice - zoneHigh
-      : zoneLow - currentPrice;
+    const displacementStrength = cBody(displacement) / atr;
 
-    const displacementStrength =
-      cBody(displacement) / atr;
-
-    const baseCompactness =
-      1 - clamp(base.width / (atr * 2.5), 0, 1);
+    const baseCompactness = 1 - clamp(
+      base.width / (atr * 2.5),
+      0,
+      1
+    );
 
     const strength = clamp(
       displacementStrength * 25 +
@@ -700,6 +889,10 @@ export function detectSupplyDemandZones(candles, direction, options = {}) {
       0,
       100
     );
+
+    const distance = direction === "bullish"
+      ? currentPrice - zoneHigh
+      : zoneLow - currentPrice;
 
     zones.push({
       type: direction === "bullish" ? "demand" : "supply",
@@ -731,12 +924,10 @@ export function detectSupplyDemandZones(candles, direction, options = {}) {
   const uniqueZones = [];
 
   for (const zone of zones) {
-    const overlaps = uniqueZones.some(existing => {
-      return (
-        zone.low <= existing.high &&
-        zone.high >= existing.low
-      );
-    });
+    const overlaps = uniqueZones.some(existing =>
+      zone.low <= existing.high &&
+      zone.high >= existing.low
+    );
 
     if (!overlaps) {
       uniqueZones.push(zone);
@@ -759,9 +950,11 @@ export function detectZoneRetest(
     !zone ||
     !Number.isFinite(zone.low) ||
     !Number.isFinite(zone.high) ||
+    zone.low <= 0 ||
     zone.low >= zone.high ||
     !Number.isInteger(startIndex) ||
-    startIndex < 0
+    startIndex < 0 ||
+    startIndex >= candles.length - 1
   ) {
     return null;
   }
@@ -773,30 +966,33 @@ export function detectZoneRetest(
   }
 
   const maxBars = options.maxBars ?? candles.length;
+  const tolerance = options.tolerancePercent ?? 0;
+
+  if (
+    !Number.isInteger(maxBars) ||
+    maxBars < 1 ||
+    !Number.isFinite(tolerance) ||
+    tolerance < 0
+  ) {
+    return null;
+  }
+
   const endIndex = Math.min(
     candles.length - 1,
     startIndex + maxBars
   );
 
   const midpoint = (zone.low + zone.high) / 2;
-  const tolerance = options.tolerancePercent ?? 0;
-
-  const toleranceValue = zone.width * tolerance / 100;
+  const toleranceValue = (zone.high - zone.low) * tolerance / 100;
 
   for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
 
     if (!isValidCandle(candle)) continue;
 
-    const touched =
-      cLow(candle) <= zone.high + toleranceValue &&
-      cHigh(candle) >= zone.low - toleranceValue;
-
-    if (!touched) continue;
-
     const invalidated = direction === "bullish"
-      ? cClose(candle) < zone.low
-      : cClose(candle) > zone.high;
+      ? candle.close < zone.low
+      : candle.close > zone.high;
 
     if (invalidated) {
       return {
@@ -808,9 +1004,13 @@ export function detectZoneRetest(
       };
     }
 
-    const rejection = getCandleRejection(candle, direction);
+    const touched =
+      candle.low <= zone.high + toleranceValue &&
+      candle.high >= zone.low - toleranceValue;
 
-    if (!rejection) continue;
+    if (!touched) continue;
+
+    if (!getCandleRejection(candle, direction)) continue;
 
     return {
       index: i,
@@ -838,9 +1038,13 @@ export function confirmZoneReaction(
   if (
     !Array.isArray(candles) ||
     !zone ||
+    !Number.isFinite(zone.low) ||
+    !Number.isFinite(zone.high) ||
+    zone.low <= 0 ||
+    zone.low >= zone.high ||
     !Number.isInteger(retestIndex) ||
     retestIndex < 0 ||
-    retestIndex >= candles.length
+    retestIndex >= candles.length - 1
   ) {
     return null;
   }
@@ -852,6 +1056,14 @@ export function confirmZoneReaction(
   }
 
   const confirmationBars = options.confirmationBars ?? 3;
+
+  if (
+    !Number.isInteger(confirmationBars) ||
+    confirmationBars < 1
+  ) {
+    return null;
+  }
+
   const midpoint = (zone.low + zone.high) / 2;
 
   const endIndex = Math.min(
@@ -859,22 +1071,20 @@ export function confirmZoneReaction(
     retestIndex + confirmationBars
   );
 
-  for (let i = retestIndex; i <= endIndex; i++) {
+  for (let i = retestIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
 
     if (!isValidCandle(candle)) continue;
 
     const invalidated = direction === "bullish"
-      ? cClose(candle) < zone.low
-      : cClose(candle) > zone.high;
+      ? candle.close < zone.low
+      : candle.close > zone.high;
 
-    if (invalidated) {
-      return null;
-    }
+    if (invalidated) return null;
 
     const confirmed = direction === "bullish"
-      ? isBull(candle) && cClose(candle) > midpoint
-      : isBear(candle) && cClose(candle) < midpoint;
+      ? isBull(candle) && candle.close > midpoint
+      : isBear(candle) && candle.close < midpoint;
 
     if (!confirmed) continue;
 
@@ -882,7 +1092,7 @@ export function confirmZoneReaction(
       index: i,
       candle,
       direction,
-      confirmationPrice: cClose(candle),
+      confirmationPrice: candle.close,
       zoneLow: zone.low,
       zoneHigh: zone.high,
       confirmed: true
@@ -902,12 +1112,11 @@ export function calculateEMA(candles, period = 50) {
     return null;
   }
 
-  const closes = candles.map(c => {
-    return Number.isFinite(c?.close) ? c.close : null;
-  });
+  const closes = [];
 
-  if (closes.some(value => value === null || value <= 0)) {
-    return null;
+  for (const candle of candles) {
+    if (!isValidCandle(candle)) return null;
+    closes.push(candle.close);
   }
 
   const multiplier = 2 / (period + 1);
@@ -920,5 +1129,7 @@ export function calculateEMA(candles, period = 50) {
     ema = (closes[i] - ema) * multiplier + ema;
   }
 
-  return Number.isFinite(ema) ? ema : null;
+  return Number.isFinite(ema) && ema > 0
+    ? ema
+    : null;
 }

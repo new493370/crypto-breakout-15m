@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T11:42:22.713Z",
+  "lastUpdated": "2026-11-12T11:47:26.678Z",
   "signals": {
     "PEPEUSDT:5m": {
       "sentAt": "2026-11-12T11:11:11.486Z",
@@ -1035,6 +1035,87 @@
       "score": null,
       "entry": 0.101575,
       "stop": 0.101857
+    },
+    "ACTUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:11.920Z",
+      "symbol": "ACTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.009309999999999999,
+      "stop": 0.0093484
+    },
+    "BEATUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:13.602Z",
+      "symbol": "BEATUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.07811,
+      "stop": 0.077714
+    },
+    "GRAMUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:15.257Z",
+      "symbol": "GRAMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.2395,
+      "stop": 1.2293
+    },
+    "GRASSUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:16.903Z",
+      "symbol": "GRASSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.44920000000000004,
+      "stop": 0.45196000000000003
+    },
+    "NESUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:18.546Z",
+      "symbol": "NESUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1515,
+      "stop": 0.15209999999999999
+    },
+    "KAITOUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:20.191Z",
+      "symbol": "KAITOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.2027,
+      "stop": 0.20318
+    },
+    "ICPUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:21.842Z",
+      "symbol": "ICPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 2.5825,
+      "stop": 2.5903
+    },
+    "OUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:23.495Z",
+      "symbol": "OUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.48014999999999997,
+      "stop": 0.47925
+    },
+    "METASTOCKUSDT:5m": {
+      "sentAt": "2026-11-12T11:47:25.176Z",
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 629.085,
+      "stop": 630.027
     }
   }
 }

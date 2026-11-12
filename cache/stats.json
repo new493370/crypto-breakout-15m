@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-12T21:33:09.815Z",
+  "lastUpdated": "2026-11-12T21:38:09.888Z",
   "allTime": {
     "total": 21,
     "tp1Hit": 14,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 4,
-    "active": 3,
-    "tp1Rate": 77.8,
+    "stopped": 5,
+    "active": 2,
+    "tp1Rate": 73.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 22.2
+    "stopRate": 26.3
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
-      "tp1Rate": 100
+      "stopped": 1,
+      "tp1Rate": 75
     }
   },
   "recentSignals": [
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T21:31:09.721Z",
+      "statusUpdatedAt": "2026-11-12T21:36:11.092Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -317,13 +317,14 @@
         135.72
       ],
       "sentAt": "2026-11-12T17:03:19.071Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T21:31:09.721Z",
+      "statusUpdatedAt": "2026-11-12T21:36:14.795Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 138.69000000000003
     },
     {
       "symbol": "ETHUSDT",
@@ -578,7 +579,7 @@
       "sentAt": "2026-11-12T21:33:08.313Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T21:33:08.313Z",
+      "statusUpdatedAt": "2026-11-12T21:36:14.795Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

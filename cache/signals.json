@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T23:43:22.459Z",
+  "lastUpdated": "2026-11-12T23:48:16.342Z",
   "signals": {
     "ETHUSDT:5m": {
       "sentAt": "2026-11-12T18:08:18.845Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 0.029695,
       "stop": 0.029926471423801247
+    },
+    "METUSDT:5m": {
+      "sentAt": "2026-11-12T23:48:12.989Z",
+      "symbol": "METUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.2891,
+      "stop": 0.2904748680074465
     }
   }
 }

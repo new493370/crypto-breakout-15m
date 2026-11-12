@@ -22,6 +22,9 @@ const MAX_RECENT_SIGNALS = 200;
 const TELEGRAM_TIMEOUT_MS = 15000;
 
 const HOURLY_TIMEFRAME = "1h";
+const HOURLY_ATR_PERIOD = 14;
+const HOURLY_MIN_CANDLES = 30;
+const HOURLY_SWING_STRENGTH = 2;
 const HOURLY_IMPULSE_LOOKBACK = 5;
 const HOURLY_IMPULSE_ATR_MULTIPLIER = 2;
 const HOURLY_REVERSAL_LOOKBACK = 3;
@@ -124,10 +127,14 @@ function markNotified(signal, eventType) {
   if (eventType === "stopped") signal._stoppedNotified = true;
 }
 
-function isHourlyCounterTrendBlocked(candles, direction) {
-  if (!Array.isArray(candles)) return false;
+function normalizeDirection(direction) {
+  if (direction === "LONG" || direction === "bullish") return "LONG";
+  if (direction === "SHORT" || direction === "bearish") return "SHORT";
+  return null;
+}
 
-  const closedCandles = candles.filter(candle =>
+function isValidHourlyCandle(candle) {
+  return (
     candle &&
     candle.incomplete !== true &&
     Number.isFinite(candle.open) &&
@@ -135,35 +142,116 @@ function isHourlyCounterTrendBlocked(candles, direction) {
     Number.isFinite(candle.low) &&
     Number.isFinite(candle.close) &&
     candle.open > 0 &&
+    candle.high > 0 &&
+    candle.low > 0 &&
+    candle.close > 0 &&
     candle.high >= candle.low &&
     candle.high >= Math.max(candle.open, candle.close) &&
     candle.low <= Math.min(candle.open, candle.close)
   );
+}
 
-  const requiredCandles = Math.max(
-    14 + 1,
-    HOURLY_IMPULSE_LOOKBACK,
-    HOURLY_REVERSAL_LOOKBACK + 1
-  );
+function detectHourlySwings(candles, strength = HOURLY_SWING_STRENGTH) {
+  const highs = [];
+  const lows = [];
 
-  if (closedCandles.length < requiredCandles) return false;
+  if (!Array.isArray(candles) || candles.length < strength * 2 + 1) {
+    return { highs, lows };
+  }
 
-  const atr = calculateATR(closedCandles, 14);
+  for (
+    let i = strength;
+    i < candles.length - strength;
+    i++
+  ) {
+    const current = candles[i];
 
-  if (!Number.isFinite(atr) || atr <= 0) return false;
+    let isHigh = true;
+    let isLow = true;
 
-  const recentCandles = closedCandles.slice(-HOURLY_IMPULSE_LOOKBACK);
-  const previousCandles = closedCandles.slice(
+    for (let j = 1; j <= strength; j++) {
+      if (
+        current.high <= candles[i - j].high ||
+        current.high <= candles[i + j].high
+      ) {
+        isHigh = false;
+      }
+
+      if (
+        current.low >= candles[i - j].low ||
+        current.low >= candles[i + j].low
+      ) {
+        isLow = false;
+      }
+
+      if (!isHigh && !isLow) break;
+    }
+
+    if (isHigh) {
+      highs.push({
+        index: i,
+        price: current.high
+      });
+    }
+
+    if (isLow) {
+      lows.push({
+        index: i,
+        price: current.low
+      });
+    }
+  }
+
+  return { highs, lows };
+}
+
+function detectHourlyStructure(candles) {
+  const { highs, lows } = detectHourlySwings(candles);
+
+  if (highs.length < 2 || lows.length < 2) {
+    return "neutral";
+  }
+
+  const previousHigh = highs[highs.length - 2];
+  const latestHigh = highs[highs.length - 1];
+
+  const previousLow = lows[lows.length - 2];
+  const latestLow = lows[lows.length - 1];
+
+  const higherHigh = latestHigh.price > previousHigh.price;
+  const higherLow = latestLow.price > previousLow.price;
+
+  const lowerHigh = latestHigh.price < previousHigh.price;
+  const lowerLow = latestLow.price < previousLow.price;
+
+  if (higherHigh && higherLow) {
+    return "bullish";
+  }
+
+  if (lowerHigh && lowerLow) {
+    return "bearish";
+  }
+
+  return "neutral";
+}
+
+function detectHourlyReversal(candles, atr) {
+  const lastCandle = candles[candles.length - 1];
+
+  const previousCandles = candles.slice(
     -(HOURLY_REVERSAL_LOOKBACK + 1),
     -1
   );
 
-  const firstCandle = recentCandles[0];
-  const lastCandle = recentCandles[recentCandles.length - 1];
-  const previousCandle = closedCandles[closedCandles.length - 2];
-
-  const impulseSize = lastCandle.close - firstCandle.open;
-  const reversalBody = Math.abs(lastCandle.close - lastCandle.open);
+  if (
+    !lastCandle ||
+    previousCandles.length !== HOURLY_REVERSAL_LOOKBACK
+  ) {
+    return {
+      bullish: false,
+      bearish: false
+    };
+  }
 
   const previousHighest = Math.max(
     ...previousCandles.map(candle => candle.high)
@@ -173,30 +261,99 @@ function isHourlyCounterTrendBlocked(candles, direction) {
     ...previousCandles.map(candle => candle.low)
   );
 
-  const bullishReversal =
-    lastCandle.close > lastCandle.open &&
-    lastCandle.close > previousHighest &&
-    reversalBody >= atr * HOURLY_REVERSAL_BODY_ATR;
+  const bodySize = Math.abs(
+    lastCandle.close - lastCandle.open
+  );
 
-  const bearishReversal =
-    lastCandle.close < lastCandle.open &&
-    lastCandle.close < previousLowest &&
-    reversalBody >= atr * HOURLY_REVERSAL_BODY_ATR;
+  const strongBody = bodySize >= atr * HOURLY_REVERSAL_BODY_ATR;
 
-  const sharpDecline =
-    impulseSize <= -(atr * HOURLY_IMPULSE_ATR_MULTIPLIER) &&
-    lastCandle.close < previousCandle.close;
+  return {
+    bullish:
+      lastCandle.close > lastCandle.open &&
+      lastCandle.close > previousHighest &&
+      strongBody,
 
-  const sharpRise =
-    impulseSize >= atr * HOURLY_IMPULSE_ATR_MULTIPLIER &&
-    lastCandle.close > previousCandle.close;
+    bearish:
+      lastCandle.close < lastCandle.open &&
+      lastCandle.close < previousLowest &&
+      strongBody
+  };
+}
 
-  if (direction === "LONG") {
-    return sharpDecline && !bullishReversal;
+function detectHourlyImpulse(candles, atr) {
+  const recentCandles = candles.slice(-HOURLY_IMPULSE_LOOKBACK);
+
+  if (recentCandles.length !== HOURLY_IMPULSE_LOOKBACK) {
+    return {
+      sharpDecline: false,
+      sharpRise: false
+    };
   }
 
-  if (direction === "SHORT") {
-    return sharpRise && !bearishReversal;
+  const firstCandle = recentCandles[0];
+  const lastCandle = recentCandles[recentCandles.length - 1];
+
+  const previousCandle = candles[candles.length - 2];
+
+  if (!previousCandle) {
+    return {
+      sharpDecline: false,
+      sharpRise: false
+    };
+  }
+
+  const impulseSize = lastCandle.close - firstCandle.open;
+
+  return {
+    sharpDecline:
+      impulseSize <= -(atr * HOURLY_IMPULSE_ATR_MULTIPLIER) &&
+      lastCandle.close < previousCandle.close,
+
+    sharpRise:
+      impulseSize >= atr * HOURLY_IMPULSE_ATR_MULTIPLIER &&
+      lastCandle.close > previousCandle.close
+  };
+}
+
+function isHourlyCounterTrendBlocked(candles, direction) {
+  const normalizedDirection = normalizeDirection(direction);
+
+  if (!normalizedDirection || !Array.isArray(candles)) {
+    return false;
+  }
+
+  const closedCandles = candles.filter(isValidHourlyCandle);
+
+  if (closedCandles.length < HOURLY_MIN_CANDLES) {
+    return false;
+  }
+
+  const atr = calculateATR(closedCandles, HOURLY_ATR_PERIOD);
+
+  if (!Number.isFinite(atr) || atr <= 0) {
+    return false;
+  }
+
+  const structure = detectHourlyStructure(closedCandles);
+  const reversal = detectHourlyReversal(closedCandles, atr);
+  const impulse = detectHourlyImpulse(closedCandles, atr);
+
+  if (normalizedDirection === "LONG") {
+    const bearishStructure = structure === "bearish";
+
+    return (
+      (bearishStructure || impulse.sharpDecline) &&
+      !reversal.bullish
+    );
+  }
+
+  if (normalizedDirection === "SHORT") {
+    const bullishStructure = structure === "bullish";
+
+    return (
+      (bullishStructure || impulse.sharpRise) &&
+      !reversal.bearish
+    );
   }
 
   return false;
@@ -210,8 +367,26 @@ async function passesHourlyFilter(symbol, direction) {
       CONFIG.KLINE_LIMIT
     );
 
-    return !isHourlyCounterTrendBlocked(candles, direction);
-  } catch {
+    const blocked = isHourlyCounterTrendBlocked(
+      candles,
+      direction
+    );
+
+    if (blocked) {
+      console.log(
+        "[1H FILTER] " +
+        symbol +
+        " blocked " +
+        normalizeDirection(direction)
+      );
+    }
+
+    return !blocked;
+  } catch (e) {
+    console.error(
+      "[1H FILTER] Failed for " + symbol + ": " + (e.message || e)
+    );
+
     return true;
   }
 }

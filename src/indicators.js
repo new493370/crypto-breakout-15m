@@ -19,31 +19,27 @@ export function detectSwings(candles, left = CONFIG.SWING_LEFT, right = CONFIG.S
   }
 
   for (let i = left; i < candles.length - right; i++) {
-    const bodyHigh = Math.max(cOpen(candles[i]), cClose(candles[i]));
-    const bodyLow = Math.min(cOpen(candles[i]), cClose(candles[i]));
+    const high = cHigh(candles[i]);
+    const low = cLow(candles[i]);
 
     let isHigh = true;
     let isLow = true;
 
     for (let j = i - left; j < i; j++) {
-      const prevBodyHigh = Math.max(cOpen(candles[j]), cClose(candles[j]));
-      const prevBodyLow = Math.min(cOpen(candles[j]), cClose(candles[j]));
-      if (prevBodyHigh >= bodyHigh) isHigh = false;
-      if (prevBodyLow <= bodyLow) isLow = false;
+      if (cHigh(candles[j]) >= high) isHigh = false;
+      if (cLow(candles[j]) <= low) isLow = false;
     }
 
     for (let j = i + 1; j <= i + right; j++) {
-      const nextBodyHigh = Math.max(cOpen(candles[j]), cClose(candles[j]));
-      const nextBodyLow = Math.min(cOpen(candles[j]), cClose(candles[j]));
-      if (nextBodyHigh >= bodyHigh) isHigh = false;
-      if (nextBodyLow <= bodyLow) isLow = false;
+      if (cHigh(candles[j]) >= high) isHigh = false;
+      if (cLow(candles[j]) <= low) isLow = false;
     }
 
     if (isHigh) {
-      rawHighs.push({ index: i, price: bodyHigh, confirmed_index: i + right, type: "high" });
+      rawHighs.push({ index: i, price: high, confirmed_index: i + right, type: "high" });
     }
     if (isLow) {
-      rawLows.push({ index: i, price: bodyLow, confirmed_index: i + right, type: "low" });
+      rawLows.push({ index: i, price: low, confirmed_index: i + right, type: "low" });
     }
   }
 
@@ -180,35 +176,20 @@ export function detectFirstPullback(candles, direction, startIndex, maxBars, zon
   if (!Array.isArray(candles) || startIndex < 0) return null;
 
   const endIndex = Math.min(candles.length - 1, startIndex + maxBars);
-  const swingCandles = candles.slice(startIndex, endIndex + 1);
 
-  if (swingCandles.length < CONFIG.SWING_LEFT + CONFIG.SWING_RIGHT + 1) return null;
-
-  const postBreakoutSwings = detectSwings(
-    swingCandles,
-    CONFIG.SWING_LEFT,
-    CONFIG.SWING_RIGHT
-  );
-
-  const relevantSwings = direction === "bullish" ? postBreakoutSwings.lows : postBreakoutSwings.highs;
-
-  if (relevantSwings.length === 0) return null;
-
-  const firstSwing = relevantSwings[0];
-  const firstSwingIndex = firstSwing.index + startIndex;
-
-  for (let i = firstSwingIndex + 1; i <= endIndex; i++) {
+  for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
     if (!candle || candle.incomplete) continue;
 
     const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
     
     if (touchedZone) {
-      return {
-        index: i,
-        candle,
-        entryPrice: (zoneHigh + zoneLow) / 2
-      };
+      if (direction === "bullish" && cClose(candle) > cOpen(candle)) {
+        return { index: i, candle, entryPrice: (zoneHigh + zoneLow) / 2 };
+      }
+      if (direction === "bearish" && cClose(candle) < cOpen(candle)) {
+        return { index: i, candle, entryPrice: (zoneHigh + zoneLow) / 2 };
+      }
     }
   }
 

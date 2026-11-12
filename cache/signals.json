@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T16:18:11.184Z",
+  "lastUpdated": "2026-11-12T16:23:08.911Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T15:43:21.548Z",
@@ -63,6 +63,24 @@
       "score": null,
       "entry": 0.09465,
       "stop": 0.09435
+    },
+    "PONSUSDT:5m": {
+      "sentAt": "2026-11-12T16:23:05.703Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.14685,
+      "stop": 0.14559000000000002
+    },
+    "ORDERUSDT:5m": {
+      "sentAt": "2026-11-12T16:23:07.409Z",
+      "symbol": "ORDERUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.029900000000000003,
+      "stop": 0.029852
     }
   }
 }

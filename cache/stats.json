@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T16:18:11.185Z",
+  "lastUpdated": "2026-11-12T16:23:08.912Z",
   "allTime": {
-    "total": 7,
+    "total": 9,
     "tp1Hit": 6,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 1,
-    "active": 0,
+    "active": 2,
     "tp1Rate": 85.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 7,
+      "total": 9,
       "tp1Hit": 6,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -222,6 +222,56 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.0959
+    },
+    {
+      "symbol": "PONSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.14685,
+      "stop": 0.14559000000000002,
+      "tp1": 0.15209999999999999,
+      "zoneLow": 0.1458,
+      "zoneHigh": 0.1479,
+      "signalCandleTime": 1794500100000,
+      "rr1": 4.166666666666703,
+      "highs": [
+        0.1528,
+        0.1474
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T16:23:05.703Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T16:23:05.703Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ORDERUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.029900000000000003,
+      "stop": 0.029852,
+      "tp1": 0.030100000000000002,
+      "zoneLow": 0.02986,
+      "zoneHigh": 0.02994,
+      "signalCandleTime": 1794500100000,
+      "rr1": 4.16666666666639,
+      "highs": [
+        0.03035,
+        0.02995
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T16:23:07.409Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T16:23:07.409Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -273,6 +323,20 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T16:13:28.010Z"
+    },
+    "PONSUSDT:5m:2026-11-12T16:23:05.703Z": {
+      "symbol": "PONSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T16:23:05.703Z"
+    },
+    "ORDERUSDT:5m:2026-11-12T16:23:07.409Z": {
+      "symbol": "ORDERUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T16:23:07.409Z"
     }
   }
 }

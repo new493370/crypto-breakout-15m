@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T13:18:36.133Z",
+  "lastUpdated": "2026-11-12T13:34:09.493Z",
   "signals": {
     "PEPEUSDT:5m": {
       "sentAt": "2026-11-12T11:11:11.486Z",
@@ -1368,6 +1368,15 @@
       "score": null,
       "entry": 971.47,
       "stop": 968.866
+    },
+    "USOILUSDT:5m": {
+      "sentAt": "2026-11-12T13:34:07.992Z",
+      "symbol": "USOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 84.97,
+      "stop": 84.92200000000001
     }
   }
 }

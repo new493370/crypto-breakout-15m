@@ -180,8 +180,24 @@ export function detectFirstPullback(candles, direction, startIndex, maxBars, zon
   if (!Array.isArray(candles) || startIndex < 0) return null;
 
   const endIndex = Math.min(candles.length - 1, startIndex + maxBars);
+  const swingCandles = candles.slice(startIndex, endIndex + 1);
 
-  for (let i = startIndex + 1; i <= endIndex; i++) {
+  if (swingCandles.length < CONFIG.SWING_LEFT + CONFIG.SWING_RIGHT + 1) return null;
+
+  const postBreakoutSwings = detectSwings(
+    swingCandles,
+    CONFIG.SWING_LEFT,
+    CONFIG.SWING_RIGHT
+  );
+
+  const relevantSwings = direction === "bullish" ? postBreakoutSwings.lows : postBreakoutSwings.highs;
+
+  if (relevantSwings.length === 0) return null;
+
+  const firstSwing = relevantSwings[0];
+  const firstSwingIndex = firstSwing.index + startIndex;
+
+  for (let i = firstSwingIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
     if (!candle || candle.incomplete) continue;
 

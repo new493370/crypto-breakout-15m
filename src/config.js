@@ -1,4 +1,3 @@
-
 export const CONFIG = {
   OKX_BASE_URL: "https://www.okx.com",
   BINANCE_FUTURES_URL: "https://fapi1.binance.com",
@@ -82,22 +81,27 @@ export const CONFIG = {
   ],
 
   TIMEFRAMES: {
-    "5m": "5 دقیقه"
+    "5m": "5 دقیقه",
+    "1h": "1 ساعت"
   },
 
   OKX_INTERVAL_MAP: {
-    "5m": "5m"
+    "5m": "5m",
+    "1h": "1H"
   },
 
   BINANCE_INTERVAL_MAP: {
-    "5m": "5m"
+    "5m": "5m",
+    "1h": "1h"
   },
 
   MEXC_INTERVAL_MAP: {
-    "5m": "Min5"
+    "5m": "Min5",
+    "1h": "Min60"
   }
 };
 
 export const INTERVAL_MS = {
-  "5m": 5 * 60 * 1000
+  "5m": 5 * 60 * 1000,
+  "1h": 60 * 60 * 1000
 };

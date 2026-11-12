@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T21:58:22.968Z",
+  "lastUpdated": "2026-11-12T22:03:13.368Z",
   "allTime": {
-    "total": 21,
+    "total": 22,
     "tp1Hit": 14,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 5,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 73.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 17,
+      "total": 18,
       "tp1Hit": 11,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T21:56:07.490Z",
+      "statusUpdatedAt": "2026-11-12T22:01:11.550Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -579,7 +579,32 @@
       "sentAt": "2026-11-12T21:33:08.313Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T21:56:07.490Z",
+      "statusUpdatedAt": "2026-11-12T22:01:11.550Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "RSRUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.001478,
+      "stop": 0.0014692263552784986,
+      "tp1": 0.0014929999999999998,
+      "zoneLow": 0.001475,
+      "zoneHigh": 0.001481,
+      "signalCandleTime": 1794520500000,
+      "rr1": 1.7096657633331918,
+      "highs": [
+        0.001492,
+        0.001482
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T22:03:08.371Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T22:03:08.371Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -733,6 +758,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T21:33:08.313Z"
+    },
+    "RSRUSDT:5m:2026-11-12T22:03:08.371Z": {
+      "symbol": "RSRUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T22:03:08.371Z"
     }
   }
 }

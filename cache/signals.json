@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-12T21:58:22.967Z",
+  "lastUpdated": "2026-11-12T22:03:13.367Z",
   "signals": {
-    "TRUMPUSDT:5m": {
-      "sentAt": "2026-11-12T16:03:12.566Z",
-      "symbol": "TRUMPUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 1.082,
-      "stop": 1.0796000000000001
-    },
     "DATAUSDT:5m": {
       "sentAt": "2026-11-12T16:13:28.011Z",
       "symbol": "DATAUSDT",
@@ -144,6 +135,15 @@
       "score": null,
       "entry": 171.76999999999998,
       "stop": 171.23728888362973
+    },
+    "RSRUSDT:5m": {
+      "sentAt": "2026-11-12T22:03:08.371Z",
+      "symbol": "RSRUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.001478,
+      "stop": 0.0014692263552784986
     }
   }
 }

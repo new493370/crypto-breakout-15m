@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T14:58:18.881Z",
+  "lastUpdated": "2026-11-12T15:03:09.886Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T14:44:04.469Z",
@@ -54,6 +54,15 @@
       "score": null,
       "entry": 0.046228,
       "stop": 0.045884799999999996
+    },
+    "AAOISTOCKUSDT:5m": {
+      "sentAt": "2026-11-12T15:03:08.384Z",
+      "symbol": "AAOISTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 51.715,
+      "stop": 50.869
     }
   }
 }

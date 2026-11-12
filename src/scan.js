@@ -8,8 +8,9 @@ import {
   writeStats
 } from "./cache.js";
 import { CONFIG } from "./config.js";
-import { getTopSymbols } from "./exchanges.js";
+import { getTopSymbols, getKlines } from "./exchanges.js";
 import { analyze } from "./analysis.js";
+import { calculateATR } from "./indicators.js";
 import { formatAnalysis, formatSignalResult } from "./format.js";
 import { updateSignalStatus, computeStats } from "./tracker.js";
 
@@ -19,6 +20,12 @@ const MESSAGE_DELAY_MS = 1500;
 const TOTAL_TIMEOUT_MS = 55 * 60 * 1000;
 const MAX_RECENT_SIGNALS = 200;
 const TELEGRAM_TIMEOUT_MS = 15000;
+
+const HOURLY_TIMEFRAME = "1h";
+const HOURLY_IMPULSE_LOOKBACK = 5;
+const HOURLY_IMPULSE_ATR_MULTIPLIER = 2;
+const HOURLY_REVERSAL_LOOKBACK = 3;
+const HOURLY_REVERSAL_BODY_ATR = 0.5;
 
 const STICKER_SIGNAL = "CAACAgQAAxkBAAFWjQ1q2xyIAAF8RW6SvzA1h0AiPVmvNMIAAtYmAAJDOdlS8xWIfVV7lSo9BA";
 const STICKER_UPDATE = "CAACAgQAAxkBAAFWjMVq2xZDZ25oGXqwmgaGPxZHzvL-AAPuHwACUaTYUjhywde8jk-nPQQ";
@@ -97,6 +104,7 @@ async function runWithConcurrency(items, concurrency, worker) {
   }
 
   const runners = [];
+
   for (let i = 0; i < Math.min(concurrency, items.length); i++) {
     runners.push(runner());
   }
@@ -116,6 +124,98 @@ function markNotified(signal, eventType) {
   if (eventType === "stopped") signal._stoppedNotified = true;
 }
 
+function isHourlyCounterTrendBlocked(candles, direction) {
+  if (!Array.isArray(candles)) return false;
+
+  const closedCandles = candles.filter(candle =>
+    candle &&
+    candle.incomplete !== true &&
+    Number.isFinite(candle.open) &&
+    Number.isFinite(candle.high) &&
+    Number.isFinite(candle.low) &&
+    Number.isFinite(candle.close) &&
+    candle.open > 0 &&
+    candle.high >= candle.low &&
+    candle.high >= Math.max(candle.open, candle.close) &&
+    candle.low <= Math.min(candle.open, candle.close)
+  );
+
+  const requiredCandles = Math.max(
+    14 + 1,
+    HOURLY_IMPULSE_LOOKBACK,
+    HOURLY_REVERSAL_LOOKBACK + 1
+  );
+
+  if (closedCandles.length < requiredCandles) return false;
+
+  const atr = calculateATR(closedCandles, 14);
+
+  if (!Number.isFinite(atr) || atr <= 0) return false;
+
+  const recentCandles = closedCandles.slice(-HOURLY_IMPULSE_LOOKBACK);
+  const previousCandles = closedCandles.slice(
+    -(HOURLY_REVERSAL_LOOKBACK + 1),
+    -1
+  );
+
+  const firstCandle = recentCandles[0];
+  const lastCandle = recentCandles[recentCandles.length - 1];
+  const previousCandle = closedCandles[closedCandles.length - 2];
+
+  const impulseSize = lastCandle.close - firstCandle.open;
+  const reversalBody = Math.abs(lastCandle.close - lastCandle.open);
+
+  const previousHighest = Math.max(
+    ...previousCandles.map(candle => candle.high)
+  );
+
+  const previousLowest = Math.min(
+    ...previousCandles.map(candle => candle.low)
+  );
+
+  const bullishReversal =
+    lastCandle.close > lastCandle.open &&
+    lastCandle.close > previousHighest &&
+    reversalBody >= atr * HOURLY_REVERSAL_BODY_ATR;
+
+  const bearishReversal =
+    lastCandle.close < lastCandle.open &&
+    lastCandle.close < previousLowest &&
+    reversalBody >= atr * HOURLY_REVERSAL_BODY_ATR;
+
+  const sharpDecline =
+    impulseSize <= -(atr * HOURLY_IMPULSE_ATR_MULTIPLIER) &&
+    lastCandle.close < previousCandle.close;
+
+  const sharpRise =
+    impulseSize >= atr * HOURLY_IMPULSE_ATR_MULTIPLIER &&
+    lastCandle.close > previousCandle.close;
+
+  if (direction === "LONG") {
+    return sharpDecline && !bullishReversal;
+  }
+
+  if (direction === "SHORT") {
+    return sharpRise && !bearishReversal;
+  }
+
+  return false;
+}
+
+async function passesHourlyFilter(symbol, direction) {
+  try {
+    const candles = await getKlines(
+      symbol,
+      HOURLY_TIMEFRAME,
+      CONFIG.KLINE_LIMIT
+    );
+
+    return !isHourlyCounterTrendBlocked(candles, direction);
+  } catch {
+    return true;
+  }
+}
+
 async function main() {
   const startTime = Date.now();
   const token = process.env.TELEGRAM_BOT_TOKEN;
@@ -126,7 +226,16 @@ async function main() {
   }
 
   const summary = {
-    total: 0, skipped: 0, analyzed: 0, signals: 0, sent: 0, tracked: 0, missed: 0, cleaned: 0, cacheEntries: 0, elapsedMs: 0
+    total: 0,
+    skipped: 0,
+    analyzed: 0,
+    signals: 0,
+    sent: 0,
+    tracked: 0,
+    missed: 0,
+    cleaned: 0,
+    cacheEntries: 0,
+    elapsedMs: 0
   };
 
   console.log("");
@@ -140,6 +249,7 @@ async function main() {
   const stats = await readStats();
 
   if (!Array.isArray(stats.recentSignals)) stats.recentSignals = [];
+
   if (!stats.processedSignals || typeof stats.processedSignals !== "object") {
     stats.processedSignals = {};
   }
@@ -158,8 +268,15 @@ async function main() {
     3,
     async ({ signal, index }) => {
       if (Date.now() - startTime > TOTAL_TIMEOUT_MS) {
-        return { index, skipped: true, status: signal.status, events: [], exitPrice: null };
+        return {
+          index,
+          skipped: true,
+          status: signal.status,
+          events: [],
+          exitPrice: null
+        };
       }
+
       const result = await updateSignalStatus(signal);
       return { index, ...result };
     }
@@ -200,6 +317,7 @@ async function main() {
 
       try {
         const message = formatSignalResult(signal, event.type);
+
         if (message) {
           await sendTelegramMessage(token, chatId, message);
           markNotified(signal, event.type);
@@ -231,7 +349,15 @@ async function main() {
 
   summary.total = symbols.length * SCAN_TIMEFRAMES.length;
 
-  console.log("Fetched " + symbols.length + " symbols x " + SCAN_TIMEFRAMES.length + " timeframes = " + summary.total + " tasks");
+  console.log(
+    "Fetched " +
+    symbols.length +
+    " symbols x " +
+    SCAN_TIMEFRAMES.length +
+    " timeframes = " +
+    summary.total +
+    " tasks"
+  );
 
   const tasks = [];
 
@@ -260,14 +386,23 @@ async function main() {
       try {
         analysis = await analyze(symbol, timeframe);
       } catch (e) {
-        return { symbol, timeframe, status: "error", error: e.message || "unknown" };
+        return {
+          symbol,
+          timeframe,
+          status: "error",
+          error: e.message || "unknown"
+        };
       }
 
       if (!analysis || analysis.status === "NO_TRADE") {
         if (DEBUG_SYMBOLS.includes(symbol)) {
-          const reasons = (analysis && analysis.reasons) ? analysis.reasons.join(" | ") : "Unknown";
+          const reasons = analysis?.reasons
+            ? analysis.reasons.join(" | ")
+            : "Unknown";
+
           console.log("[DEBUG] " + symbol + " -> NO_SIGNAL | Reason: " + reasons);
         }
+
         return { symbol, timeframe, status: "no_signal" };
       }
 
@@ -275,6 +410,7 @@ async function main() {
         if (DEBUG_SYMBOLS.includes(symbol)) {
           console.log("[DEBUG] " + symbol + " -> INVALID_STATUS: " + analysis.status);
         }
+
         return { symbol, timeframe, status: "no_signal" };
       }
 
@@ -289,8 +425,13 @@ async function main() {
 
     if (result.status === "skipped") {
       summary.skipped++;
-    } else if (result.status === "no_signal" || result.status === "error" || result.status === "timeout") {
+    } else if (
+      result.status === "no_signal" ||
+      result.status === "error" ||
+      result.status === "timeout"
+    ) {
       summary.analyzed++;
+
       if (result.error) {
         console.error("Analysis error for " + result.symbol + ": " + result.error);
       }
@@ -301,7 +442,15 @@ async function main() {
     }
   }
 
-  console.log("Scan complete: " + summary.analyzed + " analyzed, " + summary.skipped + " skipped, " + summary.signals + " signals");
+  console.log(
+    "Scan complete: " +
+    summary.analyzed +
+    " analyzed, " +
+    summary.skipped +
+    " skipped, " +
+    summary.signals +
+    " signals"
+  );
 
   let signalStickerSent = false;
 
@@ -311,6 +460,15 @@ async function main() {
     const { symbol, timeframe, analysis } = item;
 
     try {
+      const passesHourly = await passesHourlyFilter(
+        symbol,
+        analysis.direction
+      );
+
+      if (!passesHourly) {
+        continue;
+      }
+
       if (!signalStickerSent && STICKER_SIGNAL) {
         try {
           await sendTelegramSticker(token, chatId, STICKER_SIGNAL);
@@ -349,12 +507,36 @@ async function main() {
         _stoppedNotified: false
       };
 
-      cache.signals = addSignal(cache.signals, symbol, timeframe, signalData);
-      stats.processedSignals[signalKey] = { symbol, timeframe, direction: analysis.direction, status: "active", sentAt };
+      cache.signals = addSignal(
+        cache.signals,
+        symbol,
+        timeframe,
+        signalData
+      );
+
+      stats.processedSignals[signalKey] = {
+        symbol,
+        timeframe,
+        direction: analysis.direction,
+        status: "active",
+        sentAt
+      };
+
       stats.recentSignals.push(signalData);
 
       summary.sent++;
-      console.log("Sent: " + symbol + " (" + analysis.direction + ", entry " + analysis.entry + ", RR " + analysis.rr.toFixed(2) + ")");
+
+      console.log(
+        "Sent: " +
+        symbol +
+        " (" +
+        analysis.direction +
+        ", entry " +
+        analysis.entry +
+        ", RR " +
+        analysis.rr.toFixed(2) +
+        ")"
+      );
     } catch (e) {
       console.error("Failed to send " + symbol + ":", e.message || e);
     }
@@ -369,6 +551,7 @@ async function main() {
   }
 
   const computed = computeStats(stats.recentSignals);
+
   stats.allTime = computed.allTime;
   stats.byDirection = computed.byDirection;
 

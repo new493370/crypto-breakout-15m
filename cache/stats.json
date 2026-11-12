@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T15:58:28.575Z",
+  "lastUpdated": "2026-11-12T16:03:14.070Z",
   "allTime": {
-    "total": 5,
+    "total": 6,
     "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 1,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 75,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 5,
+      "total": 6,
       "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -138,7 +138,7 @@
       "sentAt": "2026-11-12T15:43:26.498Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:56:17.137Z",
+      "statusUpdatedAt": "2026-11-12T16:01:14.881Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -169,6 +169,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.15510000000000002
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 1.082,
+      "stop": 1.0796000000000001,
+      "tp1": 1.092,
+      "zoneLow": 1.08,
+      "zoneHigh": 1.084,
+      "signalCandleTime": 1794498900000,
+      "rr1": 4.166666666666743,
+      "highs": [
+        1.109,
+        1.094
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T16:03:12.566Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T16:03:12.566Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -206,6 +231,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T15:43:28.143Z"
+    },
+    "TRUMPUSDT:5m:2026-11-12T16:03:12.566Z": {
+      "symbol": "TRUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T16:03:12.566Z"
     }
   }
 }

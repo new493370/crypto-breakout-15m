@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T11:28:25.675Z",
+  "lastUpdated": "2026-11-12T11:33:08.219Z",
   "signals": {
     "PEPEUSDT:5m": {
       "sentAt": "2026-11-12T11:11:11.486Z",
@@ -828,6 +828,69 @@
       "score": null,
       "entry": 1.5074999999999998,
       "stop": 1.5033
+    },
+    "XRPUSDT:5m": {
+      "sentAt": "2026-11-12T11:32:56.838Z",
+      "symbol": "XRPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.0460500000000001,
+      "stop": 1.04827
+    },
+    "SPACEUSDT:5m": {
+      "sentAt": "2026-11-12T11:32:58.475Z",
+      "symbol": "SPACEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0031235,
+      "stop": 0.0031301
+    },
+    "PLUMEUSDT:5m": {
+      "sentAt": "2026-11-12T11:33:00.118Z",
+      "symbol": "PLUMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.013111,
+      "stop": 0.013136199999999999
+    },
+    "MUBARAKUSDT:5m": {
+      "sentAt": "2026-11-12T11:33:01.766Z",
+      "symbol": "MUBARAKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.035442,
+      "stop": 0.03553679999999999
+    },
+    "BABYUSDT:5m": {
+      "sentAt": "2026-11-12T11:33:03.406Z",
+      "symbol": "BABYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.009581,
+      "stop": 0.009590600000000001
+    },
+    "LAUSDT:5m": {
+      "sentAt": "2026-11-12T11:33:05.076Z",
+      "symbol": "LAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.04854,
+      "stop": 0.048611999999999995
+    },
+    "CBRSSTOCKUSDT:5m": {
+      "sentAt": "2026-11-12T11:33:06.716Z",
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 100.17,
+      "stop": 100.41000000000001
     }
   }
 }

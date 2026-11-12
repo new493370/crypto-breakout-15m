@@ -1,13 +1,47 @@
 {
-  "processedSignals": {},
-  "recentSignals": [],
+  "processedSignals": {
+    "EIGENUSDT:5m:2026-11-12T03:50:40.820Z": {
+      "symbol": "EIGENUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T03:50:40.820Z"
+    }
+  },
+  "recentSignals": [
+    {
+      "symbol": "EIGENUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.1578,
+      "stop": 0.15710000000000002,
+      "tp1": 0.1598,
+      "zoneLow": 0.1574,
+      "zoneHigh": 0.1582,
+      "signalCandleTime": 1794453000000,
+      "rr1": 2.857142857142948,
+      "highs": [
+        0.1595,
+        0.1585
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T03:50:40.820Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T03:50:40.820Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    }
+  ],
   "allTime": {
-    "total": 0,
+    "total": 1,
     "tp1Hit": 0,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 0,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -15,7 +49,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -31,5 +65,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-11T21:06:25.217Z"
+  "lastUpdated": "2026-11-12T03:50:42.322Z"
 }

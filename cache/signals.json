@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T09:07:57.339Z",
+  "lastUpdated": "2026-11-12T09:13:56.098Z",
   "signals": {
     "EIGENUSDT:5m": {
       "sentAt": "2026-11-12T03:50:40.820Z",
@@ -9,6 +9,195 @@
       "score": null,
       "entry": 0.1578,
       "stop": 0.15710000000000002
+    },
+    "BONKUSDT:5m": {
+      "sentAt": "2026-11-12T09:12:53.213Z",
+      "symbol": "BONKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0000026760000000000003,
+      "stop": 0.000002669
+    },
+    "BOMEUSDT:5m": {
+      "sentAt": "2026-11-12T09:12:54.875Z",
+      "symbol": "BOMEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00058635,
+      "stop": 0.0005854
+    },
+    "HMSTRUSDT:5m": {
+      "sentAt": "2026-11-12T09:12:56.534Z",
+      "symbol": "HMSTRUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00013105000000000001,
+      "stop": 0.0001306
+    },
+    "GALAUSDT:5m": {
+      "sentAt": "2026-11-12T09:12:58.190Z",
+      "symbol": "GALAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0014705,
+      "stop": 0.001466
+    },
+    "HOMEUSDT:5m": {
+      "sentAt": "2026-11-12T09:12:59.827Z",
+      "symbol": "HOMEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0053635,
+      "stop": 0.005352999999999999
+    },
+    "APRUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:01.502Z",
+      "symbol": "APRUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.03608,
+      "stop": 0.03622
+    },
+    "ARBUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:03.214Z",
+      "symbol": "ARBUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.15002,
+      "stop": 0.1497
+    },
+    "MONUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:04.869Z",
+      "symbol": "MONUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.01635,
+      "stop": 0.016300000000000002
+    },
+    "OFCUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:06.639Z",
+      "symbol": "OFCUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.004991499999999999,
+      "stop": 0.004999
+    },
+    "OPGUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:08.309Z",
+      "symbol": "OPGUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.136375,
+      "stop": 0.1358
+    },
+    "LABUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:10.008Z",
+      "symbol": "LABUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.03891,
+      "stop": 0.03874
+    },
+    "TRUTHUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:11.652Z",
+      "symbol": "TRUTHUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0163985,
+      "stop": 0.016419
+    },
+    "SUIUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:13.296Z",
+      "symbol": "SUIUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.8169500000000001,
+      "stop": 0.8153
+    },
+    "NEARUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:14.946Z",
+      "symbol": "NEARUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 3.5435,
+      "stop": 3.534
+    },
+    "AIXBTUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:16.622Z",
+      "symbol": "AIXBTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.01431,
+      "stop": 0.01427
+    },
+    "ARXUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:18.267Z",
+      "symbol": "ARXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.198,
+      "stop": 0.197
+    },
+    "FILUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:19.914Z",
+      "symbol": "FILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.7504500000000001,
+      "stop": 0.7494000000000001
+    },
+    "DOSUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:21.556Z",
+      "symbol": "DOSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1716,
+      "stop": 0.1729
+    },
+    "ZBTUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:23.224Z",
+      "symbol": "ZBTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.05605,
+      "stop": 0.055959999999999996
+    },
+    "ZECUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:52.878Z",
+      "symbol": "ZECUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 985.4100000000001,
+      "stop": 987.13
+    },
+    "CLUSDT:5m": {
+      "sentAt": "2026-11-12T09:13:54.596Z",
+      "symbol": "CLUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 85.9,
+      "stop": 86.04
     }
   }
 }

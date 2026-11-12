@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-12T22:58:22.767Z",
+  "lastUpdated": "2026-11-12T23:03:22.536Z",
   "signals": {
-    "SKHYSTOCKUSDT:5m": {
-      "sentAt": "2026-11-12T17:03:19.071Z",
-      "symbol": "SKHYSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 138.21,
-      "stop": 138.69000000000003
-    },
     "ETHUSDT:5m": {
       "sentAt": "2026-11-12T18:08:18.845Z",
       "symbol": "ETHUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T18:13:14.965Z",
+  "lastUpdated": "2026-11-12T18:18:24.518Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T15:43:21.548Z",
@@ -108,6 +108,15 @@
       "score": null,
       "entry": 2011.82,
       "stop": 2008.184
+    },
+    "AVNTUSDT:5m": {
+      "sentAt": "2026-11-12T18:18:23.016Z",
+      "symbol": "AVNTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.08052,
+      "stop": 0.08035199999999999
     }
   }
 }

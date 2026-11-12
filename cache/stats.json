@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-12T16:08:16.386Z",
+  "lastUpdated": "2026-11-12T16:13:29.513Z",
   "allTime": {
-    "total": 6,
-    "tp1Hit": 4,
+    "total": 7,
+    "tp1Hit": 5,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 1,
     "active": 1,
-    "tp1Rate": 80,
+    "tp1Rate": 83.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 20
+    "stopRate": 16.7
   },
   "byTimeframe": {
     "15m": {
@@ -24,12 +24,12 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 6,
-      "tp1Hit": 4,
+      "total": 7,
+      "tp1Hit": 5,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 1,
-      "tp1Rate": 80
+      "tp1Rate": 83.3
     },
     "bearish": {
       "total": 0,
@@ -136,13 +136,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-12T15:43:26.498Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T16:06:08.858Z",
+      "statusUpdatedAt": "2026-11-12T16:11:15.101Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.03992999999999999
     },
     {
       "symbol": "DNAUSDT",
@@ -195,6 +196,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 1.092
+    },
+    {
+      "symbol": "DATAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.09465,
+      "stop": 0.09435,
+      "tp1": 0.0959,
+      "zoneLow": 0.0944,
+      "zoneHigh": 0.0949,
+      "signalCandleTime": 1794499500000,
+      "rr1": 4.166666666666743,
+      "highs": [
+        0.0982,
+        0.0952
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T16:13:28.010Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T16:13:28.010Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -239,6 +265,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T16:03:12.566Z"
+    },
+    "DATAUSDT:5m:2026-11-12T16:13:28.010Z": {
+      "symbol": "DATAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T16:13:28.010Z"
     }
   }
 }

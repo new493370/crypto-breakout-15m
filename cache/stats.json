@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-12T15:03:09.887Z",
+  "lastUpdated": "2026-11-12T15:08:18.483Z",
   "allTime": {
-    "total": 7,
+    "total": 8,
     "tp1Hit": 1,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 0,
+    "stopped": 1,
     "active": 6,
-    "tp1Rate": 100,
+    "tp1Rate": 50,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 0
+    "stopRate": 50
   },
   "byTimeframe": {
     "15m": {
@@ -24,12 +24,12 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 7,
+      "total": 8,
       "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 0,
-      "tp1Rate": 100
+      "stopped": 1,
+      "tp1Rate": 50
     },
     "bearish": {
       "total": 0,
@@ -86,7 +86,7 @@
       "sentAt": "2026-11-12T14:53:07.419Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:01:12.584Z",
+      "statusUpdatedAt": "2026-11-12T15:06:15.519Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -111,7 +111,7 @@
       "sentAt": "2026-11-12T14:53:09.150Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:01:12.584Z",
+      "statusUpdatedAt": "2026-11-12T15:06:15.519Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -136,7 +136,7 @@
       "sentAt": "2026-11-12T14:53:10.859Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:01:12.584Z",
+      "statusUpdatedAt": "2026-11-12T15:06:15.519Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -159,13 +159,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-12T14:53:12.567Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:01:12.584Z",
+      "statusUpdatedAt": "2026-11-12T15:06:19.243Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.036492
     },
     {
       "symbol": "NIGHTUSDT",
@@ -186,7 +187,7 @@
       "sentAt": "2026-11-12T14:58:17.380Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:01:12.584Z",
+      "statusUpdatedAt": "2026-11-12T15:06:19.243Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -211,7 +212,32 @@
       "sentAt": "2026-11-12T15:03:08.384Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:03:08.384Z",
+      "statusUpdatedAt": "2026-11-12T15:06:19.243Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "DNAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.15335,
+      "stop": 0.15293,
+      "tp1": 0.15510000000000002,
+      "zoneLow": 0.153,
+      "zoneHigh": 0.1537,
+      "signalCandleTime": 1794495600000,
+      "rr1": 4.166666666666975,
+      "highs": [
+        0.1556,
+        0.1546
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T15:08:16.980Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T15:08:16.980Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -267,6 +293,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T15:03:08.384Z"
+    },
+    "DNAUSDT:5m:2026-11-12T15:08:16.980Z": {
+      "symbol": "DNAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T15:08:16.980Z"
     }
   }
 }

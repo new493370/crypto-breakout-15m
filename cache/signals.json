@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T15:03:09.886Z",
+  "lastUpdated": "2026-11-12T15:08:18.481Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T14:44:04.469Z",
@@ -63,6 +63,15 @@
       "score": null,
       "entry": 51.715,
       "stop": 50.869
+    },
+    "DNAUSDT:5m": {
+      "sentAt": "2026-11-12T15:08:16.980Z",
+      "symbol": "DNAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.15335,
+      "stop": 0.15293
     }
   }
 }

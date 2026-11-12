@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T11:33:08.219Z",
+  "lastUpdated": "2026-11-12T11:37:42.697Z",
   "signals": {
     "PEPEUSDT:5m": {
       "sentAt": "2026-11-12T11:11:11.486Z",
@@ -891,6 +891,69 @@
       "score": null,
       "entry": 100.17,
       "stop": 100.41000000000001
+    },
+    "PEOPLEUSDT:5m": {
+      "sentAt": "2026-11-12T11:37:31.009Z",
+      "symbol": "PEOPLEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0056735,
+      "stop": 0.0056777
+    },
+    "PONSUSDT:5m": {
+      "sentAt": "2026-11-12T11:37:32.736Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.15065,
+      "stop": 0.15142999999999998
+    },
+    "PNUTUSDT:5m": {
+      "sentAt": "2026-11-12T11:37:34.429Z",
+      "symbol": "PNUTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.032244999999999996,
+      "stop": 0.032275
+    },
+    "SLXUSDT:5m": {
+      "sentAt": "2026-11-12T11:37:36.144Z",
+      "symbol": "SLXUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.034415,
+      "stop": 0.034469
+    },
+    "AMDSTOCKUSDT:5m": {
+      "sentAt": "2026-11-12T11:37:37.832Z",
+      "symbol": "AMDSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 569.785,
+      "stop": 573.067
+    },
+    "YGGUSDT:5m": {
+      "sentAt": "2026-11-12T11:37:39.511Z",
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.020745,
+      "stop": 0.020763
+    },
+    "AEROUSDT:5m": {
+      "sentAt": "2026-11-12T11:37:41.195Z",
+      "symbol": "AEROUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.53,
+      "stop": 0.53204
     }
   }
 }

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T19:08:21.780Z",
+  "lastUpdated": "2026-11-12T19:13:22.829Z",
   "allTime": {
-    "total": 16,
+    "total": 17,
     "tp1Hit": 8,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 5,
+    "active": 6,
     "tp1Rate": 72.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 14,
+      "total": 15,
       "tp1Hit": 8,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:06:11.291Z",
+      "statusUpdatedAt": "2026-11-12T19:11:11.262Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -319,7 +319,7 @@
       "sentAt": "2026-11-12T17:03:19.071Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:06:11.291Z",
+      "statusUpdatedAt": "2026-11-12T19:11:11.262Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -344,7 +344,7 @@
       "sentAt": "2026-11-12T18:08:18.845Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:06:11.291Z",
+      "statusUpdatedAt": "2026-11-12T19:11:11.262Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -369,7 +369,7 @@
       "sentAt": "2026-11-12T18:18:23.016Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:06:11.291Z",
+      "statusUpdatedAt": "2026-11-12T19:11:11.262Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -446,7 +446,32 @@
       "sentAt": "2026-11-12T19:08:20.278Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:08:20.278Z",
+      "statusUpdatedAt": "2026-11-12T19:11:11.262Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "POPCATUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.031775,
+      "stop": 0.031733,
+      "tp1": 0.03195,
+      "zoneLow": 0.03174,
+      "zoneHigh": 0.03181,
+      "signalCandleTime": 1794510300000,
+      "rr1": 4.166666666666667,
+      "highs": [
+        0.03223,
+        0.03198
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T19:13:21.327Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T19:13:21.327Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -565,6 +590,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-12T19:08:20.278Z"
+    },
+    "POPCATUSDT:5m:2026-11-12T19:13:21.327Z": {
+      "symbol": "POPCATUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T19:13:21.327Z"
     }
   }
 }

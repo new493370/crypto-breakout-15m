@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T19:08:21.778Z",
+  "lastUpdated": "2026-11-12T19:13:22.827Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T15:43:21.548Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 0.8301,
       "stop": 0.8312999999999999
+    },
+    "POPCATUSDT:5m": {
+      "sentAt": "2026-11-12T19:13:21.327Z",
+      "symbol": "POPCATUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.031775,
+      "stop": 0.031733
     }
   }
 }

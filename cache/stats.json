@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T19:48:09.031Z",
+  "lastUpdated": "2026-11-12T19:53:07.738Z",
   "allTime": {
-    "total": 18,
+    "total": 19,
     "tp1Hit": 11,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 4,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 73.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 71.4
     },
     "bearish": {
-      "total": 3,
+      "total": 4,
       "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:46:08.256Z",
+      "statusUpdatedAt": "2026-11-12T19:51:08.911Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -319,7 +319,7 @@
       "sentAt": "2026-11-12T17:03:19.071Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:46:08.256Z",
+      "statusUpdatedAt": "2026-11-12T19:51:08.911Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -500,7 +500,32 @@
       "sentAt": "2026-11-12T19:28:08.924Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T19:46:08.256Z",
+      "statusUpdatedAt": "2026-11-12T19:51:08.911Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "LDOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.30935,
+      "stop": 0.3098469050317197,
+      "tp1": 0.3081,
+      "zoneLow": 0.3091,
+      "zoneHigh": 0.3096,
+      "signalCandleTime": 1794512700000,
+      "rr1": 2.5155712263046834,
+      "highs": null,
+      "lows": [
+        0.3046,
+        0.3068
+      ],
+      "sentAt": "2026-11-12T19:53:06.235Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T19:53:06.235Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -633,6 +658,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-12T19:28:08.924Z"
+    },
+    "LDOUSDT:5m:2026-11-12T19:53:06.235Z": {
+      "symbol": "LDOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-12T19:53:06.235Z"
     }
   }
 }

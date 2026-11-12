@@ -1,0 +1,14 @@
+{
+  "lastUpdated": "2026-11-12T14:44:05.971Z",
+  "signals": {
+    "USOILUSDT:5m": {
+      "sentAt": "2026-11-12T14:44:04.469Z",
+      "symbol": "USOILUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 84.97,
+      "stop": 84.92200000000001
+    }
+  }
+}

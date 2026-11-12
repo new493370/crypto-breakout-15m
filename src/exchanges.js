@@ -1,3 +1,4 @@
+
 import { CONFIG, INTERVAL_MS } from "./config.js";
 
 const CACHE_TTL = {
@@ -9,29 +10,45 @@ const CACHE_TTL = {
 
 let symbolCache = { timestamp: 0, symbols: [] };
 let tickersCache = { timestamp: 0, data: [] };
-const klineCache = {};
-const snapshotCache = {};
+
+const klineCache = new Map();
+const snapshotCache = new Map();
+const pendingRequests = new Map();
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function normalizeSymbol(symbol) {
-  return String(symbol || "").toUpperCase().replace(/[-_/:\s]/g, "");
+  return String(symbol || "")
+    .toUpperCase()
+    .replace(/[-_/:\s]/g, "");
 }
 
 function parseNumber(value) {
+  if (value === null || value === undefined || value === "") {
+    return 0;
+  }
+
   const number = Number(value);
   return Number.isFinite(number) ? number : 0;
 }
 
 function isValidCandle(candle) {
+  if (!candle || typeof candle !== "object") return false;
+
+  const values = [
+    candle.time,
+    candle.open,
+    candle.high,
+    candle.low,
+    candle.close
+  ];
+
+  if (!values.every(Number.isFinite)) return false;
+
   return (
-    Number.isFinite(candle.time) &&
-    Number.isFinite(candle.open) &&
-    Number.isFinite(candle.high) &&
-    Number.isFinite(candle.low) &&
-    Number.isFinite(candle.close) &&
+    candle.time > 0 &&
     candle.open > 0 &&
     candle.high > 0 &&
     candle.low > 0 &&
@@ -40,6 +57,67 @@ function isValidCandle(candle) {
     candle.high >= Math.max(candle.open, candle.close) &&
     candle.low <= Math.min(candle.open, candle.close)
   );
+}
+
+function isClosedCandle(value) {
+  return (
+    value === true ||
+    value === 1 ||
+    value === "1" ||
+    value === "true"
+  );
+}
+
+function isIncompleteCandle(value) {
+  return (
+    value === false ||
+    value === 0 ||
+    value === "0" ||
+    value === "false"
+  );
+}
+
+function getCache(cache, key, ttl) {
+  const cached = cache.get(key);
+
+  if (!cached) return null;
+
+  if (Date.now() - cached.time >= ttl * 1000) {
+    cache.delete(key);
+    return null;
+  }
+
+  return cached.data;
+}
+
+function setCache(cache, key, data) {
+  cache.set(key, {
+    time: Date.now(),
+    data
+  });
+
+  if (cache.size > 2000) {
+    const oldestKey = cache.keys().next().value;
+    cache.delete(oldestKey);
+  }
+
+  return data;
+}
+
+function deduplicateRequest(key, request) {
+  if (pendingRequests.has(key)) {
+    return pendingRequests.get(key);
+  }
+
+  const promise = Promise.resolve()
+    .then(request)
+    .finally(() => {
+      pendingRequests.delete(key);
+    });
+
+  pendingRequests.set(key, promise);
+
+  return promise;
 }
 
 async function genericFetch(baseUrl, path, params = {}, options = {}) {
@@ -51,21 +129,35 @@ async function genericFetch(baseUrl, path, params = {}, options = {}) {
     }
   }
 
-  const maxAttempts = options.maxAttempts || 3;
-  const baseDelay = options.baseDelay || 400;
-  const timeoutMs = options.timeout || CONFIG.MARKET_TIMEOUT;
+  const maxAttempts = Number.isInteger(options.maxAttempts)
+    ? Math.max(1, options.maxAttempts)
+    : 3;
+
+  const baseDelay = Number.isFinite(options.baseDelay)
+    ? Math.max(0, options.baseDelay)
+    : 400;
+
+  const timeoutMs = Number.isFinite(options.timeout)
+    ? Math.max(1, options.timeout)
+    : CONFIG.MARKET_TIMEOUT;
+
   const label = options.label || "HTTP";
 
   let lastError = null;
 
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), timeoutMs);
+    const timeout = setTimeout(
+      () => controller.abort(),
+      timeoutMs
+    );
 
     try {
       const response = await fetch(url.toString(), {
         method: "GET",
-        headers: { Accept: "application/json" },
+        headers: {
+          Accept: "application/json"
+        },
         signal: controller.signal,
         redirect: "follow"
       });
@@ -73,8 +165,11 @@ async function genericFetch(baseUrl, path, params = {}, options = {}) {
       if (response.status === 429) {
         lastError = new Error(label + " HTTP 429");
 
-        const retryAfter = parseFloat(response.headers.get("Retry-After"));
-        const delay = Number.isFinite(retryAfter) && retryAfter > 0
+        const retryAfter = parseNumber(
+          response.headers.get("Retry-After")
+        );
+
+        const delay = retryAfter > 0
           ? Math.min(retryAfter * 1000, 15000)
           : baseDelay * (attempt + 1);
 
@@ -89,36 +184,46 @@ async function genericFetch(baseUrl, path, params = {}, options = {}) {
         lastError = new Error(label + " IP banned (418)");
 
         if (attempt < maxAttempts - 1) {
-          await sleep(Math.min(5000 * (attempt + 1), 30000));
+          await sleep(
+            Math.min(5000 * (attempt + 1), 30000)
+          );
         }
 
         continue;
       }
 
       if (!response.ok) {
-        const error = new Error(label + " HTTP " + response.status);
+        const error = new Error(
+          label + " HTTP " + response.status
+        );
+
         error.status = response.status;
 
-        if (response.status < 500 || attempt === maxAttempts - 1) {
+        if (
+          response.status < 500 ||
+          attempt === maxAttempts - 1
+        ) {
           throw error;
         }
 
         lastError = error;
+
         await sleep(baseDelay * (attempt + 1));
         continue;
       }
 
       return await response.json();
-    } catch (e) {
-      lastError = e;
+    } catch (error) {
+      lastError = error;
 
-      const status = e?.status || 0;
+      const status = error?.status || 0;
+
       const retryable =
         status === 429 ||
         status === 418 ||
         status >= 500 ||
         status === 0 ||
-        e?.name === "AbortError";
+        error?.name === "AbortError";
 
       if (!retryable || attempt === maxAttempts - 1) {
         break;
@@ -138,7 +243,7 @@ export function okxFetch(path, params = {}, options = {}) {
     ...options,
     label: "OKX"
   }).then((json) => {
-    if (!json || json.code !== "0") {
+    if (!json || String(json.code) !== "0") {
       throw new Error(
         "OKX error: " + (json?.msg || json?.code || "unknown")
       );
@@ -149,17 +254,27 @@ export function okxFetch(path, params = {}, options = {}) {
 }
 
 export function binanceFetch(path, params = {}, options = {}) {
-  return genericFetch(CONFIG.BINANCE_FUTURES_URL, path, params, {
-    ...options,
-    label: "Binance Futures"
-  });
+  return genericFetch(
+    CONFIG.BINANCE_FUTURES_URL,
+    path,
+    params,
+    {
+      ...options,
+      label: "Binance Futures"
+    }
+  );
 }
 
 export function binanceSpotFetch(path, params = {}, options = {}) {
-  return genericFetch(CONFIG.BINANCE_SPOT_URL, path, params, {
-    ...options,
-    label: "BinanceSpot"
-  });
+  return genericFetch(
+    CONFIG.BINANCE_SPOT_URL,
+    path,
+    params,
+    {
+      ...options,
+      label: "BinanceSpot"
+    }
+  );
 }
 
 export function mexcFetch(path, params = {}, options = {}) {
@@ -170,9 +285,7 @@ export function mexcFetch(path, params = {}, options = {}) {
     if (
       json &&
       json.code !== undefined &&
-      json.code !== 0 &&
-      json.code !== "0" &&
-      json.code !== 200
+      ![0, "0", 200, "200"].includes(json.code)
     ) {
       throw new Error(
         "MEXC error: " + (json.message || json.code || "unknown")
@@ -185,18 +298,28 @@ export function mexcFetch(path, params = {}, options = {}) {
 
 export function resolveSymbolAliases(symbol) {
   const normalized = normalizeSymbol(symbol);
-  const aliases = CONFIG.SYMBOL_ALIASES[normalized];
+
+  const aliases = CONFIG.SYMBOL_ALIASES?.[normalized];
 
   if (Array.isArray(aliases) && aliases.length > 0) {
-    return [...new Set([normalized, ...aliases.map(normalizeSymbol)])];
+    return [
+      ...new Set([
+        normalized,
+        ...aliases.map(normalizeSymbol).filter(Boolean)
+      ])
+    ];
   }
 
-  return [normalized];
+  return normalized ? [normalized] : [];
 }
 
 function isAllowedBaseAsset(base) {
   if (!base) return false;
-  if (CONFIG.EXCLUDED_BASE_ASSETS.includes(base)) return false;
+
+  if (CONFIG.EXCLUDED_BASE_ASSETS.includes(base)) {
+    return false;
+  }
+
   if (/^X[A-Z]{4,}$/.test(base)) return false;
   if (base.includes("TEST")) return false;
 
@@ -205,17 +328,27 @@ function isAllowedBaseAsset(base) {
 
 function getExchangeOrder() {
   return Object.keys(CONFIG.EXCHANGES)
-    .filter((key) => CONFIG.EXCHANGES[key].enabled)
+    .filter((key) => CONFIG.EXCHANGES[key]?.enabled === true)
     .sort((a, b) => {
-      return CONFIG.EXCHANGES[a].priority - CONFIG.EXCHANGES[b].priority;
+      return (
+        CONFIG.EXCHANGES[a].priority -
+        CONFIG.EXCHANGES[b].priority
+      );
     });
 }
 
 function getExchangeLimit(exchangeKey, requestedLimit) {
   const exchangeConfig = CONFIG.EXCHANGES[exchangeKey];
-  const maximum = exchangeConfig?.maxCandles || requestedLimit;
 
-  return Math.max(1, Math.min(requestedLimit, maximum));
+  const requested = Number.isFinite(requestedLimit)
+    ? Math.floor(requestedLimit)
+    : CONFIG.KLINE_LIMIT;
+
+  const maximum = Number.isFinite(exchangeConfig?.maxCandles)
+    ? exchangeConfig.maxCandles
+    : requested;
+
+  return Math.max(1, Math.min(requested, maximum));
 }
 
 export async function getExchangeSymbols(force = false) {
@@ -229,116 +362,131 @@ export async function getExchangeSymbols(force = false) {
     return symbolCache.symbols;
   }
 
-  const allSymbols = new Map();
+  return deduplicateRequest("exchange-symbols", async () => {
+    const allSymbols = new Map();
+    const exchanges = getExchangeOrder();
 
-  const exchanges = getExchangeOrder();
+    for (const exchangeKey of exchanges) {
+      try {
+        if (exchangeKey === "binance") {
+          const json = await binanceFetch(
+            "/fapi/v1/exchangeInfo"
+          );
 
-  for (const exchangeKey of exchanges) {
-    try {
-      if (exchangeKey === "binance") {
-        const json = await binanceFetch("/fapi/v1/exchangeInfo");
+          if (!Array.isArray(json?.symbols)) continue;
 
-        if (!Array.isArray(json?.symbols)) continue;
+          for (const item of json.symbols) {
+            if (item.status !== "TRADING") continue;
+            if (item.quoteAsset !== "USDT") continue;
 
-        for (const item of json.symbols) {
-          if (item.status !== "TRADING") continue;
-          if (item.quoteAsset !== "USDT") continue;
-          if (
-            item.contractType &&
-            item.contractType !== "PERPETUAL"
-          ) {
-            continue;
-          }
+            if (
+              item.contractType &&
+              item.contractType !== "PERPETUAL"
+            ) {
+              continue;
+            }
 
-          const base = String(item.baseAsset || "").toUpperCase();
+            const base = String(
+              item.baseAsset || ""
+            ).toUpperCase();
 
-          if (!isAllowedBaseAsset(base)) continue;
+            if (!isAllowedBaseAsset(base)) continue;
 
-          const symbol = base + "USDT";
+            const symbol = base + "USDT";
 
-          if (!allSymbols.has(symbol)) {
-            allSymbols.set(symbol, {
-              symbol,
-              base,
-              quote: "USDT",
-              exchange: "binance"
-            });
-          }
-        }
-      }
-
-      if (exchangeKey === "okx") {
-        const json = await okxFetch("/api/v5/public/instruments", {
-          instType: "SWAP"
-        });
-
-        if (!Array.isArray(json?.data)) continue;
-
-        for (const item of json.data) {
-          if (item.state !== "live") continue;
-          if (item.settleCcy !== "USDT") continue;
-
-          const instId = String(item.instId || "");
-
-          if (!instId.endsWith("-USDT-SWAP")) continue;
-
-          const base = String(
-            item.baseCcy || instId.split("-")[0] || ""
-          ).toUpperCase();
-
-          if (!isAllowedBaseAsset(base)) continue;
-
-          const symbol = base + "USDT";
-
-          if (!allSymbols.has(symbol)) {
-            allSymbols.set(symbol, {
-              symbol,
-              base,
-              quote: "USDT",
-              exchange: "okx"
-            });
+            if (!allSymbols.has(symbol)) {
+              allSymbols.set(symbol, {
+                symbol,
+                base,
+                quote: "USDT",
+                exchange: "binance"
+              });
+            }
           }
         }
-      }
 
-      if (exchangeKey === "mexc") {
-        const json = await mexcFetch("/api/v1/contract/detail");
+        if (exchangeKey === "okx") {
+          const json = await okxFetch(
+            "/api/v5/public/instruments",
+            {
+              instType: "SWAP"
+            }
+          );
 
-        if (!Array.isArray(json?.data)) continue;
+          if (!Array.isArray(json?.data)) continue;
 
-        for (const item of json.data) {
-          if (item.state !== 0) continue;
-          if (item.quoteCoin !== "USDT") continue;
+          for (const item of json.data) {
+            if (item.state !== "live") continue;
+            if (item.settleCcy !== "USDT") continue;
 
-          const base = String(item.baseCoin || "").toUpperCase();
+            const instId = String(item.instId || "");
 
-          if (!isAllowedBaseAsset(base)) continue;
+            if (!instId.endsWith("-USDT-SWAP")) continue;
 
-          const symbol = base + "USDT";
+            const base = String(
+              item.baseCcy || instId.split("-")[0] || ""
+            ).toUpperCase();
 
-          if (!allSymbols.has(symbol)) {
-            allSymbols.set(symbol, {
-              symbol,
-              base,
-              quote: "USDT",
-              exchange: "mexc"
-            });
+            if (!isAllowedBaseAsset(base)) continue;
+
+            const symbol = base + "USDT";
+
+            if (!allSymbols.has(symbol)) {
+              allSymbols.set(symbol, {
+                symbol,
+                base,
+                quote: "USDT",
+                exchange: "okx"
+              });
+            }
           }
         }
+
+        if (exchangeKey === "mexc") {
+          const json = await mexcFetch(
+            "/api/v1/contract/detail"
+          );
+
+          if (!Array.isArray(json?.data)) continue;
+
+          for (const item of json.data) {
+            if (Number(item.state) !== 0) continue;
+            if (item.quoteCoin !== "USDT") continue;
+
+            const base = String(
+              item.baseCoin || ""
+            ).toUpperCase();
+
+            if (!isAllowedBaseAsset(base)) continue;
+
+            const symbol = base + "USDT";
+
+            if (!allSymbols.has(symbol)) {
+              allSymbols.set(symbol, {
+                symbol,
+                base,
+                quote: "USDT",
+                exchange: "mexc"
+              });
+            }
+          }
+        }
+      } catch (error) {
+        continue;
       }
-    } catch (e) {
-      continue;
     }
-  }
 
-  const result = Array.from(allSymbols.values());
+    const result = Array.from(allSymbols.values());
 
-  result.sort((a, b) => a.symbol.localeCompare(b.symbol));
+    result.sort((a, b) => a.symbol.localeCompare(b.symbol));
 
-  symbolCache.symbols = result;
-  symbolCache.timestamp = now;
+    symbolCache = {
+      timestamp: Date.now() / 1000,
+      symbols: result
+    };
 
-  return result;
+    return result;
+  });
 }
 
 export async function getTickers(force = false) {
@@ -352,157 +500,166 @@ export async function getTickers(force = false) {
     return tickersCache.data;
   }
 
-  const validSymbols = await getExchangeSymbols();
-  const validSet = new Set(validSymbols.map((s) => s.symbol));
+  return deduplicateRequest("exchange-tickers", async () => {
+    const validSymbols = await getExchangeSymbols();
+    const validSet = new Set(
+      validSymbols.map((item) => item.symbol)
+    );
 
-  const result = [];
-  const seen = new Set();
+    const result = [];
+    const seen = new Set();
+    const exchanges = getExchangeOrder();
 
-  const exchanges = getExchangeOrder();
+    for (const exchangeKey of exchanges) {
+      try {
+        if (exchangeKey === "binance") {
+          const json = await binanceFetch(
+            "/fapi/v1/ticker/24hr"
+          );
 
-  for (const exchangeKey of exchanges) {
-    try {
-      if (exchangeKey === "binance") {
-        const json = await binanceFetch("/fapi/v1/ticker/24hr");
+          if (!Array.isArray(json)) continue;
 
-        if (!Array.isArray(json)) continue;
+          for (const item of json) {
+            const raw = normalizeSymbol(item.symbol);
 
-        for (const item of json) {
-          const raw = normalizeSymbol(item.symbol);
+            if (!raw.endsWith("USDT")) continue;
 
-          if (!raw.endsWith("USDT")) continue;
+            const base = raw.slice(0, -4);
+            const symbol = base + "USDT";
 
-          const base = raw.slice(0, -4);
-          const symbol = base + "USDT";
+            if (!isAllowedBaseAsset(base)) continue;
+            if (!validSet.has(symbol) || seen.has(symbol)) continue;
 
-          if (!isAllowedBaseAsset(base)) continue;
-          if (!validSet.has(symbol) || seen.has(symbol)) continue;
+            const last = parseNumber(item.lastPrice);
+            const open24h = parseNumber(item.openPrice);
+            const quoteVolume = parseNumber(item.quoteVolume);
 
-          const last = parseNumber(item.lastPrice);
-          const open24h = parseNumber(item.openPrice);
-          const quoteVolume = parseNumber(item.quoteVolume);
+            if (last <= 0 || quoteVolume <= 0) continue;
 
-          if (last <= 0 || quoteVolume <= 0) continue;
-
-          const changePercent = open24h > 0
-            ? ((last - open24h) / open24h) * 100
-            : 0;
-
-          result.push({
-            symbol,
-            base,
-            quote: "USDT",
-            price: last,
-            change: changePercent,
-            quote_volume: quoteVolume
-          });
-
-          seen.add(symbol);
-        }
-      }
-
-      if (exchangeKey === "okx") {
-        const json = await okxFetch("/api/v5/market/tickers", {
-          instType: "SWAP"
-        });
-
-        if (!Array.isArray(json?.data)) continue;
-
-        for (const item of json.data) {
-          const instId = String(item.instId || "");
-
-          if (!instId.endsWith("-USDT-SWAP")) continue;
-
-          const base = String(instId.split("-")[0] || "").toUpperCase();
-          const symbol = base + "USDT";
-
-          if (!isAllowedBaseAsset(base)) continue;
-          if (!validSet.has(symbol) || seen.has(symbol)) continue;
-
-          const last = parseNumber(item.last);
-          const open24h = parseNumber(item.open24h);
-          const volCcy24h = parseNumber(item.volCcy24h);
-          const vol24h = parseNumber(item.vol24h);
-
-          if (last <= 0) continue;
-
-          const quoteVolume = volCcy24h > 0
-            ? volCcy24h
-            : vol24h > 0
-              ? vol24h * last
+            const changePercent = open24h > 0
+              ? ((last - open24h) / open24h) * 100
               : 0;
 
-          const changePercent = open24h > 0
-            ? ((last - open24h) / open24h) * 100
-            : 0;
+            result.push({
+              symbol,
+              base,
+              quote: "USDT",
+              price: last,
+              change: changePercent,
+              quote_volume: quoteVolume
+            });
 
-          result.push({
-            symbol,
-            base,
-            quote: "USDT",
-            price: last,
-            change: changePercent,
-            quote_volume: quoteVolume
-          });
-
-          seen.add(symbol);
+            seen.add(symbol);
+          }
         }
-      }
 
-      if (exchangeKey === "mexc") {
-        const json = await mexcFetch("/api/v1/contract/ticker");
-
-        if (!Array.isArray(json?.data)) continue;
-
-        for (const item of json.data) {
-          const raw = normalizeSymbol(item.symbol);
-
-          if (!raw.endsWith("USDT")) continue;
-
-          const base = raw.slice(0, -4);
-          const symbol = base + "USDT";
-
-          if (!isAllowedBaseAsset(base)) continue;
-          if (!validSet.has(symbol) || seen.has(symbol)) continue;
-
-          const last = parseNumber(item.lastPrice);
-          const quoteVolume = parseNumber(
-            item.amount24 || item.volume24
+        if (exchangeKey === "okx") {
+          const json = await okxFetch(
+            "/api/v5/market/tickers",
+            {
+              instType: "SWAP"
+            }
           );
-          const riseFallRate = parseNumber(item.riseFallRate);
 
-          if (last <= 0) continue;
+          if (!Array.isArray(json?.data)) continue;
 
-          result.push({
-            symbol,
-            base,
-            quote: "USDT",
-            price: last,
-            change: riseFallRate * 100,
-            quote_volume: quoteVolume
-          });
+          for (const item of json.data) {
+            const instId = String(item.instId || "");
 
-          seen.add(symbol);
+            if (!instId.endsWith("-USDT-SWAP")) continue;
+
+            const base = String(
+              instId.split("-")[0] || ""
+            ).toUpperCase();
+
+            const symbol = base + "USDT";
+
+            if (!isAllowedBaseAsset(base)) continue;
+            if (!validSet.has(symbol) || seen.has(symbol)) continue;
+
+            const last = parseNumber(item.last);
+            const open24h = parseNumber(item.open24h);
+            const quoteVolume = parseNumber(item.volCcy24h);
+
+            if (last <= 0 || quoteVolume <= 0) continue;
+
+            const changePercent = open24h > 0
+              ? ((last - open24h) / open24h) * 100
+              : 0;
+
+            result.push({
+              symbol,
+              base,
+              quote: "USDT",
+              price: last,
+              change: changePercent,
+              quote_volume: quoteVolume
+            });
+
+            seen.add(symbol);
+          }
         }
+
+        if (exchangeKey === "mexc") {
+          const json = await mexcFetch(
+            "/api/v1/contract/ticker"
+          );
+
+          if (!Array.isArray(json?.data)) continue;
+
+          for (const item of json.data) {
+            const raw = normalizeSymbol(item.symbol);
+
+            if (!raw.endsWith("USDT")) continue;
+
+            const base = raw.slice(0, -4);
+            const symbol = base + "USDT";
+
+            if (!isAllowedBaseAsset(base)) continue;
+            if (!validSet.has(symbol) || seen.has(symbol)) continue;
+
+            const last = parseNumber(item.lastPrice);
+            const quoteVolume = parseNumber(item.amount24);
+            const riseFallRate = parseNumber(item.riseFallRate);
+
+            if (last <= 0 || quoteVolume <= 0) continue;
+
+            result.push({
+              symbol,
+              base,
+              quote: "USDT",
+              price: last,
+              change: riseFallRate * 100,
+              quote_volume: quoteVolume
+            });
+
+            seen.add(symbol);
+          }
+        }
+      } catch (error) {
+        continue;
       }
-    } catch (e) {
-      continue;
     }
-  }
 
-  result.sort((a, b) => b.quote_volume - a.quote_volume);
+    result.sort((a, b) => b.quote_volume - a.quote_volume);
 
-  tickersCache.data = result;
-  tickersCache.timestamp = now;
+    tickersCache = {
+      timestamp: Date.now() / 1000,
+      data: result
+    };
 
-  return result;
+    return result;
+  });
 }
 
 export async function getTopSymbols(limit = CONFIG.MARKET_TOP_LIMIT) {
   const symbols = await getExchangeSymbols();
   const tickers = await getTickers();
 
-  const allowed = new Set(symbols.map((s) => s.symbol));
+  const allowed = new Set(
+    symbols.map((item) => item.symbol)
+  );
+
   const ranked = [];
 
   for (const ticker of tickers) {
@@ -520,17 +677,26 @@ export async function getTopSymbols(limit = CONFIG.MARKET_TOP_LIMIT) {
 
   ranked.sort((a, b) => b.quote_volume - a.quote_volume);
 
-  return ranked.slice(0, Math.min(limit, 1000));
+  const safeLimit = Number.isFinite(limit)
+    ? Math.max(0, Math.floor(limit))
+    : CONFIG.MARKET_TOP_LIMIT;
+
+  return ranked.slice(0, Math.min(safeLimit, 1000));
 }
 
 export function normalizeCandles(rawCandles, interval) {
+  if (!Array.isArray(rawCandles)) return [];
+
   const intervalMs = INTERVAL_MS[interval] || 0;
   const now = Date.now();
+
   const normalized = [];
   const incompleteCandles = [];
 
   for (const raw of rawCandles) {
-    const openTime = raw.time;
+    if (!raw || typeof raw !== "object") continue;
+
+    const openTime = parseNumber(raw.time);
 
     const candleObj = {
       time: openTime,
@@ -538,16 +704,14 @@ export function normalizeCandles(rawCandles, interval) {
       close_time: intervalMs > 0
         ? openTime + intervalMs - 1
         : openTime,
-      open: raw.open,
-      high: raw.high,
-      low: raw.low,
-      close: raw.close,
-      volume: Number.isFinite(raw.volume) ? raw.volume : 0,
-      quote_volume: Number.isFinite(raw.quoteVolume)
-        ? raw.quoteVolume
-        : 0,
+      open: parseNumber(raw.open),
+      high: parseNumber(raw.high),
+      low: parseNumber(raw.low),
+      close: parseNumber(raw.close),
+      volume: parseNumber(raw.volume),
+      quote_volume: parseNumber(raw.quoteVolume),
       trades: 0,
-      incomplete: raw.confirm === "0"
+      incomplete: isIncompleteCandle(raw.confirm)
     };
 
     if (!isValidCandle(candleObj)) continue;
@@ -563,7 +727,9 @@ export function normalizeCandles(rawCandles, interval) {
   incompleteCandles.sort((a, b) => a.time - b.time);
 
   if (incompleteCandles.length > 0) {
-    const openCandle = incompleteCandles[incompleteCandles.length - 1];
+    const openCandle = incompleteCandles[
+      incompleteCandles.length - 1
+    ];
 
     if (
       normalized.length === 0 ||
@@ -599,13 +765,19 @@ async function getKlinesBinance(symbol, interval, limit) {
     throw new Error("Binance interval unsupported: " + interval);
   }
 
-  const size = Math.min(limit, 1000);
+  const size = Math.min(
+    Math.max(1, Math.floor(limit)),
+    1000
+  );
 
-  const json = await binanceFetch("/fapi/v1/klines", {
-    symbol: binanceSymbol,
-    interval: binanceInterval,
-    limit: String(size)
-  });
+  const json = await binanceFetch(
+    "/fapi/v1/klines",
+    {
+      symbol: binanceSymbol,
+      interval: binanceInterval,
+      limit: String(size)
+    }
+  );
 
   if (!Array.isArray(json)) {
     throw new Error("Binance Futures klines پاسخ نامعتبر");
@@ -617,13 +789,13 @@ async function getKlinesBinance(symbol, interval, limit) {
   for (const row of json) {
     if (!Array.isArray(row) || row.length < 6) continue;
 
-    const openTime = parseInt(row[0], 10);
-    const open = parseFloat(row[1]);
-    const high = parseFloat(row[2]);
-    const low = parseFloat(row[3]);
-    const close = parseFloat(row[4]);
-    const volume = parseFloat(row[5]);
-    const turnover = parseFloat(row[7] || "0");
+    const openTime = parseNumber(row[0]);
+    const open = parseNumber(row[1]);
+    const high = parseNumber(row[2]);
+    const low = parseNumber(row[3]);
+    const close = parseNumber(row[4]);
+    const volume = parseNumber(row[5]);
+    const turnover = parseNumber(row[7]);
 
     const closeTime = openTime + intervalMs - 1;
     const isClosed = Date.now() > closeTime;
@@ -653,7 +825,11 @@ async function getKlinesOKX(symbol, interval, limit) {
     throw new Error("OKX interval unsupported: " + interval);
   }
 
-  const barLimit = Math.min(limit, 300);
+  const barLimit = Math.min(
+    Math.max(1, Math.floor(limit)),
+    300
+  );
+
   const instId = base + "-USDT-SWAP";
 
   const json = await okxFetch(
@@ -662,10 +838,6 @@ async function getKlinesOKX(symbol, interval, limit) {
       instId,
       bar: okxInterval,
       limit: String(barLimit)
-    },
-    {
-      maxAttempts: 3,
-      baseDelay: 400
     }
   );
 
@@ -674,14 +846,14 @@ async function getKlinesOKX(symbol, interval, limit) {
   }
 
   const rawCandles = json.data.map((row) => ({
-    time: parseInt(row[0], 10),
-    open: parseFloat(row[1]),
-    high: parseFloat(row[2]),
-    low: parseFloat(row[3]),
-    close: parseFloat(row[4]),
-    volume: parseFloat(row[5]),
-    quoteVolume: parseFloat(row[7] || "0"),
-    confirm: String(row[8] ?? "1")
+    time: parseNumber(row[0]),
+    open: parseNumber(row[1]),
+    high: parseNumber(row[2]),
+    low: parseNumber(row[3]),
+    close: parseNumber(row[4]),
+    volume: parseNumber(row[5]),
+    quoteVolume: parseNumber(row[7]),
+    confirm: row[8] ?? "1"
   })).reverse();
 
   return normalizeCandles(rawCandles, interval);
@@ -696,7 +868,10 @@ async function getKlinesMEXC(symbol, interval, limit) {
     throw new Error("MEXC interval unsupported: " + interval);
   }
 
-  const size = Math.min(limit, 1000);
+  const size = Math.min(
+    Math.max(1, Math.floor(limit)),
+    1000
+  );
 
   const json = await mexcFetch(
     "/api/v1/contract/kline/" + mexcSymbol,
@@ -712,6 +887,7 @@ async function getKlinesMEXC(symbol, interval, limit) {
 
   const data = json.data;
   const rawCandles = [];
+
   const intervalMs = INTERVAL_MS[interval] || 3600000;
 
   const times = Array.isArray(data.time) ? data.time : [];
@@ -720,14 +896,17 @@ async function getKlinesMEXC(symbol, interval, limit) {
   const lows = Array.isArray(data.low) ? data.low : [];
   const closes = Array.isArray(data.close) ? data.close : [];
   const volumes = Array.isArray(data.vol) ? data.vol : [];
+  const amounts = Array.isArray(data.amount) ? data.amount : [];
 
   for (let i = 0; i < times.length; i++) {
-    const openTime = parseInt(times[i], 10) * 1000;
-    const open = parseFloat(opens[i]);
-    const high = parseFloat(highs[i]);
-    const low = parseFloat(lows[i]);
-    const close = parseFloat(closes[i]);
-    const volume = parseFloat(volumes[i]);
+    const openTime = parseNumber(times[i]) * 1000;
+
+    const open = parseNumber(opens[i]);
+    const high = parseNumber(highs[i]);
+    const low = parseNumber(lows[i]);
+    const close = parseNumber(closes[i]);
+    const volume = parseNumber(volumes[i]);
+    const quoteVolume = parseNumber(amounts[i]);
 
     const closeTime = openTime + intervalMs - 1;
     const isClosed = Date.now() > closeTime;
@@ -739,7 +918,7 @@ async function getKlinesMEXC(symbol, interval, limit) {
       low,
       close,
       volume,
-      quoteVolume: 0,
+      quoteVolume,
       confirm: isClosed ? "1" : "0"
     });
   }
@@ -764,15 +943,27 @@ export async function getKlinesFromExchange(
 
       switch (exchangeKey) {
         case "binance":
-          candles = await getKlinesBinance(alias, interval, limit);
+          candles = await getKlinesBinance(
+            alias,
+            interval,
+            limit
+          );
           break;
 
         case "okx":
-          candles = await getKlinesOKX(alias, interval, limit);
+          candles = await getKlinesOKX(
+            alias,
+            interval,
+            limit
+          );
           break;
 
         case "mexc":
-          candles = await getKlinesMEXC(alias, interval, limit);
+          candles = await getKlinesMEXC(
+            alias,
+            interval,
+            limit
+          );
           break;
 
         default:
@@ -786,8 +977,8 @@ export async function getKlinesFromExchange(
       lastError = new Error(
         "No candles for " + alias + " on " + exchangeKey
       );
-    } catch (e) {
-      lastError = e;
+    } catch (error) {
+      lastError = error;
     }
   }
 
@@ -802,94 +993,111 @@ export async function getKlines(
   limit = CONFIG.KLINE_LIMIT
 ) {
   const normalizedSymbol = normalizeSymbol(symbol);
-  const cacheKey = normalizedSymbol + ":" + interval + ":" + limit;
 
-  const cached = klineCache[cacheKey];
+  const safeLimit = Number.isFinite(limit)
+    ? Math.max(1, Math.floor(limit))
+    : CONFIG.KLINE_LIMIT;
 
-  if (
-    cached &&
-    Date.now() - cached.time < CACHE_TTL.KLINES * 1000
-  ) {
-    return cached.candles;
-  }
+  const cacheKey =
+    normalizedSymbol + ":" + interval + ":" + safeLimit;
 
-  const exchanges = getExchangeOrder();
-  const minimumCandles = Math.max(1, CONFIG.MIN_CANDLES || 100);
-
-  let lastError = null;
-
-  for (const exchangeKey of exchanges) {
-    try {
-      const exchangeLimit = getExchangeLimit(exchangeKey, limit);
-
-      const candles = await getKlinesFromExchange(
-        exchangeKey,
-        normalizedSymbol,
-        interval,
-        exchangeLimit
-      );
-
-      if (!Array.isArray(candles)) {
-        throw new Error("Invalid candles response");
-      }
-
-      const closedCandles = candles.filter(
-        (candle) => !candle.incomplete
-      );
-
-      if (closedCandles.length < minimumCandles) {
-        throw new Error(
-          "Not enough closed candles (" +
-          closedCandles.length +
-          "/" +
-          minimumCandles +
-          ")"
-        );
-      }
-
-      klineCache[cacheKey] = {
-        time: Date.now(),
-        candles
-      };
-
-      return candles;
-    } catch (e) {
-      lastError = e;
-    }
-  }
-
-  throw new Error(
-    "هیچ صرافی داده معتبر و کافی برای " +
-    normalizedSymbol +
-    " برنگرداند" +
-    (lastError?.message ? ": " + lastError.message : "")
+  const cached = getCache(
+    klineCache,
+    cacheKey,
+    CACHE_TTL.KLINES
   );
+
+  if (cached) return cached;
+
+  return deduplicateRequest("klines:" + cacheKey, async () => {
+    const exchanges = getExchangeOrder();
+
+    const minimumCandles = Math.max(
+      1,
+      CONFIG.MIN_CANDLES || 100
+    );
+
+    let lastError = null;
+
+    for (const exchangeKey of exchanges) {
+      try {
+        const exchangeLimit = getExchangeLimit(
+          exchangeKey,
+          safeLimit
+        );
+
+        const candles = await getKlinesFromExchange(
+          exchangeKey,
+          normalizedSymbol,
+          interval,
+          exchangeLimit
+        );
+
+        if (!Array.isArray(candles)) {
+          throw new Error("Invalid candles response");
+        }
+
+        const closedCandles = candles.filter(
+          (candle) => !candle.incomplete
+        );
+
+        if (closedCandles.length < minimumCandles) {
+          throw new Error(
+            "Not enough closed candles (" +
+            closedCandles.length +
+            "/" +
+            minimumCandles +
+            ")"
+          );
+        }
+
+        setCache(klineCache, cacheKey, candles);
+
+        return candles;
+      } catch (error) {
+        lastError = error;
+      }
+    }
+
+    throw new Error(
+      "هیچ صرافی داده معتبر و کافی برای " +
+      normalizedSymbol +
+      " برنگرداند" +
+      (lastError?.message ? ": " + lastError.message : "")
+    );
+  });
 }
 
 export async function getMarketSnapshot(symbol, timeframe) {
   const normalizedSymbol = normalizeSymbol(symbol);
-  const snapshotKey = normalizedSymbol + ":" + timeframe;
 
-  const cached = snapshotCache[snapshotKey];
+  const snapshotKey =
+    normalizedSymbol + ":" + timeframe;
 
-  if (
-    cached &&
-    Date.now() - cached.time < CACHE_TTL.SNAPSHOT * 1000
-  ) {
-    return cached.snapshot;
-  }
+  const cached = getCache(
+    snapshotCache,
+    snapshotKey,
+    CACHE_TTL.SNAPSHOT
+  );
 
-  const current = await getKlines(normalizedSymbol, timeframe);
+  if (cached) return cached;
 
-  const snapshot = {
-    current,
-    timeframe
-  };
+  return deduplicateRequest(
+    "snapshot:" + snapshotKey,
+    async () => {
+      const current = await getKlines(
+        normalizedSymbol,
+        timeframe
+      );
 
-  snapshotCache[snapshotKey] = {
-    time: Date.now(),
-    snapshot
-  };
+      const snapshot = {
+        current,
+        timeframe
+      };
 
-  return snapshot;
+      setCache(snapshotCache, snapshotKey, snapshot);
+
+      return snapshot;
+    }
+  );
 }

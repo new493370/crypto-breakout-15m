@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-12T15:53:16.233Z",
+  "lastUpdated": "2026-11-12T15:58:28.575Z",
   "allTime": {
     "total": 5,
-    "tp1Hit": 2,
+    "tp1Hit": 3,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 1,
-    "active": 2,
-    "tp1Rate": 66.7,
+    "active": 1,
+    "tp1Rate": 75,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33.3
+    "stopRate": 25
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 5,
-      "tp1Hit": 2,
+      "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 1,
-      "tp1Rate": 66.7
+      "tp1Rate": 75
     },
     "bearish": {
       "total": 0,
@@ -110,13 +110,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-12T15:43:24.849Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:51:08.917Z",
+      "statusUpdatedAt": "2026-11-12T15:56:17.136Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.031869999999999996
     },
     {
       "symbol": "CFXUSDT",
@@ -137,7 +138,7 @@
       "sentAt": "2026-11-12T15:43:26.498Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:51:08.917Z",
+      "statusUpdatedAt": "2026-11-12T15:56:17.137Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

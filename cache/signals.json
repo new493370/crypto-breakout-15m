@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T15:08:18.481Z",
+  "lastUpdated": "2026-11-12T15:13:26.245Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T14:44:04.469Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.15335,
       "stop": 0.15293
+    },
+    "SYRUPUSDT:5m": {
+      "sentAt": "2026-11-12T15:13:24.744Z",
+      "symbol": "SYRUPUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.12630000000000002,
+      "stop": 0.12582000000000002
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-12T16:13:29.513Z",
+  "lastUpdated": "2026-11-12T16:18:11.185Z",
   "allTime": {
     "total": 7,
-    "tp1Hit": 5,
+    "tp1Hit": 6,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 1,
-    "active": 1,
-    "tp1Rate": 83.3,
+    "active": 0,
+    "tp1Rate": 85.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 16.7
+    "stopRate": 14.3
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 7,
-      "tp1Hit": 5,
+      "tp1Hit": 6,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 1,
-      "tp1Rate": 83.3
+      "tp1Rate": 85.7
     },
     "bearish": {
       "total": 0,
@@ -214,13 +214,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-12T16:13:28.010Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T16:13:28.010Z",
+      "statusUpdatedAt": "2026-11-12T16:16:13.969Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.0959
     }
   ],
   "processedSignals": {

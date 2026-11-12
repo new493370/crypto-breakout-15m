@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T18:03:02.768Z",
+  "lastUpdated": "2026-11-12T18:08:20.346Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T15:43:21.548Z",
@@ -99,6 +99,15 @@
       "score": null,
       "entry": 138.21,
       "stop": 138.69000000000003
+    },
+    "ETHUSDT:5m": {
+      "sentAt": "2026-11-12T18:08:18.845Z",
+      "symbol": "ETHUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 2011.82,
+      "stop": 2008.184
     }
   }
 }

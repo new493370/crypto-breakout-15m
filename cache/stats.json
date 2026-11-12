@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T18:03:02.769Z",
+  "lastUpdated": "2026-11-12T18:08:20.347Z",
   "allTime": {
-    "total": 11,
+    "total": 12,
     "tp1Hit": 6,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 66.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 10,
+      "total": 11,
       "tp1Hit": 6,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T18:01:08.740Z",
+      "statusUpdatedAt": "2026-11-12T18:06:08.464Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -319,7 +319,32 @@
       "sentAt": "2026-11-12T17:03:19.071Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T18:01:08.740Z",
+      "statusUpdatedAt": "2026-11-12T18:06:08.464Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 2011.82,
+      "stop": 2008.184,
+      "tp1": 2026.9699999999998,
+      "zoneLow": 2008.79,
+      "zoneHigh": 2014.85,
+      "signalCandleTime": 1794506400000,
+      "rr1": 4.166666666666667,
+      "highs": [
+        2027.7,
+        2014.88
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T18:08:18.845Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T18:08:18.845Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -403,6 +428,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-12T17:03:19.071Z"
+    },
+    "ETHUSDT:5m:2026-11-12T18:08:18.845Z": {
+      "symbol": "ETHUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T18:08:18.845Z"
     }
   }
 }

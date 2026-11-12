@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T21:28:23.228Z",
+  "lastUpdated": "2026-11-12T21:33:09.815Z",
   "allTime": {
-    "total": 20,
+    "total": 21,
     "tp1Hit": 14,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 4,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 77.8,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 16,
+      "total": 17,
       "tp1Hit": 11,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T21:26:09.188Z",
+      "statusUpdatedAt": "2026-11-12T21:31:09.721Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -319,7 +319,7 @@
       "sentAt": "2026-11-12T17:03:19.071Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T21:26:09.188Z",
+      "statusUpdatedAt": "2026-11-12T21:31:09.721Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -558,6 +558,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 690.01
+    },
+    {
+      "symbol": "PLTRSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 171.76999999999998,
+      "stop": 171.23728888362973,
+      "tp1": 172.47,
+      "zoneLow": 171.63,
+      "zoneHigh": 171.91,
+      "signalCandleTime": 1794518700000,
+      "rr1": 1.3140330255723345,
+      "highs": [
+        172.75,
+        172.05
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T21:33:08.313Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T21:33:08.313Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -700,6 +725,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T21:03:17.253Z"
+    },
+    "PLTRSTOCKUSDT:5m:2026-11-12T21:33:08.313Z": {
+      "symbol": "PLTRSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T21:33:08.313Z"
     }
   }
 }

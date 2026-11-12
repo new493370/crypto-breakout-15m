@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T09:18:47.003Z",
+  "lastUpdated": "2026-11-12T09:22:58.257Z",
   "signals": {
     "EIGENUSDT:5m": {
       "sentAt": "2026-11-12T03:50:40.820Z",
@@ -333,6 +333,15 @@
       "score": null,
       "entry": 0.09062,
       "stop": 0.09096
+    },
+    "LUNAUSDT:5m": {
+      "sentAt": "2026-11-12T09:22:56.756Z",
+      "symbol": "LUNAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.03581,
+      "stop": 0.03576
     }
   }
 }

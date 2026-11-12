@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T23:18:02.542Z",
+  "lastUpdated": "2026-11-12T23:23:12.540Z",
   "signals": {
     "ETHUSDT:5m": {
       "sentAt": "2026-11-12T18:08:18.845Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.74745,
       "stop": 0.7509769880008799
+    },
+    "MERLUSDT:5m": {
+      "sentAt": "2026-11-12T23:23:09.269Z",
+      "symbol": "MERLUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.029695,
+      "stop": 0.029926471423801247
     }
   }
 }

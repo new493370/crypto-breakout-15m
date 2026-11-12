@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T12:07:16.902Z",
+  "lastUpdated": "2026-11-12T13:18:36.133Z",
   "signals": {
     "PEPEUSDT:5m": {
       "sentAt": "2026-11-12T11:11:11.486Z",
@@ -1233,6 +1233,141 @@
       "score": null,
       "entry": 0.17095,
       "stop": 0.17149
+    },
+    "HMSTRUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:10.168Z",
+      "symbol": "HMSTRUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0001347,
+      "stop": 0.00013494
+    },
+    "DOODUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:11.886Z",
+      "symbol": "DOODUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0015275,
+      "stop": 0.0015245
+    },
+    "SILVERUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:13.605Z",
+      "symbol": "SILVERUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 51.065,
+      "stop": 51.323
+    },
+    "XLMUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:15.375Z",
+      "symbol": "XLMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.145005,
+      "stop": 0.144867
+    },
+    "MAGICUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:17.106Z",
+      "symbol": "MAGICUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.080675,
+      "stop": 0.080957
+    },
+    "INTCSTOCKUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:18.908Z",
+      "symbol": "INTCSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 61.14,
+      "stop": 60.815999999999995
+    },
+    "GRTUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:20.662Z",
+      "symbol": "GRTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.016905,
+      "stop": 0.016887
+    },
+    "ZBTUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:22.450Z",
+      "symbol": "ZBTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.055815000000000003,
+      "stop": 0.055893
+    },
+    "PIEVERSEUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:24.175Z",
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.6414499999999999,
+      "stop": 1.6373099999999998
+    },
+    "ORDERUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:25.898Z",
+      "symbol": "ORDERUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.030135,
+      "stop": 0.029973
+    },
+    "TESLAUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:27.638Z",
+      "symbol": "TESLAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 388.53999999999996,
+      "stop": 389.308
+    },
+    "IOTAUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:29.359Z",
+      "symbol": "IOTAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.033475000000000005,
+      "stop": 0.033553
+    },
+    "ACUUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:31.081Z",
+      "symbol": "ACUUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.12293,
+      "stop": 0.12280999999999999
+    },
+    "LIGHTUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:32.903Z",
+      "symbol": "LIGHTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.23635,
+      "stop": 0.23569
+    },
+    "ZECUSDT:5m": {
+      "sentAt": "2026-11-12T13:18:34.632Z",
+      "symbol": "ZECUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 971.47,
+      "stop": 968.866
     }
   }
 }

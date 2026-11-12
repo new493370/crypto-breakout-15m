@@ -1,3 +1,4 @@
+
 export const CONFIG = {
   OKX_BASE_URL: "https://www.okx.com",
   BINANCE_FUTURES_URL: "https://fapi1.binance.com",
@@ -24,29 +25,60 @@ export const CONFIG = {
   KLINE_CACHE_SECONDS: 15,
 
   EXCHANGES: {
-    binance: { priority: 1, enabled: true, maxCandles: 1000, marketType: "futures" },
-    okx: { priority: 2, enabled: true, maxCandles: 300, marketType: "swap" },
-    mexc: { priority: 3, enabled: true, maxCandles: 1000, marketType: "swap" }
+    binance: {
+      priority: 1,
+      enabled: true,
+      maxCandles: 1000,
+      marketType: "futures"
+    },
+    okx: {
+      priority: 2,
+      enabled: true,
+      maxCandles: 300,
+      marketType: "swap"
+    },
+    mexc: {
+      priority: 3,
+      enabled: true,
+      maxCandles: 1000,
+      marketType: "swap"
+    }
   },
 
   SYMBOL_ALIASES: {
-    "SHIBUSDT": ["1000SHIBUSDT", "SHIB1000USDT"],
-    "PEPEUSDT": ["1000PEPEUSDT", "PEPE1000USDT"],
-    "FLOKIUSDT": ["1000FLOKIUSDT", "FLOKI1000USDT"],
-    "BONKUSDT": ["1000BONKUSDT", "BONK1000USDT"],
-    "LUNCUSDT": ["1000LUNCUSDT", "LUNC1000USDT"],
-    "XECUSDT": ["1000XECUSDT", "XEC1000USDT"],
-    "SATSUSDT": ["1000SATSUSDT", "SATS1000USDT"],
-    "RATSUSDT": ["1000RATSUSDT", "RATS1000USDT"],
-    "MOGUSDT": ["1000MOGUSDT", "MOG1000USDT"],
-    "CATUSDT": ["1000CATUSDT", "CAT1000USDT"]
+    SHIBUSDT: ["1000SHIBUSDT", "SHIB1000USDT"],
+    PEPEUSDT: ["1000PEPEUSDT", "PEPE1000USDT"],
+    FLOKIUSDT: ["1000FLOKIUSDT", "FLOKI1000USDT"],
+    BONKUSDT: ["1000BONKUSDT", "BONK1000USDT"],
+    LUNCUSDT: ["1000LUNCUSDT", "LUNC1000USDT"],
+    XECUSDT: ["1000XECUSDT", "XEC1000USDT"],
+    SATSUSDT: ["1000SATSUSDT", "SATS1000USDT"],
+    RATSUSDT: ["1000RATSUSDT", "RATS1000USDT"],
+    MOGUSDT: ["1000MOGUSDT", "MOG1000USDT"],
+    CATUSDT: ["1000CATUSDT", "CAT1000USDT"]
   },
 
   EXCLUDED_BASE_ASSETS: [
-    "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI",
-    "USDE", "USDS", "EUR", "TRY", "BRL", "GBP",
-    "AUD", "JPY", "RUB", "UAH", "PLN", "ARS",
-    "MXN", "ZAR"
+    "USDT",
+    "USDC",
+    "FDUSD",
+    "TUSD",
+    "BUSD",
+    "DAI",
+    "USDE",
+    "USDS",
+    "EUR",
+    "TRY",
+    "BRL",
+    "GBP",
+    "AUD",
+    "JPY",
+    "RUB",
+    "UAH",
+    "PLN",
+    "ARS",
+    "MXN",
+    "ZAR"
   ],
 
   TIMEFRAMES: {

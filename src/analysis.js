@@ -7,7 +7,8 @@ import {
   isValidStructure,
   calculateTrendline,
   detectBreakout,
-  detectFirstPullback
+  detectFirstPullback,
+  calculateATR
 } from "./indicators.js";
 
 function getPriceDecimals(price) {
@@ -121,7 +122,24 @@ function selectStructure(latest, result) {
   };
 }
 
-function calculateTradeLevels(breakout, direction) {
+function calculateStopLoss(zoneLow, zoneHigh, direction, candles) {
+  const atr = calculateATR(candles, 14);
+  const multiplier = CONFIG.STOP_ATR_MULTIPLIER;
+
+  const stopBuffer =
+    Number.isFinite(atr) &&
+    atr > 0 &&
+    Number.isFinite(multiplier) &&
+    multiplier >= 0
+      ? atr * multiplier
+      : 0;
+
+  return direction === "bullish"
+    ? zoneLow - stopBuffer
+    : zoneHigh + stopBuffer;
+}
+
+function calculateTradeLevels(breakout, direction, candles) {
   const zoneLow = breakout.zoneLow;
   const zoneHigh = breakout.zoneHigh;
   const zoneWidth = zoneHigh - zoneLow;
@@ -138,15 +156,12 @@ function calculateTradeLevels(breakout, direction) {
   const isBullish = direction === "bullish";
   const entry = (zoneHigh + zoneLow) / 2;
 
-  const stopLoss = isBullish
-    ? breakout.candle.low - zoneWidth * 0.1
-    : breakout.candle.high + zoneWidth * 0.1;
-
-  const risk = Math.abs(entry - stopLoss);
-
-  if (!Number.isFinite(risk) || risk <= 0) {
-    return null;
-  }
+  const stopLoss = calculateStopLoss(
+    zoneLow,
+    zoneHigh,
+    direction,
+    candles
+  );
 
   const multiplier = CONFIG.TARGET_ZONE_MULTIPLIER;
 
@@ -160,16 +175,18 @@ function calculateTradeLevels(breakout, direction) {
     ? zoneHigh + targetDistance
     : zoneLow - targetDistance;
 
+  const risk = Math.abs(entry - stopLoss);
   const reward = Math.abs(takeProfit - entry);
-  const rr = reward / risk;
 
-  if (
-    !Number.isFinite(takeProfit) ||
-    !Number.isFinite(reward) ||
-    reward <= 0 ||
-    !Number.isFinite(rr) ||
-    rr <= 0
-  ) {
+  const rr =
+    Number.isFinite(risk) &&
+    risk > 0 &&
+    Number.isFinite(reward) &&
+    reward > 0
+      ? reward / risk
+      : 0;
+
+  if (!Number.isFinite(takeProfit)) {
     return null;
   }
 
@@ -279,12 +296,13 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
 
     const levels = calculateTradeLevels(
       breakout,
-      tradeDirection
+      tradeDirection,
+      candles
     );
 
     if (!levels) {
       result.reasons.push(
-        "محاسبه سطوح ورود، حد ضرر یا تارگت معتبر نیست"
+        "محاسبه محدوده ورود یا تارگت معتبر نیست"
       );
       return result;
     }

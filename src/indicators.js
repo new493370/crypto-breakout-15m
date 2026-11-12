@@ -198,7 +198,7 @@ export function detectFirstPullback(candles, direction, startIndex, maxBars, zon
     if (direction === "bullish") {
       const isBullishCandle = cClose(candle) > cOpen(candle);
       const isPrevBearish = cClose(previous) < cOpen(previous);
-      const isEngulfing = isBullishCandle && isPrevBearish && bodyTop >= prevBodyTop && bodyBottom <= prevBodyBottom;
+      const isEngulfing = isBullishCandle && isPrevBearish && bodyTop > prevBodyTop && bodyBottom < prevBodyTop;
 
       if (isEngulfing) {
         return {
@@ -210,7 +210,7 @@ export function detectFirstPullback(candles, direction, startIndex, maxBars, zon
     } else if (direction === "bearish") {
       const isBearishCandle = cClose(candle) < cOpen(candle);
       const isPrevBullish = cClose(previous) > cOpen(previous);
-      const isEngulfing = isBearishCandle && isPrevBullish && bodyTop >= prevBodyTop && bodyBottom <= prevBodyBottom;
+      const isEngulfing = isBearishCandle && isPrevBullish && bodyBottom < prevBodyBottom && bodyTop > prevBodyBottom;
 
       if (isEngulfing) {
         return {

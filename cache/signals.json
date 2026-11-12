@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T11:57:07.627Z",
+  "lastUpdated": "2026-11-12T12:02:00.293Z",
   "signals": {
     "PEPEUSDT:5m": {
       "sentAt": "2026-11-12T11:11:11.486Z",
@@ -1170,6 +1170,15 @@
       "score": null,
       "entry": 556.73,
       "stop": 559.238
+    },
+    "AXTISTOCKUSDT:5m": {
+      "sentAt": "2026-11-12T12:01:58.791Z",
+      "symbol": "AXTISTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 44.695,
+      "stop": 44.617000000000004
     }
   }
 }

@@ -28,7 +28,7 @@
       "sentAt": "2026-11-12T03:50:40.820Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T04:40:38.351Z",
+      "statusUpdatedAt": "2026-11-12T04:45:37.235Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -65,5 +65,5 @@
       "tp1Rate": 0
     }
   },
-  "lastUpdated": "2026-11-12T04:42:36.086Z"
+  "lastUpdated": "2026-11-12T04:47:52.464Z"
 }

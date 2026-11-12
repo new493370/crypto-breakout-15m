@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T15:18:22.716Z",
+  "lastUpdated": "2026-11-12T15:23:13.584Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T14:44:04.469Z",
@@ -81,6 +81,15 @@
       "score": null,
       "entry": 0.12630000000000002,
       "stop": 0.12582000000000002
+    },
+    "PNUTUSDT:5m": {
+      "sentAt": "2026-11-12T15:23:12.082Z",
+      "symbol": "PNUTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.031595,
+      "stop": 0.031529
     }
   }
 }

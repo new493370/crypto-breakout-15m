@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T15:23:13.584Z",
+  "lastUpdated": "2026-11-12T15:28:20.693Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T14:44:04.469Z",
@@ -90,6 +90,15 @@
       "score": null,
       "entry": 0.031595,
       "stop": 0.031529
+    },
+    "ATHUSDT:5m": {
+      "sentAt": "2026-11-12T15:28:19.191Z",
+      "symbol": "ATHUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0043155,
+      "stop": 0.0043269
     }
   }
 }

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T15:23:13.585Z",
+  "lastUpdated": "2026-11-12T15:28:20.694Z",
   "allTime": {
-    "total": 10,
+    "total": 11,
     "tp1Hit": 2,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 3,
-    "active": 5,
+    "active": 6,
     "tp1Rate": 40,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 40
     },
     "bearish": {
-      "total": 0,
+      "total": 1,
       "tp1Hit": 0,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -112,7 +112,7 @@
       "sentAt": "2026-11-12T14:53:09.150Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:21:11.543Z",
+      "statusUpdatedAt": "2026-11-12T15:26:10.778Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -189,7 +189,7 @@
       "sentAt": "2026-11-12T14:58:17.380Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:21:11.543Z",
+      "statusUpdatedAt": "2026-11-12T15:26:10.779Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -214,7 +214,7 @@
       "sentAt": "2026-11-12T15:03:08.384Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:21:11.543Z",
+      "statusUpdatedAt": "2026-11-12T15:26:10.779Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -265,7 +265,7 @@
       "sentAt": "2026-11-12T15:13:24.744Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:21:15.215Z",
+      "statusUpdatedAt": "2026-11-12T15:26:10.779Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -290,7 +290,32 @@
       "sentAt": "2026-11-12T15:23:12.082Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T15:23:12.082Z",
+      "statusUpdatedAt": "2026-11-12T15:26:10.779Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ATHUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0043155,
+      "stop": 0.0043269,
+      "tp1": 0.004268,
+      "zoneLow": 0.004306,
+      "zoneHigh": 0.004325,
+      "signalCandleTime": 1794496800000,
+      "rr1": 4.166666666666667,
+      "highs": null,
+      "lows": [
+        0.004253,
+        0.004294
+      ],
+      "sentAt": "2026-11-12T15:28:19.191Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T15:28:19.191Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -367,6 +392,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T15:23:12.082Z"
+    },
+    "ATHUSDT:5m:2026-11-12T15:28:19.191Z": {
+      "symbol": "ATHUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-12T15:28:19.191Z"
     }
   }
 }

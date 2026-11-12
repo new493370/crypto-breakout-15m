@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T22:13:06.761Z",
+  "lastUpdated": "2026-11-12T22:18:18.231Z",
   "allTime": {
-    "total": 22,
+    "total": 25,
     "tp1Hit": 14,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 5,
-    "active": 3,
+    "active": 6,
     "tp1Rate": 73.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 73.3
     },
     "bearish": {
-      "total": 4,
+      "total": 7,
       "tp1Hit": 3,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T22:11:10.441Z",
+      "statusUpdatedAt": "2026-11-12T22:16:09.529Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -579,7 +579,7 @@
       "sentAt": "2026-11-12T21:33:08.313Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T22:11:10.441Z",
+      "statusUpdatedAt": "2026-11-12T22:16:09.529Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -604,7 +604,82 @@
       "sentAt": "2026-11-12T22:03:08.371Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T22:11:10.441Z",
+      "statusUpdatedAt": "2026-11-12T22:16:09.529Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 1.0382,
+      "stop": 1.0434212345018221,
+      "tp1": 1.0321999999999996,
+      "zoneLow": 1.037,
+      "zoneHigh": 1.0394,
+      "signalCandleTime": 1794521400000,
+      "rr1": 1.149153518752428,
+      "highs": null,
+      "lows": [
+        1.0297,
+        1.034
+      ],
+      "sentAt": "2026-11-12T22:18:05.952Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T22:18:05.952Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 1.112,
+      "stop": 1.1195861746436306,
+      "tp1": 1.102,
+      "zoneLow": 1.11,
+      "zoneHigh": 1.114,
+      "signalCandleTime": 1794521400000,
+      "rr1": 1.3181874224838934,
+      "highs": null,
+      "lows": [
+        1.094,
+        1.102
+      ],
+      "sentAt": "2026-11-12T22:18:09.293Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T22:18:09.293Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "GLMUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.101795,
+      "stop": 0.10213462899309131,
+      "tp1": 0.10142000000000001,
+      "zoneLow": 0.10172,
+      "zoneHigh": 0.10187,
+      "signalCandleTime": 1794521400000,
+      "rr1": 1.1041460170603414,
+      "highs": null,
+      "lows": [
+        0.1012,
+        0.10155
+      ],
+      "sentAt": "2026-11-12T22:18:14.715Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T22:18:14.715Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -765,6 +840,27 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T22:03:08.371Z"
+    },
+    "XRPUSDT:5m:2026-11-12T22:18:05.952Z": {
+      "symbol": "XRPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-12T22:18:05.952Z"
+    },
+    "TRUMPUSDT:5m:2026-11-12T22:18:09.293Z": {
+      "symbol": "TRUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-12T22:18:09.293Z"
+    },
+    "GLMUSDT:5m:2026-11-12T22:18:14.715Z": {
+      "symbol": "GLMUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-12T22:18:14.715Z"
     }
   }
 }

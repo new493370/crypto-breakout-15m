@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-12T22:13:06.759Z",
+  "lastUpdated": "2026-11-12T22:18:18.229Z",
   "signals": {
-    "DATAUSDT:5m": {
-      "sentAt": "2026-11-12T16:13:28.011Z",
-      "symbol": "DATAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.09465,
-      "stop": 0.09435
-    },
     "PONSUSDT:5m": {
       "sentAt": "2026-11-12T16:23:05.703Z",
       "symbol": "PONSUSDT",
@@ -144,6 +135,33 @@
       "score": null,
       "entry": 0.001478,
       "stop": 0.0014692263552784986
+    },
+    "XRPUSDT:5m": {
+      "sentAt": "2026-11-12T22:18:05.952Z",
+      "symbol": "XRPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.0382,
+      "stop": 1.0434212345018221
+    },
+    "TRUMPUSDT:5m": {
+      "sentAt": "2026-11-12T22:18:09.293Z",
+      "symbol": "TRUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.112,
+      "stop": 1.1195861746436306
+    },
+    "GLMUSDT:5m": {
+      "sentAt": "2026-11-12T22:18:14.715Z",
+      "symbol": "GLMUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.101795,
+      "stop": 0.10213462899309131
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T11:47:26.678Z",
+  "lastUpdated": "2026-11-12T11:52:11.817Z",
   "signals": {
     "PEPEUSDT:5m": {
       "sentAt": "2026-11-12T11:11:11.486Z",
@@ -1116,6 +1116,42 @@
       "score": null,
       "entry": 629.085,
       "stop": 630.027
+    },
+    "RLSUSDT:5m": {
+      "sentAt": "2026-11-12T11:52:05.206Z",
+      "symbol": "RLSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.001758,
+      "stop": 0.0017724000000000001
+    },
+    "DGAIUSDT:5m": {
+      "sentAt": "2026-11-12T11:52:06.874Z",
+      "symbol": "DGAIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.7318,
+      "stop": 0.73288
+    },
+    "ESPUSDT:5m": {
+      "sentAt": "2026-11-12T11:52:08.661Z",
+      "symbol": "ESPUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.07701,
+      "stop": 0.076866
+    },
+    "AVAXUSDT:5m": {
+      "sentAt": "2026-11-12T11:52:10.315Z",
+      "symbol": "AVAXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 8.452,
+      "stop": 8.430399999999999
     }
   }
 }

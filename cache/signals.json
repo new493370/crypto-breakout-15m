@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T14:48:11.130Z",
+  "lastUpdated": "2026-11-12T14:53:14.069Z",
   "signals": {
     "USOILUSDT:5m": {
       "sentAt": "2026-11-12T14:44:04.469Z",
@@ -9,6 +9,42 @@
       "score": null,
       "entry": 84.97,
       "stop": 84.92200000000001
+    },
+    "PIPPINUSDT:5m": {
+      "sentAt": "2026-11-12T14:53:07.419Z",
+      "symbol": "PIPPINUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.01171,
+      "stop": 0.011673999999999999
+    },
+    "CFXUSDT:5m": {
+      "sentAt": "2026-11-12T14:53:09.150Z",
+      "symbol": "CFXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.039330000000000004,
+      "stop": 0.039186
+    },
+    "OPNUSDT:5m": {
+      "sentAt": "2026-11-12T14:53:10.859Z",
+      "symbol": "OPNUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.033315,
+      "stop": 0.033177
+    },
+    "FLOCKUSDT:5m": {
+      "sentAt": "2026-11-12T14:53:12.567Z",
+      "symbol": "FLOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.03666,
+      "stop": 0.036492
     }
   }
 }

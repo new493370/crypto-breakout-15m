@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-12T14:48:11.131Z",
+  "lastUpdated": "2026-11-12T14:53:14.070Z",
   "allTime": {
-    "total": 1,
+    "total": 5,
     "tp1Hit": 1,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 0,
-    "active": 0,
+    "active": 4,
     "tp1Rate": 100,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 1,
+      "total": 5,
       "tp1Hit": 1,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -66,6 +66,106 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 85.17
+    },
+    {
+      "symbol": "PIPPINUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.01171,
+      "stop": 0.011673999999999999,
+      "tp1": 0.011860000000000002,
+      "zoneLow": 0.01168,
+      "zoneHigh": 0.01174,
+      "signalCandleTime": 1794494700000,
+      "rr1": 4.166666666666586,
+      "highs": [
+        0.01192,
+        0.01184
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T14:53:07.419Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T14:53:07.419Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "CFXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.039330000000000004,
+      "stop": 0.039186,
+      "tp1": 0.03992999999999999,
+      "zoneLow": 0.03921,
+      "zoneHigh": 0.03945,
+      "signalCandleTime": 1794494700000,
+      "rr1": 4.166666666666441,
+      "highs": [
+        0.03991,
+        0.03969
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T14:53:09.150Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T14:53:09.150Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "OPNUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.033315,
+      "stop": 0.033177,
+      "tp1": 0.03389,
+      "zoneLow": 0.0332,
+      "zoneHigh": 0.03343,
+      "signalCandleTime": 1794494700000,
+      "rr1": 4.166666666666734,
+      "highs": [
+        0.03437,
+        0.03382
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T14:53:10.859Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T14:53:10.859Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "FLOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.03666,
+      "stop": 0.036492,
+      "tp1": 0.037360000000000004,
+      "zoneLow": 0.03652,
+      "zoneHigh": 0.0368,
+      "signalCandleTime": 1794494700000,
+      "rr1": 4.166666666666667,
+      "highs": [
+        0.03727,
+        0.03685
+      ],
+      "lows": null,
+      "sentAt": "2026-11-12T14:53:12.567Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-12T14:53:12.567Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -75,6 +175,34 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-12T14:44:04.468Z"
+    },
+    "PIPPINUSDT:5m:2026-11-12T14:53:07.419Z": {
+      "symbol": "PIPPINUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T14:53:07.419Z"
+    },
+    "CFXUSDT:5m:2026-11-12T14:53:09.150Z": {
+      "symbol": "CFXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T14:53:09.150Z"
+    },
+    "OPNUSDT:5m:2026-11-12T14:53:10.859Z": {
+      "symbol": "OPNUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T14:53:10.859Z"
+    },
+    "FLOCKUSDT:5m:2026-11-12T14:53:12.567Z": {
+      "symbol": "FLOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-12T14:53:12.567Z"
     }
   }
 }

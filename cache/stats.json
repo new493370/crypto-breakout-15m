@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-12T23:08:25.281Z",
+  "lastUpdated": "2026-11-12T23:13:23.479Z",
   "allTime": {
     "total": 26,
-    "tp1Hit": 14,
+    "tp1Hit": 15,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 5,
-    "active": 7,
-    "tp1Rate": 73.7,
+    "active": 6,
+    "tp1Rate": 75,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 26.3
+    "stopRate": 25
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 8,
-      "tp1Hit": 3,
+      "tp1Hit": 4,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 1,
-      "tp1Rate": 75
+      "tp1Rate": 80
     }
   },
   "recentSignals": [
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:06:13.408Z",
+      "statusUpdatedAt": "2026-11-12T23:11:12.331Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -579,7 +579,7 @@
       "sentAt": "2026-11-12T21:33:08.313Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:06:13.408Z",
+      "statusUpdatedAt": "2026-11-12T23:11:12.331Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -604,7 +604,7 @@
       "sentAt": "2026-11-12T22:03:08.371Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:06:13.408Z",
+      "statusUpdatedAt": "2026-11-12T23:11:12.331Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -629,7 +629,7 @@
       "sentAt": "2026-11-12T22:18:05.952Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:06:13.408Z",
+      "statusUpdatedAt": "2026-11-12T23:11:12.331Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -654,7 +654,7 @@
       "sentAt": "2026-11-12T22:18:09.293Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:06:13.408Z",
+      "statusUpdatedAt": "2026-11-12T23:11:12.331Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -679,7 +679,7 @@
       "sentAt": "2026-11-12T22:18:14.715Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:06:13.408Z",
+      "statusUpdatedAt": "2026-11-12T23:11:12.331Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -702,13 +702,14 @@
         0.7419
       ],
       "sentAt": "2026-11-12T22:33:26.385Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:06:13.408Z",
+      "statusUpdatedAt": "2026-11-12T23:11:15.920Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.7437000000000001
     }
   ],
   "processedSignals": {

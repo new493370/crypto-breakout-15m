@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-12T16:33:22.959Z",
+  "lastUpdated": "2026-11-12T16:38:21.948Z",
   "allTime": {
     "total": 9,
     "tp1Hit": 6,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 2,
-    "active": 1,
-    "tp1Rate": 75,
+    "stopped": 3,
+    "active": 0,
+    "tp1Rate": 66.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 25
+    "stopRate": 33.3
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 6,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 2,
-      "tp1Rate": 75
+      "stopped": 3,
+      "tp1Rate": 66.7
     },
     "bearish": {
       "total": 0,
@@ -240,13 +240,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-12T16:23:05.703Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-12T16:31:08.935Z",
+      "statusUpdatedAt": "2026-11-12T16:36:11.218Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.14559000000000002
     },
     {
       "symbol": "ORDERUSDT",

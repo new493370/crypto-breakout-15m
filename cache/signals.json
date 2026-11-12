@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T09:29:28.512Z",
+  "lastUpdated": "2026-11-12T09:33:31.899Z",
   "signals": {
     "EIGENUSDT:5m": {
       "sentAt": "2026-11-12T03:50:40.820Z",
@@ -693,6 +693,33 @@
       "score": null,
       "entry": 941.55,
       "stop": 945.8
+    },
+    "PLUMEUSDT:5m": {
+      "sentAt": "2026-11-12T09:33:26.989Z",
+      "symbol": "PLUMEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.012954,
+      "stop": 0.012938
+    },
+    "PONSUSDT:5m": {
+      "sentAt": "2026-11-12T09:33:28.670Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1483,
+      "stop": 0.1489
+    },
+    "ROBOUSDT:5m": {
+      "sentAt": "2026-11-12T09:33:30.397Z",
+      "symbol": "ROBOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0042725,
+      "stop": 0.004279000000000001
     }
   }
 }

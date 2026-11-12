@@ -146,15 +146,11 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
     const isBullish = tradeDirection === "bullish";
     const entry = (zoneHigh + zoneLow) / 2;
 
-    const priceDecimals = getPriceDecimals(result.current_price);
-    const tickSize = 10 ** -priceDecimals;
-    const pipOffset = CONFIG.STOP_PIPS_OFFSET * tickSize;
-
     let stopLoss;
     if (isBullish) {
-      stopLoss = zoneLow - pipOffset;
+      stopLoss = breakout.candle.low - (zoneWidth * 0.1);
     } else {
-      stopLoss = zoneHigh + pipOffset;
+      stopLoss = breakout.candle.high + (zoneWidth * 0.1);
     }
 
     const risk = Math.abs(entry - stopLoss);

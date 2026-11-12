@@ -183,42 +183,16 @@ export function detectFirstPullback(candles, direction, startIndex, maxBars, zon
 
   for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
-    const previous = candles[i - 1];
-
-    if (!candle || candle.incomplete || !previous || previous.incomplete) continue;
+    if (!candle || candle.incomplete) continue;
 
     const touchedZone = cLow(candle) <= zoneHigh && cHigh(candle) >= zoneLow;
-    if (!touchedZone) continue;
-
-    const bodyTop = Math.max(cOpen(candle), cClose(candle));
-    const bodyBottom = Math.min(cOpen(candle), cClose(candle));
-    const prevBodyTop = Math.max(cOpen(previous), cClose(previous));
-    const prevBodyBottom = Math.min(cOpen(previous), cClose(previous));
-
-    if (direction === "bullish") {
-      const isBullishCandle = cClose(candle) > cOpen(candle);
-      const isPrevBearish = cClose(previous) < cOpen(previous);
-      const isEngulfing = isBullishCandle && isPrevBearish && bodyTop > prevBodyTop && bodyBottom < prevBodyTop;
-
-      if (isEngulfing) {
-        return {
-          index: i,
-          candle,
-          entryPrice: (zoneHigh + zoneLow) / 2
-        };
-      }
-    } else if (direction === "bearish") {
-      const isBearishCandle = cClose(candle) < cOpen(candle);
-      const isPrevBullish = cClose(previous) > cOpen(previous);
-      const isEngulfing = isBearishCandle && isPrevBullish && bodyBottom < prevBodyBottom && bodyTop > prevBodyBottom;
-
-      if (isEngulfing) {
-        return {
-          index: i,
-          candle,
-          entryPrice: (zoneHigh + zoneLow) / 2
-        };
-      }
+    
+    if (touchedZone) {
+      return {
+        index: i,
+        candle,
+        entryPrice: (zoneHigh + zoneLow) / 2
+      };
     }
   }
 

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T17:43:05.802Z",
+  "lastUpdated": "2026-11-13T17:48:08.839Z",
   "signals": {
     "1000BONKUSDT:5m": {
       "sentAt": "2026-11-13T11:56:01.898Z",
@@ -171,6 +171,15 @@
       "score": null,
       "entry": 0.03395,
       "stop": 0.03355746363017729
+    },
+    "ZROUSDT:5m": {
+      "sentAt": "2026-11-13T17:48:07.338Z",
+      "symbol": "ZROUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.59415,
+      "stop": 1.5695103902466787
     }
   }
 }

@@ -1,4 +1,3 @@
-
 import { CONFIG } from "./config.js";
 import { getMarketSnapshot } from "./exchanges.js";
 import {
@@ -266,7 +265,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const maxPullbackBars = CONFIG.BREAKOUT_CONFIRMATION_BARS;
+    const maxPullbackBars = CONFIG.PULLBACK_MAX_BARS;
 
     if (
       !Number.isInteger(maxPullbackBars) ||

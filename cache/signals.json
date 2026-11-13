@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T06:03:04.801Z",
+  "lastUpdated": "2026-11-13T06:08:16.965Z",
   "signals": {
-    "GRVTUSDT:5m": {
-      "sentAt": "2026-11-13T00:03:22.255Z",
-      "symbol": "GRVTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.18293,
-      "stop": 0.18142763152875158
-    },
     "BABYUSDT:5m": {
       "sentAt": "2026-11-13T00:18:14.621Z",
       "symbol": "BABYUSDT",

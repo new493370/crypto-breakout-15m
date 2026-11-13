@@ -144,7 +144,7 @@ export const CONFIG = {
 
   TIMEFRAMES: {
     "5m": "5 دقیقه",
-    "1h": "1 ساعت
+    "1h": "1 ساعت"
   },
 
   OKX_INTERVAL_MAP: {

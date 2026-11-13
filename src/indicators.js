@@ -886,23 +886,47 @@ export function detectBreakout(
   const minBodyRatio = getSafeOption(
     options,
     "minBodyRatio",
-    "DISPLACEMENT_MIN_BODY_RATIO"
+    "BREAKOUT_MIN_BODY_RATIO"
   );
   const minClosePosition = getSafeOption(
     options,
     "minClosePosition",
-    "DISPLACEMENT_MIN_CLOSE_POSITION"
+    "BREAKOUT_MIN_CLOSE_POSITION"
   );
   const breakoutBufferAtr = getSafeOption(
     options,
     "breakoutBufferAtr",
-    "LIQUIDITY_SWEEP_MIN_ATR"
+    "BREAKOUT_BUFFER_ATR"
   );
   const minBodyAtr = getSafeOption(
     options,
     "minBodyAtr",
-    "DISPLACEMENT_MIN_BODY_ATR"
+    "BREAKOUT_MIN_BODY_ATR"
   );
+  const bodyStrengthWeight = getSafeOption(
+    options,
+    "bodyStrengthWeight",
+    "BREAKOUT_BODY_STRENGTH_WEIGHT"
+  );
+  const atrStrengthWeight = getSafeOption(
+    options,
+    "atrStrengthWeight",
+    "BREAKOUT_ATR_STRENGTH_WEIGHT"
+  );
+  const maxBodyAtr = getSafeOption(
+    options,
+    "maxBodyAtr",
+    "BREAKOUT_MAX_BODY_ATR",
+    0.000001
+  );
+  const confirmationBars = getSafeOption(
+    options,
+    "confirmationBars",
+    "BREAKOUT_CONFIRMATION_BARS",
+    1
+  );
+
+  const totalWeight = bodyStrengthWeight + atrStrengthWeight;
 
   if (
     atrPeriod === null ||
@@ -910,10 +934,18 @@ export function detectBreakout(
     minClosePosition === null ||
     breakoutBufferAtr === null ||
     minBodyAtr === null ||
+    bodyStrengthWeight === null ||
+    atrStrengthWeight === null ||
+    maxBodyAtr === null ||
+    confirmationBars === null ||
     !Number.isInteger(atrPeriod) ||
+    !Number.isInteger(confirmationBars) ||
+    confirmationBars < 1 ||
     minBodyRatio > 1 ||
     minClosePosition < 0.5 ||
-    minClosePosition > 1
+    minClosePosition > 1 ||
+    maxBodyAtr < minBodyAtr ||
+    totalWeight <= 0
   ) {
     return null;
   }
@@ -921,17 +953,13 @@ export function detectBreakout(
   let latestBreakout = null;
 
   for (let i = startIndex; i < candles.length; i++) {
-    const previous = candles[i - 1];
     const candle = candles[i];
 
-    if (
-      !isValidCandle(previous) ||
-      !isValidCandle(candle) ||
-      candle.time <= previous.time
-    ) {
+    if (!isValidTimeSequence(candles, i - confirmationBars, i)) {
       continue;
     }
 
+    const previous = candles[i - 1];
     const previousLine = getTrendlinePrice(trendline, i - 1);
     const currentLine = getTrendlinePrice(trendline, i);
 
@@ -945,7 +973,8 @@ export function detectBreakout(
 
     if (range <= 0) continue;
 
-    const bodyRatio = cBody(candle) / range;
+    const body = cBody(candle);
+    const bodyRatio = body / range;
     const closePosition = (candle.close - candle.low) / range;
     const buffer = atr * breakoutBufferAtr;
 
@@ -957,7 +986,7 @@ export function detectBreakout(
       candle.close > currentLine + buffer &&
       isBull(candle) &&
       bodyRatio >= minBodyRatio &&
-      cBody(candle) >= atr * minBodyAtr &&
+      body >= atr * minBodyAtr &&
       closePosition >= minClosePosition
     ) {
       direction = "bullish";
@@ -967,13 +996,43 @@ export function detectBreakout(
       candle.close < currentLine - buffer &&
       isBear(candle) &&
       bodyRatio >= minBodyRatio &&
-      cBody(candle) >= atr * minBodyAtr &&
+      body >= atr * minBodyAtr &&
       closePosition <= 1 - minClosePosition
     ) {
       direction = "bearish";
     }
 
     if (!direction) continue;
+
+    let confirmed = true;
+
+    for (let j = i - confirmationBars + 1; j <= i; j++) {
+      const confirmationCandle = candles[j];
+      const confirmationLine = getTrendlinePrice(trendline, j);
+
+      if (
+        !isValidCandle(confirmationCandle) ||
+        confirmationLine === null ||
+        (
+          direction === "bullish"
+            ? confirmationCandle.close <= confirmationLine + buffer
+            : confirmationCandle.close >= confirmationLine - buffer
+        )
+      ) {
+        confirmed = false;
+        break;
+      }
+    }
+
+    if (!confirmed) continue;
+
+    const bodyStrength = clamp(bodyRatio, 0, 1);
+    const atrStrength = clamp(body / (atr * maxBodyAtr), 0, 1);
+
+    const strength = (
+      bodyStrength * bodyStrengthWeight +
+      atrStrength * atrStrengthWeight
+    ) / totalWeight;
 
     latestBreakout = {
       index: i,
@@ -985,11 +1044,7 @@ export function detectBreakout(
       zoneWidth: range,
       linePrice: currentLine,
       atr,
-      strength: clamp(
-        bodyRatio * 0.5 + Math.min(cBody(candle) / atr, 3) * 0.5,
-        0,
-        1
-      ),
+      strength: clamp(strength, 0, 1),
       confirmed: true,
       candleTime: candle.time
     };
@@ -1008,15 +1063,25 @@ function getCandleRejection(candle, direction) {
   const bodyRatio = cBody(candle) / range;
   const closePosition = (candle.close - candle.low) / range;
 
-  const minBodyRatio = getConfigNumber(
-    "DISPLACEMENT_MIN_BODY_RATIO"
+  const minBodyRatio = getConfigNumber("REJECTION_MIN_BODY_RATIO");
+  const minWickRatio = getConfigNumber("REJECTION_MIN_WICK_RATIO");
+  const bullishClosePosition = getConfigNumber(
+    "BULLISH_REJECTION_CLOSE_POSITION"
+  );
+  const bearishClosePosition = getConfigNumber(
+    "BEARISH_REJECTION_CLOSE_POSITION"
   );
 
-  const minClosePosition = getConfigNumber(
-    "DISPLACEMENT_MIN_CLOSE_POSITION"
-  );
-
-  if (minBodyRatio === null || minClosePosition === null) {
+  if (
+    minBodyRatio === null ||
+    minWickRatio === null ||
+    bullishClosePosition === null ||
+    bearishClosePosition === null ||
+    minBodyRatio > 1 ||
+    minWickRatio > 1 ||
+    bullishClosePosition > 1 ||
+    bearishClosePosition > 1
+  ) {
     return false;
   }
 
@@ -1027,8 +1092,8 @@ function getCandleRejection(candle, direction) {
     return (
       isBull(candle) &&
       bodyRatio >= minBodyRatio &&
-      closePosition >= minClosePosition &&
-      lowerWick > upperWick
+      lowerWick / range >= minWickRatio &&
+      closePosition >= bullishClosePosition
     );
   }
 
@@ -1036,8 +1101,8 @@ function getCandleRejection(candle, direction) {
     return (
       isBear(candle) &&
       bodyRatio >= minBodyRatio &&
-      closePosition <= 1 - minClosePosition &&
-      upperWick > lowerWick
+      upperWick / range >= minWickRatio &&
+      closePosition <= bearishClosePosition
     );
   }
 
@@ -1073,12 +1138,12 @@ export function detectFirstPullback(
   const minMoveAwayZone = getSafeOption(
     options,
     "minMoveAwayZone",
-    "BASE_MIN_CANDLES"
+    "PULLBACK_MIN_MOVE_AWAY_ZONE"
   );
   const minMoveAwayAtr = getSafeOption(
     options,
     "minMoveAwayAtr",
-    "DISPLACEMENT_MIN_BODY_ATR"
+    "PULLBACK_MIN_MOVE_AWAY_ATR"
   );
 
   if (
@@ -1260,7 +1325,12 @@ export function detectSupplyDemandZones(
     return [];
   }
 
-  const atrPeriod = getSafeOption(options, "atrPeriod", "ATR_PERIOD", 1);
+  const atrPeriod = getSafeOption(
+    options,
+    "atrPeriod",
+    "SUPPLY_DEMAND_ATR_PERIOD",
+    1
+  );
   const maxAge = getSafeOption(
     options,
     "maxAge",
@@ -1279,14 +1349,44 @@ export function detectSupplyDemandZones(
     "SUPPLY_DEMAND_MAX_ZONE_ATR"
   );
 
+  const compactnessRangeAtr = getConfigNumber(
+    "BASE_COMPACTNESS_RANGE_ATR",
+    0.000001
+  );
+  const compactnessWeight = getConfigNumber("BASE_COMPACTNESS_WEIGHT");
+  const displacementWeight = getConfigNumber(
+    "ZONE_DISPLACEMENT_STRENGTH_WEIGHT"
+  );
+  const baseCandleWeight = getConfigNumber("ZONE_BASE_CANDLE_WEIGHT");
+  const baseStrengthCandleCap = getConfigNumber(
+    "BASE_STRENGTH_CANDLE_CAP",
+    1
+  );
+  const strengthMin = getConfigNumber("STRENGTH_MIN");
+  const strengthMax = getConfigNumber("STRENGTH_MAX");
+
+  const totalWeight = compactnessWeight +
+    displacementWeight +
+    baseCandleWeight;
+
   if (
     atrPeriod === null ||
     maxAge === null ||
     maxResults === null ||
     maxZoneAtr === null ||
+    compactnessRangeAtr === null ||
+    compactnessWeight === null ||
+    displacementWeight === null ||
+    baseCandleWeight === null ||
+    baseStrengthCandleCap === null ||
+    strengthMin === null ||
+    strengthMax === null ||
     !Number.isInteger(atrPeriod) ||
     !Number.isInteger(maxAge) ||
-    !Number.isInteger(maxResults)
+    !Number.isInteger(maxResults) ||
+    !Number.isFinite(totalWeight) ||
+    totalWeight <= 0 ||
+    strengthMax < strengthMin
   ) {
     return [];
   }
@@ -1373,15 +1473,34 @@ export function detectSupplyDemandZones(
 
     if (broken) continue;
 
-    const displacementStrength = cBody(displacement) / atr;
-    const compactness = 1 - clamp(width / (atr * maxZoneAtr), 0, 1);
+    const displacementStrength = clamp(
+      (cBody(displacement) / atr) / 3,
+      0,
+      1
+    );
+
+    const compactness = 1 - clamp(
+      width / (atr * compactnessRangeAtr),
+      0,
+      1
+    );
+
+    const baseStrength = clamp(
+      base.candleCount / baseStrengthCandleCap,
+      0,
+      1
+    );
+
+    const normalizedStrength = (
+      displacementStrength * displacementWeight +
+      compactness * compactnessWeight +
+      baseStrength * baseCandleWeight
+    ) / totalWeight;
 
     const strength = clamp(
-      displacementStrength * 0.6 +
-      compactness * 0.3 +
-      base.candleCount * 0.1,
-      0,
-      10
+      strengthMin + normalizedStrength * (strengthMax - strengthMin),
+      strengthMin,
+      strengthMax
     );
 
     zones.push({
@@ -1456,7 +1575,7 @@ export function detectZoneRetest(
   const maxBars = getSafeOption(
     options,
     "maxBars",
-    "ZONE_REACTION_CONFIRMATION_BARS",
+    "ZONE_RETEST_MAX_BARS",
     1
   );
 

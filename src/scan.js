@@ -635,10 +635,7 @@ async function main() {
     const { symbol, timeframe, analysis } = item;
 
     try {
-      const passesHourly = await passesHourlyFilter(
-        symbol,
-        analysis.direction
-      );
+      const passesHourly = true;
 
       if (!passesHourly) {
         continue;

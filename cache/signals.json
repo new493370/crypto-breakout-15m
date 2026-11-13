@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T04:33:02.604Z",
+  "lastUpdated": "2026-11-13T04:38:00.139Z",
   "signals": {
-    "FILECOINUSDT:5m": {
-      "sentAt": "2026-11-12T22:33:26.385Z",
-      "symbol": "FILECOINUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.74745,
-      "stop": 0.7509769880008799
-    },
     "MERLUSDT:5m": {
       "sentAt": "2026-11-12T23:23:09.269Z",
       "symbol": "MERLUSDT",

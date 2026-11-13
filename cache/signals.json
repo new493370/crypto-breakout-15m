@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T20:08:10.597Z",
+  "lastUpdated": "2026-11-13T20:13:21.677Z",
   "signals": {
     "RVNUSDT:5m": {
       "sentAt": "2026-11-13T14:38:16.705Z",
@@ -171,6 +171,15 @@
       "score": null,
       "entry": 0.010870000000000001,
       "stop": 0.010924981444849957
+    },
+    "HOMEUSDT:5m": {
+      "sentAt": "2026-11-13T20:13:20.176Z",
+      "symbol": "HOMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0051990000000000005,
+      "stop": 0.005243964302589311
     }
   }
 }

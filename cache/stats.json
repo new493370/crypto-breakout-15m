@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T03:23:20.538Z",
+  "lastUpdated": "2026-11-13T03:28:11.607Z",
   "allTime": {
     "total": 39,
-    "tp1Hit": 26,
+    "tp1Hit": 28,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 11,
-    "active": 2,
-    "tp1Rate": 70.3,
+    "active": 0,
+    "tp1Rate": 71.8,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 29.7
+    "stopRate": 28.2
   },
   "byTimeframe": {
     "15m": {
@@ -25,19 +25,19 @@
   "byDirection": {
     "bullish": {
       "total": 23,
-      "tp1Hit": 14,
+      "tp1Hit": 15,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 63.6
+      "tp1Rate": 65.2
     },
     "bearish": {
       "total": 16,
-      "tp1Hit": 12,
+      "tp1Hit": 13,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 3,
-      "tp1Rate": 80
+      "tp1Rate": 81.3
     }
   },
   "recentSignals": [
@@ -890,13 +890,14 @@
         0.005272
       ],
       "sentAt": "2026-11-13T01:38:23.949Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T03:21:08.363Z",
+      "statusUpdatedAt": "2026-11-13T03:26:13.913Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.005224000000000001
     },
     {
       "symbol": "ENJUSDT",
@@ -1045,13 +1046,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T03:23:16.991Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T03:23:16.991Z",
+      "statusUpdatedAt": "2026-11-13T03:26:15.596Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.09650999999999998
     }
   ],
   "processedSignals": {

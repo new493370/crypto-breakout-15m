@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T08:28:11.718Z",
+  "lastUpdated": "2026-11-13T08:33:18.518Z",
   "signals": {
-    "CASHCATUSDT:5m": {
-      "sentAt": "2026-11-13T02:28:21.276Z",
-      "symbol": "CASHCATUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.051074999999999995,
-      "stop": 0.051759360239197326
-    },
-    "YGGUSDT:5m": {
-      "sentAt": "2026-11-13T02:28:24.737Z",
-      "symbol": "YGGUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.020749999999999998,
-      "stop": 0.02086843192850082
-    },
     "2ZUSDT:5m": {
       "sentAt": "2026-11-13T02:38:17.716Z",
       "symbol": "2ZUSDT",

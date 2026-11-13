@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T18:03:11.184Z",
+  "lastUpdated": "2026-11-13T18:08:12.251Z",
   "signals": {
-    "SPCXSTOCKUSDT:5m": {
-      "sentAt": "2026-11-13T12:03:25.519Z",
-      "symbol": "SPCXSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 140.765,
-      "stop": 140.31414618497735
-    },
     "CNPYUSDT:5m": {
       "sentAt": "2026-11-13T12:53:07.980Z",
       "symbol": "CNPYUSDT",

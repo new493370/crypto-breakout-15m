@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T01:43:04.611Z",
+  "lastUpdated": "2026-11-13T01:48:16.905Z",
   "allTime": {
     "total": 33,
-    "tp1Hit": 22,
+    "tp1Hit": 23,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 9,
-    "active": 2,
-    "tp1Rate": 71,
+    "active": 1,
+    "tp1Rate": 71.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 29
+    "stopRate": 28.1
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 13,
-      "tp1Hit": 8,
+      "tp1Hit": 9,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 3,
-      "tp1Rate": 72.7
+      "tp1Rate": 75
     }
   },
   "recentSignals": [
@@ -656,13 +656,14 @@
         1.102
       ],
       "sentAt": "2026-11-12T22:18:09.293Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T01:41:13.007Z",
+      "statusUpdatedAt": "2026-11-13T01:46:11.517Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 1.102
     },
     {
       "symbol": "GLMUSDT",
@@ -891,7 +892,7 @@
       "sentAt": "2026-11-13T01:38:23.949Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T01:41:13.007Z",
+      "statusUpdatedAt": "2026-11-13T01:46:11.517Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

@@ -1,4 +1,3 @@
-
 import { CONFIG } from "./config.js";
 
 export function cHigh(c) { return c?.high; }
@@ -132,280 +131,6 @@ function isValidTimeSequence(candles, startIndex, endIndex) {
   return true;
 }
 
-function calculateDirectionalEfficiency(values, direction) {
-  if (
-    !Array.isArray(values) ||
-    values.length < 2 ||
-    !["up", "down"].includes(direction) ||
-    values.some(value => !Number.isFinite(value))
-  ) {
-    return 0;
-  }
-
-  let totalMovement = 0;
-
-  for (let i = 1; i < values.length; i++) {
-    totalMovement += Math.abs(values[i] - values[i - 1]);
-  }
-
-  if (totalMovement <= 0) return 0;
-
-  const netMovement = values[values.length - 1] - values[0];
-
-  if (
-    (direction === "up" && netMovement <= 0) ||
-    (direction === "down" && netMovement >= 0)
-  ) {
-    return 0;
-  }
-
-  return clamp(
-    Math.abs(netMovement) / totalMovement,
-    0,
-    1
-  );
-}
-
-function validatePyramid(
-  candles,
-  index,
-  left,
-  right,
-  type,
-  atr,
-  options = {}
-) {
-  if (
-    !Array.isArray(candles) ||
-    !Number.isInteger(index) ||
-    !Number.isInteger(left) ||
-    !Number.isInteger(right) ||
-    left < 1 ||
-    right < 2 ||
-    !["high", "low"].includes(type) ||
-    !Number.isFinite(atr) ||
-    atr <= 0
-  ) {
-    return null;
-  }
-
-  const startIndex = index - left;
-  const endIndex = index + right;
-
-  if (
-    startIndex < 0 ||
-    endIndex >= candles.length ||
-    !isValidTimeSequence(candles, startIndex, endIndex)
-  ) {
-    return null;
-  }
-
-  const minLeftLegAtr = getSafeOption(
-    options,
-    "minLeftLegAtr",
-    "PIVOT_MIN_LEFT_LEG_ATR"
-  );
-
-  const minRightLegAtr = getSafeOption(
-    options,
-    "minRightLegAtr",
-    "PIVOT_MIN_RIGHT_RETRACEMENT_ATR"
-  );
-
-  const minSideRatio = getSafeOption(
-    options,
-    "minSideRatio",
-    "PIVOT_MIN_SIDE_RATIO"
-  );
-
-  const maxSideRatio = getSafeOption(
-    options,
-    "maxSideRatio",
-    "PIVOT_MAX_SIDE_RATIO"
-  );
-
-  const maxApexRangeAtr = getSafeOption(
-    options,
-    "maxApexRangeAtr",
-    "PIVOT_MAX_APEX_RANGE_ATR"
-  );
-
-  const minProminenceAtr = getSafeOption(
-    options,
-    "minProminenceAtr",
-    "PIVOT_MIN_PROMINENCE_ATR"
-  );
-
-  const minDirectionalEfficiency = getSafeOption(
-    options,
-    "minDirectionalEfficiency",
-    "PIVOT_MIN_DIRECTIONAL_EFFICIENCY"
-  );
-
-  if (
-    [
-      minLeftLegAtr,
-      minRightLegAtr,
-      minSideRatio,
-      maxSideRatio,
-      maxApexRangeAtr,
-      minProminenceAtr,
-      minDirectionalEfficiency
-    ].some(value => value === null) ||
-    minSideRatio <= 0 ||
-    maxSideRatio < 1 ||
-    maxApexRangeAtr <= 0 ||
-    minDirectionalEfficiency > 1
-  ) {
-    return null;
-  }
-
-  const leftCandles = candles.slice(startIndex, index);
-  const rightCandles = candles.slice(index + 1, endIndex + 1);
-  const apex = candles[index];
-  const apexRange = cRange(apex);
-
-  if (
-    apexRange <= 0 ||
-    apexRange > atr * maxApexRangeAtr
-  ) {
-    return null;
-  }
-
-  let price;
-  let leftLeg;
-  let rightLeg;
-  let prominence;
-  let leftValues;
-  let rightValues;
-  let leftDirection;
-  let rightDirection;
-
-  if (type === "high") {
-    price = apex.high;
-
-    if (
-      leftCandles.some(c => c.high >= price) ||
-      rightCandles.some(c => c.high >= price)
-    ) {
-      return null;
-    }
-
-    const highestNeighbor = Math.max(
-      ...leftCandles.map(c => c.high),
-      ...rightCandles.map(c => c.high)
-    );
-
-    prominence = price - highestNeighbor;
-
-    leftLeg = price - leftCandles[0].close;
-    rightLeg = price - rightCandles[rightCandles.length - 1].close;
-
-    leftValues = [
-      ...leftCandles.map(c => c.close),
-      price
-    ];
-
-    rightValues = [
-      price,
-      ...rightCandles.map(c => c.close)
-    ];
-
-    leftDirection = "up";
-    rightDirection = "down";
-  } else {
-    price = apex.low;
-
-    if (
-      leftCandles.some(c => c.low <= price) ||
-      rightCandles.some(c => c.low <= price)
-    ) {
-      return null;
-    }
-
-    const lowestNeighbor = Math.min(
-      ...leftCandles.map(c => c.low),
-      ...rightCandles.map(c => c.low)
-    );
-
-    prominence = lowestNeighbor - price;
-
-    leftLeg = leftCandles[0].close - price;
-    rightLeg = rightCandles[rightCandles.length - 1].close - price;
-
-    leftValues = [
-      ...leftCandles.map(c => c.close),
-      price
-    ];
-
-    rightValues = [
-      price,
-      ...rightCandles.map(c => c.close)
-    ];
-
-    leftDirection = "down";
-    rightDirection = "up";
-  }
-
-  if (
-    !Number.isFinite(leftLeg) ||
-    !Number.isFinite(rightLeg) ||
-    leftLeg <= 0 ||
-    rightLeg <= 0 ||
-    prominence < atr * minProminenceAtr ||
-    leftLeg < atr * minLeftLegAtr ||
-    rightLeg < atr * minRightLegAtr
-  ) {
-    return null;
-  }
-
-  const sideRatio = Math.min(leftLeg, rightLeg) /
-    Math.max(leftLeg, rightLeg);
-
-  if (
-    sideRatio < minSideRatio ||
-    1 / sideRatio > maxSideRatio
-  ) {
-    return null;
-  }
-
-  const leftEfficiency = calculateDirectionalEfficiency(
-    leftValues,
-    leftDirection
-  );
-
-  const rightEfficiency = calculateDirectionalEfficiency(
-    rightValues,
-    rightDirection
-  );
-
-  if (
-    leftEfficiency < minDirectionalEfficiency ||
-    rightEfficiency < minDirectionalEfficiency
-  ) {
-    return null;
-  }
-
-  return {
-    type,
-    index,
-    price,
-    confirmed_index: endIndex,
-    confirmed_time: candles[endIndex].time,
-    left_start_index: startIndex,
-    right_end_index: endIndex,
-    left_leg: leftLeg,
-    right_leg: rightLeg,
-    side_ratio: sideRatio,
-    prominence,
-    atr,
-    left_efficiency: leftEfficiency,
-    right_efficiency: rightEfficiency,
-    apex_range: apexRange,
-    confirmed: true
-  };
-}
-
 export function calculateATR(
   candles,
   period = CONFIG.ATR_PERIOD
@@ -457,105 +182,67 @@ export function calculateATR(
     : null;
 }
 
-export function detectSwings(
-  candles,
-  left = CONFIG.SWING_LEFT,
-  right = CONFIG.SWING_RIGHT
+function detectPivot(candles, index, left, right) {
+  const startIndex = index - left;
+  const endIndex = index + right;
+
+  if (
+    startIndex < 0 ||
+    endIndex >= candles.length ||
+    !isValidTimeSequence(candles, startIndex, endIndex)
+  ) {
+    return null;
+  }
+
+  const current = candles[index];
+
+  let isHigh = true;
+  let isLow = true;
+
+  for (let i = startIndex; i <= endIndex; i++) {
+    if (i === index) continue;
+
+    const candle = candles[i];
+
+    if (
+      i < index
+        ? candle.high >= current.high
+        : candle.high > current.high
+    ) {
+      isHigh = false;
+    }
+
+    if (
+      i < index
+        ? candle.low <= current.low
+        : candle.low < current.low
+    ) {
+      isLow = false;
+    }
+
+    if (!isHigh && !isLow) break;
+  }
+
+  if (isHigh === isLow) return null;
+
+  return {
+    type: isHigh ? "high" : "low",
+    index,
+    price: isHigh ? current.high : current.low,
+    confirmed_index: endIndex,
+    confirmed_time: candles[endIndex].time,
+    confirmed: true
+  };
+}
+
+function filterAlternatingSwings(
+  swings,
+  minDistance,
+  minDifference
 ) {
-  if (
-    !Array.isArray(candles) ||
-    !Number.isInteger(left) ||
-    !Number.isInteger(right) ||
-    left < 1 ||
-    right < 2 ||
-    candles.length < left + right + 1
-  ) {
-    return { highs: [], lows: [] };
-  }
-
-  const atrPeriod = getConfigNumber("PIVOT_ATR_PERIOD", 1);
-
-  if (!Number.isInteger(atrPeriod) || atrPeriod < 1) {
-    return { highs: [], lows: [] };
-  }
-
-  const minDistance = getConfigNumber(
-    "MIN_CANDLES_BETWEEN_PIVOTS",
-    1
-  );
-
-  const minDifference = getConfigNumber(
-    "MIN_LEVEL_DIFF_PERCENT"
-  );
-
-  if (
-    minDistance === null ||
-    minDifference === null
-  ) {
-    return { highs: [], lows: [] };
-  }
-
-  const rawSwings = [];
-
-  for (let i = left; i < candles.length - right; i++) {
-    const startIndex = i - left;
-    const endIndex = i + right;
-
-    if (!isValidTimeSequence(candles, startIndex, endIndex)) {
-      continue;
-    }
-
-    const current = candles[i];
-
-    let isHigh = true;
-    let isLow = true;
-
-    for (let j = startIndex; j <= endIndex; j++) {
-      if (j === i) continue;
-
-      const candle = candles[j];
-
-      if (candle.high >= current.high) {
-        isHigh = false;
-      }
-
-      if (candle.low <= current.low) {
-        isLow = false;
-      }
-
-      if (!isHigh && !isLow) break;
-    }
-
-    if (isHigh === isLow) continue;
-
-    const type = isHigh ? "high" : "low";
-
-    const atr = calculateATR(
-      candles.slice(0, i + 1),
-      atrPeriod
-    );
-
-    if (!Number.isFinite(atr) || atr <= 0) {
-      continue;
-    }
-
-    const pyramid = validatePyramid(
-      candles,
-      i,
-      left,
-      right,
-      type,
-      atr
-    );
-
-    if (!pyramid) continue;
-
-    rawSwings.push(pyramid);
-  }
-
   const filtered = [];
 
-  for (const current of rawSwings) {
+  for (const current of swings) {
     if (filtered.length === 0) {
       filtered.push(current);
       continue;
@@ -605,10 +292,550 @@ export function detectSwings(
     filtered.push(current);
   }
 
+  return filtered;
+}
+
+function getLiquidityConfig() {
+  const atrPeriod = getConfigNumber(
+    "LIQUIDITY_ATR_PERIOD",
+    1
+  );
+
+  const toleranceAtr = getConfigNumber(
+    "LIQUIDITY_CLUSTER_TOLERANCE_ATR"
+  );
+
+  const minTouches = getConfigNumber(
+    "LIQUIDITY_MIN_TOUCHES",
+    2
+  );
+
+  const minTouchGap = getConfigNumber(
+    "LIQUIDITY_MIN_TOUCH_GAP",
+    1
+  );
+
+  const maxTouchGap = getConfigNumber(
+    "LIQUIDITY_MAX_TOUCH_GAP",
+    1
+  );
+
+  const minSweepAtr = getConfigNumber(
+    "LIQUIDITY_SWEEP_MIN_ATR"
+  );
+
+  const maxSweepAtr = getConfigNumber(
+    "LIQUIDITY_SWEEP_MAX_ATR"
+  );
+
+  const displacementLookahead = getConfigNumber(
+    "LIQUIDITY_DISPLACEMENT_LOOKAHEAD",
+    1
+  );
+
+  if (
+    [
+      atrPeriod,
+      toleranceAtr,
+      minTouches,
+      minTouchGap,
+      maxTouchGap,
+      minSweepAtr,
+      maxSweepAtr,
+      displacementLookahead
+    ].some(value => value === null) ||
+    !Number.isInteger(atrPeriod) ||
+    !Number.isInteger(minTouches) ||
+    !Number.isInteger(minTouchGap) ||
+    !Number.isInteger(maxTouchGap) ||
+    !Number.isInteger(displacementLookahead) ||
+    minTouches < 2 ||
+    maxTouchGap < minTouchGap ||
+    maxSweepAtr < minSweepAtr
+  ) {
+    return null;
+  }
+
   return {
-    highs: filtered.filter(s => s.type === "high"),
-    lows: filtered.filter(s => s.type === "low")
+    atrPeriod,
+    toleranceAtr,
+    minTouches,
+    minTouchGap,
+    maxTouchGap,
+    minSweepAtr,
+    maxSweepAtr,
+    displacementLookahead
   };
+}
+
+function getSwingATR(candles, index, period) {
+  return calculateATR(
+    candles.slice(0, index + 1),
+    period
+  );
+}
+
+function buildLiquidityClusters(swings, candles, config) {
+  const clusters = [];
+
+  const sortedSwings = [...swings].sort(
+    (a, b) => a.index - b.index
+  );
+
+  let currentCluster = [];
+
+  for (const swing of sortedSwings) {
+    const previous = currentCluster[currentCluster.length - 1];
+
+    if (!previous) {
+      currentCluster.push(swing);
+      continue;
+    }
+
+    const gap = swing.index - previous.index;
+
+    const clusterPrices = currentCluster.map(
+      item => item.price
+    );
+
+    const clusterLevel = clusterPrices.reduce(
+      (sum, price) => sum + price,
+      0
+    ) / clusterPrices.length;
+
+    const atr = getSwingATR(
+      candles,
+      swing.index,
+      config.atrPeriod
+    );
+
+    if (!Number.isFinite(atr) || atr <= 0) {
+      if (currentCluster.length >= config.minTouches) {
+        clusters.push(currentCluster);
+      }
+
+      currentCluster = [swing];
+      continue;
+    }
+
+    const tolerance = atr * config.toleranceAtr;
+
+    const withinTolerance = Math.abs(
+      swing.price - clusterLevel
+    ) <= tolerance;
+
+    const withinTimeGap = (
+      gap >= config.minTouchGap &&
+      gap <= config.maxTouchGap
+    );
+
+    if (withinTolerance && withinTimeGap) {
+      currentCluster.push(swing);
+    } else {
+      if (currentCluster.length >= config.minTouches) {
+        clusters.push(currentCluster);
+      }
+
+      currentCluster = [swing];
+    }
+  }
+
+  if (currentCluster.length >= config.minTouches) {
+    clusters.push(currentCluster);
+  }
+
+  return clusters;
+}
+
+function detectLiquidityDisplacement(
+  candles,
+  sweepIndex,
+  direction,
+  config
+) {
+  const endIndex = Math.min(
+    candles.length - 1,
+    sweepIndex + config.displacementLookahead
+  );
+
+  for (let i = sweepIndex + 1; i <= endIndex; i++) {
+    const candle = candles[i];
+
+    if (!isValidCandle(candle)) continue;
+
+    const atr = getSwingATR(
+      candles,
+      i,
+      config.atrPeriod
+    );
+
+    if (!Number.isFinite(atr) || atr <= 0) continue;
+
+    if (
+      detectDisplacement(
+        candle,
+        atr,
+        direction
+      )
+    ) {
+      return {
+        confirmed: true,
+        index: i,
+        time: candle.time,
+        price: candle.close,
+        atr
+      };
+    }
+  }
+
+  return {
+    confirmed: false,
+    index: null,
+    time: null,
+    price: null,
+    atr: null
+  };
+}
+
+function detectClusterSweep(
+  candles,
+  cluster,
+  type,
+  config
+) {
+  const touchPrices = cluster.map(
+    swing => swing.price
+  );
+
+  const level = touchPrices.reduce(
+    (sum, price) => sum + price,
+    0
+  ) / touchPrices.length;
+
+  const low = Math.min(...touchPrices);
+  const high = Math.max(...touchPrices);
+
+  const lastTouch = cluster[cluster.length - 1];
+
+  const direction = type === "high"
+    ? "bearish"
+    : "bullish";
+
+  const startIndex = lastTouch.confirmed_index + 1;
+
+  for (let i = startIndex; i < candles.length; i++) {
+    const candle = candles[i];
+
+    if (!isValidCandle(candle)) continue;
+
+    const atr = getSwingATR(
+      candles,
+      i,
+      config.atrPeriod
+    );
+
+    if (!Number.isFinite(atr) || atr <= 0) continue;
+
+    const penetration = type === "high"
+      ? candle.high - level
+      : level - candle.low;
+
+    const returnedInside = type === "high"
+      ? candle.close < level
+      : candle.close > level;
+
+    const validPenetration = (
+      penetration >= atr * config.minSweepAtr &&
+      penetration <= atr * config.maxSweepAtr
+    );
+
+    if (!returnedInside || !validPenetration) {
+      continue;
+    }
+
+    const displacement = detectLiquidityDisplacement(
+      candles,
+      i,
+      direction,
+      config
+    );
+
+    return {
+      swept: true,
+      sweepIndex: i,
+      sweepTime: candle.time,
+      sweepPrice: type === "high"
+        ? candle.high
+        : candle.low,
+      penetration,
+      penetrationAtr: penetration / atr,
+      displacementConfirmed: displacement.confirmed,
+      displacementIndex: displacement.index,
+      displacementTime: displacement.time,
+      displacementPrice: displacement.price,
+      displacementAtr: displacement.atr
+    };
+  }
+
+  return {
+    swept: false,
+    sweepIndex: null,
+    sweepTime: null,
+    sweepPrice: null,
+    penetration: null,
+    penetrationAtr: null,
+    displacementConfirmed: false,
+    displacementIndex: null,
+    displacementTime: null,
+    displacementPrice: null,
+    displacementAtr: null
+  };
+}
+
+function createLiquidityPyramid(
+  cluster,
+  candles,
+  type,
+  config
+) {
+  const touches = cluster.map(swing => ({
+    index: swing.index,
+    time: candles[swing.index].time,
+    price: swing.price,
+    confirmedIndex: swing.confirmed_index,
+    confirmedTime: swing.confirmed_time
+  }));
+
+  const prices = touches.map(touch => touch.price);
+
+  const level = prices.reduce(
+    (sum, price) => sum + price,
+    0
+  ) / prices.length;
+
+  const low = Math.min(...prices);
+  const high = Math.max(...prices);
+
+  const firstTouch = touches[0];
+  const lastTouch = touches[touches.length - 1];
+
+  const atr = getSwingATR(
+    candles,
+    lastTouch.index,
+    config.atrPeriod
+  );
+
+  const direction = type === "high"
+    ? "bearish"
+    : "bullish";
+
+  const sweep = detectClusterSweep(
+    candles,
+    cluster,
+    type,
+    config
+  );
+
+  return {
+    type,
+    direction,
+    index: lastTouch.index,
+    startIndex: firstTouch.index,
+    endIndex: lastTouch.index,
+    level,
+    low,
+    high,
+    width: high - low,
+    touchCount: touches.length,
+    touches,
+    atr,
+    confirmedIndex: lastTouch.confirmedIndex,
+    confirmedTime: lastTouch.confirmedTime,
+    confirmed: true,
+    swept: sweep.swept,
+    sweepIndex: sweep.sweepIndex,
+    sweepTime: sweep.sweepTime,
+    sweepPrice: sweep.sweepPrice,
+    penetration: sweep.penetration,
+    penetrationAtr: sweep.penetrationAtr,
+    displacementConfirmed: sweep.displacementConfirmed,
+    displacementIndex: sweep.displacementIndex,
+    displacementTime: sweep.displacementTime,
+    displacementPrice: sweep.displacementPrice,
+    displacementAtr: sweep.displacementAtr
+  };
+}
+
+export function detectLiquidityPyramids(
+  candles,
+  swings
+) {
+  if (
+    !Array.isArray(candles) ||
+    !swings ||
+    !Array.isArray(swings.highs) ||
+    !Array.isArray(swings.lows)
+  ) {
+    return {
+      buySide: [],
+      sellSide: []
+    };
+  }
+
+  const config = getLiquidityConfig();
+
+  if (!config) {
+    return {
+      buySide: [],
+      sellSide: []
+    };
+  }
+
+  const highClusters = buildLiquidityClusters(
+    swings.highs,
+    candles,
+    config
+  );
+
+  const lowClusters = buildLiquidityClusters(
+    swings.lows,
+    candles,
+    config
+  );
+
+  const buySide = highClusters.map(cluster =>
+    createLiquidityPyramid(
+      cluster,
+      candles,
+      "high",
+      config
+    )
+  );
+
+  const sellSide = lowClusters.map(cluster =>
+    createLiquidityPyramid(
+      cluster,
+      candles,
+      "low",
+      config
+    )
+  );
+
+  return {
+    buySide: buySide.sort(
+      (a, b) => b.endIndex - a.endIndex
+    ),
+    sellSide: sellSide.sort(
+      (a, b) => b.endIndex - a.endIndex
+    )
+  };
+}
+
+export function detectSwings(
+  candles,
+  left = CONFIG.SWING_LEFT,
+  right = CONFIG.SWING_RIGHT
+) {
+  if (
+    !Array.isArray(candles) ||
+    !Number.isInteger(left) ||
+    !Number.isInteger(right) ||
+    left < 1 ||
+    right < 1 ||
+    candles.length < left + right + 1
+  ) {
+    return {
+      highs: [],
+      lows: [],
+      liquidityPyramids: {
+        buySide: [],
+        sellSide: []
+      }
+    };
+  }
+
+  const atrPeriod = getConfigNumber(
+    "LIQUIDITY_ATR_PERIOD",
+    1
+  );
+
+  const minDistance = getConfigNumber(
+    "MIN_CANDLES_BETWEEN_PIVOTS",
+    1
+  );
+
+  const minDifference = getConfigNumber(
+    "MIN_LEVEL_DIFF_PERCENT"
+  );
+
+  if (
+    !Number.isInteger(atrPeriod) ||
+    minDistance === null ||
+    minDifference === null
+  ) {
+    return {
+      highs: [],
+      lows: [],
+      liquidityPyramids: {
+        buySide: [],
+        sellSide: []
+      }
+    };
+  }
+
+  const rawSwings = [];
+
+  for (
+    let i = left;
+    i < candles.length - right;
+    i++
+  ) {
+    const pivot = detectPivot(
+      candles,
+      i,
+      left,
+      right
+    );
+
+    if (!pivot) continue;
+
+    const atr = getSwingATR(
+      candles,
+      i,
+      atrPeriod
+    );
+
+    if (!Number.isFinite(atr) || atr <= 0) {
+      continue;
+    }
+
+    rawSwings.push({
+      ...pivot,
+      atr
+    });
+  }
+
+  const filtered = filterAlternatingSwings(
+    rawSwings,
+    minDistance,
+    minDifference
+  );
+
+  const result = {
+    highs: filtered.filter(
+      swing => swing.type === "high"
+    ),
+    lows: filtered.filter(
+      swing => swing.type === "low"
+    )
+  };
+
+  result.liquidityPyramids = detectLiquidityPyramids(
+    candles,
+    result
+  );
+
+  return result;
 }
 
 export function getLatestMinorSwings(
@@ -616,7 +843,10 @@ export function getLatestMinorSwings(
   count = CONFIG.MINOR_SWING_COUNT
 ) {
   if (!Number.isInteger(count) || count < 1) {
-    return { highs: [], lows: [] };
+    return {
+      highs: [],
+      lows: []
+    };
   }
 
   return {
@@ -635,7 +865,10 @@ export function getConfirmedSwings(swings, currentIndex) {
     !Number.isInteger(currentIndex) ||
     currentIndex < 0
   ) {
-    return { highs: [], lows: [] };
+    return {
+      highs: [],
+      lows: []
+    };
   }
 
   const filterConfirmed = (list, type) => {
@@ -694,7 +927,10 @@ export function isValidStructure(swingA, swingB, direction) {
     minDistance === null ||
     minDifference === null ||
     swingB.index - swingA.index < minDistance ||
-    getPercentDifference(swingA.price, swingB.price) < minDifference
+    getPercentDifference(
+      swingA.price,
+      swingB.price
+    ) < minDifference
   ) {
     return false;
   }
@@ -749,7 +985,10 @@ export function calculateTrendline(swingA, swingB) {
     return null;
   }
 
-  return { slope, intercept };
+  return {
+    slope,
+    intercept
+  };
 }
 
 export function getTrendlinePrice(trendline, index) {
@@ -850,8 +1089,15 @@ export function detectBreakout(
       continue;
     }
 
-    const previousLine = getTrendlinePrice(trendline, i - 1);
-    const currentLine = getTrendlinePrice(trendline, i);
+    const previousLine = getTrendlinePrice(
+      trendline,
+      i - 1
+    );
+
+    const currentLine = getTrendlinePrice(
+      trendline,
+      i
+    );
 
     if (
       previousLine === null ||
@@ -873,6 +1119,7 @@ export function detectBreakout(
 
     const body = cBody(candle);
     const bodyRatio = body / range;
+
     const closePosition = (
       cClose(candle) - cLow(candle)
     ) / range;
@@ -954,6 +1201,7 @@ function getCandleRejection(candle, direction) {
   );
 
   const bodyRatio = cBody(candle) / range;
+
   const closePosition = (
     candle.close - candle.low
   ) / range;
@@ -1146,6 +1394,7 @@ function detectDisplacement(
   }
 
   const bodyRatio = body / range;
+
   const closePosition = (
     candle.close - candle.low
   ) / range;
@@ -1265,7 +1514,9 @@ function detectBase(
 
   if (base.length < minBaseCandles) return null;
 
-  const candlesInBase = base.map(item => item.candle);
+  const candlesInBase = base.map(
+    item => item.candle
+  );
 
   const low = Math.min(
     ...candlesInBase.map(c => c.low)
@@ -1352,6 +1603,7 @@ export function detectSupplyDemandZones(
 
   const currentPrice = lastCandle.close;
   const zones = [];
+
   const startIndex = Math.max(
     1,
     candles.length - maxAge
@@ -1465,7 +1717,9 @@ export function detectSupplyDemandZones(
       "ZONE_BASE_CANDLE_WEIGHT"
     );
 
-    const maxStrength = getConfigNumber("STRENGTH_MAX");
+    const maxStrength = getConfigNumber(
+      "STRENGTH_MAX"
+    );
 
     if (
       compactnessRangeAtr === null ||

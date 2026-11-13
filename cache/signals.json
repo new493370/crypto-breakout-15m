@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T15:38:03.589Z",
+  "lastUpdated": "2026-11-13T15:43:16.046Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -171,6 +171,15 @@
       "score": null,
       "entry": 0.037795,
       "stop": 0.03822723834586762
+    },
+    "ENSOUSDT:5m": {
+      "sentAt": "2026-11-13T15:43:14.545Z",
+      "symbol": "ENSOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.42315,
+      "stop": 0.42810853839513774
     }
   }
 }

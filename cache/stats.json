@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T14:48:29.811Z",
+  "lastUpdated": "2026-11-13T14:53:18.289Z",
   "allTime": {
     "total": 62,
-    "tp1Hit": 39,
+    "tp1Hit": 40,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 18,
-    "active": 5,
-    "tp1Rate": 68.4,
+    "active": 4,
+    "tp1Rate": 69,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 31.6
+    "stopRate": 31
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 33,
-      "tp1Hit": 21,
+      "tp1Hit": 22,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 7,
-      "tp1Rate": 75
+      "tp1Rate": 75.9
     }
   },
   "recentSignals": [
@@ -1542,7 +1542,7 @@
       "sentAt": "2026-11-13T14:48:12.621Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:48:12.621Z",
+      "statusUpdatedAt": "2026-11-13T14:51:09.426Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1567,7 +1567,7 @@
       "sentAt": "2026-11-13T14:48:18.030Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:48:18.030Z",
+      "statusUpdatedAt": "2026-11-13T14:51:09.427Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1590,13 +1590,14 @@
         0.09142
       ],
       "sentAt": "2026-11-13T14:48:21.468Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:48:21.468Z",
+      "statusUpdatedAt": "2026-11-13T14:51:13.177Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.09110000000000001
     },
     {
       "symbol": "ENJUSDT",
@@ -1617,7 +1618,7 @@
       "sentAt": "2026-11-13T14:48:24.897Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:48:24.897Z",
+      "statusUpdatedAt": "2026-11-13T14:51:13.177Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1642,7 +1643,7 @@
       "sentAt": "2026-11-13T14:48:28.309Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:48:28.309Z",
+      "statusUpdatedAt": "2026-11-13T14:51:13.177Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T19:03:10.974Z",
+  "lastUpdated": "2026-11-13T19:08:09.119Z",
   "signals": {
     "MONUSDT:5m": {
       "sentAt": "2026-11-13T13:13:21.055Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 1.59415,
       "stop": 1.5695103902466787
+    },
+    "TRUTHUSDT:5m": {
+      "sentAt": "2026-11-13T19:08:05.938Z",
+      "symbol": "TRUTHUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.016259000000000003,
+      "stop": 0.016370867483257064
     }
   }
 }

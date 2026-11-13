@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T14:33:01.835Z",
+  "lastUpdated": "2026-11-13T14:38:25.484Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -81,6 +81,33 @@
       "score": null,
       "entry": 0.0034260000000000002,
       "stop": 0.0034443719586791472
+    },
+    "RVNUSDT:5m": {
+      "sentAt": "2026-11-13T14:38:16.705Z",
+      "symbol": "RVNUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0012365,
+      "stop": 0.0012438557435645742
+    },
+    "FUSDT:5m": {
+      "sentAt": "2026-11-13T14:38:20.522Z",
+      "symbol": "FUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.002367,
+      "stop": 0.0023783050029019003
+    },
+    "KMNOUSDT:5m": {
+      "sentAt": "2026-11-13T14:38:23.981Z",
+      "symbol": "KMNOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.030345,
+      "stop": 0.030536636973766604
     }
   }
 }

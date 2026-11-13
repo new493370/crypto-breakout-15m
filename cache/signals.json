@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T20:46:19.198Z",
+  "lastUpdated": "2026-11-13T20:50:13.980Z",
   "signals": {
-    "MEMEUSDT:5m": {
-      "sentAt": "2026-11-13T14:48:12.621Z",
-      "symbol": "MEMEUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.00038314999999999996,
-      "stop": 0.0003860745827586991
-    },
-    "YGGUSDT:5m": {
-      "sentAt": "2026-11-13T14:48:18.030Z",
-      "symbol": "YGGUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.020855,
-      "stop": 0.021009261263318483
-    },
-    "DYDXUSDT:5m": {
-      "sentAt": "2026-11-13T14:48:21.468Z",
-      "symbol": "DYDXUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.09195,
-      "stop": 0.09271511957673931
-    },
-    "ENJUSDT:5m": {
-      "sentAt": "2026-11-13T14:48:24.897Z",
-      "symbol": "ENJUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.021605,
-      "stop": 0.021743827151662086
-    },
-    "COAIUSDT:5m": {
-      "sentAt": "2026-11-13T14:48:28.309Z",
-      "symbol": "COAIUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.20350000000000001,
-      "stop": 0.20509848317537915
-    },
     "PIUSDT:5m": {
       "sentAt": "2026-11-13T14:58:25.090Z",
       "symbol": "PIUSDT",

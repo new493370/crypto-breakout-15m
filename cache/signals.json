@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T22:30:24.528Z",
+  "lastUpdated": "2026-11-13T22:34:19.916Z",
   "signals": {
-    "OPNUSDT:5m": {
-      "sentAt": "2026-11-13T16:33:20.626Z",
-      "symbol": "OPNUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.03395,
-      "stop": 0.03355746363017729
-    },
     "ZROUSDT:5m": {
       "sentAt": "2026-11-13T17:48:07.338Z",
       "symbol": "ZROUSDT",

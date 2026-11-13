@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T00:13:20.766Z",
+  "lastUpdated": "2026-11-13T00:18:21.838Z",
   "signals": {
     "AVNTUSDT:5m": {
       "sentAt": "2026-11-12T18:18:23.016Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.18293,
       "stop": 0.18142763152875158
+    },
+    "BABYUSDT:5m": {
+      "sentAt": "2026-11-13T00:18:14.621Z",
+      "symbol": "BABYUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.009578,
+      "stop": 0.0095355279082645
     }
   }
 }

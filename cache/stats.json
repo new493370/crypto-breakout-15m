@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T02:23:13.480Z",
+  "lastUpdated": "2026-11-13T02:28:28.041Z",
   "allTime": {
-    "total": 34,
+    "total": 36,
     "tp1Hit": 23,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 10,
-    "active": 1,
+    "active": 3,
     "tp1Rate": 69.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 66.7
     },
     "bearish": {
-      "total": 13,
+      "total": 15,
       "tp1Hit": 9,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -892,7 +892,7 @@
       "sentAt": "2026-11-13T01:38:23.949Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:21:08.097Z",
+      "statusUpdatedAt": "2026-11-13T02:26:14.219Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -923,6 +923,56 @@
       "_tp1Notified": false,
       "_stoppedNotified": true,
       "exitPrice": 0.021167248924803594
+    },
+    {
+      "symbol": "CASHCATUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.051074999999999995,
+      "stop": 0.051759360239197326,
+      "tp1": 0.05014999999999999,
+      "zoneLow": 0.05089,
+      "zoneHigh": 0.05126,
+      "signalCandleTime": 1794536400000,
+      "rr1": 1.3516273258144165,
+      "highs": null,
+      "lows": [
+        0.05024,
+        0.05081
+      ],
+      "sentAt": "2026-11-13T02:28:21.276Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T02:28:21.276Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.020749999999999998,
+      "stop": 0.02086843192850082,
+      "tp1": 0.020599999999999997,
+      "zoneLow": 0.02072,
+      "zoneHigh": 0.02078,
+      "signalCandleTime": 1794536400000,
+      "rr1": 1.2665503458297378,
+      "highs": null,
+      "lows": [
+        0.02062,
+        0.02071
+      ],
+      "sentAt": "2026-11-13T02:28:24.737Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T02:28:24.737Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -1163,6 +1213,20 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T02:13:06.823Z"
+    },
+    "CASHCATUSDT:5m:2026-11-13T02:28:21.276Z": {
+      "symbol": "CASHCATUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T02:28:21.276Z"
+    },
+    "YGGUSDT:5m:2026-11-13T02:28:24.737Z": {
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T02:28:24.737Z"
     }
   }
 }

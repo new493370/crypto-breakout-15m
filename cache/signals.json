@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T22:34:19.916Z",
+  "lastUpdated": "2026-11-13T22:38:16.463Z",
   "signals": {
     "ZROUSDT:5m": {
       "sentAt": "2026-11-13T17:48:07.338Z",
@@ -63,6 +63,15 @@
       "score": null,
       "entry": 0.0051990000000000005,
       "stop": 0.005243964302589311
+    },
+    "BLENDUSDT:5m": {
+      "sentAt": "2026-11-13T22:38:14.961Z",
+      "symbol": "BLENDUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.048420000000000005,
+      "stop": 0.04815365409128843
     }
   }
 }

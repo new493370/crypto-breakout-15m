@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T14:58:26.592Z",
+  "lastUpdated": "2026-11-13T15:03:18.761Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -162,6 +162,15 @@
       "score": null,
       "entry": 0.07067,
       "stop": 0.07014816570087334
+    },
+    "STRKUSDT:5m": {
+      "sentAt": "2026-11-13T15:03:17.259Z",
+      "symbol": "STRKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.037795,
+      "stop": 0.03822723834586762
     }
   }
 }

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T14:58:26.593Z",
+  "lastUpdated": "2026-11-13T15:03:18.763Z",
   "allTime": {
-    "total": 63,
+    "total": 64,
     "tp1Hit": 42,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 18,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 70,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 62.1
     },
     "bearish": {
-      "total": 33,
+      "total": 34,
       "tp1Hit": 24,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1568,7 +1568,7 @@
       "sentAt": "2026-11-13T14:48:18.030Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:56:13.748Z",
+      "statusUpdatedAt": "2026-11-13T15:01:13.087Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1645,7 +1645,7 @@
       "sentAt": "2026-11-13T14:48:28.309Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:56:15.430Z",
+      "statusUpdatedAt": "2026-11-13T15:01:13.087Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1670,7 +1670,32 @@
       "sentAt": "2026-11-13T14:58:25.090Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:58:25.090Z",
+      "statusUpdatedAt": "2026-11-13T15:01:13.087Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "STRKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.037795,
+      "stop": 0.03822723834586762,
+      "tp1": 0.03717,
+      "zoneLow": 0.03767,
+      "zoneHigh": 0.03792,
+      "signalCandleTime": 1794580800000,
+      "rr1": 1.4459614839249266,
+      "highs": null,
+      "lows": [
+        0.03682,
+        0.0376
+      ],
+      "sentAt": "2026-11-13T15:03:17.259Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T15:03:17.259Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2118,6 +2143,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T14:58:25.090Z"
+    },
+    "STRKUSDT:5m:2026-11-13T15:03:17.259Z": {
+      "symbol": "STRKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T15:03:17.259Z"
     }
   }
 }

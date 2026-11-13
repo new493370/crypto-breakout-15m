@@ -1,3 +1,4 @@
+
 import { CONFIG } from "./config.js";
 
 export function cHigh(c) { return c?.high; }
@@ -95,6 +96,326 @@ function getSafeOption(options, key, fallback, min = 0) {
     : fallback;
 }
 
+function getConfigNumber(key, fallback, min = 0) {
+  const value = CONFIG?.[key];
+
+  return Number.isFinite(value) && value >= min
+    ? value
+    : fallback;
+}
+
+function isValidTimeSequence(candles, startIndex, endIndex) {
+  if (
+    !Array.isArray(candles) ||
+    !Number.isInteger(startIndex) ||
+    !Number.isInteger(endIndex) ||
+    startIndex < 0 ||
+    endIndex >= candles.length ||
+    startIndex > endIndex
+  ) {
+    return false;
+  }
+
+  for (let i = startIndex; i <= endIndex; i++) {
+    if (!isValidCandle(candles[i])) {
+      return false;
+    }
+
+    if (
+      i > startIndex &&
+      candles[i].time <= candles[i - 1].time
+    ) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function calculateDirectionalEfficiency(values, direction) {
+  if (
+    !Array.isArray(values) ||
+    values.length < 2 ||
+    !["up", "down"].includes(direction) ||
+    values.some(value => !Number.isFinite(value))
+  ) {
+    return 0;
+  }
+
+  let totalMovement = 0;
+
+  for (let i = 1; i < values.length; i++) {
+    totalMovement += Math.abs(values[i] - values[i - 1]);
+  }
+
+  if (totalMovement <= 0) return 0;
+
+  const netMovement = values[values.length - 1] - values[0];
+
+  if (
+    direction === "up" && netMovement <= 0 ||
+    direction === "down" && netMovement >= 0
+  ) {
+    return 0;
+  }
+
+  return clamp(
+    Math.abs(netMovement) / totalMovement,
+    0,
+    1
+  );
+}
+
+function validatePyramid(
+  candles,
+  index,
+  left,
+  right,
+  type,
+  atr,
+  options = {}
+) {
+  if (
+    !Array.isArray(candles) ||
+    !Number.isInteger(index) ||
+    !Number.isInteger(left) ||
+    !Number.isInteger(right) ||
+    !["high", "low"].includes(type) ||
+    !Number.isFinite(atr) ||
+    atr <= 0
+  ) {
+    return null;
+  }
+
+  const startIndex = index - left;
+  const endIndex = index + right;
+
+  if (
+    startIndex < 0 ||
+    endIndex >= candles.length ||
+    !isValidTimeSequence(candles, startIndex, endIndex)
+  ) {
+    return null;
+  }
+
+  const apex = candles[index];
+
+  const minLeftLegAtr = getSafeOption(
+    options,
+    "minLeftLegAtr",
+    getConfigNumber("PIVOT_MIN_LEFT_LEG_ATR", 0.5),
+    0
+  );
+
+  const minRightLegAtr = getSafeOption(
+    options,
+    "minRightLegAtr",
+    getConfigNumber("PIVOT_MIN_RIGHT_RETRACEMENT_ATR", 0.8),
+    0
+  );
+
+  const minSideRatio = getSafeOption(
+    options,
+    "minSideRatio",
+    getConfigNumber("PIVOT_MIN_SIDE_RATIO", 0.25),
+    0
+  );
+
+  const maxSideRatio = getSafeOption(
+    options,
+    "maxSideRatio",
+    getConfigNumber("PIVOT_MAX_SIDE_RATIO", 4),
+    0
+  );
+
+  const maxApexRangeAtr = getSafeOption(
+    options,
+    "maxApexRangeAtr",
+    getConfigNumber("PIVOT_MAX_APEX_RANGE_ATR", 2.5),
+    0
+  );
+
+  const minProminenceAtr = getSafeOption(
+    options,
+    "minProminenceAtr",
+    getConfigNumber("PIVOT_MIN_PROMINENCE_ATR", 0.05),
+    0
+  );
+
+  const minDirectionalEfficiency = getSafeOption(
+    options,
+    "minDirectionalEfficiency",
+    getConfigNumber("PIVOT_MIN_DIRECTIONAL_EFFICIENCY", 0.25),
+    0
+  );
+
+  if (
+    minSideRatio <= 0 ||
+    maxSideRatio < minSideRatio ||
+    maxApexRangeAtr <= 0 ||
+    minDirectionalEfficiency > 1
+  ) {
+    return null;
+  }
+
+  const leftCandles = candles.slice(startIndex, index);
+  const rightCandles = candles.slice(index + 1, endIndex + 1);
+
+  const apexRange = cRange(apex);
+
+  if (
+    apexRange <= 0 ||
+    apexRange > atr * maxApexRangeAtr
+  ) {
+    return null;
+  }
+
+  let price;
+  let leftLeg;
+  let rightLeg;
+  let prominence;
+  let leftValues;
+  let rightValues;
+  let leftDirection;
+  let rightDirection;
+
+  if (type === "high") {
+    price = apex.high;
+
+    const highestLeftNeighbor = Math.max(
+      ...leftCandles.map(c => c.high)
+    );
+
+    const highestRightNeighbor = Math.max(
+      ...rightCandles.map(c => c.high)
+    );
+
+    if (
+      leftCandles.some(c => c.high >= price) ||
+      rightCandles.some(c => c.high >= price)
+    ) {
+      return null;
+    }
+
+    prominence = price - Math.max(
+      highestLeftNeighbor,
+      highestRightNeighbor
+    );
+
+    leftLeg = price - leftCandles[0].close;
+    rightLeg = price - rightCandles[rightCandles.length - 1].close;
+
+    leftValues = [
+      ...leftCandles.map(c => c.close),
+      price
+    ];
+
+    rightValues = [
+      price,
+      ...rightCandles.map(c => c.close)
+    ];
+
+    leftDirection = "up";
+    rightDirection = "down";
+  } else {
+    price = apex.low;
+
+    const lowestLeftNeighbor = Math.min(
+      ...leftCandles.map(c => c.low)
+    );
+
+    const lowestRightNeighbor = Math.min(
+      ...rightCandles.map(c => c.low)
+    );
+
+    if (
+      leftCandles.some(c => c.low <= price) ||
+      rightCandles.some(c => c.low <= price)
+    ) {
+      return null;
+    }
+
+    prominence = Math.min(
+      lowestLeftNeighbor,
+      lowestRightNeighbor
+    ) - price;
+
+    leftLeg = leftCandles[0].close - price;
+    rightLeg = rightCandles[rightCandles.length - 1].close - price;
+
+    leftValues = [
+      ...leftCandles.map(c => c.close),
+      price
+    ];
+
+    rightValues = [
+      price,
+      ...rightCandles.map(c => c.close)
+    ];
+
+    leftDirection = "down";
+    rightDirection = "up";
+  }
+
+  if (
+    !Number.isFinite(leftLeg) ||
+    !Number.isFinite(rightLeg) ||
+    leftLeg <= 0 ||
+    rightLeg <= 0 ||
+    prominence < atr * minProminenceAtr ||
+    leftLeg < atr * minLeftLegAtr ||
+    rightLeg < atr * minRightLegAtr
+  ) {
+    return null;
+  }
+
+  const sideRatio = Math.min(leftLeg, rightLeg) /
+    Math.max(leftLeg, rightLeg);
+
+  if (
+    sideRatio < minSideRatio ||
+    1 / sideRatio > maxSideRatio
+  ) {
+    return null;
+  }
+
+  const leftEfficiency = calculateDirectionalEfficiency(
+    leftValues,
+    leftDirection
+  );
+
+  const rightEfficiency = calculateDirectionalEfficiency(
+    rightValues,
+    rightDirection
+  );
+
+  if (
+    leftEfficiency < minDirectionalEfficiency ||
+    rightEfficiency < minDirectionalEfficiency
+  ) {
+    return null;
+  }
+
+  return {
+    type,
+    index,
+    price,
+    confirmed_index: endIndex,
+    confirmed_time: candles[endIndex].time,
+    left_start_index: startIndex,
+    right_end_index: endIndex,
+    left_leg: leftLeg,
+    right_leg: rightLeg,
+    side_ratio: sideRatio,
+    prominence,
+    atr,
+    left_efficiency: leftEfficiency,
+    right_efficiency: rightEfficiency,
+    apex_range: apexRange,
+    confirmed: true
+  };
+}
+
 export function calculateATR(candles, period = 14) {
   if (
     !Array.isArray(candles) ||
@@ -153,35 +474,41 @@ export function detectSwings(
     !Number.isInteger(left) ||
     !Number.isInteger(right) ||
     left < 1 ||
-    right < 1 ||
+    right < 2 ||
     candles.length < left + right + 1
   ) {
+    return { highs: [], lows: [] };
+  }
+
+  const atrPeriod = getConfigNumber(
+    "PIVOT_ATR_PERIOD",
+    14,
+    1
+  );
+
+  if (!Number.isInteger(atrPeriod)) {
     return { highs: [], lows: [] };
   }
 
   const rawSwings = [];
 
   for (let i = left; i < candles.length - right; i++) {
+    const startIndex = i - left;
+    const endIndex = i + right;
+
+    if (!isValidTimeSequence(candles, startIndex, endIndex)) {
+      continue;
+    }
+
     const current = candles[i];
 
-    if (!isValidCandle(current)) continue;
-
-    let validWindow = true;
     let isHigh = true;
     let isLow = true;
 
-    for (let j = i - left; j <= i + right; j++) {
+    for (let j = startIndex; j <= endIndex; j++) {
       if (j === i) continue;
 
       const candle = candles[j];
-
-      if (
-        !isValidCandle(candle) ||
-        candle.time <= candles[j - 1]?.time
-      ) {
-        validWindow = false;
-        break;
-      }
 
       if (candle.high >= current.high) {
         isHigh = false;
@@ -194,17 +521,31 @@ export function detectSwings(
       if (!isHigh && !isLow) break;
     }
 
-    if (!validWindow || isHigh === isLow) continue;
+    if (isHigh === isLow) continue;
 
     const type = isHigh ? "high" : "low";
 
-    rawSwings.push({
-      index: i,
-      price: type === "high" ? current.high : current.low,
-      confirmed_index: i + right,
-      confirmed_time: candles[i + right].time,
-      type
-    });
+    const atr = calculateATR(
+      candles.slice(0, i + 1),
+      atrPeriod
+    );
+
+    if (!Number.isFinite(atr) || atr <= 0) {
+      continue;
+    }
+
+    const pyramid = validatePyramid(
+      candles,
+      i,
+      left,
+      right,
+      type,
+      atr
+    );
+
+    if (!pyramid) continue;
+
+    rawSwings.push(pyramid);
   }
 
   const minDistance = Math.max(
@@ -237,7 +578,20 @@ export function detectSwings(
         : current.price < last.price;
 
       if (moreExtreme) {
-        filtered[filtered.length - 1] = current;
+        const previous = filtered[filtered.length - 2];
+
+        const replacementIsValid = !previous ||
+          (
+            current.index - previous.index >= minDistance &&
+            getPercentDifference(
+              previous.price,
+              current.price
+            ) >= minDifference
+          );
+
+        if (replacementIsValid) {
+          filtered[filtered.length - 1] = current;
+        }
       }
 
       continue;
@@ -301,8 +655,12 @@ export function getConfirmedSwings(swings, currentIndex) {
       Number.isFinite(swing.price) &&
       swing.price > 0 &&
       swing.index >= 0 &&
-      swing.confirmed_index >= swing.index &&
-      swing.confirmed_index <= currentIndex
+      swing.confirmed_index > swing.index &&
+      swing.confirmed_index <= currentIndex &&
+      (
+        swing.confirmed_time === undefined ||
+        Number.isFinite(swing.confirmed_time)
+      )
     );
   };
 

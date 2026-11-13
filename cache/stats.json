@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T15:03:18.763Z",
+  "lastUpdated": "2026-11-13T15:08:09.736Z",
   "allTime": {
     "total": 64,
-    "tp1Hit": 42,
+    "tp1Hit": 45,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 18,
-    "active": 4,
-    "tp1Rate": 70,
+    "active": 1,
+    "tp1Rate": 71.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30
+    "stopRate": 28.6
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 34,
-      "tp1Hit": 24,
+      "tp1Hit": 27,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 7,
-      "tp1Rate": 77.4
+      "tp1Rate": 79.4
     }
   },
   "recentSignals": [
@@ -1566,13 +1566,14 @@
         0.02076
       ],
       "sentAt": "2026-11-13T14:48:18.030Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T15:01:13.087Z",
+      "statusUpdatedAt": "2026-11-13T15:06:14.971Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.02063
     },
     {
       "symbol": "DYDXUSDT",
@@ -1643,13 +1644,14 @@
         0.202
       ],
       "sentAt": "2026-11-13T14:48:28.309Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T15:01:13.087Z",
+      "statusUpdatedAt": "2026-11-13T15:06:16.769Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.2015
     },
     {
       "symbol": "PIUSDT",
@@ -1670,7 +1672,7 @@
       "sentAt": "2026-11-13T14:58:25.090Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T15:01:13.087Z",
+      "statusUpdatedAt": "2026-11-13T15:06:16.769Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1693,13 +1695,14 @@
         0.0376
       ],
       "sentAt": "2026-11-13T15:03:17.259Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T15:03:17.259Z",
+      "statusUpdatedAt": "2026-11-13T15:06:18.487Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.03717
     }
   ],
   "processedSignals": {

@@ -1,4 +1,4 @@
-`export const CONFIG = {
+export const CONFIG = {
   OKX_BASE_URL: "https://www.okx.com",
   BINANCE_FUTURES_URL: "https://fapi1.binance.com",
   BINANCE_SPOT_URL: "https://data-api.binance.vision",

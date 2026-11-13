@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T14:53:18.288Z",
+  "lastUpdated": "2026-11-13T14:58:26.592Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.20350000000000001,
       "stop": 0.20509848317537915
+    },
+    "PIUSDT:5m": {
+      "sentAt": "2026-11-13T14:58:25.090Z",
+      "symbol": "PIUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.07067,
+      "stop": 0.07014816570087334
     }
   }
 }

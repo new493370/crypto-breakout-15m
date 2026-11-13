@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T23:46:14.333Z",
+  "lastUpdated": "2026-11-13T23:50:27.237Z",
   "signals": {
-    "ZROUSDT:5m": {
-      "sentAt": "2026-11-13T17:48:07.338Z",
-      "symbol": "ZROUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 1.59415,
-      "stop": 1.5695103902466787
-    },
     "TRUTHUSDT:5m": {
       "sentAt": "2026-11-13T19:08:05.938Z",
       "symbol": "TRUTHUSDT",

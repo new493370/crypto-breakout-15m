@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T21:10:14.163Z",
+  "lastUpdated": "2026-11-13T21:14:19.249Z",
   "allTime": {
     "total": 74,
     "tp1Hit": 53,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 19,
-    "active": 2,
-    "tp1Rate": 73.6,
+    "stopped": 20,
+    "active": 1,
+    "tp1Rate": 72.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 26.4
+    "stopRate": 27.4
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 22,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 11,
-      "tp1Rate": 66.7
+      "stopped": 12,
+      "tp1Rate": 64.7
     },
     "bearish": {
       "total": 39,
@@ -1776,7 +1776,7 @@
       "sentAt": "2026-11-13T16:33:20.626Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T21:08:16.667Z",
+      "statusUpdatedAt": "2026-11-13T21:12:18.654Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1799,13 +1799,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T17:48:07.338Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T21:08:16.667Z",
+      "statusUpdatedAt": "2026-11-13T21:12:22.413Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 1.5695103902466787
     },
     {
       "symbol": "TRUTHUSDT",

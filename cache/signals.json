@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T08:33:18.518Z",
+  "lastUpdated": "2026-11-13T08:38:19.947Z",
   "signals": {
-    "2ZUSDT:5m": {
-      "sentAt": "2026-11-13T02:38:17.716Z",
-      "symbol": "2ZUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.01866,
-      "stop": 0.01878885856844516
-    },
     "DATAUSDT:5m": {
       "sentAt": "2026-11-13T03:13:20.574Z",
       "symbol": "DATAUSDT",

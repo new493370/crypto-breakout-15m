@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T04:48:17.071Z",
+  "lastUpdated": "2026-11-13T04:53:25.680Z",
   "signals": {
     "MERLUSDT:5m": {
       "sentAt": "2026-11-12T23:23:09.269Z",
@@ -117,6 +117,60 @@
       "score": null,
       "entry": 0.095135,
       "stop": 0.09393931555941143
+    },
+    "PUMPUSDT:5m": {
+      "sentAt": "2026-11-13T04:53:07.225Z",
+      "symbol": "PUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0034679999999999997,
+      "stop": 0.0035144738759241454
+    },
+    "RVNUSDT:5m": {
+      "sentAt": "2026-11-13T04:53:10.620Z",
+      "symbol": "RVNUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0012245,
+      "stop": 0.0012399837212551264
+    },
+    "ANIMEUSDT:5m": {
+      "sentAt": "2026-11-13T04:53:13.976Z",
+      "symbol": "ANIMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.002314,
+      "stop": 0.0023321784986592153
+    },
+    "BATUSDT:5m": {
+      "sentAt": "2026-11-13T04:53:17.348Z",
+      "symbol": "BATUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.12190000000000001,
+      "stop": 0.12334244524227529
+    },
+    "PUMPFUNUSDT:5m": {
+      "sentAt": "2026-11-13T04:53:20.835Z",
+      "symbol": "PUMPFUNUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0034679999999999997,
+      "stop": 0.003510703916554618
+    },
+    "ZROUSDT:5m": {
+      "sentAt": "2026-11-13T04:53:24.178Z",
+      "symbol": "ZROUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.5457,
+      "stop": 1.5805245129528815
     }
   }
 }

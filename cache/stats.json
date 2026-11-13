@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T04:48:17.073Z",
+  "lastUpdated": "2026-11-13T04:53:25.681Z",
   "allTime": {
-    "total": 39,
+    "total": 45,
     "tp1Hit": 28,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 11,
-    "active": 0,
+    "active": 6,
     "tp1Rate": 71.8,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 65.2
     },
     "bearish": {
-      "total": 16,
+      "total": 22,
       "tp1Hit": 13,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1054,6 +1054,156 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.09650999999999998
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0034679999999999997,
+      "stop": 0.0035144738759241454,
+      "tp1": 0.003428,
+      "zoneLow": 0.00346,
+      "zoneHigh": 0.003476,
+      "signalCandleTime": 1794536400000,
+      "rr1": 0.8606986011945151,
+      "highs": null,
+      "lows": [
+        0.003375,
+        0.003415
+      ],
+      "sentAt": "2026-11-13T04:53:07.225Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T04:53:07.225Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "RVNUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0012245,
+      "stop": 0.0012399837212551264,
+      "tp1": 0.001212,
+      "zoneLow": 0.001222,
+      "zoneHigh": 0.001227,
+      "signalCandleTime": 1794536400000,
+      "rr1": 0.8072994723966164,
+      "highs": null,
+      "lows": [
+        0.001193,
+        0.001209
+      ],
+      "sentAt": "2026-11-13T04:53:10.620Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T04:53:10.620Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ANIMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.002314,
+      "stop": 0.0023321784986592153,
+      "tp1": 0.0023039999999999996,
+      "zoneLow": 0.002312,
+      "zoneHigh": 0.002316,
+      "signalCandleTime": 1794536400000,
+      "rr1": 0.5501004338953561,
+      "highs": null,
+      "lows": [
+        0.002304,
+        0.002312
+      ],
+      "sentAt": "2026-11-13T04:53:13.976Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T04:53:13.976Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "BATUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.12190000000000001,
+      "stop": 0.12334244524227529,
+      "tp1": 0.12050000000000002,
+      "zoneLow": 0.12162,
+      "zoneHigh": 0.12218,
+      "signalCandleTime": 1794539100000,
+      "rr1": 0.9705741049772213,
+      "highs": null,
+      "lows": [
+        0.12131,
+        0.12173
+      ],
+      "sentAt": "2026-11-13T04:53:17.348Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T04:53:17.348Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "PUMPFUNUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0034679999999999997,
+      "stop": 0.003510703916554618,
+      "tp1": 0.0034330000000000007,
+      "zoneLow": 0.003461,
+      "zoneHigh": 0.003475,
+      "signalCandleTime": 1794536400000,
+      "rr1": 0.8195969555915137,
+      "highs": null,
+      "lows": [
+        0.003386,
+        0.003414
+      ],
+      "sentAt": "2026-11-13T04:53:20.835Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T04:53:20.835Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ZROUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 1.5457,
+      "stop": 1.5805245129528815,
+      "tp1": 1.4772000000000003,
+      "zoneLow": 1.532,
+      "zoneHigh": 1.5594,
+      "signalCandleTime": 1794543000000,
+      "rr1": 1.9670052555417552,
+      "highs": null,
+      "lows": [
+        1.5297,
+        1.552
+      ],
+      "sentAt": "2026-11-13T04:53:24.178Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T04:53:24.178Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -1329,6 +1479,48 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T03:23:16.991Z"
+    },
+    "PUMPUSDT:5m:2026-11-13T04:53:07.225Z": {
+      "symbol": "PUMPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T04:53:07.225Z"
+    },
+    "RVNUSDT:5m:2026-11-13T04:53:10.620Z": {
+      "symbol": "RVNUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T04:53:10.620Z"
+    },
+    "ANIMEUSDT:5m:2026-11-13T04:53:13.976Z": {
+      "symbol": "ANIMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T04:53:13.976Z"
+    },
+    "BATUSDT:5m:2026-11-13T04:53:17.348Z": {
+      "symbol": "BATUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T04:53:17.348Z"
+    },
+    "PUMPFUNUSDT:5m:2026-11-13T04:53:20.835Z": {
+      "symbol": "PUMPFUNUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T04:53:20.835Z"
+    },
+    "ZROUSDT:5m:2026-11-13T04:53:24.178Z": {
+      "symbol": "ZROUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T04:53:24.178Z"
     }
   }
 }

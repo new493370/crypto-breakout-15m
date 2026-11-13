@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T02:08:12.458Z",
+  "lastUpdated": "2026-11-13T02:13:08.325Z",
   "signals": {
     "QQQSTOCKUSDT:5m": {
       "sentAt": "2026-11-12T21:03:17.253Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 0.0052815,
       "stop": 0.005327419592626541
+    },
+    "ENJUSDT:5m": {
+      "sentAt": "2026-11-13T02:13:06.823Z",
+      "symbol": "ENJUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.021269999999999997,
+      "stop": 0.021167248924803594
     }
   }
 }

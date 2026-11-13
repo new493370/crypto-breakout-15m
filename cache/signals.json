@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T03:18:04.140Z",
+  "lastUpdated": "2026-11-13T03:23:20.536Z",
   "signals": {
     "PLTRSTOCKUSDT:5m": {
       "sentAt": "2026-11-12T21:33:08.313Z",
@@ -162,6 +162,15 @@
       "score": null,
       "entry": 0.097,
       "stop": 0.09621189143562071
+    },
+    "ARKMUSDT:5m": {
+      "sentAt": "2026-11-13T03:23:16.992Z",
+      "symbol": "ARKMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.095135,
+      "stop": 0.09393931555941143
     }
   }
 }

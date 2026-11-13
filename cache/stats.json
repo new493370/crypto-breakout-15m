@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T00:03:25.918Z",
+  "lastUpdated": "2026-11-13T00:08:24.921Z",
   "allTime": {
     "total": 29,
     "tp1Hit": 16,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 5,
-    "active": 8,
-    "tp1Rate": 76.2,
+    "stopped": 7,
+    "active": 6,
+    "tp1Rate": 69.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 23.8
+    "stopRate": 30.4
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 4,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 1,
-      "tp1Rate": 80
+      "stopped": 3,
+      "tp1Rate": 57.1
     }
   },
   "recentSignals": [
@@ -294,7 +294,7 @@
       "sentAt": "2026-11-12T16:43:20.661Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:01:13.151Z",
+      "statusUpdatedAt": "2026-11-13T00:06:14.521Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -605,7 +605,7 @@
       "sentAt": "2026-11-12T22:03:08.371Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:01:13.151Z",
+      "statusUpdatedAt": "2026-11-13T00:06:14.521Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -628,13 +628,14 @@
         1.034
       ],
       "sentAt": "2026-11-12T22:18:05.952Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:01:13.151Z",
+      "statusUpdatedAt": "2026-11-13T00:06:18.204Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 1.0434212345018221
     },
     {
       "symbol": "TRUMPUSDT",
@@ -655,7 +656,7 @@
       "sentAt": "2026-11-12T22:18:09.293Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:01:13.151Z",
+      "statusUpdatedAt": "2026-11-13T00:06:18.204Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -678,13 +679,14 @@
         0.10155
       ],
       "sentAt": "2026-11-12T22:18:14.715Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:01:13.151Z",
+      "statusUpdatedAt": "2026-11-13T00:06:19.943Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.10213462899309131
     },
     {
       "symbol": "FILECOINUSDT",
@@ -731,7 +733,7 @@
       "sentAt": "2026-11-12T23:23:09.268Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:01:13.151Z",
+      "statusUpdatedAt": "2026-11-13T00:06:19.943Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -756,7 +758,7 @@
       "sentAt": "2026-11-12T23:48:12.989Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:01:13.151Z",
+      "statusUpdatedAt": "2026-11-13T00:06:19.943Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -781,7 +783,7 @@
       "sentAt": "2026-11-13T00:03:22.255Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:03:22.255Z",
+      "statusUpdatedAt": "2026-11-13T00:06:19.943Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

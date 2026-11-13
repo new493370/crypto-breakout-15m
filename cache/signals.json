@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T00:03:25.917Z",
+  "lastUpdated": "2026-11-13T00:08:24.920Z",
   "signals": {
-    "ETHUSDT:5m": {
-      "sentAt": "2026-11-12T18:08:18.845Z",
-      "symbol": "ETHUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 2011.82,
-      "stop": 2008.184
-    },
     "AVNTUSDT:5m": {
       "sentAt": "2026-11-12T18:18:23.016Z",
       "symbol": "AVNTUSDT",

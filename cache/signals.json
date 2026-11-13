@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T06:18:02.681Z",
+  "lastUpdated": "2026-11-13T06:23:16.857Z",
   "signals": {
-    "BABYUSDT:5m": {
-      "sentAt": "2026-11-13T00:18:14.621Z",
-      "symbol": "BABYUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.009578,
-      "stop": 0.0095355279082645
-    },
-    "PNUTUSDT:5m": {
-      "sentAt": "2026-11-13T00:23:16.289Z",
-      "symbol": "PNUTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.032369999999999996,
-      "stop": 0.03252132814354148
-    },
     "STABLEUSDT:5m": {
       "sentAt": "2026-11-13T00:38:22.472Z",
       "symbol": "STABLEUSDT",

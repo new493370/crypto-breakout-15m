@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T01:48:16.904Z",
+  "lastUpdated": "2026-11-13T01:53:11.354Z",
   "signals": {
-    "LDOUSDT:5m": {
-      "sentAt": "2026-11-12T19:53:06.235Z",
-      "symbol": "LDOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.30935,
-      "stop": 0.3098469050317197
-    },
     "QQQSTOCKUSDT:5m": {
       "sentAt": "2026-11-12T21:03:17.253Z",
       "symbol": "QQQSTOCKUSDT",

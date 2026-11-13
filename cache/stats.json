@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T14:38:25.485Z",
+  "lastUpdated": "2026-11-13T14:43:13.065Z",
   "allTime": {
     "total": 57,
-    "tp1Hit": 36,
+    "tp1Hit": 39,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 18,
-    "active": 3,
-    "tp1Rate": 66.7,
+    "active": 0,
+    "tp1Rate": 68.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33.3
+    "stopRate": 31.6
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 28,
-      "tp1Hit": 18,
+      "tp1Hit": 21,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 7,
-      "tp1Rate": 72
+      "tp1Rate": 75
     }
   },
   "recentSignals": [
@@ -1462,13 +1462,14 @@
         0.001231
       ],
       "sentAt": "2026-11-13T14:38:16.705Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:38:16.705Z",
+      "statusUpdatedAt": "2026-11-13T14:41:15.042Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.001229
     },
     {
       "symbol": "FUSDT",
@@ -1487,13 +1488,14 @@
         0.00236
       ],
       "sentAt": "2026-11-13T14:38:20.522Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:38:20.522Z",
+      "statusUpdatedAt": "2026-11-13T14:41:16.757Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.0023620000000000004
     },
     {
       "symbol": "KMNOUSDT",
@@ -1512,13 +1514,14 @@
         0.03031
       ],
       "sentAt": "2026-11-13T14:38:23.981Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:38:23.981Z",
+      "statusUpdatedAt": "2026-11-13T14:41:18.476Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.03017
     }
   ],
   "processedSignals": {

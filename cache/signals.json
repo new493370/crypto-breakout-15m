@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T23:34:29.764Z",
+  "lastUpdated": "2026-11-13T23:38:19.379Z",
   "signals": {
     "ZROUSDT:5m": {
       "sentAt": "2026-11-13T17:48:07.338Z",
@@ -117,6 +117,15 @@
       "score": null,
       "entry": 0.047025,
       "stop": 0.0468362131562292
+    },
+    "ZBTUSDT:5m": {
+      "sentAt": "2026-11-13T23:38:17.877Z",
+      "symbol": "ZBTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.05673,
+      "stop": 0.05645201361787893
     }
   }
 }

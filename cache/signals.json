@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T19:08:09.119Z",
+  "lastUpdated": "2026-11-13T19:13:23.368Z",
   "signals": {
-    "MONUSDT:5m": {
-      "sentAt": "2026-11-13T13:13:21.055Z",
-      "symbol": "MONUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.016370000000000003,
-      "stop": 0.016493325372189598
-    },
     "JASMYUSDT:5m": {
       "sentAt": "2026-11-13T13:13:24.756Z",
       "symbol": "JASMYUSDT",
@@ -153,6 +144,24 @@
       "score": null,
       "entry": 0.016259000000000003,
       "stop": 0.016370867483257064
+    },
+    "REUSDT:5m": {
+      "sentAt": "2026-11-13T19:13:18.365Z",
+      "symbol": "REUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.253035,
+      "stop": 0.25117339075892775
+    },
+    "INJUSDT:5m": {
+      "sentAt": "2026-11-13T19:13:21.867Z",
+      "symbol": "INJUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 8.095500000000001,
+      "stop": 8.012565621332355
     }
   }
 }

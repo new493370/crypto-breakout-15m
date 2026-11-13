@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T02:33:17.163Z",
+  "lastUpdated": "2026-11-13T02:38:19.220Z",
   "allTime": {
-    "total": 36,
+    "total": 37,
     "tp1Hit": 23,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 10,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 69.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 66.7
     },
     "bearish": {
-      "total": 15,
+      "total": 16,
       "tp1Hit": 9,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -892,7 +892,7 @@
       "sentAt": "2026-11-13T01:38:23.949Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:31:07.985Z",
+      "statusUpdatedAt": "2026-11-13T02:36:07.514Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -943,7 +943,7 @@
       "sentAt": "2026-11-13T02:28:21.276Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:31:07.985Z",
+      "statusUpdatedAt": "2026-11-13T02:36:07.515Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -968,7 +968,32 @@
       "sentAt": "2026-11-13T02:28:24.737Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:31:07.985Z",
+      "statusUpdatedAt": "2026-11-13T02:36:07.515Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "2ZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.01866,
+      "stop": 0.01878885856844516,
+      "tp1": 0.018510000000000006,
+      "zoneLow": 0.01863,
+      "zoneHigh": 0.01869,
+      "signalCandleTime": 1794537000000,
+      "rr1": 1.164066944169332,
+      "highs": null,
+      "lows": [
+        0.01855,
+        0.01864
+      ],
+      "sentAt": "2026-11-13T02:38:17.716Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T02:38:17.716Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1227,6 +1252,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-13T02:28:24.737Z"
+    },
+    "2ZUSDT:5m:2026-11-13T02:38:17.716Z": {
+      "symbol": "2ZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T02:38:17.716Z"
     }
   }
 }

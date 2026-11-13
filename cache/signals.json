@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T02:33:17.162Z",
+  "lastUpdated": "2026-11-13T02:38:19.218Z",
   "signals": {
     "QQQSTOCKUSDT:5m": {
       "sentAt": "2026-11-12T21:03:17.253Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.020749999999999998,
       "stop": 0.02086843192850082
+    },
+    "2ZUSDT:5m": {
+      "sentAt": "2026-11-13T02:38:17.716Z",
+      "symbol": "2ZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.01866,
+      "stop": 0.01878885856844516
     }
   }
 }

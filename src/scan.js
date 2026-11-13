@@ -14,26 +14,26 @@ import { calculateATR } from "./indicators.js";
 import { formatAnalysis, formatSignalResult } from "./format.js";
 import { updateSignalStatus, computeStats } from "./tracker.js";
 
-const SCAN_TIMEFRAMES = [CONFIG.TIMEFRAME];
-const CONCURRENCY = 5;
-const MESSAGE_DELAY_MS = 1500;
-const TOTAL_TIMEOUT_MS = 55 * 60 * 1000;
-const MAX_RECENT_SIGNALS = 200;
-const TELEGRAM_TIMEOUT_MS = 15000;
+const SCAN_TIMEFRAMES = CONFIG.SCAN_TIMEFRAMES;
+const CONCURRENCY = CONFIG.CONCURRENCY;
+const MESSAGE_DELAY_MS = CONFIG.MESSAGE_DELAY_MS;
+const TOTAL_TIMEOUT_MS = CONFIG.TOTAL_TIMEOUT_MS;
+const MAX_RECENT_SIGNALS = CONFIG.MAX_RECENT_SIGNALS;
+const TELEGRAM_TIMEOUT_MS = CONFIG.TELEGRAM_TIMEOUT_MS;
 
-const HOURLY_TIMEFRAME = "1h";
-const HOURLY_ATR_PERIOD = 14;
-const HOURLY_MIN_CANDLES = 30;
-const HOURLY_SWING_STRENGTH = 2;
-const HOURLY_IMPULSE_LOOKBACK = 5;
-const HOURLY_IMPULSE_ATR_MULTIPLIER = 2;
-const HOURLY_REVERSAL_LOOKBACK = 3;
-const HOURLY_REVERSAL_BODY_ATR = 0.5;
+const HOURLY_TIMEFRAME = CONFIG.HOURLY_TIMEFRAME;
+const HOURLY_ATR_PERIOD = CONFIG.HOURLY_ATR_PERIOD;
+const HOURLY_MIN_CANDLES = CONFIG.HOURLY_MIN_CANDLES;
+const HOURLY_SWING_STRENGTH = CONFIG.HOURLY_SWING_STRENGTH;
+const HOURLY_IMPULSE_LOOKBACK = CONFIG.HOURLY_IMPULSE_LOOKBACK;
+const HOURLY_IMPULSE_ATR_MULTIPLIER = CONFIG.HOURLY_IMPULSE_ATR_MULTIPLIER;
+const HOURLY_REVERSAL_LOOKBACK = CONFIG.HOURLY_REVERSAL_LOOKBACK;
+const HOURLY_REVERSAL_BODY_ATR = CONFIG.HOURLY_REVERSAL_BODY_ATR;
 
-const STICKER_SIGNAL = "CAACAgQAAxkBAAFWjQ1q2xyIAAF8RW6SvzA1h0AiPVmvNMIAAtYmAAJDOdlS8xWIfVV7lSo9BA";
-const STICKER_UPDATE = "CAACAgQAAxkBAAFWjMVq2xZDZ25oGXqwmgaGPxZHzvL-AAPuHwACUaTYUjhywde8jk-nPQQ";
+const STICKER_SIGNAL = CONFIG.STICKER_SIGNAL;
+const STICKER_UPDATE = CONFIG.STICKER_UPDATE;
 
-const DEBUG_SYMBOLS = ["BTCUSDT", "DOGEUSDT", "ETHUSDT", "XRPUSDT"];
+const DEBUG_SYMBOLS = CONFIG.DEBUG_SYMBOLS;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -635,7 +635,10 @@ async function main() {
     const { symbol, timeframe, analysis } = item;
 
     try {
-      const passesHourly = true;
+      const passesHourly = await passesHourlyFilter(
+        symbol,
+        analysis.direction
+      );
 
       if (!passesHourly) {
         continue;

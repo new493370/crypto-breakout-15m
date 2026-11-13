@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T13:33:13.413Z",
+  "lastUpdated": "2026-11-13T13:38:09.943Z",
   "allTime": {
     "total": 54,
     "tp1Hit": 36,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 15,
-    "active": 3,
-    "tp1Rate": 70.6,
+    "stopped": 17,
+    "active": 1,
+    "tp1Rate": 67.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 29.4
+    "stopRate": 32.1
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 18,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 5,
-      "tp1Rate": 78.3
+      "stopped": 7,
+      "tp1Rate": 72
     }
   },
   "recentSignals": [
@@ -1386,7 +1386,7 @@
       "sentAt": "2026-11-13T12:53:07.979Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T13:31:10.809Z",
+      "statusUpdatedAt": "2026-11-13T13:36:09.406Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1409,13 +1409,14 @@
         0.01635
       ],
       "sentAt": "2026-11-13T13:13:21.055Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T13:31:10.809Z",
+      "statusUpdatedAt": "2026-11-13T13:36:13.046Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.016493325372189598
     },
     {
       "symbol": "JASMYUSDT",
@@ -1434,13 +1435,14 @@
         0.003417
       ],
       "sentAt": "2026-11-13T13:13:24.756Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T13:31:10.809Z",
+      "statusUpdatedAt": "2026-11-13T13:36:14.736Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.0034443719586791472
     }
   ],
   "processedSignals": {

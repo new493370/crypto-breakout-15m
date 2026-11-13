@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T05:18:01.509Z",
+  "lastUpdated": "2026-11-13T05:23:26.228Z",
   "signals": {
-    "MERLUSDT:5m": {
-      "sentAt": "2026-11-12T23:23:09.269Z",
-      "symbol": "MERLUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.029695,
-      "stop": 0.029926471423801247
-    },
     "METUSDT:5m": {
       "sentAt": "2026-11-12T23:48:12.989Z",
       "symbol": "METUSDT",

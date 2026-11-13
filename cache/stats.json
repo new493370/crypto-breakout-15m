@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T19:43:21.571Z",
+  "lastUpdated": "2026-11-13T19:48:26.233Z",
   "allTime": {
-    "total": 72,
+    "total": 73,
     "tp1Hit": 49,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 19,
-    "active": 4,
+    "active": 5,
     "tp1Rate": 72.1,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 65.6
     },
     "bearish": {
-      "total": 37,
+      "total": 38,
       "tp1Hit": 28,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1776,7 +1776,7 @@
       "sentAt": "2026-11-13T16:33:20.626Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T19:41:11.585Z",
+      "statusUpdatedAt": "2026-11-13T19:46:11.381Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1801,7 +1801,7 @@
       "sentAt": "2026-11-13T17:48:07.338Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T19:41:11.585Z",
+      "statusUpdatedAt": "2026-11-13T19:46:11.381Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1826,7 +1826,7 @@
       "sentAt": "2026-11-13T19:08:05.937Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T19:41:11.585Z",
+      "statusUpdatedAt": "2026-11-13T19:46:11.381Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1851,7 +1851,7 @@
       "sentAt": "2026-11-13T19:13:18.364Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T19:41:11.585Z",
+      "statusUpdatedAt": "2026-11-13T19:46:11.381Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1908,6 +1908,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 1.1199999999999997
+    },
+    {
+      "symbol": "CHZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.010870000000000001,
+      "stop": 0.010924981444849957,
+      "tp1": 0.010819999999999998,
+      "zoneLow": 0.01086,
+      "zoneHigh": 0.01088,
+      "signalCandleTime": 1794598800000,
+      "rr1": 0.9093977092899715,
+      "highs": null,
+      "lows": [
+        0.01077,
+        0.01085
+      ],
+      "sentAt": "2026-11-13T19:48:22.853Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T19:48:22.853Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -2414,6 +2439,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-13T19:18:09.158Z"
+    },
+    "CHZUSDT:5m:2026-11-13T19:48:22.853Z": {
+      "symbol": "CHZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T19:48:22.853Z"
     }
   }
 }

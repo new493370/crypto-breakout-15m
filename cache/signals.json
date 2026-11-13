@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T00:18:21.838Z",
+  "lastUpdated": "2026-11-13T00:23:22.867Z",
   "signals": {
-    "AVNTUSDT:5m": {
-      "sentAt": "2026-11-12T18:18:23.016Z",
-      "symbol": "AVNTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.08052,
-      "stop": 0.08035199999999999
-    },
     "JUPUSDT:5m": {
       "sentAt": "2026-11-12T18:28:19.592Z",
       "symbol": "JUPUSDT",
@@ -162,6 +153,15 @@
       "score": null,
       "entry": 0.009578,
       "stop": 0.0095355279082645
+    },
+    "PNUTUSDT:5m": {
+      "sentAt": "2026-11-13T00:23:16.289Z",
+      "symbol": "PNUTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.032369999999999996,
+      "stop": 0.03252132814354148
     }
   }
 }

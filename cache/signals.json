@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T03:03:14.350Z",
+  "lastUpdated": "2026-11-13T03:08:14.983Z",
   "signals": {
-    "QQQSTOCKUSDT:5m": {
-      "sentAt": "2026-11-12T21:03:17.253Z",
-      "symbol": "QQQSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 688.085,
-      "stop": 686.4858987311195
-    },
     "PLTRSTOCKUSDT:5m": {
       "sentAt": "2026-11-12T21:33:08.313Z",
       "symbol": "PLTRSTOCKUSDT",

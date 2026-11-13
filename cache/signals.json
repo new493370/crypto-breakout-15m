@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T22:42:11.567Z",
+  "lastUpdated": "2026-11-13T22:46:32.120Z",
   "signals": {
     "ZROUSDT:5m": {
       "sentAt": "2026-11-13T17:48:07.338Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.048420000000000005,
       "stop": 0.04815365409128843
+    },
+    "THETAUSDT:5m": {
+      "sentAt": "2026-11-13T22:46:30.618Z",
+      "symbol": "THETAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1402,
+      "stop": 0.13918827337320797
     }
   }
 }

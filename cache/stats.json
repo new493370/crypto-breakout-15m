@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T22:42:11.568Z",
+  "lastUpdated": "2026-11-13T22:46:32.121Z",
   "allTime": {
-    "total": 75,
+    "total": 76,
     "tp1Hit": 53,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 21,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 71.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 36,
+      "total": 37,
       "tp1Hit": 22,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1984,7 +1984,32 @@
       "sentAt": "2026-11-13T22:38:14.961Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T22:40:14.973Z",
+      "statusUpdatedAt": "2026-11-13T22:44:15.332Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "THETAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.1402,
+      "stop": 0.13918827337320797,
+      "tp1": 0.14170000000000005,
+      "zoneLow": 0.1399,
+      "zoneHigh": 0.1405,
+      "signalCandleTime": 1794609600000,
+      "rr1": 1.4826139396530904,
+      "highs": [
+        0.1414,
+        0.1408
+      ],
+      "lows": null,
+      "sentAt": "2026-11-13T22:46:30.618Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T22:46:30.618Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2516,6 +2541,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T22:38:14.961Z"
+    },
+    "THETAUSDT:5m:2026-11-13T22:46:30.618Z": {
+      "symbol": "THETAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-13T22:46:30.618Z"
     }
   }
 }

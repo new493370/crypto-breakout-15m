@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T20:03:09.114Z",
+  "lastUpdated": "2026-11-13T20:08:10.598Z",
   "allTime": {
     "total": 73,
-    "tp1Hit": 49,
+    "tp1Hit": 50,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 19,
-    "active": 5,
-    "tp1Rate": 72.1,
+    "active": 4,
+    "tp1Rate": 72.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.9
+    "stopRate": 27.5
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 35,
-      "tp1Hit": 21,
+      "tp1Hit": 22,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 11,
-      "tp1Rate": 65.6
+      "tp1Rate": 66.7
     },
     "bearish": {
       "total": 38,
@@ -1776,7 +1776,7 @@
       "sentAt": "2026-11-13T16:33:20.626Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T20:01:19.804Z",
+      "statusUpdatedAt": "2026-11-13T20:06:17.688Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1801,7 +1801,7 @@
       "sentAt": "2026-11-13T17:48:07.338Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T20:01:19.804Z",
+      "statusUpdatedAt": "2026-11-13T20:06:17.688Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1826,7 +1826,7 @@
       "sentAt": "2026-11-13T19:08:05.937Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T20:01:19.804Z",
+      "statusUpdatedAt": "2026-11-13T20:06:17.688Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1849,13 +1849,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T19:13:18.364Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T20:01:19.804Z",
+      "statusUpdatedAt": "2026-11-13T20:06:21.496Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.25556
     },
     {
       "symbol": "INJUSDT",
@@ -1928,7 +1929,7 @@
       "sentAt": "2026-11-13T19:48:22.853Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T20:01:19.804Z",
+      "statusUpdatedAt": "2026-11-13T20:06:21.496Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

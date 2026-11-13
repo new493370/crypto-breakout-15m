@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T18:53:04.022Z",
+  "lastUpdated": "2026-11-13T18:58:10.331Z",
   "signals": {
-    "CNPYUSDT:5m": {
-      "sentAt": "2026-11-13T12:53:07.980Z",
-      "symbol": "CNPYUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.11705,
-      "stop": 0.11575079426028644
-    },
     "MONUSDT:5m": {
       "sentAt": "2026-11-13T13:13:21.055Z",
       "symbol": "MONUSDT",

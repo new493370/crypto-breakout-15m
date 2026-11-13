@@ -203,20 +203,16 @@ function detectPivot(candles, index, left, right) {
 
     const candle = candles[i];
 
-    if (
-      i < index
-        ? candle.high >= current.high
-        : candle.high > current.high
-    ) {
+    if (candle.high > current.high) {
       isHigh = false;
+    } else if (candle.high === current.high) {
+      if (i > index) isHigh = false;
     }
 
-    if (
-      i < index
-        ? candle.low <= current.low
-        : candle.low < current.low
-    ) {
+    if (candle.low < current.low) {
       isLow = false;
+    } else if (candle.low === current.low) {
+      if (i > index) isLow = false;
     }
 
     if (!isHigh && !isLow) break;
@@ -235,15 +231,39 @@ function detectPivot(candles, index, left, right) {
 }
 
 function filterAlternatingSwings(swings, minDistance, minDifference) {
+  if (!Array.isArray(swings) || swings.length === 0) {
+    return [];
+  }
+
+  const distance = Number.isFinite(minDistance)
+    ? Math.max(1, minDistance)
+    : 1;
+
+  const difference = Number.isFinite(minDifference)
+    ? Math.max(0, minDifference)
+    : 0;
+
+  const sorted = [...swings]
+    .filter(item =>
+      item &&
+      (item.type === "high" || item.type === "low") &&
+      Number.isInteger(item.index) &&
+      Number.isFinite(item.price) &&
+      item.price > 0
+    )
+    .sort((a, b) => a.index - b.index);
+
   const result = [];
 
-  for (const current of swings) {
+  for (const current of sorted) {
     const last = result[result.length - 1];
 
     if (!last) {
       result.push(current);
       continue;
     }
+
+    if (current.index <= last.index) continue;
 
     if (current.type === last.type) {
       const moreExtreme = current.type === "high"
@@ -254,22 +274,29 @@ function filterAlternatingSwings(swings, minDistance, minDifference) {
 
       const previous = result[result.length - 2];
 
-      const validReplacement = !previous || (
-        current.index - previous.index >= minDistance &&
-        getPercentDifference(previous.price, current.price) >= minDifference
-      );
+      if (previous) {
+        const enoughDistance =
+          current.index - previous.index >= distance;
 
-      if (validReplacement) {
-        result[result.length - 1] = current;
+        const enoughDifference =
+          getPercentDifference(previous.price, current.price) >= difference;
+
+        if (!enoughDistance || !enoughDifference) {
+          continue;
+        }
       }
 
+      result[result.length - 1] = current;
       continue;
     }
 
-    if (
-      current.index - last.index < minDistance ||
-      getPercentDifference(last.price, current.price) < minDifference
-    ) {
+    const enoughDistance =
+      current.index - last.index >= distance;
+
+    const enoughDifference =
+      getPercentDifference(last.price, current.price) >= difference;
+
+    if (!enoughDistance || !enoughDifference) {
       continue;
     }
 
@@ -685,8 +712,9 @@ export function detectSwings(
   }
 
   const rawSwings = [];
+  const startIndex = Math.max(left, atrPeriod + 1);
 
-  for (let i = left; i < candles.length - right; i++) {
+  for (let i = startIndex; i < candles.length - right; i++) {
     const pivot = detectPivot(candles, i, left, right);
 
     if (!pivot) continue;
@@ -883,48 +911,14 @@ export function detectBreakout(
   }
 
   const atrPeriod = getSafeOption(options, "atrPeriod", "ATR_PERIOD", 1);
-  const minBodyRatio = getSafeOption(
-    options,
-    "minBodyRatio",
-    "BREAKOUT_MIN_BODY_RATIO"
-  );
-  const minClosePosition = getSafeOption(
-    options,
-    "minClosePosition",
-    "BREAKOUT_MIN_CLOSE_POSITION"
-  );
-  const breakoutBufferAtr = getSafeOption(
-    options,
-    "breakoutBufferAtr",
-    "BREAKOUT_BUFFER_ATR"
-  );
-  const minBodyAtr = getSafeOption(
-    options,
-    "minBodyAtr",
-    "BREAKOUT_MIN_BODY_ATR"
-  );
-  const bodyStrengthWeight = getSafeOption(
-    options,
-    "bodyStrengthWeight",
-    "BREAKOUT_BODY_STRENGTH_WEIGHT"
-  );
-  const atrStrengthWeight = getSafeOption(
-    options,
-    "atrStrengthWeight",
-    "BREAKOUT_ATR_STRENGTH_WEIGHT"
-  );
-  const maxBodyAtr = getSafeOption(
-    options,
-    "maxBodyAtr",
-    "BREAKOUT_MAX_BODY_ATR",
-    0.000001
-  );
-  const confirmationBars = getSafeOption(
-    options,
-    "confirmationBars",
-    "BREAKOUT_CONFIRMATION_BARS",
-    1
-  );
+  const minBodyRatio = getSafeOption(options, "minBodyRatio", "BREAKOUT_MIN_BODY_RATIO");
+  const minClosePosition = getSafeOption(options, "minClosePosition", "BREAKOUT_MIN_CLOSE_POSITION");
+  const breakoutBufferAtr = getSafeOption(options, "breakoutBufferAtr", "BREAKOUT_BUFFER_ATR");
+  const minBodyAtr = getSafeOption(options, "minBodyAtr", "BREAKOUT_MIN_BODY_ATR");
+  const bodyStrengthWeight = getSafeOption(options, "bodyStrengthWeight", "BREAKOUT_BODY_STRENGTH_WEIGHT");
+  const atrStrengthWeight = getSafeOption(options, "atrStrengthWeight", "BREAKOUT_ATR_STRENGTH_WEIGHT");
+  const maxBodyAtr = getSafeOption(options, "maxBodyAtr", "BREAKOUT_MAX_BODY_ATR", 0.000001);
+  const confirmationBars = getSafeOption(options, "confirmationBars", "BREAKOUT_CONFIRMATION_BARS", 1);
 
   const totalWeight = bodyStrengthWeight + atrStrengthWeight;
 
@@ -950,16 +944,24 @@ export function detectBreakout(
     return null;
   }
 
+  const lastCandidateIndex = candles.length - confirmationBars;
+
   let latestBreakout = null;
 
-  for (let i = startIndex; i < candles.length; i++) {
-    const candle = candles[i];
-
-    if (!isValidTimeSequence(candles, i - confirmationBars, i)) {
+  for (let i = startIndex; i <= lastCandidateIndex; i++) {
+    if (
+      !isValidTimeSequence(
+        candles,
+        i - 1,
+        i + confirmationBars - 1
+      )
+    ) {
       continue;
     }
 
+    const candle = candles[i];
     const previous = candles[i - 1];
+
     const previousLine = getTrendlinePrice(trendline, i - 1);
     const currentLine = getTrendlinePrice(trendline, i);
 
@@ -1006,7 +1008,7 @@ export function detectBreakout(
 
     let confirmed = true;
 
-    for (let j = i - confirmationBars + 1; j <= i; j++) {
+    for (let j = i + 1; j < i + confirmationBars; j++) {
       const confirmationCandle = candles[j];
       const confirmationLine = getTrendlinePrice(trendline, j);
 

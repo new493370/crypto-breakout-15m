@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T17:28:16.369Z",
+  "lastUpdated": "2026-11-13T17:33:13.426Z",
   "signals": {
-    "AIXBTUSDT:5m": {
-      "sentAt": "2026-11-13T11:28:25.230Z",
-      "symbol": "AIXBTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.014125,
-      "stop": 0.014075465042331257
-    },
-    "SUSDT:5m": {
-      "sentAt": "2026-11-13T11:33:11.065Z",
-      "symbol": "SUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.037114999999999995,
-      "stop": 0.03751485677962698
-    },
     "1000BONKUSDT:5m": {
       "sentAt": "2026-11-13T11:56:01.898Z",
       "symbol": "1000BONKUSDT",

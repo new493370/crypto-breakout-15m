@@ -88,20 +88,20 @@ function getTrueRange(current, previous) {
     : null;
 }
 
-function getSafeOption(options, key, fallback, min = 0) {
-  const value = options?.[key];
+function getSafeOption(options, key, configKey, min = 0) {
+  const value = options?.[key] ?? CONFIG?.[configKey];
 
   return Number.isFinite(value) && value >= min
     ? value
-    : fallback;
+    : null;
 }
 
-function getConfigNumber(key, fallback, min = 0) {
+function getConfigNumber(key, min = 0) {
   const value = CONFIG?.[key];
 
   return Number.isFinite(value) && value >= min
     ? value
-    : fallback;
+    : null;
 }
 
 function isValidTimeSequence(candles, startIndex, endIndex) {
@@ -153,8 +153,8 @@ function calculateDirectionalEfficiency(values, direction) {
   const netMovement = values[values.length - 1] - values[0];
 
   if (
-    direction === "up" && netMovement <= 0 ||
-    direction === "down" && netMovement >= 0
+    (direction === "up" && netMovement <= 0) ||
+    (direction === "down" && netMovement >= 0)
   ) {
     return 0;
   }
@@ -180,6 +180,8 @@ function validatePyramid(
     !Number.isInteger(index) ||
     !Number.isInteger(left) ||
     !Number.isInteger(right) ||
+    left < 1 ||
+    right < 2 ||
     !["high", "low"].includes(type) ||
     !Number.isFinite(atr) ||
     atr <= 0
@@ -198,60 +200,60 @@ function validatePyramid(
     return null;
   }
 
-  const apex = candles[index];
-
   const minLeftLegAtr = getSafeOption(
     options,
     "minLeftLegAtr",
-    getConfigNumber("PIVOT_MIN_LEFT_LEG_ATR", 0.5),
-    0
+    "PIVOT_MIN_LEFT_LEG_ATR"
   );
 
   const minRightLegAtr = getSafeOption(
     options,
     "minRightLegAtr",
-    getConfigNumber("PIVOT_MIN_RIGHT_RETRACEMENT_ATR", 0.8),
-    0
+    "PIVOT_MIN_RIGHT_RETRACEMENT_ATR"
   );
 
   const minSideRatio = getSafeOption(
     options,
     "minSideRatio",
-    getConfigNumber("PIVOT_MIN_SIDE_RATIO", 0.25),
-    0
+    "PIVOT_MIN_SIDE_RATIO"
   );
 
   const maxSideRatio = getSafeOption(
     options,
     "maxSideRatio",
-    getConfigNumber("PIVOT_MAX_SIDE_RATIO", 4),
-    0
+    "PIVOT_MAX_SIDE_RATIO"
   );
 
   const maxApexRangeAtr = getSafeOption(
     options,
     "maxApexRangeAtr",
-    getConfigNumber("PIVOT_MAX_APEX_RANGE_ATR", 2.5),
-    0
+    "PIVOT_MAX_APEX_RANGE_ATR"
   );
 
   const minProminenceAtr = getSafeOption(
     options,
     "minProminenceAtr",
-    getConfigNumber("PIVOT_MIN_PROMINENCE_ATR", 0.05),
-    0
+    "PIVOT_MIN_PROMINENCE_ATR"
   );
 
   const minDirectionalEfficiency = getSafeOption(
     options,
     "minDirectionalEfficiency",
-    getConfigNumber("PIVOT_MIN_DIRECTIONAL_EFFICIENCY", 0.25),
-    0
+    "PIVOT_MIN_DIRECTIONAL_EFFICIENCY"
   );
 
   if (
+    [
+      minLeftLegAtr,
+      minRightLegAtr,
+      minSideRatio,
+      maxSideRatio,
+      maxApexRangeAtr,
+      minProminenceAtr,
+      minDirectionalEfficiency
+    ].some(value => value === null) ||
     minSideRatio <= 0 ||
-    maxSideRatio < minSideRatio ||
+    maxSideRatio < 1 ||
     maxApexRangeAtr <= 0 ||
     minDirectionalEfficiency > 1
   ) {
@@ -260,7 +262,7 @@ function validatePyramid(
 
   const leftCandles = candles.slice(startIndex, index);
   const rightCandles = candles.slice(index + 1, endIndex + 1);
-
+  const apex = candles[index];
   const apexRange = cRange(apex);
 
   if (
@@ -282,14 +284,6 @@ function validatePyramid(
   if (type === "high") {
     price = apex.high;
 
-    const highestLeftNeighbor = Math.max(
-      ...leftCandles.map(c => c.high)
-    );
-
-    const highestRightNeighbor = Math.max(
-      ...rightCandles.map(c => c.high)
-    );
-
     if (
       leftCandles.some(c => c.high >= price) ||
       rightCandles.some(c => c.high >= price)
@@ -297,10 +291,12 @@ function validatePyramid(
       return null;
     }
 
-    prominence = price - Math.max(
-      highestLeftNeighbor,
-      highestRightNeighbor
+    const highestNeighbor = Math.max(
+      ...leftCandles.map(c => c.high),
+      ...rightCandles.map(c => c.high)
     );
+
+    prominence = price - highestNeighbor;
 
     leftLeg = price - leftCandles[0].close;
     rightLeg = price - rightCandles[rightCandles.length - 1].close;
@@ -320,14 +316,6 @@ function validatePyramid(
   } else {
     price = apex.low;
 
-    const lowestLeftNeighbor = Math.min(
-      ...leftCandles.map(c => c.low)
-    );
-
-    const lowestRightNeighbor = Math.min(
-      ...rightCandles.map(c => c.low)
-    );
-
     if (
       leftCandles.some(c => c.low <= price) ||
       rightCandles.some(c => c.low <= price)
@@ -335,10 +323,12 @@ function validatePyramid(
       return null;
     }
 
-    prominence = Math.min(
-      lowestLeftNeighbor,
-      lowestRightNeighbor
-    ) - price;
+    const lowestNeighbor = Math.min(
+      ...leftCandles.map(c => c.low),
+      ...rightCandles.map(c => c.low)
+    );
+
+    prominence = lowestNeighbor - price;
 
     leftLeg = leftCandles[0].close - price;
     rightLeg = rightCandles[rightCandles.length - 1].close - price;
@@ -416,7 +406,10 @@ function validatePyramid(
   };
 }
 
-export function calculateATR(candles, period = 14) {
+export function calculateATR(
+  candles,
+  period = CONFIG.ATR_PERIOD
+) {
   if (
     !Array.isArray(candles) ||
     !Number.isInteger(period) ||
@@ -480,13 +473,25 @@ export function detectSwings(
     return { highs: [], lows: [] };
   }
 
-  const atrPeriod = getConfigNumber(
-    "PIVOT_ATR_PERIOD",
-    14,
+  const atrPeriod = getConfigNumber("PIVOT_ATR_PERIOD", 1);
+
+  if (!Number.isInteger(atrPeriod) || atrPeriod < 1) {
+    return { highs: [], lows: [] };
+  }
+
+  const minDistance = getConfigNumber(
+    "MIN_CANDLES_BETWEEN_PIVOTS",
     1
   );
 
-  if (!Number.isInteger(atrPeriod)) {
+  const minDifference = getConfigNumber(
+    "MIN_LEVEL_DIFF_PERCENT"
+  );
+
+  if (
+    minDistance === null ||
+    minDifference === null
+  ) {
     return { highs: [], lows: [] };
   }
 
@@ -548,20 +553,6 @@ export function detectSwings(
     rawSwings.push(pyramid);
   }
 
-  const minDistance = Math.max(
-    1,
-    Number.isInteger(CONFIG.MIN_CANDLES_BETWEEN_PIVOTS)
-      ? CONFIG.MIN_CANDLES_BETWEEN_PIVOTS
-      : 3
-  );
-
-  const minDifference = Math.max(
-    0,
-    Number.isFinite(CONFIG.MIN_LEVEL_DIFF_PERCENT)
-      ? CONFIG.MIN_LEVEL_DIFF_PERCENT
-      : 0.1
-  );
-
   const filtered = [];
 
   for (const current of rawSwings) {
@@ -577,21 +568,21 @@ export function detectSwings(
         ? current.price > last.price
         : current.price < last.price;
 
-      if (moreExtreme) {
-        const previous = filtered[filtered.length - 2];
+      if (!moreExtreme) continue;
 
-        const replacementIsValid = !previous ||
-          (
-            current.index - previous.index >= minDistance &&
-            getPercentDifference(
-              previous.price,
-              current.price
-            ) >= minDifference
-          );
+      const previous = filtered[filtered.length - 2];
 
-        if (replacementIsValid) {
-          filtered[filtered.length - 1] = current;
-        }
+      const replacementIsValid = !previous ||
+        (
+          current.index - previous.index >= minDistance &&
+          getPercentDifference(
+            previous.price,
+            current.price
+          ) >= minDifference
+        );
+
+      if (replacementIsValid) {
+        filtered[filtered.length - 1] = current;
       }
 
       continue;
@@ -620,17 +611,20 @@ export function detectSwings(
   };
 }
 
-export function getLatestMinorSwings(swings, count = 2) {
-  const safeCount = Number.isInteger(count) && count > 0
-    ? count
-    : 2;
+export function getLatestMinorSwings(
+  swings,
+  count = CONFIG.MINOR_SWING_COUNT
+) {
+  if (!Number.isInteger(count) || count < 1) {
+    return { highs: [], lows: [] };
+  }
 
   return {
     highs: Array.isArray(swings?.highs)
-      ? swings.highs.slice(-safeCount)
+      ? swings.highs.slice(-count)
       : [],
     lows: Array.isArray(swings?.lows)
-      ? swings.lows.slice(-safeCount)
+      ? swings.lows.slice(-count)
       : []
   };
 }
@@ -687,27 +681,20 @@ export function isValidStructure(swingA, swingB, direction) {
     return false;
   }
 
-  const minDistance = Math.max(
-    1,
-    Number.isInteger(CONFIG.MIN_SWING_DISTANCE)
-      ? CONFIG.MIN_SWING_DISTANCE
-      : 8
+  const minDistance = getConfigNumber(
+    "MIN_SWING_DISTANCE",
+    1
   );
 
-  if (swingB.index - swingA.index < minDistance) {
-    return false;
-  }
-
-  const minDifference = Math.max(
-    0,
-    Number.isFinite(CONFIG.MIN_LEVEL_DIFF_PERCENT)
-      ? CONFIG.MIN_LEVEL_DIFF_PERCENT
-      : 0.1
+  const minDifference = getConfigNumber(
+    "MIN_LEVEL_DIFF_PERCENT"
   );
 
   if (
-    getPercentDifference(swingA.price, swingB.price) <
-    minDifference
+    minDistance === null ||
+    minDifference === null ||
+    swingB.index - swingA.index < minDistance ||
+    getPercentDifference(swingA.price, swingB.price) < minDifference
   ) {
     return false;
   }
@@ -793,7 +780,6 @@ export function detectBreakout(
 ) {
   if (
     !Array.isArray(candles) ||
-    candles.length < 16 ||
     !trendline ||
     !Number.isInteger(startIndex) ||
     startIndex < 1 ||
@@ -803,25 +789,49 @@ export function detectBreakout(
     return null;
   }
 
-  const atrPeriod = options.atrPeriod ?? 14;
-  const minBodyRatio = options.minBodyRatio ?? 0.5;
-  const minClosePosition = options.minClosePosition ?? 0.7;
-  const breakoutBufferAtr = options.breakoutBufferAtr ?? 0.05;
-  const minBodyAtr = options.minBodyAtr ?? 0;
+  const atrPeriod = getSafeOption(
+    options,
+    "atrPeriod",
+    "ATR_PERIOD",
+    1
+  );
+
+  const minBodyRatio = getSafeOption(
+    options,
+    "minBodyRatio",
+    "BREAKOUT_MIN_BODY_RATIO"
+  );
+
+  const minClosePosition = getSafeOption(
+    options,
+    "minClosePosition",
+    "BREAKOUT_MIN_CLOSE_POSITION"
+  );
+
+  const breakoutBufferAtr = getSafeOption(
+    options,
+    "breakoutBufferAtr",
+    "BREAKOUT_BUFFER_ATR"
+  );
+
+  const minBodyAtr = getSafeOption(
+    options,
+    "minBodyAtr",
+    "BREAKOUT_MIN_BODY_ATR"
+  );
 
   if (
+    [
+      atrPeriod,
+      minBodyRatio,
+      minClosePosition,
+      breakoutBufferAtr,
+      minBodyAtr
+    ].some(value => value === null) ||
     !Number.isInteger(atrPeriod) ||
-    atrPeriod < 1 ||
-    !Number.isFinite(minBodyRatio) ||
-    minBodyRatio < 0 ||
     minBodyRatio > 1 ||
-    !Number.isFinite(minClosePosition) ||
     minClosePosition < 0.5 ||
-    minClosePosition > 1 ||
-    !Number.isFinite(breakoutBufferAtr) ||
-    breakoutBufferAtr < 0 ||
-    !Number.isFinite(minBodyAtr) ||
-    minBodyAtr < 0
+    minClosePosition > 1
   ) {
     return null;
   }
@@ -840,15 +850,8 @@ export function detectBreakout(
       continue;
     }
 
-    const previousLine = getTrendlinePrice(
-      trendline,
-      i - 1
-    );
-
-    const currentLine = getTrendlinePrice(
-      trendline,
-      i
-    );
+    const previousLine = getTrendlinePrice(trendline, i - 1);
+    const currentLine = getTrendlinePrice(trendline, i);
 
     if (
       previousLine === null ||
@@ -919,10 +922,13 @@ export function detectBreakout(
       linePrice: currentLine,
       atr,
       strength: clamp(
-        bodyRatio * 50 +
-        Math.min(body / atr, 2) * 25,
-        0,
-        100
+        bodyRatio * CONFIG.BREAKOUT_BODY_STRENGTH_WEIGHT +
+        Math.min(
+          body / atr,
+          CONFIG.BREAKOUT_MAX_BODY_ATR
+        ) * CONFIG.BREAKOUT_ATR_STRENGTH_WEIGHT,
+        CONFIG.STRENGTH_MIN,
+        CONFIG.STRENGTH_MAX
       ),
       confirmed: true,
       candleTime: candle.time
@@ -955,18 +961,18 @@ function getCandleRejection(candle, direction) {
   if (direction === "bullish") {
     return (
       isBull(candle) &&
-      bodyRatio >= 0.2 &&
-      closePosition >= 0.6 &&
-      lowerWick / range >= 0.2
+      bodyRatio >= CONFIG.REJECTION_MIN_BODY_RATIO &&
+      closePosition >= CONFIG.BULLISH_REJECTION_CLOSE_POSITION &&
+      lowerWick / range >= CONFIG.REJECTION_MIN_WICK_RATIO
     );
   }
 
   if (direction === "bearish") {
     return (
       isBear(candle) &&
-      bodyRatio >= 0.2 &&
-      closePosition <= 0.4 &&
-      upperWick / range >= 0.2
+      bodyRatio >= CONFIG.REJECTION_MIN_BODY_RATIO &&
+      closePosition <= CONFIG.BEARISH_REJECTION_CLOSE_POSITION &&
+      upperWick / range >= CONFIG.REJECTION_MIN_WICK_RATIO
     );
   }
 
@@ -1001,20 +1007,27 @@ export function detectFirstPullback(
   const minMoveAwayZone = getSafeOption(
     options,
     "minMoveAwayZone",
-    0.5
+    "PULLBACK_MIN_MOVE_AWAY_ZONE"
   );
 
   const minMoveAwayAtr = getSafeOption(
     options,
     "minMoveAwayAtr",
-    0.25
+    "PULLBACK_MIN_MOVE_AWAY_ATR"
   );
 
-  const atrPeriod = options.atrPeriod ?? 14;
+  const atrPeriod = getSafeOption(
+    options,
+    "atrPeriod",
+    "ATR_PERIOD",
+    1
+  );
 
   if (
-    !Number.isInteger(atrPeriod) ||
-    atrPeriod < 1
+    minMoveAwayZone === null ||
+    minMoveAwayAtr === null ||
+    atrPeriod === null ||
+    !Number.isInteger(atrPeriod)
   ) {
     return null;
   }
@@ -1038,11 +1051,7 @@ export function detectFirstPullback(
 
   let movedAway = false;
 
-  for (
-    let i = startIndex + 1;
-    i <= endIndex;
-    i++
-  ) {
+  for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
 
     if (!isValidCandle(candle)) continue;
@@ -1107,17 +1116,29 @@ function detectDisplacement(
 
   if (range <= 0) return false;
 
-  const minBodyAtr = options.minBodyAtr ?? 1.2;
-  const minBodyRatio = options.minBodyRatio ?? 0.55;
-  const minClosePosition = options.minClosePosition ?? 0.7;
+  const minBodyAtr = getSafeOption(
+    options,
+    "minBodyAtr",
+    "DISPLACEMENT_MIN_BODY_ATR"
+  );
+
+  const minBodyRatio = getSafeOption(
+    options,
+    "minBodyRatio",
+    "DISPLACEMENT_MIN_BODY_RATIO"
+  );
+
+  const minClosePosition = getSafeOption(
+    options,
+    "minClosePosition",
+    "DISPLACEMENT_MIN_CLOSE_POSITION"
+  );
 
   if (
-    !Number.isFinite(minBodyAtr) ||
-    minBodyAtr <= 0 ||
-    !Number.isFinite(minBodyRatio) ||
-    minBodyRatio < 0 ||
+    minBodyAtr === null ||
+    minBodyRatio === null ||
+    minClosePosition === null ||
     minBodyRatio > 1 ||
-    !Number.isFinite(minClosePosition) ||
     minClosePosition < 0.5 ||
     minClosePosition > 1
   ) {
@@ -1170,20 +1191,40 @@ function detectBase(
     return null;
   }
 
-  const maxBaseCandles = options.maxBaseCandles ?? 4;
-  const minBaseCandles = options.minBaseCandles ?? 1;
-  const maxRangeAtr = options.maxBaseRangeAtr ?? 1.2;
-  const maxBodyAtr = options.maxBaseBodyAtr ?? 0.65;
+  const maxBaseCandles = getSafeOption(
+    options,
+    "maxBaseCandles",
+    "BASE_MAX_CANDLES",
+    1
+  );
+
+  const minBaseCandles = getSafeOption(
+    options,
+    "minBaseCandles",
+    "BASE_MIN_CANDLES",
+    1
+  );
+
+  const maxRangeAtr = getSafeOption(
+    options,
+    "maxBaseRangeAtr",
+    "BASE_MAX_RANGE_ATR"
+  );
+
+  const maxBodyAtr = getSafeOption(
+    options,
+    "maxBaseBodyAtr",
+    "BASE_MAX_BODY_ATR"
+  );
 
   if (
+    maxBaseCandles === null ||
+    minBaseCandles === null ||
+    maxRangeAtr === null ||
+    maxBodyAtr === null ||
     !Number.isInteger(maxBaseCandles) ||
     !Number.isInteger(minBaseCandles) ||
-    minBaseCandles < 1 ||
-    maxBaseCandles < minBaseCandles ||
-    !Number.isFinite(maxRangeAtr) ||
-    maxRangeAtr <= 0 ||
-    !Number.isFinite(maxBodyAtr) ||
-    maxBodyAtr < 0
+    maxBaseCandles < minBaseCandles
   ) {
     return null;
   }
@@ -1192,7 +1233,10 @@ function detectBase(
 
   for (
     let i = endIndex;
-    i >= Math.max(0, endIndex - maxBaseCandles + 1);
+    i >= Math.max(
+      0,
+      endIndex - maxBaseCandles + 1
+    );
     i--
   ) {
     const candle = candles[i];
@@ -1258,26 +1302,46 @@ export function detectSupplyDemandZones(
 ) {
   if (
     !Array.isArray(candles) ||
-    candles.length < 20 ||
     !["bullish", "bearish"].includes(direction)
   ) {
     return [];
   }
 
-  const atrPeriod = options.atrPeriod ?? 14;
-  const maxAge = options.maxAge ?? 100;
-  const maxResults = options.maxResults ?? 10;
-  const maxZoneAtr = options.maxZoneAtr ?? 2.5;
+  const atrPeriod = getSafeOption(
+    options,
+    "atrPeriod",
+    "ATR_PERIOD",
+    1
+  );
+
+  const maxAge = getSafeOption(
+    options,
+    "maxAge",
+    "ZONE_MAX_AGE",
+    1
+  );
+
+  const maxResults = getSafeOption(
+    options,
+    "maxResults",
+    "ZONE_MAX_RESULTS",
+    1
+  );
+
+  const maxZoneAtr = getSafeOption(
+    options,
+    "maxZoneAtr",
+    "ZONE_MAX_WIDTH_ATR"
+  );
 
   if (
+    atrPeriod === null ||
+    maxAge === null ||
+    maxResults === null ||
+    maxZoneAtr === null ||
     !Number.isInteger(atrPeriod) ||
-    atrPeriod < 1 ||
     !Number.isInteger(maxAge) ||
-    maxAge < 1 ||
-    !Number.isInteger(maxResults) ||
-    maxResults < 1 ||
-    !Number.isFinite(maxZoneAtr) ||
-    maxZoneAtr <= 0
+    !Number.isInteger(maxResults)
   ) {
     return [];
   }
@@ -1307,14 +1371,7 @@ export function detectSupplyDemandZones(
       continue;
     }
 
-    if (
-      !detectDisplacement(
-        displacement,
-        atr,
-        direction,
-        options
-      )
-    ) {
+    if (!detectDisplacement(displacement, atr, direction, options)) {
       continue;
     }
 
@@ -1325,10 +1382,7 @@ export function detectSupplyDemandZones(
       options
     );
 
-    if (
-      !base ||
-      base.endIndex !== i - 1
-    ) {
+    if (!base || base.endIndex !== i - 1) {
       continue;
     }
 
@@ -1393,22 +1447,52 @@ export function detectSupplyDemandZones(
 
     if (isBroken) continue;
 
-    const displacementStrength = (
-      cBody(displacement) / atr
+    const displacementStrength = cBody(displacement) / atr;
+
+    const compactnessRangeAtr = getConfigNumber(
+      "BASE_COMPACTNESS_RANGE_ATR"
     );
 
+    const compactnessWeight = getConfigNumber(
+      "BASE_COMPACTNESS_WEIGHT"
+    );
+
+    const displacementWeight = getConfigNumber(
+      "ZONE_DISPLACEMENT_STRENGTH_WEIGHT"
+    );
+
+    const candleCountWeight = getConfigNumber(
+      "ZONE_BASE_CANDLE_WEIGHT"
+    );
+
+    const maxStrength = getConfigNumber("STRENGTH_MAX");
+
+    if (
+      compactnessRangeAtr === null ||
+      compactnessRangeAtr <= 0 ||
+      compactnessWeight === null ||
+      displacementWeight === null ||
+      candleCountWeight === null ||
+      maxStrength === null
+    ) {
+      continue;
+    }
+
     const baseCompactness = 1 - clamp(
-      base.width / (atr * 2.5),
+      base.width / (atr * compactnessRangeAtr),
       0,
       1
     );
 
     const strength = clamp(
-      displacementStrength * 25 +
-      baseCompactness * 35 +
-      Math.min(base.candleCount, 4) * 5,
-      0,
-      100
+      displacementStrength * displacementWeight +
+      baseCompactness * compactnessWeight +
+      Math.min(
+        base.candleCount,
+        CONFIG.BASE_STRENGTH_CANDLE_CAP
+      ) * candleCountWeight,
+      CONFIG.STRENGTH_MIN,
+      maxStrength
     );
 
     const distance = direction === "bullish"
@@ -1486,14 +1570,23 @@ export function detectZoneRetest(
     return null;
   }
 
-  const maxBars = options.maxBars ?? candles.length;
-  const tolerance = options.tolerancePercent ?? 0;
+  const maxBars = getSafeOption(
+    options,
+    "maxBars",
+    "ZONE_RETEST_MAX_BARS",
+    1
+  );
+
+  const tolerance = getSafeOption(
+    options,
+    "tolerancePercent",
+    "ZONE_RETEST_TOLERANCE_PERCENT"
+  );
 
   if (
-    !Number.isInteger(maxBars) ||
-    maxBars < 1 ||
-    !Number.isFinite(tolerance) ||
-    tolerance < 0
+    maxBars === null ||
+    tolerance === null ||
+    !Number.isInteger(maxBars)
   ) {
     return null;
   }
@@ -1509,11 +1602,7 @@ export function detectZoneRetest(
     zone.high - zone.low
   ) * tolerance / 100;
 
-  for (
-    let i = startIndex + 1;
-    i <= endIndex;
-    i++
-  ) {
+  for (let i = startIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
 
     if (!isValidCandle(candle)) continue;
@@ -1586,11 +1675,16 @@ export function confirmZoneReaction(
     return null;
   }
 
-  const confirmationBars = options.confirmationBars ?? 3;
+  const confirmationBars = getSafeOption(
+    options,
+    "confirmationBars",
+    "ZONE_CONFIRMATION_BARS",
+    1
+  );
 
   if (
-    !Number.isInteger(confirmationBars) ||
-    confirmationBars < 1
+    confirmationBars === null ||
+    !Number.isInteger(confirmationBars)
   ) {
     return null;
   }
@@ -1602,11 +1696,7 @@ export function confirmZoneReaction(
     retestIndex + confirmationBars
   );
 
-  for (
-    let i = retestIndex + 1;
-    i <= endIndex;
-    i++
-  ) {
+  for (let i = retestIndex + 1; i <= endIndex; i++) {
     const candle = candles[i];
 
     if (!isValidCandle(candle)) continue;
@@ -1637,7 +1727,10 @@ export function confirmZoneReaction(
   return null;
 }
 
-export function calculateEMA(candles, period = 50) {
+export function calculateEMA(
+  candles,
+  period = CONFIG.EMA_PERIOD
+) {
   if (
     !Array.isArray(candles) ||
     !Number.isInteger(period) ||
@@ -1655,7 +1748,8 @@ export function calculateEMA(candles, period = 50) {
     closes.push(candle.close);
   }
 
-  const multiplier = 2 / (period + 1);
+  const multiplier = CONFIG.EMA_MULTIPLIER_NUMERATOR /
+    (period + CONFIG.EMA_PERIOD_ADJUSTMENT);
 
   let ema = closes
     .slice(0, period)

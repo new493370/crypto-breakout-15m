@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T14:08:19.207Z",
+  "lastUpdated": "2026-11-13T14:13:20.997Z",
   "allTime": {
     "total": 54,
     "tp1Hit": 36,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 17,
-    "active": 1,
-    "tp1Rate": 67.9,
+    "stopped": 18,
+    "active": 0,
+    "tp1Rate": 66.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 32.1
+    "stopRate": 33.3
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 18,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 10,
-      "tp1Rate": 64.3
+      "stopped": 11,
+      "tp1Rate": 62.1
     },
     "bearish": {
       "total": 25,
@@ -1384,13 +1384,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T12:53:07.979Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T14:06:09.498Z",
+      "statusUpdatedAt": "2026-11-13T14:11:11.439Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.11575079426028644
     },
     {
       "symbol": "MONUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T11:23:22.228Z",
+  "lastUpdated": "2026-11-13T11:28:26.731Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -9,6 +9,15 @@
       "score": null,
       "entry": 355.83500000000004,
       "stop": 354.1289671112007
+    },
+    "AIXBTUSDT:5m": {
+      "sentAt": "2026-11-13T11:28:25.230Z",
+      "symbol": "AIXBTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.014125,
+      "stop": 0.014075465042331257
     }
   }
 }

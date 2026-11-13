@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T11:23:22.229Z",
+  "lastUpdated": "2026-11-13T11:28:26.732Z",
   "allTime": {
-    "total": 46,
-    "tp1Hit": 33,
+    "total": 47,
+    "tp1Hit": 34,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 12,
     "active": 1,
-    "tp1Rate": 73.3,
+    "tp1Rate": 73.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 26.7
+    "stopRate": 26.1
   },
   "byTimeframe": {
     "15m": {
@@ -24,12 +24,12 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 24,
-      "tp1Hit": 15,
+      "total": 25,
+      "tp1Hit": 16,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 65.2
+      "tp1Rate": 66.7
     },
     "bearish": {
       "total": 22,
@@ -1228,9 +1228,35 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T11:18:20.376Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T11:26:12.827Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 357.86
+    },
+    {
+      "symbol": "AIXBTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.014125,
+      "stop": 0.014075465042331257,
+      "tp1": 0.01415,
+      "zoneLow": 0.01412,
+      "zoneHigh": 0.01413,
+      "signalCandleTime": 1794568800000,
+      "rr1": 0.5046940822516146,
+      "highs": [
+        0.01419,
+        0.01415
+      ],
+      "lows": null,
+      "sentAt": "2026-11-13T11:28:25.230Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T11:21:08.343Z",
+      "statusUpdatedAt": "2026-11-13T11:28:25.230Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1559,6 +1585,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T11:18:20.376Z"
+    },
+    "AIXBTUSDT:5m:2026-11-13T11:28:25.230Z": {
+      "symbol": "AIXBTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-13T11:28:25.230Z"
     }
   }
 }

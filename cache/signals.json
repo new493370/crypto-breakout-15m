@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T01:33:05.401Z",
+  "lastUpdated": "2026-11-13T01:38:25.450Z",
   "signals": {
     "LDOUSDT:5m": {
       "sentAt": "2026-11-12T19:53:06.235Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 0.026415,
       "stop": 0.026576936581142463
+    },
+    "HOMEUSDT:5m": {
+      "sentAt": "2026-11-13T01:38:23.949Z",
+      "symbol": "HOMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0052815,
+      "stop": 0.005327419592626541
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T03:28:11.606Z",
+  "lastUpdated": "2026-11-13T03:33:12.288Z",
   "signals": {
-    "PLTRSTOCKUSDT:5m": {
-      "sentAt": "2026-11-12T21:33:08.313Z",
-      "symbol": "PLTRSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 171.76999999999998,
-      "stop": 171.23728888362973
-    },
     "RSRUSDT:5m": {
       "sentAt": "2026-11-12T22:03:08.371Z",
       "symbol": "RSRUSDT",

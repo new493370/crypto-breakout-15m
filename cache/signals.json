@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T19:13:23.368Z",
+  "lastUpdated": "2026-11-13T19:18:12.323Z",
   "signals": {
-    "JASMYUSDT:5m": {
-      "sentAt": "2026-11-13T13:13:24.756Z",
-      "symbol": "JASMYUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0034260000000000002,
-      "stop": 0.0034443719586791472
-    },
     "RVNUSDT:5m": {
       "sentAt": "2026-11-13T14:38:16.705Z",
       "symbol": "RVNUSDT",
@@ -162,6 +153,15 @@
       "score": null,
       "entry": 8.095500000000001,
       "stop": 8.012565621332355
+    },
+    "GRAMUSDT:5m": {
+      "sentAt": "2026-11-13T19:18:09.158Z",
+      "symbol": "GRAMUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.1275,
+      "stop": 1.1352056226260767
     }
   }
 }

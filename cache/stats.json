@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T16:03:07.828Z",
+  "lastUpdated": "2026-11-13T16:08:03.711Z",
   "allTime": {
-    "total": 65,
+    "total": 66,
     "tp1Hit": 46,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 18,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 71.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 30,
+      "total": 31,
       "tp1Hit": 19,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1724,7 +1724,32 @@
       "sentAt": "2026-11-13T15:43:14.545Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T16:01:08.666Z",
+      "statusUpdatedAt": "2026-11-13T16:06:08.560Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "DNAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.16735,
+      "stop": 0.16339389822587075,
+      "tp1": 0.17210000000000003,
+      "zoneLow": 0.1664,
+      "zoneHigh": 0.1683,
+      "signalCandleTime": 1794585600000,
+      "rr1": 1.2006768963989864,
+      "highs": [
+        0.1723,
+        0.1686
+      ],
+      "lows": null,
+      "sentAt": "2026-11-13T16:08:02.207Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T16:08:02.207Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2186,6 +2211,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-13T15:43:14.545Z"
+    },
+    "DNAUSDT:5m:2026-11-13T16:08:02.207Z": {
+      "symbol": "DNAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-13T16:08:02.207Z"
     }
   }
 }

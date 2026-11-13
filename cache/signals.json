@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T22:46:32.120Z",
+  "lastUpdated": "2026-11-13T22:50:29.597Z",
   "signals": {
     "ZROUSDT:5m": {
       "sentAt": "2026-11-13T17:48:07.338Z",
@@ -81,6 +81,15 @@
       "score": null,
       "entry": 0.1402,
       "stop": 0.13918827337320797
+    },
+    "SPACEUSDT:5m": {
+      "sentAt": "2026-11-13T22:50:28.096Z",
+      "symbol": "SPACEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0031025000000000002,
+      "stop": 0.003078970895812658
     }
   }
 }

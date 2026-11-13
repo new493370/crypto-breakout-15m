@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T22:46:32.121Z",
+  "lastUpdated": "2026-11-13T22:50:29.598Z",
   "allTime": {
-    "total": 76,
+    "total": 77,
     "tp1Hit": 53,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 21,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 71.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 37,
+      "total": 38,
       "tp1Hit": 22,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1984,7 +1984,7 @@
       "sentAt": "2026-11-13T22:38:14.961Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T22:44:15.332Z",
+      "statusUpdatedAt": "2026-11-13T22:48:15.010Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2009,7 +2009,32 @@
       "sentAt": "2026-11-13T22:46:30.618Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T22:46:30.618Z",
+      "statusUpdatedAt": "2026-11-13T22:48:15.010Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SPACEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.0031025000000000002,
+      "stop": 0.003078970895812658,
+      "tp1": 0.0031300000000000004,
+      "zoneLow": 0.003097,
+      "zoneHigh": 0.003108,
+      "signalCandleTime": 1794609600000,
+      "rr1": 1.1687652781440787,
+      "highs": [
+        0.003146,
+        0.003124
+      ],
+      "lows": null,
+      "sentAt": "2026-11-13T22:50:28.096Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T22:50:28.096Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2548,6 +2573,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T22:46:30.618Z"
+    },
+    "SPACEUSDT:5m:2026-11-13T22:50:28.096Z": {
+      "symbol": "SPACEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-13T22:50:28.096Z"
     }
   }
 }

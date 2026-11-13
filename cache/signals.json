@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T01:12:58.797Z",
+  "lastUpdated": "2026-11-13T01:18:17.284Z",
   "signals": {
-    "POPCATUSDT:5m": {
-      "sentAt": "2026-11-12T19:13:21.327Z",
-      "symbol": "POPCATUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.031775,
-      "stop": 0.031733
-    },
     "CRWVSTOCKUSDT:5m": {
       "sentAt": "2026-11-12T19:28:08.924Z",
       "symbol": "CRWVSTOCKUSDT",

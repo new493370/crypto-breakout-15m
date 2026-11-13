@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T12:13:14.808Z",
+  "lastUpdated": "2026-11-13T12:18:11.450Z",
   "allTime": {
     "total": 51,
-    "tp1Hit": 35,
+    "tp1Hit": 36,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 13,
-    "active": 3,
-    "tp1Rate": 72.9,
+    "active": 2,
+    "tp1Rate": 73.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.1
+    "stopRate": 26.5
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 28,
-      "tp1Hit": 17,
+      "tp1Hit": 18,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 68
+      "tp1Rate": 69.2
     },
     "bearish": {
       "total": 23,
@@ -1306,13 +1306,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T11:56:01.898Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T12:11:09.453Z",
+      "statusUpdatedAt": "2026-11-13T12:16:16.188Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.002676
     },
     {
       "symbol": "SPCXUSDT",
@@ -1333,7 +1334,7 @@
       "sentAt": "2026-11-13T11:56:05.677Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T12:11:09.453Z",
+      "statusUpdatedAt": "2026-11-13T12:16:16.188Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1358,7 +1359,7 @@
       "sentAt": "2026-11-13T12:03:25.519Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T12:11:09.453Z",
+      "statusUpdatedAt": "2026-11-13T12:16:16.188Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

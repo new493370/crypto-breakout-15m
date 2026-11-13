@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T12:48:15.194Z",
+  "lastUpdated": "2026-11-13T12:53:09.481Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -54,6 +54,15 @@
       "score": null,
       "entry": 140.765,
       "stop": 140.31414618497735
+    },
+    "CNPYUSDT:5m": {
+      "sentAt": "2026-11-13T12:53:07.980Z",
+      "symbol": "CNPYUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.11705,
+      "stop": 0.11575079426028644
     }
   }
 }

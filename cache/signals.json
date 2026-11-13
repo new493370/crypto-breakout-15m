@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T06:38:16.459Z",
+  "lastUpdated": "2026-11-13T06:43:10.738Z",
   "signals": {
-    "STABLEUSDT:5m": {
-      "sentAt": "2026-11-13T00:38:22.472Z",
-      "symbol": "STABLEUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.026415,
-      "stop": 0.026576936581142463
-    },
     "HOMEUSDT:5m": {
       "sentAt": "2026-11-13T01:38:23.949Z",
       "symbol": "HOMEUSDT",

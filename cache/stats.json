@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T14:43:13.065Z",
+  "lastUpdated": "2026-11-13T14:48:29.811Z",
   "allTime": {
-    "total": 57,
+    "total": 62,
     "tp1Hit": 39,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 18,
-    "active": 0,
+    "active": 5,
     "tp1Rate": 68.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 62.1
     },
     "bearish": {
-      "total": 28,
+      "total": 33,
       "tp1Hit": 21,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1522,6 +1522,131 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.03017
+    },
+    {
+      "symbol": "MEMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.00038314999999999996,
+      "stop": 0.0003860745827586991,
+      "tp1": 0.0003803999999999999,
+      "zoneLow": 0.0003826,
+      "zoneHigh": 0.0003837,
+      "signalCandleTime": 1794580800000,
+      "rr1": 0.9403050714910424,
+      "highs": null,
+      "lows": [
+        0.0003764,
+        0.0003815
+      ],
+      "sentAt": "2026-11-13T14:48:12.621Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T14:48:12.621Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.020855,
+      "stop": 0.021009261263318483,
+      "tp1": 0.02063,
+      "zoneLow": 0.02081,
+      "zoneHigh": 0.0209,
+      "signalCandleTime": 1794580800000,
+      "rr1": 1.458564484432294,
+      "highs": null,
+      "lows": [
+        0.02047,
+        0.02076
+      ],
+      "sentAt": "2026-11-13T14:48:18.030Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T14:48:18.030Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.09195,
+      "stop": 0.09271511957673931,
+      "tp1": 0.09110000000000001,
+      "zoneLow": 0.09178,
+      "zoneHigh": 0.09212,
+      "signalCandleTime": 1794580800000,
+      "rr1": 1.1109374610729728,
+      "highs": null,
+      "lows": [
+        0.09006,
+        0.09142
+      ],
+      "sentAt": "2026-11-13T14:48:21.468Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T14:48:21.468Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ENJUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.021605,
+      "stop": 0.021743827151662086,
+      "tp1": 0.021479999999999996,
+      "zoneLow": 0.02158,
+      "zoneHigh": 0.02163,
+      "signalCandleTime": 1794580800000,
+      "rr1": 0.9004002351374373,
+      "highs": null,
+      "lows": [
+        0.02128,
+        0.0215
+      ],
+      "sentAt": "2026-11-13T14:48:24.897Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T14:48:24.897Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "COAIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.20350000000000001,
+      "stop": 0.20509848317537915,
+      "tp1": 0.2015,
+      "zoneLow": 0.2031,
+      "zoneHigh": 0.2039,
+      "signalCandleTime": 1794580800000,
+      "rr1": 1.251186143717545,
+      "highs": null,
+      "lows": [
+        0.1999,
+        0.202
+      ],
+      "sentAt": "2026-11-13T14:48:28.309Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T14:48:28.309Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -1923,6 +2048,41 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-13T14:38:23.981Z"
+    },
+    "MEMEUSDT:5m:2026-11-13T14:48:12.621Z": {
+      "symbol": "MEMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T14:48:12.621Z"
+    },
+    "YGGUSDT:5m:2026-11-13T14:48:18.030Z": {
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T14:48:18.030Z"
+    },
+    "DYDXUSDT:5m:2026-11-13T14:48:21.468Z": {
+      "symbol": "DYDXUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T14:48:21.468Z"
+    },
+    "ENJUSDT:5m:2026-11-13T14:48:24.897Z": {
+      "symbol": "ENJUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T14:48:24.897Z"
+    },
+    "COAIUSDT:5m:2026-11-13T14:48:28.309Z": {
+      "symbol": "COAIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T14:48:28.309Z"
     }
   }
 }

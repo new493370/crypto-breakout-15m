@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T20:33:02.684Z",
+  "lastUpdated": "2026-11-13T20:38:18.385Z",
   "signals": {
-    "RVNUSDT:5m": {
-      "sentAt": "2026-11-13T14:38:16.705Z",
-      "symbol": "RVNUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0012365,
-      "stop": 0.0012438557435645742
-    },
     "FUSDT:5m": {
       "sentAt": "2026-11-13T14:38:20.522Z",
       "symbol": "FUSDT",

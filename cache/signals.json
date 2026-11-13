@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12T23:58:19.404Z",
+  "lastUpdated": "2026-11-13T00:03:25.917Z",
   "signals": {
     "ETHUSDT:5m": {
       "sentAt": "2026-11-12T18:08:18.845Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.2891,
       "stop": 0.2904748680074465
+    },
+    "GRVTUSDT:5m": {
+      "sentAt": "2026-11-13T00:03:22.255Z",
+      "symbol": "GRVTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.18293,
+      "stop": 0.18142763152875158
     }
   }
 }

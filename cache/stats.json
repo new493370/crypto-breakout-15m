@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T01:23:11.581Z",
+  "lastUpdated": "2026-11-13T01:28:14.983Z",
   "allTime": {
     "total": 32,
-    "tp1Hit": 21,
+    "tp1Hit": 22,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 9,
-    "active": 2,
-    "tp1Rate": 70,
+    "active": 1,
+    "tp1Rate": 71,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30
+    "stopRate": 29
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 20,
-      "tp1Hit": 13,
+      "tp1Hit": 14,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 6,
-      "tp1Rate": 68.4
+      "tp1Rate": 70
     },
     "bearish": {
       "total": 12,
@@ -292,13 +292,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-12T16:43:20.661Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T01:21:08.817Z",
+      "statusUpdatedAt": "2026-11-13T01:26:10.290Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 50.410000000000004
     },
     {
       "symbol": "SKHYSTOCKUSDT",
@@ -657,7 +658,7 @@
       "sentAt": "2026-11-12T22:18:09.293Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T01:21:08.817Z",
+      "statusUpdatedAt": "2026-11-13T01:26:10.290Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

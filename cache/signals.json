@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T01:23:11.580Z",
+  "lastUpdated": "2026-11-13T01:28:14.982Z",
   "signals": {
-    "CRWVSTOCKUSDT:5m": {
-      "sentAt": "2026-11-12T19:28:08.924Z",
-      "symbol": "CRWVSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 56.67,
-      "stop": 56.958
-    },
     "LDOUSDT:5m": {
       "sentAt": "2026-11-12T19:53:06.235Z",
       "symbol": "LDOUSDT",

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T13:08:20.841Z",
+  "lastUpdated": "2026-11-13T13:13:26.258Z",
   "allTime": {
-    "total": 52,
+    "total": 54,
     "tp1Hit": 36,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 15,
-    "active": 1,
+    "active": 3,
     "tp1Rate": 70.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 64.3
     },
     "bearish": {
-      "total": 23,
+      "total": 25,
       "tp1Hit": 18,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1386,7 +1386,57 @@
       "sentAt": "2026-11-13T12:53:07.979Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T13:06:08.567Z",
+      "statusUpdatedAt": "2026-11-13T13:11:09.355Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "MONUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.016370000000000003,
+      "stop": 0.016493325372189598,
+      "tp1": 0.01617,
+      "zoneLow": 0.01633,
+      "zoneHigh": 0.01641,
+      "signalCandleTime": 1794575100000,
+      "rr1": 1.6217263037530512,
+      "highs": null,
+      "lows": [
+        0.01632,
+        0.01635
+      ],
+      "sentAt": "2026-11-13T13:13:21.055Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T13:13:21.055Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "JASMYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0034260000000000002,
+      "stop": 0.0034443719586791472,
+      "tp1": 0.003401,
+      "zoneLow": 0.003421,
+      "zoneHigh": 0.003431,
+      "signalCandleTime": 1794575100000,
+      "rr1": 1.3607694441625533,
+      "highs": null,
+      "lows": [
+        0.003401,
+        0.003417
+      ],
+      "sentAt": "2026-11-13T13:13:24.756Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T13:13:24.756Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1757,6 +1807,20 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T12:53:07.979Z"
+    },
+    "MONUSDT:5m:2026-11-13T13:13:21.055Z": {
+      "symbol": "MONUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T13:13:21.055Z"
+    },
+    "JASMYUSDT:5m:2026-11-13T13:13:24.756Z": {
+      "symbol": "JASMYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-13T13:13:24.756Z"
     }
   }
 }

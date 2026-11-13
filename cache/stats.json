@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T02:43:15.988Z",
+  "lastUpdated": "2026-11-13T02:48:06.535Z",
   "allTime": {
     "total": 37,
-    "tp1Hit": 24,
+    "tp1Hit": 26,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 10,
-    "active": 3,
-    "tp1Rate": 70.6,
+    "active": 1,
+    "tp1Rate": 72.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 29.4
+    "stopRate": 27.8
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 16,
-      "tp1Hit": 10,
+      "tp1Hit": 12,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 3,
-      "tp1Rate": 76.9
+      "tp1Rate": 80
     }
   },
   "recentSignals": [
@@ -892,7 +892,7 @@
       "sentAt": "2026-11-13T01:38:23.949Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:41:09.621Z",
+      "statusUpdatedAt": "2026-11-13T02:46:09.127Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -941,13 +941,14 @@
         0.05081
       ],
       "sentAt": "2026-11-13T02:28:21.276Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:41:09.622Z",
+      "statusUpdatedAt": "2026-11-13T02:46:13.059Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.05014999999999999
     },
     {
       "symbol": "YGGUSDT",
@@ -966,13 +967,14 @@
         0.02071
       ],
       "sentAt": "2026-11-13T02:28:24.737Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:41:09.622Z",
+      "statusUpdatedAt": "2026-11-13T02:46:14.757Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.020599999999999997
     },
     {
       "symbol": "2ZUSDT",

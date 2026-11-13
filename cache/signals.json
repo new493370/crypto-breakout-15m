@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T04:03:01.581Z",
+  "lastUpdated": "2026-11-13T04:08:02.056Z",
   "signals": {
-    "RSRUSDT:5m": {
-      "sentAt": "2026-11-12T22:03:08.371Z",
-      "symbol": "RSRUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.001478,
-      "stop": 0.0014692263552784986
-    },
     "XRPUSDT:5m": {
       "sentAt": "2026-11-12T22:18:05.952Z",
       "symbol": "XRPUSDT",

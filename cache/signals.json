@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T08:08:11.790Z",
+  "lastUpdated": "2026-11-13T08:13:10.469Z",
   "signals": {
-    "ENJUSDT:5m": {
-      "sentAt": "2026-11-13T02:13:06.823Z",
-      "symbol": "ENJUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.021269999999999997,
-      "stop": 0.021167248924803594
-    },
     "CASHCATUSDT:5m": {
       "sentAt": "2026-11-13T02:28:21.276Z",
       "symbol": "CASHCATUSDT",

@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-13T04:13:17.008Z",
+  "lastUpdated": "2026-11-13T04:18:17.874Z",
   "signals": {
-    "XRPUSDT:5m": {
-      "sentAt": "2026-11-12T22:18:05.952Z",
-      "symbol": "XRPUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.0382,
-      "stop": 1.0434212345018221
-    },
-    "TRUMPUSDT:5m": {
-      "sentAt": "2026-11-12T22:18:09.293Z",
-      "symbol": "TRUMPUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.112,
-      "stop": 1.1195861746436306
-    },
-    "GLMUSDT:5m": {
-      "sentAt": "2026-11-12T22:18:14.715Z",
-      "symbol": "GLMUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.101795,
-      "stop": 0.10213462899309131
-    },
     "FILECOINUSDT:5m": {
       "sentAt": "2026-11-12T22:33:26.385Z",
       "symbol": "FILECOINUSDT",

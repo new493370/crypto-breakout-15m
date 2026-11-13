@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T11:13:06.374Z",
+  "lastUpdated": "2026-11-13T11:18:21.881Z",
   "allTime": {
-    "total": 45,
+    "total": 46,
     "tp1Hit": 33,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 12,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 73.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 23,
+      "total": 24,
       "tp1Hit": 15,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1210,6 +1210,31 @@
       "_tp1Notified": false,
       "_stoppedNotified": true,
       "exitPrice": 1.5805245129528815
+    },
+    {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 355.83500000000004,
+      "stop": 354.1289671112007,
+      "tp1": 357.86,
+      "zoneLow": 355.43,
+      "zoneHigh": 356.24,
+      "signalCandleTime": 1794568200000,
+      "rr1": 1.1869642216716871,
+      "highs": [
+        357.67,
+        356.27
+      ],
+      "lows": null,
+      "sentAt": "2026-11-13T11:18:20.376Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T11:18:20.376Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -1527,6 +1552,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-13T04:53:24.178Z"
+    },
+    "AVGOSTOCKUSDT:5m:2026-11-13T11:18:20.376Z": {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-13T11:18:20.376Z"
     }
   }
 }

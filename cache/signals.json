@@ -1,4 +1,14 @@
 {
-  "lastUpdated": "2026-11-13T11:13:06.373Z",
-  "signals": {}
+  "lastUpdated": "2026-11-13T11:18:21.879Z",
+  "signals": {
+    "AVGOSTOCKUSDT:5m": {
+      "sentAt": "2026-11-13T11:18:20.376Z",
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 355.83500000000004,
+      "stop": 354.1289671112007
+    }
+  }
 }

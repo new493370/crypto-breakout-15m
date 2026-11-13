@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T11:33:12.565Z",
+  "lastUpdated": "2026-11-13T11:56:07.179Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -27,6 +27,24 @@
       "score": null,
       "entry": 0.037114999999999995,
       "stop": 0.03751485677962698
+    },
+    "1000BONKUSDT:5m": {
+      "sentAt": "2026-11-13T11:56:01.898Z",
+      "symbol": "1000BONKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0026585,
+      "stop": 0.002643956173845909
+    },
+    "SPCXUSDT:5m": {
+      "sentAt": "2026-11-13T11:56:05.677Z",
+      "symbol": "SPCXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 140.755,
+      "stop": 140.28262294929468
     }
   }
 }

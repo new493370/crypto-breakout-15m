@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-13T11:33:12.566Z",
+  "lastUpdated": "2026-11-13T11:56:07.180Z",
   "allTime": {
-    "total": 48,
+    "total": 50,
     "tp1Hit": 35,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 12,
-    "active": 1,
+    "active": 3,
     "tp1Rate": 74.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 25,
+      "total": 27,
       "tp1Hit": 17,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -1282,7 +1282,57 @@
       "sentAt": "2026-11-13T11:33:11.065Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T11:33:11.065Z",
+      "statusUpdatedAt": "2026-11-13T11:53:49.302Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "1000BONKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.0026585,
+      "stop": 0.002643956173845909,
+      "tp1": 0.002676,
+      "zoneLow": 0.002655,
+      "zoneHigh": 0.002662,
+      "signalCandleTime": 1794570600000,
+      "rr1": 1.2032597072179405,
+      "highs": [
+        0.002683,
+        0.002669
+      ],
+      "lows": null,
+      "sentAt": "2026-11-13T11:56:01.898Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T11:56:01.898Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SPCXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 140.755,
+      "stop": 140.28262294929468,
+      "tp1": 141.28000000000003,
+      "zoneLow": 140.65,
+      "zoneHigh": 140.86,
+      "signalCandleTime": 1794570600000,
+      "rr1": 1.1114003087494249,
+      "highs": [
+        141.1,
+        140.94
+      ],
+      "lows": null,
+      "sentAt": "2026-11-13T11:56:05.677Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-13T11:56:05.677Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -1625,6 +1675,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-13T11:33:11.065Z"
+    },
+    "1000BONKUSDT:5m:2026-11-13T11:56:01.898Z": {
+      "symbol": "1000BONKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-13T11:56:01.898Z"
+    },
+    "SPCXUSDT:5m:2026-11-13T11:56:05.677Z": {
+      "symbol": "SPCXUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-13T11:56:05.677Z"
     }
   }
 }

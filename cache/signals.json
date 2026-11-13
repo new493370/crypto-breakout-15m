@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-13T11:56:07.179Z",
+  "lastUpdated": "2026-11-13T12:03:27.021Z",
   "signals": {
     "AVGOSTOCKUSDT:5m": {
       "sentAt": "2026-11-13T11:18:20.376Z",
@@ -45,6 +45,15 @@
       "score": null,
       "entry": 140.755,
       "stop": 140.28262294929468
+    },
+    "SPCXSTOCKUSDT:5m": {
+      "sentAt": "2026-11-13T12:03:25.519Z",
+      "symbol": "SPCXSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 140.765,
+      "stop": 140.31414618497735
     }
   }
 }

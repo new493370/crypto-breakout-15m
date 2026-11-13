@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T02:38:19.220Z",
+  "lastUpdated": "2026-11-13T02:43:15.988Z",
   "allTime": {
     "total": 37,
-    "tp1Hit": 23,
+    "tp1Hit": 24,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 10,
-    "active": 4,
-    "tp1Rate": 69.7,
+    "active": 3,
+    "tp1Rate": 70.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.3
+    "stopRate": 29.4
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 16,
-      "tp1Hit": 9,
+      "tp1Hit": 10,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 3,
-      "tp1Rate": 75
+      "tp1Rate": 76.9
     }
   },
   "recentSignals": [
@@ -892,7 +892,7 @@
       "sentAt": "2026-11-13T01:38:23.949Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:36:07.514Z",
+      "statusUpdatedAt": "2026-11-13T02:41:09.621Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -943,7 +943,7 @@
       "sentAt": "2026-11-13T02:28:21.276Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:36:07.515Z",
+      "statusUpdatedAt": "2026-11-13T02:41:09.622Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -968,7 +968,7 @@
       "sentAt": "2026-11-13T02:28:24.737Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:36:07.515Z",
+      "statusUpdatedAt": "2026-11-13T02:41:09.622Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -991,13 +991,14 @@
         0.01864
       ],
       "sentAt": "2026-11-13T02:38:17.716Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:38:17.716Z",
+      "statusUpdatedAt": "2026-11-13T02:41:13.221Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.018510000000000006
     }
   ],
   "processedSignals": {

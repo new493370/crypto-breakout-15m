@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-13T22:14:22.401Z",
+  "lastUpdated": "2026-11-13T22:18:27.285Z",
   "allTime": {
     "total": 74,
     "tp1Hit": 53,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 20,
-    "active": 1,
-    "tp1Rate": 72.6,
+    "stopped": 21,
+    "active": 0,
+    "tp1Rate": 71.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.4
+    "stopRate": 28.4
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 22,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 12,
-      "tp1Rate": 64.7
+      "stopped": 13,
+      "tp1Rate": 62.9
     },
     "bearish": {
       "total": 39,
@@ -1774,13 +1774,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T16:33:20.626Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-13T22:12:16.385Z",
+      "statusUpdatedAt": "2026-11-13T22:16:20.786Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.03355746363017729
     },
     {
       "symbol": "ZROUSDT",

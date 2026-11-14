@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T10:14:07.644Z",
+  "lastUpdated": "2026-11-14T10:18:07.403Z",
   "signals": {
-    "JELLYJELLYUSDT:5m": {
-      "sentAt": "2026-11-14T04:14:23.496Z",
-      "symbol": "JELLYJELLYUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.03931,
-      "stop": 0.039565250101155795
-    },
     "NIGHTUSDT:5m": {
       "sentAt": "2026-11-14T04:30:26.022Z",
       "symbol": "NIGHTUSDT",

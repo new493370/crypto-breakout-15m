@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T20:58:09.762Z",
+  "lastUpdated": "2026-11-14T21:02:23.165Z",
   "allTime": {
-    "total": 128,
+    "total": 129,
     "tp1Hit": 96,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 32,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 75,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 58.2
     },
     "bearish": {
-      "total": 73,
+      "total": 74,
       "tp1Hit": 64,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3368,6 +3368,31 @@
       "_tp1Notified": false,
       "_stoppedNotified": true,
       "exitPrice": 633.8461109122889
+    },
+    {
+      "symbol": "DODOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.032405,
+      "stop": 0.03313510974469215,
+      "tp1": 0.03153000000000001,
+      "zoneLow": 0.03223,
+      "zoneHigh": 0.03258,
+      "signalCandleTime": 1794689100000,
+      "rr1": 1.1984499677770213,
+      "highs": null,
+      "lows": [
+        0.03217,
+        0.03232
+      ],
+      "sentAt": "2026-11-14T21:02:21.664Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T21:02:21.664Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -4266,6 +4291,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-14T20:22:16.113Z"
+    },
+    "DODOUSDT:5m:2026-11-14T21:02:21.664Z": {
+      "symbol": "DODOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T21:02:21.664Z"
     }
   }
 }

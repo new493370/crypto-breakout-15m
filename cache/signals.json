@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T20:58:09.761Z",
+  "lastUpdated": "2026-11-14T21:02:23.164Z",
   "signals": {
     "AAPLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T15:46:09.211Z",
@@ -45,6 +45,15 @@
       "score": null,
       "entry": 634.7249999999999,
       "stop": 633.8461109122889
+    },
+    "DODOUSDT:5m": {
+      "sentAt": "2026-11-14T21:02:21.664Z",
+      "symbol": "DODOUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.032405,
+      "stop": 0.03313510974469215
     }
   }
 }

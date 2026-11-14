@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T16:38:00.442Z",
+  "lastUpdated": "2026-11-14T16:41:59.194Z",
   "signals": {
-    "FILUSDT:5m": {
-      "sentAt": "2026-11-14T10:38:19.494Z",
-      "symbol": "FILUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.6898,
-      "stop": 0.6938425389815919
-    },
-    "2ZUSDT:5m": {
-      "sentAt": "2026-11-14T10:38:23.035Z",
-      "symbol": "2ZUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.01759,
-      "stop": 0.01769384453114682
-    },
-    "LINKUSDT:5m": {
-      "sentAt": "2026-11-14T10:38:26.469Z",
-      "symbol": "LINKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 9.637,
-      "stop": 9.687068726270034
-    },
     "FLOWUSDT:5m": {
       "sentAt": "2026-11-14T10:46:12.526Z",
       "symbol": "FLOWUSDT",

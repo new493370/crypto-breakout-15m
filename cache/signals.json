@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T10:42:24.990Z",
+  "lastUpdated": "2026-11-14T10:46:14.027Z",
   "signals": {
     "CBRSSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T04:58:23.748Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 9.637,
       "stop": 9.687068726270034
+    },
+    "FLOWUSDT:5m": {
+      "sentAt": "2026-11-14T10:46:12.526Z",
+      "symbol": "FLOWUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.019145,
+      "stop": 0.01927017831166829
     }
   }
 }

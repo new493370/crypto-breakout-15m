@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T21:26:02.619Z",
+  "lastUpdated": "2026-11-14T21:30:08.095Z",
   "signals": {
     "AAPLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T15:46:09.211Z",
@@ -63,6 +63,15 @@
       "score": null,
       "entry": 7521.15,
       "stop": 7532.889581257796
+    },
+    "GPSUSDT:5m": {
+      "sentAt": "2026-11-14T21:30:06.593Z",
+      "symbol": "GPSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0076749999999999995,
+      "stop": 0.007272946230878334
     }
   }
 }

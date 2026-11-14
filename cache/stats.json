@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T10:18:07.405Z",
+  "lastUpdated": "2026-11-14T10:22:10.341Z",
   "allTime": {
     "total": 103,
-    "tp1Hit": 71,
+    "tp1Hit": 72,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 26,
-    "active": 6,
-    "tp1Rate": 73.2,
+    "active": 5,
+    "tp1Rate": 73.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 26.8
+    "stopRate": 26.5
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 54,
-      "tp1Hit": 40,
+      "tp1Hit": 41,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 9,
-      "tp1Rate": 81.6
+      "tp1Rate": 82
     }
   },
   "recentSignals": [
@@ -2478,7 +2478,7 @@
       "sentAt": "2026-11-14T04:58:23.748Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:16:16.843Z",
+      "statusUpdatedAt": "2026-11-14T10:20:18.503Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2555,7 +2555,7 @@
       "sentAt": "2026-11-14T06:46:13.265Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:16:16.843Z",
+      "statusUpdatedAt": "2026-11-14T10:20:18.503Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2606,7 +2606,7 @@
       "sentAt": "2026-11-14T07:38:17.281Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:16:16.843Z",
+      "statusUpdatedAt": "2026-11-14T10:20:18.503Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2655,13 +2655,14 @@
         0.03879
       ],
       "sentAt": "2026-11-14T08:54:08.584Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:16:16.843Z",
+      "statusUpdatedAt": "2026-11-14T10:20:22.377Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.03864
     },
     {
       "symbol": "TSMSTOCKUSDT",
@@ -2682,7 +2683,7 @@
       "sentAt": "2026-11-14T08:54:12.304Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:16:16.843Z",
+      "statusUpdatedAt": "2026-11-14T10:20:22.377Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2707,7 +2708,7 @@
       "sentAt": "2026-11-14T09:50:17.784Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:16:16.843Z",
+      "statusUpdatedAt": "2026-11-14T10:20:22.377Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

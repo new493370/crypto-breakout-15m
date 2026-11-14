@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T01:54:30.436Z",
+  "lastUpdated": "2026-11-14T01:58:18.072Z",
   "allTime": {
-    "total": 81,
+    "total": 82,
     "tp1Hit": 57,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 22,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 72.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 64.1
     },
     "bearish": {
-      "total": 41,
+      "total": 42,
       "tp1Hit": 32,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -2088,7 +2088,7 @@
       "sentAt": "2026-11-13T23:18:21.381Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T01:52:18.221Z",
+      "statusUpdatedAt": "2026-11-14T01:56:17.440Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2113,7 +2113,7 @@
       "sentAt": "2026-11-13T23:34:28.262Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T01:52:18.221Z",
+      "statusUpdatedAt": "2026-11-14T01:56:17.440Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2144,6 +2144,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.057080000000000006
+    },
+    {
+      "symbol": "CPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.006647,
+      "stop": 0.006764327776824695,
+      "tp1": 0.006452,
+      "zoneLow": 0.006608,
+      "zoneHigh": 0.006686,
+      "signalCandleTime": 1794621000000,
+      "rr1": 1.6620105253622781,
+      "highs": null,
+      "lows": [
+        0.006423,
+        0.006466
+      ],
+      "sentAt": "2026-11-14T01:58:16.568Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T01:58:16.568Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -2713,6 +2738,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-13T23:38:17.877Z"
+    },
+    "CPUSDT:5m:2026-11-14T01:58:16.568Z": {
+      "symbol": "CPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T01:58:16.568Z"
     }
   }
 }

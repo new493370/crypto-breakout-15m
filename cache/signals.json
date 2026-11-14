@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T01:54:30.435Z",
+  "lastUpdated": "2026-11-14T01:58:18.070Z",
   "signals": {
     "HOMEUSDT:5m": {
       "sentAt": "2026-11-13T20:13:20.176Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.05673,
       "stop": 0.05645201361787893
+    },
+    "CPUSDT:5m": {
+      "sentAt": "2026-11-14T01:58:16.568Z",
+      "symbol": "CPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.006647,
+      "stop": 0.006764327776824695
     }
   }
 }

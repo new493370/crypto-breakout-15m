@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T05:02:07.872Z",
+  "lastUpdated": "2026-11-14T05:06:11.628Z",
   "signals": {
     "ETHFIUSDT:5m": {
       "sentAt": "2026-11-13T23:18:17.755Z",
@@ -162,6 +162,15 @@
       "score": null,
       "entry": 0.72915,
       "stop": 0.7204000370842909
+    },
+    "MSFTSTOCKUSDT:5m": {
+      "sentAt": "2026-11-14T05:06:10.127Z",
+      "symbol": "MSFTSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 522.38,
+      "stop": 521.82896338448
     }
   }
 }

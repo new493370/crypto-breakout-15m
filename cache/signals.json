@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T02:10:25.223Z",
+  "lastUpdated": "2026-11-14T02:14:25.845Z",
   "signals": {
-    "HOMEUSDT:5m": {
-      "sentAt": "2026-11-13T20:13:20.176Z",
-      "symbol": "HOMEUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0051990000000000005,
-      "stop": 0.005243964302589311
-    },
     "BLENDUSDT:5m": {
       "sentAt": "2026-11-13T22:38:14.961Z",
       "symbol": "BLENDUSDT",

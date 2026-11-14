@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T17:54:08.741Z",
+  "lastUpdated": "2026-11-14T17:58:02.876Z",
   "signals": {
-    "GPSUSDT:5m": {
-      "sentAt": "2026-11-14T11:54:10.907Z",
-      "symbol": "GPSUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.008004500000000001,
-      "stop": 0.008054400537894918
-    },
     "SNDKUSDT:5m": {
       "sentAt": "2026-11-14T12:02:19.530Z",
       "symbol": "SNDKUSDT",

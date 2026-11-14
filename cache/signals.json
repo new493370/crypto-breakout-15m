@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T07:34:03.362Z",
+  "lastUpdated": "2026-11-14T07:38:18.784Z",
   "signals": {
     "CPUSDT:5m": {
       "sentAt": "2026-11-14T01:58:16.568Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.010544999999999999,
       "stop": 0.010608043170251498
+    },
+    "INTCSTOCKUSDT:5m": {
+      "sentAt": "2026-11-14T07:38:17.282Z",
+      "symbol": "INTCSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 58.644999999999996,
+      "stop": 58.772944815948314
     }
   }
 }

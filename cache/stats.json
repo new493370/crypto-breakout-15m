@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T00:18:23.315Z",
+  "lastUpdated": "2026-11-14T00:22:15.845Z",
   "allTime": {
     "total": 81,
-    "tp1Hit": 55,
+    "tp1Hit": 56,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 21,
-    "active": 5,
-    "tp1Rate": 72.4,
+    "active": 4,
+    "tp1Rate": 72.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.6
+    "stopRate": 27.3
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 41,
-      "tp1Hit": 31,
+      "tp1Hit": 32,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 79.5
+      "tp1Rate": 80
     }
   },
   "recentSignals": [
@@ -2010,7 +2010,7 @@
       "sentAt": "2026-11-13T22:46:30.618Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:16:16.595Z",
+      "statusUpdatedAt": "2026-11-14T00:20:17.198Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2035,7 +2035,7 @@
       "sentAt": "2026-11-13T22:50:28.096Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:16:16.595Z",
+      "statusUpdatedAt": "2026-11-14T00:20:17.198Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2058,13 +2058,14 @@
         0.5703
       ],
       "sentAt": "2026-11-13T23:18:17.755Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:16:16.595Z",
+      "statusUpdatedAt": "2026-11-14T00:20:20.946Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.567
     },
     {
       "symbol": "CRCLSTOCKUSDT",
@@ -2085,7 +2086,7 @@
       "sentAt": "2026-11-13T23:18:21.381Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:16:16.595Z",
+      "statusUpdatedAt": "2026-11-14T00:20:20.946Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2110,7 +2111,7 @@
       "sentAt": "2026-11-13T23:34:28.262Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:16:16.595Z",
+      "statusUpdatedAt": "2026-11-14T00:20:20.946Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

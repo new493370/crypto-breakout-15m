@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T12:34:07.361Z",
+  "lastUpdated": "2026-11-14T12:38:32.495Z",
   "signals": {
     "MRVLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T06:46:13.265Z",
@@ -207,6 +207,33 @@
       "score": null,
       "entry": 0.040650000000000006,
       "stop": 0.04083078584121553
+    },
+    "SPKUSDT:5m": {
+      "sentAt": "2026-11-14T12:38:21.935Z",
+      "symbol": "SPKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.015045,
+      "stop": 0.015098477141996795
+    },
+    "LAUSDT:5m": {
+      "sentAt": "2026-11-14T12:38:27.530Z",
+      "symbol": "LAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.045055,
+      "stop": 0.04527932135105189
+    },
+    "PENDLEUSDT:5m": {
+      "sentAt": "2026-11-14T12:38:30.993Z",
+      "symbol": "PENDLEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.5154999999999998,
+      "stop": 1.5262667922831372
     }
   }
 }

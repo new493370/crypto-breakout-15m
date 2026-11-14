@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T21:46:04.539Z",
+  "lastUpdated": "2026-11-14T21:50:17.049Z",
   "signals": {
-    "AAPLSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T15:46:09.211Z",
-      "symbol": "AAPLSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 356.20000000000005,
-      "stop": 355.8662526144203
-    },
     "2ZUSDT:5m": {
       "sentAt": "2026-11-14T18:18:14.915Z",
       "symbol": "2ZUSDT",

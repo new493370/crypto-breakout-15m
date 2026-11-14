@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T04:26:16.207Z",
+  "lastUpdated": "2026-11-14T04:30:27.523Z",
   "signals": {
     "BLENDUSDT:5m": {
       "sentAt": "2026-11-13T22:38:14.961Z",
@@ -162,6 +162,15 @@
       "score": null,
       "entry": 0.03931,
       "stop": 0.039565250101155795
+    },
+    "NIGHTUSDT:5m": {
+      "sentAt": "2026-11-14T04:30:26.022Z",
+      "symbol": "NIGHTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.046085,
+      "stop": 0.0454742174107132
     }
   }
 }

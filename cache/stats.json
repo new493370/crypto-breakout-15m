@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T20:30:18.786Z",
+  "lastUpdated": "2026-11-14T20:34:09.287Z",
   "allTime": {
     "total": 128,
     "tp1Hit": 95,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 30,
-    "active": 3,
-    "tp1Rate": 76,
+    "stopped": 31,
+    "active": 2,
+    "tp1Rate": 75.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 24
+    "stopRate": 24.6
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 32,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 21,
-      "tp1Rate": 60.4
+      "stopped": 22,
+      "tp1Rate": 59.3
     },
     "bearish": {
       "total": 73,
@@ -3310,7 +3310,7 @@
       "sentAt": "2026-11-14T18:22:16.231Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T20:28:15.856Z",
+      "statusUpdatedAt": "2026-11-14T20:32:16.988Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3333,13 +3333,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-14T20:02:24.569Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T20:28:15.856Z",
+      "statusUpdatedAt": "2026-11-14T20:32:20.778Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 384.88697517453903
     },
     {
       "symbol": "METASTOCKUSDT",
@@ -3360,7 +3361,7 @@
       "sentAt": "2026-11-14T20:22:16.113Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T20:28:15.856Z",
+      "statusUpdatedAt": "2026-11-14T20:32:20.778Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

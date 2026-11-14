@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T10:58:22.346Z",
+  "lastUpdated": "2026-11-14T11:02:20.772Z",
   "signals": {
-    "CBRSSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T04:58:23.748Z",
-      "symbol": "CBRSSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 106.185,
-      "stop": 106.49109269038202
-    },
-    "RIVERUSDT:5m": {
-      "sentAt": "2026-11-14T04:58:27.208Z",
-      "symbol": "RIVERUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.72915,
-      "stop": 0.7204000370842909
-    },
     "MSFTSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T05:06:10.127Z",
       "symbol": "MSFTSTOCKUSDT",

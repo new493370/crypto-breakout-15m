@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T11:58:20.153Z",
+  "lastUpdated": "2026-11-14T12:02:21.031Z",
   "signals": {
     "MRVLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T06:46:13.265Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.008004500000000001,
       "stop": 0.008054400537894918
+    },
+    "SNDKUSDT:5m": {
+      "sentAt": "2026-11-14T12:02:19.530Z",
+      "symbol": "SNDKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 865.7,
+      "stop": 864.4373069635469
     }
   }
 }

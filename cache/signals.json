@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T12:06:28.985Z",
+  "lastUpdated": "2026-11-14T12:10:25.593Z",
   "signals": {
     "MRVLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T06:46:13.265Z",
@@ -189,6 +189,15 @@
       "score": null,
       "entry": 106.305,
       "stop": 106.16833219594868
+    },
+    "GLMUSDT:5m": {
+      "sentAt": "2026-11-14T12:10:24.091Z",
+      "symbol": "GLMUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.09515,
+      "stop": 0.09543054141326393
     }
   }
 }

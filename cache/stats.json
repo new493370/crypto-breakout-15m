@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T13:06:19.709Z",
+  "lastUpdated": "2026-11-14T13:10:29.048Z",
   "allTime": {
     "total": 123,
-    "tp1Hit": 88,
+    "tp1Hit": 90,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 26,
-    "active": 9,
-    "tp1Rate": 77.2,
+    "stopped": 28,
+    "active": 5,
+    "tp1Rate": 76.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 22.8
+    "stopRate": 23.7
   },
   "byTimeframe": {
     "15m": {
@@ -28,16 +28,16 @@
       "tp1Hit": 32,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 17,
-      "tp1Rate": 65.3
+      "stopped": 19,
+      "tp1Rate": 62.7
     },
     "bearish": {
       "total": 71,
-      "tp1Hit": 56,
+      "tp1Hit": 58,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 9,
-      "tp1Rate": 86.2
+      "tp1Rate": 86.6
     }
   },
   "recentSignals": [
@@ -2478,7 +2478,7 @@
       "sentAt": "2026-11-14T04:58:23.748Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:19.412Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2607,7 +2607,7 @@
       "sentAt": "2026-11-14T07:38:17.281Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:19.412Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2684,7 +2684,7 @@
       "sentAt": "2026-11-14T08:54:12.304Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:19.412Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2993,13 +2993,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-14T12:02:19.530Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:22.903Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 864.4373069635469
     },
     {
       "symbol": "JTOUSDT",
@@ -3046,7 +3047,7 @@
       "sentAt": "2026-11-14T12:06:23.682Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:22.903Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3069,13 +3070,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-14T12:06:27.484Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:24.561Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 106.16833219594868
     },
     {
       "symbol": "GLMUSDT",
@@ -3094,13 +3096,14 @@
         0.09487
       ],
       "sentAt": "2026-11-14T12:10:24.091Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:26.206Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.09495
     },
     {
       "symbol": "SAPIENUSDT",
@@ -3197,13 +3200,14 @@
         1.508
       ],
       "sentAt": "2026-11-14T12:38:30.993Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:27.854Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 1.4980000000000002
     },
     {
       "symbol": "RAYUSDT",
@@ -3224,7 +3228,7 @@
       "sentAt": "2026-11-14T13:02:30.385Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:04:20.193Z",
+      "statusUpdatedAt": "2026-11-14T13:08:27.854Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

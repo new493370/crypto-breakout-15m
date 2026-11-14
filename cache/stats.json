@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T02:34:20.228Z",
+  "lastUpdated": "2026-11-14T02:38:11.794Z",
   "allTime": {
     "total": 84,
-    "tp1Hit": 60,
+    "tp1Hit": 61,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 23,
-    "active": 1,
-    "tp1Rate": 72.3,
+    "active": 0,
+    "tp1Rate": 72.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.7
+    "stopRate": 27.4
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 44,
-      "tp1Hit": 35,
+      "tp1Hit": 36,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 81.4
+      "tp1Rate": 81.8
     }
   },
   "recentSignals": [
@@ -2216,13 +2216,14 @@
         130.37
       ],
       "sentAt": "2026-11-14T02:34:18.726Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T02:34:18.726Z",
+      "statusUpdatedAt": "2026-11-14T02:36:19.880Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 130.05000000000004
     }
   ],
   "processedSignals": {

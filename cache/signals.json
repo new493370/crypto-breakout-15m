@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T08:54:13.805Z",
+  "lastUpdated": "2026-11-14T08:58:12.800Z",
   "signals": {
-    "AVGOSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T02:58:08.788Z",
-      "symbol": "AVGOSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 341.05499999999995,
-      "stop": 341.8824277396824
-    },
     "IRYSUSDT:5m": {
       "sentAt": "2026-11-14T03:02:27.756Z",
       "symbol": "IRYSUSDT",

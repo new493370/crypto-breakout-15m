@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T05:34:10.019Z",
+  "lastUpdated": "2026-11-14T05:38:07.014Z",
   "signals": {
-    "WLFIUSDT:5m": {
-      "sentAt": "2026-11-13T23:34:28.262Z",
-      "symbol": "WLFIUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.047025,
-      "stop": 0.0468362131562292
-    },
     "ZBTUSDT:5m": {
       "sentAt": "2026-11-13T23:38:17.877Z",
       "symbol": "ZBTUSDT",

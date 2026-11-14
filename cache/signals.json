@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T03:06:19.171Z",
+  "lastUpdated": "2026-11-14T03:10:28.759Z",
   "signals": {
     "BLENDUSDT:5m": {
       "sentAt": "2026-11-13T22:38:14.961Z",
@@ -117,6 +117,15 @@
       "score": null,
       "entry": 0.015585000000000002,
       "stop": 0.015403206556007572
+    },
+    "CAPUSDT:5m": {
+      "sentAt": "2026-11-14T03:10:27.258Z",
+      "symbol": "CAPUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.10692,
+      "stop": 0.10598780736637585
     }
   }
 }

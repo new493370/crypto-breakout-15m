@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T19:02:04.000Z",
+  "lastUpdated": "2026-11-14T19:06:05.026Z",
   "signals": {
-    "RAYUSDT:5m": {
-      "sentAt": "2026-11-14T13:02:30.385Z",
-      "symbol": "RAYUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.455,
-      "stop": 1.4648505574383548
-    },
     "AAPLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T15:46:09.211Z",
       "symbol": "AAPLSTOCKUSDT",

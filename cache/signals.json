@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T18:01:59.193Z",
+  "lastUpdated": "2026-11-14T18:06:09.877Z",
   "signals": {
-    "SNDKUSDT:5m": {
-      "sentAt": "2026-11-14T12:02:19.530Z",
-      "symbol": "SNDKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 865.7,
-      "stop": 864.4373069635469
-    },
     "JTOUSDT:5m": {
       "sentAt": "2026-11-14T12:06:19.961Z",
       "symbol": "JTOUSDT",

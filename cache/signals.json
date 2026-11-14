@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T16:50:04.440Z",
+  "lastUpdated": "2026-11-14T16:54:13.905Z",
   "signals": {
-    "PNUTUSDT:5m": {
-      "sentAt": "2026-11-14T10:50:27.235Z",
-      "symbol": "PNUTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.030935,
-      "stop": 0.031119554252646172
-    },
-    "OLUSDT:5m": {
-      "sentAt": "2026-11-14T10:54:12.297Z",
-      "symbol": "OLUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.004182999999999999,
-      "stop": 0.004216245343022385
-    },
     "NBISSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T11:06:27.023Z",
       "symbol": "NBISSTOCKUSDT",

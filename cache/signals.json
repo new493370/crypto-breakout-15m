@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T16:32:54.484Z",
+  "lastUpdated": "2026-11-14T16:38:00.442Z",
   "signals": {
-    "1INCHUSDT:5m": {
-      "sentAt": "2026-11-14T10:34:19.716Z",
-      "symbol": "1INCHUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.069495,
-      "stop": 0.06979795081268313
-    },
     "FILUSDT:5m": {
       "sentAt": "2026-11-14T10:38:19.494Z",
       "symbol": "FILUSDT",

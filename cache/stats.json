@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T02:58:10.292Z",
+  "lastUpdated": "2026-11-14T03:02:29.260Z",
   "allTime": {
-    "total": 86,
-    "tp1Hit": 61,
+    "total": 87,
+    "tp1Hit": 62,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 23,
     "active": 2,
-    "tp1Rate": 72.6,
+    "tp1Rate": 72.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.4
+    "stopRate": 27.1
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 40,
+      "total": 41,
       "tp1Hit": 25,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 46,
-      "tp1Hit": 36,
+      "tp1Hit": 37,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 81.8
+      "tp1Rate": 82.2
     }
   },
   "recentSignals": [
@@ -2244,7 +2244,7 @@
       "sentAt": "2026-11-14T02:42:25.007Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T02:56:14.059Z",
+      "statusUpdatedAt": "2026-11-14T03:00:15.923Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2267,9 +2267,35 @@
         340.87
       ],
       "sentAt": "2026-11-14T02:58:08.788Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T03:00:19.492Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 340.58
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.015585000000000002,
+      "stop": 0.015403206556007572,
+      "tp1": 0.015810000000000005,
+      "zoneLow": 0.01554,
+      "zoneHigh": 0.01563,
+      "signalCandleTime": 1794624900000,
+      "rr1": 1.2376683947380036,
+      "highs": [
+        0.016,
+        0.0157
+      ],
+      "lows": null,
+      "sentAt": "2026-11-14T03:02:27.756Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T02:58:08.788Z",
+      "statusUpdatedAt": "2026-11-14T03:02:27.756Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2878,6 +2904,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T02:58:08.788Z"
+    },
+    "IRYSUSDT:5m:2026-11-14T03:02:27.756Z": {
+      "symbol": "IRYSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-14T03:02:27.756Z"
     }
   }
 }

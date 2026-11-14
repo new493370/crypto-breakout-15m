@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T02:54:09.882Z",
+  "lastUpdated": "2026-11-14T02:58:10.292Z",
   "allTime": {
-    "total": 85,
+    "total": 86,
     "tp1Hit": 61,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 23,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 72.6,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 62.5
     },
     "bearish": {
-      "total": 45,
+      "total": 46,
       "tp1Hit": 36,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -2244,7 +2244,32 @@
       "sentAt": "2026-11-14T02:42:25.007Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T02:52:16.849Z",
+      "statusUpdatedAt": "2026-11-14T02:56:14.059Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 341.05499999999995,
+      "stop": 341.8824277396824,
+      "tp1": 340.58,
+      "zoneLow": 340.96,
+      "zoneHigh": 341.15,
+      "signalCandleTime": 1794624600000,
+      "rr1": 0.5740682566217445,
+      "highs": null,
+      "lows": [
+        340.3,
+        340.87
+      ],
+      "sentAt": "2026-11-14T02:58:08.788Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T02:58:08.788Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2846,6 +2871,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T02:42:25.007Z"
+    },
+    "AVGOSTOCKUSDT:5m:2026-11-14T02:58:08.788Z": {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T02:58:08.788Z"
     }
   }
 }

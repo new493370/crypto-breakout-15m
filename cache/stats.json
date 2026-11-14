@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T02:30:32.322Z",
+  "lastUpdated": "2026-11-14T02:34:20.228Z",
   "allTime": {
-    "total": 83,
-    "tp1Hit": 59,
+    "total": 84,
+    "tp1Hit": 60,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 23,
     "active": 1,
-    "tp1Rate": 72,
+    "tp1Rate": 72.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 28
+    "stopRate": 27.7
   },
   "byTimeframe": {
     "15m": {
@@ -32,12 +32,12 @@
       "tp1Rate": 62.5
     },
     "bearish": {
-      "total": 43,
-      "tp1Hit": 34,
+      "total": 44,
+      "tp1Hit": 35,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 81
+      "tp1Rate": 81.4
     }
   },
   "recentSignals": [
@@ -2190,9 +2190,35 @@
         0.1602
       ],
       "sentAt": "2026-11-14T02:30:30.820Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T02:32:21.993Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.15899999999999997
+    },
+    {
+      "symbol": "SKHYSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 130.4,
+      "stop": 130.79215554126674,
+      "tp1": 130.05000000000004,
+      "zoneLow": 130.33,
+      "zoneHigh": 130.47,
+      "signalCandleTime": 1794623100000,
+      "rr1": 0.8925030075296247,
+      "highs": null,
+      "lows": [
+        130.15,
+        130.37
+      ],
+      "sentAt": "2026-11-14T02:34:18.726Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T02:30:30.820Z",
+      "statusUpdatedAt": "2026-11-14T02:34:18.726Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2780,6 +2806,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T02:30:30.820Z"
+    },
+    "SKHYSTOCKUSDT:5m:2026-11-14T02:34:18.726Z": {
+      "symbol": "SKHYSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T02:34:18.726Z"
     }
   }
 }

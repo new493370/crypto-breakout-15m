@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T02:30:32.321Z",
+  "lastUpdated": "2026-11-14T02:34:20.227Z",
   "signals": {
     "BLENDUSDT:5m": {
       "sentAt": "2026-11-13T22:38:14.961Z",
@@ -81,6 +81,15 @@
       "score": null,
       "entry": 0.16199999999999998,
       "stop": 0.16486376102611627
+    },
+    "SKHYSTOCKUSDT:5m": {
+      "sentAt": "2026-11-14T02:34:18.726Z",
+      "symbol": "SKHYSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 130.4,
+      "stop": 130.79215554126674
     }
   }
 }

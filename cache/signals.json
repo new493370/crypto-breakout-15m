@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T06:50:09.006Z",
+  "lastUpdated": "2026-11-14T06:54:21.808Z",
   "signals": {
     "CPUSDT:5m": {
       "sentAt": "2026-11-14T01:58:16.568Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 153.075,
       "stop": 153.41994648467278
+    },
+    "CHZUSDT:5m": {
+      "sentAt": "2026-11-14T06:54:20.308Z",
+      "symbol": "CHZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.010544999999999999,
+      "stop": 0.010608043170251498
     }
   }
 }

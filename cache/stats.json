@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T06:50:09.008Z",
+  "lastUpdated": "2026-11-14T06:54:21.809Z",
   "allTime": {
-    "total": 97,
+    "total": 98,
     "tp1Hit": 69,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 24,
-    "active": 4,
+    "active": 5,
     "tp1Rate": 74.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 67.4
     },
     "bearish": {
-      "total": 49,
+      "total": 50,
       "tp1Hit": 38,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -2374,7 +2374,7 @@
       "sentAt": "2026-11-14T03:22:11.583Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:48:18.597Z",
+      "statusUpdatedAt": "2026-11-14T06:52:17.287Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2399,7 +2399,7 @@
       "sentAt": "2026-11-14T03:54:16.356Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:48:18.597Z",
+      "statusUpdatedAt": "2026-11-14T06:52:17.287Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2476,7 +2476,7 @@
       "sentAt": "2026-11-14T04:58:23.748Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:48:18.597Z",
+      "statusUpdatedAt": "2026-11-14T06:52:17.287Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2553,7 +2553,32 @@
       "sentAt": "2026-11-14T06:46:13.265Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:48:18.597Z",
+      "statusUpdatedAt": "2026-11-14T06:52:17.287Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "CHZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.010544999999999999,
+      "stop": 0.010608043170251498,
+      "tp1": 0.010469999999999998,
+      "zoneLow": 0.01053,
+      "zoneHigh": 0.01056,
+      "signalCandleTime": 1794638700000,
+      "rr1": 1.1896609846998762,
+      "highs": null,
+      "lows": [
+        0.0105,
+        0.01052
+      ],
+      "sentAt": "2026-11-14T06:54:20.307Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T06:54:20.307Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3239,6 +3264,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T06:46:13.265Z"
+    },
+    "CHZUSDT:5m:2026-11-14T06:54:20.307Z": {
+      "symbol": "CHZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T06:54:20.307Z"
     }
   }
 }

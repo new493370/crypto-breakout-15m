@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T11:02:20.772Z",
+  "lastUpdated": "2026-11-14T11:06:28.524Z",
   "signals": {
-    "MSFTSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T05:06:10.127Z",
-      "symbol": "MSFTSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 522.38,
-      "stop": 521.82896338448
-    },
     "MRVLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T06:46:13.265Z",
       "symbol": "MRVLSTOCKUSDT",
@@ -135,6 +126,15 @@
       "score": null,
       "entry": 0.004182999999999999,
       "stop": 0.004216245343022385
+    },
+    "NBISSTOCKUSDT:5m": {
+      "sentAt": "2026-11-14T11:06:27.023Z",
+      "symbol": "NBISSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 113.17500000000001,
+      "stop": 113.39316440560532
     }
   }
 }

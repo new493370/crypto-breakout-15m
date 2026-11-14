@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T04:50:06.974Z",
+  "lastUpdated": "2026-11-14T04:54:23.656Z",
   "signals": {
-    "SPACEUSDT:5m": {
-      "sentAt": "2026-11-13T22:50:28.096Z",
-      "symbol": "SPACEUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0031025000000000002,
-      "stop": 0.003078970895812658
-    },
     "ETHFIUSDT:5m": {
       "sentAt": "2026-11-13T23:18:17.755Z",
       "symbol": "ETHFIUSDT",

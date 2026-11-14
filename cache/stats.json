@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T03:26:04.183Z",
+  "lastUpdated": "2026-11-14T03:30:06.963Z",
   "allTime": {
     "total": 90,
     "tp1Hit": 64,
@@ -2244,7 +2244,7 @@
       "sentAt": "2026-11-14T02:42:25.007Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T03:24:14.913Z",
+      "statusUpdatedAt": "2026-11-14T03:28:15.720Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2295,7 +2295,7 @@
       "sentAt": "2026-11-14T03:02:27.756Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T03:24:14.913Z",
+      "statusUpdatedAt": "2026-11-14T03:28:15.721Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2372,7 +2372,7 @@
       "sentAt": "2026-11-14T03:22:11.583Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T03:24:14.913Z",
+      "statusUpdatedAt": "2026-11-14T03:28:15.721Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

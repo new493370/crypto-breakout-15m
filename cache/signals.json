@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T20:18:04.321Z",
+  "lastUpdated": "2026-11-14T20:22:17.614Z",
   "signals": {
     "AAPLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T15:46:09.211Z",
@@ -36,6 +36,15 @@
       "score": null,
       "entry": 385.41999999999996,
       "stop": 384.88697517453903
+    },
+    "METASTOCKUSDT:5m": {
+      "sentAt": "2026-11-14T20:22:16.113Z",
+      "symbol": "METASTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 634.7249999999999,
+      "stop": 633.8461109122889
     }
   }
 }

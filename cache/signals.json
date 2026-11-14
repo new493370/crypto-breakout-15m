@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T10:50:28.736Z",
+  "lastUpdated": "2026-11-14T10:54:13.798Z",
   "signals": {
     "CBRSSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T04:58:23.748Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 0.030935,
       "stop": 0.031119554252646172
+    },
+    "OLUSDT:5m": {
+      "sentAt": "2026-11-14T10:54:12.297Z",
+      "symbol": "OLUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.004182999999999999,
+      "stop": 0.004216245343022385
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T20:54:12.832Z",
+  "lastUpdated": "2026-11-14T20:58:09.762Z",
   "allTime": {
     "total": 128,
-    "tp1Hit": 95,
+    "tp1Hit": 96,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 32,
-    "active": 1,
-    "tp1Rate": 74.8,
+    "active": 0,
+    "tp1Rate": 75,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 25.2
+    "stopRate": 25
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 73,
-      "tp1Hit": 63,
+      "tp1Hit": 64,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 9,
-      "tp1Rate": 87.5
+      "tp1Rate": 87.7
     }
   },
   "recentSignals": [
@@ -3308,13 +3308,14 @@
         0.21994
       ],
       "sentAt": "2026-11-14T18:22:16.231Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T20:52:14.683Z",
+      "statusUpdatedAt": "2026-11-14T20:56:19.150Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.21510000000000004
     },
     {
       "symbol": "TESLAUSDT",

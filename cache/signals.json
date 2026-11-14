@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T01:10:07.886Z",
+  "lastUpdated": "2026-11-14T01:14:10.144Z",
   "signals": {
-    "REUSDT:5m": {
-      "sentAt": "2026-11-13T19:13:18.365Z",
-      "symbol": "REUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.253035,
-      "stop": 0.25117339075892775
-    },
-    "INJUSDT:5m": {
-      "sentAt": "2026-11-13T19:13:21.867Z",
-      "symbol": "INJUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 8.095500000000001,
-      "stop": 8.012565621332355
-    },
     "GRAMUSDT:5m": {
       "sentAt": "2026-11-13T19:18:09.158Z",
       "symbol": "GRAMUSDT",

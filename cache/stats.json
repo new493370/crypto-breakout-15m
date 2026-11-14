@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T08:34:10.283Z",
+  "lastUpdated": "2026-11-14T08:38:18.589Z",
   "allTime": {
-    "total": 99,
+    "total": 100,
     "tp1Hit": 70,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 26,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 72.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 64.6
     },
     "bearish": {
-      "total": 51,
+      "total": 52,
       "tp1Hit": 39,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -2478,7 +2478,7 @@
       "sentAt": "2026-11-14T04:58:23.748Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T08:32:14.804Z",
+      "statusUpdatedAt": "2026-11-14T08:36:13.969Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2555,7 +2555,7 @@
       "sentAt": "2026-11-14T06:46:13.265Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T08:32:14.804Z",
+      "statusUpdatedAt": "2026-11-14T08:36:13.969Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2606,7 +2606,32 @@
       "sentAt": "2026-11-14T07:38:17.281Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T08:32:14.804Z",
+      "statusUpdatedAt": "2026-11-14T08:36:13.969Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ONTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.039935,
+      "stop": 0.04010181641433889,
+      "tp1": 0.03985999999999999,
+      "zoneLow": 0.03992,
+      "zoneHigh": 0.03995,
+      "signalCandleTime": 1794645000000,
+      "rr1": 0.44959604423364546,
+      "highs": null,
+      "lows": [
+        0.03963,
+        0.03979
+      ],
+      "sentAt": "2026-11-14T08:38:17.086Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T08:38:17.086Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3306,6 +3331,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T07:38:17.281Z"
+    },
+    "ONTUSDT:5m:2026-11-14T08:38:17.086Z": {
+      "symbol": "ONTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T08:38:17.086Z"
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T08:34:10.282Z",
+  "lastUpdated": "2026-11-14T08:38:18.588Z",
   "signals": {
-    "SKHYSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T02:34:18.726Z",
-      "symbol": "SKHYSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 130.4,
-      "stop": 130.79215554126674
-    },
     "UKOILUSDT:5m": {
       "sentAt": "2026-11-14T02:42:25.007Z",
       "symbol": "UKOILUSDT",
@@ -144,6 +135,15 @@
       "score": null,
       "entry": 58.644999999999996,
       "stop": 58.772944815948314
+    },
+    "ONTUSDT:5m": {
+      "sentAt": "2026-11-14T08:38:17.086Z",
+      "symbol": "ONTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.039935,
+      "stop": 0.04010181641433889
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T03:50:05.561Z",
+  "lastUpdated": "2026-11-14T03:54:17.857Z",
   "signals": {
     "BLENDUSDT:5m": {
       "sentAt": "2026-11-13T22:38:14.961Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 0.0006536000000000001,
       "stop": 0.0006474696959429734
+    },
+    "BIGTIMEUSDT:5m": {
+      "sentAt": "2026-11-14T03:54:16.356Z",
+      "symbol": "BIGTIMEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0048319999999999995,
+      "stop": 0.004779670021966018
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T03:50:05.562Z",
+  "lastUpdated": "2026-11-14T03:54:17.858Z",
   "allTime": {
-    "total": 90,
-    "tp1Hit": 64,
+    "total": 91,
+    "tp1Hit": 65,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 23,
     "active": 3,
-    "tp1Rate": 73.6,
+    "tp1Rate": 73.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 26.4
+    "stopRate": 26.1
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 44,
+      "total": 45,
       "tp1Hit": 27,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 46,
-      "tp1Hit": 37,
+      "tp1Hit": 38,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 82.2
+      "tp1Rate": 82.6
     }
   },
   "recentSignals": [
@@ -2242,13 +2242,14 @@
         93.5
       ],
       "sentAt": "2026-11-14T02:42:25.007Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T03:48:16.569Z",
+      "statusUpdatedAt": "2026-11-14T03:52:23.627Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 93.34999999999997
     },
     {
       "symbol": "AVGOSTOCKUSDT",
@@ -2295,7 +2296,7 @@
       "sentAt": "2026-11-14T03:02:27.756Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T03:48:16.569Z",
+      "statusUpdatedAt": "2026-11-14T03:52:23.627Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2372,7 +2373,32 @@
       "sentAt": "2026-11-14T03:22:11.583Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T03:48:16.569Z",
+      "statusUpdatedAt": "2026-11-14T03:52:23.627Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "BIGTIMEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.0048319999999999995,
+      "stop": 0.004779670021966018,
+      "tp1": 0.004922000000000001,
+      "zoneLow": 0.004814,
+      "zoneHigh": 0.00485,
+      "signalCandleTime": 1794627900000,
+      "rr1": 1.719855489745449,
+      "highs": [
+        0.004913,
+        0.004883
+      ],
+      "lows": null,
+      "sentAt": "2026-11-14T03:54:16.356Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T03:54:16.356Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3009,6 +3035,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-14T03:22:11.583Z"
+    },
+    "BIGTIMEUSDT:5m:2026-11-14T03:54:16.356Z": {
+      "symbol": "BIGTIMEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-14T03:54:16.356Z"
     }
   }
 }

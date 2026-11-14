@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T18:10:15.002Z",
+  "lastUpdated": "2026-11-14T18:14:01.451Z",
   "signals": {
-    "GLMUSDT:5m": {
-      "sentAt": "2026-11-14T12:10:24.091Z",
-      "symbol": "GLMUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.09515,
-      "stop": 0.09543054141326393
-    },
     "SAPIENUSDT:5m": {
       "sentAt": "2026-11-14T12:26:25.759Z",
       "symbol": "SAPIENUSDT",

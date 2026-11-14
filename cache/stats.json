@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T23:30:04.544Z",
+  "lastUpdated": "2026-11-14T23:34:10.025Z",
   "allTime": {
-    "total": 132,
+    "total": 133,
     "tp1Hit": 98,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 32,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 75.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 58.2
     },
     "bearish": {
-      "total": 76,
+      "total": 77,
       "tp1Hit": 66,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T23:28:15.994Z",
+      "statusUpdatedAt": "2026-11-14T23:32:15.958Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3465,7 +3465,32 @@
       "sentAt": "2026-11-14T21:58:09.179Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T23:28:15.994Z",
+      "statusUpdatedAt": "2026-11-14T23:32:15.958Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.046115,
+      "stop": 0.046475791821188106,
+      "tp1": 0.04554,
+      "zoneLow": 0.046,
+      "zoneHigh": 0.04623,
+      "signalCandleTime": 1794698700000,
+      "rr1": 1.5937168367800207,
+      "highs": null,
+      "lows": [
+        0.0458,
+        0.04601
+      ],
+      "sentAt": "2026-11-14T23:34:08.522Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T23:34:08.522Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4396,6 +4421,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T21:58:09.179Z"
+    },
+    "WLFIUSDT:5m:2026-11-14T23:34:08.522Z": {
+      "symbol": "WLFIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T23:34:08.522Z"
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T23:34:10.025Z",
+  "lastUpdated": "2026-11-14T23:38:06.581Z",
   "allTime": {
     "total": 133,
     "tp1Hit": 98,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 32,
-    "active": 3,
-    "tp1Rate": 75.4,
+    "stopped": 33,
+    "active": 2,
+    "tp1Rate": 74.8,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 24.6
+    "stopRate": 25.2
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 66,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 9,
-      "tp1Rate": 88
+      "stopped": 10,
+      "tp1Rate": 86.8
     }
   },
   "recentSignals": [
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T23:32:15.958Z",
+      "statusUpdatedAt": "2026-11-14T23:36:16.575Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3463,13 +3463,14 @@
         92.81
       ],
       "sentAt": "2026-11-14T21:58:09.179Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T23:32:15.958Z",
+      "statusUpdatedAt": "2026-11-14T23:36:20.257Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 93.1103743439191
     },
     {
       "symbol": "WLFIUSDT",
@@ -3490,7 +3491,7 @@
       "sentAt": "2026-11-14T23:34:08.522Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T23:34:08.522Z",
+      "statusUpdatedAt": "2026-11-14T23:36:20.257Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

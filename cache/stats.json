@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T04:10:18.651Z",
+  "lastUpdated": "2026-11-14T04:14:24.998Z",
   "allTime": {
-    "total": 91,
+    "total": 92,
     "tp1Hit": 65,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 23,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 73.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 64.3
     },
     "bearish": {
-      "total": 46,
+      "total": 47,
       "tp1Hit": 38,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -2296,7 +2296,7 @@
       "sentAt": "2026-11-14T03:02:27.756Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T04:08:15.247Z",
+      "statusUpdatedAt": "2026-11-14T04:12:18.397Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2373,7 +2373,7 @@
       "sentAt": "2026-11-14T03:22:11.583Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T04:08:15.247Z",
+      "statusUpdatedAt": "2026-11-14T04:12:18.397Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2398,7 +2398,32 @@
       "sentAt": "2026-11-14T03:54:16.356Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T04:08:15.247Z",
+      "statusUpdatedAt": "2026-11-14T04:12:18.397Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "JELLYJELLYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.03931,
+      "stop": 0.039565250101155795,
+      "tp1": 0.03906000000000001,
+      "zoneLow": 0.03926,
+      "zoneHigh": 0.03936,
+      "signalCandleTime": 1794629100000,
+      "rr1": 0.9794315413312737,
+      "highs": null,
+      "lows": [
+        0.03881,
+        0.0392
+      ],
+      "sentAt": "2026-11-14T04:14:23.496Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T04:14:23.496Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3042,6 +3067,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-14T03:54:16.356Z"
+    },
+    "JELLYJELLYUSDT:5m:2026-11-14T04:14:23.496Z": {
+      "symbol": "JELLYJELLYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T04:14:23.496Z"
     }
   }
 }

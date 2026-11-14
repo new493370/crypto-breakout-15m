@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T21:10:03.713Z",
+  "lastUpdated": "2026-11-14T21:14:20.526Z",
   "allTime": {
-    "total": 129,
+    "total": 130,
     "tp1Hit": 97,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 32,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 75.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 58.2
     },
     "bearish": {
-      "total": 74,
+      "total": 75,
       "tp1Hit": 65,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3394,6 +3394,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.03153000000000001
+    },
+    {
+      "symbol": "SPX500USDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 7521.15,
+      "stop": 7532.889581257796,
+      "tp1": 7506.900000000001,
+      "zoneLow": 7518.3,
+      "zoneHigh": 7524,
+      "signalCandleTime": 1794690300000,
+      "rr1": 1.2138422731676113,
+      "highs": null,
+      "lows": [
+        7515.5,
+        7518
+      ],
+      "sentAt": "2026-11-14T21:14:18.919Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T21:14:18.919Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -4299,6 +4324,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T21:02:21.664Z"
+    },
+    "SPX500USDT:5m:2026-11-14T21:14:18.919Z": {
+      "symbol": "SPX500USDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T21:14:18.919Z"
     }
   }
 }

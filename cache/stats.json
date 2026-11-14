@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T00:06:26.345Z",
+  "lastUpdated": "2026-11-14T00:10:18.646Z",
   "allTime": {
     "total": 81,
-    "tp1Hit": 54,
+    "tp1Hit": 55,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 21,
-    "active": 6,
-    "tp1Rate": 72,
+    "active": 5,
+    "tp1Rate": 72.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 28
+    "stopRate": 27.6
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 40,
-      "tp1Hit": 23,
+      "tp1Hit": 24,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 13,
-      "tp1Rate": 63.9
+      "tp1Rate": 64.9
     },
     "bearish": {
       "total": 41,
@@ -1982,13 +1982,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T22:38:14.961Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:04:17.284Z",
+      "statusUpdatedAt": "2026-11-14T00:08:22.341Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.048720000000000006
     },
     {
       "symbol": "THETAUSDT",
@@ -2009,7 +2010,7 @@
       "sentAt": "2026-11-13T22:46:30.618Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:04:17.284Z",
+      "statusUpdatedAt": "2026-11-14T00:08:22.341Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2034,7 +2035,7 @@
       "sentAt": "2026-11-13T22:50:28.096Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:04:17.284Z",
+      "statusUpdatedAt": "2026-11-14T00:08:22.341Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2059,7 +2060,7 @@
       "sentAt": "2026-11-13T23:18:17.755Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:04:17.284Z",
+      "statusUpdatedAt": "2026-11-14T00:08:22.341Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2084,7 +2085,7 @@
       "sentAt": "2026-11-13T23:18:21.381Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:04:17.284Z",
+      "statusUpdatedAt": "2026-11-14T00:08:22.341Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2109,7 +2110,7 @@
       "sentAt": "2026-11-13T23:34:28.262Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:04:17.284Z",
+      "statusUpdatedAt": "2026-11-14T00:08:22.341Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

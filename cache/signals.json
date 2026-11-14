@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T14:37:58.934Z",
+  "lastUpdated": "2026-11-14T14:42:08.966Z",
   "signals": {
-    "ONTUSDT:5m": {
-      "sentAt": "2026-11-14T08:38:17.086Z",
-      "symbol": "ONTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.039935,
-      "stop": 0.04010181641433889
-    },
     "CFXUSDT:5m": {
       "sentAt": "2026-11-14T08:54:08.584Z",
       "symbol": "CFXUSDT",

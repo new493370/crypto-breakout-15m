@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T13:38:13.156Z",
+  "lastUpdated": "2026-11-14T13:42:00.815Z",
   "signals": {
-    "INTCSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T07:38:17.282Z",
-      "symbol": "INTCSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 58.644999999999996,
-      "stop": 58.772944815948314
-    },
     "ONTUSDT:5m": {
       "sentAt": "2026-11-14T08:38:17.086Z",
       "symbol": "ONTUSDT",

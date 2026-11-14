@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T04:54:23.656Z",
+  "lastUpdated": "2026-11-14T04:58:28.709Z",
   "signals": {
     "ETHFIUSDT:5m": {
       "sentAt": "2026-11-13T23:18:17.755Z",
@@ -144,6 +144,24 @@
       "score": null,
       "entry": 0.046085,
       "stop": 0.0454742174107132
+    },
+    "CBRSSTOCKUSDT:5m": {
+      "sentAt": "2026-11-14T04:58:23.748Z",
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 106.185,
+      "stop": 106.49109269038202
+    },
+    "RIVERUSDT:5m": {
+      "sentAt": "2026-11-14T04:58:27.208Z",
+      "symbol": "RIVERUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.72915,
+      "stop": 0.7204000370842909
     }
   }
 }

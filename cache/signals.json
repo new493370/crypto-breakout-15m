@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T04:34:13.114Z",
+  "lastUpdated": "2026-11-14T04:38:18.731Z",
   "signals": {
-    "BLENDUSDT:5m": {
-      "sentAt": "2026-11-13T22:38:14.961Z",
-      "symbol": "BLENDUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.048420000000000005,
-      "stop": 0.04815365409128843
-    },
     "THETAUSDT:5m": {
       "sentAt": "2026-11-13T22:46:30.618Z",
       "symbol": "THETAUSDT",

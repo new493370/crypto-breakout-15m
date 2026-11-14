@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T18:06:09.877Z",
+  "lastUpdated": "2026-11-14T18:10:15.002Z",
   "signals": {
-    "JTOUSDT:5m": {
-      "sentAt": "2026-11-14T12:06:19.961Z",
-      "symbol": "JTOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.2923,
-      "stop": 0.29384491424253134
-    },
-    "ICPUSDT:5m": {
-      "sentAt": "2026-11-14T12:06:23.682Z",
-      "symbol": "ICPUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 2.3890000000000002,
-      "stop": 2.373100821113008
-    },
-    "CBRSSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T12:06:27.484Z",
-      "symbol": "CBRSSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 106.305,
-      "stop": 106.16833219594868
-    },
     "GLMUSDT:5m": {
       "sentAt": "2026-11-14T12:10:24.091Z",
       "symbol": "GLMUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T14:54:11.658Z",
+  "lastUpdated": "2026-11-14T14:58:01.045Z",
   "signals": {
-    "TSMSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T08:54:12.304Z",
-      "symbol": "TSMSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 395.025,
-      "stop": 395.470458947162
-    },
     "OUSDT:5m": {
       "sentAt": "2026-11-14T09:50:17.784Z",
       "symbol": "OUSDT",

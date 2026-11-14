@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T08:50:05.680Z",
+  "lastUpdated": "2026-11-14T08:54:13.807Z",
   "allTime": {
-    "total": 100,
+    "total": 102,
     "tp1Hit": 71,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 26,
-    "active": 3,
+    "active": 5,
     "tp1Rate": 73.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 64.6
     },
     "bearish": {
-      "total": 52,
+      "total": 54,
       "tp1Hit": 40,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -2478,7 +2478,7 @@
       "sentAt": "2026-11-14T04:58:23.748Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T08:48:17.855Z",
+      "statusUpdatedAt": "2026-11-14T08:52:15.917Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2555,7 +2555,7 @@
       "sentAt": "2026-11-14T06:46:13.265Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T08:48:17.855Z",
+      "statusUpdatedAt": "2026-11-14T08:52:15.917Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2606,7 +2606,7 @@
       "sentAt": "2026-11-14T07:38:17.281Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T08:48:17.855Z",
+      "statusUpdatedAt": "2026-11-14T08:52:15.917Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2637,6 +2637,56 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.03985999999999999
+    },
+    {
+      "symbol": "CFXUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.038865,
+      "stop": 0.03908206692426689,
+      "tp1": 0.03864,
+      "zoneLow": 0.03882,
+      "zoneHigh": 0.03891,
+      "signalCandleTime": 1794645900000,
+      "rr1": 1.0365466814434976,
+      "highs": null,
+      "lows": [
+        0.03851,
+        0.03879
+      ],
+      "sentAt": "2026-11-14T08:54:08.584Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T08:54:08.584Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "TSMSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 395.025,
+      "stop": 395.470458947162,
+      "tp1": 394.3499999999999,
+      "zoneLow": 394.89,
+      "zoneHigh": 395.16,
+      "signalCandleTime": 1794645900000,
+      "rr1": 1.5152911492752101,
+      "highs": null,
+      "lows": [
+        394.81,
+        394.97
+      ],
+      "sentAt": "2026-11-14T08:54:12.304Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T08:54:12.304Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -3339,6 +3389,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T08:38:17.086Z"
+    },
+    "CFXUSDT:5m:2026-11-14T08:54:08.584Z": {
+      "symbol": "CFXUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T08:54:08.584Z"
+    },
+    "TSMSTOCKUSDT:5m:2026-11-14T08:54:12.304Z": {
+      "symbol": "TSMSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T08:54:12.304Z"
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T15:50:15.278Z",
+  "lastUpdated": "2026-11-14T15:54:18.040Z",
   "signals": {
-    "OUSDT:5m": {
-      "sentAt": "2026-11-14T09:50:17.784Z",
-      "symbol": "OUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.5063,
-      "stop": 0.5029646431772062
-    },
     "1INCHUSDT:5m": {
       "sentAt": "2026-11-14T10:34:19.716Z",
       "symbol": "1INCHUSDT",

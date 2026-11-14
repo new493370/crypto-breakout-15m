@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T17:05:59.748Z",
+  "lastUpdated": "2026-11-14T17:10:00.504Z",
   "signals": {
-    "NBISSTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T11:06:27.023Z",
-      "symbol": "NBISSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 113.17500000000001,
-      "stop": 113.39316440560532
-    },
     "PENGUUSDT:5m": {
       "sentAt": "2026-11-14T11:10:32.348Z",
       "symbol": "PENGUUSDT",

@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T06:42:11.726Z",
+  "lastUpdated": "2026-11-14T06:46:14.766Z",
   "allTime": {
-    "total": 96,
+    "total": 97,
     "tp1Hit": 69,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 24,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 74.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 67.4
     },
     "bearish": {
-      "total": 48,
+      "total": 49,
       "tp1Hit": 38,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -2374,7 +2374,7 @@
       "sentAt": "2026-11-14T03:22:11.583Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:40:20.926Z",
+      "statusUpdatedAt": "2026-11-14T06:44:21.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2399,7 +2399,7 @@
       "sentAt": "2026-11-14T03:54:16.356Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:40:20.926Z",
+      "statusUpdatedAt": "2026-11-14T06:44:21.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2476,7 +2476,7 @@
       "sentAt": "2026-11-14T04:58:23.748Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:40:20.926Z",
+      "statusUpdatedAt": "2026-11-14T06:44:21.447Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2533,6 +2533,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 523.2799999999997
+    },
+    {
+      "symbol": "MRVLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 153.075,
+      "stop": 153.41994648467278,
+      "tp1": 152.7,
+      "zoneLow": 153,
+      "zoneHigh": 153.15,
+      "signalCandleTime": 1794638400000,
+      "rr1": 1.0871251532124442,
+      "highs": null,
+      "lows": [
+        152.5,
+        152.87
+      ],
+      "sentAt": "2026-11-14T06:46:13.265Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T06:46:13.265Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -3207,6 +3232,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-14T05:06:10.127Z"
+    },
+    "MRVLSTOCKUSDT:5m:2026-11-14T06:46:13.265Z": {
+      "symbol": "MRVLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T06:46:13.265Z"
     }
   }
 }

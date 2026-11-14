@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-14T15:42:07.563Z",
+  "lastUpdated": "2026-11-14T15:46:10.713Z",
   "allTime": {
-    "total": 123,
+    "total": 124,
     "tp1Hit": 94,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 29,
-    "active": 0,
+    "active": 1,
     "tp1Rate": 76.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 52,
+      "total": 53,
       "tp1Hit": 32,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3238,6 +3238,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 1.4370000000000003
+    },
+    {
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 356.20000000000005,
+      "stop": 355.8662526144203,
+      "tp1": 356.65000000000003,
+      "zoneLow": 356.11,
+      "zoneHigh": 356.29,
+      "signalCandleTime": 1794670800000,
+      "rr1": 1.3483251688049274,
+      "highs": [
+        356.87,
+        356.52
+      ],
+      "lows": null,
+      "sentAt": "2026-11-14T15:46:09.210Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T15:46:09.210Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -4101,6 +4126,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T13:02:30.385Z"
+    },
+    "AAPLSTOCKUSDT:5m:2026-11-14T15:46:09.210Z": {
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-14T15:46:09.210Z"
     }
   }
 }

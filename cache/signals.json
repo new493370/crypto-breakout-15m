@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T03:18:20.308Z",
+  "lastUpdated": "2026-11-14T03:22:13.085Z",
   "signals": {
     "BLENDUSDT:5m": {
       "sentAt": "2026-11-13T22:38:14.961Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.311415,
       "stop": 0.3111380520233206
+    },
+    "TURBOUSDT:5m": {
+      "sentAt": "2026-11-14T03:22:11.583Z",
+      "symbol": "TURBOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0006536000000000001,
+      "stop": 0.0006474696959429734
     }
   }
 }

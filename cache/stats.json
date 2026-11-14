@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T02:26:16.920Z",
+  "lastUpdated": "2026-11-14T02:30:32.322Z",
   "allTime": {
-    "total": 82,
-    "tp1Hit": 57,
+    "total": 83,
+    "tp1Hit": 59,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 23,
-    "active": 2,
-    "tp1Rate": 71.3,
+    "active": 1,
+    "tp1Rate": 72,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 28.8
+    "stopRate": 28
   },
   "byTimeframe": {
     "15m": {
@@ -32,12 +32,12 @@
       "tp1Rate": 62.5
     },
     "bearish": {
-      "total": 42,
-      "tp1Hit": 32,
+      "total": 43,
+      "tp1Hit": 34,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 8,
-      "tp1Rate": 80
+      "tp1Rate": 81
     }
   },
   "recentSignals": [
@@ -2086,13 +2086,14 @@
         61.61
       ],
       "sentAt": "2026-11-13T23:18:21.381Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T02:24:14.809Z",
+      "statusUpdatedAt": "2026-11-14T02:28:23.439Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 61.199999999999996
     },
     {
       "symbol": "WLFIUSDT",
@@ -2163,9 +2164,35 @@
         0.006466
       ],
       "sentAt": "2026-11-14T01:58:16.568Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-14T02:28:25.136Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.006452
+    },
+    {
+      "symbol": "DNAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.16199999999999998,
+      "stop": 0.16486376102611627,
+      "tp1": 0.15899999999999997,
+      "zoneLow": 0.1614,
+      "zoneHigh": 0.1626,
+      "signalCandleTime": 1794622800000,
+      "rr1": 1.0475734436781787,
+      "highs": null,
+      "lows": [
+        0.158,
+        0.1602
+      ],
+      "sentAt": "2026-11-14T02:30:30.820Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T02:24:14.809Z",
+      "statusUpdatedAt": "2026-11-14T02:30:30.820Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2746,6 +2773,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T01:58:16.568Z"
+    },
+    "DNAUSDT:5m:2026-11-14T02:30:30.820Z": {
+      "symbol": "DNAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-14T02:30:30.820Z"
     }
   }
 }

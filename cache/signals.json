@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T10:34:21.217Z",
+  "lastUpdated": "2026-11-14T10:38:27.972Z",
   "signals": {
     "CBRSSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T04:58:23.748Z",
@@ -99,6 +99,33 @@
       "score": null,
       "entry": 0.069495,
       "stop": 0.06979795081268313
+    },
+    "FILUSDT:5m": {
+      "sentAt": "2026-11-14T10:38:19.494Z",
+      "symbol": "FILUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.6898,
+      "stop": 0.6938425389815919
+    },
+    "2ZUSDT:5m": {
+      "sentAt": "2026-11-14T10:38:23.035Z",
+      "symbol": "2ZUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.01759,
+      "stop": 0.01769384453114682
+    },
+    "LINKUSDT:5m": {
+      "sentAt": "2026-11-14T10:38:26.469Z",
+      "symbol": "LINKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 9.637,
+      "stop": 9.687068726270034
     }
   }
 }

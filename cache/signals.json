@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T09:10:15.313Z",
+  "lastUpdated": "2026-11-14T09:14:09.497Z",
   "signals": {
-    "CAPUSDT:5m": {
-      "sentAt": "2026-11-14T03:10:27.258Z",
-      "symbol": "CAPUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.10692,
-      "stop": 0.10598780736637585
-    },
     "TRXUSDT:5m": {
       "sentAt": "2026-11-14T03:14:23.971Z",
       "symbol": "TRXUSDT",

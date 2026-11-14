@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-14T01:50:25.965Z",
+  "lastUpdated": "2026-11-14T01:54:30.436Z",
   "allTime": {
     "total": 81,
     "tp1Hit": 57,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 21,
-    "active": 3,
-    "tp1Rate": 73.1,
+    "stopped": 22,
+    "active": 2,
+    "tp1Rate": 72.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 26.9
+    "stopRate": 27.8
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 25,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 13,
-      "tp1Rate": 65.8
+      "stopped": 14,
+      "tp1Rate": 64.1
     },
     "bearish": {
       "total": 41,
@@ -2008,13 +2008,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-13T22:46:30.618Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T01:48:14.212Z",
+      "statusUpdatedAt": "2026-11-14T01:52:18.220Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.13918827337320797
     },
     {
       "symbol": "SPACEUSDT",
@@ -2087,7 +2088,7 @@
       "sentAt": "2026-11-13T23:18:21.381Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T01:48:14.212Z",
+      "statusUpdatedAt": "2026-11-14T01:52:18.221Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -2112,7 +2113,7 @@
       "sentAt": "2026-11-13T23:34:28.262Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-14T01:48:14.212Z",
+      "statusUpdatedAt": "2026-11-14T01:52:18.221Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

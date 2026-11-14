@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T11:06:28.524Z",
+  "lastUpdated": "2026-11-14T11:10:33.849Z",
   "signals": {
     "MRVLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T06:46:13.265Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 113.17500000000001,
       "stop": 113.39316440560532
+    },
+    "PENGUUSDT:5m": {
+      "sentAt": "2026-11-14T11:10:32.348Z",
+      "symbol": "PENGUUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0058449999999999995,
+      "stop": 0.005884994659575212
     }
   }
 }

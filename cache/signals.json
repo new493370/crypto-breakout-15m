@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T05:18:16.730Z",
+  "lastUpdated": "2026-11-14T05:22:06.736Z",
   "signals": {
-    "ETHFIUSDT:5m": {
-      "sentAt": "2026-11-13T23:18:17.755Z",
-      "symbol": "ETHFIUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.57125,
-      "stop": 0.5758929126134489
-    },
-    "CRCLSTOCKUSDT:5m": {
-      "sentAt": "2026-11-13T23:18:21.381Z",
-      "symbol": "CRCLSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 61.724999999999994,
-      "stop": 62.08627269048364
-    },
     "WLFIUSDT:5m": {
       "sentAt": "2026-11-13T23:34:28.262Z",
       "symbol": "WLFIUSDT",

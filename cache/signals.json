@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T09:02:20.538Z",
+  "lastUpdated": "2026-11-14T09:06:04.769Z",
   "signals": {
-    "IRYSUSDT:5m": {
-      "sentAt": "2026-11-14T03:02:27.756Z",
-      "symbol": "IRYSUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.015585000000000002,
-      "stop": 0.015403206556007572
-    },
     "CAPUSDT:5m": {
       "sentAt": "2026-11-14T03:10:27.258Z",
       "symbol": "CAPUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T18:18:16.416Z",
+  "lastUpdated": "2026-11-14T18:22:17.733Z",
   "signals": {
     "SAPIENUSDT:5m": {
       "sentAt": "2026-11-14T12:26:25.759Z",
@@ -63,6 +63,15 @@
       "score": null,
       "entry": 0.01658,
       "stop": 0.016797634220754917
+    },
+    "REUSDT:5m": {
+      "sentAt": "2026-11-14T18:22:16.231Z",
+      "symbol": "REUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.22075,
+      "stop": 0.22431792668230532
     }
   }
 }

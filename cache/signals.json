@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T05:38:07.014Z",
+  "lastUpdated": "2026-11-14T05:42:09.239Z",
   "signals": {
-    "ZBTUSDT:5m": {
-      "sentAt": "2026-11-13T23:38:17.877Z",
-      "symbol": "ZBTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.05673,
-      "stop": 0.05645201361787893
-    },
     "CPUSDT:5m": {
       "sentAt": "2026-11-14T01:58:16.568Z",
       "symbol": "CPUSDT",

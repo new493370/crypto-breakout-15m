@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-14T19:58:24.810Z",
+  "lastUpdated": "2026-11-14T20:02:26.071Z",
   "signals": {
     "AAPLSTOCKUSDT:5m": {
       "sentAt": "2026-11-14T15:46:09.211Z",
@@ -27,6 +27,15 @@
       "score": null,
       "entry": 0.22075,
       "stop": 0.22431792668230532
+    },
+    "TESLAUSDT:5m": {
+      "sentAt": "2026-11-14T20:02:24.569Z",
+      "symbol": "TESLAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 385.41999999999996,
+      "stop": 384.88697517453903
     }
   }
 }

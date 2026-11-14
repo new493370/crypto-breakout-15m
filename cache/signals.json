@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T01:46:20.656Z",
+  "lastUpdated": "2026-11-14T01:50:25.963Z",
   "signals": {
-    "CHZUSDT:5m": {
-      "sentAt": "2026-11-13T19:48:22.853Z",
-      "symbol": "CHZUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.010870000000000001,
-      "stop": 0.010924981444849957
-    },
     "HOMEUSDT:5m": {
       "sentAt": "2026-11-13T20:13:20.176Z",
       "symbol": "HOMEUSDT",

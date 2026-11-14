@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-14T01:14:10.144Z",
+  "lastUpdated": "2026-11-14T01:18:11.874Z",
   "signals": {
-    "GRAMUSDT:5m": {
-      "sentAt": "2026-11-13T19:18:09.158Z",
-      "symbol": "GRAMUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.1275,
-      "stop": 1.1352056226260767
-    },
     "CHZUSDT:5m": {
       "sentAt": "2026-11-13T19:48:22.853Z",
       "symbol": "CHZUSDT",

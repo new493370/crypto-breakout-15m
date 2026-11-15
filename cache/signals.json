@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T04:06:27.713Z",
+  "lastUpdated": "2026-11-15T04:10:13.523Z",
   "signals": {
     "WLFIUSDT:5m": {
       "sentAt": "2026-11-14T23:34:08.522Z",
@@ -162,6 +162,15 @@
       "score": null,
       "entry": 0.6246499999999999,
       "stop": 0.631132598935084
+    },
+    "PENGUUSDT:5m": {
+      "sentAt": "2026-11-15T04:10:08.772Z",
+      "symbol": "PENGUUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.004973,
+      "stop": 0.005041176071384276
     }
   }
 }

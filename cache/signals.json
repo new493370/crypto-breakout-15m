@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T06:46:00.734Z",
+  "lastUpdated": "2026-11-15T06:50:06.482Z",
   "signals": {
-    "OPGUSDT:5m": {
-      "sentAt": "2026-11-15T00:46:06.906Z",
-      "symbol": "OPGUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.13755,
-      "stop": 0.13935283630110246
-    },
     "AIUSDT:5m": {
       "sentAt": "2026-11-15T00:54:24.917Z",
       "symbol": "AIUSDT",

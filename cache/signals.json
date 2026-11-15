@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T07:14:12.008Z",
+  "lastUpdated": "2026-11-15T07:18:09.761Z",
   "signals": {
-    "DOODUSDT:5m": {
-      "sentAt": "2026-11-15T01:14:18.846Z",
-      "symbol": "DOODUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0014255000000000001,
-      "stop": 0.0014431190106403966
-    },
-    "UBUSDT:5m": {
-      "sentAt": "2026-11-15T01:14:22.394Z",
-      "symbol": "UBUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.101535,
-      "stop": 0.10310607406144445
-    },
-    "SUSHIUSDT:5m": {
-      "sentAt": "2026-11-15T01:14:25.924Z",
-      "symbol": "SUSHIUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.14945,
-      "stop": 0.15121230470993174
-    },
-    "1INCHUSDT:5m": {
-      "sentAt": "2026-11-15T01:14:29.431Z",
-      "symbol": "1INCHUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.064775,
-      "stop": 0.06539407666311499
-    },
     "XRPUSDT:5m": {
       "sentAt": "2026-11-15T01:50:11.421Z",
       "symbol": "XRPUSDT",

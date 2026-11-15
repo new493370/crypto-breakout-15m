@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T10:38:15.950Z",
+  "lastUpdated": "2026-11-15T10:42:16.839Z",
   "allTime": {
-    "total": 162,
+    "total": 163,
     "tp1Hit": 121,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 40,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 75.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 60,
+      "total": 61,
       "tp1Hit": 33,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T10:36:14.967Z",
+      "statusUpdatedAt": "2026-11-15T10:40:14.613Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4251,6 +4251,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.10200000000000002
+    },
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 1824.8249999999998,
+      "stop": 1811.7995134500736,
+      "tp1": 1843.6499999999999,
+      "zoneLow": 1821.06,
+      "zoneHigh": 1828.59,
+      "signalCandleTime": 1794738900000,
+      "rr1": 1.4452435176102274,
+      "highs": [
+        1844.77,
+        1829.74
+      ],
+      "lows": null,
+      "sentAt": "2026-11-15T10:42:15.337Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T10:42:15.337Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -5387,6 +5412,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-15T10:22:05.131Z"
+    },
+    "ETHUSDT:5m:2026-11-15T10:42:15.337Z": {
+      "symbol": "ETHUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-15T10:42:15.337Z"
     }
   }
 }

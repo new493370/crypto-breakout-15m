@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T10:38:15.949Z",
+  "lastUpdated": "2026-11-15T10:42:16.838Z",
   "signals": {
-    "NEIROUSDT:5m": {
-      "sentAt": "2026-11-15T04:38:47.399Z",
-      "symbol": "NEIROUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00004796,
-      "stop": 0.00004750348391394197
-    },
-    "LINKUSDT:5m": {
-      "sentAt": "2026-11-15T04:38:56.568Z",
-      "symbol": "LINKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 9.119,
-      "stop": 9.026180686259647
-    },
     "DYDXUSDT:5m": {
       "sentAt": "2026-11-15T05:02:24.576Z",
       "symbol": "DYDXUSDT",
@@ -90,6 +72,15 @@
       "score": null,
       "entry": 0.10250000000000001,
       "stop": 0.10318038898560371
+    },
+    "ETHUSDT:5m": {
+      "sentAt": "2026-11-15T10:42:15.337Z",
+      "symbol": "ETHUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1824.8249999999998,
+      "stop": 1811.7995134500736
     }
   }
 }

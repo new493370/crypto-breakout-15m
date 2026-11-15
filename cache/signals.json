@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T06:22:06.371Z",
+  "lastUpdated": "2026-11-15T06:26:01.474Z",
   "signals": {
-    "KAVAUSDT:5m": {
-      "sentAt": "2026-11-15T00:22:20.334Z",
-      "symbol": "KAVAUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.028335,
-      "stop": 0.029447014252034172
-    },
     "OPGUSDT:5m": {
       "sentAt": "2026-11-15T00:46:06.906Z",
       "symbol": "OPGUSDT",

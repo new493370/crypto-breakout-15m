@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T20:22:11.556Z",
+  "lastUpdated": "2026-11-15T20:26:15.727Z",
   "signals": {
     "HUMAUSDT:5m": {
       "sentAt": "2026-11-15T16:34:02.260Z",
@@ -117,6 +117,15 @@
       "score": null,
       "entry": 0.02851,
       "stop": 0.02833147659738299
+    },
+    "TRUSTUSDT:5m": {
+      "sentAt": "2026-11-15T20:26:14.226Z",
+      "symbol": "TRUSTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.043734999999999996,
+      "stop": 0.043934912098875234
     }
   }
 }

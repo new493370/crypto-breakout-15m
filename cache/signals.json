@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T07:05:59.189Z",
+  "lastUpdated": "2026-11-15T07:10:15.868Z",
   "signals": {
-    "ZECUSDT:5m": {
-      "sentAt": "2026-11-15T01:06:21.366Z",
-      "symbol": "ZECUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 862.8299999999999,
-      "stop": 878.6561339280448
-    },
     "DOODUSDT:5m": {
       "sentAt": "2026-11-15T01:14:18.846Z",
       "symbol": "DOODUSDT",

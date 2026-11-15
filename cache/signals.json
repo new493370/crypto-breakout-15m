@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T18:06:13.414Z",
+  "lastUpdated": "2026-11-15T18:10:06.831Z",
   "signals": {
     "CFXUSDT:5m": {
       "sentAt": "2026-11-15T12:18:18.838Z",
@@ -180,6 +180,15 @@
       "score": null,
       "entry": 0.07984,
       "stop": 0.07925854530930528
+    },
+    "PIPPINUSDT:5m": {
+      "sentAt": "2026-11-15T18:10:05.328Z",
+      "symbol": "PIPPINUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.011035,
+      "stop": 0.01097930021838912
     }
   }
 }

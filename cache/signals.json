@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T03:14:15.210Z",
+  "lastUpdated": "2026-11-15T03:18:10.131Z",
   "signals": {
-    "SPX500USDT:5m": {
-      "sentAt": "2026-11-14T21:14:18.919Z",
-      "symbol": "SPX500USDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 7521.15,
-      "stop": 7532.889581257796
-    },
     "GPSUSDT:5m": {
       "sentAt": "2026-11-14T21:30:06.593Z",
       "symbol": "GPSUSDT",

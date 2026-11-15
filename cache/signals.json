@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T18:22:19.277Z",
+  "lastUpdated": "2026-11-15T18:26:10.848Z",
   "signals": {
-    "UMAUSDT:5m": {
-      "sentAt": "2026-11-15T12:22:22.542Z",
-      "symbol": "UMAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.2666,
-      "stop": 0.2649326099499881
-    },
     "YBUSDT:5m": {
       "sentAt": "2026-11-15T12:34:18.023Z",
       "symbol": "YBUSDT",

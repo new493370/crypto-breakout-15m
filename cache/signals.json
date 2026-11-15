@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T04:18:11.964Z",
+  "lastUpdated": "2026-11-15T04:22:16.652Z",
   "signals": {
     "WLFIUSDT:5m": {
       "sentAt": "2026-11-14T23:34:08.522Z",
@@ -171,6 +171,15 @@
       "score": null,
       "entry": 0.004973,
       "stop": 0.005041176071384276
+    },
+    "FILUSDT:5m": {
+      "sentAt": "2026-11-15T04:22:13.511Z",
+      "symbol": "FILUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.6246,
+      "stop": 0.6317959591083342
     }
   }
 }

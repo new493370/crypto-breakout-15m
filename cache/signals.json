@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T02:22:11.625Z",
+  "lastUpdated": "2026-11-15T02:26:04.574Z",
   "signals": {
-    "METASTOCKUSDT:5m": {
-      "sentAt": "2026-11-14T20:22:16.113Z",
-      "symbol": "METASTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 634.7249999999999,
-      "stop": 633.8461109122889
-    },
     "DODOUSDT:5m": {
       "sentAt": "2026-11-14T21:02:21.664Z",
       "symbol": "DODOUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T12:02:18.572Z",
+  "lastUpdated": "2026-11-15T12:06:11.004Z",
   "signals": {
-    "KATUSDT:5m": {
-      "sentAt": "2026-11-15T06:02:21.781Z",
-      "symbol": "KATUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0029605,
-      "stop": 0.0029797985419365834
-    },
     "PIEVERSEUSDT:5m": {
       "sentAt": "2026-11-15T07:34:18.669Z",
       "symbol": "PIEVERSEUSDT",

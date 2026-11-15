@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-15T01:50:12.924Z",
+  "lastUpdated": "2026-11-15T01:54:05.580Z",
   "allTime": {
     "total": 144,
-    "tp1Hit": 106,
+    "tp1Hit": 107,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 34,
-    "active": 4,
-    "tp1Rate": 75.7,
+    "active": 3,
+    "tp1Rate": 75.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 24.3
+    "stopRate": 24.1
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 88,
-      "tp1Hit": 74,
+      "tp1Hit": 75,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 11,
-      "tp1Rate": 87.1
+      "tp1Rate": 87.2
     }
   },
   "recentSignals": [
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T01:48:18.017Z",
+      "statusUpdatedAt": "2026-11-15T01:52:16.328Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3567,13 +3567,14 @@
         0.01194
       ],
       "sentAt": "2026-11-15T00:54:24.917Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T01:48:18.017Z",
+      "statusUpdatedAt": "2026-11-15T01:52:19.945Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.01167
     },
     {
       "symbol": "PIUSDT",
@@ -3698,7 +3699,7 @@
       "sentAt": "2026-11-15T01:14:22.394Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T01:48:21.816Z",
+      "statusUpdatedAt": "2026-11-15T01:52:19.945Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3775,7 +3776,7 @@
       "sentAt": "2026-11-15T01:50:11.421Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T01:50:11.421Z",
+      "statusUpdatedAt": "2026-11-15T01:52:19.945Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

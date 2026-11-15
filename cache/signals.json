@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T17:06:19.915Z",
+  "lastUpdated": "2026-11-15T17:10:34.670Z",
   "signals": {
     "PEOPLEUSDT:5m": {
       "sentAt": "2026-11-15T11:14:22.281Z",
@@ -162,6 +162,24 @@
       "score": null,
       "entry": 0.13040000000000002,
       "stop": 0.1312751690103988
+    },
+    "MEMEUSDT:5m": {
+      "sentAt": "2026-11-15T17:10:16.587Z",
+      "symbol": "MEMEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.00032875,
+      "stop": 0.00033115307018187474
+    },
+    "XPLUSDT:5m": {
+      "sentAt": "2026-11-15T17:10:22.132Z",
+      "symbol": "XPLUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.043829999999999994,
+      "stop": 0.04442598269220148
     }
   }
 }

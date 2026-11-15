@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T10:46:10.401Z",
+  "lastUpdated": "2026-11-15T10:50:26.145Z",
   "signals": {
     "DYDXUSDT:5m": {
       "sentAt": "2026-11-15T05:02:24.576Z",
@@ -81,6 +81,15 @@
       "score": null,
       "entry": 1824.8249999999998,
       "stop": 1811.7995134500736
+    },
+    "SATSUSDT:5m": {
+      "sentAt": "2026-11-15T10:50:24.644Z",
+      "symbol": "SATSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 7.754999999999999e-9,
+      "stop": 7.810158131195778e-9
     }
   }
 }

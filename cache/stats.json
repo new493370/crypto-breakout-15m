@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T10:46:10.401Z",
+  "lastUpdated": "2026-11-15T10:50:26.146Z",
   "allTime": {
-    "total": 163,
+    "total": 164,
     "tp1Hit": 121,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 40,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 75.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 55.9
     },
     "bearish": {
-      "total": 102,
+      "total": 103,
       "tp1Hit": 88,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T10:44:13.718Z",
+      "statusUpdatedAt": "2026-11-15T10:48:18.151Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4271,7 +4271,32 @@
       "sentAt": "2026-11-15T10:42:15.337Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T10:44:13.718Z",
+      "statusUpdatedAt": "2026-11-15T10:48:18.151Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SATSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 7.754999999999999e-9,
+      "stop": 7.810158131195778e-9,
+      "tp1": 7.704999999999997e-9,
+      "zoneLow": 7.745e-9,
+      "zoneHigh": 7.765e-9,
+      "signalCandleTime": 1794739200000,
+      "rr1": 0.9064846635672213,
+      "highs": null,
+      "lows": [
+        7.447e-9,
+        7.708e-9
+      ],
+      "sentAt": "2026-11-15T10:50:24.643Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T10:50:24.643Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5419,6 +5444,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-15T10:42:15.337Z"
+    },
+    "SATSUSDT:5m:2026-11-15T10:50:24.643Z": {
+      "symbol": "SATSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T10:50:24.643Z"
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T18:46:15.790Z",
+  "lastUpdated": "2026-11-15T18:50:16.938Z",
   "signals": {
-    "1000BONKUSDT:5m": {
-      "sentAt": "2026-11-15T12:46:23.652Z",
-      "symbol": "1000BONKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0024025,
-      "stop": 0.0023835336705427643
-    },
     "SNXUSDT:5m": {
       "sentAt": "2026-11-15T13:18:22.523Z",
       "symbol": "SNXUSDT",

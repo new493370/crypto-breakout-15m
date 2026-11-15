@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T19:38:13.835Z",
+  "lastUpdated": "2026-11-15T19:42:05.885Z",
   "signals": {
     "1INCHUSDT:5m": {
       "sentAt": "2026-11-15T13:58:15.617Z",
@@ -117,6 +117,15 @@
       "score": null,
       "entry": 0.032409999999999994,
       "stop": 0.03166638018956998
+    },
+    "KMNOUSDT:5m": {
+      "sentAt": "2026-11-15T19:42:04.384Z",
+      "symbol": "KMNOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.02851,
+      "stop": 0.02833147659738299
     }
   }
 }

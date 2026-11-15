@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T23:33:59.185Z",
+  "lastUpdated": "2026-11-15T23:38:14.284Z",
   "signals": {
     "POLUSDT:5m": {
       "sentAt": "2026-11-15T18:06:11.913Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.03452,
       "stop": 0.03428281159230973
+    },
+    "BTWUSDT:5m": {
+      "sentAt": "2026-11-15T23:38:12.783Z",
+      "symbol": "BTWUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.54635,
+      "stop": 0.5635021581554828
     }
   }
 }

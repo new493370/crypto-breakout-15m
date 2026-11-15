@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T04:02:15.707Z",
+  "lastUpdated": "2026-11-15T04:06:27.714Z",
   "allTime": {
-    "total": 146,
+    "total": 150,
     "tp1Hit": 108,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 37,
-    "active": 1,
+    "active": 5,
     "tp1Rate": 74.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 58.9
     },
     "bearish": {
-      "total": 89,
+      "total": 93,
       "tp1Hit": 75,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T04:00:15.620Z",
+      "statusUpdatedAt": "2026-11-15T04:04:14.487Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3835,6 +3835,106 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.15734
+    },
+    {
+      "symbol": "MAGICUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.07000999999999999,
+      "stop": 0.07080561768214987,
+      "tp1": 0.06905999999999998,
+      "zoneLow": 0.06982,
+      "zoneHigh": 0.0702,
+      "signalCandleTime": 1794715200000,
+      "rr1": 1.194040833070685,
+      "highs": null,
+      "lows": [
+        0.06641,
+        0.06965
+      ],
+      "sentAt": "2026-11-15T04:06:12.459Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T04:06:12.459Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "DOTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.7221500000000001,
+      "stop": 0.7300912221347832,
+      "tp1": 0.7149,
+      "zoneLow": 0.7207,
+      "zoneHigh": 0.7236,
+      "signalCandleTime": 1794715200000,
+      "rr1": 0.9129577131767402,
+      "highs": null,
+      "lows": [
+        0.7126,
+        0.7193
+      ],
+      "sentAt": "2026-11-15T04:06:17.953Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T04:06:17.953Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "IOTAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.03175,
+      "stop": 0.03204069431635381,
+      "tp1": 0.03145000000000001,
+      "zoneLow": 0.03169,
+      "zoneHigh": 0.03181,
+      "signalCandleTime": 1794715200000,
+      "rr1": 1.0320119215363306,
+      "highs": null,
+      "lows": [
+        0.03012,
+        0.03151
+      ],
+      "sentAt": "2026-11-15T04:06:22.554Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T04:06:22.554Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "FILECOINUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.6246499999999999,
+      "stop": 0.631132598935084,
+      "tp1": 0.6178999999999999,
+      "zoneLow": 0.6233,
+      "zoneHigh": 0.626,
+      "signalCandleTime": 1794715200000,
+      "rr1": 1.0412490526706468,
+      "highs": null,
+      "lows": [
+        0.6086,
+        0.6202
+      ],
+      "sentAt": "2026-11-15T04:06:26.211Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T04:06:26.211Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -4859,6 +4959,34 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-15T01:58:21.903Z"
+    },
+    "MAGICUSDT:5m:2026-11-15T04:06:12.459Z": {
+      "symbol": "MAGICUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T04:06:12.459Z"
+    },
+    "DOTUSDT:5m:2026-11-15T04:06:17.953Z": {
+      "symbol": "DOTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T04:06:17.953Z"
+    },
+    "IOTAUSDT:5m:2026-11-15T04:06:22.554Z": {
+      "symbol": "IOTAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T04:06:22.554Z"
+    },
+    "FILECOINUSDT:5m:2026-11-15T04:06:26.211Z": {
+      "symbol": "FILECOINUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T04:06:26.211Z"
     }
   }
 }

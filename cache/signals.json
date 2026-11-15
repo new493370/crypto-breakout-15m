@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T03:02:00.044Z",
+  "lastUpdated": "2026-11-15T03:06:07.956Z",
   "signals": {
-    "DODOUSDT:5m": {
-      "sentAt": "2026-11-14T21:02:21.664Z",
-      "symbol": "DODOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.032405,
-      "stop": 0.03313510974469215
-    },
     "SPX500USDT:5m": {
       "sentAt": "2026-11-14T21:14:18.919Z",
       "symbol": "SPX500USDT",

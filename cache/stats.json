@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T10:58:23.893Z",
+  "lastUpdated": "2026-11-15T11:02:16.723Z",
   "allTime": {
-    "total": 165,
+    "total": 166,
     "tp1Hit": 122,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 40,
-    "active": 3,
+    "active": 4,
     "tp1Rate": 75.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 55.9
     },
     "bearish": {
-      "total": 103,
+      "total": 104,
       "tp1Hit": 89,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T10:56:18.674Z",
+      "statusUpdatedAt": "2026-11-15T11:00:15.509Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4271,7 +4271,7 @@
       "sentAt": "2026-11-15T10:42:15.337Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T10:56:18.675Z",
+      "statusUpdatedAt": "2026-11-15T11:00:15.509Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4322,7 +4322,32 @@
       "sentAt": "2026-11-15T10:58:22.390Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T10:58:22.390Z",
+      "statusUpdatedAt": "2026-11-15T11:00:15.509Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AXISUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0832,
+      "stop": 0.08406191117665261,
+      "tp1": 0.0817,
+      "zoneLow": 0.0829,
+      "zoneHigh": 0.0835,
+      "signalCandleTime": 1794740100000,
+      "rr1": 1.7403185393482372,
+      "highs": null,
+      "lows": [
+        0.0812,
+        0.0823
+      ],
+      "sentAt": "2026-11-15T11:02:15.221Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T11:02:15.221Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5484,6 +5509,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-15T10:58:22.390Z"
+    },
+    "AXISUSDT:5m:2026-11-15T11:02:15.221Z": {
+      "symbol": "AXISUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T11:02:15.221Z"
     }
   }
 }

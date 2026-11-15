@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T05:54:13.191Z",
+  "lastUpdated": "2026-11-15T05:58:05.497Z",
   "signals": {
     "KAVAUSDT:5m": {
       "sentAt": "2026-11-15T00:22:20.334Z",
@@ -225,6 +225,15 @@
       "score": null,
       "entry": 0.012750000000000001,
       "stop": 0.012898246793038514
+    },
+    "GOOGLSTOCKUSDT:5m": {
+      "sentAt": "2026-11-15T05:58:03.996Z",
+      "symbol": "GOOGLSTOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 292.72,
+      "stop": 293.0905858252716
     }
   }
 }

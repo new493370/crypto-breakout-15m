@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T22:30:06.406Z",
+  "lastUpdated": "2026-11-15T22:34:07.615Z",
   "signals": {
-    "HUMAUSDT:5m": {
-      "sentAt": "2026-11-15T16:34:02.260Z",
-      "symbol": "HUMAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.006565,
-      "stop": 0.006503447424410764
-    },
     "BILLUSDT:5m": {
       "sentAt": "2026-11-15T16:50:17.317Z",
       "symbol": "BILLUSDT",

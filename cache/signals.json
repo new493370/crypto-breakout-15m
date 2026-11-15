@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T12:42:24.892Z",
+  "lastUpdated": "2026-11-15T12:46:25.154Z",
   "signals": {
     "PIEVERSEUSDT:5m": {
       "sentAt": "2026-11-15T07:34:18.669Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 0.031465,
       "stop": 0.031307542236688655
+    },
+    "1000BONKUSDT:5m": {
+      "sentAt": "2026-11-15T12:46:23.652Z",
+      "symbol": "1000BONKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0024025,
+      "stop": 0.0023835336705427643
     }
   }
 }

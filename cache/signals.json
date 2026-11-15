@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T01:54:05.579Z",
+  "lastUpdated": "2026-11-15T01:58:23.405Z",
   "signals": {
     "TESLAUSDT:5m": {
       "sentAt": "2026-11-14T20:02:24.569Z",
@@ -162,6 +162,24 @@
       "score": null,
       "entry": 0.9094,
       "stop": 0.9237874698570426
+    },
+    "HMSTRUSDT:5m": {
+      "sentAt": "2026-11-15T01:58:18.399Z",
+      "symbol": "HMSTRUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.00013890000000000002,
+      "stop": 0.00014083857809268744
+    },
+    "ALLOUSDT:5m": {
+      "sentAt": "2026-11-15T01:58:21.903Z",
+      "symbol": "ALLOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.15164,
+      "stop": 0.1485834706127881
     }
   }
 }

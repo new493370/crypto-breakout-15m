@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T01:54:05.580Z",
+  "lastUpdated": "2026-11-15T01:58:23.406Z",
   "allTime": {
-    "total": 144,
+    "total": 146,
     "tp1Hit": 107,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 34,
-    "active": 3,
+    "active": 5,
     "tp1Rate": 75.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 56,
+      "total": 57,
       "tp1Hit": 32,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 58.2
     },
     "bearish": {
-      "total": 88,
+      "total": 89,
       "tp1Hit": 75,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T01:52:16.328Z",
+      "statusUpdatedAt": "2026-11-15T01:56:14.970Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3699,7 +3699,7 @@
       "sentAt": "2026-11-15T01:14:22.394Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T01:52:19.945Z",
+      "statusUpdatedAt": "2026-11-15T01:56:14.970Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3776,7 +3776,57 @@
       "sentAt": "2026-11-15T01:50:11.421Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T01:52:19.945Z",
+      "statusUpdatedAt": "2026-11-15T01:56:14.970Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "HMSTRUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.00013890000000000002,
+      "stop": 0.00014083857809268744,
+      "tp1": 0.00013690000000000002,
+      "zoneLow": 0.0001385,
+      "zoneHigh": 0.0001393,
+      "signalCandleTime": 1794707400000,
+      "rr1": 1.0316839994964644,
+      "highs": null,
+      "lows": [
+        0.0001361,
+        0.0001385
+      ],
+      "sentAt": "2026-11-15T01:58:18.399Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T01:58:18.399Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.15164,
+      "stop": 0.1485834706127881,
+      "tp1": 0.15734,
+      "zoneLow": 0.1505,
+      "zoneHigh": 0.15278,
+      "signalCandleTime": 1794707400000,
+      "rr1": 1.8648601985794813,
+      "highs": [
+        0.15659,
+        0.15407
+      ],
+      "lows": null,
+      "sentAt": "2026-11-15T01:58:21.903Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T01:58:21.903Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4791,6 +4841,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-15T01:50:11.421Z"
+    },
+    "HMSTRUSDT:5m:2026-11-15T01:58:18.399Z": {
+      "symbol": "HMSTRUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T01:58:18.399Z"
+    },
+    "ALLOUSDT:5m:2026-11-15T01:58:21.903Z": {
+      "symbol": "ALLOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-15T01:58:21.903Z"
     }
   }
 }

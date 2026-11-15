@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T07:30:12.878Z",
+  "lastUpdated": "2026-11-15T07:34:20.172Z",
   "allTime": {
-    "total": 160,
+    "total": 161,
     "tp1Hit": 120,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 38,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 75.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 59,
+      "total": 60,
       "tp1Hit": 33,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T07:28:13.784Z",
+      "statusUpdatedAt": "2026-11-15T07:32:15.480Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4037,7 +4037,7 @@
       "sentAt": "2026-11-15T04:38:56.568Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T07:28:13.785Z",
+      "statusUpdatedAt": "2026-11-15T07:32:15.480Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4198,6 +4198,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.002937999999999999
+    },
+    {
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 1.9259,
+      "stop": 1.8871176418746756,
+      "tp1": 1.9709,
+      "zoneLow": 1.9169,
+      "zoneHigh": 1.9349,
+      "signalCandleTime": 1794727500000,
+      "rr1": 1.1603213980589728,
+      "highs": [
+        1.948,
+        1.936
+      ],
+      "lows": null,
+      "sentAt": "2026-11-15T07:34:18.668Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T07:34:18.668Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -5320,6 +5345,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-15T06:02:21.781Z"
+    },
+    "PIEVERSEUSDT:5m:2026-11-15T07:34:18.668Z": {
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-15T07:34:18.668Z"
     }
   }
 }

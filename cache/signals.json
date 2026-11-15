@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T07:30:12.876Z",
+  "lastUpdated": "2026-11-15T07:34:20.170Z",
   "signals": {
     "XRPUSDT:5m": {
       "sentAt": "2026-11-15T01:50:11.421Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.0029605,
       "stop": 0.0029797985419365834
+    },
+    "PIEVERSEUSDT:5m": {
+      "sentAt": "2026-11-15T07:34:18.669Z",
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.9259,
+      "stop": 1.8871176418746756
     }
   }
 }

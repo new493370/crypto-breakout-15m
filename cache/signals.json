@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T23:10:18.949Z",
+  "lastUpdated": "2026-11-15T23:13:58.667Z",
   "signals": {
-    "XPLUSDT:5m": {
-      "sentAt": "2026-11-15T17:10:22.132Z",
-      "symbol": "XPLUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.043829999999999994,
-      "stop": 0.04442598269220148
-    },
     "GRASSUSDT:5m": {
       "sentAt": "2026-11-15T17:18:12.125Z",
       "symbol": "GRASSUSDT",

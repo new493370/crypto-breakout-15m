@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T10:54:04.423Z",
+  "lastUpdated": "2026-11-15T10:58:23.892Z",
   "signals": {
     "DYDXUSDT:5m": {
       "sentAt": "2026-11-15T05:02:24.576Z",
@@ -90,6 +90,15 @@
       "score": null,
       "entry": 7.754999999999999e-9,
       "stop": 7.810158131195778e-9
+    },
+    "BSBUSDT:5m": {
+      "sentAt": "2026-11-15T10:58:22.391Z",
+      "symbol": "BSBUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.07096,
+      "stop": 0.07057429193062766
     }
   }
 }

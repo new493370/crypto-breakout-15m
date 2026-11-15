@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T03:54:15.448Z",
+  "lastUpdated": "2026-11-15T03:58:09.846Z",
   "signals": {
-    "UKOILUSDT:5m": {
-      "sentAt": "2026-11-14T21:58:09.179Z",
-      "symbol": "UKOILUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 92.84,
-      "stop": 93.1103743439191
-    },
     "WLFIUSDT:5m": {
       "sentAt": "2026-11-14T23:34:08.522Z",
       "symbol": "WLFIUSDT",

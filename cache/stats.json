@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T18:02:01.552Z",
+  "lastUpdated": "2026-11-15T18:06:13.415Z",
   "allTime": {
-    "total": 187,
+    "total": 188,
     "tp1Hit": 129,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 52,
-    "active": 6,
+    "active": 7,
     "tp1Rate": 71.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 72,
+      "total": 73,
       "tp1Hit": 35,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T18:00:18.199Z",
+      "statusUpdatedAt": "2026-11-15T18:04:16.296Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4739,7 +4739,7 @@
       "sentAt": "2026-11-15T17:06:04.612Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T18:00:18.199Z",
+      "statusUpdatedAt": "2026-11-15T18:04:16.296Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4764,7 +4764,7 @@
       "sentAt": "2026-11-15T17:06:08.043Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T18:00:18.199Z",
+      "statusUpdatedAt": "2026-11-15T18:04:16.296Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4789,7 +4789,7 @@
       "sentAt": "2026-11-15T17:06:11.471Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T18:00:18.199Z",
+      "statusUpdatedAt": "2026-11-15T18:04:16.296Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4814,7 +4814,7 @@
       "sentAt": "2026-11-15T17:06:18.413Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T18:00:18.199Z",
+      "statusUpdatedAt": "2026-11-15T18:04:16.296Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4865,7 +4865,7 @@
       "sentAt": "2026-11-15T17:10:22.132Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T18:00:18.199Z",
+      "statusUpdatedAt": "2026-11-15T18:04:16.296Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4896,6 +4896,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.3831000000000001
+    },
+    {
+      "symbol": "POLUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.07984,
+      "stop": 0.07925854530930528,
+      "tp1": 0.08079000000000001,
+      "zoneLow": 0.07965,
+      "zoneHigh": 0.08003,
+      "signalCandleTime": 1794765600000,
+      "rr1": 1.633833237917413,
+      "highs": [
+        0.08089,
+        0.08031
+      ],
+      "lows": null,
+      "sentAt": "2026-11-15T18:06:11.913Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T18:06:11.913Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -6207,6 +6232,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-15T17:18:12.125Z"
+    },
+    "POLUSDT:5m:2026-11-15T18:06:11.913Z": {
+      "symbol": "POLUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-15T18:06:11.913Z"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T18:02:01.551Z",
+  "lastUpdated": "2026-11-15T18:06:13.414Z",
   "signals": {
     "CFXUSDT:5m": {
       "sentAt": "2026-11-15T12:18:18.838Z",
@@ -171,6 +171,15 @@
       "score": null,
       "entry": 0.38785000000000003,
       "stop": 0.39197243310822194
+    },
+    "POLUSDT:5m": {
+      "sentAt": "2026-11-15T18:06:11.913Z",
+      "symbol": "POLUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.07984,
+      "stop": 0.07925854530930528
     }
   }
 }

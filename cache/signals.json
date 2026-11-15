@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T21:38:12.168Z",
+  "lastUpdated": "2026-11-15T21:42:25.794Z",
   "signals": {
     "HUMAUSDT:5m": {
       "sentAt": "2026-11-15T16:34:02.260Z",
@@ -144,6 +144,33 @@
       "score": null,
       "entry": 0.07055,
       "stop": 0.07103686775001201
+    },
+    "TRIAUSDT:5m": {
+      "sentAt": "2026-11-15T21:42:17.246Z",
+      "symbol": "TRIAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.002206,
+      "stop": 0.0022221010999727065
+    },
+    "EDENUSDT:5m": {
+      "sentAt": "2026-11-15T21:42:20.758Z",
+      "symbol": "EDENUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.044065,
+      "stop": 0.044372603955345626
+    },
+    "SAPIENUSDT:5m": {
+      "sentAt": "2026-11-15T21:42:24.292Z",
+      "symbol": "SAPIENUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0375,
+      "stop": 0.03774196360454421
     }
   }
 }

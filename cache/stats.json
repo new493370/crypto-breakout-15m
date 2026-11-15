@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T00:18:12.633Z",
+  "lastUpdated": "2026-11-15T00:22:21.836Z",
   "allTime": {
-    "total": 133,
+    "total": 134,
     "tp1Hit": 98,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 34,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 74.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 58.2
     },
     "bearish": {
-      "total": 77,
+      "total": 78,
       "tp1Hit": 66,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T00:16:14.946Z",
+      "statusUpdatedAt": "2026-11-15T00:20:15.843Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3497,6 +3497,31 @@
       "_tp1Notified": false,
       "_stoppedNotified": true,
       "exitPrice": 0.046475791821188106
+    },
+    {
+      "symbol": "KAVAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.028335,
+      "stop": 0.029447014252034172,
+      "tp1": 0.027159999999999997,
+      "zoneLow": 0.0281,
+      "zoneHigh": 0.02857,
+      "signalCandleTime": 1794701700000,
+      "rr1": 1.0566411337360218,
+      "highs": null,
+      "lows": [
+        0.02784,
+        0.02823
+      ],
+      "sentAt": "2026-11-15T00:22:20.334Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T00:22:20.334Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -4430,6 +4455,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-14T23:34:08.522Z"
+    },
+    "KAVAUSDT:5m:2026-11-15T00:22:20.334Z": {
+      "symbol": "KAVAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T00:22:20.334Z"
     }
   }
 }

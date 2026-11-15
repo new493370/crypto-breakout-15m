@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T00:18:12.631Z",
+  "lastUpdated": "2026-11-15T00:22:21.835Z",
   "signals": {
-    "2ZUSDT:5m": {
-      "sentAt": "2026-11-14T18:18:14.915Z",
-      "symbol": "2ZUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.01658,
-      "stop": 0.016797634220754917
-    },
-    "REUSDT:5m": {
-      "sentAt": "2026-11-14T18:22:16.231Z",
-      "symbol": "REUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.22075,
-      "stop": 0.22431792668230532
-    },
     "TESLAUSDT:5m": {
       "sentAt": "2026-11-14T20:02:24.569Z",
       "symbol": "TESLAUSDT",
@@ -81,6 +63,15 @@
       "score": null,
       "entry": 0.046115,
       "stop": 0.046475791821188106
+    },
+    "KAVAUSDT:5m": {
+      "sentAt": "2026-11-15T00:22:20.334Z",
+      "symbol": "KAVAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.028335,
+      "stop": 0.029447014252034172
     }
   }
 }

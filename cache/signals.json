@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T05:58:05.497Z",
+  "lastUpdated": "2026-11-15T06:02:23.282Z",
   "signals": {
     "KAVAUSDT:5m": {
       "sentAt": "2026-11-15T00:22:20.334Z",
@@ -234,6 +234,15 @@
       "score": null,
       "entry": 292.72,
       "stop": 293.0905858252716
+    },
+    "KATUSDT:5m": {
+      "sentAt": "2026-11-15T06:02:21.781Z",
+      "symbol": "KATUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0029605,
+      "stop": 0.0029797985419365834
     }
   }
 }

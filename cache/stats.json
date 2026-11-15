@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T21:29:58.438Z",
+  "lastUpdated": "2026-11-15T21:34:19.972Z",
   "allTime": {
-    "total": 193,
+    "total": 194,
     "tp1Hit": 135,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 56,
-    "active": 2,
+    "active": 3,
     "tp1Rate": 70.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 52
     },
     "bearish": {
-      "total": 116,
+      "total": 117,
       "tp1Hit": 96,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T21:28:15.542Z",
+      "statusUpdatedAt": "2026-11-15T21:32:17.343Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4973,7 +4973,7 @@
       "sentAt": "2026-11-15T18:38:07.161Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T21:28:15.543Z",
+      "statusUpdatedAt": "2026-11-15T21:32:17.343Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5056,6 +5056,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.0032480000000000005
+    },
+    {
+      "symbol": "BSBUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.07055,
+      "stop": 0.07103686775001201,
+      "tp1": 0.06974999999999999,
+      "zoneLow": 0.07039,
+      "zoneHigh": 0.07071,
+      "signalCandleTime": 1794777900000,
+      "rr1": 1.6431566888138929,
+      "highs": null,
+      "lows": [
+        0.07012,
+        0.07047
+      ],
+      "sentAt": "2026-11-15T21:34:18.469Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T21:34:18.469Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -6409,6 +6434,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-15T20:38:22.105Z"
+    },
+    "BSBUSDT:5m:2026-11-15T21:34:18.469Z": {
+      "symbol": "BSBUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T21:34:18.469Z"
     }
   }
 }

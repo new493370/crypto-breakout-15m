@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T12:18:20.340Z",
+  "lastUpdated": "2026-11-15T12:22:24.043Z",
   "signals": {
     "PIEVERSEUSDT:5m": {
       "sentAt": "2026-11-15T07:34:18.669Z",
@@ -81,6 +81,33 @@
       "score": null,
       "entry": 0.034265,
       "stop": 0.03406528712222322
+    },
+    "USELESSUSDT:5m": {
+      "sentAt": "2026-11-15T12:22:15.750Z",
+      "symbol": "USELESSUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.10146,
+      "stop": 0.10018659953943085
+    },
+    "2ZUSDT:5m": {
+      "sentAt": "2026-11-15T12:22:19.183Z",
+      "symbol": "2ZUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.016255,
+      "stop": 0.01612795022830176
+    },
+    "UMAUSDT:5m": {
+      "sentAt": "2026-11-15T12:22:22.542Z",
+      "symbol": "UMAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.2666,
+      "stop": 0.2649326099499881
     }
   }
 }

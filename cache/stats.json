@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-15T06:10:14.021Z",
+  "lastUpdated": "2026-11-15T06:14:13.630Z",
   "allTime": {
     "total": 160,
-    "tp1Hit": 116,
+    "tp1Hit": 117,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 38,
-    "active": 6,
-    "tp1Rate": 75.3,
+    "active": 5,
+    "tp1Rate": 75.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 24.7
+    "stopRate": 24.5
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 101,
-      "tp1Hit": 83,
+      "tp1Hit": 84,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 14,
-      "tp1Rate": 85.6
+      "tp1Rate": 85.7
     }
   },
   "recentSignals": [
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T06:08:19.044Z",
+      "statusUpdatedAt": "2026-11-15T06:12:16.429Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3907,7 +3907,7 @@
       "sentAt": "2026-11-15T04:06:22.554Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T06:08:19.044Z",
+      "statusUpdatedAt": "2026-11-15T06:12:16.429Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4036,7 +4036,7 @@
       "sentAt": "2026-11-15T04:38:56.568Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T06:08:22.639Z",
+      "statusUpdatedAt": "2026-11-15T06:12:16.429Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4139,7 +4139,7 @@
       "sentAt": "2026-11-15T05:50:06.982Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T06:08:24.302Z",
+      "statusUpdatedAt": "2026-11-15T06:12:16.429Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4162,13 +4162,14 @@
         292.54
       ],
       "sentAt": "2026-11-15T05:58:03.996Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T06:08:24.302Z",
+      "statusUpdatedAt": "2026-11-15T06:12:19.892Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 292.22
     },
     {
       "symbol": "KATUSDT",
@@ -4189,7 +4190,7 @@
       "sentAt": "2026-11-15T06:02:21.781Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T06:08:24.302Z",
+      "statusUpdatedAt": "2026-11-15T06:12:19.892Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

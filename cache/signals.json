@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T00:50:15.662Z",
+  "lastUpdated": "2026-11-15T00:54:33.428Z",
   "signals": {
     "TESLAUSDT:5m": {
       "sentAt": "2026-11-14T20:02:24.569Z",
@@ -81,6 +81,33 @@
       "score": null,
       "entry": 0.13755,
       "stop": 0.13935283630110246
+    },
+    "AIUSDT:5m": {
+      "sentAt": "2026-11-15T00:54:24.917Z",
+      "symbol": "AIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.011970000000000001,
+      "stop": 0.012148794273880326
+    },
+    "PIUSDT:5m": {
+      "sentAt": "2026-11-15T00:54:28.427Z",
+      "symbol": "PIUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.06263,
+      "stop": 0.06347428171770435
+    },
+    "DATAUSDT:5m": {
+      "sentAt": "2026-11-15T00:54:31.926Z",
+      "symbol": "DATAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0865,
+      "stop": 0.08771819792935391
     }
   }
 }

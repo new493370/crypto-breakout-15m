@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T02:02:10.707Z",
+  "lastUpdated": "2026-11-15T02:06:18.769Z",
   "signals": {
-    "TESLAUSDT:5m": {
-      "sentAt": "2026-11-14T20:02:24.569Z",
-      "symbol": "TESLAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 385.41999999999996,
-      "stop": 384.88697517453903
-    },
     "METASTOCKUSDT:5m": {
       "sentAt": "2026-11-14T20:22:16.113Z",
       "symbol": "METASTOCKUSDT",

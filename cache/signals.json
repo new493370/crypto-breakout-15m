@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T13:34:16.297Z",
+  "lastUpdated": "2026-11-15T13:38:21.775Z",
   "signals": {
-    "PIEVERSEUSDT:5m": {
-      "sentAt": "2026-11-15T07:34:18.669Z",
-      "symbol": "PIEVERSEUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 1.9259,
-      "stop": 1.8871176418746756
-    },
     "MMTUSDT:5m": {
       "sentAt": "2026-11-15T10:22:05.131Z",
       "symbol": "MMTUSDT",

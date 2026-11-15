@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T18:42:12.857Z",
+  "lastUpdated": "2026-11-15T18:46:15.790Z",
   "signals": {
-    "IOTAUSDT:5m": {
-      "sentAt": "2026-11-15T12:42:23.391Z",
-      "symbol": "IOTAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.031465,
-      "stop": 0.031307542236688655
-    },
     "1000BONKUSDT:5m": {
       "sentAt": "2026-11-15T12:46:23.652Z",
       "symbol": "1000BONKUSDT",

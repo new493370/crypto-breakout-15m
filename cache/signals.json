@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T05:34:01.645Z",
+  "lastUpdated": "2026-11-15T05:38:15.713Z",
   "signals": {
-    "WLFIUSDT:5m": {
-      "sentAt": "2026-11-14T23:34:08.522Z",
-      "symbol": "WLFIUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.046115,
-      "stop": 0.046475791821188106
-    },
     "KAVAUSDT:5m": {
       "sentAt": "2026-11-15T00:22:20.334Z",
       "symbol": "KAVAUSDT",

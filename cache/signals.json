@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T17:02:14.481Z",
+  "lastUpdated": "2026-11-15T17:06:19.915Z",
   "signals": {
-    "AXISUSDT:5m": {
-      "sentAt": "2026-11-15T11:02:15.221Z",
-      "symbol": "AXISUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0832,
-      "stop": 0.08406191117665261
-    },
     "PEOPLEUSDT:5m": {
       "sentAt": "2026-11-15T11:14:22.281Z",
       "symbol": "PEOPLEUSDT",
@@ -135,6 +126,42 @@
       "score": null,
       "entry": 0.0041155,
       "stop": 0.004077623820114562
+    },
+    "DYDXUSDT:5m": {
+      "sentAt": "2026-11-15T17:06:04.612Z",
+      "symbol": "DYDXUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.07841999999999999,
+      "stop": 0.07906198790135027
+    },
+    "APTUSDT:5m": {
+      "sentAt": "2026-11-15T17:06:08.043Z",
+      "symbol": "APTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.4506,
+      "stop": 0.45490910507640747
+    },
+    "DOTUSDT:5m": {
+      "sentAt": "2026-11-15T17:06:11.471Z",
+      "symbol": "DOTUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.73295,
+      "stop": 0.7392636370816972
+    },
+    "THETAUSDT:5m": {
+      "sentAt": "2026-11-15T17:06:18.413Z",
+      "symbol": "THETAUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.13040000000000002,
+      "stop": 0.1312751690103988
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T22:46:09.816Z",
+  "lastUpdated": "2026-11-15T22:50:27.626Z",
   "signals": {
-    "BILLUSDT:5m": {
-      "sentAt": "2026-11-15T16:50:17.317Z",
-      "symbol": "BILLUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0041155,
-      "stop": 0.004077623820114562
-    },
     "DYDXUSDT:5m": {
       "sentAt": "2026-11-15T17:06:04.612Z",
       "symbol": "DYDXUSDT",

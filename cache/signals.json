@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T16:30:03.700Z",
+  "lastUpdated": "2026-11-15T16:34:05.419Z",
   "signals": {
     "ETHUSDT:5m": {
       "sentAt": "2026-11-15T10:42:15.337Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 0.067665,
       "stop": 0.06790289008925973
+    },
+    "HUMAUSDT:5m": {
+      "sentAt": "2026-11-15T16:34:02.260Z",
+      "symbol": "HUMAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.006565,
+      "stop": 0.006503447424410764
     }
   }
 }

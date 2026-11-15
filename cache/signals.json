@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T01:46:16.212Z",
+  "lastUpdated": "2026-11-15T01:50:12.923Z",
   "signals": {
     "TESLAUSDT:5m": {
       "sentAt": "2026-11-14T20:02:24.569Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.064775,
       "stop": 0.06539407666311499
+    },
+    "XRPUSDT:5m": {
+      "sentAt": "2026-11-15T01:50:11.421Z",
+      "symbol": "XRPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.9094,
+      "stop": 0.9237874698570426
     }
   }
 }

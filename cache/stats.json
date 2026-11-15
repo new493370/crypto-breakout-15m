@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T11:10:10.921Z",
+  "lastUpdated": "2026-11-15T11:14:23.784Z",
   "allTime": {
-    "total": 166,
+    "total": 167,
     "tp1Hit": 122,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 40,
-    "active": 4,
+    "active": 5,
     "tp1Rate": 75.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 55.9
     },
     "bearish": {
-      "total": 104,
+      "total": 105,
       "tp1Hit": 89,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T11:08:17.488Z",
+      "statusUpdatedAt": "2026-11-15T11:12:16.568Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4271,7 +4271,7 @@
       "sentAt": "2026-11-15T10:42:15.337Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T11:08:17.488Z",
+      "statusUpdatedAt": "2026-11-15T11:12:16.568Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4322,7 +4322,7 @@
       "sentAt": "2026-11-15T10:58:22.390Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T11:08:17.488Z",
+      "statusUpdatedAt": "2026-11-15T11:12:16.568Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4347,7 +4347,32 @@
       "sentAt": "2026-11-15T11:02:15.221Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T11:08:17.488Z",
+      "statusUpdatedAt": "2026-11-15T11:12:16.568Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "PEOPLEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.0049695,
+      "stop": 0.004997586370958987,
+      "tp1": 0.0049419999999999985,
+      "zoneLow": 0.004964,
+      "zoneHigh": 0.004975,
+      "signalCandleTime": 1794740700000,
+      "rr1": 0.9791225801353449,
+      "highs": null,
+      "lows": [
+        0.004965,
+        0.004969
+      ],
+      "sentAt": "2026-11-15T11:14:22.281Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T11:14:22.281Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5516,6 +5541,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-15T11:02:15.221Z"
+    },
+    "PEOPLEUSDT:5m:2026-11-15T11:14:22.281Z": {
+      "symbol": "PEOPLEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T11:14:22.281Z"
     }
   }
 }

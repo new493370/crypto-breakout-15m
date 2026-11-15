@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T11:10:10.920Z",
+  "lastUpdated": "2026-11-15T11:14:23.783Z",
   "signals": {
-    "ATOMUSDT:5m": {
-      "sentAt": "2026-11-15T05:14:07.840Z",
-      "symbol": "ATOMUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 1.289,
-      "stop": 1.2989964214057332
-    },
     "PLUMEUSDT:5m": {
       "sentAt": "2026-11-15T05:50:06.982Z",
       "symbol": "PLUMEUSDT",
@@ -90,6 +81,15 @@
       "score": null,
       "entry": 0.0832,
       "stop": 0.08406191117665261
+    },
+    "PEOPLEUSDT:5m": {
+      "sentAt": "2026-11-15T11:14:22.281Z",
+      "symbol": "PEOPLEUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0049695,
+      "stop": 0.004997586370958987
     }
   }
 }

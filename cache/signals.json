@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T07:57:59.859Z",
+  "lastUpdated": "2026-11-15T08:02:12.274Z",
   "signals": {
-    "HMSTRUSDT:5m": {
-      "sentAt": "2026-11-15T01:58:18.399Z",
-      "symbol": "HMSTRUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.00013890000000000002,
-      "stop": 0.00014083857809268744
-    },
-    "ALLOUSDT:5m": {
-      "sentAt": "2026-11-15T01:58:21.903Z",
-      "symbol": "ALLOUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.15164,
-      "stop": 0.1485834706127881
-    },
     "MAGICUSDT:5m": {
       "sentAt": "2026-11-15T04:06:12.459Z",
       "symbol": "MAGICUSDT",

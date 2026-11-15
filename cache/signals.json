@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T22:38:11.262Z",
+  "lastUpdated": "2026-11-15T22:42:07.414Z",
   "signals": {
     "BILLUSDT:5m": {
       "sentAt": "2026-11-15T16:50:17.317Z",
@@ -198,6 +198,15 @@
       "score": null,
       "entry": 0.07986,
       "stop": 0.07949092917048897
+    },
+    "BASEDUSDT:5m": {
+      "sentAt": "2026-11-15T22:42:05.913Z",
+      "symbol": "BASEDUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.03452,
+      "stop": 0.03428281159230973
     }
   }
 }

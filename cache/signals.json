@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T16:46:08.820Z",
+  "lastUpdated": "2026-11-15T16:50:18.819Z",
   "signals": {
     "SATSUSDT:5m": {
       "sentAt": "2026-11-15T10:50:24.644Z",
@@ -144,6 +144,15 @@
       "score": null,
       "entry": 0.006565,
       "stop": 0.006503447424410764
+    },
+    "BILLUSDT:5m": {
+      "sentAt": "2026-11-15T16:50:17.317Z",
+      "symbol": "BILLUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0041155,
+      "stop": 0.004077623820114562
     }
   }
 }

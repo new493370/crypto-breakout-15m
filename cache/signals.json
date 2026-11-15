@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T19:30:04.048Z",
+  "lastUpdated": "2026-11-15T19:34:10.526Z",
   "signals": {
-    "BIOUSDT:5m": {
-      "sentAt": "2026-11-15T13:30:22.271Z",
-      "symbol": "BIOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.016475,
-      "stop": 0.016572322522606393
-    },
     "1INCHUSDT:5m": {
       "sentAt": "2026-11-15T13:58:15.617Z",
       "symbol": "1INCHUSDT",

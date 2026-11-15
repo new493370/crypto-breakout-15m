@@ -1,12 +1,12 @@
 {
-  "lastUpdated": "2026-11-15T00:42:18.823Z",
+  "lastUpdated": "2026-11-15T00:46:08.424Z",
   "allTime": {
-    "total": 134,
+    "total": 135,
     "tp1Hit": 99,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 34,
-    "active": 1,
+    "active": 2,
     "tp1Rate": 74.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
@@ -32,7 +32,7 @@
       "tp1Rate": 58.2
     },
     "bearish": {
-      "total": 78,
+      "total": 79,
       "tp1Hit": 67,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T00:40:17.072Z",
+      "statusUpdatedAt": "2026-11-15T00:44:16.795Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3523,6 +3523,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.027159999999999997
+    },
+    {
+      "symbol": "OPGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "entry": 0.13755,
+      "stop": 0.13935283630110246,
+      "tp1": 0.13564999999999997,
+      "zoneLow": 0.13717,
+      "zoneHigh": 0.13793,
+      "signalCandleTime": 1794703200000,
+      "rr1": 1.0538949092816543,
+      "highs": null,
+      "lows": [
+        0.1344,
+        0.13744
+      ],
+      "sentAt": "2026-11-15T00:46:06.906Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-15T00:46:06.906Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -4463,6 +4488,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-15T00:22:20.334Z"
+    },
+    "OPGUSDT:5m:2026-11-15T00:46:06.906Z": {
+      "symbol": "OPGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-15T00:46:06.906Z"
     }
   }
 }

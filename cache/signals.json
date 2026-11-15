@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T00:42:18.822Z",
+  "lastUpdated": "2026-11-15T00:46:08.408Z",
   "signals": {
     "TESLAUSDT:5m": {
       "sentAt": "2026-11-14T20:02:24.569Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.028335,
       "stop": 0.029447014252034172
+    },
+    "OPGUSDT:5m": {
+      "sentAt": "2026-11-15T00:46:06.906Z",
+      "symbol": "OPGUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.13755,
+      "stop": 0.13935283630110246
     }
   }
 }

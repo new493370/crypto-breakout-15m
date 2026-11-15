@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-15T19:14:16.424Z",
+  "lastUpdated": "2026-11-15T19:18:22.753Z",
   "allTime": {
     "total": 190,
     "tp1Hit": 131,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 52,
-    "active": 7,
-    "tp1Rate": 71.6,
+    "stopped": 54,
+    "active": 5,
+    "tp1Rate": 70.8,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 28.4
+    "stopRate": 29.2
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 95,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 16,
-      "tp1Rate": 85.6
+      "stopped": 18,
+      "tp1Rate": 84.1
     }
   },
   "recentSignals": [
@@ -3440,7 +3440,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T19:12:18.178Z",
+      "statusUpdatedAt": "2026-11-15T19:16:17.836Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4739,7 +4739,7 @@
       "sentAt": "2026-11-15T17:06:04.612Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T19:12:18.178Z",
+      "statusUpdatedAt": "2026-11-15T19:16:17.836Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4762,13 +4762,14 @@
         0.4478
       ],
       "sentAt": "2026-11-15T17:06:08.043Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T19:12:18.178Z",
+      "statusUpdatedAt": "2026-11-15T19:16:21.433Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.45490910507640747
     },
     {
       "symbol": "DOTUSDT",
@@ -4789,7 +4790,7 @@
       "sentAt": "2026-11-15T17:06:11.471Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T19:12:18.178Z",
+      "statusUpdatedAt": "2026-11-15T19:16:21.433Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4812,13 +4813,14 @@
         0.1298
       ],
       "sentAt": "2026-11-15T17:06:18.413Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T19:12:18.178Z",
+      "statusUpdatedAt": "2026-11-15T19:16:23.102Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.1312751690103988
     },
     {
       "symbol": "MEMEUSDT",
@@ -4917,7 +4919,7 @@
       "sentAt": "2026-11-15T18:06:11.913Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T19:12:18.178Z",
+      "statusUpdatedAt": "2026-11-15T19:16:23.102Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4968,7 +4970,7 @@
       "sentAt": "2026-11-15T18:38:07.161Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-15T19:12:18.178Z",
+      "statusUpdatedAt": "2026-11-15T19:16:23.102Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

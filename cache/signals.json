@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-15T10:06:12.430Z",
+  "lastUpdated": "2026-11-15T10:10:15.247Z",
   "signals": {
-    "MAGICUSDT:5m": {
-      "sentAt": "2026-11-15T04:06:12.459Z",
-      "symbol": "MAGICUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.07000999999999999,
-      "stop": 0.07080561768214987
-    },
-    "DOTUSDT:5m": {
-      "sentAt": "2026-11-15T04:06:17.953Z",
-      "symbol": "DOTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.7221500000000001,
-      "stop": 0.7300912221347832
-    },
-    "IOTAUSDT:5m": {
-      "sentAt": "2026-11-15T04:06:22.554Z",
-      "symbol": "IOTAUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.03175,
-      "stop": 0.03204069431635381
-    },
-    "FILECOINUSDT:5m": {
-      "sentAt": "2026-11-15T04:06:26.211Z",
-      "symbol": "FILECOINUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.6246499999999999,
-      "stop": 0.631132598935084
-    },
-    "PENGUUSDT:5m": {
-      "sentAt": "2026-11-15T04:10:08.772Z",
-      "symbol": "PENGUUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.004973,
-      "stop": 0.005041176071384276
-    },
     "FILUSDT:5m": {
       "sentAt": "2026-11-15T04:22:13.511Z",
       "symbol": "FILUSDT",

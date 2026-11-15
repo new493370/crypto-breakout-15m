@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T20:34:16.154Z",
+  "lastUpdated": "2026-11-15T20:38:23.607Z",
   "signals": {
     "HUMAUSDT:5m": {
       "sentAt": "2026-11-15T16:34:02.260Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 0.043734999999999996,
       "stop": 0.043934912098875234
+    },
+    "JASMYUSDT:5m": {
+      "sentAt": "2026-11-15T20:38:22.105Z",
+      "symbol": "JASMYUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.003228,
+      "stop": 0.003210020327718359
     }
   }
 }

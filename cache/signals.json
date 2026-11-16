@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T20:13:03.257Z",
+  "lastUpdated": "2026-11-16T20:18:07.180Z",
   "signals": {
-    "SILVERUSDT:15m": {
-      "sentAt": "2026-11-16T14:18:05.540Z",
-      "symbol": "SILVERUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 47.474999999999994,
-      "stop": 47.82161720233506
-    },
     "XAGUSDT:15m": {
       "sentAt": "2026-11-16T14:23:11.187Z",
       "symbol": "XAGUSDT",

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T14:43:03.296Z",
+  "lastUpdated": "2026-11-16T14:48:15.840Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 133,
+    "tp1Hit": 134,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 58,
-    "active": 9,
-    "tp1Rate": 69.6,
+    "stopped": 62,
+    "active": 4,
+    "tp1Rate": 68.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.4
+    "stopRate": 31.6
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 118,
-      "tp1Hit": 89,
+      "tp1Hit": 90,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 21,
-      "tp1Rate": 80.9
+      "stopped": 25,
+      "tp1Rate": 78.3
     }
   },
   "recentSignals": [
@@ -2114,7 +2114,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:13.018Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4997,13 +4997,14 @@
         0.2132
       ],
       "sentAt": "2026-11-16T13:12:50.996Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:17.854Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.2157870686092406
     },
     {
       "symbol": "NEIROUSDT",
@@ -5022,13 +5023,14 @@
         0.00004784
       ],
       "sentAt": "2026-11-16T13:22:40.945Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:19.551Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.00004858945182209548
     },
     {
       "symbol": "ZILUSDT",
@@ -5049,7 +5051,7 @@
       "sentAt": "2026-11-16T13:22:44.307Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:19.551Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5072,13 +5074,14 @@
         0.1218
       ],
       "sentAt": "2026-11-16T13:22:47.651Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:21.251Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.12542439848465287
     },
     {
       "symbol": "ZORAUSDT",
@@ -5123,13 +5126,14 @@
         7.021
       ],
       "sentAt": "2026-11-16T13:22:54.395Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:22.957Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 6.848999999999998
     },
     {
       "symbol": "HMSTRUSDT",
@@ -5174,13 +5178,14 @@
         5.737
       ],
       "sentAt": "2026-11-16T13:32:56.511Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:24.664Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 5.791079284336664
     },
     {
       "symbol": "SILVERUSDT",
@@ -5201,7 +5206,7 @@
       "sentAt": "2026-11-16T14:18:05.540Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:24.664Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5226,7 +5231,7 @@
       "sentAt": "2026-11-16T14:23:11.187Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:41:12.836Z",
+      "statusUpdatedAt": "2026-11-16T14:46:24.664Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

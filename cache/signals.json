@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T10:14:07.311Z",
+  "lastUpdated": "2026-11-16T10:18:14.771Z",
   "signals": {
     "FLOCKUSDT:5m": {
       "sentAt": "2026-11-16T05:26:08.051Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 0.07064999999999999,
       "stop": 0.07003384218801349
+    },
+    "PONSUSDT:5m": {
+      "sentAt": "2026-11-16T10:18:13.269Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1235,
+      "stop": 0.12545792656932506
     }
   }
 }

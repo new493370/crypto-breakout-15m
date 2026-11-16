@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T02:37:58.935Z",
+  "lastUpdated": "2026-11-16T02:42:09.784Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 140,
+    "tp1Hit": 142,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 54,
-    "active": 6,
-    "tp1Rate": 72.2,
+    "active": 4,
+    "tp1Rate": 72.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.8
+    "stopRate": 27.6
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 80,
-      "tp1Hit": 43,
+      "tp1Hit": 45,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 31,
-      "tp1Rate": 58.1
+      "tp1Rate": 59.2
     },
     "bearish": {
       "total": 120,
@@ -2868,7 +2868,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:36:17.759Z",
+      "statusUpdatedAt": "2026-11-16T02:40:17.885Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4401,7 +4401,7 @@
       "sentAt": "2026-11-15T18:38:07.161Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:36:17.759Z",
+      "statusUpdatedAt": "2026-11-16T02:40:17.885Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4918,13 +4918,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-16T02:18:14.941Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:36:17.759Z",
+      "statusUpdatedAt": "2026-11-16T02:40:21.440Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.000048160000000000006
     },
     {
       "symbol": "HMSTRUSDT",
@@ -4997,7 +4998,7 @@
       "sentAt": "2026-11-16T02:18:29.242Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:36:17.759Z",
+      "statusUpdatedAt": "2026-11-16T02:40:21.440Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5020,13 +5021,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-16T02:18:32.723Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:36:17.759Z",
+      "statusUpdatedAt": "2026-11-16T02:40:23.100Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.016619999999999996
     },
     {
       "symbol": "BIGTIMEUSDT",
@@ -5073,7 +5075,7 @@
       "sentAt": "2026-11-16T02:18:39.605Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:36:17.759Z",
+      "statusUpdatedAt": "2026-11-16T02:40:23.100Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

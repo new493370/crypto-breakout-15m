@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T07:49:57.031Z",
+  "lastUpdated": "2026-11-16T07:54:05.954Z",
   "signals": {
     "MASKUSDT:5m": {
       "sentAt": "2026-11-16T02:02:16.545Z",
@@ -225,6 +225,15 @@
       "score": null,
       "entry": 0.0416,
       "stop": 0.04126168733349675
+    },
+    "CRVUSDT:5m": {
+      "sentAt": "2026-11-16T07:54:04.453Z",
+      "symbol": "CRVUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.20185,
+      "stop": 0.20032012791415385
     }
   }
 }

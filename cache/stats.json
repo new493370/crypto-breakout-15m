@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T12:54:06.249Z",
+  "lastUpdated": "2026-11-16T12:58:01.432Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 138,
@@ -2400,7 +2400,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T12:52:23.026Z",
+      "statusUpdatedAt": "2026-11-16T12:56:15.559Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5155,7 +5155,7 @@
       "sentAt": "2026-11-16T10:18:13.269Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T12:52:23.026Z",
+      "statusUpdatedAt": "2026-11-16T12:56:15.559Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

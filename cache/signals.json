@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T03:33:54.601Z",
+  "lastUpdated": "2026-11-16T03:38:04.608Z",
   "signals": {
-    "BSBUSDT:5m": {
-      "sentAt": "2026-11-15T21:34:18.469Z",
-      "symbol": "BSBUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.07055,
-      "stop": 0.07103686775001201
-    },
     "TRIAUSDT:5m": {
       "sentAt": "2026-11-15T21:42:17.246Z",
       "symbol": "TRIAUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T17:47:55.821Z",
+  "lastUpdated": "2026-11-16T17:53:08.360Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 137,
@@ -2114,7 +2114,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T17:46:07.651Z",
+      "statusUpdatedAt": "2026-11-16T17:51:07.745Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T17:03:14.790Z",
+  "lastUpdated": "2026-11-16T17:12:57.361Z",
   "signals": {
-    "CELOUSDT:5m": {
-      "sentAt": "2026-11-16T11:06:05.206Z",
-      "symbol": "CELOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.058755,
-      "stop": 0.05909640675356046
-    },
     "HYPEUSDT:5m": {
       "sentAt": "2026-11-16T11:42:16.424Z",
       "symbol": "HYPEUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T08:13:59.915Z",
+  "lastUpdated": "2026-11-16T08:18:02.433Z",
   "signals": {
-    "XLMUSDT:5m": {
-      "sentAt": "2026-11-16T02:14:11.459Z",
-      "symbol": "XLMUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.13846999999999998,
-      "stop": 0.13747513200182726
-    },
     "NEIROUSDT:5m": {
       "sentAt": "2026-11-16T02:18:14.941Z",
       "symbol": "NEIROUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T08:02:08.263Z",
+  "lastUpdated": "2026-11-16T08:06:08.217Z",
   "signals": {
-    "MASKUSDT:5m": {
-      "sentAt": "2026-11-16T02:02:16.545Z",
-      "symbol": "MASKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.3033,
-      "stop": 0.3017086167544205
-    },
     "ANIMEUSDT:5m": {
       "sentAt": "2026-11-16T02:10:16.902Z",
       "symbol": "ANIMEUSDT",

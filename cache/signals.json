@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T13:02:02.399Z",
+  "lastUpdated": "2026-11-16T13:12:52.498Z",
   "signals": {
-    "KMNOUSDT:5m": {
-      "sentAt": "2026-11-16T07:06:09.556Z",
-      "symbol": "KMNOUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.02852,
-      "stop": 0.02837894359965407
-    },
     "YBUSDT:5m": {
       "sentAt": "2026-11-16T07:38:17.323Z",
       "symbol": "YBUSDT",
@@ -99,6 +90,24 @@
       "score": null,
       "entry": 0.029519999999999998,
       "stop": 0.029653948195519714
+    },
+    "KITEUSDT:15m": {
+      "sentAt": "2026-11-16T13:12:47.629Z",
+      "symbol": "KITEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.13187500000000002,
+      "stop": 0.13402662378957106
+    },
+    "XTZUSDT:15m": {
+      "sentAt": "2026-11-16T13:12:50.996Z",
+      "symbol": "XTZUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.2138,
+      "stop": 0.2157870686092406
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T01:38:18.281Z",
+  "lastUpdated": "2026-11-16T01:42:13.281Z",
   "signals": {
-    "KMNOUSDT:5m": {
-      "sentAt": "2026-11-15T19:42:04.384Z",
-      "symbol": "KMNOUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.02851,
-      "stop": 0.02833147659738299
-    },
     "TRUSTUSDT:5m": {
       "sentAt": "2026-11-15T20:26:14.226Z",
       "symbol": "TRUSTUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T00:38:05.362Z",
+  "lastUpdated": "2026-11-16T00:42:11.029Z",
   "signals": {
-    "APRUSDT:5m": {
-      "sentAt": "2026-11-15T18:38:07.161Z",
-      "symbol": "APRUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.032409999999999994,
-      "stop": 0.03166638018956998
-    },
     "KMNOUSDT:5m": {
       "sentAt": "2026-11-15T19:42:04.384Z",
       "symbol": "KMNOUSDT",

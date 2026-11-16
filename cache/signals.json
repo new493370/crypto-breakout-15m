@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T12:06:01.120Z",
+  "lastUpdated": "2026-11-16T12:10:13.457Z",
   "signals": {
-    "WETUSDT:5m": {
-      "sentAt": "2026-11-16T06:06:03.126Z",
-      "symbol": "WETUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.038095000000000004,
-      "stop": 0.037790368885481936
-    },
     "KMNOUSDT:5m": {
       "sentAt": "2026-11-16T07:06:09.556Z",
       "symbol": "KMNOUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T00:02:03.587Z",
+  "lastUpdated": "2026-11-16T00:06:21.085Z",
   "signals": {
-    "POLUSDT:5m": {
-      "sentAt": "2026-11-15T18:06:11.913Z",
-      "symbol": "POLUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.07984,
-      "stop": 0.07925854530930528
-    },
     "PIPPINUSDT:5m": {
       "sentAt": "2026-11-15T18:10:05.328Z",
       "symbol": "PIPPINUSDT",
@@ -144,6 +135,15 @@
       "score": null,
       "entry": 0.54635,
       "stop": 0.5635021581554828
+    },
+    "EVAAUSDT:5m": {
+      "sentAt": "2026-11-16T00:06:19.585Z",
+      "symbol": "EVAAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 2.76215,
+      "stop": 2.7115705876414262
     }
   }
 }

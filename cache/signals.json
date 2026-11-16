@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T11:34:00.354Z",
+  "lastUpdated": "2026-11-16T11:38:41.610Z",
   "signals": {
-    "LUNAUSDT:5m": {
-      "sentAt": "2026-11-16T05:34:01.852Z",
-      "symbol": "LUNAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.031560000000000005,
-      "stop": 0.031396614377235496
-    },
     "YGGUSDT:5m": {
       "sentAt": "2026-11-16T05:46:13.036Z",
       "symbol": "YGGUSDT",

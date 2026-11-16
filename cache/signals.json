@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T00:10:05.125Z",
+  "lastUpdated": "2026-11-16T00:14:11.121Z",
   "signals": {
-    "PIPPINUSDT:5m": {
-      "sentAt": "2026-11-15T18:10:05.328Z",
-      "symbol": "PIPPINUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.011035,
-      "stop": 0.01097930021838912
-    },
     "APRUSDT:5m": {
       "sentAt": "2026-11-15T18:38:07.161Z",
       "symbol": "APRUSDT",

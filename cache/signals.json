@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T08:10:07.076Z",
+  "lastUpdated": "2026-11-16T08:13:59.915Z",
   "signals": {
-    "ANIMEUSDT:5m": {
-      "sentAt": "2026-11-16T02:10:16.902Z",
-      "symbol": "ANIMEUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00205,
-      "stop": 0.0020370799282958744
-    },
     "XLMUSDT:5m": {
       "sentAt": "2026-11-16T02:14:11.459Z",
       "symbol": "XLMUSDT",

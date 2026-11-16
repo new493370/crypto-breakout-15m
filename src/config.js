@@ -4,7 +4,7 @@ export const CONFIG = {
   BINANCE_SPOT_URL: "https://data-api.binance.vision",
   MEXC_BASE_URL: "https://contract.mexc.com",
 
-  TIMEFRAME: "5m",
+  TIMEFRAME: "15m",
 
   SWING_LEFT: 2,
   SWING_RIGHT: 2,
@@ -104,7 +104,7 @@ export const CONFIG = {
   SYMBOL_CACHE_SECONDS: 3600,
   KLINE_CACHE_SECONDS: 15,
 
-  SCAN_TIMEFRAMES: ["5m"],
+  SCAN_TIMEFRAMES: ["15m"],
   CONCURRENCY: 5,
   MESSAGE_DELAY_MS: 1500,
   TOTAL_TIMEOUT_MS: 55 * 60 * 1000,
@@ -184,26 +184,31 @@ export const CONFIG = {
 
   TIMEFRAMES: {
     "5m": "5 دقیقه",
+    "15m": "15 دقیقه",
     "1h": "1 ساعت"
   },
 
   OKX_INTERVAL_MAP: {
     "5m": "5m",
+    "15m": "15m",
     "1h": "1H"
   },
 
   BINANCE_INTERVAL_MAP: {
     "5m": "5m",
+    "15m": "15m",
     "1h": "1h"
   },
 
   MEXC_INTERVAL_MAP: {
     "5m": "Min5",
+    "15m": "Min15",
     "1h": "Min60"
   }
 };
 
 export const INTERVAL_MS = {
   "5m": 5 * 60 * 1000,
+  "15m": 15 * 60 * 1000,
   "1h": 60 * 60 * 1000
 };

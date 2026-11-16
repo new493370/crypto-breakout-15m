@@ -61,14 +61,14 @@ function createResult(symbol, timeframe) {
 
 function selectStructure(latest, result, currentPrice) {
   const bearishStructure = isValidStructure(
-    latest.highs[0],
-    latest.highs[1],
+    latest.lows[0],
+    latest.lows[1],
     "bearish"
   );
 
   const bullishStructure = isValidStructure(
-    latest.lows[0],
-    latest.lows[1],
+    latest.highs[0],
+    latest.highs[1],
     "bullish"
   );
 
@@ -77,41 +77,41 @@ function selectStructure(latest, result, currentPrice) {
   }
 
   if (bearishStructure && bullishStructure) {
-    if (currentPrice < latest.highs[1].price) {
-      result.highs = [
-        latest.highs[0].price,
-        latest.highs[1].price
-      ];
-
-      return {
-        direction: "bearish",
-        swingA: latest.highs[0],
-        swingB: latest.highs[1],
-        confirmedIndex: latest.highs[1].confirmed_index
-      };
-    } else {
+    if (currentPrice < latest.lows[1].price) {
       result.lows = [
         latest.lows[0].price,
         latest.lows[1].price
       ];
 
       return {
-        direction: "bullish",
+        direction: "bearish",
         swingA: latest.lows[0],
         swingB: latest.lows[1],
         confirmedIndex: latest.lows[1].confirmed_index
       };
+    } else {
+      result.highs = [
+        latest.highs[0].price,
+        latest.highs[1].price
+      ];
+
+      return {
+        direction: "bullish",
+        swingA: latest.highs[0],
+        swingB: latest.highs[1],
+        confirmedIndex: latest.highs[1].confirmed_index
+      };
     }
   }
 
-  if (bullishStructure) {
+  if (bearishStructure) {
     result.lows = [
       latest.lows[0].price,
       latest.lows[1].price
     ];
 
     return {
-      direction: "bullish",
+      direction: "bearish",
       swingA: latest.lows[0],
       swingB: latest.lows[1],
       confirmedIndex: latest.lows[1].confirmed_index
@@ -124,7 +124,7 @@ function selectStructure(latest, result, currentPrice) {
   ];
 
   return {
-    direction: "bearish",
+    direction: "bullish",
     swingA: latest.highs[0],
     swingB: latest.highs[1],
     confirmedIndex: latest.highs[1].confirmed_index

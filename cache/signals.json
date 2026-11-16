@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T01:01:59.522Z",
+  "lastUpdated": "2026-11-16T01:06:11.703Z",
   "signals": {
     "KMNOUSDT:5m": {
       "sentAt": "2026-11-15T19:42:04.384Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.0065,
       "stop": 0.006565423630213609
+    },
+    "SKYUSDT:5m": {
+      "sentAt": "2026-11-16T01:06:10.201Z",
+      "symbol": "SKYUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.053945,
+      "stop": 0.05428397167727225
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T05:30:05.886Z",
+  "lastUpdated": "2026-11-16T05:34:03.354Z",
   "signals": {
     "BTWUSDT:5m": {
       "sentAt": "2026-11-15T23:38:12.783Z",
@@ -189,6 +189,15 @@
       "score": null,
       "entry": 0.030545,
       "stop": 0.030719687498887805
+    },
+    "LUNAUSDT:5m": {
+      "sentAt": "2026-11-16T05:34:01.852Z",
+      "symbol": "LUNAUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.031560000000000005,
+      "stop": 0.031396614377235496
     }
   }
 }

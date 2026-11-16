@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T02:22:21.925Z",
+  "lastUpdated": "2026-11-16T02:26:16.572Z",
   "signals": {
-    "TRUSTUSDT:5m": {
-      "sentAt": "2026-11-15T20:26:14.226Z",
-      "symbol": "TRUSTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.043734999999999996,
-      "stop": 0.043934912098875234
-    },
     "JASMYUSDT:5m": {
       "sentAt": "2026-11-15T20:38:22.105Z",
       "symbol": "JASMYUSDT",

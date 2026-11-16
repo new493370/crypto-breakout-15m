@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T14:53:01.297Z",
+  "lastUpdated": "2026-11-16T14:58:05.571Z",
   "signals": {
-    "SIGNUSDT:5m": {
-      "sentAt": "2026-11-16T08:54:20.959Z",
-      "symbol": "SIGNUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.008739,
-      "stop": 0.008698447960153888
-    },
     "UKOILUSDT:5m": {
       "sentAt": "2026-11-16T09:06:07.639Z",
       "symbol": "UKOILUSDT",

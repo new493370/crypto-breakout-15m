@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T15:43:11.060Z",
+  "lastUpdated": "2026-11-16T15:47:59.341Z",
   "signals": {
-    "BIOUSDT:5m": {
-      "sentAt": "2026-11-16T09:46:14.931Z",
-      "symbol": "BIOUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.016329999999999997,
-      "stop": 0.016209678099405017
-    },
-    "AVNTUSDT:5m": {
-      "sentAt": "2026-11-16T09:46:18.400Z",
-      "symbol": "AVNTUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.07064999999999999,
-      "stop": 0.07003384218801349
-    },
     "PONSUSDT:5m": {
       "sentAt": "2026-11-16T10:18:13.269Z",
       "symbol": "PONSUSDT",

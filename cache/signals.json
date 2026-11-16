@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T03:38:04.608Z",
+  "lastUpdated": "2026-11-16T03:45:55.991Z",
   "signals": {
-    "TRIAUSDT:5m": {
-      "sentAt": "2026-11-15T21:42:17.246Z",
-      "symbol": "TRIAUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.002206,
-      "stop": 0.0022221010999727065
-    },
-    "EDENUSDT:5m": {
-      "sentAt": "2026-11-15T21:42:20.758Z",
-      "symbol": "EDENUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.044065,
-      "stop": 0.044372603955345626
-    },
-    "SAPIENUSDT:5m": {
-      "sentAt": "2026-11-15T21:42:24.292Z",
-      "symbol": "SAPIENUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0375,
-      "stop": 0.03774196360454421
-    },
     "SENTUSDT:5m": {
       "sentAt": "2026-11-15T21:54:05.382Z",
       "symbol": "SENTUSDT",

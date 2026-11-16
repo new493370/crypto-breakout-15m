@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T04:18:05.882Z",
+  "lastUpdated": "2026-11-16T04:22:05.371Z",
   "signals": {
-    "POPCATUSDT:5m": {
-      "sentAt": "2026-11-15T22:18:17.418Z",
-      "symbol": "POPCATUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.028375,
-      "stop": 0.028226526084302588
-    },
-    "ZRXUSDT:5m": {
-      "sentAt": "2026-11-15T22:22:03.405Z",
-      "symbol": "ZRXUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.07986,
-      "stop": 0.07949092917048897
-    },
     "BASEDUSDT:5m": {
       "sentAt": "2026-11-15T22:42:05.913Z",
       "symbol": "BASEDUSDT",

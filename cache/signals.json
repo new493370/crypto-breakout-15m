@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T13:12:52.498Z",
+  "lastUpdated": "2026-11-16T13:22:55.896Z",
   "signals": {
     "YBUSDT:5m": {
       "sentAt": "2026-11-16T07:38:17.323Z",
@@ -108,6 +108,51 @@
       "score": null,
       "entry": 0.2138,
       "stop": 0.2157870686092406
+    },
+    "NEIROUSDT:15m": {
+      "sentAt": "2026-11-16T13:22:40.945Z",
+      "symbol": "NEIROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.00004786,
+      "stop": 0.00004858945182209548
+    },
+    "ZILUSDT:15m": {
+      "sentAt": "2026-11-16T13:22:44.307Z",
+      "symbol": "ZILUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0009805,
+      "stop": 0.0010160546207875238
+    },
+    "PONSUSDT:15m": {
+      "sentAt": "2026-11-16T13:22:47.651Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1225,
+      "stop": 0.12542439848465287
+    },
+    "ZORAUSDT:15m": {
+      "sentAt": "2026-11-16T13:22:51.048Z",
+      "symbol": "ZORAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.004404,
+      "stop": 0.00445799246805027
+    },
+    "KORUUSDT:15m": {
+      "sentAt": "2026-11-16T13:22:54.395Z",
+      "symbol": "KORUUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 7.0265,
+      "stop": 7.187568658971733
     }
   }
 }

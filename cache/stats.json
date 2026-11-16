@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T14:58:05.572Z",
+  "lastUpdated": "2026-11-16T15:03:02.455Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 134,
+    "tp1Hit": 136,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 62,
-    "active": 4,
-    "tp1Rate": 68.4,
+    "active": 2,
+    "tp1Rate": 68.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 31.6
+    "stopRate": 31.3
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 118,
-      "tp1Hit": 90,
+      "tp1Hit": 92,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 25,
-      "tp1Rate": 78.3
+      "tp1Rate": 78.6
     }
   },
   "recentSignals": [
@@ -2114,7 +2114,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:56:09.159Z",
+      "statusUpdatedAt": "2026-11-16T15:01:10.860Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5051,7 +5051,7 @@
       "sentAt": "2026-11-16T13:22:44.307Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:56:09.159Z",
+      "statusUpdatedAt": "2026-11-16T15:01:10.860Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5204,13 +5204,14 @@
         47.33
       ],
       "sentAt": "2026-11-16T14:18:05.540Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:56:09.159Z",
+      "statusUpdatedAt": "2026-11-16T15:01:14.758Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 47.1
     },
     {
       "symbol": "XAGUSDT",
@@ -5229,13 +5230,14 @@
         47.34
       ],
       "sentAt": "2026-11-16T14:23:11.187Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:56:09.159Z",
+      "statusUpdatedAt": "2026-11-16T15:01:16.475Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 47.1
     }
   ],
   "processedSignals": {

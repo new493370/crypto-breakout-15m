@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T09:42:09.716Z",
+  "lastUpdated": "2026-11-16T09:46:19.903Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 137,
+    "tp1Hit": 135,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 60,
-    "active": 3,
-    "tp1Rate": 69.5,
+    "active": 5,
+    "tp1Rate": 69.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.5
+    "stopRate": 30.8
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 87,
+      "total": 89,
       "tp1Hit": 46,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,67 +32,15 @@
       "tp1Rate": 54.1
     },
     "bearish": {
-      "total": 113,
-      "tp1Hit": 91,
+      "total": 111,
+      "tp1Hit": 89,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 21,
-      "tp1Rate": 81.3
+      "tp1Rate": 80.9
     }
   },
   "recentSignals": [
-    {
-      "symbol": "CASHCATUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.051074999999999995,
-      "stop": 0.051759360239197326,
-      "tp1": 0.05014999999999999,
-      "zoneLow": 0.05089,
-      "zoneHigh": 0.05126,
-      "signalCandleTime": 1794536400000,
-      "rr1": 1.3516273258144165,
-      "highs": null,
-      "lows": [
-        0.05024,
-        0.05081
-      ],
-      "sentAt": "2026-11-13T02:28:21.276Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:46:13.059Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.05014999999999999
-    },
-    {
-      "symbol": "YGGUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.020749999999999998,
-      "stop": 0.02086843192850082,
-      "tp1": 0.020599999999999997,
-      "zoneLow": 0.02072,
-      "zoneHigh": 0.02078,
-      "signalCandleTime": 1794536400000,
-      "rr1": 1.2665503458297378,
-      "highs": null,
-      "lows": [
-        0.02062,
-        0.02071
-      ],
-      "sentAt": "2026-11-13T02:28:24.737Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-13T02:46:14.757Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.020599999999999997
-    },
     {
       "symbol": "2ZUSDT",
       "timeframe": "5m",
@@ -2556,7 +2504,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T09:40:15.232Z",
+      "statusUpdatedAt": "2026-11-16T09:44:16.110Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4765,7 +4713,7 @@
       "sentAt": "2026-11-16T02:18:39.605Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T09:40:15.232Z",
+      "statusUpdatedAt": "2026-11-16T09:44:16.111Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5232,7 +5180,57 @@
       "sentAt": "2026-11-16T09:06:07.639Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T09:40:15.232Z",
+      "statusUpdatedAt": "2026-11-16T09:44:16.111Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "BIOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.016329999999999997,
+      "stop": 0.016209678099405017,
+      "tp1": 0.01648,
+      "zoneLow": 0.0163,
+      "zoneHigh": 0.01636,
+      "signalCandleTime": 1794822000000,
+      "rr1": 1.2466558395293692,
+      "highs": [
+        0.01641,
+        0.01635
+      ],
+      "lows": null,
+      "sentAt": "2026-11-16T09:46:14.931Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-16T09:46:14.931Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AVNTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.07064999999999999,
+      "stop": 0.07003384218801349,
+      "tp1": 0.07145,
+      "zoneLow": 0.07049,
+      "zoneHigh": 0.07081,
+      "signalCandleTime": 1794822000000,
+      "rr1": 1.2983686718517815,
+      "highs": [
+        0.07151,
+        0.071
+      ],
+      "lows": null,
+      "sentAt": "2026-11-16T09:46:18.400Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-16T09:46:18.400Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -6877,6 +6875,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-16T09:06:07.639Z"
+    },
+    "BIOUSDT:5m:2026-11-16T09:46:14.931Z": {
+      "symbol": "BIOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-16T09:46:14.931Z"
+    },
+    "AVNTUSDT:5m:2026-11-16T09:46:18.400Z": {
+      "symbol": "AVNTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-16T09:46:18.400Z"
     }
   }
 }

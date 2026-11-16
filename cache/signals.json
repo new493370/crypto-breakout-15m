@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T05:42:15.138Z",
+  "lastUpdated": "2026-11-16T05:46:18.025Z",
   "signals": {
     "EVAAUSDT:5m": {
       "sentAt": "2026-11-16T00:06:19.585Z",
@@ -189,6 +189,24 @@
       "score": null,
       "entry": 0.031560000000000005,
       "stop": 0.031396614377235496
+    },
+    "YGGUSDT:5m": {
+      "sentAt": "2026-11-16T05:46:13.036Z",
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.018535,
+      "stop": 0.018449339348325922
+    },
+    "WCTUSDT:5m": {
+      "sentAt": "2026-11-16T05:46:16.523Z",
+      "symbol": "WCTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.026865,
+      "stop": 0.02664560774656114
     }
   }
 }

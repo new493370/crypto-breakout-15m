@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T05:42:15.140Z",
+  "lastUpdated": "2026-11-16T05:46:18.027Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 141,
+    "tp1Hit": 140,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 53,
-    "active": 6,
-    "tp1Rate": 72.7,
+    "stopped": 52,
+    "active": 8,
+    "tp1Rate": 72.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 27.3
+    "stopRate": 27.1
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 81,
+      "total": 83,
       "tp1Hit": 45,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,67 +32,15 @@
       "tp1Rate": 59.2
     },
     "bearish": {
-      "total": 119,
-      "tp1Hit": 96,
+      "total": 117,
+      "tp1Hit": 95,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 22,
-      "tp1Rate": 81.4
+      "stopped": 21,
+      "tp1Rate": 81.9
     }
   },
   "recentSignals": [
-    {
-      "symbol": "GLMUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.101795,
-      "stop": 0.10213462899309131,
-      "tp1": 0.10142000000000001,
-      "zoneLow": 0.10172,
-      "zoneHigh": 0.10187,
-      "signalCandleTime": 1794521400000,
-      "rr1": 1.1041460170603414,
-      "highs": null,
-      "lows": [
-        0.1012,
-        0.10155
-      ],
-      "sentAt": "2026-11-12T22:18:14.715Z",
-      "status": "stopped",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-13T00:06:19.943Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": true,
-      "exitPrice": 0.10213462899309131
-    },
-    {
-      "symbol": "FILECOINUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.74745,
-      "stop": 0.7509769880008799,
-      "tp1": 0.7437000000000001,
-      "zoneLow": 0.7467,
-      "zoneHigh": 0.7482,
-      "signalCandleTime": 1794522300000,
-      "rr1": 1.0632301553235384,
-      "highs": null,
-      "lows": [
-        0.7376,
-        0.7419
-      ],
-      "sentAt": "2026-11-12T22:33:26.385Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-12T23:11:15.920Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.7437000000000001
-    },
     {
       "symbol": "MERLUSDT",
       "timeframe": "5m",
@@ -2816,7 +2764,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T05:40:32.985Z",
+      "statusUpdatedAt": "2026-11-16T05:44:17.754Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4349,7 +4297,7 @@
       "sentAt": "2026-11-15T18:38:07.161Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T05:40:32.985Z",
+      "statusUpdatedAt": "2026-11-16T05:44:17.754Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4946,7 +4894,7 @@
       "sentAt": "2026-11-16T02:18:29.242Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T05:40:32.985Z",
+      "statusUpdatedAt": "2026-11-16T05:44:17.754Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5023,7 +4971,7 @@
       "sentAt": "2026-11-16T02:18:39.605Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T05:40:32.985Z",
+      "statusUpdatedAt": "2026-11-16T05:44:17.754Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5204,7 +5152,7 @@
       "sentAt": "2026-11-16T05:26:08.051Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T05:40:32.985Z",
+      "statusUpdatedAt": "2026-11-16T05:44:17.754Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5229,7 +5177,57 @@
       "sentAt": "2026-11-16T05:34:01.851Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T05:40:32.985Z",
+      "statusUpdatedAt": "2026-11-16T05:44:17.754Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.018535,
+      "stop": 0.018449339348325922,
+      "tp1": 0.018660000000000003,
+      "zoneLow": 0.01851,
+      "zoneHigh": 0.01856,
+      "signalCandleTime": 1794807600000,
+      "rr1": 1.4592464282854793,
+      "highs": [
+        0.01865,
+        0.01858
+      ],
+      "lows": null,
+      "sentAt": "2026-11-16T05:46:13.036Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-16T05:46:13.036Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "WCTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.026865,
+      "stop": 0.02664560774656114,
+      "tp1": 0.027290000000000002,
+      "zoneLow": 0.02678,
+      "zoneHigh": 0.02695,
+      "signalCandleTime": 1794807600000,
+      "rr1": 1.9371695825096316,
+      "highs": [
+        0.0271,
+        0.02695
+      ],
+      "lows": null,
+      "sentAt": "2026-11-16T05:46:16.523Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-16T05:46:16.523Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -6804,6 +6802,20 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-16T05:34:01.851Z"
+    },
+    "YGGUSDT:5m:2026-11-16T05:46:13.036Z": {
+      "symbol": "YGGUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-16T05:46:13.036Z"
+    },
+    "WCTUSDT:5m:2026-11-16T05:46:16.523Z": {
+      "symbol": "WCTUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-16T05:46:16.523Z"
     }
   }
 }

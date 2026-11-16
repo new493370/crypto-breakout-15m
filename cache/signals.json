@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T06:06:04.627Z",
+  "lastUpdated": "2026-11-16T06:09:59.803Z",
   "signals": {
-    "EVAAUSDT:5m": {
-      "sentAt": "2026-11-16T00:06:19.585Z",
-      "symbol": "EVAAUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 2.76215,
-      "stop": 2.7115705876414262
-    },
     "HUMAUSDT:5m": {
       "sentAt": "2026-11-16T00:38:02.220Z",
       "symbol": "HUMAUSDT",

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T11:54:19.047Z",
+  "lastUpdated": "2026-11-16T11:58:15.568Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 136,
+    "tp1Hit": 137,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 60,
-    "active": 4,
-    "tp1Rate": 69.4,
+    "active": 3,
+    "tp1Rate": 69.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.6
+    "stopRate": 30.5
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 113,
-      "tp1Hit": 89,
+      "tp1Hit": 90,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 21,
-      "tp1Rate": 80.9
+      "tp1Rate": 81.1
     }
   },
   "recentSignals": [
@@ -2426,7 +2426,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T11:52:19.974Z",
+      "statusUpdatedAt": "2026-11-16T11:56:17.471Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5101,13 +5101,14 @@
         93.09
       ],
       "sentAt": "2026-11-16T09:06:07.639Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T11:52:19.974Z",
+      "statusUpdatedAt": "2026-11-16T11:56:21.057Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 92.25999999999999
     },
     {
       "symbol": "BIOUSDT",
@@ -5180,7 +5181,7 @@
       "sentAt": "2026-11-16T10:18:13.269Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T11:52:19.974Z",
+      "statusUpdatedAt": "2026-11-16T11:56:21.057Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5205,7 +5206,7 @@
       "sentAt": "2026-11-16T11:06:05.206Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T11:52:19.974Z",
+      "statusUpdatedAt": "2026-11-16T11:56:21.057Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

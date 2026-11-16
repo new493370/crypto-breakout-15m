@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T12:30:10.165Z",
+  "lastUpdated": "2026-11-16T12:34:05.453Z",
   "signals": {
     "KMNOUSDT:5m": {
       "sentAt": "2026-11-16T07:06:09.556Z",
@@ -90,6 +90,15 @@
       "score": null,
       "entry": 67.305,
       "stop": 67.89476242068275
+    },
+    "ZKPUSDT:5m": {
+      "sentAt": "2026-11-16T12:34:03.952Z",
+      "symbol": "ZKPUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.029519999999999998,
+      "stop": 0.029653948195519714
     }
   }
 }

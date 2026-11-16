@@ -1,14 +1,4 @@
 {
-  "lastUpdated": "2026-11-16T20:23:02.751Z",
-  "signals": {
-    "XAGUSDT:15m": {
-      "sentAt": "2026-11-16T14:23:11.187Z",
-      "symbol": "XAGUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 47.474999999999994,
-      "stop": 47.815531398794434
-    }
-  }
+  "lastUpdated": "2026-11-16T20:28:11.370Z",
+  "signals": {}
 }

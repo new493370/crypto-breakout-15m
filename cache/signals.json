@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T05:22:01.509Z",
+  "lastUpdated": "2026-11-16T05:26:09.553Z",
   "signals": {
     "BTWUSDT:5m": {
       "sentAt": "2026-11-15T23:38:12.783Z",
@@ -180,6 +180,15 @@
       "score": null,
       "entry": 0.14129999999999998,
       "stop": 0.14018249089005078
+    },
+    "FLOCKUSDT:5m": {
+      "sentAt": "2026-11-16T05:26:08.051Z",
+      "symbol": "FLOCKUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.030545,
+      "stop": 0.030719687498887805
     }
   }
 }

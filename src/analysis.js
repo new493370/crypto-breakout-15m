@@ -59,7 +59,7 @@ function createResult(symbol, timeframe) {
   };
 }
 
-function selectStructure(latest, result) {
+function selectStructure(latest, result, currentPrice) {
   const bearishStructure = isValidStructure(
     latest.highs[0],
     latest.highs[1],
@@ -76,22 +76,32 @@ function selectStructure(latest, result) {
     return null;
   }
 
-  if (
-    bearishStructure &&
-    bullishStructure &&
-    latest.highs[1].confirmed_index >= latest.lows[1].confirmed_index
-  ) {
-    result.highs = [
-      latest.highs[0].price,
-      latest.highs[1].price
-    ];
+  if (bearishStructure && bullishStructure) {
+    if (currentPrice < latest.highs[1].price) {
+      result.highs = [
+        latest.highs[0].price,
+        latest.highs[1].price
+      ];
 
-    return {
-      direction: "bearish",
-      swingA: latest.highs[0],
-      swingB: latest.highs[1],
-      confirmedIndex: latest.highs[1].confirmed_index
-    };
+      return {
+        direction: "bearish",
+        swingA: latest.highs[0],
+        swingB: latest.highs[1],
+        confirmedIndex: latest.highs[1].confirmed_index
+      };
+    } else {
+      result.lows = [
+        latest.lows[0].price,
+        latest.lows[1].price
+      ];
+
+      return {
+        direction: "bullish",
+        swingA: latest.lows[0],
+        swingB: latest.lows[1],
+        confirmedIndex: latest.lows[1].confirmed_index
+      };
+    }
   }
 
   if (bullishStructure) {
@@ -234,7 +244,7 @@ export async function analyze(symbol, timeframe = CONFIG.TIMEFRAME) {
       return result;
     }
 
-    const structure = selectStructure(latest, result);
+    const structure = selectStructure(latest, result, result.current_price);
 
     if (!structure || !Number.isInteger(structure.confirmedIndex)) {
       result.reasons.push(

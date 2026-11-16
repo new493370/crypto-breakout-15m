@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T06:02:20.245Z",
+  "lastUpdated": "2026-11-16T06:06:04.627Z",
   "signals": {
     "EVAAUSDT:5m": {
       "sentAt": "2026-11-16T00:06:19.585Z",
@@ -225,6 +225,15 @@
       "score": null,
       "entry": 0.14500000000000002,
       "stop": 0.1440779551911261
+    },
+    "WETUSDT:5m": {
+      "sentAt": "2026-11-16T06:06:03.126Z",
+      "symbol": "WETUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.038095000000000004,
+      "stop": 0.037790368885481936
     }
   }
 }

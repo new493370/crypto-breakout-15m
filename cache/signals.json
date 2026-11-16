@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T13:22:55.896Z",
+  "lastUpdated": "2026-11-16T13:32:58.013Z",
   "signals": {
     "YBUSDT:5m": {
       "sentAt": "2026-11-16T07:38:17.323Z",
@@ -153,6 +153,24 @@
       "score": null,
       "entry": 7.0265,
       "stop": 7.187568658971733
+    },
+    "HMSTRUSDT:15m": {
+      "sentAt": "2026-11-16T13:32:52.928Z",
+      "symbol": "HMSTRUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.00013605,
+      "stop": 0.00013759282862753098
+    },
+    "CXMTUSDT:15m": {
+      "sentAt": "2026-11-16T13:32:56.511Z",
+      "symbol": "CXMTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 5.7455,
+      "stop": 5.791079284336664
     }
   }
 }

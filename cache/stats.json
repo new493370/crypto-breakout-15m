@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T06:58:10.784Z",
+  "lastUpdated": "2026-11-16T07:02:12.676Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 138,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 55,
-    "active": 7,
-    "tp1Rate": 71.5,
+    "stopped": 56,
+    "active": 6,
+    "tp1Rate": 71.1,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 28.5
+    "stopRate": 28.9
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 44,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 34,
-      "tp1Rate": 56.4
+      "stopped": 35,
+      "tp1Rate": 55.7
     },
     "bearish": {
       "total": 115,
@@ -2686,7 +2686,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T06:56:18.361Z",
+      "statusUpdatedAt": "2026-11-16T07:00:20.644Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4217,13 +4217,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-15T18:38:07.161Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T06:56:18.361Z",
+      "statusUpdatedAt": "2026-11-16T07:00:24.353Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.03166638018956998
     },
     {
       "symbol": "KMNOUSDT",
@@ -4816,7 +4817,7 @@
       "sentAt": "2026-11-16T02:18:29.242Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T06:56:18.361Z",
+      "statusUpdatedAt": "2026-11-16T07:00:24.353Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4893,7 +4894,7 @@
       "sentAt": "2026-11-16T02:18:39.605Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T06:56:18.361Z",
+      "statusUpdatedAt": "2026-11-16T07:00:24.353Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5152,7 +5153,7 @@
       "sentAt": "2026-11-16T05:46:16.523Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T06:56:18.361Z",
+      "statusUpdatedAt": "2026-11-16T07:00:24.353Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5203,7 +5204,7 @@
       "sentAt": "2026-11-16T06:02:18.743Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T06:56:18.361Z",
+      "statusUpdatedAt": "2026-11-16T07:00:24.353Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5228,7 +5229,7 @@
       "sentAt": "2026-11-16T06:06:03.126Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T06:56:18.361Z",
+      "statusUpdatedAt": "2026-11-16T07:00:24.353Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

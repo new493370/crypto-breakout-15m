@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T13:53:11.031Z",
+  "lastUpdated": "2026-11-16T13:58:05.274Z",
   "signals": {
-    "CRVUSDT:5m": {
-      "sentAt": "2026-11-16T07:54:04.453Z",
-      "symbol": "CRVUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.20185,
-      "stop": 0.20032012791415385
-    },
     "SIGNUSDT:5m": {
       "sentAt": "2026-11-16T08:54:20.959Z",
       "symbol": "SIGNUSDT",

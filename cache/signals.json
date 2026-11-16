@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T01:58:00.760Z",
+  "lastUpdated": "2026-11-16T02:02:18.048Z",
   "signals": {
     "TRUSTUSDT:5m": {
       "sentAt": "2026-11-15T20:26:14.226Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.053945,
       "stop": 0.05428397167727225
+    },
+    "MASKUSDT:5m": {
+      "sentAt": "2026-11-16T02:02:16.545Z",
+      "symbol": "MASKUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.3033,
+      "stop": 0.3017086167544205
     }
   }
 }

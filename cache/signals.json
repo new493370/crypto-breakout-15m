@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T16:17:58.854Z",
+  "lastUpdated": "2026-11-16T16:22:58.217Z",
   "signals": {
-    "PONSUSDT:5m": {
-      "sentAt": "2026-11-16T10:18:13.269Z",
-      "symbol": "PONSUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.1235,
-      "stop": 0.12545792656932506
-    },
     "CELOUSDT:5m": {
       "sentAt": "2026-11-16T11:06:05.206Z",
       "symbol": "CELOUSDT",

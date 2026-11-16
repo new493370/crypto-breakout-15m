@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T08:46:05.452Z",
+  "lastUpdated": "2026-11-16T08:54:22.461Z",
   "signals": {
     "FLOCKUSDT:5m": {
       "sentAt": "2026-11-16T05:26:08.051Z",
@@ -90,6 +90,15 @@
       "score": null,
       "entry": 0.20185,
       "stop": 0.20032012791415385
+    },
+    "SIGNUSDT:5m": {
+      "sentAt": "2026-11-16T08:54:20.959Z",
+      "symbol": "SIGNUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.008739,
+      "stop": 0.008698447960153888
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T02:30:15.749Z",
+  "lastUpdated": "2026-11-16T02:34:28.394Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 138,
+    "tp1Hit": 140,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 54,
-    "active": 8,
-    "tp1Rate": 71.9,
+    "active": 6,
+    "tp1Rate": 72.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 28.1
+    "stopRate": 27.8
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 80,
-      "tp1Hit": 41,
+      "tp1Hit": 43,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 31,
-      "tp1Rate": 56.9
+      "tp1Rate": 58.1
     },
     "bearish": {
       "total": 120,
@@ -2868,7 +2868,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:21.100Z",
+      "statusUpdatedAt": "2026-11-16T02:32:30.313Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4401,7 +4401,7 @@
       "sentAt": "2026-11-15T18:38:07.161Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:21.100Z",
+      "statusUpdatedAt": "2026-11-16T02:32:30.313Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4920,7 +4920,7 @@
       "sentAt": "2026-11-16T02:18:14.941Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:21.100Z",
+      "statusUpdatedAt": "2026-11-16T02:32:30.313Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4997,7 +4997,7 @@
       "sentAt": "2026-11-16T02:18:29.242Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:26.492Z",
+      "statusUpdatedAt": "2026-11-16T02:32:30.313Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5022,7 +5022,7 @@
       "sentAt": "2026-11-16T02:18:32.723Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:26.492Z",
+      "statusUpdatedAt": "2026-11-16T02:32:30.313Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5045,13 +5045,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-16T02:18:36.157Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:26.492Z",
+      "statusUpdatedAt": "2026-11-16T02:32:33.994Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.004374
     },
     {
       "symbol": "MAGICUSDT",
@@ -5072,7 +5073,7 @@
       "sentAt": "2026-11-16T02:18:39.605Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:26.492Z",
+      "statusUpdatedAt": "2026-11-16T02:32:33.994Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5147,13 +5148,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-16T02:18:51.968Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:28.174Z",
+      "statusUpdatedAt": "2026-11-16T02:32:35.652Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.07154999999999999
     },
     {
       "symbol": "TRUMPOFFICIALUSDT",

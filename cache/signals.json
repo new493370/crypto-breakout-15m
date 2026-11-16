@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T05:58:07.793Z",
+  "lastUpdated": "2026-11-16T06:02:20.245Z",
   "signals": {
     "EVAAUSDT:5m": {
       "sentAt": "2026-11-16T00:06:19.585Z",
@@ -216,6 +216,15 @@
       "score": null,
       "entry": 0.036879999999999996,
       "stop": 0.03667414059648997
+    },
+    "BANDUSDT:5m": {
+      "sentAt": "2026-11-16T06:02:18.744Z",
+      "symbol": "BANDUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.14500000000000002,
+      "stop": 0.1440779551911261
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T15:27:55.032Z",
+  "lastUpdated": "2026-11-16T15:33:16.570Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 136,
+    "tp1Hit": 137,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 62,
-    "active": 2,
-    "tp1Rate": 68.7,
+    "active": 1,
+    "tp1Rate": 68.8,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 31.3
+    "stopRate": 31.2
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 118,
-      "tp1Hit": 92,
+      "tp1Hit": 93,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 25,
-      "tp1Rate": 78.6
+      "tp1Rate": 78.8
     }
   },
   "recentSignals": [
@@ -2114,7 +2114,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T15:26:07.946Z",
+      "statusUpdatedAt": "2026-11-16T15:31:13.034Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5049,13 +5049,14 @@
         0.000977
       ],
       "sentAt": "2026-11-16T13:22:44.307Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T15:26:07.946Z",
+      "statusUpdatedAt": "2026-11-16T15:31:16.521Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.0009430000000000002
     },
     {
       "symbol": "PONSUSDT",

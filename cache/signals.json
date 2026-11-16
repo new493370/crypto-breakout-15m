@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T04:41:58.497Z",
+  "lastUpdated": "2026-11-16T04:45:56.956Z",
   "signals": {
-    "BASEDUSDT:5m": {
-      "sentAt": "2026-11-15T22:42:05.913Z",
-      "symbol": "BASEDUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.03452,
-      "stop": 0.03428281159230973
-    },
     "BTWUSDT:5m": {
       "sentAt": "2026-11-15T23:38:12.783Z",
       "symbol": "BTWUSDT",

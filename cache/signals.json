@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T07:02:12.675Z",
+  "lastUpdated": "2026-11-16T07:06:11.057Z",
   "signals": {
-    "SKYUSDT:5m": {
-      "sentAt": "2026-11-16T01:06:10.201Z",
-      "symbol": "SKYUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.053945,
-      "stop": 0.05428397167727225
-    },
     "MASKUSDT:5m": {
       "sentAt": "2026-11-16T02:02:16.545Z",
       "symbol": "MASKUSDT",
@@ -216,6 +207,15 @@
       "score": null,
       "entry": 0.038095000000000004,
       "stop": 0.037790368885481936
+    },
+    "KMNOUSDT:5m": {
+      "sentAt": "2026-11-16T07:06:09.556Z",
+      "symbol": "KMNOUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.02852,
+      "stop": 0.02837894359965407
     }
   }
 }

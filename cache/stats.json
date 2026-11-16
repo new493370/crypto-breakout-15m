@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T10:30:13.972Z",
+  "lastUpdated": "2026-11-16T10:38:19.622Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 134,
+    "tp1Hit": 135,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 60,
-    "active": 6,
-    "tp1Rate": 69.1,
+    "stopped": 61,
+    "active": 4,
+    "tp1Rate": 68.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.9
+    "stopRate": 31.1
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 89,
-      "tp1Hit": 46,
+      "tp1Hit": 47,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 39,
-      "tp1Rate": 54.1
+      "stopped": 40,
+      "tp1Rate": 54
     },
     "bearish": {
       "total": 111,
@@ -2478,7 +2478,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T10:28:17.224Z",
+      "statusUpdatedAt": "2026-11-16T10:36:20.043Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4685,13 +4685,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-16T02:18:39.605Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T10:28:17.224Z",
+      "statusUpdatedAt": "2026-11-16T10:36:23.745Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.06711410602183543
     },
     {
       "symbol": "ZKPUSDT",
@@ -5154,7 +5155,7 @@
       "sentAt": "2026-11-16T09:06:07.639Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T10:28:17.224Z",
+      "statusUpdatedAt": "2026-11-16T10:36:23.745Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5179,7 +5180,7 @@
       "sentAt": "2026-11-16T09:46:14.931Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T10:28:17.224Z",
+      "statusUpdatedAt": "2026-11-16T10:36:23.745Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5202,13 +5203,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-16T09:46:18.400Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T10:28:17.224Z",
+      "statusUpdatedAt": "2026-11-16T10:36:25.387Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.07145
     },
     {
       "symbol": "PONSUSDT",
@@ -5229,7 +5231,7 @@
       "sentAt": "2026-11-16T10:18:13.269Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T10:28:17.224Z",
+      "statusUpdatedAt": "2026-11-16T10:36:25.387Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

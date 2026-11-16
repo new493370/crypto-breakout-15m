@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T03:53:57.644Z",
+  "lastUpdated": "2026-11-16T03:57:55.038Z",
   "signals": {
-    "SENTUSDT:5m": {
-      "sentAt": "2026-11-15T21:54:05.382Z",
-      "symbol": "SENTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.01695,
-      "stop": 0.017123217398535957
-    },
     "CTUSDT:5m": {
       "sentAt": "2026-11-15T22:06:12.788Z",
       "symbol": "CTUSDT",

@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T19:08:12.494Z",
+  "lastUpdated": "2026-11-16T19:13:08.560Z",
   "signals": {
-    "KITEUSDT:15m": {
-      "sentAt": "2026-11-16T13:12:47.629Z",
-      "symbol": "KITEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.13187500000000002,
-      "stop": 0.13402662378957106
-    },
-    "XTZUSDT:15m": {
-      "sentAt": "2026-11-16T13:12:50.996Z",
-      "symbol": "XTZUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.2138,
-      "stop": 0.2157870686092406
-    },
     "NEIROUSDT:15m": {
       "sentAt": "2026-11-16T13:22:40.945Z",
       "symbol": "NEIROUSDT",

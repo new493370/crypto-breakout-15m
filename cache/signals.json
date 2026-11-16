@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T09:02:58.483Z",
+  "lastUpdated": "2026-11-16T09:06:09.140Z",
   "signals": {
     "FLOCKUSDT:5m": {
       "sentAt": "2026-11-16T05:26:08.051Z",
@@ -99,6 +99,15 @@
       "score": null,
       "entry": 0.008739,
       "stop": 0.008698447960153888
+    },
+    "UKOILUSDT:5m": {
+      "sentAt": "2026-11-16T09:06:07.639Z",
+      "symbol": "UKOILUSDT",
+      "timeframe": "5m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 93.185,
+      "stop": 93.7340757180799
     }
   }
 }

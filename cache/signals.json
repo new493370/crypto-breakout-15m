@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-16T13:32:58.013Z",
+  "lastUpdated": "2026-11-16T13:42:52.902Z",
   "signals": {
-    "YBUSDT:5m": {
-      "sentAt": "2026-11-16T07:38:17.323Z",
-      "symbol": "YBUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0416,
-      "stop": 0.04126168733349675
-    },
     "CRVUSDT:5m": {
       "sentAt": "2026-11-16T07:54:04.453Z",
       "symbol": "CRVUSDT",

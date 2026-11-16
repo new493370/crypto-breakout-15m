@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-16T02:10:18.405Z",
+  "lastUpdated": "2026-11-16T02:14:12.963Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 139,
+    "tp1Hit": 140,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 58,
+    "stopped": 57,
     "active": 3,
-    "tp1Rate": 70.6,
+    "tp1Rate": 71.1,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 29.4
+    "stopRate": 28.9
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 76,
-      "tp1Hit": 39,
+      "tp1Hit": 40,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 34,
-      "tp1Rate": 53.4
+      "stopped": 33,
+      "tp1Rate": 54.8
     },
     "bearish": {
       "total": 124,
@@ -41,32 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "ORDERUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.029900000000000003,
-      "stop": 0.029852,
-      "tp1": 0.030100000000000002,
-      "zoneLow": 0.02986,
-      "zoneHigh": 0.02994,
-      "signalCandleTime": 1794500100000,
-      "rr1": 4.16666666666639,
-      "highs": [
-        0.03035,
-        0.02995
-      ],
-      "lows": null,
-      "sentAt": "2026-11-12T16:23:07.409Z",
-      "status": "stopped",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-12T16:31:12.479Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": true,
-      "exitPrice": 0.029852
-    },
     {
       "symbol": "XAGUSDT",
       "timeframe": "5m",
@@ -3232,7 +3206,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:08:15.348Z",
+      "statusUpdatedAt": "2026-11-16T02:12:15.135Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4765,7 +4739,7 @@
       "sentAt": "2026-11-15T18:38:07.161Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:08:15.348Z",
+      "statusUpdatedAt": "2026-11-16T02:12:15.136Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5230,9 +5204,35 @@
       ],
       "lows": null,
       "sentAt": "2026-11-16T02:10:16.902Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-16T02:12:18.765Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.002065
+    },
+    {
+      "symbol": "XLMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "entry": 0.13846999999999998,
+      "stop": 0.13747513200182726,
+      "tp1": 0.13961999999999997,
+      "zoneLow": 0.13824,
+      "zoneHigh": 0.1387,
+      "signalCandleTime": 1794794700000,
+      "rr1": 1.155932246400723,
+      "highs": [
+        0.1419,
+        0.14007
+      ],
+      "lows": null,
+      "sentAt": "2026-11-16T02:14:11.459Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:10:16.902Z",
+      "statusUpdatedAt": "2026-11-16T02:14:11.459Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -6695,6 +6695,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-16T02:10:16.902Z"
+    },
+    "XLMUSDT:5m:2026-11-16T02:14:11.459Z": {
+      "symbol": "XLMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-16T02:14:11.459Z"
     }
   }
 }

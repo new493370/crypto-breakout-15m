@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-16T02:10:18.404Z",
+  "lastUpdated": "2026-11-16T02:14:12.961Z",
   "signals": {
     "TRUSTUSDT:5m": {
       "sentAt": "2026-11-15T20:26:14.226Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.00205,
       "stop": 0.0020370799282958744
+    },
+    "XLMUSDT:5m": {
+      "sentAt": "2026-11-16T02:14:11.459Z",
+      "symbol": "XLMUSDT",
+      "timeframe": "5m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.13846999999999998,
+      "stop": 0.13747513200182726
     }
   }
 }

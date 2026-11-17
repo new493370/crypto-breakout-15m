@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T13:43:03.276Z",
+  "lastUpdated": "2026-11-17T13:48:17.861Z",
   "signals": {
     "AEVOUSDT:15m": {
       "sentAt": "2026-11-17T08:48:15.945Z",
@@ -27,6 +27,15 @@
       "score": null,
       "entry": 0.162155,
       "stop": 0.15930946253063033
+    },
+    "SYRUPUSDT:15m": {
+      "sentAt": "2026-11-17T13:48:16.360Z",
+      "symbol": "SYRUPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.10625,
+      "stop": 0.10508790784963934
     }
   }
 }

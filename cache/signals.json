@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T12:28:09.982Z",
+  "lastUpdated": "2026-11-17T12:33:07.071Z",
   "signals": {
     "LUNAUSDT:15m": {
       "sentAt": "2026-11-17T07:03:08.411Z",
@@ -54,6 +54,15 @@
       "score": null,
       "entry": 0.0049265,
       "stop": 0.004998440437429607
+    },
+    "GRVTUSDT:15m": {
+      "sentAt": "2026-11-17T12:33:05.570Z",
+      "symbol": "GRVTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.162155,
+      "stop": 0.15930946253063033
     }
   }
 }

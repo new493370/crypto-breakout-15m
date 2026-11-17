@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T09:43:08.264Z",
+  "lastUpdated": "2026-11-17T09:48:07.469Z",
   "signals": {
-    "GPSUSDT:15m": {
-      "sentAt": "2026-11-17T03:48:06.386Z",
-      "symbol": "GPSUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.008453,
-      "stop": 0.008330485599918246
-    },
     "CPUSDT:15m": {
       "sentAt": "2026-11-17T04:03:05.115Z",
       "symbol": "CPUSDT",

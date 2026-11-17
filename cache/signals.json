@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T15:13:13.229Z",
+  "lastUpdated": "2026-11-17T15:18:08.655Z",
   "signals": {
     "GRVTUSDT:15m": {
       "sentAt": "2026-11-17T12:33:05.570Z",
@@ -36,6 +36,15 @@
       "score": null,
       "entry": 0.091515,
       "stop": 0.0904012637622104
+    },
+    "KITEUSDT:15m": {
+      "sentAt": "2026-11-17T15:18:07.154Z",
+      "symbol": "KITEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.132575,
+      "stop": 0.1307069597339792
     }
   }
 }

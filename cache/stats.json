@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-17T06:43:10.303Z",
+  "lastUpdated": "2026-11-17T06:48:25.763Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 133,
+    "tp1Hit": 136,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 59,
-    "active": 8,
-    "tp1Rate": 69.3,
+    "active": 5,
+    "tp1Rate": 69.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.7
+    "stopRate": 30.3
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 114,
-      "tp1Hit": 88,
+      "tp1Hit": 91,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 23,
-      "tp1Rate": 79.3
+      "tp1Rate": 79.8
     }
   },
   "recentSignals": [
@@ -1906,7 +1906,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:14.009Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5077,7 +5077,7 @@
       "sentAt": "2026-11-17T03:48:06.386Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:14.009Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5102,7 +5102,7 @@
       "sentAt": "2026-11-17T04:03:05.115Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:14.009Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5127,7 +5127,7 @@
       "sentAt": "2026-11-17T05:33:17.962Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:14.009Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5150,13 +5150,14 @@
         807.72
       ],
       "sentAt": "2026-11-17T05:48:22.112Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:17.454Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 809.09
     },
     {
       "symbol": "SNXXUSDT",
@@ -5175,13 +5176,14 @@
         2.946
       ],
       "sentAt": "2026-11-17T05:48:25.608Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:19.078Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 2.947
     },
     {
       "symbol": "SNDKUSDT",
@@ -5200,13 +5202,14 @@
         807.4
       ],
       "sentAt": "2026-11-17T05:48:29.108Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:20.710Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 807.1000000000001
     },
     {
       "symbol": "LDOUSDT",
@@ -5227,7 +5230,7 @@
       "sentAt": "2026-11-17T06:18:13.865Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T06:41:09.243Z",
+      "statusUpdatedAt": "2026-11-17T06:46:20.710Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,

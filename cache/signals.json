@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T05:28:02.029Z",
+  "lastUpdated": "2026-11-17T05:33:21.319Z",
   "signals": {
     "XAGUSDT:15m": {
       "sentAt": "2026-11-17T03:28:16.039Z",
@@ -27,6 +27,15 @@
       "score": null,
       "entry": 0.0056955,
       "stop": 0.005605391937406243
+    },
+    "KATUSDT:15m": {
+      "sentAt": "2026-11-17T05:33:17.962Z",
+      "symbol": "KATUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0029839999999999997,
+      "stop": 0.002944857580604251
     }
   }
 }

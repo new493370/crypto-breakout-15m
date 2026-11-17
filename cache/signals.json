@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T18:13:11.358Z",
+  "lastUpdated": "2026-11-17T18:18:19.906Z",
   "signals": {
     "GRVTUSDT:15m": {
       "sentAt": "2026-11-17T12:33:05.570Z",
@@ -99,6 +99,15 @@
       "score": null,
       "entry": 0.09525,
       "stop": 0.0923726097215956
+    },
+    "ZHIPUSTOCKUSDT:15m": {
+      "sentAt": "2026-11-17T18:18:18.405Z",
+      "symbol": "ZHIPUSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 43.295,
+      "stop": 43.77068755709113
     }
   }
 }

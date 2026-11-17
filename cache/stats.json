@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-17T18:13:11.360Z",
+  "lastUpdated": "2026-11-17T18:18:19.907Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 132,
+    "tp1Hit": 131,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 63,
-    "active": 5,
-    "tp1Rate": 67.7,
+    "active": 6,
+    "tp1Rate": 67.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 32.3
+    "stopRate": 32.5
   },
   "byTimeframe": {
     "15m": {
@@ -24,15 +24,15 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 87,
-      "tp1Hit": 47,
+      "total": 86,
+      "tp1Hit": 46,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 39,
-      "tp1Rate": 54.7
+      "tp1Rate": 54.1
     },
     "bearish": {
-      "total": 113,
+      "total": 114,
       "tp1Hit": 85,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -41,32 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "SPACEUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.0031025000000000002,
-      "stop": 0.003078970895812658,
-      "tp1": 0.0031300000000000004,
-      "zoneLow": 0.003097,
-      "zoneHigh": 0.003108,
-      "signalCandleTime": 1794609600000,
-      "rr1": 1.1687652781440787,
-      "highs": [
-        0.003146,
-        0.003124
-      ],
-      "lows": null,
-      "sentAt": "2026-11-13T22:50:28.096Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:48:20.793Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.0031300000000000004
-    },
     {
       "symbol": "ETHFIUSDT",
       "timeframe": "5m",
@@ -1464,7 +1438,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:11:09.099Z",
+      "statusUpdatedAt": "2026-11-17T18:16:09.980Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5103,7 +5077,7 @@
       "sentAt": "2026-11-17T16:18:08.292Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:11:09.099Z",
+      "statusUpdatedAt": "2026-11-17T18:16:09.981Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5128,7 +5102,7 @@
       "sentAt": "2026-11-17T16:33:07.522Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:11:09.099Z",
+      "statusUpdatedAt": "2026-11-17T18:16:09.981Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5153,7 +5127,7 @@
       "sentAt": "2026-11-17T16:33:11.106Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:11:09.099Z",
+      "statusUpdatedAt": "2026-11-17T18:16:09.981Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5204,7 +5178,7 @@
       "sentAt": "2026-11-17T16:33:18.012Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:11:09.099Z",
+      "statusUpdatedAt": "2026-11-17T18:16:09.981Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5235,6 +5209,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.09849999999999999
+    },
+    {
+      "symbol": "ZHIPUSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 43.295,
+      "stop": 43.77068755709113,
+      "tp1": 42.519999999999996,
+      "zoneLow": 43.14,
+      "zoneHigh": 43.45,
+      "signalCandleTime": 1794938400000,
+      "rr1": 1.6292206690021507,
+      "highs": null,
+      "lows": [
+        42.83,
+        43.01
+      ],
+      "sentAt": "2026-11-17T18:18:18.404Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-17T18:18:18.404Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -7169,6 +7168,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-17T18:03:06.445Z"
+    },
+    "ZHIPUSTOCKUSDT:15m:2026-11-17T18:18:18.404Z": {
+      "symbol": "ZHIPUSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-17T18:18:18.404Z"
     }
   }
 }

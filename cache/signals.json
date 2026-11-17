@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T15:03:08.593Z",
+  "lastUpdated": "2026-11-17T15:08:18.711Z",
   "signals": {
-    "VETUSDT:15m": {
-      "sentAt": "2026-11-17T09:03:11.150Z",
-      "symbol": "VETUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0049265,
-      "stop": 0.004998440437429607
-    },
     "GRVTUSDT:15m": {
       "sentAt": "2026-11-17T12:33:05.570Z",
       "symbol": "GRVTUSDT",

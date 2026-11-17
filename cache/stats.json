@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-17T14:43:11.513Z",
+  "lastUpdated": "2026-11-17T14:48:23.696Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 137,
+    "tp1Hit": 136,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 62,
-    "active": 1,
-    "tp1Rate": 68.8,
+    "active": 2,
+    "tp1Rate": 68.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 31.2
+    "stopRate": 31.3
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 87,
+      "total": 88,
       "tp1Hit": 48,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,41 +32,15 @@
       "tp1Rate": 55.8
     },
     "bearish": {
-      "total": 113,
-      "tp1Hit": 89,
+      "total": 112,
+      "tp1Hit": 88,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 24,
-      "tp1Rate": 78.8
+      "tp1Rate": 78.6
     }
   },
   "recentSignals": [
-    {
-      "symbol": "TRUTHUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.016259000000000003,
-      "stop": 0.016370867483257064,
-      "tp1": 0.016149000000000004,
-      "zoneLow": 0.016237,
-      "zoneHigh": 0.016281,
-      "signalCandleTime": 1794596400000,
-      "rr1": 0.9833062905976826,
-      "highs": null,
-      "lows": [
-        0.016192,
-        0.016254
-      ],
-      "sentAt": "2026-11-13T19:08:05.937Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-13T20:16:14.852Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.016149000000000004
-    },
     {
       "symbol": "REUSDT",
       "timeframe": "5m",
@@ -1672,7 +1646,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T14:41:06.703Z",
+      "statusUpdatedAt": "2026-11-17T14:46:07.858Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5239,6 +5213,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.07384000000000003
+    },
+    {
+      "symbol": "ATUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.091515,
+      "stop": 0.0904012637622104,
+      "tp1": 0.09299000000000002,
+      "zoneLow": 0.09122,
+      "zoneHigh": 0.09181,
+      "signalCandleTime": 1794925800000,
+      "rr1": 1.3243710224670526,
+      "highs": [
+        0.09415,
+        0.09309
+      ],
+      "lows": null,
+      "sentAt": "2026-11-17T14:48:22.194Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-17T14:48:22.194Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -7117,6 +7116,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-17T14:03:22.309Z"
+    },
+    "ATUSDT:15m:2026-11-17T14:48:22.194Z": {
+      "symbol": "ATUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-17T14:48:22.194Z"
     }
   }
 }

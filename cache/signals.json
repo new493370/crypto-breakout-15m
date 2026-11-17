@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T14:43:11.512Z",
+  "lastUpdated": "2026-11-17T14:48:23.695Z",
   "signals": {
-    "AEVOUSDT:15m": {
-      "sentAt": "2026-11-17T08:48:15.945Z",
-      "symbol": "AEVOUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.017255,
-      "stop": 0.017107706305285166
-    },
     "VETUSDT:15m": {
       "sentAt": "2026-11-17T09:03:11.150Z",
       "symbol": "VETUSDT",
@@ -45,6 +36,15 @@
       "score": null,
       "entry": 0.07266500000000001,
       "stop": 0.07170423196932631
+    },
+    "ATUSDT:15m": {
+      "sentAt": "2026-11-17T14:48:22.194Z",
+      "symbol": "ATUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.091515,
+      "stop": 0.0904012637622104
     }
   }
 }

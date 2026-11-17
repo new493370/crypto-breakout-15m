@@ -1,4 +1,14 @@
 {
-  "lastUpdated": "2026-11-17T03:22:58.969Z",
-  "signals": {}
+  "lastUpdated": "2026-11-17T03:28:17.541Z",
+  "signals": {
+    "XAGUSDT:15m": {
+      "sentAt": "2026-11-17T03:28:16.039Z",
+      "symbol": "XAGUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 47.08,
+      "stop": 46.740306161090416
+    }
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T21:28:24.408Z",
+  "lastUpdated": "2026-11-17T21:33:43.035Z",
   "signals": {
     "ZAMAUSDT:15m": {
       "sentAt": "2026-11-17T16:18:08.292Z",
@@ -126,6 +126,33 @@
       "score": null,
       "entry": 0.1766,
       "stop": 0.1734038321127525
+    },
+    "PONSUSDT:15m": {
+      "sentAt": "2026-11-17T21:33:34.421Z",
+      "symbol": "PONSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.11055000000000001,
+      "stop": 0.1064572598732283
+    },
+    "TRUMPUSDT:15m": {
+      "sentAt": "2026-11-17T21:33:37.878Z",
+      "symbol": "TRUMPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.9535,
+      "stop": 0.9356215395537208
+    },
+    "TRUMPOFFICIALUSDT:15m": {
+      "sentAt": "2026-11-17T21:33:41.533Z",
+      "symbol": "TRUMPOFFICIALUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.954,
+      "stop": 0.9359920480013176
     }
   }
 }

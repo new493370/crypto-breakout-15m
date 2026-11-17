@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T13:13:02.694Z",
+  "lastUpdated": "2026-11-17T13:18:18.818Z",
   "signals": {
-    "SAPIENUSDT:15m": {
-      "sentAt": "2026-11-17T07:13:16.173Z",
-      "symbol": "SAPIENUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.03708,
-      "stop": 0.03753627647946482
-    },
-    "BICOUSDT:15m": {
-      "sentAt": "2026-11-17T07:18:12.963Z",
-      "symbol": "BICOUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.011595000000000001,
-      "stop": 0.011706336241233073
-    },
-    "GRASSUSDT:15m": {
-      "sentAt": "2026-11-17T07:18:16.470Z",
-      "symbol": "GRASSUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.39485,
-      "stop": 0.4003515474538327
-    },
     "AEVOUSDT:15m": {
       "sentAt": "2026-11-17T08:48:15.945Z",
       "symbol": "AEVOUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T09:58:03.818Z",
+  "lastUpdated": "2026-11-17T10:03:13.737Z",
   "signals": {
-    "CPUSDT:15m": {
-      "sentAt": "2026-11-17T04:03:05.115Z",
-      "symbol": "CPUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0056955,
-      "stop": 0.005605391937406243
-    },
     "KATUSDT:15m": {
       "sentAt": "2026-11-17T05:33:17.962Z",
       "symbol": "KATUSDT",

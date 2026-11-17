@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T07:08:09.597Z",
+  "lastUpdated": "2026-11-17T07:13:17.673Z",
   "signals": {
     "XAGUSDT:15m": {
       "sentAt": "2026-11-17T03:28:16.039Z",
@@ -81,6 +81,15 @@
       "score": null,
       "entry": 0.032085,
       "stop": 0.03174740255641195
+    },
+    "SAPIENUSDT:15m": {
+      "sentAt": "2026-11-17T07:13:16.173Z",
+      "symbol": "SAPIENUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.03708,
+      "stop": 0.03753627647946482
     }
   }
 }

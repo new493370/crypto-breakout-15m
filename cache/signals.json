@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T21:43:23.861Z",
+  "lastUpdated": "2026-11-17T21:48:25.035Z",
   "signals": {
     "ZAMAUSDT:15m": {
       "sentAt": "2026-11-17T16:18:08.292Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.954,
       "stop": 0.9359920480013176
+    },
+    "AAPLSTOCKUSDT:15m": {
+      "sentAt": "2026-11-17T21:48:23.534Z",
+      "symbol": "AAPLSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 350.63,
+      "stop": 348.7646905128458
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-17T08:57:59.408Z",
+  "lastUpdated": "2026-11-17T09:03:12.651Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 132,
+    "tp1Hit": 133,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 60,
+    "stopped": 59,
     "active": 8,
-    "tp1Rate": 68.8,
+    "tp1Rate": 69.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 31.3
+    "stopRate": 30.7
   },
   "byTimeframe": {
     "15m": {
@@ -25,48 +25,22 @@
   "byDirection": {
     "bullish": {
       "total": 87,
-      "tp1Hit": 45,
+      "tp1Hit": 46,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 36,
-      "tp1Rate": 55.6
+      "tp1Rate": 56.1
     },
     "bearish": {
       "total": 113,
       "tp1Hit": 87,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 24,
-      "tp1Rate": 78.4
+      "stopped": 23,
+      "tp1Rate": 79.1
     }
   },
   "recentSignals": [
-    {
-      "symbol": "ENSOUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.42315,
-      "stop": 0.42810853839513774,
-      "tp1": 0.4153999999999999,
-      "zoneLow": 0.4216,
-      "zoneHigh": 0.4247,
-      "signalCandleTime": 1794584100000,
-      "rr1": 1.5629605707197325,
-      "highs": null,
-      "lows": [
-        0.4204,
-        0.4209
-      ],
-      "sentAt": "2026-11-13T15:43:14.545Z",
-      "status": "stopped",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-13T16:31:14.327Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": true,
-      "exitPrice": 0.42810853839513774
-    },
     {
       "symbol": "DNAUSDT",
       "timeframe": "5m",
@@ -1776,7 +1750,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:01:17.279Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4947,7 +4921,7 @@
       "sentAt": "2026-11-17T03:48:06.386Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:01:17.279Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4972,7 +4946,7 @@
       "sentAt": "2026-11-17T04:03:05.115Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:01:17.279Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4997,7 +4971,7 @@
       "sentAt": "2026-11-17T05:33:17.962Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:01:17.279Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5100,7 +5074,7 @@
       "sentAt": "2026-11-17T06:18:13.865Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:01:17.279Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5151,7 +5125,7 @@
       "sentAt": "2026-11-17T07:13:16.172Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:01:17.279Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5202,7 +5176,7 @@
       "sentAt": "2026-11-17T07:18:16.470Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:01:17.279Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5225,9 +5199,35 @@
       ],
       "lows": null,
       "sentAt": "2026-11-17T08:48:15.945Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-17T09:01:21.013Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.017380000000000003
+    },
+    {
+      "symbol": "VETUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.0049265,
+      "stop": 0.004998440437429607,
+      "tp1": 0.004758999999999999,
+      "zoneLow": 0.004893,
+      "zoneHigh": 0.00496,
+      "signalCandleTime": 1794905100000,
+      "rr1": 2.3283150059227613,
+      "highs": null,
+      "lows": [
+        0.004797,
+        0.004855
+      ],
+      "sentAt": "2026-11-17T09:03:11.150Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T08:56:10.822Z",
+      "statusUpdatedAt": "2026-11-17T09:03:11.150Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7082,6 +7082,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-17T08:48:15.945Z"
+    },
+    "VETUSDT:15m:2026-11-17T09:03:11.150Z": {
+      "symbol": "VETUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-17T09:03:11.150Z"
     }
   }
 }

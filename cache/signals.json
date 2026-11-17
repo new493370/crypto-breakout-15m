@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T08:57:59.406Z",
+  "lastUpdated": "2026-11-17T09:03:12.650Z",
   "signals": {
     "XAGUSDT:15m": {
       "sentAt": "2026-11-17T03:28:16.039Z",
@@ -117,6 +117,15 @@
       "score": null,
       "entry": 0.017255,
       "stop": 0.017107706305285166
+    },
+    "VETUSDT:15m": {
+      "sentAt": "2026-11-17T09:03:11.150Z",
+      "symbol": "VETUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0049265,
+      "stop": 0.004998440437429607
     }
   }
 }

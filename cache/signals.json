@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T05:43:15.486Z",
+  "lastUpdated": "2026-11-17T05:48:30.610Z",
   "signals": {
     "XAGUSDT:15m": {
       "sentAt": "2026-11-17T03:28:16.039Z",
@@ -36,6 +36,33 @@
       "score": null,
       "entry": 0.0029839999999999997,
       "stop": 0.002944857580604251
+    },
+    "SNDKSTOCKUSDT:15m": {
+      "sentAt": "2026-11-17T05:48:22.112Z",
+      "symbol": "SNDKSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 825.34,
+      "stop": 838.8842710537821
+    },
+    "SNXXUSDT:15m": {
+      "sentAt": "2026-11-17T05:48:25.608Z",
+      "symbol": "SNXXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 3.077,
+      "stop": 3.1834605207107236
+    },
+    "SNDKUSDT:15m": {
+      "sentAt": "2026-11-17T05:48:29.108Z",
+      "symbol": "SNDKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 825.35,
+      "stop": 839.7545409527695
     }
   }
 }

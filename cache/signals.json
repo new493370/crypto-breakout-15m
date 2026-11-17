@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T06:13:17.232Z",
+  "lastUpdated": "2026-11-17T06:18:15.367Z",
   "signals": {
     "XAGUSDT:15m": {
       "sentAt": "2026-11-17T03:28:16.039Z",
@@ -63,6 +63,15 @@
       "score": null,
       "entry": 825.35,
       "stop": 839.7545409527695
+    },
+    "LDOUSDT:15m": {
+      "sentAt": "2026-11-17T06:18:13.865Z",
+      "symbol": "LDOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.27835,
+      "stop": 0.27525823779092695
     }
   }
 }

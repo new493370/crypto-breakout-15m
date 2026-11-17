@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T17:58:21.872Z",
+  "lastUpdated": "2026-11-17T18:03:07.948Z",
   "signals": {
     "GRVTUSDT:15m": {
       "sentAt": "2026-11-17T12:33:05.570Z",
@@ -90,6 +90,15 @@
       "score": null,
       "entry": 156.39499999999998,
       "stop": 159.85626223758655
+    },
+    "CNPYUSDT:15m": {
+      "sentAt": "2026-11-17T18:03:06.445Z",
+      "symbol": "CNPYUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.09525,
+      "stop": 0.0923726097215956
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T06:58:14.705Z",
+  "lastUpdated": "2026-11-17T07:03:09.912Z",
   "signals": {
     "XAGUSDT:15m": {
       "sentAt": "2026-11-17T03:28:16.039Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.27835,
       "stop": 0.27525823779092695
+    },
+    "LUNAUSDT:15m": {
+      "sentAt": "2026-11-17T07:03:08.411Z",
+      "symbol": "LUNAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.032085,
+      "stop": 0.03174740255641195
     }
   }
 }

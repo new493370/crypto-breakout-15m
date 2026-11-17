@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T20:48:14.476Z",
+  "lastUpdated": "2026-11-17T20:53:17.789Z",
   "signals": {
-    "ATUSDT:15m": {
-      "sentAt": "2026-11-17T14:48:22.194Z",
-      "symbol": "ATUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.091515,
-      "stop": 0.0904012637622104
-    },
     "KITEUSDT:15m": {
       "sentAt": "2026-11-17T15:18:07.154Z",
       "symbol": "KITEUSDT",

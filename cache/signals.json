@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T19:48:05.004Z",
+  "lastUpdated": "2026-11-17T19:53:12.660Z",
   "signals": {
-    "SYRUPUSDT:15m": {
-      "sentAt": "2026-11-17T13:48:16.360Z",
-      "symbol": "SYRUPUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.10625,
-      "stop": 0.10508790784963934
-    },
     "BSBUSDT:15m": {
       "sentAt": "2026-11-17T14:03:22.310Z",
       "symbol": "BSBUSDT",

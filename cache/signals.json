@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T18:33:02.416Z",
+  "lastUpdated": "2026-11-17T18:38:19.799Z",
   "signals": {
-    "GRVTUSDT:15m": {
-      "sentAt": "2026-11-17T12:33:05.570Z",
-      "symbol": "GRVTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.162155,
-      "stop": 0.15930946253063033
-    },
     "SYRUPUSDT:15m": {
       "sentAt": "2026-11-17T13:48:16.360Z",
       "symbol": "SYRUPUSDT",

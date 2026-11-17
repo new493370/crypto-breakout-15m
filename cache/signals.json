@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T16:13:12.313Z",
+  "lastUpdated": "2026-11-17T16:18:09.795Z",
   "signals": {
     "GRVTUSDT:15m": {
       "sentAt": "2026-11-17T12:33:05.570Z",
@@ -45,6 +45,15 @@
       "score": null,
       "entry": 0.132575,
       "stop": 0.1307069597339792
+    },
+    "ZAMAUSDT:15m": {
+      "sentAt": "2026-11-17T16:18:08.292Z",
+      "symbol": "ZAMAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.058690000000000006,
+      "stop": 0.06002468104499399
     }
   }
 }

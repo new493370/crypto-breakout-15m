@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T22:13:14.956Z",
+  "lastUpdated": "2026-11-17T22:18:38.577Z",
   "signals": {
-    "ZAMAUSDT:15m": {
-      "sentAt": "2026-11-17T16:18:08.292Z",
-      "symbol": "ZAMAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.058690000000000006,
-      "stop": 0.06002468104499399
-    },
     "NEIROUSDT:15m": {
       "sentAt": "2026-11-17T16:33:07.523Z",
       "symbol": "NEIROUSDT",
@@ -162,6 +153,42 @@
       "score": null,
       "entry": 350.63,
       "stop": 348.7646905128458
+    },
+    "TURBOUSDT:15m": {
+      "sentAt": "2026-11-17T22:18:22.382Z",
+      "symbol": "TURBOUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0006034,
+      "stop": 0.0005947884139119875
+    },
+    "PEOPLEUSDT:15m": {
+      "sentAt": "2026-11-17T22:18:25.910Z",
+      "symbol": "PEOPLEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0051015,
+      "stop": 0.0050253870057553295
+    },
+    "QQQSTOCKUSDT:15m": {
+      "sentAt": "2026-11-17T22:18:31.650Z",
+      "symbol": "QQQSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 656.13,
+      "stop": 649.9805068407254
+    },
+    "REUSDT:15m": {
+      "sentAt": "2026-11-17T22:18:35.185Z",
+      "symbol": "REUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.22714,
+      "stop": 0.22346371851227215
     }
   }
 }

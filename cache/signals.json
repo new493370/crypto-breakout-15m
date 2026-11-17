@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T13:58:07.831Z",
+  "lastUpdated": "2026-11-17T14:03:23.812Z",
   "signals": {
     "AEVOUSDT:15m": {
       "sentAt": "2026-11-17T08:48:15.945Z",
@@ -36,6 +36,15 @@
       "score": null,
       "entry": 0.10625,
       "stop": 0.10508790784963934
+    },
+    "BSBUSDT:15m": {
+      "sentAt": "2026-11-17T14:03:22.310Z",
+      "symbol": "BSBUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.07266500000000001,
+      "stop": 0.07170423196932631
     }
   }
 }

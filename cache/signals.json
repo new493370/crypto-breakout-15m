@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T03:43:16.404Z",
+  "lastUpdated": "2026-11-17T03:48:07.888Z",
   "signals": {
     "XAGUSDT:15m": {
       "sentAt": "2026-11-17T03:28:16.039Z",
@@ -9,6 +9,15 @@
       "score": null,
       "entry": 47.08,
       "stop": 46.740306161090416
+    },
+    "GPSUSDT:15m": {
+      "sentAt": "2026-11-17T03:48:06.386Z",
+      "symbol": "GPSUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.008453,
+      "stop": 0.008330485599918246
     }
   }
 }

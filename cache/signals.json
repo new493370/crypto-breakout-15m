@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-17T21:13:21.546Z",
+  "lastUpdated": "2026-11-17T21:18:19.071Z",
   "signals": {
-    "KITEUSDT:15m": {
-      "sentAt": "2026-11-17T15:18:07.154Z",
-      "symbol": "KITEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.132575,
-      "stop": 0.1307069597339792
-    },
     "ZAMAUSDT:15m": {
       "sentAt": "2026-11-17T16:18:08.292Z",
       "symbol": "ZAMAUSDT",

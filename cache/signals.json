@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T20:58:08.399Z",
+  "lastUpdated": "2026-11-17T21:03:37.092Z",
   "signals": {
     "KITEUSDT:15m": {
       "sentAt": "2026-11-17T15:18:07.154Z",
@@ -81,6 +81,60 @@
       "score": null,
       "entry": 0.30722,
       "stop": 0.3084772969673002
+    },
+    "MEWUSDT:15m": {
+      "sentAt": "2026-11-17T21:03:17.937Z",
+      "symbol": "MEWUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00030045,
+      "stop": 0.00029598906421977677
+    },
+    "ADAUSDT:15m": {
+      "sentAt": "2026-11-17T21:03:21.462Z",
+      "symbol": "ADAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.15200000000000002,
+      "stop": 0.14944340877091108
+    },
+    "SOLUSDT:15m": {
+      "sentAt": "2026-11-17T21:03:24.943Z",
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 72.535,
+      "stop": 71.5565992321841
+    },
+    "INJUSDT:15m": {
+      "sentAt": "2026-11-17T21:03:28.383Z",
+      "symbol": "INJUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 7.1015,
+      "stop": 6.9794281339228466
+    },
+    "CBRSSTOCKUSDT:15m": {
+      "sentAt": "2026-11-17T21:03:32.088Z",
+      "symbol": "CBRSSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 102.375,
+      "stop": 99.68271210149094
+    },
+    "COAIUSDT:15m": {
+      "sentAt": "2026-11-17T21:03:35.591Z",
+      "symbol": "COAIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.1766,
+      "stop": 0.1734038321127525
     }
   }
 }

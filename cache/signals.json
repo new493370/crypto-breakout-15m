@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-17T18:43:19.445Z",
+  "lastUpdated": "2026-11-17T18:48:13.011Z",
   "signals": {
     "SYRUPUSDT:15m": {
       "sentAt": "2026-11-17T13:48:16.360Z",
@@ -99,6 +99,15 @@
       "score": null,
       "entry": 43.295,
       "stop": 43.77068755709113
+    },
+    "TRXUSDT:15m": {
+      "sentAt": "2026-11-17T18:48:11.509Z",
+      "symbol": "TRXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.30722,
+      "stop": 0.3084772969673002
     }
   }
 }

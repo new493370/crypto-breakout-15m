@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-17T18:43:19.447Z",
+  "lastUpdated": "2026-11-17T18:48:13.012Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 131,
+    "tp1Hit": 130,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 63,
-    "active": 6,
-    "tp1Rate": 67.5,
+    "active": 7,
+    "tp1Rate": 67.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 32.5
+    "stopRate": 32.6
   },
   "byTimeframe": {
     "15m": {
@@ -33,40 +33,14 @@
     },
     "bearish": {
       "total": 114,
-      "tp1Hit": 85,
+      "tp1Hit": 84,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 24,
-      "tp1Rate": 78
+      "tp1Rate": 77.8
     }
   },
   "recentSignals": [
-    {
-      "symbol": "ETHFIUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.57125,
-      "stop": 0.5758929126134489,
-      "tp1": 0.567,
-      "zoneLow": 0.5704,
-      "zoneHigh": 0.5721,
-      "signalCandleTime": 1794611400000,
-      "rr1": 0.9153736789465662,
-      "highs": null,
-      "lows": [
-        0.5687,
-        0.5703
-      ],
-      "sentAt": "2026-11-13T23:18:17.755Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T00:20:20.946Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.567
-    },
     {
       "symbol": "CRCLSTOCKUSDT",
       "timeframe": "5m",
@@ -1438,7 +1412,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:41:10.234Z",
+      "statusUpdatedAt": "2026-11-17T18:46:14.373Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5077,7 +5051,7 @@
       "sentAt": "2026-11-17T16:18:08.292Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:41:10.234Z",
+      "statusUpdatedAt": "2026-11-17T18:46:14.373Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5102,7 +5076,7 @@
       "sentAt": "2026-11-17T16:33:07.522Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:41:10.234Z",
+      "statusUpdatedAt": "2026-11-17T18:46:14.373Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5127,7 +5101,7 @@
       "sentAt": "2026-11-17T16:33:11.106Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:41:10.234Z",
+      "statusUpdatedAt": "2026-11-17T18:46:14.373Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5178,7 +5152,7 @@
       "sentAt": "2026-11-17T16:33:18.012Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:41:10.234Z",
+      "statusUpdatedAt": "2026-11-17T18:46:14.373Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5229,7 +5203,32 @@
       "sentAt": "2026-11-17T18:18:18.404Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-17T18:41:10.234Z",
+      "statusUpdatedAt": "2026-11-17T18:46:14.373Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "TRXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.30722,
+      "stop": 0.3084772969673002,
+      "tp1": 0.30502,
+      "zoneLow": 0.30678,
+      "zoneHigh": 0.30766,
+      "signalCandleTime": 1794940200000,
+      "rr1": 1.7497854979512477,
+      "highs": null,
+      "lows": [
+        0.30501,
+        0.3069
+      ],
+      "sentAt": "2026-11-17T18:48:11.509Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-17T18:48:11.509Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7175,6 +7174,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-17T18:18:18.404Z"
+    },
+    "TRXUSDT:15m:2026-11-17T18:48:11.509Z": {
+      "symbol": "TRXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-17T18:48:11.509Z"
     }
   }
 }

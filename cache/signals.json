@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T12:43:21.596Z",
+  "lastUpdated": "2026-11-18T12:48:41.625Z",
   "signals": {
     "INTCSTOCKUSDT:15m": {
       "sentAt": "2026-11-18T07:48:23.031Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 38.12,
       "stop": 38.70276779546622
+    },
+    "POPCATUSDT:15m": {
+      "sentAt": "2026-11-18T12:48:40.123Z",
+      "symbol": "POPCATUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.02787,
+      "stop": 0.028136246674138013
     }
   }
 }

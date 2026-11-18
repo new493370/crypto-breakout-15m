@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T12:13:10.090Z",
+  "lastUpdated": "2026-11-18T12:18:40.336Z",
   "signals": {
-    "AEROUSDT:15m": {
-      "sentAt": "2026-11-18T06:18:22.144Z",
-      "symbol": "AEROUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.4384,
-      "stop": 0.4339788282973297
-    },
-    "FILECOINUSDT:15m": {
-      "sentAt": "2026-11-18T06:18:25.889Z",
-      "symbol": "FILECOINUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.5961,
-      "stop": 0.5889542775819765
-    },
-    "ORDIUSDT:15m": {
-      "sentAt": "2026-11-18T06:18:29.343Z",
-      "symbol": "ORDIUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 2.7545,
-      "stop": 2.7280983385548483
-    },
     "INTCSTOCKUSDT:15m": {
       "sentAt": "2026-11-18T07:48:23.031Z",
       "symbol": "INTCSTOCKUSDT",
@@ -126,6 +99,33 @@
       "score": null,
       "entry": 0.03962,
       "stop": 0.039997697427687315
+    },
+    "SLXUSDT:15m": {
+      "sentAt": "2026-11-18T12:18:31.641Z",
+      "symbol": "SLXUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.032175,
+      "stop": 0.031414809716336284
+    },
+    "TIAUSDT:15m": {
+      "sentAt": "2026-11-18T12:18:35.105Z",
+      "symbol": "TIAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.3502,
+      "stop": 0.3465613205488714
+    },
+    "AXTISTOCKUSDT:15m": {
+      "sentAt": "2026-11-18T12:18:38.834Z",
+      "symbol": "AXTISTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 38.12,
+      "stop": 38.70276779546622
     }
   }
 }

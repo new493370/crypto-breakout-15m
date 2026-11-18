@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T22:52:43.894Z",
+  "lastUpdated": "2026-11-18T23:06:45.163Z",
   "signals": {
-    "CAPUSDT:15m": {
-      "sentAt": "2026-11-18T17:03:07.988Z",
-      "symbol": "CAPUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.10133,
-      "stop": 0.10342170382214892
-    },
     "UPUSDT:15m": {
       "sentAt": "2026-11-18T17:18:21.887Z",
       "symbol": "UPUSDT",
@@ -153,6 +144,15 @@
       "score": null,
       "entry": 0.07234,
       "stop": 0.07311396675298407
+    },
+    "COFSTOCKUSDT:15m": {
+      "sentAt": "2026-11-18T23:06:43.661Z",
+      "symbol": "COFSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 184.055,
+      "stop": 182.45397133418916
     }
   }
 }

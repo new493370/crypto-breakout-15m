@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T22:52:43.895Z",
+  "lastUpdated": "2026-11-18T23:06:45.164Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 119,
+    "tp1Hit": 122,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 65,
-    "active": 16,
-    "tp1Rate": 64.7,
+    "stopped": 66,
+    "active": 12,
+    "tp1Rate": 64.9,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 35.3
+    "stopRate": 35.1
   },
   "byTimeframe": {
     "15m": {
@@ -24,49 +24,23 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 105,
+      "total": 106,
       "tp1Hit": 61,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 37,
-      "tp1Rate": 62.2
+      "stopped": 38,
+      "tp1Rate": 61.6
     },
     "bearish": {
-      "total": 95,
-      "tp1Hit": 58,
+      "total": 94,
+      "tp1Hit": 61,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 28,
-      "tp1Rate": 67.4
+      "tp1Rate": 68.5
     }
   },
   "recentSignals": [
-    {
-      "symbol": "DOTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.7221500000000001,
-      "stop": 0.7300912221347832,
-      "tp1": 0.7149,
-      "zoneLow": 0.7207,
-      "zoneHigh": 0.7236,
-      "signalCandleTime": 1794715200000,
-      "rr1": 0.9129577131767402,
-      "highs": null,
-      "lows": [
-        0.7126,
-        0.7193
-      ],
-      "sentAt": "2026-11-15T04:06:17.953Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-15T04:40:23.447Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.7149
-    },
     {
       "symbol": "IOTAUSDT",
       "timeframe": "5m",
@@ -4480,7 +4454,7 @@
       "sentAt": "2026-11-18T12:18:31.641Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:26.694Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4739,7 +4713,7 @@
       "sentAt": "2026-11-18T16:03:23.899Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:26.694Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4764,7 +4738,7 @@
       "sentAt": "2026-11-18T16:48:12.074Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:26.694Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4789,7 +4763,7 @@
       "sentAt": "2026-11-18T16:48:15.609Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:26.694Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4866,7 +4840,7 @@
       "sentAt": "2026-11-18T17:33:12.275Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:26.694Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4889,13 +4863,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-18T20:03:06.463Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:30.469Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.016416122823694587
     },
     {
       "symbol": "DATAUSDT",
@@ -4914,13 +4889,14 @@
         0.08881
       ],
       "sentAt": "2026-11-18T20:33:23.452Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:32.159Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.08787000000000003
     },
     {
       "symbol": "MEUSDT",
@@ -4941,7 +4917,7 @@
       "sentAt": "2026-11-18T20:33:26.958Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:32.159Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4964,13 +4940,14 @@
         1.394
       ],
       "sentAt": "2026-11-18T21:18:13.395Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:45:57.440Z",
+      "statusUpdatedAt": "2026-11-18T23:00:33.841Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 1.3739999999999997
     },
     {
       "symbol": "JTOUSDT",
@@ -5015,13 +4992,14 @@
         0.4274
       ],
       "sentAt": "2026-11-18T21:42:13.673Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:46:01.015Z",
+      "statusUpdatedAt": "2026-11-18T23:00:35.508Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.42119999999999996
     },
     {
       "symbol": "POLYMARKETSTOCKUSDT",
@@ -5068,7 +5046,7 @@
       "sentAt": "2026-11-18T21:42:20.766Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:46:01.015Z",
+      "statusUpdatedAt": "2026-11-18T23:00:35.508Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5119,7 +5097,7 @@
       "sentAt": "2026-11-18T21:57:06.524Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:46:01.015Z",
+      "statusUpdatedAt": "2026-11-18T23:00:35.508Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5142,13 +5120,14 @@
         0.03115
       ],
       "sentAt": "2026-11-18T22:24:39.944Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:46:01.015Z",
+      "statusUpdatedAt": "2026-11-18T23:00:37.172Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.030780000000000002
     },
     {
       "symbol": "CIENSTOCKUSDT",
@@ -5169,7 +5148,7 @@
       "sentAt": "2026-11-18T22:24:43.672Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:46:01.015Z",
+      "statusUpdatedAt": "2026-11-18T23:00:37.172Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5194,7 +5173,7 @@
       "sentAt": "2026-11-18T22:38:44.925Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:46:01.015Z",
+      "statusUpdatedAt": "2026-11-18T23:00:37.173Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5219,7 +5198,32 @@
       "sentAt": "2026-11-18T22:52:42.391Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T22:52:42.391Z",
+      "statusUpdatedAt": "2026-11-18T23:00:37.173Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "COFSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 184.055,
+      "stop": 182.45397133418916,
+      "tp1": 185.68,
+      "zoneLow": 183.73,
+      "zoneHigh": 184.38,
+      "signalCandleTime": 1795041900000,
+      "rr1": 1.0149724578335488,
+      "highs": [
+        188.9,
+        185.83
+      ],
+      "lows": null,
+      "sentAt": "2026-11-18T23:06:43.661Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T23:06:43.661Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7655,6 +7659,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-18T22:52:42.391Z"
+    },
+    "COFSTOCKUSDT:15m:2026-11-18T23:06:43.661Z": {
+      "symbol": "COFSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-18T23:06:43.661Z"
     }
   }
 }

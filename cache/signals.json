@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T13:48:29.424Z",
+  "lastUpdated": "2026-11-18T13:53:12.738Z",
   "signals": {
-    "NAS100USDT:15m": {
-      "sentAt": "2026-11-18T07:48:30.726Z",
-      "symbol": "NAS100USDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 27157,
-      "stop": 27032.586186343648
-    },
-    "GRTUSDT:15m": {
-      "sentAt": "2026-11-18T07:48:34.181Z",
-      "symbol": "GRTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.017395,
-      "stop": 0.017228502046060894
-    },
-    "QQQSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T07:48:37.857Z",
-      "symbol": "QQQSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 661.73,
-      "stop": 658.8719540788004
-    },
     "POLUSDT:15m": {
       "sentAt": "2026-11-18T08:33:28.112Z",
       "symbol": "POLUSDT",

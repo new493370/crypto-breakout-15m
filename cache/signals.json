@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T00:18:07.870Z",
+  "lastUpdated": "2026-11-18T00:23:13.708Z",
   "signals": {
-    "ZHIPUSTOCKUSDT:15m": {
-      "sentAt": "2026-11-17T18:18:18.405Z",
-      "symbol": "ZHIPUSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 43.295,
-      "stop": 43.77068755709113
-    },
     "TRXUSDT:15m": {
       "sentAt": "2026-11-17T18:48:11.509Z",
       "symbol": "TRXUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T17:13:03.723Z",
+  "lastUpdated": "2026-11-18T17:18:23.389Z",
   "signals": {
     "SLXUSDT:15m": {
       "sentAt": "2026-11-18T12:18:31.641Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 0.10133,
       "stop": 0.10342170382214892
+    },
+    "UPUSDT:15m": {
+      "sentAt": "2026-11-18T17:18:21.887Z",
+      "symbol": "UPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.19440000000000002,
+      "stop": 0.18574113108702595
     }
   }
 }

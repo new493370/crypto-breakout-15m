@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T17:13:03.724Z",
+  "lastUpdated": "2026-11-18T17:18:23.390Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 125,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 70,
-    "active": 5,
-    "tp1Rate": 64.1,
+    "stopped": 69,
+    "active": 6,
+    "tp1Rate": 64.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 35.9
+    "stopRate": 35.6
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 100,
+      "total": 101,
       "tp1Hit": 61,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,41 +32,15 @@
       "tp1Rate": 62.2
     },
     "bearish": {
-      "total": 100,
+      "total": 99,
       "tp1Hit": 64,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 33,
-      "tp1Rate": 66
+      "stopped": 32,
+      "tp1Rate": 66.7
     }
   },
   "recentSignals": [
-    {
-      "symbol": "UKOILUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 92.84,
-      "stop": 93.1103743439191,
-      "tp1": 92.44000000000001,
-      "zoneLow": 92.76,
-      "zoneHigh": 92.92,
-      "signalCandleTime": 1794693000000,
-      "rr1": 1.4794303120701242,
-      "highs": null,
-      "lows": [
-        92.73,
-        92.81
-      ],
-      "sentAt": "2026-11-14T21:58:09.179Z",
-      "status": "stopped",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T23:36:20.257Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": true,
-      "exitPrice": 93.1103743439191
-    },
     {
       "symbol": "WLFIUSDT",
       "timeframe": "5m",
@@ -4896,7 +4870,7 @@
       "sentAt": "2026-11-18T12:18:31.641Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T17:11:09.751Z",
+      "statusUpdatedAt": "2026-11-18T17:16:08.773Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5155,7 +5129,7 @@
       "sentAt": "2026-11-18T16:03:23.899Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T17:11:09.752Z",
+      "statusUpdatedAt": "2026-11-18T17:16:08.773Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5180,7 +5154,7 @@
       "sentAt": "2026-11-18T16:48:12.074Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T17:11:09.752Z",
+      "statusUpdatedAt": "2026-11-18T17:16:08.773Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5205,7 +5179,7 @@
       "sentAt": "2026-11-18T16:48:15.609Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T17:11:09.752Z",
+      "statusUpdatedAt": "2026-11-18T17:16:08.773Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5230,7 +5204,32 @@
       "sentAt": "2026-11-18T17:03:07.988Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T17:11:09.752Z",
+      "statusUpdatedAt": "2026-11-18T17:16:08.773Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "UPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.19440000000000002,
+      "stop": 0.18574113108702595,
+      "tp1": 0.20090000000000005,
+      "zoneLow": 0.1931,
+      "zoneHigh": 0.1957,
+      "signalCandleTime": 1795021200000,
+      "rr1": 0.7506754133049315,
+      "highs": [
+        0.229,
+        0.2134
+      ],
+      "lows": null,
+      "sentAt": "2026-11-18T17:18:21.886Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T17:18:21.886Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7554,6 +7553,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-18T17:03:07.988Z"
+    },
+    "UPUSDT:15m:2026-11-18T17:18:21.886Z": {
+      "symbol": "UPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-18T17:18:21.886Z"
     }
   }
 }

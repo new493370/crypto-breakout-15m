@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T01:58:07.436Z",
+  "lastUpdated": "2026-11-18T02:03:29.074Z",
   "signals": {
     "MEWUSDT:15m": {
       "sentAt": "2026-11-17T21:03:17.937Z",
@@ -162,6 +162,24 @@
       "score": null,
       "entry": 2.3040000000000003,
       "stop": 2.341792835102657
+    },
+    "GMTUSDT:15m": {
+      "sentAt": "2026-11-18T02:03:24.065Z",
+      "symbol": "GMTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0056175,
+      "stop": 0.005671426685625873
+    },
+    "BIGTIMEUSDT:15m": {
+      "sentAt": "2026-11-18T02:03:27.572Z",
+      "symbol": "BIGTIMEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0044095,
+      "stop": 0.004457993203875782
     }
   }
 }

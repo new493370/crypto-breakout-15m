@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T21:03:16.717Z",
+  "lastUpdated": "2026-11-18T21:08:15.395Z",
   "signals": {
-    "MASKUSDT:15m": {
-      "sentAt": "2026-11-18T15:03:19.948Z",
-      "symbol": "MASKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.29025,
-      "stop": 0.28717077024577153
-    },
     "AIXBTUSDT:15m": {
       "sentAt": "2026-11-18T16:03:19.762Z",
       "symbol": "AIXBTUSDT",

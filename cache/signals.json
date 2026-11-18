@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T17:28:01.576Z",
+  "lastUpdated": "2026-11-18T17:33:13.775Z",
   "signals": {
     "SLXUSDT:15m": {
       "sentAt": "2026-11-18T12:18:31.641Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.19440000000000002,
       "stop": 0.18574113108702595
+    },
+    "ZKPUSDT:15m": {
+      "sentAt": "2026-11-18T17:33:12.275Z",
+      "symbol": "ZKPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.03347,
+      "stop": 0.032136294032420215
     }
   }
 }

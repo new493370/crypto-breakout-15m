@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T20:58:20.409Z",
+  "lastUpdated": "2026-11-18T21:03:16.717Z",
   "signals": {
-    "MEMEUSDT:15m": {
-      "sentAt": "2026-11-18T15:03:16.463Z",
-      "symbol": "MEMEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.000319,
-      "stop": 0.0003155281446782832
-    },
     "MASKUSDT:15m": {
       "sentAt": "2026-11-18T15:03:19.948Z",
       "symbol": "MASKUSDT",

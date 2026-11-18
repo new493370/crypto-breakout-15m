@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T08:13:17.943Z",
+  "lastUpdated": "2026-11-18T08:18:27.887Z",
   "signals": {
-    "INITUSDT:15m": {
-      "sentAt": "2026-11-18T02:18:12.761Z",
-      "symbol": "INITUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.10026499999999999,
-      "stop": 0.10250282165345165
-    },
     "MERLUSDT:15m": {
       "sentAt": "2026-11-18T04:03:23.683Z",
       "symbol": "MERLUSDT",

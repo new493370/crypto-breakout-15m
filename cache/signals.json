@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T03:58:03.617Z",
+  "lastUpdated": "2026-11-18T04:03:25.185Z",
   "signals": {
     "TURBOUSDT:15m": {
       "sentAt": "2026-11-17T22:18:22.382Z",
@@ -99,6 +99,15 @@
       "score": null,
       "entry": 0.10026499999999999,
       "stop": 0.10250282165345165
+    },
+    "MERLUSDT:15m": {
+      "sentAt": "2026-11-18T04:03:23.683Z",
+      "symbol": "MERLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.027795,
+      "stop": 0.027314007686708417
     }
   }
 }

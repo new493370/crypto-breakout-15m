@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T03:58:03.618Z",
+  "lastUpdated": "2026-11-18T04:03:25.186Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 129,
+    "tp1Hit": 128,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 65,
-    "active": 6,
-    "tp1Rate": 66.5,
+    "active": 7,
+    "tp1Rate": 66.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33.5
+    "stopRate": 33.7
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 90,
+      "total": 91,
       "tp1Hit": 50,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,41 +32,15 @@
       "tp1Rate": 58.1
     },
     "bearish": {
-      "total": 110,
-      "tp1Hit": 79,
+      "total": 109,
+      "tp1Hit": 78,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 29,
-      "tp1Rate": 73.1
+      "tp1Rate": 72.9
     }
   },
   "recentSignals": [
-    {
-      "symbol": "ONTUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.039935,
-      "stop": 0.04010181641433889,
-      "tp1": 0.03985999999999999,
-      "zoneLow": 0.03992,
-      "zoneHigh": 0.03995,
-      "signalCandleTime": 1794645000000,
-      "rr1": 0.44959604423364546,
-      "highs": null,
-      "lows": [
-        0.03963,
-        0.03979
-      ],
-      "sentAt": "2026-11-14T08:38:17.086Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T08:40:22.020Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.03985999999999999
-    },
     {
       "symbol": "CFXUSDT",
       "timeframe": "5m",
@@ -866,7 +840,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T03:56:10.202Z",
+      "statusUpdatedAt": "2026-11-18T04:01:10.064Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4687,7 +4661,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T03:56:10.202Z",
+      "statusUpdatedAt": "2026-11-18T04:01:10.064Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4738,7 +4712,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T03:56:10.202Z",
+      "statusUpdatedAt": "2026-11-18T04:01:10.064Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4945,7 +4919,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T03:56:10.202Z",
+      "statusUpdatedAt": "2026-11-18T04:01:10.064Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4996,7 +4970,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T03:56:10.202Z",
+      "statusUpdatedAt": "2026-11-18T04:01:10.064Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5229,7 +5203,32 @@
       "sentAt": "2026-11-18T02:18:12.761Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T03:56:10.202Z",
+      "statusUpdatedAt": "2026-11-18T04:01:10.064Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "MERLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.027795,
+      "stop": 0.027314007686708417,
+      "tp1": 0.028370000000000003,
+      "zoneLow": 0.02768,
+      "zoneHigh": 0.02791,
+      "signalCandleTime": 1794969900000,
+      "rr1": 1.1954452994583114,
+      "highs": [
+        0.02977,
+        0.02827
+      ],
+      "lows": null,
+      "sentAt": "2026-11-18T04:03:23.683Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T04:03:23.683Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7329,6 +7328,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-18T02:18:12.761Z"
+    },
+    "MERLUSDT:15m:2026-11-18T04:03:23.683Z": {
+      "symbol": "MERLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-18T04:03:23.683Z"
     }
   }
 }

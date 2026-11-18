@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T22:24:45.173Z",
+  "lastUpdated": "2026-11-18T22:38:46.426Z",
   "signals": {
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-18T16:48:12.074Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 264.975,
       "stop": 261.5119066494958
+    },
+    "TRUTHUSDT:15m": {
+      "sentAt": "2026-11-18T22:38:44.925Z",
+      "symbol": "TRUTHUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.014341,
+      "stop": 0.014128348187887834
     }
   }
 }

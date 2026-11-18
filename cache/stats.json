@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T04:28:01.650Z",
+  "lastUpdated": "2026-11-18T04:33:24.147Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 129,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 65,
-    "active": 6,
-    "tp1Rate": 66.5,
+    "stopped": 66,
+    "active": 5,
+    "tp1Rate": 66.2,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33.5
+    "stopRate": 33.8
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 78,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 29,
-      "tp1Rate": 72.9
+      "stopped": 30,
+      "tp1Rate": 72.2
     }
   },
   "recentSignals": [
@@ -840,7 +840,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T04:26:08.795Z",
+      "statusUpdatedAt": "2026-11-18T04:31:12.763Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4661,7 +4661,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T04:26:08.795Z",
+      "statusUpdatedAt": "2026-11-18T04:31:12.763Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4712,7 +4712,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T04:26:08.795Z",
+      "statusUpdatedAt": "2026-11-18T04:31:12.763Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4919,7 +4919,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T04:26:08.795Z",
+      "statusUpdatedAt": "2026-11-18T04:31:12.763Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4970,7 +4970,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T04:26:08.795Z",
+      "statusUpdatedAt": "2026-11-18T04:31:12.763Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5201,13 +5201,14 @@
         0.09917
       ],
       "sentAt": "2026-11-18T02:18:12.761Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T04:26:08.795Z",
+      "statusUpdatedAt": "2026-11-18T04:31:16.232Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.10250282165345165
     },
     {
       "symbol": "MERLUSDT",

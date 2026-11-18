@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T13:43:09.614Z",
+  "lastUpdated": "2026-11-18T13:48:29.424Z",
   "signals": {
-    "INTCSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T07:48:23.031Z",
-      "symbol": "INTCSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 55.94,
-      "stop": 55.32500990080509
-    },
-    "TSMSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T07:48:27.090Z",
-      "symbol": "TSMSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 372.07000000000005,
-      "stop": 368.3657485962369
-    },
     "NAS100USDT:15m": {
       "sentAt": "2026-11-18T07:48:30.726Z",
       "symbol": "NAS100USDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T00:48:09.684Z",
+  "lastUpdated": "2026-11-18T00:53:17.724Z",
   "signals": {
-    "TRXUSDT:15m": {
-      "sentAt": "2026-11-17T18:48:11.509Z",
-      "symbol": "TRXUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.30722,
-      "stop": 0.3084772969673002
-    },
     "MEWUSDT:15m": {
       "sentAt": "2026-11-17T21:03:17.937Z",
       "symbol": "MEWUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T21:42:22.267Z",
+  "lastUpdated": "2026-11-18T21:57:08.025Z",
   "signals": {
     "AIXBTUSDT:15m": {
       "sentAt": "2026-11-18T16:03:19.762Z",
@@ -135,6 +135,24 @@
       "score": null,
       "entry": 0.007135000000000001,
       "stop": 0.00699335705130376
+    },
+    "TIAUSDT:15m": {
+      "sentAt": "2026-11-18T21:57:02.736Z",
+      "symbol": "TIAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.34635000000000005,
+      "stop": 0.3504375070687127
+    },
+    "UALSTOCKUSDT:15m": {
+      "sentAt": "2026-11-18T21:57:06.524Z",
+      "symbol": "UALSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 108.27000000000001,
+      "stop": 109.44079272812185
     }
   }
 }

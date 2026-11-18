@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T09:58:10.782Z",
+  "lastUpdated": "2026-11-18T10:03:25.380Z",
   "signals": {
-    "MERLUSDT:15m": {
-      "sentAt": "2026-11-18T04:03:23.683Z",
-      "symbol": "MERLUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.027795,
-      "stop": 0.027314007686708417
-    },
     "DNAUSDT:15m": {
       "sentAt": "2026-11-18T05:33:09.609Z",
       "symbol": "DNAUSDT",
@@ -117,6 +108,24 @@
       "score": null,
       "entry": 0.08162,
       "stop": 0.08080056404346045
+    },
+    "AXISUSDT:15m": {
+      "sentAt": "2026-11-18T10:03:20.388Z",
+      "symbol": "AXISUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.09565,
+      "stop": 0.10019888217251295
+    },
+    "INJUSDT:15m": {
+      "sentAt": "2026-11-18T10:03:23.878Z",
+      "symbol": "INJUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 7.3355,
+      "stop": 7.4455875888849485
     }
   }
 }

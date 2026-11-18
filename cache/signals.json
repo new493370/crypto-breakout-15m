@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T21:33:32.340Z",
+  "lastUpdated": "2026-11-18T21:42:22.267Z",
   "signals": {
     "AIXBTUSDT:15m": {
       "sentAt": "2026-11-18T16:03:19.762Z",
@@ -99,6 +99,42 @@
       "score": null,
       "entry": 1.3965,
       "stop": 1.4144099134060126
+    },
+    "JTOUSDT:15m": {
+      "sentAt": "2026-11-18T21:42:10.309Z",
+      "symbol": "JTOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.25655,
+      "stop": 0.26033060927195356
+    },
+    "VIRTUALUSDT:15m": {
+      "sentAt": "2026-11-18T21:42:13.673Z",
+      "symbol": "VIRTUALUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.42845,
+      "stop": 0.43389240746905106
+    },
+    "POLYMARKETSTOCKUSDT:15m": {
+      "sentAt": "2026-11-18T21:42:17.180Z",
+      "symbol": "POLYMARKETSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 23.880000000000003,
+      "stop": 24.011213972744855
+    },
+    "WOTAMALAILEUSDT:15m": {
+      "sentAt": "2026-11-18T21:42:20.766Z",
+      "symbol": "WOTAMALAILEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.007135000000000001,
+      "stop": 0.00699335705130376
     }
   }
 }

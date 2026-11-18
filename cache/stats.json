@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T02:13:09.201Z",
+  "lastUpdated": "2026-11-18T02:18:14.264Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 128,
@@ -41,32 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "INTCSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 58.644999999999996,
-      "stop": 58.772944815948314,
-      "tp1": 58.47,
-      "zoneLow": 58.61,
-      "zoneHigh": 58.68,
-      "signalCandleTime": 1794641400000,
-      "rr1": 1.3677771834904706,
-      "highs": null,
-      "lows": [
-        58.64,
-        58.66
-      ],
-      "sentAt": "2026-11-14T07:38:17.281Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:28:20.800Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 58.47
-    },
     {
       "symbol": "ONTUSDT",
       "timeframe": "5m",
@@ -892,7 +866,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T02:11:10.208Z",
+      "statusUpdatedAt": "2026-11-18T02:16:15.776Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4713,7 +4687,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T02:11:10.208Z",
+      "statusUpdatedAt": "2026-11-18T02:16:15.777Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4764,7 +4738,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T02:11:10.208Z",
+      "statusUpdatedAt": "2026-11-18T02:16:15.777Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4971,7 +4945,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T02:11:10.208Z",
+      "statusUpdatedAt": "2026-11-18T02:16:15.777Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5022,7 +4996,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T02:11:10.208Z",
+      "statusUpdatedAt": "2026-11-18T02:16:15.777Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5149,13 +5123,14 @@
         0.002102
       ],
       "sentAt": "2026-11-18T01:48:19.210Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T02:11:10.208Z",
+      "statusUpdatedAt": "2026-11-18T02:16:19.616Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.002113999999999999
     },
     {
       "symbol": "ICPUSDT",
@@ -5176,7 +5151,7 @@
       "sentAt": "2026-11-18T01:48:26.675Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T02:11:10.208Z",
+      "statusUpdatedAt": "2026-11-18T02:16:19.616Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5233,6 +5208,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.004347
+    },
+    {
+      "symbol": "INITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.10026499999999999,
+      "stop": 0.10250282165345165,
+      "tp1": 0.09708999999999998,
+      "zoneLow": 0.09963,
+      "zoneHigh": 0.1009,
+      "signalCandleTime": 1794967200000,
+      "rr1": 1.4187904541467082,
+      "highs": null,
+      "lows": [
+        0.0949,
+        0.09917
+      ],
+      "sentAt": "2026-11-18T02:18:12.761Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T02:18:12.761Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -7321,6 +7321,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-18T02:03:27.571Z"
+    },
+    "INITUSDT:15m:2026-11-18T02:18:12.761Z": {
+      "symbol": "INITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-18T02:18:12.761Z"
     }
   }
 }

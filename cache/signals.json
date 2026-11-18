@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T08:28:17.692Z",
+  "lastUpdated": "2026-11-18T08:33:29.613Z",
   "signals": {
     "MERLUSDT:15m": {
       "sentAt": "2026-11-18T04:03:23.683Z",
@@ -108,6 +108,15 @@
       "score": null,
       "entry": 661.73,
       "stop": 658.8719540788004
+    },
+    "POLUSDT:15m": {
+      "sentAt": "2026-11-18T08:33:28.112Z",
+      "symbol": "POLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.08162,
+      "stop": 0.08080056404346045
     }
   }
 }

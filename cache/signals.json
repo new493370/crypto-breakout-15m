@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T18:18:19.122Z",
+  "lastUpdated": "2026-11-18T18:23:05.565Z",
   "signals": {
-    "SLXUSDT:15m": {
-      "sentAt": "2026-11-18T12:18:31.641Z",
-      "symbol": "SLXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.032175,
-      "stop": 0.031414809716336284
-    },
-    "TIAUSDT:15m": {
-      "sentAt": "2026-11-18T12:18:35.105Z",
-      "symbol": "TIAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.3502,
-      "stop": 0.3465613205488714
-    },
-    "AXTISTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T12:18:38.834Z",
-      "symbol": "AXTISTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 38.12,
-      "stop": 38.70276779546622
-    },
     "POPCATUSDT:15m": {
       "sentAt": "2026-11-18T12:48:40.123Z",
       "symbol": "POPCATUSDT",

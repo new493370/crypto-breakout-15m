@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T23:20:32.724Z",
+  "lastUpdated": "2026-11-18T23:34:25.598Z",
   "signals": {
-    "ZKPUSDT:15m": {
-      "sentAt": "2026-11-18T17:33:12.275Z",
-      "symbol": "ZKPUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.03347,
-      "stop": 0.032136294032420215
-    },
     "XDPUSDT:15m": {
       "sentAt": "2026-11-18T20:03:06.463Z",
       "symbol": "XDPUSDT",

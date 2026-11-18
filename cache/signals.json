@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T07:43:09.129Z",
+  "lastUpdated": "2026-11-18T07:48:39.359Z",
   "signals": {
-    "ANIMEUSDT:15m": {
-      "sentAt": "2026-11-18T01:48:19.210Z",
-      "symbol": "ANIMEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.002129,
-      "stop": 0.0021510357685745655
-    },
-    "ICPUSDT:15m": {
-      "sentAt": "2026-11-18T01:48:26.675Z",
-      "symbol": "ICPUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 2.3040000000000003,
-      "stop": 2.341792835102657
-    },
     "GMTUSDT:15m": {
       "sentAt": "2026-11-18T02:03:24.065Z",
       "symbol": "GMTUSDT",
@@ -108,6 +90,51 @@
       "score": null,
       "entry": 2.7545,
       "stop": 2.7280983385548483
+    },
+    "INTCSTOCKUSDT:15m": {
+      "sentAt": "2026-11-18T07:48:23.031Z",
+      "symbol": "INTCSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 55.94,
+      "stop": 55.32500990080509
+    },
+    "TSMSTOCKUSDT:15m": {
+      "sentAt": "2026-11-18T07:48:27.090Z",
+      "symbol": "TSMSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 372.07000000000005,
+      "stop": 368.3657485962369
+    },
+    "NAS100USDT:15m": {
+      "sentAt": "2026-11-18T07:48:30.726Z",
+      "symbol": "NAS100USDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 27157,
+      "stop": 27032.586186343648
+    },
+    "GRTUSDT:15m": {
+      "sentAt": "2026-11-18T07:48:34.181Z",
+      "symbol": "GRTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.017395,
+      "stop": 0.017228502046060894
+    },
+    "QQQSTOCKUSDT:15m": {
+      "sentAt": "2026-11-18T07:48:37.857Z",
+      "symbol": "QQQSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 661.73,
+      "stop": 658.8719540788004
     }
   }
 }

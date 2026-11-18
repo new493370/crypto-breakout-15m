@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T21:57:08.025Z",
+  "lastUpdated": "2026-11-18T22:10:38.898Z",
   "signals": {
-    "AIXBTUSDT:15m": {
-      "sentAt": "2026-11-18T16:03:19.762Z",
-      "symbol": "AIXBTUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.013185,
-      "stop": 0.013342959229299905
-    },
-    "AVGOSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T16:03:23.899Z",
-      "symbol": "AVGOSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 350.24,
-      "stop": 343.87031255283324
-    },
     "BRETTUSDT:15m": {
       "sentAt": "2026-11-18T16:48:12.074Z",
       "symbol": "BRETTUSDT",

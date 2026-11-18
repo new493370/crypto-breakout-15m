@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T00:13:08.782Z",
+  "lastUpdated": "2026-11-18T00:18:07.871Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 130,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 64,
-    "active": 6,
-    "tp1Rate": 67,
+    "stopped": 65,
+    "active": 5,
+    "tp1Rate": 66.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33
+    "stopRate": 33.3
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 78,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 28,
-      "tp1Rate": 73.6
+      "stopped": 29,
+      "tp1Rate": 72.9
     }
   },
   "recentSignals": [
@@ -1022,7 +1022,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T00:11:16.935Z",
+      "statusUpdatedAt": "2026-11-18T00:16:11.086Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4843,7 +4843,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T00:11:16.935Z",
+      "statusUpdatedAt": "2026-11-18T00:16:11.086Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4894,7 +4894,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T00:11:16.935Z",
+      "statusUpdatedAt": "2026-11-18T00:16:11.086Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5101,7 +5101,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T00:11:16.935Z",
+      "statusUpdatedAt": "2026-11-18T00:16:11.086Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5152,7 +5152,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T00:11:16.935Z",
+      "statusUpdatedAt": "2026-11-18T00:16:11.086Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5227,13 +5227,14 @@
         205.94
       ],
       "sentAt": "2026-11-17T22:33:11.927Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T00:11:16.935Z",
+      "statusUpdatedAt": "2026-11-18T00:16:14.860Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 209.750310595293
     }
   ],
   "processedSignals": {

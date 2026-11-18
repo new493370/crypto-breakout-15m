@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T21:13:17.762Z",
+  "lastUpdated": "2026-11-18T21:18:14.896Z",
   "signals": {
     "AIXBTUSDT:15m": {
       "sentAt": "2026-11-18T16:03:19.762Z",
@@ -90,6 +90,15 @@
       "score": null,
       "entry": 0.038775000000000004,
       "stop": 0.03935486237117775
+    },
+    "RENDERUSDT:15m": {
+      "sentAt": "2026-11-18T21:18:13.395Z",
+      "symbol": "RENDERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 1.3965,
+      "stop": 1.4144099134060126
     }
   }
 }

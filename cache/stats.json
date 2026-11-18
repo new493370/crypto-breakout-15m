@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T05:28:11.053Z",
+  "lastUpdated": "2026-11-18T05:33:11.112Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 129,
+    "tp1Hit": 128,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 66,
-    "active": 5,
-    "tp1Rate": 66.2,
+    "active": 6,
+    "tp1Rate": 66,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33.8
+    "stopRate": 34
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 91,
+      "total": 92,
       "tp1Hit": 51,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,41 +32,15 @@
       "tp1Rate": 58.6
     },
     "bearish": {
-      "total": 109,
-      "tp1Hit": 78,
+      "total": 108,
+      "tp1Hit": 77,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 30,
-      "tp1Rate": 72.2
+      "tp1Rate": 72
     }
   },
   "recentSignals": [
-    {
-      "symbol": "CFXUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.038865,
-      "stop": 0.03908206692426689,
-      "tp1": 0.03864,
-      "zoneLow": 0.03882,
-      "zoneHigh": 0.03891,
-      "signalCandleTime": 1794645900000,
-      "rr1": 1.0365466814434976,
-      "highs": null,
-      "lows": [
-        0.03851,
-        0.03879
-      ],
-      "sentAt": "2026-11-14T08:54:08.584Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:20:22.377Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.03864
-    },
     {
       "symbol": "TSMSTOCKUSDT",
       "timeframe": "5m",
@@ -840,7 +814,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:26:13.643Z",
+      "statusUpdatedAt": "2026-11-18T05:31:09.824Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4661,7 +4635,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:26:13.643Z",
+      "statusUpdatedAt": "2026-11-18T05:31:09.824Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4712,7 +4686,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:26:13.643Z",
+      "statusUpdatedAt": "2026-11-18T05:31:09.824Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4919,7 +4893,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:26:13.643Z",
+      "statusUpdatedAt": "2026-11-18T05:31:09.824Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4970,7 +4944,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:26:13.643Z",
+      "statusUpdatedAt": "2026-11-18T05:31:09.824Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5235,6 +5209,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.028370000000000003
+    },
+    {
+      "symbol": "DNAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.16415000000000002,
+      "stop": 0.16111054326578925,
+      "tp1": 0.16590000000000002,
+      "zoneLow": 0.1638,
+      "zoneHigh": 0.1645,
+      "signalCandleTime": 1794978900000,
+      "rr1": 0.5757607865585915,
+      "highs": [
+        0.1686,
+        0.166
+      ],
+      "lows": null,
+      "sentAt": "2026-11-18T05:33:09.608Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T05:33:09.608Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -7337,6 +7336,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-18T04:03:23.683Z"
+    },
+    "DNAUSDT:15m:2026-11-18T05:33:09.608Z": {
+      "symbol": "DNAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-18T05:33:09.608Z"
     }
   }
 }

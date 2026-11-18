@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T01:43:12.352Z",
+  "lastUpdated": "2026-11-18T01:48:28.178Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 129,
+    "tp1Hit": 127,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 65,
-    "active": 6,
-    "tp1Rate": 66.5,
+    "active": 8,
+    "tp1Rate": 66.1,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 33.5
+    "stopRate": 33.9
   },
   "byTimeframe": {
     "15m": {
@@ -24,15 +24,15 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 92,
-      "tp1Hit": 52,
+      "total": 90,
+      "tp1Hit": 50,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 36,
-      "tp1Rate": 59.1
+      "tp1Rate": 58.1
     },
     "bearish": {
-      "total": 108,
+      "total": 110,
       "tp1Hit": 77,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -41,58 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "RIVERUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.72915,
-      "stop": 0.7204000370842909,
-      "tp1": 0.7384000000000001,
-      "zoneLow": 0.7273,
-      "zoneHigh": 0.731,
-      "signalCandleTime": 1794631800000,
-      "rr1": 1.0571473375496594,
-      "highs": [
-        0.7447,
-        0.7323
-      ],
-      "lows": null,
-      "sentAt": "2026-11-14T04:58:27.208Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:00:26.109Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.7384000000000001
-    },
-    {
-      "symbol": "MSFTSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 522.38,
-      "stop": 521.82896338448,
-      "tp1": 523.2799999999997,
-      "zoneLow": 522.2,
-      "zoneHigh": 522.56,
-      "signalCandleTime": 1794632400000,
-      "rr1": 1.6332852929389536,
-      "highs": [
-        522.55,
-        522.39
-      ],
-      "lows": null,
-      "sentAt": "2026-11-14T05:06:10.127Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T06:08:21.337Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 523.2799999999997
-    },
     {
       "symbol": "MRVLSTOCKUSDT",
       "timeframe": "5m",
@@ -996,7 +944,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T01:41:10.472Z",
+      "statusUpdatedAt": "2026-11-18T01:46:08.002Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4817,7 +4765,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T01:41:10.472Z",
+      "statusUpdatedAt": "2026-11-18T01:46:08.003Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4868,7 +4816,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T01:41:10.472Z",
+      "statusUpdatedAt": "2026-11-18T01:46:08.003Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5075,7 +5023,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T01:41:10.472Z",
+      "statusUpdatedAt": "2026-11-18T01:46:08.003Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5126,7 +5074,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T01:41:10.472Z",
+      "statusUpdatedAt": "2026-11-18T01:46:08.003Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5229,7 +5177,57 @@
       "sentAt": "2026-11-18T01:03:03.412Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T01:41:10.472Z",
+      "statusUpdatedAt": "2026-11-18T01:46:08.003Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ANIMEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.002129,
+      "stop": 0.0021510357685745655,
+      "tp1": 0.002113999999999999,
+      "zoneLow": 0.002126,
+      "zoneHigh": 0.002132,
+      "signalCandleTime": 1794965400000,
+      "rr1": 0.6807114509867446,
+      "highs": null,
+      "lows": [
+        0.00207,
+        0.002102
+      ],
+      "sentAt": "2026-11-18T01:48:19.210Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T01:48:19.210Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ICPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 2.3040000000000003,
+      "stop": 2.341792835102657,
+      "tp1": 2.2589999999999995,
+      "zoneLow": 2.295,
+      "zoneHigh": 2.313,
+      "signalCandleTime": 1794965400000,
+      "rr1": 1.1907018850998372,
+      "highs": null,
+      "lows": [
+        2.216,
+        2.254
+      ],
+      "sentAt": "2026-11-18T01:48:26.675Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T01:48:26.675Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7294,6 +7292,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-18T01:03:03.412Z"
+    },
+    "ANIMEUSDT:15m:2026-11-18T01:48:19.210Z": {
+      "symbol": "ANIMEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-18T01:48:19.210Z"
+    },
+    "ICPUSDT:15m:2026-11-18T01:48:26.675Z": {
+      "symbol": "ICPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-18T01:48:26.675Z"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T01:43:12.350Z",
+  "lastUpdated": "2026-11-18T01:48:28.177Z",
   "signals": {
     "MEWUSDT:15m": {
       "sentAt": "2026-11-17T21:03:17.937Z",
@@ -144,6 +144,24 @@
       "score": null,
       "entry": 0.45005,
       "stop": 0.4564127512904211
+    },
+    "ANIMEUSDT:15m": {
+      "sentAt": "2026-11-18T01:48:19.210Z",
+      "symbol": "ANIMEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.002129,
+      "stop": 0.0021510357685745655
+    },
+    "ICPUSDT:15m": {
+      "sentAt": "2026-11-18T01:48:26.675Z",
+      "symbol": "ICPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 2.3040000000000003,
+      "stop": 2.341792835102657
     }
   }
 }

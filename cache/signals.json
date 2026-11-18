@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T10:28:16.859Z",
+  "lastUpdated": "2026-11-18T10:33:19.863Z",
   "signals": {
     "DNAUSDT:15m": {
       "sentAt": "2026-11-18T05:33:09.609Z",
@@ -126,6 +126,15 @@
       "score": null,
       "entry": 7.3355,
       "stop": 7.4455875888849485
+    },
+    "ZRXUSDT:15m": {
+      "sentAt": "2026-11-18T10:33:18.361Z",
+      "symbol": "ZRXUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.081465,
+      "stop": 0.08198364079715798
     }
   }
 }

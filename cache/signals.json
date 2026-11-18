@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T18:48:18.547Z",
+  "lastUpdated": "2026-11-18T18:53:05.087Z",
   "signals": {
-    "POPCATUSDT:15m": {
-      "sentAt": "2026-11-18T12:48:40.123Z",
-      "symbol": "POPCATUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.02787,
-      "stop": 0.028136246674138013
-    },
     "ACHUSDT:15m": {
       "sentAt": "2026-11-18T13:03:30.233Z",
       "symbol": "ACHUSDT",

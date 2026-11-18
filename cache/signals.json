@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T00:58:17.351Z",
+  "lastUpdated": "2026-11-18T01:03:04.914Z",
   "signals": {
     "MEWUSDT:15m": {
       "sentAt": "2026-11-17T21:03:17.937Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 207.255,
       "stop": 209.750310595293
+    },
+    "APTUSDT:15m": {
+      "sentAt": "2026-11-18T01:03:03.412Z",
+      "symbol": "APTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.45005,
+      "stop": 0.4564127512904211
     }
   }
 }

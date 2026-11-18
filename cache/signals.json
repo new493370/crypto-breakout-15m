@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T11:58:26.092Z",
+  "lastUpdated": "2026-11-18T12:03:23.482Z",
   "signals": {
-    "ZETAUSDT:15m": {
-      "sentAt": "2026-11-18T06:03:11.115Z",
-      "symbol": "ZETAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.029005000000000003,
-      "stop": 0.028715631144557045
-    },
     "AEROUSDT:15m": {
       "sentAt": "2026-11-18T06:18:22.144Z",
       "symbol": "AEROUSDT",

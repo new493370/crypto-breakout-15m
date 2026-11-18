@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T00:03:01.072Z",
+  "lastUpdated": "2026-11-18T00:08:12.075Z",
   "signals": {
-    "CNPYUSDT:15m": {
-      "sentAt": "2026-11-17T18:03:06.445Z",
-      "symbol": "CNPYUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.09525,
-      "stop": 0.0923726097215956
-    },
     "ZHIPUSTOCKUSDT:15m": {
       "sentAt": "2026-11-17T18:18:18.405Z",
       "symbol": "ZHIPUSTOCKUSDT",

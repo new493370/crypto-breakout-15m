@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T05:43:14.414Z",
+  "lastUpdated": "2026-11-18T05:48:14.600Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 128,
@@ -25,48 +25,22 @@
   "byDirection": {
     "bullish": {
       "total": 92,
-      "tp1Hit": 51,
+      "tp1Hit": 52,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 36,
-      "tp1Rate": 58.6
+      "tp1Rate": 59.1
     },
     "bearish": {
       "total": 108,
-      "tp1Hit": 77,
+      "tp1Hit": 76,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 30,
-      "tp1Rate": 72
+      "tp1Rate": 71.7
     }
   },
   "recentSignals": [
-    {
-      "symbol": "TSMSTOCKUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 395.025,
-      "stop": 395.470458947162,
-      "tp1": 394.3499999999999,
-      "zoneLow": 394.89,
-      "zoneHigh": 395.16,
-      "signalCandleTime": 1794645900000,
-      "rr1": 1.5152911492752101,
-      "highs": null,
-      "lows": [
-        394.81,
-        394.97
-      ],
-      "sentAt": "2026-11-14T08:54:12.304Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T13:32:20.156Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 394.3499999999999
-    },
     {
       "symbol": "OUSDT",
       "timeframe": "5m",
@@ -814,7 +788,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:41:10.062Z",
+      "statusUpdatedAt": "2026-11-18T05:46:11.789Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4635,7 +4609,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:41:10.062Z",
+      "statusUpdatedAt": "2026-11-18T05:46:11.789Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4686,7 +4660,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:41:10.062Z",
+      "statusUpdatedAt": "2026-11-18T05:46:11.789Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4893,7 +4867,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:41:10.062Z",
+      "statusUpdatedAt": "2026-11-18T05:46:11.789Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4944,7 +4918,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:41:10.062Z",
+      "statusUpdatedAt": "2026-11-18T05:46:11.789Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5227,9 +5201,35 @@
       ],
       "lows": null,
       "sentAt": "2026-11-18T05:33:09.608Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T05:46:15.546Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.16590000000000002
+    },
+    {
+      "symbol": "LITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 2.90215,
+      "stop": 2.9781600611371584,
+      "tp1": 2.755399999999999,
+      "zoneLow": 2.8728,
+      "zoneHigh": 2.9315,
+      "signalCandleTime": 1794979800000,
+      "rr1": 1.9306654646046593,
+      "highs": null,
+      "lows": [
+        2.7592,
+        2.8655
+      ],
+      "sentAt": "2026-11-18T05:48:13.097Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T05:41:10.062Z",
+      "statusUpdatedAt": "2026-11-18T05:48:13.097Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7343,6 +7343,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-18T05:33:09.608Z"
+    },
+    "LITUSDT:15m:2026-11-18T05:48:13.097Z": {
+      "symbol": "LITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-18T05:48:13.097Z"
     }
   }
 }

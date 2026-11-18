@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T05:43:14.413Z",
+  "lastUpdated": "2026-11-18T05:48:14.599Z",
   "signals": {
     "APTUSDT:15m": {
       "sentAt": "2026-11-18T01:03:03.412Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.16415000000000002,
       "stop": 0.16111054326578925
+    },
+    "LITUSDT:15m": {
+      "sentAt": "2026-11-18T05:48:13.097Z",
+      "symbol": "LITUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 2.90215,
+      "stop": 2.9781600611371584
     }
   }
 }

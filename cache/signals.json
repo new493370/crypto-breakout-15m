@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T11:28:05.287Z",
+  "lastUpdated": "2026-11-18T11:33:19.127Z",
   "signals": {
-    "DNAUSDT:15m": {
-      "sentAt": "2026-11-18T05:33:09.609Z",
-      "symbol": "DNAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.16415000000000002,
-      "stop": 0.16111054326578925
-    },
     "LITUSDT:15m": {
       "sentAt": "2026-11-18T05:48:13.097Z",
       "symbol": "LITUSDT",

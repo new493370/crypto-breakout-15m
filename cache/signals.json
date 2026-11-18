@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T22:38:46.426Z",
+  "lastUpdated": "2026-11-18T22:52:43.894Z",
   "signals": {
-    "BRETTUSDT:15m": {
-      "sentAt": "2026-11-18T16:48:12.074Z",
-      "symbol": "BRETTUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0034485,
-      "stop": 0.0035122198873208687
-    },
-    "APEUSDT:15m": {
-      "sentAt": "2026-11-18T16:48:15.609Z",
-      "symbol": "APEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.08113000000000001,
-      "stop": 0.08244390001283886
-    },
     "CAPUSDT:15m": {
       "sentAt": "2026-11-18T17:03:07.988Z",
       "symbol": "CAPUSDT",
@@ -162,6 +144,15 @@
       "score": null,
       "entry": 0.014341,
       "stop": 0.014128348187887834
+    },
+    "LUMIAUSDT:15m": {
+      "sentAt": "2026-11-18T22:52:42.392Z",
+      "symbol": "LUMIAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.07234,
+      "stop": 0.07311396675298407
     }
   }
 }

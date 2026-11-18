@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T12:58:25.501Z",
+  "lastUpdated": "2026-11-18T13:03:31.735Z",
   "signals": {
     "INTCSTOCKUSDT:15m": {
       "sentAt": "2026-11-18T07:48:23.031Z",
@@ -135,6 +135,15 @@
       "score": null,
       "entry": 0.02787,
       "stop": 0.028136246674138013
+    },
+    "ACHUSDT:15m": {
+      "sentAt": "2026-11-18T13:03:30.233Z",
+      "symbol": "ACHUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0037860000000000003,
+      "stop": 0.003807344234194147
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T06:13:05.776Z",
+  "lastUpdated": "2026-11-18T06:18:30.846Z",
   "signals": {
     "APTUSDT:15m": {
       "sentAt": "2026-11-18T01:03:03.412Z",
@@ -90,6 +90,33 @@
       "score": null,
       "entry": 0.029005000000000003,
       "stop": 0.028715631144557045
+    },
+    "AEROUSDT:15m": {
+      "sentAt": "2026-11-18T06:18:22.144Z",
+      "symbol": "AEROUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.4384,
+      "stop": 0.4339788282973297
+    },
+    "FILECOINUSDT:15m": {
+      "sentAt": "2026-11-18T06:18:25.889Z",
+      "symbol": "FILECOINUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.5961,
+      "stop": 0.5889542775819765
+    },
+    "ORDIUSDT:15m": {
+      "sentAt": "2026-11-18T06:18:29.343Z",
+      "symbol": "ORDIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 2.7545,
+      "stop": 2.7280983385548483
     }
   }
 }

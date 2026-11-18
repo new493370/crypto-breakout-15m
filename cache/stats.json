@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-18T06:13:05.778Z",
+  "lastUpdated": "2026-11-18T06:18:30.849Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 127,
+    "tp1Hit": 124,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 66,
-    "active": 7,
-    "tp1Rate": 65.8,
+    "active": 10,
+    "tp1Rate": 65.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 34.2
+    "stopRate": 34.7
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 92,
+      "total": 95,
       "tp1Hit": 51,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,93 +32,15 @@
       "tp1Rate": 58.6
     },
     "bearish": {
-      "total": 108,
-      "tp1Hit": 76,
+      "total": 105,
+      "tp1Hit": 73,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 30,
-      "tp1Rate": 71.7
+      "tp1Rate": 70.9
     }
   },
   "recentSignals": [
-    {
-      "symbol": "1INCHUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.069495,
-      "stop": 0.06979795081268313,
-      "tp1": 0.06911999999999997,
-      "zoneLow": 0.06942,
-      "zoneHigh": 0.06957,
-      "signalCandleTime": 1794651900000,
-      "rr1": 1.2378247038810992,
-      "highs": null,
-      "lows": [
-        0.06926,
-        0.06943
-      ],
-      "sentAt": "2026-11-14T10:34:19.716Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:40:24.371Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.06911999999999997
-    },
-    {
-      "symbol": "FILUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.6898,
-      "stop": 0.6938425389815919,
-      "tp1": 0.6852999999999999,
-      "zoneLow": 0.6889,
-      "zoneHigh": 0.6907,
-      "signalCandleTime": 1794652200000,
-      "rr1": 1.1131618075895495,
-      "highs": null,
-      "lows": [
-        0.6788,
-        0.6854
-      ],
-      "sentAt": "2026-11-14T10:38:19.494Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T11:00:23.709Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.6852999999999999
-    },
-    {
-      "symbol": "2ZUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 0.01759,
-      "stop": 0.01769384453114682,
-      "tp1": 0.017489999999999995,
-      "zoneLow": 0.01757,
-      "zoneHigh": 0.01761,
-      "signalCandleTime": 1794652200000,
-      "rr1": 0.9629780104512403,
-      "highs": null,
-      "lows": [
-        0.0175,
-        0.01755
-      ],
-      "sentAt": "2026-11-14T10:38:23.035Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-14T10:40:26.034Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.017489999999999995
-    },
     {
       "symbol": "LINKUSDT",
       "timeframe": "5m",
@@ -762,7 +684,7 @@
       "sentAt": "2026-11-14T21:30:06.593Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T06:11:10.216Z",
+      "statusUpdatedAt": "2026-11-18T06:16:09.870Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4583,7 +4505,7 @@
       "sentAt": "2026-11-17T18:48:11.509Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T06:11:10.216Z",
+      "statusUpdatedAt": "2026-11-18T06:16:09.870Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4634,7 +4556,7 @@
       "sentAt": "2026-11-17T21:03:21.462Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T06:11:10.216Z",
+      "statusUpdatedAt": "2026-11-18T06:16:09.870Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4841,7 +4763,7 @@
       "sentAt": "2026-11-17T21:48:23.534Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T06:11:10.216Z",
+      "statusUpdatedAt": "2026-11-18T06:16:09.870Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4892,7 +4814,7 @@
       "sentAt": "2026-11-17T22:18:25.910Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T06:11:10.216Z",
+      "statusUpdatedAt": "2026-11-18T06:16:09.870Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5203,7 +5125,7 @@
       "sentAt": "2026-11-18T05:48:13.097Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T06:11:10.216Z",
+      "statusUpdatedAt": "2026-11-18T06:16:09.870Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5228,7 +5150,82 @@
       "sentAt": "2026-11-18T06:03:11.115Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-18T06:11:10.216Z",
+      "statusUpdatedAt": "2026-11-18T06:16:09.870Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AEROUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.4384,
+      "stop": 0.4339788282973297,
+      "tp1": 0.44389999999999996,
+      "zoneLow": 0.4373,
+      "zoneHigh": 0.4395,
+      "signalCandleTime": 1794981600000,
+      "rr1": 1.2440141143303807,
+      "highs": [
+        0.4548,
+        0.4433
+      ],
+      "lows": null,
+      "sentAt": "2026-11-18T06:18:22.144Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T06:18:22.144Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "FILECOINUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.5961,
+      "stop": 0.5889542775819765,
+      "tp1": 0.6061,
+      "zoneLow": 0.5941,
+      "zoneHigh": 0.5981,
+      "signalCandleTime": 1794981600000,
+      "rr1": 1.3994386312540308,
+      "highs": [
+        0.6124,
+        0.6004
+      ],
+      "lows": null,
+      "sentAt": "2026-11-18T06:18:25.889Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T06:18:25.889Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 2.7545,
+      "stop": 2.7280983385548483,
+      "tp1": 2.787,
+      "zoneLow": 2.748,
+      "zoneHigh": 2.761,
+      "signalCandleTime": 1794981600000,
+      "rr1": 1.2309831359483516,
+      "highs": [
+        2.84,
+        2.774
+      ],
+      "lows": null,
+      "sentAt": "2026-11-18T06:18:29.343Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-18T06:18:29.343Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -7356,6 +7353,27 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-18T06:03:11.115Z"
+    },
+    "AEROUSDT:15m:2026-11-18T06:18:22.144Z": {
+      "symbol": "AEROUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-18T06:18:22.144Z"
+    },
+    "FILECOINUSDT:15m:2026-11-18T06:18:25.889Z": {
+      "symbol": "FILECOINUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-18T06:18:25.889Z"
+    },
+    "ORDIUSDT:15m:2026-11-18T06:18:29.343Z": {
+      "symbol": "ORDIUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-18T06:18:29.343Z"
     }
   }
 }

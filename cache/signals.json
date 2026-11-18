@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T19:33:06.721Z",
+  "lastUpdated": "2026-11-18T19:38:05.916Z",
   "signals": {
-    "ZILUSDT:15m": {
-      "sentAt": "2026-11-18T13:33:18.038Z",
-      "symbol": "ZILUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0010140000000000001,
-      "stop": 0.0009672967793698153
-    },
-    "TRIAUSDT:15m": {
-      "sentAt": "2026-11-18T13:33:21.514Z",
-      "symbol": "TRIAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.002355,
-      "stop": 0.0023824873204295683
-    },
     "MEMEUSDT:15m": {
       "sentAt": "2026-11-18T15:03:16.463Z",
       "symbol": "MEMEUSDT",

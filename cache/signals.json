@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-18T19:03:16.624Z",
+  "lastUpdated": "2026-11-18T19:08:18.303Z",
   "signals": {
-    "ACHUSDT:15m": {
-      "sentAt": "2026-11-18T13:03:30.233Z",
-      "symbol": "ACHUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0037860000000000003,
-      "stop": 0.003807344234194147
-    },
     "ZILUSDT:15m": {
       "sentAt": "2026-11-18T13:33:18.038Z",
       "symbol": "ZILUSDT",

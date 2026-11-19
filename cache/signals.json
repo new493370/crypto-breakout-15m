@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T15:27:50.987Z",
+  "lastUpdated": "2026-11-19T15:33:04.804Z",
   "signals": {
     "FETUSDT:15m": {
       "sentAt": "2026-11-19T10:17:58.828Z",
@@ -117,6 +117,15 @@
       "score": null,
       "entry": 0.00032260000000000004,
       "stop": 0.00032584932040450714
+    },
+    "SOLUSDT:15m": {
+      "sentAt": "2026-11-19T15:33:03.302Z",
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 74.69,
+      "stop": 75.39316800890704
     }
   }
 }

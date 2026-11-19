@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T06:47:52.995Z",
+  "lastUpdated": "2026-11-19T06:52:48.428Z",
   "signals": {
-    "BLURUSDT:15m": {
-      "sentAt": "2026-11-19T00:48:03.233Z",
-      "symbol": "BLURUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.006538,
-      "stop": 0.006410288897827777
-    },
-    "SLXUSDT:15m": {
-      "sentAt": "2026-11-19T00:48:08.798Z",
-      "symbol": "SLXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.03244,
-      "stop": 0.03167546639639606
-    },
-    "REUSDT:15m": {
-      "sentAt": "2026-11-19T00:48:14.255Z",
-      "symbol": "REUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.233465,
-      "stop": 0.2296565280962221
-    },
     "ANIMEUSDT:15m": {
       "sentAt": "2026-11-19T01:03:05.561Z",
       "symbol": "ANIMEUSDT",

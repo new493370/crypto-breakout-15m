@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T04:42:35.982Z",
+  "lastUpdated": "2026-11-19T04:47:40.964Z",
   "signals": {
     "LUMIAUSDT:15m": {
       "sentAt": "2026-11-18T22:52:42.392Z",
@@ -333,6 +333,15 @@
       "score": null,
       "entry": 0.027540000000000002,
       "stop": 0.027098673590378382
+    },
+    "APTUSDT:15m": {
+      "sentAt": "2026-11-19T04:47:39.464Z",
+      "symbol": "APTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.43225,
+      "stop": 0.426569549714082
     }
   }
 }

@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T21:02:51.068Z",
+  "lastUpdated": "2026-11-19T21:07:38.681Z",
   "signals": {
-    "MSTRSTOCKUSDT:15m": {
-      "sentAt": "2026-11-19T15:03:07.272Z",
-      "symbol": "MSTRSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 93.86500000000001,
-      "stop": 95.11529397222571
-    },
-    "SPX500USDT:15m": {
-      "sentAt": "2026-11-19T15:03:11.854Z",
-      "symbol": "SPX500USDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 7412.549999999999,
-      "stop": 7437.309539599735
-    },
-    "UBUSDT:15m": {
-      "sentAt": "2026-11-19T15:03:17.458Z",
-      "symbol": "UBUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.10703,
-      "stop": 0.10840324494194674
-    },
     "MEMEUSDT:15m": {
       "sentAt": "2026-11-19T15:18:10.903Z",
       "symbol": "MEMEUSDT",

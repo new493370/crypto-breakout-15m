@@ -1,23 +1,4 @@
 {
-  "lastUpdated": "2026-11-19T23:02:47.508Z",
-  "signals": {
-    "APRUSDT:15m": {
-      "sentAt": "2026-11-19T17:02:47.681Z",
-      "symbol": "APRUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.03066,
-      "stop": 0.031494982249445726
-    },
-    "APEUSDT:15m": {
-      "sentAt": "2026-11-19T17:02:53.061Z",
-      "symbol": "APEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.08035500000000001,
-      "stop": 0.0815681230835731
-    }
-  }
+  "lastUpdated": "2026-11-19T23:07:45.307Z",
+  "signals": {}
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T08:57:45.026Z",
+  "lastUpdated": "2026-11-19T09:02:48.216Z",
   "signals": {
     "APTUSDT:15m": {
       "sentAt": "2026-11-19T04:47:39.464Z",
@@ -18,6 +18,15 @@
       "score": null,
       "entry": 0.002027,
       "stop": 0.0020875597766429658
+    },
+    "CROUSDT:15m": {
+      "sentAt": "2026-11-19T09:02:46.715Z",
+      "symbol": "CROUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.042825,
+      "stop": 0.043204829122801644
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T01:42:56.721Z",
+  "lastUpdated": "2026-11-19T01:48:13.331Z",
   "signals": {
     "XDPUSDT:15m": {
       "sentAt": "2026-11-18T20:03:06.463Z",
@@ -396,6 +396,60 @@
       "score": null,
       "entry": 0.0229,
       "stop": 0.022578599038171325
+    },
+    "MEWUSDT:15m": {
+      "sentAt": "2026-11-19T01:47:49.162Z",
+      "symbol": "MEWUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00030250000000000003,
+      "stop": 0.0002993898075988194
+    },
+    "CHZUSDT:15m": {
+      "sentAt": "2026-11-19T01:47:54.484Z",
+      "symbol": "CHZUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.009625,
+      "stop": 0.009510690103326166
+    },
+    "BRETTUSDT:15m": {
+      "sentAt": "2026-11-19T01:47:59.751Z",
+      "symbol": "BRETTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0034265,
+      "stop": 0.003376193546191726
+    },
+    "ENJUSDT:15m": {
+      "sentAt": "2026-11-19T01:48:05.043Z",
+      "symbol": "ENJUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.019135,
+      "stop": 0.018896296567517665
+    },
+    "EIGENUSDT:15m": {
+      "sentAt": "2026-11-19T01:48:08.391Z",
+      "symbol": "EIGENUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.12669999999999998,
+      "stop": 0.12468354771111789
+    },
+    "POPCATUSDT:15m": {
+      "sentAt": "2026-11-19T01:48:11.830Z",
+      "symbol": "POPCATUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.027540000000000002,
+      "stop": 0.027098673590378382
     }
   }
 }

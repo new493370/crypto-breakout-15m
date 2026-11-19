@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T15:57:51.519Z",
+  "lastUpdated": "2026-11-19T16:03:00.810Z",
   "signals": {
     "FETUSDT:15m": {
       "sentAt": "2026-11-19T10:17:58.828Z",
@@ -135,6 +135,33 @@
       "score": null,
       "entry": 0.5827,
       "stop": 0.590028924756391
+    },
+    "WLDUSDT:15m": {
+      "sentAt": "2026-11-19T16:02:52.211Z",
+      "symbol": "WLDUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.266,
+      "stop": 0.2698937467903563
+    },
+    "SUIUSDT:15m": {
+      "sentAt": "2026-11-19T16:02:55.792Z",
+      "symbol": "SUIUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.7299,
+      "stop": 0.7376624251628222
+    },
+    "ALGOUSDT:15m": {
+      "sentAt": "2026-11-19T16:02:59.308Z",
+      "symbol": "ALGOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0784,
+      "stop": 0.07922372491021061
     }
   }
 }

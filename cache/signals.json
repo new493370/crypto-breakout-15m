@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T10:12:44.464Z",
+  "lastUpdated": "2026-11-19T10:18:00.330Z",
   "signals": {
     "APTUSDT:15m": {
       "sentAt": "2026-11-19T04:47:39.464Z",
@@ -45,6 +45,15 @@
       "score": null,
       "entry": 0.026285000000000003,
       "stop": 0.026681500963805463
+    },
+    "FETUSDT:15m": {
+      "sentAt": "2026-11-19T10:17:58.828Z",
+      "symbol": "FETUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.13024999999999998,
+      "stop": 0.13163457680148674
     }
   }
 }

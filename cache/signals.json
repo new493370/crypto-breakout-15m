@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T21:17:48.135Z",
+  "lastUpdated": "2026-11-19T21:22:39.426Z",
   "signals": {
-    "MEMEUSDT:15m": {
-      "sentAt": "2026-11-19T15:18:10.903Z",
-      "symbol": "MEMEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.00032260000000000004,
-      "stop": 0.00032584932040450714
-    },
     "SOLUSDT:15m": {
       "sentAt": "2026-11-19T15:33:03.302Z",
       "symbol": "SOLUSDT",

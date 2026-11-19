@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-19T16:57:48.589Z",
+  "lastUpdated": "2026-11-19T17:02:54.564Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 133,
+    "tp1Hit": 131,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 56,
+    "stopped": 58,
     "active": 11,
-    "tp1Rate": 70.4,
+    "tp1Rate": 69.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 29.6
+    "stopRate": 30.7
   },
   "byTimeframe": {
     "15m": {
@@ -24,15 +24,15 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 116,
-      "tp1Hit": 75,
+      "total": 114,
+      "tp1Hit": 73,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 33,
-      "tp1Rate": 69.4
+      "stopped": 35,
+      "tp1Rate": 67.6
     },
     "bearish": {
-      "total": 84,
+      "total": 86,
       "tp1Hit": 58,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -41,58 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "ANIMEUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.00205,
-      "stop": 0.0020370799282958744,
-      "tp1": 0.002065,
-      "zoneLow": 0.002047,
-      "zoneHigh": 0.002053,
-      "signalCandleTime": 1794794400000,
-      "rr1": 1.1609842687800178,
-      "highs": [
-        0.0021,
-        0.002073
-      ],
-      "lows": null,
-      "sentAt": "2026-11-16T02:10:16.902Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:12:18.765Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.002065
-    },
-    {
-      "symbol": "XLMUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.13846999999999998,
-      "stop": 0.13747513200182726,
-      "tp1": 0.13961999999999997,
-      "zoneLow": 0.13824,
-      "zoneHigh": 0.1387,
-      "signalCandleTime": 1794794700000,
-      "rr1": 1.155932246400723,
-      "highs": [
-        0.1419,
-        0.14007
-      ],
-      "lows": null,
-      "sentAt": "2026-11-16T02:14:11.459Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:20:26.662Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.13961999999999997
-    },
     {
       "symbol": "NEIROUSDT",
       "timeframe": "5m",
@@ -2920,7 +2868,7 @@
       "sentAt": "2026-11-18T12:18:31.641Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:14.581Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3205,7 +3153,7 @@
       "sentAt": "2026-11-18T16:48:12.074Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:14.581Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3516,7 +3464,7 @@
       "sentAt": "2026-11-18T21:42:20.766Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:14.581Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3879,7 +3827,7 @@
       "sentAt": "2026-11-19T00:23:04.437Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:14.581Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3930,7 +3878,7 @@
       "sentAt": "2026-11-19T00:33:07.394Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:14.581Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4135,13 +4083,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-19T00:33:37.648Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:18.340Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.018905601194994136
     },
     {
       "symbol": "SEIUSDT",
@@ -4214,7 +4163,7 @@
       "sentAt": "2026-11-19T00:33:54.350Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:18.340Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4523,13 +4472,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-19T01:47:59.751Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:20.032Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.003376193546191726
     },
     {
       "symbol": "ENJUSDT",
@@ -4602,7 +4552,7 @@
       "sentAt": "2026-11-19T01:48:11.830Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:20.032Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4913,7 +4863,7 @@
       "sentAt": "2026-11-19T13:18:06.820Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:20.032Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4938,7 +4888,7 @@
       "sentAt": "2026-11-19T13:33:04.390Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T16:56:12.859Z",
+      "statusUpdatedAt": "2026-11-19T17:01:20.032Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5229,6 +5179,56 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.030549999999999994
+    },
+    {
+      "symbol": "APRUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.03066,
+      "stop": 0.031494982249445726,
+      "tp1": 0.02941,
+      "zoneLow": 0.03041,
+      "zoneHigh": 0.03091,
+      "signalCandleTime": 1795104000000,
+      "rr1": 1.4970378122765726,
+      "highs": null,
+      "lows": [
+        0.02937,
+        0.03017
+      ],
+      "sentAt": "2026-11-19T17:02:47.681Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-19T17:02:47.681Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "APEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "entry": 0.08035500000000001,
+      "stop": 0.0815681230835731,
+      "tp1": 0.07842999999999999,
+      "zoneLow": 0.07997,
+      "zoneHigh": 0.08074,
+      "signalCandleTime": 1795106700000,
+      "rr1": 1.5868134289640237,
+      "highs": null,
+      "lows": [
+        0.0793,
+        0.08018
+      ],
+      "sentAt": "2026-11-19T17:02:53.061Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-19T17:02:53.061Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -8080,6 +8080,20 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-19T16:33:02.404Z"
+    },
+    "APRUSDT:15m:2026-11-19T17:02:47.681Z": {
+      "symbol": "APRUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-19T17:02:47.681Z"
+    },
+    "APEUSDT:15m:2026-11-19T17:02:53.061Z": {
+      "symbol": "APEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "status": "active",
+      "sentAt": "2026-11-19T17:02:53.061Z"
     }
   }
 }

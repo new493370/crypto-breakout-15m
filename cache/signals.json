@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T06:07:43.119Z",
+  "lastUpdated": "2026-11-19T06:12:41.090Z",
   "signals": {
-    "LINEAUSDT:15m": {
-      "sentAt": "2026-11-19T00:12:06.614Z",
-      "symbol": "LINEAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.001886,
-      "stop": 0.001857339178329278
-    },
-    "FLUIDUSDT:15m": {
-      "sentAt": "2026-11-19T00:12:10.325Z",
-      "symbol": "FLUIDUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 1.7505,
-      "stop": 1.732375664407665
-    },
     "ZKUSDT:15m": {
       "sentAt": "2026-11-19T00:22:57.483Z",
       "symbol": "ZKUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T22:32:37.502Z",
+  "lastUpdated": "2026-11-19T22:37:43.295Z",
   "signals": {
-    "CHIPUSDT:15m": {
-      "sentAt": "2026-11-19T16:33:02.404Z",
-      "symbol": "CHIPUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.03165,
-      "stop": 0.032721544158744786
-    },
     "APRUSDT:15m": {
       "sentAt": "2026-11-19T17:02:47.681Z",
       "symbol": "APRUSDT",

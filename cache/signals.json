@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T02:32:56.842Z",
+  "lastUpdated": "2026-11-19T02:38:01.041Z",
   "signals": {
-    "DATAUSDT:15m": {
-      "sentAt": "2026-11-18T20:33:23.452Z",
-      "symbol": "DATAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.08884500000000001,
-      "stop": 0.09003230600916594
-    },
-    "MEUSDT:15m": {
-      "sentAt": "2026-11-18T20:33:26.958Z",
-      "symbol": "MEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.038775000000000004,
-      "stop": 0.03935486237117775
-    },
     "RENDERUSDT:15m": {
       "sentAt": "2026-11-18T21:18:13.395Z",
       "symbol": "RENDERUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T01:27:42.200Z",
+  "lastUpdated": "2026-11-19T01:33:03.351Z",
   "signals": {
     "XDPUSDT:15m": {
       "sentAt": "2026-11-18T20:03:06.463Z",
@@ -387,6 +387,15 @@
       "score": null,
       "entry": 0.1976,
       "stop": 0.19463537569409062
+    },
+    "STABLEUSDT:15m": {
+      "sentAt": "2026-11-19T01:32:59.956Z",
+      "symbol": "STABLEUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0229,
+      "stop": 0.022578599038171325
     }
   }
 }

@@ -1,51 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T07:47:53.632Z",
+  "lastUpdated": "2026-11-19T07:52:52.832Z",
   "signals": {
-    "CHZUSDT:15m": {
-      "sentAt": "2026-11-19T01:47:54.484Z",
-      "symbol": "CHZUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.009625,
-      "stop": 0.009510690103326166
-    },
-    "BRETTUSDT:15m": {
-      "sentAt": "2026-11-19T01:47:59.751Z",
-      "symbol": "BRETTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0034265,
-      "stop": 0.003376193546191726
-    },
-    "ENJUSDT:15m": {
-      "sentAt": "2026-11-19T01:48:05.043Z",
-      "symbol": "ENJUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.019135,
-      "stop": 0.018896296567517665
-    },
-    "EIGENUSDT:15m": {
-      "sentAt": "2026-11-19T01:48:08.391Z",
-      "symbol": "EIGENUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.12669999999999998,
-      "stop": 0.12468354771111789
-    },
-    "POPCATUSDT:15m": {
-      "sentAt": "2026-11-19T01:48:11.830Z",
-      "symbol": "POPCATUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.027540000000000002,
-      "stop": 0.027098673590378382
-    },
     "APTUSDT:15m": {
       "sentAt": "2026-11-19T04:47:39.464Z",
       "symbol": "APTUSDT",

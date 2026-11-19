@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T04:37:33.475Z",
+  "lastUpdated": "2026-11-19T04:42:35.982Z",
   "signals": {
-    "TRUTHUSDT:15m": {
-      "sentAt": "2026-11-18T22:38:44.925Z",
-      "symbol": "TRUTHUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.014341,
-      "stop": 0.014128348187887834
-    },
     "LUMIAUSDT:15m": {
       "sentAt": "2026-11-18T22:52:42.392Z",
       "symbol": "LUMIAUSDT",

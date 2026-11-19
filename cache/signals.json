@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T16:27:39.242Z",
+  "lastUpdated": "2026-11-19T16:33:05.775Z",
   "signals": {
     "DOGEUSDT:15m": {
       "sentAt": "2026-11-19T11:02:56.947Z",
@@ -153,6 +153,15 @@
       "score": null,
       "entry": 0.0784,
       "stop": 0.07922372491021061
+    },
+    "CHIPUSDT:15m": {
+      "sentAt": "2026-11-19T16:33:02.404Z",
+      "symbol": "CHIPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.03165,
+      "stop": 0.032721544158744786
     }
   }
 }

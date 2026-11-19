@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T17:02:54.562Z",
+  "lastUpdated": "2026-11-19T17:07:41.884Z",
   "signals": {
-    "DOGEUSDT:15m": {
-      "sentAt": "2026-11-19T11:02:56.947Z",
-      "symbol": "DOGEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.059505,
-      "stop": 0.05987313976557999
-    },
-    "ADAUSDT:15m": {
-      "sentAt": "2026-11-19T11:03:02.466Z",
-      "symbol": "ADAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.15415,
-      "stop": 0.15537314165408647
-    },
-    "APTUSDT:15m": {
-      "sentAt": "2026-11-19T11:03:05.828Z",
-      "symbol": "APTUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.43295,
-      "stop": 0.437073678474812
-    },
     "SKHYSTOCKUSDT:15m": {
       "sentAt": "2026-11-19T13:02:57.308Z",
       "symbol": "SKHYSTOCKUSDT",

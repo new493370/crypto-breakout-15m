@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T12:57:46.279Z",
+  "lastUpdated": "2026-11-19T13:02:58.809Z",
   "signals": {
     "JCTUSDT:15m": {
       "sentAt": "2026-11-19T07:32:57.475Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.43295,
       "stop": 0.437073678474812
+    },
+    "SKHYSTOCKUSDT:15m": {
+      "sentAt": "2026-11-19T13:02:57.308Z",
+      "symbol": "SKHYSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 129.885,
+      "stop": 131.0840695852952
     }
   }
 }

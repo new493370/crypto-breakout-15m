@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T07:02:53.526Z",
+  "lastUpdated": "2026-11-19T07:07:42.638Z",
   "signals": {
-    "ANIMEUSDT:15m": {
-      "sentAt": "2026-11-19T01:03:05.561Z",
-      "symbol": "ANIMEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.002129,
-      "stop": 0.002103881753921124
-    },
-    "CRVUSDT:15m": {
-      "sentAt": "2026-11-19T01:03:09.103Z",
-      "symbol": "CRVUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.1976,
-      "stop": 0.19463537569409062
-    },
     "STABLEUSDT:15m": {
       "sentAt": "2026-11-19T01:32:59.956Z",
       "symbol": "STABLEUSDT",

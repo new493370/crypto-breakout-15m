@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T07:32:58.976Z",
+  "lastUpdated": "2026-11-19T07:37:43.573Z",
   "signals": {
-    "STABLEUSDT:15m": {
-      "sentAt": "2026-11-19T01:32:59.956Z",
-      "symbol": "STABLEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0229,
-      "stop": 0.022578599038171325
-    },
     "MEWUSDT:15m": {
       "sentAt": "2026-11-19T01:47:49.162Z",
       "symbol": "MEWUSDT",

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T13:12:49.041Z",
+  "lastUpdated": "2026-11-19T13:18:08.322Z",
   "signals": {
     "JCTUSDT:15m": {
       "sentAt": "2026-11-19T07:32:57.475Z",
@@ -81,6 +81,24 @@
       "score": null,
       "entry": 129.885,
       "stop": 131.0840695852952
+    },
+    "XLMUSDT:15m": {
+      "sentAt": "2026-11-19T13:18:03.147Z",
+      "symbol": "XLMUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.13799,
+      "stop": 0.13920587266402076
+    },
+    "PUMPFUNUSDT:15m": {
+      "sentAt": "2026-11-19T13:18:06.820Z",
+      "symbol": "PUMPFUNUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.002746,
+      "stop": 0.0028100378045077846
     }
   }
 }

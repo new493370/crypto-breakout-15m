@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T06:22:45.227Z",
+  "lastUpdated": "2026-11-19T06:27:39.508Z",
   "signals": {
-    "ZKUSDT:15m": {
-      "sentAt": "2026-11-19T00:22:57.483Z",
-      "symbol": "ZKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.007757,
-      "stop": 0.007604906555595579
-    },
-    "WUSDT:15m": {
-      "sentAt": "2026-11-19T00:23:00.977Z",
-      "symbol": "WUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0088515,
-      "stop": 0.008712409475364079
-    },
-    "PLUMEUSDT:15m": {
-      "sentAt": "2026-11-19T00:23:04.437Z",
-      "symbol": "PLUMEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.0117205,
-      "stop": 0.011484874082578854
-    },
     "SHIBUSDT:15m": {
       "sentAt": "2026-11-19T00:33:03.879Z",
       "symbol": "SHIBUSDT",

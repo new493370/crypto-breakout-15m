@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T04:47:40.964Z",
+  "lastUpdated": "2026-11-19T04:52:48.151Z",
   "signals": {
-    "LUMIAUSDT:15m": {
-      "sentAt": "2026-11-18T22:52:42.392Z",
-      "symbol": "LUMIAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.07234,
-      "stop": 0.07311396675298407
-    },
     "COFSTOCKUSDT:15m": {
       "sentAt": "2026-11-18T23:06:43.661Z",
       "symbol": "COFSTOCKUSDT",

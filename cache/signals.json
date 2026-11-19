@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-18T23:57:24.782Z",
+  "lastUpdated": "2026-11-19T00:12:11.827Z",
   "signals": {
     "XDPUSDT:15m": {
       "sentAt": "2026-11-18T20:03:06.463Z",
@@ -153,6 +153,24 @@
       "score": null,
       "entry": 0.012915,
       "stop": 0.012741927541866331
+    },
+    "LINEAUSDT:15m": {
+      "sentAt": "2026-11-19T00:12:06.614Z",
+      "symbol": "LINEAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.001886,
+      "stop": 0.001857339178329278
+    },
+    "FLUIDUSDT:15m": {
+      "sentAt": "2026-11-19T00:12:10.325Z",
+      "symbol": "FLUIDUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 1.7505,
+      "stop": 1.732375664407665
     }
   }
 }

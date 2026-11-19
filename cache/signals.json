@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T07:27:51.370Z",
+  "lastUpdated": "2026-11-19T07:32:58.976Z",
   "signals": {
     "STABLEUSDT:15m": {
       "sentAt": "2026-11-19T01:32:59.956Z",
@@ -72,6 +72,15 @@
       "score": null,
       "entry": 0.43225,
       "stop": 0.426569549714082
+    },
+    "JCTUSDT:15m": {
+      "sentAt": "2026-11-19T07:32:57.475Z",
+      "symbol": "JCTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.002027,
+      "stop": 0.0020875597766429658
     }
   }
 }

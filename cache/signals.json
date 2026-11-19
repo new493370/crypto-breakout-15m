@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T05:02:43.671Z",
+  "lastUpdated": "2026-11-19T05:07:35.115Z",
   "signals": {
-    "COFSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T23:06:43.661Z",
-      "symbol": "COFSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 184.055,
-      "stop": 182.45397133418916
-    },
     "BUSDT:15m": {
       "sentAt": "2026-11-18T23:57:17.952Z",
       "symbol": "BUSDT",

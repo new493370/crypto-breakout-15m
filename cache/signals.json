@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T10:57:50.702Z",
+  "lastUpdated": "2026-11-19T11:03:07.329Z",
   "signals": {
     "JCTUSDT:15m": {
       "sentAt": "2026-11-19T07:32:57.475Z",
@@ -45,6 +45,33 @@
       "score": null,
       "entry": 0.13024999999999998,
       "stop": 0.13163457680148674
+    },
+    "DOGEUSDT:15m": {
+      "sentAt": "2026-11-19T11:02:56.947Z",
+      "symbol": "DOGEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.059505,
+      "stop": 0.05987313976557999
+    },
+    "ADAUSDT:15m": {
+      "sentAt": "2026-11-19T11:03:02.466Z",
+      "symbol": "ADAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.15415,
+      "stop": 0.15537314165408647
+    },
+    "APTUSDT:15m": {
+      "sentAt": "2026-11-19T11:03:05.828Z",
+      "symbol": "APTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.43295,
+      "stop": 0.437073678474812
     }
   }
 }

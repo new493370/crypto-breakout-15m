@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T04:22:43.992Z",
+  "lastUpdated": "2026-11-19T04:27:38.836Z",
   "signals": {
-    "SUSDT:15m": {
-      "sentAt": "2026-11-18T22:24:39.944Z",
-      "symbol": "SUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.03128,
-      "stop": 0.03172127015554824
-    },
-    "CIENSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T22:24:43.672Z",
-      "symbol": "CIENSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 264.975,
-      "stop": 261.5119066494958
-    },
     "TRUTHUSDT:15m": {
       "sentAt": "2026-11-18T22:38:44.925Z",
       "symbol": "TRUTHUSDT",

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-19T20:57:46.604Z",
+  "lastUpdated": "2026-11-19T21:02:51.069Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 134,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 61,
-    "active": 5,
-    "tp1Rate": 68.7,
+    "stopped": 62,
+    "active": 4,
+    "tp1Rate": 68.4,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 31.3
+    "stopRate": 31.6
   },
   "byTimeframe": {
     "15m": {
@@ -36,8 +36,8 @@
       "tp1Hit": 61,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 23,
-      "tp1Rate": 72.6
+      "stopped": 24,
+      "tp1Rate": 71.8
     }
   },
   "recentSignals": [
@@ -2868,7 +2868,7 @@
       "sentAt": "2026-11-18T12:18:31.641Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T20:56:09.670Z",
+      "statusUpdatedAt": "2026-11-19T21:01:08.282Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3153,7 +3153,7 @@
       "sentAt": "2026-11-18T16:48:12.074Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T20:56:09.670Z",
+      "statusUpdatedAt": "2026-11-19T21:01:08.282Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3464,7 +3464,7 @@
       "sentAt": "2026-11-18T21:42:20.766Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T20:56:09.670Z",
+      "statusUpdatedAt": "2026-11-19T21:01:08.282Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3827,7 +3827,7 @@
       "sentAt": "2026-11-19T00:23:04.437Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T20:56:09.670Z",
+      "statusUpdatedAt": "2026-11-19T21:01:08.282Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -4890,13 +4890,14 @@
         0.011065
       ],
       "sentAt": "2026-11-19T13:33:04.390Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T20:56:09.670Z",
+      "statusUpdatedAt": "2026-11-19T21:01:11.785Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.01168110333027181
     },
     {
       "symbol": "GRTUSDT",

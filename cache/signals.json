@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T09:12:44.353Z",
+  "lastUpdated": "2026-11-19T09:18:05.063Z",
   "signals": {
     "APTUSDT:15m": {
       "sentAt": "2026-11-19T04:47:39.464Z",
@@ -27,6 +27,24 @@
       "score": null,
       "entry": 0.042825,
       "stop": 0.043204829122801644
+    },
+    "SILVERUSDT:15m": {
+      "sentAt": "2026-11-19T09:18:00.011Z",
+      "symbol": "SILVERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 45.474999999999994,
+      "stop": 45.841946037409635
+    },
+    "KMNOUSDT:15m": {
+      "sentAt": "2026-11-19T09:18:03.561Z",
+      "symbol": "KMNOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.026285000000000003,
+      "stop": 0.026681500963805463
     }
   }
 }

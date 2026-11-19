@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T03:52:42.206Z",
+  "lastUpdated": "2026-11-19T03:57:51.432Z",
   "signals": {
-    "TIAUSDT:15m": {
-      "sentAt": "2026-11-18T21:57:02.736Z",
-      "symbol": "TIAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.34635000000000005,
-      "stop": 0.3504375070687127
-    },
-    "UALSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T21:57:06.524Z",
-      "symbol": "UALSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 108.27000000000001,
-      "stop": 109.44079272812185
-    },
     "SUSDT:15m": {
       "sentAt": "2026-11-18T22:24:39.944Z",
       "symbol": "SUSDT",

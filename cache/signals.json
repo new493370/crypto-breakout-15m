@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T03:37:40.233Z",
+  "lastUpdated": "2026-11-19T03:42:42.437Z",
   "signals": {
-    "JTOUSDT:15m": {
-      "sentAt": "2026-11-18T21:42:10.309Z",
-      "symbol": "JTOUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.25655,
-      "stop": 0.26033060927195356
-    },
-    "VIRTUALUSDT:15m": {
-      "sentAt": "2026-11-18T21:42:13.673Z",
-      "symbol": "VIRTUALUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.42845,
-      "stop": 0.43389240746905106
-    },
-    "POLYMARKETSTOCKUSDT:15m": {
-      "sentAt": "2026-11-18T21:42:17.180Z",
-      "symbol": "POLYMARKETSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 23.880000000000003,
-      "stop": 24.011213972744855
-    },
-    "WOTAMALAILEUSDT:15m": {
-      "sentAt": "2026-11-18T21:42:20.766Z",
-      "symbol": "WOTAMALAILEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.007135000000000001,
-      "stop": 0.00699335705130376
-    },
     "TIAUSDT:15m": {
       "sentAt": "2026-11-18T21:57:02.736Z",
       "symbol": "TIAUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T21:27:48.994Z",
+  "lastUpdated": "2026-11-19T21:33:19.077Z",
   "signals": {
-    "SOLUSDT:15m": {
-      "sentAt": "2026-11-19T15:33:03.302Z",
-      "symbol": "SOLUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 74.69,
-      "stop": 75.39316800890704
-    },
     "FILECOINUSDT:15m": {
       "sentAt": "2026-11-19T15:48:03.806Z",
       "symbol": "FILECOINUSDT",

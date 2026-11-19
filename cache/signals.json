@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T13:27:58.135Z",
+  "lastUpdated": "2026-11-19T13:33:09.374Z",
   "signals": {
-    "JCTUSDT:15m": {
-      "sentAt": "2026-11-19T07:32:57.475Z",
-      "symbol": "JCTUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.002027,
-      "stop": 0.0020875597766429658
-    },
     "CROUSDT:15m": {
       "sentAt": "2026-11-19T09:02:46.715Z",
       "symbol": "CROUSDT",
@@ -99,6 +90,24 @@
       "score": null,
       "entry": 0.002746,
       "stop": 0.0028100378045077846
+    },
+    "BLESSUSDT:15m": {
+      "sentAt": "2026-11-19T13:33:04.390Z",
+      "symbol": "BLESSUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.011215,
+      "stop": 0.01168110333027181
+    },
+    "GRTUSDT:15m": {
+      "sentAt": "2026-11-19T13:33:07.873Z",
+      "symbol": "GRTUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.017555,
+      "stop": 0.01774184173849314
     }
   }
 }

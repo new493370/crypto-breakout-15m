@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-19T23:42:42.122Z",
+  "lastUpdated": "2026-11-19T23:47:57.267Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 133,
@@ -41,32 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "HMSTRUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.0001337,
-      "stop": 0.00013271994930364882,
-      "tp1": 0.00013520000000000003,
-      "zoneLow": 0.0001334,
-      "zoneHigh": 0.000134,
-      "signalCandleTime": 1794795000000,
-      "rr1": 1.5305330689368215,
-      "highs": [
-        0.0001349,
-        0.000134
-      ],
-      "lows": null,
-      "sentAt": "2026-11-16T02:18:18.437Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:24.805Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.00013520000000000003
-    },
     {
       "symbol": "ZKUSDT",
       "timeframe": "5m",
@@ -2842,7 +2816,7 @@
       "sentAt": "2026-11-18T12:18:31.641Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T23:41:09.909Z",
+      "statusUpdatedAt": "2026-11-19T23:46:08.461Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3127,7 +3101,7 @@
       "sentAt": "2026-11-18T16:48:12.074Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T23:41:09.909Z",
+      "statusUpdatedAt": "2026-11-19T23:46:08.461Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -3438,7 +3412,7 @@
       "sentAt": "2026-11-18T21:42:20.766Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T23:41:09.909Z",
+      "statusUpdatedAt": "2026-11-19T23:46:08.461Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5229,9 +5203,35 @@
       ],
       "lows": null,
       "sentAt": "2026-11-19T23:17:44.825Z",
+      "status": "tp1_hit",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-19T23:46:12.100Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.022580000000000003
+    },
+    {
+      "symbol": "HMSTRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.0001382,
+      "stop": 0.00013657968700773573,
+      "tp1": 0.00014120000000000002,
+      "zoneLow": 0.0001376,
+      "zoneHigh": 0.0001388,
+      "signalCandleTime": 1795131000000,
+      "rr1": 1.8514941337400113,
+      "highs": [
+        0.0001437,
+        0.0001395
+      ],
+      "lows": null,
+      "sentAt": "2026-11-19T23:47:55.764Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-19T23:41:09.909Z",
+      "statusUpdatedAt": "2026-11-19T23:47:55.764Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -8108,6 +8108,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-19T23:17:44.825Z"
+    },
+    "HMSTRUSDT:15m:2026-11-19T23:47:55.764Z": {
+      "symbol": "HMSTRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-19T23:47:55.764Z"
     }
   }
 }

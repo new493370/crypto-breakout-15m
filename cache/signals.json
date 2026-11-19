@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T10:42:46.008Z",
+  "lastUpdated": "2026-11-19T10:47:55.409Z",
   "signals": {
-    "APTUSDT:15m": {
-      "sentAt": "2026-11-19T04:47:39.464Z",
-      "symbol": "APTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.43225,
-      "stop": 0.426569549714082
-    },
     "JCTUSDT:15m": {
       "sentAt": "2026-11-19T07:32:57.475Z",
       "symbol": "JCTUSDT",

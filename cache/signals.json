@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-19T22:02:37.763Z",
+  "lastUpdated": "2026-11-19T22:07:43.813Z",
   "signals": {
-    "WLDUSDT:15m": {
-      "sentAt": "2026-11-19T16:02:52.211Z",
-      "symbol": "WLDUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.266,
-      "stop": 0.2698937467903563
-    },
-    "SUIUSDT:15m": {
-      "sentAt": "2026-11-19T16:02:55.792Z",
-      "symbol": "SUIUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.7299,
-      "stop": 0.7376624251628222
-    },
-    "ALGOUSDT:15m": {
-      "sentAt": "2026-11-19T16:02:59.308Z",
-      "symbol": "ALGOUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0784,
-      "stop": 0.07922372491021061
-    },
     "CHIPUSDT:15m": {
       "sentAt": "2026-11-19T16:33:02.404Z",
       "symbol": "CHIPUSDT",

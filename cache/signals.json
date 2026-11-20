@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T03:12:43.843Z",
+  "lastUpdated": "2026-11-20T03:17:55.044Z",
   "signals": {
     "STABLEUSDT:15m": {
       "sentAt": "2026-11-19T23:17:44.826Z",
@@ -45,6 +45,15 @@
       "score": null,
       "entry": 0.02889,
       "stop": 0.029317600901643082
+    },
+    "SOLUSDT:15m": {
+      "sentAt": "2026-11-20T03:17:53.543Z",
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 72.96000000000001,
+      "stop": 74.17805050984245
     }
   }
 }

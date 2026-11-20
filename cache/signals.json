@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T20:17:41.507Z",
+  "lastUpdated": "2026-11-20T20:22:47.762Z",
   "signals": {
-    "PEPEUSDT:15m": {
-      "sentAt": "2026-11-20T14:17:42.851Z",
-      "symbol": "PEPEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.00000355185,
-      "stop": 0.0000036137642550043403
-    },
     "PYTHUSDT:15m": {
       "sentAt": "2026-11-20T15:02:51.556Z",
       "symbol": "PYTHUSDT",

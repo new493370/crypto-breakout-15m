@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T07:12:44.970Z",
+  "lastUpdated": "2026-11-20T07:17:52.751Z",
   "signals": {
     "CNPYUSDT:15m": {
       "sentAt": "2026-11-20T01:32:44.272Z",
@@ -36,6 +36,15 @@
       "score": null,
       "entry": 72.96000000000001,
       "stop": 74.17805050984245
+    },
+    "ESPUSDT:15m": {
+      "sentAt": "2026-11-20T07:17:51.250Z",
+      "symbol": "ESPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.06846,
+      "stop": 0.0677180797140022
     }
   }
 }

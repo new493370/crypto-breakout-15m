@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-20T07:12:44.972Z",
+  "lastUpdated": "2026-11-20T07:17:52.752Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 133,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 65,
-    "active": 2,
-    "tp1Rate": 67.2,
+    "stopped": 64,
+    "active": 3,
+    "tp1Rate": 67.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 32.8
+    "stopRate": 32.5
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 68,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 41,
-      "tp1Rate": 62.4
+      "stopped": 40,
+      "tp1Rate": 63
     },
     "bearish": {
       "total": 90,
@@ -41,32 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "MAGICUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.06776,
-      "stop": 0.06711410602183543,
-      "tp1": 0.06890999999999997,
-      "zoneLow": 0.06753,
-      "zoneHigh": 0.06799,
-      "signalCandleTime": 1794795000000,
-      "rr1": 1.780477971427927,
-      "highs": [
-        0.06826,
-        0.06801
-      ],
-      "lows": null,
-      "sentAt": "2026-11-16T02:18:39.605Z",
-      "status": "stopped",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-16T10:36:23.745Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": true,
-      "exitPrice": 0.06711410602183543
-    },
     {
       "symbol": "ZKPUSDT",
       "timeframe": "5m",
@@ -5130,7 +5104,7 @@
       "sentAt": "2026-11-19T23:47:55.764Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T07:11:06.032Z",
+      "statusUpdatedAt": "2026-11-20T07:16:05.994Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5233,7 +5207,32 @@
       "sentAt": "2026-11-20T03:17:53.542Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T07:11:06.032Z",
+      "statusUpdatedAt": "2026-11-20T07:16:05.994Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "ESPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.06846,
+      "stop": 0.0677180797140022,
+      "tp1": 0.06915999999999997,
+      "zoneLow": 0.06832,
+      "zoneHigh": 0.0686,
+      "signalCandleTime": 1795158000000,
+      "rr1": 0.9434975875589758,
+      "highs": [
+        0.07007,
+        0.06912
+      ],
+      "lows": null,
+      "sentAt": "2026-11-20T07:17:51.250Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-20T07:17:51.250Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -8145,6 +8144,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-20T03:17:53.542Z"
+    },
+    "ESPUSDT:15m:2026-11-20T07:17:51.250Z": {
+      "symbol": "ESPUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-20T07:17:51.250Z"
     }
   }
 }

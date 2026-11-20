@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T10:27:40.302Z",
+  "lastUpdated": "2026-11-20T10:33:00.496Z",
   "signals": {
     "ESPUSDT:15m": {
       "sentAt": "2026-11-20T07:17:51.250Z",
@@ -90,6 +90,15 @@
       "score": null,
       "entry": 0.07184499999999999,
       "stop": 0.07057873403245897
+    },
+    "AEVOUSDT:15m": {
+      "sentAt": "2026-11-20T10:32:58.994Z",
+      "symbol": "AEVOUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.016425,
+      "stop": 0.016567339356729063
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T07:42:43.529Z",
+  "lastUpdated": "2026-11-20T07:47:45.396Z",
   "signals": {
     "NVIDIAUSDT:15m": {
       "sentAt": "2026-11-20T01:47:54.779Z",
@@ -36,6 +36,15 @@
       "score": null,
       "entry": 0.06846,
       "stop": 0.0677180797140022
+    },
+    "SILVERUSDT:15m": {
+      "sentAt": "2026-11-20T07:47:40.603Z",
+      "symbol": "SILVERUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 41.735,
+      "stop": 40.87093834881657
     }
   }
 }

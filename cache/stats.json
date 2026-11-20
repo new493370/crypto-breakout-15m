@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-20T07:42:43.530Z",
+  "lastUpdated": "2026-11-20T07:47:45.398Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 133,
+    "tp1Hit": 132,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 64,
-    "active": 3,
-    "tp1Rate": 67.5,
+    "active": 4,
+    "tp1Rate": 67.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 32.5
+    "stopRate": 32.7
   },
   "byTimeframe": {
     "15m": {
@@ -25,11 +25,11 @@
   "byDirection": {
     "bullish": {
       "total": 110,
-      "tp1Hit": 68,
+      "tp1Hit": 67,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 40,
-      "tp1Rate": 63
+      "tp1Rate": 62.6
     },
     "bearish": {
       "total": 90,
@@ -41,32 +41,6 @@
     }
   },
   "recentSignals": [
-    {
-      "symbol": "ZKPUSDT",
-      "timeframe": "5m",
-      "direction": "bullish",
-      "entry": 0.02956,
-      "stop": 0.029337342489701688,
-      "tp1": 0.029860000000000005,
-      "zoneLow": 0.0295,
-      "zoneHigh": 0.02962,
-      "signalCandleTime": 1794795000000,
-      "rr1": 1.347360794603657,
-      "highs": [
-        0.02971,
-        0.02959
-      ],
-      "lows": null,
-      "sentAt": "2026-11-16T02:18:43.047Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-16T02:28:28.174Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 0.029860000000000005
-    },
     {
       "symbol": "EDGEUSDT",
       "timeframe": "5m",
@@ -5104,7 +5078,7 @@
       "sentAt": "2026-11-19T23:47:55.764Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T07:41:07.944Z",
+      "statusUpdatedAt": "2026-11-20T07:46:07.369Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5207,7 +5181,7 @@
       "sentAt": "2026-11-20T03:17:53.542Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T07:41:07.944Z",
+      "statusUpdatedAt": "2026-11-20T07:46:07.370Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5232,7 +5206,32 @@
       "sentAt": "2026-11-20T07:17:51.250Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T07:41:07.944Z",
+      "statusUpdatedAt": "2026-11-20T07:46:07.370Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "SILVERUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 41.735,
+      "stop": 40.87093834881657,
+      "tp1": 43.410000000000004,
+      "zoneLow": 41.4,
+      "zoneHigh": 42.07,
+      "signalCandleTime": 1795159800000,
+      "rr1": 1.9385190833384505,
+      "highs": [
+        43.31,
+        42.05
+      ],
+      "lows": null,
+      "sentAt": "2026-11-20T07:47:40.603Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-20T07:47:40.603Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -8151,6 +8150,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-20T07:17:51.250Z"
+    },
+    "SILVERUSDT:15m:2026-11-20T07:47:40.603Z": {
+      "symbol": "SILVERUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-20T07:47:40.603Z"
     }
   }
 }

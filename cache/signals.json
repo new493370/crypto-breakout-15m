@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T16:32:50.759Z",
+  "lastUpdated": "2026-11-20T16:37:46.535Z",
   "signals": {
-    "AEVOUSDT:15m": {
-      "sentAt": "2026-11-20T10:32:58.994Z",
-      "symbol": "AEVOUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.016425,
-      "stop": 0.016567339356729063
-    },
     "OPUSDT:15m": {
       "sentAt": "2026-11-20T11:02:49.887Z",
       "symbol": "OPUSDT",

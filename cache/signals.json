@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T01:42:50.509Z",
+  "lastUpdated": "2026-11-20T01:47:59.785Z",
   "signals": {
     "STABLEUSDT:15m": {
       "sentAt": "2026-11-19T23:17:44.826Z",
@@ -27,6 +27,24 @@
       "score": null,
       "entry": 0.10445,
       "stop": 0.10704658081967174
+    },
+    "NVIDIAUSDT:15m": {
+      "sentAt": "2026-11-20T01:47:54.779Z",
+      "symbol": "NVIDIAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 145.79500000000002,
+      "stop": 147.76937125772028
+    },
+    "ORDERUSDT:15m": {
+      "sentAt": "2026-11-20T01:47:58.283Z",
+      "symbol": "ORDERUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.02889,
+      "stop": 0.029317600901643082
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T07:27:38.111Z",
+  "lastUpdated": "2026-11-20T07:32:49.928Z",
   "signals": {
-    "CNPYUSDT:15m": {
-      "sentAt": "2026-11-20T01:32:44.272Z",
-      "symbol": "CNPYUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.10445,
-      "stop": 0.10704658081967174
-    },
     "NVIDIAUSDT:15m": {
       "sentAt": "2026-11-20T01:47:54.779Z",
       "symbol": "NVIDIAUSDT",

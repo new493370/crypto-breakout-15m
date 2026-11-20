@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T15:32:46.005Z",
+  "lastUpdated": "2026-11-20T15:37:47.777Z",
   "signals": {
-    "DOGEUSDT:15m": {
-      "sentAt": "2026-11-20T09:32:51.733Z",
-      "symbol": "DOGEUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.057395,
-      "stop": 0.05799263202309251
-    },
-    "BILLUSDT:15m": {
-      "sentAt": "2026-11-20T09:32:55.199Z",
-      "symbol": "BILLUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.004085999999999999,
-      "stop": 0.003985432453815933
-    },
     "SHIBUSDT:15m": {
       "sentAt": "2026-11-20T10:03:01.997Z",
       "symbol": "SHIBUSDT",

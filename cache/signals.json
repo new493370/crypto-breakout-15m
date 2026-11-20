@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T01:27:40.917Z",
+  "lastUpdated": "2026-11-20T01:32:47.423Z",
   "signals": {
     "STABLEUSDT:15m": {
       "sentAt": "2026-11-19T23:17:44.826Z",
@@ -18,6 +18,15 @@
       "score": null,
       "entry": 0.0001382,
       "stop": 0.00013657968700773573
+    },
+    "CNPYUSDT:15m": {
+      "sentAt": "2026-11-20T01:32:44.272Z",
+      "symbol": "CNPYUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.10445,
+      "stop": 0.10704658081967174
     }
   }
 }

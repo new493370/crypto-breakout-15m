@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T17:32:47.409Z",
+  "lastUpdated": "2026-11-20T17:37:52.021Z",
   "signals": {
-    "ZBTUSDT:15m": {
-      "sentAt": "2026-11-20T11:32:47.867Z",
-      "symbol": "ZBTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.05086,
-      "stop": 0.050278257046998294
-    },
     "PEPEUSDT:15m": {
       "sentAt": "2026-11-20T14:17:42.851Z",
       "symbol": "PEPEUSDT",

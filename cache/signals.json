@@ -1,23 +1,4 @@
 {
-  "lastUpdated": "2026-11-20T21:02:42.652Z",
-  "signals": {
-    "PYTHUSDT:15m": {
-      "sentAt": "2026-11-20T15:02:51.556Z",
-      "symbol": "PYTHUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.05033,
-      "stop": 0.04920806619110898
-    },
-    "CTUSDT:15m": {
-      "sentAt": "2026-11-20T15:02:55.080Z",
-      "symbol": "CTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.12584,
-      "stop": 0.12261510298194536
-    }
-  }
+  "lastUpdated": "2026-11-20T21:07:48.445Z",
+  "signals": {}
 }

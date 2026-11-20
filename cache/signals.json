@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T11:27:47.336Z",
+  "lastUpdated": "2026-11-20T11:32:49.367Z",
   "signals": {
     "ESPUSDT:15m": {
       "sentAt": "2026-11-20T07:17:51.250Z",
@@ -117,6 +117,15 @@
       "score": null,
       "entry": 0.06742000000000001,
       "stop": 0.06646778454437195
+    },
+    "ZBTUSDT:15m": {
+      "sentAt": "2026-11-20T11:32:47.867Z",
+      "symbol": "ZBTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.05086,
+      "stop": 0.050278257046998294
     }
   }
 }

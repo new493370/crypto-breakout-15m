@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T05:12:37.254Z",
+  "lastUpdated": "2026-11-20T05:17:48.957Z",
   "signals": {
-    "STABLEUSDT:15m": {
-      "sentAt": "2026-11-19T23:17:44.826Z",
-      "symbol": "STABLEUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.022455,
-      "stop": 0.022257892491996428
-    },
     "HMSTRUSDT:15m": {
       "sentAt": "2026-11-19T23:47:55.764Z",
       "symbol": "HMSTRUSDT",

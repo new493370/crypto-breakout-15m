@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T08:57:38.170Z",
+  "lastUpdated": "2026-11-20T09:02:58.011Z",
   "signals": {
     "SOLUSDT:15m": {
       "sentAt": "2026-11-20T03:17:53.543Z",
@@ -36,6 +36,15 @@
       "score": null,
       "entry": 0.082765,
       "stop": 0.08413351105836495
+    },
+    "NVIDIAUSDT:15m": {
+      "sentAt": "2026-11-20T09:02:54.607Z",
+      "symbol": "NVIDIAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 144.14,
+      "stop": 142.69738389541402
     }
   }
 }

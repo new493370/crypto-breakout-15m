@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T16:02:48.655Z",
+  "lastUpdated": "2026-11-20T16:07:50.043Z",
   "signals": {
-    "SHIBUSDT:15m": {
-      "sentAt": "2026-11-20T10:03:01.997Z",
-      "symbol": "SHIBUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0000037285,
-      "stop": 0.000003764063570403534
-    },
-    "FLOKIUSDT:15m": {
-      "sentAt": "2026-11-20T10:03:09.390Z",
-      "symbol": "FLOKIUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.000017135,
-      "stop": 0.000017308244262724757
-    },
-    "PENGUUSDT:15m": {
-      "sentAt": "2026-11-20T10:03:12.905Z",
-      "symbol": "PENGUUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.0045305,
-      "stop": 0.004593970791056152
-    },
-    "BSBUSDT:15m": {
-      "sentAt": "2026-11-20T10:03:16.488Z",
-      "symbol": "BSBUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.07184499999999999,
-      "stop": 0.07057873403245897
-    },
     "AEVOUSDT:15m": {
       "sentAt": "2026-11-20T10:32:58.994Z",
       "symbol": "AEVOUSDT",

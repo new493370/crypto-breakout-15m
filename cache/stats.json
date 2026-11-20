@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-20T02:27:51.355Z",
+  "lastUpdated": "2026-11-20T02:32:45.569Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 133,
+    "tp1Hit": 134,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 65,
-    "active": 2,
-    "tp1Rate": 67.2,
+    "active": 1,
+    "tp1Rate": 67.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 32.8
+    "stopRate": 32.7
   },
   "byTimeframe": {
     "15m": {
@@ -33,11 +33,11 @@
     },
     "bearish": {
       "total": 89,
-      "tp1Hit": 64,
+      "tp1Hit": 65,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 24,
-      "tp1Rate": 72.7
+      "tp1Rate": 73
     }
   },
   "recentSignals": [
@@ -5156,7 +5156,7 @@
       "sentAt": "2026-11-19T23:47:55.764Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T02:26:07.333Z",
+      "statusUpdatedAt": "2026-11-20T02:31:13.385Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5179,13 +5179,14 @@
         0.1035
       ],
       "sentAt": "2026-11-20T01:32:44.272Z",
-      "status": "active",
+      "status": "tp1_hit",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T02:26:07.334Z",
+      "statusUpdatedAt": "2026-11-20T02:31:17.107Z",
       "maxR": 0,
       "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_tp1Notified": true,
+      "_stoppedNotified": false,
+      "exitPrice": 0.10120000000000001
     },
     {
       "symbol": "NVIDIAUSDT",

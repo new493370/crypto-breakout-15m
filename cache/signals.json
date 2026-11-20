@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T10:57:51.432Z",
+  "lastUpdated": "2026-11-20T11:02:54.832Z",
   "signals": {
     "ESPUSDT:15m": {
       "sentAt": "2026-11-20T07:17:51.250Z",
@@ -99,6 +99,24 @@
       "score": null,
       "entry": 0.016425,
       "stop": 0.016567339356729063
+    },
+    "OPUSDT:15m": {
+      "sentAt": "2026-11-20T11:02:49.887Z",
+      "symbol": "OPUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.07395,
+      "stop": 0.07494166873807166
+    },
+    "MAGICUSDT:15m": {
+      "sentAt": "2026-11-20T11:02:53.330Z",
+      "symbol": "MAGICUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.06742000000000001,
+      "stop": 0.06646778454437195
     }
   }
 }

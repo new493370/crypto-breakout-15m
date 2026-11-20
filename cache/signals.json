@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T13:47:34.549Z",
+  "lastUpdated": "2026-11-20T13:52:41.124Z",
   "signals": {
-    "SILVERUSDT:15m": {
-      "sentAt": "2026-11-20T07:47:40.603Z",
-      "symbol": "SILVERUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 41.735,
-      "stop": 40.87093834881657
-    },
     "FARTCOINUSDT:15m": {
       "sentAt": "2026-11-20T08:17:56.357Z",
       "symbol": "FARTCOINUSDT",

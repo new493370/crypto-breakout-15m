@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-20T22:12:43.715Z",
+  "lastUpdated": "2026-11-20T22:18:08.491Z",
   "allTime": {
     "total": 200,
-    "tp1Hit": 138,
+    "tp1Hit": 137,
     "tp2Hit": 0,
     "tp3Hit": 0,
     "stopped": 60,
-    "active": 2,
-    "tp1Rate": 69.7,
+    "active": 3,
+    "tp1Rate": 69.5,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.3
+    "stopRate": 30.5
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 103,
+      "total": 104,
       "tp1Hit": 65,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,41 +32,15 @@
       "tp1Rate": 64.4
     },
     "bearish": {
-      "total": 97,
-      "tp1Hit": 73,
+      "total": 96,
+      "tp1Hit": 72,
       "tp2Hit": 0,
       "tp3Hit": 0,
       "stopped": 24,
-      "tp1Rate": 75.3
+      "tp1Rate": 75
     }
   },
   "recentSignals": [
-    {
-      "symbol": "UKOILUSDT",
-      "timeframe": "5m",
-      "direction": "bearish",
-      "entry": 93.185,
-      "stop": 93.7340757180799,
-      "tp1": 92.25999999999999,
-      "zoneLow": 93,
-      "zoneHigh": 93.37,
-      "signalCandleTime": 1794819600000,
-      "rr1": 1.6846492560893456,
-      "highs": null,
-      "lows": [
-        92.61,
-        93.09
-      ],
-      "sentAt": "2026-11-16T09:06:07.639Z",
-      "status": "tp1_hit",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-16T11:56:21.057Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": true,
-      "_stoppedNotified": false,
-      "exitPrice": 92.25999999999999
-    },
     {
       "symbol": "BIOUSDT",
       "timeframe": "5m",
@@ -4818,7 +4792,7 @@
       "sentAt": "2026-11-20T07:47:40.603Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T22:11:06.866Z",
+      "statusUpdatedAt": "2026-11-20T22:16:08.732Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5233,7 +5207,32 @@
       "sentAt": "2026-11-20T21:48:00.162Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-20T22:11:06.866Z",
+      "statusUpdatedAt": "2026-11-20T22:16:08.732Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
+    },
+    {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 305.21500000000003,
+      "stop": 298.196485258207,
+      "tp1": 316.4399999999999,
+      "zoneLow": 302.97,
+      "zoneHigh": 307.46,
+      "signalCandleTime": 1795212000000,
+      "rr1": 1.5993412300124645,
+      "highs": [
+        344.03,
+        311.4
+      ],
+      "lows": null,
+      "sentAt": "2026-11-20T22:18:01.427Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-20T22:18:01.427Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -8271,6 +8270,13 @@
       "direction": "bullish",
       "status": "active",
       "sentAt": "2026-11-20T21:48:00.162Z"
+    },
+    "AVGOSTOCKUSDT:15m:2026-11-20T22:18:01.427Z": {
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-20T22:18:01.427Z"
     }
   }
 }

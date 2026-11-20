@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T22:12:43.714Z",
+  "lastUpdated": "2026-11-20T22:18:08.490Z",
   "signals": {
     "SHELLUSDT:15m": {
       "sentAt": "2026-11-20T21:48:00.163Z",
@@ -9,6 +9,15 @@
       "score": null,
       "entry": 0.02436,
       "stop": 0.023743615576264438
+    },
+    "AVGOSTOCKUSDT:15m": {
+      "sentAt": "2026-11-20T22:18:01.427Z",
+      "symbol": "AVGOSTOCKUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 305.21500000000003,
+      "stop": 298.196485258207
     }
   }
 }

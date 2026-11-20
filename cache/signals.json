@@ -1,4 +1,14 @@
 {
-  "lastUpdated": "2026-11-20T21:42:53.340Z",
-  "signals": {}
+  "lastUpdated": "2026-11-20T21:48:03.559Z",
+  "signals": {
+    "SHELLUSDT:15m": {
+      "sentAt": "2026-11-20T21:48:00.163Z",
+      "symbol": "SHELLUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.02436,
+      "stop": 0.023743615576264438
+    }
+  }
 }

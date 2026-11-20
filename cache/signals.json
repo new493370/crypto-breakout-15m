@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T07:47:45.396Z",
+  "lastUpdated": "2026-11-20T07:52:43.515Z",
   "signals": {
-    "NVIDIAUSDT:15m": {
-      "sentAt": "2026-11-20T01:47:54.779Z",
-      "symbol": "NVIDIAUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 145.79500000000002,
-      "stop": 147.76937125772028
-    },
-    "ORDERUSDT:15m": {
-      "sentAt": "2026-11-20T01:47:58.283Z",
-      "symbol": "ORDERUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.02889,
-      "stop": 0.029317600901643082
-    },
     "SOLUSDT:15m": {
       "sentAt": "2026-11-20T03:17:53.543Z",
       "symbol": "SOLUSDT",

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-20T14:57:52.940Z",
+  "lastUpdated": "2026-11-20T15:02:58.644Z",
   "signals": {
-    "NVIDIAUSDT:15m": {
-      "sentAt": "2026-11-20T09:02:54.607Z",
-      "symbol": "NVIDIAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 144.14,
-      "stop": 142.69738389541402
-    },
     "DOGEUSDT:15m": {
       "sentAt": "2026-11-20T09:32:51.733Z",
       "symbol": "DOGEUSDT",
@@ -108,6 +99,24 @@
       "score": null,
       "entry": 0.00000355185,
       "stop": 0.0000036137642550043403
+    },
+    "PYTHUSDT:15m": {
+      "sentAt": "2026-11-20T15:02:51.556Z",
+      "symbol": "PYTHUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.05033,
+      "stop": 0.04920806619110898
+    },
+    "CTUSDT:15m": {
+      "sentAt": "2026-11-20T15:02:55.080Z",
+      "symbol": "CTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.12584,
+      "stop": 0.12261510298194536
     }
   }
 }

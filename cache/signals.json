@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T14:12:47.358Z",
+  "lastUpdated": "2026-11-20T14:17:46.035Z",
   "signals": {
     "FARTCOINUSDT:15m": {
       "sentAt": "2026-11-20T08:17:56.357Z",
@@ -108,6 +108,15 @@
       "score": null,
       "entry": 0.05086,
       "stop": 0.050278257046998294
+    },
+    "PEPEUSDT:15m": {
+      "sentAt": "2026-11-20T14:17:42.851Z",
+      "symbol": "PEPEUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.00000355185,
+      "stop": 0.0000036137642550043403
     }
   }
 }

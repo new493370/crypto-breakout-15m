@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-21T13:57:53.450Z",
+  "lastUpdated": "2026-11-21T14:02:53.141Z",
   "signals": {
-    "HMSTRUSDT:15m": {
-      "sentAt": "2026-11-21T08:02:51.348Z",
-      "symbol": "HMSTRUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.00014145,
-      "stop": 0.0001373505958232109
-    },
     "ENAUSDT:15m": {
       "sentAt": "2026-11-21T08:17:57.940Z",
       "symbol": "ENAUSDT",

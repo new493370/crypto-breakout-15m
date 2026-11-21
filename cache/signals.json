@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T00:27:45.866Z",
+  "lastUpdated": "2026-11-21T00:32:50.590Z",
   "signals": {
     "SHELLUSDT:15m": {
       "sentAt": "2026-11-20T21:48:00.163Z",
@@ -54,6 +54,24 @@
       "score": null,
       "entry": 0.0082755,
       "stop": 0.008147797858369027
+    },
+    "DATAUSDT:15m": {
+      "sentAt": "2026-11-21T00:32:45.699Z",
+      "symbol": "DATAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.08287,
+      "stop": 0.08075133547310652
+    },
+    "GRVTUSDT:15m": {
+      "sentAt": "2026-11-21T00:32:49.089Z",
+      "symbol": "GRVTUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.160635,
+      "stop": 0.1576664633996115
     }
   }
 }

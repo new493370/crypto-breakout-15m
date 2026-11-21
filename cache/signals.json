@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T09:28:01.018Z",
+  "lastUpdated": "2026-11-21T09:33:04.301Z",
   "signals": {
     "HMSTRUSDT:15m": {
       "sentAt": "2026-11-21T08:02:51.348Z",
@@ -54,6 +54,15 @@
       "score": null,
       "entry": 0.0178,
       "stop": 0.01853353491927106
+    },
+    "UBUSDT:15m": {
+      "sentAt": "2026-11-21T09:32:57.277Z",
+      "symbol": "UBUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.093645,
+      "stop": 0.09141988592886391
     }
   }
 }

@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-21T08:12:46.104Z",
+  "lastUpdated": "2026-11-21T08:18:08.567Z",
   "signals": {
-    "VIRTUALUSDT:15m": {
-      "sentAt": "2026-11-21T02:17:57.755Z",
-      "symbol": "VIRTUALUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "score": null,
-      "entry": 0.3769,
-      "stop": 0.3828260093977622
-    },
     "HMSTRUSDT:15m": {
       "sentAt": "2026-11-21T08:02:51.348Z",
       "symbol": "HMSTRUSDT",
@@ -18,6 +9,24 @@
       "score": null,
       "entry": 0.00014145,
       "stop": 0.0001373505958232109
+    },
+    "ENAUSDT:15m": {
+      "sentAt": "2026-11-21T08:17:57.940Z",
+      "symbol": "ENAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.0925,
+      "stop": 0.08937324344248439
+    },
+    "DNAUSDT:15m": {
+      "sentAt": "2026-11-21T08:18:03.453Z",
+      "symbol": "DNAUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.1629,
+      "stop": 0.16713014111873792
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T08:43:04.193Z",
+  "lastUpdated": "2026-11-21T08:47:58.371Z",
   "signals": {
     "HMSTRUSDT:15m": {
       "sentAt": "2026-11-21T08:02:51.348Z",
@@ -27,6 +27,15 @@
       "score": null,
       "entry": 0.1629,
       "stop": 0.16713014111873792
+    },
+    "LAUSDT:15m": {
+      "sentAt": "2026-11-21T08:47:51.695Z",
+      "symbol": "LAUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.040255,
+      "stop": 0.039032002885626214
     }
   }
 }

@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-21T07:57:59.233Z",
+  "lastUpdated": "2026-11-21T08:02:54.503Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 134,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 65,
-    "active": 1,
-    "tp1Rate": 67.3,
+    "stopped": 64,
+    "active": 2,
+    "tp1Rate": 67.7,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 32.7
+    "stopRate": 32.3
   },
   "byTimeframe": {
     "15m": {
@@ -24,7 +24,7 @@
   },
   "byDirection": {
     "bullish": {
-      "total": 108,
+      "total": 109,
       "tp1Hit": 65,
       "tp2Hit": 0,
       "tp3Hit": 0,
@@ -32,41 +32,15 @@
       "tp1Rate": 60.7
     },
     "bearish": {
-      "total": 92,
+      "total": 91,
       "tp1Hit": 69,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 23,
-      "tp1Rate": 75
+      "stopped": 22,
+      "tp1Rate": 75.8
     }
   },
   "recentSignals": [
-    {
-      "symbol": "XTZUSDT",
-      "timeframe": "15m",
-      "direction": "bearish",
-      "entry": 0.2138,
-      "stop": 0.2157870686092406,
-      "tp1": 0.2113,
-      "zoneLow": 0.2133,
-      "zoneHigh": 0.2143,
-      "signalCandleTime": 1794831300000,
-      "rr1": 1.258134715819106,
-      "highs": null,
-      "lows": [
-        0.2124,
-        0.2132
-      ],
-      "sentAt": "2026-11-16T13:12:50.996Z",
-      "status": "stopped",
-      "activated": true,
-      "statusUpdatedAt": "2026-11-16T14:46:17.854Z",
-      "maxR": 0,
-      "tp1Reached": false,
-      "_tp1Notified": false,
-      "_stoppedNotified": true,
-      "exitPrice": 0.2157870686092406
-    },
     {
       "symbol": "NEIROUSDT",
       "timeframe": "15m",
@@ -5052,7 +5026,7 @@
       "sentAt": "2026-11-20T22:18:01.427Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T07:56:06.737Z",
+      "statusUpdatedAt": "2026-11-21T08:01:12.422Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5239,6 +5213,31 @@
       "_tp1Notified": true,
       "_stoppedNotified": false,
       "exitPrice": 0.3679
+    },
+    {
+      "symbol": "HMSTRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "entry": 0.00014145,
+      "stop": 0.0001373505958232109,
+      "tp1": 0.00014619999999999998,
+      "zoneLow": 0.0001405,
+      "zoneHigh": 0.0001424,
+      "signalCandleTime": 1795245300000,
+      "rr1": 1.1587049715406366,
+      "highs": [
+        0.000147,
+        0.0001436
+      ],
+      "lows": null,
+      "sentAt": "2026-11-21T08:02:51.348Z",
+      "status": "active",
+      "activated": true,
+      "statusUpdatedAt": "2026-11-21T08:02:51.348Z",
+      "maxR": 0,
+      "tp1Reached": false,
+      "_tp1Notified": false,
+      "_stoppedNotified": false
     }
   ],
   "processedSignals": {
@@ -8328,6 +8327,13 @@
       "direction": "bearish",
       "status": "active",
       "sentAt": "2026-11-21T02:17:57.755Z"
+    },
+    "HMSTRUSDT:15m:2026-11-21T08:02:51.348Z": {
+      "symbol": "HMSTRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "status": "active",
+      "sentAt": "2026-11-21T08:02:51.348Z"
     }
   }
 }

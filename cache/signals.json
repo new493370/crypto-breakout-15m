@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T07:57:59.232Z",
+  "lastUpdated": "2026-11-21T08:02:54.502Z",
   "signals": {
     "VIRTUALUSDT:15m": {
       "sentAt": "2026-11-21T02:17:57.755Z",
@@ -9,6 +9,15 @@
       "score": null,
       "entry": 0.3769,
       "stop": 0.3828260093977622
+    },
+    "HMSTRUSDT:15m": {
+      "sentAt": "2026-11-21T08:02:51.348Z",
+      "symbol": "HMSTRUSDT",
+      "timeframe": "15m",
+      "direction": "bullish",
+      "score": null,
+      "entry": 0.00014145,
+      "stop": 0.0001373505958232109
     }
   }
 }

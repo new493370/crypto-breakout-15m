@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T08:58:00.203Z",
+  "lastUpdated": "2026-11-21T09:03:04.199Z",
   "signals": {
     "HMSTRUSDT:15m": {
       "sentAt": "2026-11-21T08:02:51.348Z",
@@ -36,6 +36,15 @@
       "score": null,
       "entry": 0.040255,
       "stop": 0.039032002885626214
+    },
+    "RESOLVUSDT:15m": {
+      "sentAt": "2026-11-21T09:02:55.695Z",
+      "symbol": "RESOLVUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.013930000000000001,
+      "stop": 0.014207330861640307
     }
   }
 }

@@ -1,24 +1,6 @@
 {
-  "lastUpdated": "2026-11-21T06:32:42.955Z",
+  "lastUpdated": "2026-11-21T06:37:43.817Z",
   "signals": {
-    "DATAUSDT:15m": {
-      "sentAt": "2026-11-21T00:32:45.699Z",
-      "symbol": "DATAUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.08287,
-      "stop": 0.08075133547310652
-    },
-    "GRVTUSDT:15m": {
-      "sentAt": "2026-11-21T00:32:49.089Z",
-      "symbol": "GRVTUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.160635,
-      "stop": 0.1576664633996115
-    },
     "VIRTUALUSDT:15m": {
       "sentAt": "2026-11-21T02:17:57.755Z",
       "symbol": "VIRTUALUSDT",

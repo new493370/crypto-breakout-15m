@@ -1,15 +1,6 @@
 {
-  "lastUpdated": "2026-11-21T04:17:50.540Z",
+  "lastUpdated": "2026-11-21T04:22:52.579Z",
   "signals": {
-    "AVGOSTOCKUSDT:15m": {
-      "sentAt": "2026-11-20T22:18:01.427Z",
-      "symbol": "AVGOSTOCKUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 305.21500000000003,
-      "stop": 298.196485258207
-    },
     "SUSDT:15m": {
       "sentAt": "2026-11-20T23:03:01.398Z",
       "symbol": "SUSDT",

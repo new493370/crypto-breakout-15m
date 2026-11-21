@@ -1,33 +1,6 @@
 {
-  "lastUpdated": "2026-11-21T05:02:43.925Z",
+  "lastUpdated": "2026-11-21T05:07:42.539Z",
   "signals": {
-    "SUSDT:15m": {
-      "sentAt": "2026-11-20T23:03:01.398Z",
-      "symbol": "SUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.026744999999999998,
-      "stop": 0.02616782476049095
-    },
-    "AEVOUSDT:15m": {
-      "sentAt": "2026-11-20T23:03:06.933Z",
-      "symbol": "AEVOUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.015555,
-      "stop": 0.015253176072904056
-    },
-    "SNXUSDT:15m": {
-      "sentAt": "2026-11-20T23:03:12.427Z",
-      "symbol": "SNXUSDT",
-      "timeframe": "15m",
-      "direction": "bullish",
-      "score": null,
-      "entry": 0.14684999999999998,
-      "stop": 0.14334449920794837
-    },
     "SIGNUSDT:15m": {
       "sentAt": "2026-11-20T23:48:04.878Z",
       "symbol": "SIGNUSDT",

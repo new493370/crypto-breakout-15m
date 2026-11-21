@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T09:12:51.675Z",
+  "lastUpdated": "2026-11-21T09:17:59.296Z",
   "signals": {
     "HMSTRUSDT:15m": {
       "sentAt": "2026-11-21T08:02:51.348Z",
@@ -45,6 +45,15 @@
       "score": null,
       "entry": 0.013930000000000001,
       "stop": 0.014207330861640307
+    },
+    "PIPPINUSDT:15m": {
+      "sentAt": "2026-11-21T09:17:50.901Z",
+      "symbol": "PIPPINUSDT",
+      "timeframe": "15m",
+      "direction": "bearish",
+      "score": null,
+      "entry": 0.0178,
+      "stop": 0.01853353491927106
     }
   }
 }

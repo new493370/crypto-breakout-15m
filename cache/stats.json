@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-11-21T03:42:45.320Z",
+  "lastUpdated": "2026-11-21T03:48:02.701Z",
   "allTime": {
     "total": 200,
     "tp1Hit": 134,
     "tp2Hit": 0,
     "tp3Hit": 0,
-    "stopped": 59,
-    "active": 7,
-    "tp1Rate": 69.4,
+    "stopped": 65,
+    "active": 1,
+    "tp1Rate": 67.3,
     "tp2Rate": 0,
     "tp3Rate": 0,
-    "stopRate": 30.6
+    "stopRate": 32.7
   },
   "byTimeframe": {
     "15m": {
@@ -28,8 +28,8 @@
       "tp1Hit": 65,
       "tp2Hit": 0,
       "tp3Hit": 0,
-      "stopped": 36,
-      "tp1Rate": 64.4
+      "stopped": 42,
+      "tp1Rate": 60.7
     },
     "bearish": {
       "total": 92,
@@ -4608,13 +4608,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-20T07:47:40.603Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T03:41:14.723Z",
+      "statusUpdatedAt": "2026-11-21T03:46:13.674Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 40.87093834881657
     },
     {
       "symbol": "FARTCOINUSDT",
@@ -5051,7 +5052,7 @@
       "sentAt": "2026-11-20T22:18:01.427Z",
       "status": "active",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T03:41:14.724Z",
+      "statusUpdatedAt": "2026-11-21T03:46:13.674Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
@@ -5100,13 +5101,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-20T23:03:06.933Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T03:41:14.724Z",
+      "statusUpdatedAt": "2026-11-21T03:46:15.377Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.015253176072904056
     },
     {
       "symbol": "SNXUSDT",
@@ -5125,13 +5127,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-20T23:03:12.427Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T03:41:14.724Z",
+      "statusUpdatedAt": "2026-11-21T03:46:17.040Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.14334449920794837
     },
     {
       "symbol": "SIGNUSDT",
@@ -5150,13 +5153,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-20T23:48:04.878Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T03:41:14.724Z",
+      "statusUpdatedAt": "2026-11-21T03:46:18.858Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.008147797858369027
     },
     {
       "symbol": "DATAUSDT",
@@ -5175,13 +5179,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-21T00:32:45.698Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T03:41:14.724Z",
+      "statusUpdatedAt": "2026-11-21T03:46:20.537Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.08075133547310652
     },
     {
       "symbol": "GRVTUSDT",
@@ -5200,13 +5205,14 @@
       ],
       "lows": null,
       "sentAt": "2026-11-21T00:32:49.089Z",
-      "status": "active",
+      "status": "stopped",
       "activated": true,
-      "statusUpdatedAt": "2026-11-21T03:41:14.724Z",
+      "statusUpdatedAt": "2026-11-21T03:46:22.278Z",
       "maxR": 0,
       "tp1Reached": false,
       "_tp1Notified": false,
-      "_stoppedNotified": false
+      "_stoppedNotified": true,
+      "exitPrice": 0.1576664633996115
     },
     {
       "symbol": "VIRTUALUSDT",
